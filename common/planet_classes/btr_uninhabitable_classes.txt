@@ -128,7 +128,7 @@ pc_molten = {
 }
 
 pc_scorched = {
-	entity = "scorched_planet"
+	entity = "barren_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 10
 	
@@ -152,7 +152,7 @@ pc_scorched = {
 }
 
 pc_desolate = {
-	entity = "desolate_planet"		#DONE
+	entity = "cold_barren_planet"		#DONE
 	entity_scale = @planet_standard_scale
 	icon_frame = 13
 	
@@ -200,7 +200,7 @@ pc_geothermal = {
 }
 
 pc_cryovolcanic = {
-	entity = "cryovolcanic_planet"		#DONE
+	entity = "frozen_planet"		#DONE
 	entity_scale = @planet_standard_scale
 	icon_frame = 13
 	
@@ -247,6 +247,50 @@ pc_hothouse = {
 	colonizable = no
 }
 
+pc_barren = {
+	entity = "barren_planet"
+	entity_scale = @planet_standard_scale
+	icon_frame = 10
+	climate = "barren"
+	atmosphere_color 		= hsv { 0.1 0.4 0.7 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"	
+	min_distance_from_sun = 40
+	max_distance_from_sun = 200
+	spawn_odds = 10
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.2
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = yes	
+}
+
+pc_frozen = {
+	entity = "frozen_planet"		#DONE
+	entity_scale = @planet_standard_scale
+	icon_frame = 13
+	climate = "frozen"	
+	atmosphere_color 		= hsv { 0.55 0.15 0.7 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arctic.dds"	
+	min_distance_from_sun = 120
+	max_distance_from_sun = 1000
+	spawn_odds = 10
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = yes	
+}
+
 random_list = {
 	name = "rl_unhabitable_planets"
 	planets = {
@@ -254,10 +298,10 @@ random_list = {
 		"pc_ice_giant"
 		"pc_hot_jupiter"
 		"pc_molten"
-		"pc_scorched"
-		"pc_desolate"
 		"pc_geothermal"
 		"pc_cryovolcanic"
 		"pc_hothouse"
+		"pc_barren"
+		"pc_frozen"
 	}
 }
