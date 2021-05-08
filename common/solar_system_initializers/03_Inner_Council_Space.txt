@@ -8,6 +8,20 @@ sys_aru_init = {
     name = "Aru"
     class = "sc_g"
 
+	flags = { empire_home_system btr_vol_protectorate_system custom_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
     planet = {
 	    name = "Aru"
         class = "pc_g_star"
@@ -41,6 +55,27 @@ sys_aru_init = {
         init_effect = {
 			set_planet_flag = irune_codex
 			}
+		starting_planet = yes
+		modifiers = none
+		flags = { btr_vol_protectorate_planet_irune special_start_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+		# 	generate_MEG_major_empire_start_buildings = yes
+
+		# 	random_country = {
+		# 		limit = { has_country_flag = "vol_protectorate" }
+		# 		save_event_target_as = aruOwner
+		# 		save_global_event_target_as = vol_protectorate
+		# 		species = { save_global_event_target_as = volSpecies }
+		# 	}
+		# 	while = {
+		# 		count = 26
+		# 		create_pop = { species = event_target:volSpecies }
+		# 	}
+		# 	set_name = "Irune"
+		# 	add_deposit = d_irune_lenos
+		# }            
 	}
 
     planet = {
@@ -112,7 +147,7 @@ sys_aru_init = {
 		spawn_megastructure = { 
 			type = "aethoncluster_apiencrest_massrelay" 
 			name = "Aethon_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 60 
 			orbit_distance = 200
 			
 		} 
@@ -259,7 +294,7 @@ sys_nura_init = {
 		spawn_megastructure = { 
 			type = "aethoncluster_xingyuncluster_massrelay" 
 			name = "Aethon_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 120 
 			orbit_distance = 200			
 		} 
 	}	
@@ -371,7 +406,7 @@ sys_ilhani_init = {
 		spawn_megastructure = { 
 			type = "annosbasin_horseheadnebula_massrelay" 
 			name = "Annos_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 21 
 			orbit_distance = 200
 			
 		} 
@@ -453,6 +488,20 @@ sys_pranas_init = {
 		radius = 120
 	}
 	
+	flags = { empire_home_system btr_salarian_union_system custom_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+    
     planet = {
         name = "Saradril"
         class = "pc_hothouse"
@@ -474,7 +523,29 @@ sys_pranas_init = {
         init_effect = {
 			set_planet_flag = surkesh_codex
 			}
-        has_ring = no
+		starting_planet = yes
+		has_ring = no
+		modifiers = none
+		flags = { btr_salarian_union_planet_surkesh special_start_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+		# 	generate_MEG_major_empire_start_buildings = yes
+
+		# 	random_country = {
+		# 		limit = { has_country_flag = "salarian_union" }
+		# 		save_event_target_as = pranasOwner
+		# 		save_global_event_target_as = salarian_union
+		# 		species = { save_global_event_target_as = salarianSpecies }
+		# 	}
+		# 	while = {
+		# 		count = 26
+		# 		create_pop = { species = event_target:salarianSpecies }
+		# 	}
+		# 	set_name = "Sur'Kesh"
+		# 	add_deposit = d_surkesh_parkan_research_institute
+		# 	add_deposit = d_surkesh_wesbii_forest
+		# }
      }
 
     planet = {
@@ -523,7 +594,7 @@ sys_pranas_init = {
 		spawn_megastructure = { 
 			type = "annosbasin_serpentnebula_massrelay" 
 			name = "Annos_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 42 
 			orbit_distance = 200			
 		} 
 	}
@@ -749,7 +820,7 @@ sys_gemmae_init = {
 		spawn_megastructure = { 
 			type = "apiencrest_aethoncluster_massrelay" 
 			name = "Apien_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 84 
 			orbit_distance = 200			
 		} 
 	}
@@ -759,6 +830,20 @@ sys_gemmae_init = {
 sys_trebia_init = {
     name = "Trebia"
     class = "sc_g"
+
+	flags = { empire_home_system MEG_turian_hierarchy_system custom_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
 
     planet = {
         class = "pc_g_star"
@@ -796,10 +881,33 @@ sys_trebia_init = {
         orbit_distance = 20
         orbit_angle = 156
         size = 22
+		starting_planet = yes
+		has_ring = no
+		modifiers = none
+		flags = { btr_turian_hierarchy_planet_palaven special_start_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+			# generate_MEG_major_empire_start_buildings = yes
+
+			# random_country = {
+			# 	limit = { has_country_flag = "turian_hierarchy" }
+			# 	save_event_target_as = trebiaOwner
+			# 	save_global_event_target_as = turian_hierarchy
+			# 	species = { save_global_event_target_as = turianSpecies }
+			# }
+			# while = {
+			# 	count = 26
+			# 	create_pop = { species = event_target:turianSpecies }
+			# }
+			# set_name = "Palaven"
+			# add_deposit = d_palaven_radiation
+			# add_deposit = d_palaven_cipritine
+			# add_deposit = d_sercusium_river
+		}        
         init_effect = {
             set_planet_flag = palaven_codex
             }
-        has_ring = no
         moon = {
             name = "Menae"
             class = "pc_barren"
@@ -864,7 +972,7 @@ sys_trebia_init = {
 		spawn_megastructure = { 
 			type = "apiencrest_serpentnebula_massrelay" 
 			name = "Apien_3_Relay"
-			orbit_angle = random 
+			orbit_angle = 168 
 			orbit_distance = 200
 			
 		} 
@@ -874,8 +982,8 @@ sys_trebia_init = {
 		spawn_megastructure = { 
 			type = "apiencrest_xingyuncluster_massrelay" 
 			name = "Apien_2_Relay"
-			orbit_angle = random 
-			orbit_distance = 200
+			orbit_angle = 8 
+			orbit_distance = 240
 			
 		} 
 	}    	
@@ -887,6 +995,20 @@ sys_trebia_init = {
 sys_aralakh_init = {
     name = "Aralakh"
     class = "sc_f"
+
+	flags = { empire_home_system btr_krogan_chiefdom_system custom_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
 
     planet = {
         class = "pc_f_star"
@@ -939,7 +1061,31 @@ sys_aralakh_init = {
         init_effect = {
             set_planet_flag = tuchanka_codex
             }
-        has_ring = no
+		starting_planet = yes
+		has_ring = no
+		modifiers = none
+		flags = { btr_krogan_chiefdom_planet_tuchanka special_start_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+			# generate_MEG_major_empire_start_buildings = yes
+
+			# random_country = {
+			# 	limit = { has_country_flag = "krogan_chiefdom" }
+			# 	save_event_target_as = aralakhOwner
+			# 	save_global_event_target_as = krogan_chiefdom
+			# 	species = { save_global_event_target_as = kroganSpecies }
+			# }
+			# while = {
+			# 	count = 26
+			# 	create_pop = { species = event_target:kroganSpecies }
+			# }
+			# set_name = "Tuchanka"
+			# add_deposit = d_tuchanka_underground_tunnels
+			# add_deposit = d_tuchanka_the_hollows
+			# add_deposit = d_tuchanka_thresher_maw_nest
+			# add_deposit = d_tuchanka_nakmor_ruined
+		}
     }
 
     planet = {
@@ -976,7 +1122,7 @@ sys_aralakh_init = {
 		spawn_megastructure = { 
 			type = "krogandmz_serpentnebula_massrelay" 
 			name = "Aralakh_Relay"
-			orbit_angle = random 
+			orbit_angle = 21 
 			orbit_distance = 200
 			
 		} 
@@ -1093,7 +1239,7 @@ sys_nith_init = {
 		spawn_megastructure = { 
 			type = "krogandmz_meadecluster_massrelay" 
 			name = "Nith_Relay"
-			orbit_angle = random 
+			orbit_angle = 42 
 			orbit_distance = 200
 			
 		} 
@@ -1249,7 +1395,7 @@ sys_kasatum_init = {
 		spawn_megastructure = { 
 			type = "meadecluster_krogandmz_massrelay" 
 			name = "Meade_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 84 
 			orbit_distance = 200
 			
 		} 
@@ -1405,7 +1551,7 @@ sys_narbo_init = {
 		spawn_megastructure = { 
 			type = "meadecluster_xingyuncluster_massrelay" 
 			name = "Meade_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 168 
 			orbit_distance = 200
 			
 		} 
@@ -1445,6 +1591,20 @@ sys_kanala_init = {
 		radius = 40
 	}	
 
+	flags = { empire_home_system btr_illuminated_primacy_system custom_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
     planet = {
 	    name = "Kanala"
         class = "pc_a_star"
@@ -1474,6 +1634,30 @@ sys_kanala_init = {
         init_effect = {
             set_planet_flag = kahje_codex
             }
+		starting_planet = yes
+		modifiers = none
+		flags = { btr_illuminated_primacy_planet_kahje special_start_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+			# generate_MEG_major_empire_start_buildings = yes
+
+			# random_country = {
+			# 	limit = { has_country_flag = "illuminated_primacy" }
+			# 	save_event_target_as = kanalaOwner
+			# 	save_global_event_target_as = illuminated_primacy
+			# 	species = { save_global_event_target_as = hanarSpecies }
+			# }
+			# while = {
+			# 	count = 22
+			# 	create_pop = { species = event_target:hanarSpecies }
+			# }
+			# ensure_drell_exist = { homeworld = "THIS" }
+			# generate_MEG_drell_pops = yes
+			# add_deposit = d_kahje_rasiil_life_dome
+			# add_deposit = d_kahje_mount_vassla
+			set_name = "Kahje"  
+        }          
         moon = {
             name = "Libin"
             class = "pc_barren"
@@ -1544,7 +1728,7 @@ sys_kanala_init = {
 		spawn_megastructure = { 
 			type = "olinprotectorate_serpentnebula_massrelay" 
 			name = "Olin_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 72 
 			orbit_distance = 200
 			
 		} 
@@ -1655,7 +1839,7 @@ sys_obek_init = {
 		spawn_megastructure = { 
 			type = "olinprotectorate_vesuviusnebula_massrelay" 
 			name = "Olin_3_Relay"
-			orbit_angle = random 
+			orbit_angle = 36 
 			orbit_distance = 200
 			
 		} 
@@ -1737,7 +1921,7 @@ sys_warmestshoal_init = {
 				spawn_megastructure = { 
 				type = "olinprotectorate_horseheadnebula_massrelay" 
 				name = "Olin_2_Relay"
-				orbit_angle = random 
+				orbit_angle = 144 
 				orbit_distance = 20
 			}
 		} 
@@ -1786,7 +1970,7 @@ sys_iotapersei_init = {
 		spawn_megastructure = { 
 			type = "xingyuncluster_localcluster_massrelay" 
 			name = "Xingyun_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 20 
 			orbit_distance = 200
 			
 		} 
@@ -1842,7 +2026,7 @@ sys_carrini_init = {
 		spawn_megastructure = { 
 			type = "xingyuncluster_meadecluster_massrelay" 
 			name = "Xingyun_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 17 
 			orbit_distance = 200
 		} 
 	}
@@ -1863,7 +2047,7 @@ sys_yuan_init = {
 		spawn_megastructure = { 
 			type = "xingyuncluster_aethoncluster_massrelay" 
 			name = "Xingyun_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 8 
 			orbit_distance = 200
 		} 
 	}	
@@ -1872,7 +2056,7 @@ sys_yuan_init = {
 		spawn_megastructure = { 
 			type = "xingyuncluster_apiencrest_massrelay" 
 			name = "Xingyun_3_Relay"
-			orbit_angle = random 
+			orbit_angle = 176 
 			orbit_distance = 185
 		} 
 	}	

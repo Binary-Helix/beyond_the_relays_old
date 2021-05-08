@@ -121,7 +121,7 @@ sys_orisoni_init = {
 		spawn_megastructure = { 
 			type = "athenanebula_minoswasteland_massrelay" 
 			name = "Athena_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 90 
 			orbit_distance = 200
 			
 		} 
@@ -131,7 +131,20 @@ sys_orisoni_init = {
 sys_parnitha_init = {
 	name = "Parnitha"	
     class = "sc_g"
-    
+
+	flags = { empire_home_system mec_asari_parnitha_system custom_system }
+	
+	usage = custom_empire
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}	
+
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 160
@@ -173,6 +186,33 @@ sys_parnitha_init = {
 		size = 14
 		starting_planet = yes
 		has_ring = no
+		modifiers = none
+		deposit_blockers = none
+		flags = { btr_asari_planet_thessia special_start_planet }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			# mec_asari_generate_thessia_deposits = yes
+			# mec_asari_setup_origin_homeworld = yes
+
+			# random_country = {
+			# 	limit = { has_country_flag = "asari_republics" }
+			# 	save_event_target_as = parnithaOwner
+			# 	save_global_event_target_as = asari_republics
+			# 	species = { save_global_event_target_as = asariSpecies }
+			# }
+			# while = {
+			# 	count = 26
+			# 	create_pop = { species = event_target:asariSpecies }
+			# }
+			
+			# if = {
+			# 	limit = {
+			# 		NOT = { exists = event_target:mec_asari_planet_thessia }
+			# 	}
+			# 	save_global_event_target_as = mec_asari_planet_thessia
+			# }
+		}
 	}
     
 
@@ -231,7 +271,7 @@ sys_parnitha_init = {
 		spawn_megastructure = { 
 			type = "athenanebula_serpentnebula_massrelay" 
 			name = "Athena_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 180
 			orbit_distance = 200
 			
 		} 
@@ -298,7 +338,7 @@ sys_tomaros_init = {
 		spawn_megastructure = { 
 			type = "athenanebula_nimbuscluster_massrelay" 
 			name = "Athena_3_Relay"
-			orbit_angle = random 
+			orbit_angle = 270 
 			orbit_distance = 200
 			
 		} 
@@ -447,7 +487,7 @@ sys_arrae_init = {
 		spawn_megastructure = { 
 			type = "ismarfrontier_minoswasteland_massrelay" 
 			name = "Minos_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 360 
 			orbit_distance = 200
 			
 		} 
@@ -489,7 +529,7 @@ sys_caestus_init = {
 		spawn_megastructure = { 
 			type = "athenanebula_minoswasteland_massrelay" 
 			name = "Minos_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 340 
 			orbit_distance = 200
 			
 		} 
@@ -541,7 +581,7 @@ sys_fortis_init = {
 		spawn_megastructure = { 
 			type = "minoswasteland_crescentnebula_massrelay" 
 			name = "Minos_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 320 
 			orbit_distance = 200
 			
 		} 
@@ -551,8 +591,8 @@ sys_fortis_init = {
 		spawn_megastructure = { 
 			type = "minoswasteland_eaglenebula_massrelay" 
 			name = "Minos_3_Relay"
-			orbit_angle = random 
-			orbit_distance = 200
+			orbit_angle = 160 
+			orbit_distance = 240
 			
 		} 
 	}	
@@ -606,7 +646,7 @@ sys_uba_init = {
 		spawn_megastructure = { 
 			type = "minoswasteland_nimbuscluster_massrelay" 
 			name = "Minos_3_Relay"
-			orbit_angle = random 
+			orbit_angle = 300 
 			orbit_distance = 200
 			
 		} 
@@ -703,7 +743,7 @@ sys_kallini_init = {
 		spawn_megastructure = { 
 			type = "athenanebula_nimbuscluster_massrelay" 
 			name = "Nimbus_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 150 
 			orbit_distance = 200
 			
 		} 
@@ -781,7 +821,7 @@ sys_mesana_init = {
 		spawn_megastructure = { 
 			type = "minoswasteland_nimbuscluster_massrelay" 
 			name = "Nimbus_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 280 
 			orbit_distance = 200
 			
 		} 
@@ -843,7 +883,7 @@ sys_pelion_init = {
 		spawn_megastructure = { 
 			type = "nimbuscluster_sileannebula_massrelay" 
 			name = "Nimbus_3_Relay"
-			orbit_angle = random 
+			orbit_angle = 140 
 			orbit_distance = 200
 			
 		} 
@@ -928,7 +968,7 @@ sys_boltzmann_init = {
 		spawn_megastructure = { 
 			type = "localcluster_serpentnebula_massrelay" 
 			name = "Serpent_5_Relay"
-			orbit_angle = random 
+			orbit_angle = 260 
 			orbit_distance = 200
 			
 		} 
@@ -972,7 +1012,7 @@ sys_sovak_init = {
 		spawn_megastructure = { 
 			type = "krogandmz_serpentnebula_massrelay" 
 			name = "Serpent_4_Relay"
-			orbit_angle = random 
+			orbit_angle = 130 
 			orbit_distance = 200
 			
 		} 
@@ -1015,8 +1055,8 @@ sys_terevan_init = {
 		spawn_megastructure = { 
 			type = "apiencrest_serpentnebula_massrelay" 
 			name = "Serpent_3_Relay"
-			orbit_angle = random 
-			orbit_distance = 200
+			orbit_angle = 240 
+			orbit_distance = 180
 			
 		} 
 	}
@@ -1025,7 +1065,7 @@ sys_terevan_init = {
 		spawn_megastructure = { 
 			type = "serpentnebula_sileannebula_massrelay" 
 			name = "Serpent_8_Relay"
-			orbit_angle = random 
+			orbit_angle = 200 
 			orbit_distance = 200
 			
 		} 
@@ -1090,7 +1130,7 @@ sys_totau_init = {
 		spawn_megastructure = { 
 			type = "olinprotectorate_serpentnebula_massrelay" 
 			name = "Serpent_6_Relay"
-			orbit_angle = random 
+			orbit_angle = 5 
 			orbit_distance = 200
 			
 		} 
@@ -1100,8 +1140,8 @@ sys_totau_init = {
 		spawn_megastructure = { 
 			type = "eaglenebula_serpentnebula_massrelay" 
 			name = "Serpent_7_Relay"
-			orbit_angle = random 
-			orbit_distance = 200
+			orbit_angle = 180 
+			orbit_distance = 220
 			
 		} 
 	}		
@@ -1112,27 +1152,28 @@ sys_widow_init = {
     class = "sc_b_giant"
 
     planet = {
-        name = "Citadel"
-        class = pc_habitat
-        orbit_distance = 0
-        orbit_angle = 144
-        size = 20
-        }       
-
-    planet = {
 	    name = "Widow"
         class = "pc_b_giant_star"
         size = 30
-        orbit_distance = 300
+        orbit_distance = 0
         orbit_angle = 180
     }
+
+    planet = {
+        name = "Citadel"
+        class = pc_habitat
+        orbit_distance = 150
+        orbit_angle = 144
+        size = 20
+		entity = "btr_citadel_entity"
+        }       
 
 
 	init_effect = { 
 		spawn_megastructure = { 
 			type = "annosbasin_serpentnebula_massrelay" 
 			name = "Serpent_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 6 
 			orbit_distance = 200
 			
 		} 
@@ -1142,8 +1183,8 @@ sys_widow_init = {
 		spawn_megastructure = { 
 			type = "athenanebula_serpentnebula_massrelay" 
 			name = "Serpent_1_Relay"
-			orbit_angle = random 
-			orbit_distance = 200
+			orbit_angle = 48 
+			orbit_distance = 180
 			
 		} 
 	}		
@@ -1269,7 +1310,7 @@ sys_loropi_init = {
 		spawn_megastructure = { 
 			type = "nimbuscluster_sileannebula_massrelay" 
 			name = "Silean_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 89 
 			orbit_distance = 200
 			
 		} 
@@ -1332,6 +1373,20 @@ sys_phontes_init = {
     name = "Phontes"
     class = "sc_g"
 
+	flags = { empire_home_system btr_courts_of_dekuuna_system custom_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
     planet = {
 	    name = "Phontes"
         class = "pc_g_star"
@@ -1359,6 +1414,28 @@ sys_phontes_init = {
         orbit_distance = 30
         orbit_angle = 256
         size = 25
+		starting_planet = yes
+		modifiers = none
+		flags = { btr_courts_of_dekuuna_planet_dekuuna special_start_planet }
+
+		init_effect = {
+			prevent_anomaly = yes
+			# generate_MEG_major_empire_start_buildings = yes
+
+			# random_country = {
+			# 	limit = { has_country_flag = "courts_of_dekuuna" }
+			# 	save_event_target_as = phontesOwner
+			# 	save_global_event_target_as = courts_of_dekuuna
+			# 	species = { save_global_event_target_as = elcorSpecies }
+			# }
+			# while = {
+			# 	count = 26
+			# 	create_pop = { species = event_target:elcorSpecies }
+			# }
+			# set_name = "Dekuuna"
+			# add_deposit = d_dekuuna_unovasereng
+			# add_deposit = d_dekuuna_forests
+		}		
         moon = {
             name = "Oltan"
             class = "pc_desolate"
@@ -1461,7 +1538,7 @@ sys_teyolia_init = {
 		spawn_megastructure = { 
 			type = "serpentnebula_sileannebula_massrelay" 
 			name = "Silean_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 45 
 			orbit_distance = 200
 			
 		} 
@@ -1556,7 +1633,7 @@ sys_stabiae_init = {
 		spawn_megastructure = { 
 			type = "minoswasteland_vesuviusnebula_massrelay" 
 			name = "Vesuvius_2_Relay"
-			orbit_angle = random 
+			orbit_angle = 187 
 			orbit_distance = 200
 		} 
 	}	
@@ -1598,7 +1675,7 @@ sys_pompeii_init = {
 		spawn_megastructure = { 
 			type = "olinprotectorate_vesuviusnebula_massrelay" 
 			name = "Vesuvius_1_Relay"
-			orbit_angle = random 
+			orbit_angle = 220 
 			orbit_distance = 200
 		} 
 	}	

@@ -1,0 +1,26 @@
+on_game_start = {
+	events = {
+		realspace.1 # sets mod global flag has_real_space_mod
+		realspace.103
+		realspace.105
+		realspace.204
+	}
+}
+
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
+		realspace.108
+	}
+}
+
+# No scope, like on_game_start
+on_five_year_pulse = {
+	events = {
+		realspace.112
+	}
+}

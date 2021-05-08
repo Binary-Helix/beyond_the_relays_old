@@ -2,9 +2,9 @@ static_galaxy_scenario = {
     name = "Beyond_the_Relays_500_v1"
     priority = 2
     default = no
-    colonizable_planet_odds = 1.0
-    num_empires = { min = 1 max = 1 }
-    num_empire_default = 1
+    colonizable_planet_odds = 0.25
+    num_empires = { min = 1 max = 15 }
+    num_empire_default = 9
     advanced_empire_default = 0
     core_radius = 25
     random_hyperlanes = yes
@@ -16,6 +16,9 @@ static_galaxy_scenario = {
             y = -292.9458
         }
         initializer = sys_kyzil_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -331,6 +334,9 @@ static_galaxy_scenario = {
             y = -239.5111
         }
         initializer = sys_sahrabarik_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -700,7 +706,9 @@ static_galaxy_scenario = {
             y = -243.7473
         }
         initializer = sys_tikkun_init
-        spawn_weight = { base = 1 }        
+		spawn_weight = { 
+			base = 1
+		}       
     }
 
     system = {
@@ -728,6 +736,9 @@ static_galaxy_scenario = {
             y = -139.5832
         }
         initializer = sys_azedes_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -836,6 +847,9 @@ static_galaxy_scenario = {
             y = -61.21091
         }
         initializer = sys_maskimxul_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1313,6 +1327,9 @@ static_galaxy_scenario = {
             y = 350.1526
         }
         initializer = sys_harsa_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1439,6 +1456,9 @@ static_galaxy_scenario = {
             y = 299.5244
         }
         initializer = sys_sol_init
+		spawn_weight = { 
+			base = 1
+		}	
     }
 
     system = {
@@ -1511,6 +1531,9 @@ static_galaxy_scenario = {
             y = 195.4158
         }
         initializer = sys_pranas_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1592,6 +1615,9 @@ static_galaxy_scenario = {
             y = 346.2097
         }
         initializer = sys_aru_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1619,6 +1645,9 @@ static_galaxy_scenario = {
             y = 313.7259
         }
         initializer = sys_trebia_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1691,6 +1720,9 @@ static_galaxy_scenario = {
             y = 199.8031
         }
         initializer = sys_aralakh_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1763,6 +1795,9 @@ static_galaxy_scenario = {
             y = 89.16795
         }
         initializer = sys_kanala_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1871,6 +1906,9 @@ static_galaxy_scenario = {
             y = -47.74206
         }
         initializer = sys_chabtan_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -1898,7 +1936,9 @@ static_galaxy_scenario = {
             y = 135.5177
         }
         initializer = sys_parnitha_init
-        spawn_weight = { base = 1 }        
+		spawn_weight = { 
+			base = 1
+		}	       
     }
 
     system = {
@@ -1926,6 +1966,7 @@ static_galaxy_scenario = {
             y = 153.3445
         }
         initializer = sys_tomaros_init
+		
     }
 
     system = {
@@ -1998,6 +2039,9 @@ static_galaxy_scenario = {
             y = 200.6415
         }
         initializer = sys_phontes_init
+		spawn_weight = { 
+			base = 1
+		}		
     }
 
     system = {
@@ -4229,25 +4273,25 @@ static_galaxy_scenario = {
         }
     }	
 
-    system = {
-        id = "501"
-        position = {
-            x = -317.2411
-            y = -466.9634
-        }
-        initializer = retalyx_random_spawn
-        spawn_weight = { base = 1 }
-    }
+    # system = {
+        # id = "501"
+        # position = {
+            # x = -317.2411
+            # y = -466.9634
+        # }
+        # initializer = retalyx_random_spawn
+        # spawn_weight = { base = 1 }
+    # }
 
-    system = {
-        id = "502"
-        position = {
-            x = -436.4001
-            y = -453.0358
-        }
-        initializer = retalyx_random_spawn
-        spawn_weight = { base = 1 }
-    }
+    # system = {
+        # id = "502"
+        # position = {
+            # x = -436.4001
+            # y = -453.0358
+        # }
+        # initializer = retalyx_random_spawn
+        # spawn_weight = { base = 1 }
+    # }
 
     nebula = {
         name = "Ismar_Frontier"

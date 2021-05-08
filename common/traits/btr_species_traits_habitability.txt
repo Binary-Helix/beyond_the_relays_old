@@ -6,8 +6,8 @@
 @senary = 0.30
 @septenary = 0.20
 @octonary = 0.10
-@nonary = .05
-@denary = .00
+@nonary = 0.05
+@denary = 0.01
 
 ##########################
 ### NORMAL PLANET PREF ###
@@ -27,7 +27,7 @@ trait_pc_arid_preference = {
 		pc_alpine_habitability = @septenary
 		pc_tundra_habitability = @octonary
 		pc_arctic_habitability = @nonary
-					
+
 		pc_dextro_arid_habitability = @secondary
 		pc_dextro_desert_habitability = @tertiary
 		pc_dextro_savannah_habitability = @quaternary

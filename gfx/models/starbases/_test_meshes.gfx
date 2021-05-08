@@ -5,7 +5,7 @@ objectTypes = {
 	pdxmesh = {
 		name = "btr_citadel_mesh"
 		file = "gfx/models/starbases/btr_citadel.mesh"
-		scale = 1.0
+		scale = 0.8
 			
 			animation = { id = "idle"		type = "fallen_empire_station_large_idle_animation" }
 			animation = { id = "death"		type = "fallen_empire_station_large_death_animation" }
@@ -13,9 +13,9 @@ objectTypes = {
 		meshsettings = {
 			name = "large_finished_MeshShape"
 			index = 0
-			texture_diffuse = "citadel_diff.dds"
-			texture_normal = "citadel_norm.dds"
-			texture_specular = "citadel_spec.dds"
+			texture_diffuse = "btr_citadel_diff.dds"
+			texture_normal = "btr_citadel_norm.dds"
+			texture_specular = "btr_citadel_spec.dds"
 			shader = "PdxMeshShip"
 		}
 	}	
