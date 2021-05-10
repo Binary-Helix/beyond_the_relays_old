@@ -1,0 +1,131 @@
+###########################
+# Asari On-Action Events #
+###########################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_asari_leader
+
+### This changes the gender of all asari leaders to female on spawn
+### By request, the Gynogenetic trait can be used to extend this functionality to other species
+
+# Ensure that all generated leaders are female
+country_event = {
+	id = mec_asari_leader.101
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				species = { is_species_class = MECASA }
+				species = { has_trait = mec_asari_trait_core }
+			}
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+		}
+	}
+}
+
+#These events dynamically change the functionality or replace certain vanilla leader traits to something more applicable to asari
+
+# Replace Resilient with a random generic trait
+country_event = {
+	id = mec_asari_leader.201
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			has_trait = leader_trait_resilient
+			species = { has_trait = mec_asari_trait_core }
+		}
+	}
+
+	immediate = {
+		from = {
+			mec_asari_leader_trait_replace_resilient = yes
+		}
+	}
+}
+
+# Chance of dying if has Substance Abuser
+event = {
+	id = mec_asari_leader.202
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		every_playable_country = {
+			limit = {
+				NOT = {
+					has_authority = auth_machine_intelligence
+				}
+			}
+			country_event = { id = mec_asari_leader.203 random = 200 }
+		}
+	}
+}
+
+country_event = {
+	id = mec_asari_leader.203
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			90 = { # 88% chance nothing happens
+			}
+			10 = {
+				#modifier = { # 50% chance if self preservation in effect
+				#	has_swapped_tradition = tr_synchronicity_self_preservation
+				#	factor = 0.5
+				#}
+				if = { # surveying scientist
+					limit = {
+						any_owned_leader = {
+							species = { has_trait = mec_asari_trait_core }
+							has_trait = leader_trait_substance_abuser
+						}
+					}
+					random_owned_leader = {
+						limit = {
+							species = { has_trait = mec_asari_trait_core }
+							has_trait = leader_trait_substance_abuser
+						}
+						save_event_target_as = deceased_leader
+						root = {
+							country_event = { id = mec_asari_leader.2031 }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mec_asari_leader.2031
+	title = mec_asari_leader.2031.name
+	desc = mec_asari_leader.2031.desc
+	picture = GFX_evt_space_funeral
+	show_sound = event_radio_chatter
+	location = capital_scope
+
+	is_triggered_only = yes
+
+	immediate = {
+		event_target:deceased_leader = {
+			kill_leader = { show_notification = no }
+		}
+	}
+
+	option = {
+		name = UNFORTUNATE
+	}
+}

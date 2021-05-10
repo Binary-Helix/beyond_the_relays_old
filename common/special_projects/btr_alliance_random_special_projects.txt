@@ -1,0 +1,22 @@
+special_project = {
+	key = "DISTRESS_CALL_PROJECT"
+	cost = 0
+	days_to_research = 30
+	timelimit = -1
+	picture = btr_GFX_evt_alliance_transport
+	icon = "gfx/interface/icons/situation_log/situation_log_quest.dds"
+
+	event_scope = ship_event
+
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		ship_event = { id = btr_alliance_random.6 }
+	}
+	
+	on_fail = { }
+}

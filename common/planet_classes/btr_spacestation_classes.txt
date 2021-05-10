@@ -1,0 +1,139 @@
+
+pc_cronos_station = {
+	habitat = yes
+    picture = pc_cronos_station
+	entity = "cerberus_cronos"
+	entity_scale = 2
+	icon_frame = 22
+
+    enable_tilt = no
+	fixed_entity_scale = yes
+	place_entity_on_planet_plane = yes
+	entity_face_object = no #disable rotation towards sun or planet we orbit around
+	
+	climate = "dry"
+
+	show_city = no
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+	
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = 12
+	moon_size = 1
+	
+	colonizable = yes
+	initial = yes
+	ideal = yes
+    district_set = habitat
+
+    is_artificial_planet = yes
+
+}
+
+pc_collector_base = {
+	habitat = yes
+    picture = pc_collector_base
+	entity = "collector_base"
+	entity_scale = 2
+	icon_frame = 22
+
+    enable_tilt = no
+	fixed_entity_scale = yes
+	place_entity_on_planet_plane = yes
+	entity_face_object = no #disable rotation towards sun or planet we orbit around
+	
+	climate = "dry"
+
+	show_city = no
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+	
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = 12
+	moon_size = 1
+	
+	colonizable = yes
+	initial = yes
+	ideal = yes
+    district_set = habitat
+
+    is_artificial_planet = yes
+
+}
+
+pc_omega = {
+	habitat = yes
+        picture = pc_omega
+	entity = "orbital_habitat"
+	entity_scale = 2
+	icon_frame = 22
+	
+	climate = "dry"
+	
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+
+	show_city = no
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+	
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	
+	colonizable = yes
+	ideal = yes
+	initial = yes
+    district_set = habitat
+
+	is_artificial_planet = yes
+}
+
+pc_citadel = {
+	habitat = yes
+    picture = pc_citadel
+	entity = "mass_effect_citadel"
+	entity_scale = 2
+	icon_frame = 22
+
+    enable_tilt = no
+	fixed_entity_scale = yes
+	place_entity_on_planet_plane = yes
+	entity_face_object = no #disable rotation towards sun or planet we orbit around
+	
+	climate = "dry"
+
+	show_city = no
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+	
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = 12
+	moon_size = 1
+	
+	colonizable = yes
+	ideal = yes
+    district_set = habitat
+
+	is_artificial_planet = yes
+	modifier = {
+		planet_max_districts_add = 4
+	}
+
+}

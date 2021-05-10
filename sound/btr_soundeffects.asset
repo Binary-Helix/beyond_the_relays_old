@@ -1,0 +1,26 @@
+# Weapons
+
+soundeffect = {
+	name = laser_reaper_cannon_01
+	falloff = "falloff_weapons_close"
+	sounds = { sound = laser_reaper_cannon_01 }
+	is3d = yes
+	max_audible = 4
+	max_audible_behaviour = fail
+	delay_random_offset = { 0.0 0.5 }
+	volume_random_offset = { 0.0 0.15 }
+	volume = 0.4
+	fade_out = 0.2
+}
+
+soundeffect = {
+	name = distance_laser_reaper_cannon_01
+	falloff = "falloff_weapons_distance"
+	sounds = { sound = distance_laser_reaper_cannon_01 }
+	is3d = yes
+	max_audible = 4
+	max_audible_behaviour = fail
+	playbackrate_random_offset = { 2.0 -2.05 }
+	volume = 0.6
+	fade_out = 0.2
+}

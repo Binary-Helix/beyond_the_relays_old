@@ -1,0 +1,79 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+#This decision turns Illium into an Ecumenopolis once all the blockers have been cleared
+#The standard method of conversion should be disabled for Illium by keeping one unclearable blocker on planet
+mec_asari_decision_origin_illium_ecumenopolis = {
+	owned_planets_only = yes
+	sound = event_cityscape
+	icon = decision_arcology_project
+	
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+		}
+	}
+	
+	potential = {
+		exists = owner
+		owner = { has_origin = mec_asari_origin_illium }
+		has_planet_flag = mec_asari_planet_illium
+		NOT = { is_planet_class = pc_city }
+	}
+	
+	allow = {
+		NOR = {
+			has_deposit = d_mec_asari_tartaos_fissures
+			has_deposit = d_mec_asari_sub_equatorial_land
+			has_deposit = d_mec_asari_esiyo_urban
+			has_deposit = d_mec_asari_esiyo_jungle
+			has_deposit = d_mec_asari_makeara_slums
+			has_deposit = d_mec_asari_nosparnalo_quarantine
+			has_deposit = d_mec_asari_arcology_unfinished
+		}
+	}	
+	
+	effect = {
+		custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {
+			clear_deposits = yes
+			change_pc = pc_city
+			set_planet_entity = {
+				entity = "city_planet_entity"
+				graphical_culture = owner
+			}
+			add_deposit = d_mec_asari_neo_nosastra
+			add_deposit = d_mec_asari_neo_manjoros
+			add_deposit = d_mec_asari_neo_saefos
+			add_deposit = d_mec_asari_neo_nosparnalo
+			add_deposit = d_mec_asari_neo_sulsara
+			add_district = district_arcology_leisure
+			add_district = district_arcology_arms_industry
+			add_district = district_arcology_civilian_industry
+			#for some reason event_target isn't working here, search for the unique flag identifier instead
+			random_country = {
+				limit = { has_country_flag = mec_asari_illium_owner_of_@prev }
+				set_country_flag = mec_story_illium_architect_ending_A
+				country_event = { id = mec_asari_asi.210 }
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 999
+	}
+}

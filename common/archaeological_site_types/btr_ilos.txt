@@ -1,0 +1,47 @@
+# Ilos Prothean Ruins
+ilos_dig_site = {
+	desc = ilos_dig_site_desc
+	picture = btr_GFX_evt_ilos_dig_site
+	stages = 5
+	max_instances = 1
+	weight = { base = 0 }
+	potential = {}
+	visible = { # maybe change?
+		default_site_visible_trigger = yes
+		#has_country_flag = ilos_event
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		#exists = owner
+		#owner = { has_country_flag = ilos_event }
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.4
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.5
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.6
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.7
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.8
+	}
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}

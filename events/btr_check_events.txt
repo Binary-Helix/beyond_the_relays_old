@@ -1,0 +1,19 @@
+
+namespace = btr_check
+
+# Custom Country Check
+country_event = {
+	id = btr_check.1
+	title = btr_check.1.name
+	desc = btr_check.1.desc
+	picture = btr_GFX_evt_btr_main
+	is_triggered_only = yes
+	trigger = {
+		NOT = {
+			has_country_flag = btr_empire
+		}
+	}
+	option = {
+		name = OK
+	}
+}

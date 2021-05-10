@@ -1,0 +1,54 @@
+
+
+unexplored_citadel = {
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_citadel.dds"
+	icon_frame = 3
+
+	pop_environment_tolerance = -0.99
+}
+
+migrant_fleet_visit = {
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_migrant_fleet.dds"
+	icon_frame = 3
+
+	planet_stability_add = -10
+	planet_crime_add = 10
+}
+
+noveria_peak_8 = {
+	country_physics_research_produces_mult = 0.05
+	country_society_research_produces_mult = 0.05
+}
+
+noveria_peak_21 = {
+	country_physics_research_produces_mult = 0.10
+	country_society_research_produces_mult = 0.10
+}
+
+weapon_research_inspired = {
+	category_particles_research_speed_mult = 0.40
+}
+
+genetic_research_inspired = {
+	category_biology_research_speed_mult = 0.40
+}
+
+prothean_remnant = {
+	country_physics_research_produces_mult = 2.00
+	country_society_research_produces_mult = 2.00
+	country_engineering_research_produces_mult = 2.00
+	all_technology_research_speed = 2.00
+	country_energy_produces_mult = 1.00
+	country_food_produces_mult = 1.00
+	country_consumer_goods_produces_add = 1.00
+	country_alloys_produces_mult = 1.00
+}
+
+mbtr_minor_empire = {
+	science_ship_survey_speed = -0.50
+	starbase_outpost_cost_mult = 1.00
+	shipsize_starbase_outpost_build_speed_mult = -0.50
+	planet_colony_development_speed_mult = -0.50
+}

@@ -1,0 +1,117 @@
+###########################
+# Asari On-Action Events #
+###########################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_asari_pop
+
+### Hidden On_Monthly_Pulse Event
+### This controls the mechanics of the Gynogenetic trait
+
+### Check for alien pops and apply +growth to growing asari pops
+### NOTE: This doesn't work as of 2.2.2. It is no longer possible to scope in on growing pops specifically and there are no on_actions to detect when a new pop starts growing or is cancelled.
+### Need to poke the devs about it next year.
+### Leaving legacy code here for refeerence.
+
+#event = {
+#	id = mec_asari_pop.101
+#	hide_window = yes
+	
+#	is_triggered_only = yes
+	
+#	immediate = {
+#		every_pop = {
+#			limit = {
+#				exists = planet
+#				planet = {
+#					any_pop = {
+#						NOT = { is_same_species = prevprev }
+#						pop_has_trait = trait_mec_asari_gynogenetic
+#						mec_asari_can_pop_procreate = yes
+#						is_growing = yes
+#					}
+#				}
+#				NOT = { has_pop_flag = mec_asari_cross_fertiliser }
+#				NOT = { pop_has_ethic = ethic_xenophobe }
+#				mec_asari_can_pop_procreate = yes
+#				is_growing = no
+#			}
+#			set_timed_pop_flag = {
+#				flag = mec_asari_cross_fertiliser
+#				days = 89
+#			}
+#			planet = {
+#				random_pop = {
+#					limit = {
+#						NOT = { is_same_species = prevprev }
+#						pop_has_trait = trait_mec_asari_gynogenetic
+#						mec_asari_can_pop_procreate = yes
+#						is_growing = yes
+#					}
+#					if = {
+#						limit = {
+#							prevprev = { pop_has_ethic = ethic_xenophile }
+#						}
+#						add_modifier = {
+#							modifier = mec_asari_cross_fertilised_xphi
+#							days = 89
+#						}
+#					}
+#					else = {
+#						add_modifier = {
+#							modifier = mec_asari_cross_fertilised
+#							days = 89
+#						}
+#					}
+#				}
+#			}
+#		}
+#	}
+#}
+
+### New implementation of the Gynogenetic trait. Triggered when a growing pop becomes a real pop.
+### If alien pop is born, scaling chance based on gynogenetic species percentage for it to switch species to one of gynogenetic species on the same planet.
+### Preliminary implementation of Ardat-Yakshi: If gynogenetic pop is born, scaling chance based on same-species percentage for it to gain the Ardat-Yakshi modifier (-happiness)
+
+### To be expanded in future updates.
+
+planet_event = {
+	id = mec_asari_pop.101
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	# This = Planet scope
+	# From = Country
+	# FromFrom = Pop
+	
+	trigger = {
+		any_owned_pop = {
+			pop_has_trait = mec_asari_trait_core
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				fromfrom = {
+					pop_has_trait = mec_asari_trait_core
+				}
+			}
+			mec_asari_evaluate_ardatyakshi_chance = yes
+		}
+		else_if = {
+			limit = {
+				fromfrom = {
+					mec_asari_can_pop_procreate = yes
+				}
+				any_owned_pop = {
+					NOT = { is_same_species = fromfrom }
+					pop_has_trait = mec_asari_trait_core
+				}
+			}
+			mec_asari_evaluate_flip_chance = yes
+		}
+	}
+}

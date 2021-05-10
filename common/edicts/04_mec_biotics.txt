@@ -1,0 +1,163 @@
+##########################################################################
+# Empire edicts
+##########################################################################
+
+@Biotics1Cost = 500
+@Biotics2Cost = 1000
+@Biotics3Cost = 1500
+@Biotics4Cost = 2000
+@Biotics5Cost = 2500
+
+@BioticsDuration = 3600
+
+#################
+# Biotics
+#################
+
+mec_biotics_edict_armies = {
+	length = @BioticsDuration
+	icon = "GFX_mec_asari_edict_biotics"
+	resources = {
+		category = edicts
+		cost = {
+			mec_biotics = @Biotics2Cost
+		}
+	}
+
+	modifier = {
+		army_damage_mult = 0.20
+		army_collateral_damage_mult = 0.20
+		planet_orbital_bombardment_damage = -0.20
+	}
+
+	potential = {
+		any_owned_pop = {
+			has_trait = mec_asari_trait_biotic
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			is_at_war = yes
+		}
+	}
+}
+
+mec_biotics_edict_research = {
+	length = @BioticsDuration
+	icon = "GFX_mec_asari_edict_biotics"
+	resources = {
+		category = edicts
+		cost = {
+			mec_biotics = @Biotics3Cost
+		}
+	}
+
+	modifier = {
+		planet_jobs_physics_research_produces_mult = 0.30
+	}
+
+	potential = {
+		any_owned_pop = {
+			has_trait = mec_asari_trait_biotic
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			is_at_war = no
+		}
+	}
+}
+
+mec_biotics_edict_upkeep = {
+	length = @BioticsDuration
+	icon = "GFX_mec_asari_edict_biotics"
+	resources = {
+		category = edicts
+		cost = {
+			mec_biotics = @Biotics4Cost
+		}
+	}
+
+	modifier = {
+		#planet_jobs_energy_upkeep_mult = -0.20
+		#planet_jobs_minerals_upkeep_mult = -0.20
+		#planet_jobs_alloys_upkeep_mult = -0.10
+		#planet_jobs_consumer_goods_upkeep_mult = -0.10
+		planet_jobs_upkeep_mult = -0.10
+	}
+
+	potential = {
+		any_owned_pop = {
+			has_trait = mec_asari_trait_biotic
+		}
+	}
+
+	ai_weight = {
+		weight = 10
+		modifier = {
+			OR = {
+				has_monthly_income = { resource = energy value < 0 }
+				has_monthly_income = { resource = minerals value < 0 }
+				has_monthly_income = { resource = alloys value < 0 }
+				has_monthly_income = { resource = consumer_goods value < 0 }
+			}
+			weight = 10
+		}
+	}
+}
+
+#Sell surplus if no other option available
+mec_biotics_edict_sell = {
+	length = 0
+	icon = "GFX_mec_asari_edict_biotics"
+	resources = {
+		category = edicts
+		cost = {
+			mec_biotics = @Biotics1Cost
+		}
+	}
+
+	modifier = {
+	}
+
+	effect = {
+		add_resource = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		any_owned_pop = {
+			has_trait = mec_asari_trait_biotic
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			resource_stockpile_compare = {
+				resource = mec_biotics
+				value > 3500
+			}
+		}
+		modifier = {
+			weight = 5
+			resource_stockpile_compare = {
+				resource = mec_biotics
+				value > 1000
+			}
+			has_edict = mec_biotics_edict_upkeep
+			OR = {
+			has_edict = mec_biotics_edict_research
+			has_edict = mec_biotics_edict_armies
+			}
+		}
+	}
+}

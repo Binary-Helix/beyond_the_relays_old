@@ -1,0 +1,77 @@
+# This is a template which multiple species can use. 
+
+angara_male_clothes_01 = {
+	default = "gfx/models/portraits/angara/angara_male_outfit_1.dds"
+	
+	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
+		default = "gfx/models/portraits/angara/angara_male_outfit_1.dds"
+	}
+	
+	#species scope
+	species = { #generic portrait for a species
+		default = "gfx/models/portraits/angara/angara_male_outfit_1.dds"
+		
+		random = {
+			list = {
+				"gfx/models/portraits/angara/angara_male_outfit_1.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_2.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_3.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_4.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_5.dds"
+			}
+		}
+	}
+	
+	#pop scope
+	pop = { #for a specific pop
+		default = "gfx/models/portraits/angara/angara_male_outfit_1.dds"
+		random = {
+			list = {
+				"gfx/models/portraits/angara/angara_male_outfit_1.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_2.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_3.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_4.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_5.dds"
+			}
+		}
+	}
+
+	#leader scope
+	leader = { #scientists, generals, admirals, governor
+		default = "gfx/models/portraits/angara/angara_male_outfit_1.dds"
+
+		random = {
+			trigger = { 
+				OR = {
+					leader_class = admiral
+					leader_class = general
+					leader_class = scientist
+					leader_class = governor
+				}
+			}
+			list = {
+				"gfx/models/portraits/angara/angara_male_outfit_1.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_2.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_3.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_4.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_5.dds"
+			}
+		}
+	}
+
+	#leader scope 
+	ruler = { #for rulers
+		default = "gfx/models/portraits/angara/angara_male_outfit_1.dds"
+		
+		# All Governments type
+		random = {
+			list = {
+				"gfx/models/portraits/angara/angara_male_outfit_1.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_2.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_3.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_4.dds"
+				"gfx/models/portraits/angara/angara_male_outfit_5.dds"
+			}
+		}
+	}
+}

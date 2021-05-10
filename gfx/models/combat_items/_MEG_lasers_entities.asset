@@ -1,0 +1,78 @@
+
+# REAPER CANNON
+
+# WINDUP
+
+entity = {
+	name = "reaper_cannon_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_8 particle = "particle_lance_windup_effect" }
+		event = { time = 0.0 use_parent_nodes = yes node = xl_windup_7 particle = "particle_lance_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_6 particle = "particle_lance_windup_effect" }
+		event = { time = 0.2 use_parent_nodes = yes node = xl_windup_5 particle = "particle_lance_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_4 particle = "particle_lance_windup_effect" }
+		event = { time = 0.4 use_parent_nodes = yes node = xl_windup_3 particle = "particle_lance_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_2 particle = "particle_lance_windup_effect" }
+		event = { time = 0.6 use_parent_nodes = yes node = xl_windup_1 particle = "particle_lance_windup_effect" }
+		
+		event = { time = 0.0 use_parent_nodes = yes node = xl_gun_01 particle = "particle_lance_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+entity = {
+	name = "reaper_cannon_turret_windup_entity"
+	
+	default_state = "attack"
+	get_state_from_parent = no
+	state = {
+		name = "attack" looping = yes state_time = 0.8
+		
+		event = { time = 0.0 use_parent_nodes = yes node = turret_muzzle_01 particle = "particle_lance_muzzle_windup_effect" trigger_once = yes keep_particle = yes }
+	}
+}
+
+# MUZZLE FLASHES
+
+entity = {
+	name = "reaper_cannon_muzzle_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 0.8 looping = no
+		event = { time = 0 particle = "particle_lance_muzzle_particle" keep_particle = yes sound = { soundeffect = laser_reaper_cannon_01 } }
+		event = { trigger_once = yes sound = { soundeffect = "distance_laser_reaper_cannon_01" } }
+	}
+}
+
+# HIT ENTITIES
+
+entity = {
+	name = "reaper_cannon_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" state_time = 2 looping = no
+		start_event = { particle = "particle_lance_hit_effect" keep_particle = yes sound = { soundeffect = energy_lance_hit } }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_energy_lance_hit" } }
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}
+
+# SHIELD HIT ENTITIES
+
+entity = {
+	name = "reaper_cannon_shield_hit_entity"
+	cull_radius = 1.0
+	
+	default_state = "idle"
+	state = { name = "idle" 
+		start_event = { particle = "particle_lance_hit_effect" sound = { soundeffect = shield_hit } }
+		start_event = { particle = "projectile_large_shield_hit_effect" }
+		start_event = { trigger_once = yes sound = { soundeffect = "distance_shield_hit" } } 
+	}
+	state = { name = "stop" state_time = 0.5 looping = no }
+}

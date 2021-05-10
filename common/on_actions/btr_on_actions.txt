@@ -1,0 +1,165 @@
+# Triggers when the game starts 
+on_game_start = {
+	events = {
+		btr_setup.100
+	}
+}
+
+# Called during empire initialization when starting a new game if has_secondary_species game rule is true.
+# Called before empire_init_create_capital_pops.
+# scope: planet
+# from: founder species
+# fromfrom: secondary species (if exists)
+empire_init_capital_planet = {
+	events = {
+		btr_setup.4
+	}
+}
+
+on_game_start_country = {
+	events = {
+		btr_setup.1
+		btr_setup.2
+		btr_setup.3
+		btr_setup.5
+		btr_setup.7
+		btr_mars.0
+		migrant_fleet.0
+		btr_geth_start.1
+		btr_geth_start.2
+		btr_check.1
+	}
+}
+
+# Triggers event when each country first sends a ship into the system (once per country)
+# Scope = Ship
+# From = System
+# FromFrom = Country
+on_entering_system_first_time = {
+	events = {
+		btr_citadel.1
+	}
+}
+
+# Triggers when pressing begin in the intro window
+# This = country to press begin
+on_press_begin = {
+	events = {
+	}
+}
+
+# From = Tile
+# This = Planet
+on_blocker_cleared = {
+	events = {
+		btr_tuchanka.0
+	}
+}
+
+# Triggers when trying to open the diplomacy view for countries with custom diplomacy.
+# Country scope
+# This = target country (player)
+# From = source country
+on_custom_diplomacy = {
+	events = {
+		btr_mercenary.4
+		btr_mercenary.5
+	}
+}
+
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		master.1 # Master Normal Event Trigger
+	}
+}
+
+# This = Attacked Fleet
+# From = Aggressor Fleet
+# FromFrom = Additional Attacked Fleet (if joining ongoing combat)
+# FromFromFrom = Additional Attacked Fleet (if joining ongoing combat)
+on_fleet_combat_joined_defender = {
+	events = {
+		migrant_fleet.3
+	}
+}
+
+# This = owner of fleet 1 (combatant)
+# From = owner of fleet 2 (destroyed)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_perp = {
+	events = {
+		migrant_fleet.4
+	}
+	random_events = {
+	}
+}
+
+# This = owner of fleet 1 (destroyed)
+# From = owner of fleet 2 (combatant)
+# FromFrom = fleet 1
+# FromFromFrom = fleet 2
+on_fleet_destroyed_victim = {
+	events = {
+		btr_mercenary.14
+		btr_mercenary.35
+	}
+}
+
+# A fleet executes a move order to exit borders
+# Scope = Fleet
+# From = Origin System
+# FromFrom = Destination System
+on_crossing_border = {
+	events = {
+		migrant_fleet.6
+	}
+}
+
+# Triggered when two empires discover each other
+# This = Empire 1
+# From = Empire 2
+# Fromfromfrom = System where contact occurred
+on_first_contact = {
+	events = {
+		btr_mercenary.1
+		btr_geth.1
+	}
+}
+
+# Executed as a leader has died
+# This = Country
+# From = Leader
+on_leader_death = {
+	events = {
+		btr_mercenary.18
+	}
+}
+
+# No scope, like on_game_start
+on_monthly_pulse = {
+	events = {
+		btr_mercenary.33
+		btr_mercenary.300
+		btr_mercenary.301
+	}
+}
+
+# No scope, like on_game_start
+on_yearly_pulse = {
+	events = {
+		btr_mercenary.25
+		btr_mercenary.302
+		btr_mercenary.2000
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		btr_mercenary.28
+	}
+}

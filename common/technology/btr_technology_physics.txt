@@ -1,19 +1,24 @@
-# ##################
-# Rare Resources
-# ##################
+##########################
+### Mass Effect Drives ###
+##########################
 
-# Element Zero Mining
-tech_mine_eezo_extraction = {
-	icon = tech_eezo_extraction
-	cost = @tier2cost1
+tech_mass_effect_drive_1 = {
+	cost = @tier1cost3
 	area = physics
-	tier = 2
-	category = { particles }	
-	prerequisites = { "tech_space_construction" }
-	weight = @tier2weight1
-	
+	tier = 1
+	category = { particles }
+	prerequisites = { "tech_hyper_drive_1" }
+	weight = @tier1weight3
+
+	modifier = {
+		ship_interstellar_speed_mult = 0.10
+	}
+
 	weight_modifier = {
-		factor = 2
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -21,31 +26,162 @@ tech_mine_eezo_extraction = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
+	}
+
+	ai_weight = {
+		factor = 3
 		modifier = {
-			factor = 0
-			NOT = {
-				any_owned_planet = {
-					OR = {
-						has_deposit = d_dust_caverns # need to create eezo deposits
-						has_deposit = d_dust_desert
-						has_deposit = d_industrial_sector
-					}
-				}				
-				any_planet_within_border = {
-					OR = {
-						has_deposit = d_volatile_motes_1
-						has_deposit = d_volatile_motes_2
-						has_deposit = d_volatile_motes_3
-						has_deposit = d_volatile_motes_4
-						has_deposit = d_volatile_motes_5
-					}
-				}	
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
 			}
 		}
 	}
-	
+}
+
+tech_mass_effect_drive_2 = {
+	cost = @tier2cost2
+	area = physics
+	tier = 2
+	category = { particles }
+	prerequisites = { "tech_mass_effect_drive_1" }
+	weight = @tier2weight2
+
+	modifier = {
+		ship_interstellar_speed_mult = 0.10
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
 	ai_weight = {
-		factor = 5 #important resource
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_mass_effect_drive_3 = {
+	cost = @tier3cost2
+	area = physics
+	tier = 3
+	category = { particles }
+	prerequisites = { "tech_mass_effect_drive_2" }
+	weight = @tier3weight3
+
+	modifier = {
+		ship_interstellar_speed_mult = 0.10
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_mass_effect_drive_4 = {
+	cost = @tier4cost2
+	area = physics
+	tier = 4
+	category = { particles }
+	prerequisites = { "tech_mass_effect_drive_3" }
+	weight = @tier4weight3
+
+	modifier = {
+		ship_interstellar_speed_mult = 0.10
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+}
+
+tech_mass_effect_drive_5 = {
+	cost = @tier5cost2
+	area = physics
+	tier = 5
+	category = { particles }
+	prerequisites = { "tech_mass_effect_drive_4" }
+	weight = @tier5weight3
+
+	modifier = {
+		ship_interstellar_speed_mult = 0.10
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 1.25
+			has_tradition = tr_discovery_adopt
+		}
+		modifier = {
+			factor = 1.25
+			research_leader = {
+				area = physics
+				has_trait = "leader_trait_expertise_particles"
+			}
+		}
+	}
+
+	ai_weight = {
+		factor = 3
 		modifier = {
 			factor = 1.25
 			research_leader = {

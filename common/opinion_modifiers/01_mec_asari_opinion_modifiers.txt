@@ -1,0 +1,61 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+
+# this = empire that gets the modifier
+# from = empire that triggers the modifier
+
+mec_asari_triggered_opinion_asr_asi_base = {
+	trigger = {
+		has_origin = mec_asari_origin_thessia
+		FROM = {
+			has_origin = mec_asari_origin_illium
+		}
+	}
+
+	opinion = {
+		base = 100
+	}
+}
+
+mec_asari_triggered_opinion_asi_asr_base = {
+	trigger = {
+		has_origin = mec_asari_origin_illium
+		FROM = {
+			has_origin = mec_asari_origin_thessia
+		}
+	}
+
+	opinion = {
+		base = 50
+	}
+}
+
+mec_asari_triggered_opintion_asc_civic_effect = {
+	trigger = {
+		is_country_type = default
+		NOT = { is_in_federation_with = FROM }
+		FROM = {
+			has_valid_civic = mec_asari_civic_ascendancy
+			NOT = { any_subject = { is_same_value = root } }
+		}
+	}
+
+	opinion = {
+		base = -60
+	}
+}
+
+mec_asari_triggered_opintion_galactic_good_effect = {
+	trigger = {
+		is_galactic_community_member = yes
+		FROM = {
+			is_galactic_community_member = yes
+			has_country_flag = mec_story_thessia_beacon_ending_B
+		}
+	}
+
+	opinion = {
+		base = 30
+	}
+}

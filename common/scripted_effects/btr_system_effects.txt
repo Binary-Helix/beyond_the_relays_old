@@ -1,0 +1,13 @@
+
+erase_invalid_spawn_system = {
+	set_country_flag = cleanupRemove
+	every_owned_planet = {
+		remove_all_buildings = yes
+		destroy_colony = yes
+		solar_system = { 
+			set_star_flag = remakeSystem
+		}
+	}
+	destroy_country = yes
+}
+

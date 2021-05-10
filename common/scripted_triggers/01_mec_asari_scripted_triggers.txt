@@ -1,0 +1,21 @@
+# We'll procreate ok?
+# This = Pop
+mec_asari_can_pop_procreate = {
+	is_sapient = yes
+	NOR = {
+		has_trait = trait_machine_unit
+		has_trait = trait_mechanical
+	}
+}
+
+mec_asari_req_asi = {
+	host_has_dlc = "Megacorp"
+}
+
+mec_asari_req_asr = {
+	host_has_dlc = "Federations"
+}
+
+mec_asari_req_asr_old = {
+	NOT = { host_has_dlc = "Federations" }
+}

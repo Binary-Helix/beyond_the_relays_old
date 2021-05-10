@@ -1,0 +1,190 @@
+objectTypes = {
+	# Corvette 
+	pdxmesh = {
+		name = "geth_01_corvette_frame_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_corvette/geth_01_corvette_frame.mesh"
+
+		meshsettings = {
+			name = "hull_main"
+			texture_diffuse = "geth_01_corvette_hull_main_diffuse.dds"
+			texture_normal = "geth_01_corvette_hull_main_normal.dds"
+			texture_specular = "geth_01_corvette_hull_main_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	# Destroyer
+	pdxmesh = {
+		name = "geth_01_destroyer_frame_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_destroyer/geth_01_destroyer_frame.mesh"
+
+		meshsettings = {
+			name = "hull_main"
+			texture_diffuse = "geth_01_destroyer_hull_main_diffuse.dds"
+			texture_normal = "geth_01_destroyer_hull_main_normal.dds"
+			texture_specular = "geth_01_destroyer_hull_main_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "geth_01_destroyer_bow_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_destroyer/geth_01_destroyer_bow.mesh"
+	}
+	pdxmesh = {
+		name = "geth_01_destroyer_stern_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_destroyer/geth_01_destroyer_stern.mesh"
+	}
+
+	# Cruiser
+	pdxmesh = {
+		name = "geth_01_cruiser_frame_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_cruiser/geth_01_cruiser_frame.mesh"
+
+		meshsettings = {
+			name = "hull_main"
+			texture_diffuse = "geth_01_cruiser_hull_main_diffuse.dds"
+			texture_normal = "geth_01_cruiser_hull_main_normal.dds"
+			texture_specular = "geth_01_cruiser_hull_main_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "geth_01_cruiser_bow_1_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_cruiser/geth_01_cruiser_bow_1.mesh"
+	}
+	pdxmesh = {
+		name = "geth_01_cruiser_bow_2_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_cruiser/geth_01_cruiser_bow_2.mesh"
+	}
+	pdxmesh = {
+		name = "geth_01_cruiser_stern_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_cruiser/geth_01_cruiser_stern.mesh"
+	}
+
+	# Titan
+	pdxmesh = {
+		name = "geth_01_titan_frame_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_titan/geth_01_titan_frame.mesh"
+
+		meshsettings = {
+			name = "hull_1"
+			texture_diffuse = "geth_01_titan_hull_1_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_1_normal.dds"
+			texture_specular = "geth_01_titan_hull_1_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_2"
+			texture_diffuse = "geth_01_titan_hull_2_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_2_normal.dds"
+			texture_specular = "geth_01_titan_hull_2_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_3"
+			texture_diffuse = "geth_01_titan_hull_3_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_3_normal.dds"
+			texture_specular = "geth_01_titan_hull_3_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_4"
+			texture_diffuse = "geth_01_titan_hull_4_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_4_normal.dds"
+			texture_specular = "geth_01_titan_hull_4_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "geth_01_titan_bow_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_titan/geth_01_titan_bow.mesh"
+	}
+	pdxmesh = {
+		name = "geth_01_titan_stern_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_titan/geth_01_titan_stern.mesh"
+	}
+
+	# Battleship
+	pdxmesh = {
+		name = "geth_01_battleship_frame_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_battleship/geth_01_battleship_frame.mesh"
+
+		meshsettings = {
+			name = "hull_2"
+			texture_diffuse = "geth_01_titan_hull_2_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_2_normal.dds"
+			texture_specular = "geth_01_titan_hull_2_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_3"
+			texture_diffuse = "geth_01_titan_hull_3_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_3_normal.dds"
+			texture_specular = "geth_01_titan_hull_3_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_4"
+			texture_diffuse = "geth_01_titan_hull_4_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_4_normal.dds"
+			texture_specular = "geth_01_titan_hull_4_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+	pdxmesh = {
+		name = "geth_01_battleship_bow_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_battleship/geth_01_battleship_bow.mesh"
+	}
+	pdxmesh = {
+		name = "geth_01_battleship_stern_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_battleship/geth_01_battleship_stern.mesh"
+	}
+
+	# Construction
+	pdxmesh = {
+		name = "geth_01_construction_frame_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_construction/geth_01_construction_frame.mesh"
+
+		meshsettings = {
+			name = "hull_main"
+			texture_diffuse = "geth_01_science_hull_main_diffuse.dds"
+			texture_normal = "geth_01_science_hull_main_normal.dds"
+			texture_specular = "geth_01_science_hull_main_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	# Science
+	pdxmesh = {
+		name = "geth_01_science_frame_mesh"
+		file = "gfx/models/ships/geth_01/geth_01_science/geth_01_science_frame.mesh"
+
+		meshsettings = {
+			name = "hull_main"
+			texture_diffuse = "geth_01_science_hull_main_diffuse.dds"
+			texture_normal = "geth_01_science_hull_main_normal.dds"
+			texture_specular = "geth_01_science_hull_main_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_second"
+			texture_diffuse = "geth_01_titan_hull_4_diffuse.dds"
+			texture_normal = "geth_01_titan_hull_4_normal.dds"
+			texture_specular = "geth_01_titan_hull_4_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+}

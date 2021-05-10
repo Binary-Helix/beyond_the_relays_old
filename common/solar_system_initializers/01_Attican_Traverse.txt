@@ -564,10 +564,37 @@ sys_chabtan_init = {
     }
 	
     planet = {
+		name = "Chabtan"	
         class = "pc_m_super_star"
         orbit_distance = 0
         size = 45
+		has_ring = no
     }
+
+	planet = {
+		name = "Libel"
+		class = "pc_scorched"
+		orbit_distance = 90
+		orbit_angle = { min = 1 max = 360 }
+		size = 5
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Moscon"
+		class = "pc_barren"
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 7
+		has_ring = no
+		moon = {
+			name = "Twuiq"
+			class = "pc_molten"
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = 1
+		}
+	}
 
     planet = {
         name = "Parnack"
@@ -584,21 +611,21 @@ sys_chabtan_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			# generate_MEG_major_empire_start_buildings = yes
+			 generate_btr_major_empire_start_buildings = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "parnack_regime" }
-			# 	save_event_target_as = chabtanOwner
-			# 	save_global_event_target_as = parnack_regime
-			# 	species = { save_global_event_target_as = yahgSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:yahgSpecies }
+			 random_country = {
+			 	limit = { has_country_flag = "parnack_regime" }
+			 	save_event_target_as = chabtanOwner
+			 	save_global_event_target_as = parnack_regime
+			 	species = { save_global_event_target_as = yahgSpecies }
+			 }
+			 while = {
+			 	count = 26
+			 	create_pop = { species = event_target:yahgSpecies }
 			}
-			#set_name = "Parnack"
-	}        
-
+			set_name = "Parnack"
+	    }        
+    }
 
     planet = {
         name = "Noviz"
@@ -1728,7 +1755,7 @@ sys_azedes_init = {
     }	
 	
 	planet = {
-		name = "Vesskur"
+		name = "Vess'kur"
 		class = "pc_hothouse"
 		orbit_distance = 65
         orbit_angle = 208
@@ -1738,7 +1765,7 @@ sys_azedes_init = {
 			set_planet_flag = vess'kur_codex
         }
 		moon = {
-			name = "Vesskur_a"
+			name = "Mass'kur"
 			class = "pc_scorched"
 			orbit_distance = 8
 			size = 4
@@ -1762,29 +1789,29 @@ sys_azedes_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			# generate_MEG_major_empire_start_buildings = yes
+			generate_btr_major_empire_start_buildings = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "raloi_republic" }
-			# 	save_event_target_as = azedesOwner
-			# 	save_global_event_target_as = raloi_republic
-			# 	species = { save_global_event_target_as = raloiSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:raloiSpecies }
-			# }
+			random_country = {
+				limit = { has_country_flag = "raloi_republic" }
+				save_event_target_as = azedesOwner
+				save_global_event_target_as = raloi_republic
+				species = { save_global_event_target_as = raloiSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:raloiSpecies }
+			}
 			set_name = "Turvess"
 		}
 		
 		moon = {
-			name = "Turvess_a"
+			name = "Ino"
 			class = "pc_barren"
 			orbit_distance = 8
 			size = 4
 		}
 		moon = {
-			name = "Turvess_b"
+			name = "Opi"
 			class = "pc_barren"
 			orbit_distance = 8
 			size = 5
@@ -3687,7 +3714,7 @@ sys_maskimxul_init = {
 
     planet = {
         name = "Suen"
-        class = "pc_barren"
+        class = "pc_toxic_arid"
         orbit_distance = 50
         orbit_angle = 39
         size = 7
@@ -3699,23 +3726,23 @@ sys_maskimxul_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_blockers = yes
-			# generate_MEG_rachni_start_buildings = yes
+			generate_btr_rachni_start_buildings = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "rachni_hive" }
-			# 	save_event_target_as = maskimxulOwner
-			# 	save_global_event_target_as = rachni_hive
-			# 	species = { save_global_event_target_as = rachniSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:rachniSpecies }
-			# }
-			# add_deposit = d_geothermal_vent
-			# add_deposit = d_rich_mountain
-			# add_deposit = d_forgiving_tundra
-			# add_deposit = d_forgiving_tundra
-			# add_deposit = d_forgiving_tundra
+			random_country = {
+				limit = { has_country_flag = "rachni_hive" }
+				save_event_target_as = maskimxulOwner
+				save_global_event_target_as = rachni_hive
+				species = { save_global_event_target_as = rachniSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:rachniSpecies }
+			}
+			add_deposit = d_geothermal_vent
+			add_deposit = d_rich_mountain
+			add_deposit = d_forgiving_tundra
+			add_deposit = d_forgiving_tundra
+			add_deposit = d_forgiving_tundra
 			set_name = "Suen"
 		}
 
@@ -3839,16 +3866,200 @@ sys_dakka_init = {
         save_global_event_target_as = "dakka_relay_system"
     }
 
-    flags = {
-        dakka_system
-    }
+	flags = { mercenary_home_system btr_blood_pack_system custom_system }
 	
     planet = {
 		name = "Dakka"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
-    }
+		init_effect = {
+			create_country = {
+				namelist = btr_krogan
+				species = event_target:kroganSpecies
+				type = mercenary
+				civics = { civic = civic_anarcho_tribalism }
+				origin = "origin_default"
+				flag = {
+					icon={
+						category="masseffect"
+						file="Blood Pack.dds"
+					}
+					background={
+						category="backgrounds"
+						file="00_solid.dds"
+					}
+					colors={
+						"red"
+						"grey"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_fanatic_militarist
+					ethic = ethic_xenophobe
+				}
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_graphical_culture = pirate_01
+				save_global_event_target_as = blood_pack
+				set_country_flag = blood_pack
+				set_name = "blood_pack"
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
+				add_ship_design = last_created_design
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 40
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 90
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 140
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 200
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 250
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 280
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 330
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 0
+					}				
+				}
+			}
+
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Ancestral_Glory"
+						graphical_culture = "pirate_01"
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+
+			create_ambient_object = {
+				type = "abandoned_starbase_01_object"
+				location = this
+			}
+		}
+	}
 
     planet = {
         name = "Bannik"
@@ -3859,7 +4070,48 @@ sys_dakka_init = {
 		size = 20
         init_effect = {
 			set_planet_flag = bannik_codex
-        }
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					while = {
+						count = 22
+						create_ship = {
+							name = random
+							design = "NAME_Outrider"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 14
+						create_ship = {
+							name = random
+							design = "NAME_Lancer"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Void_Champion"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+		}
     }
 
     planet = {
@@ -3868,10 +4120,28 @@ sys_dakka_init = {
         orbit_distance = 20
         orbit_angle = 156
         has_ring = no
+		flags = { btr_pragia raid_source }
 		size = 12
         init_effect = {
 			set_planet_flag = pragia_codex
-        }
+			ensure_blue_suns_exist = { homeworld = "THIS" }
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}
+			set_name = "Pragia"
+		}
     }
 
     planet = {
@@ -3883,7 +4153,48 @@ sys_dakka_init = {
 		size = 26
         init_effect = {
 			set_planet_flag = alkonost_codex
-        }
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					while = {
+						count = 22
+						create_ship = {
+							name = random
+							design = "NAME_Outrider"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 14
+						create_ship = {
+							name = random
+							design = "NAME_Lancer"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Void_Champion"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+		}
     }
 
     planet = {
@@ -3895,6 +4206,21 @@ sys_dakka_init = {
 		size = 33
         init_effect = {
             set_planet_flag = gamayun_codex
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}			
         }
 		moon = { 
 			name = "Gamayun_a"
@@ -3949,7 +4275,22 @@ sys_dakka_init = {
 		size = 6
         init_effect = {
             set_planet_flag = zirnitra_codex
-        }		
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blood_pack
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}
+		}	
     }
 
 	
@@ -4432,9 +4773,7 @@ sys_refuge_init = {
         save_global_event_target_as = "refuge_relay_system"
     }
 
-    flags = {
-        refuge_system
-    }
+	flags = { empire_home_system MEG_prothean_remnant_system custom_system }
 	
 	planet = {
         class = "pc_t_star"
@@ -4460,7 +4799,127 @@ sys_refuge_init = {
 		size = 15
         init_effect = {
 			set_planet_flag = agetoton_codex
-        }
+			create_pirate_country = yes
+			event_target:pirate_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = pirate_power
+						}
+					}
+					add_modifier = {
+						modifier = pirate_power
+						days = -1
+					}
+				}
+			}
+			every_country = {
+				establish_communications_no_message = event_target:pirate_country
+			}
+			
+			create_fleet = {
+				name = "NAME_Old_Guard"
+				effect = {
+					set_owner = event_target:pirate_country
+					set_fleet_flag = pirate_home_system_fleet
+					while = {
+						count = 1
+						create_ship = {
+							name = random
+							design = "NAME_Pirate_Galleon"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 330
+					}
+					set_fleet_flag = pirate_home_system_fleet
+				}
+			}
+
+			create_fleet = {
+				name = "NAME_Scarred_Veterans"
+				effect = {
+					set_owner = event_target:pirate_country
+					set_fleet_flag = pirate_home_system_fleet
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Corsair"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							design = "NAME_Marauder"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 20
+						create_ship = {
+							name = random
+							design = "NAME_Black_Earl"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 4
+						create_ship = {
+							name = random
+							design = "NAME_Skull"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_fleet_flag = pirate_home_system_fleet
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 120
+					}
+				}
+			}
+
+			create_fleet = {
+				name = "NAME_Young_Blood"
+				effect = {
+					set_owner = event_target:pirate_country
+					create_ship_design = {
+						design = "NAME_Reaver"
+					}
+					while = {
+						count = 12
+						create_ship = {
+							name = random
+							design = last_created_design
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_location = {
+						target = prev
+						distance = 90
+						angle = 200
+					}
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 150
+					set_fleet_flag = pirate_home_system_fleet
+					save_global_event_target_as = young_blood
+				}
+			}
+		}
     }
 
     planet = {
@@ -4470,9 +4929,11 @@ sys_refuge_init = {
     	orbit_angle = 258
     	has_ring = no
     	size = 21
+		flags = { btr_prothean_remnant_planet_ilos special_start_planet }		
         init_effect = {
             set_planet_flag = ilos_codex
-        }
+			prevent_anomaly = yes
+		}
    }
 
     planet = {

@@ -1,0 +1,24 @@
+﻿l_english:
+
+
+ ### Asari Writings ###
+ r_asari_writings:0 "Matriarch Dilinaga's Writings"
+ r_asari_writings_desc:0 "The complete collection of Matriarch Dilinaga's writings. Those lucky enough to be granted permission to study the writings will gain invaluable knowledge and wisdom concerning countless subjects, from one of the most prolific Matriarchs."
+
+ relic_asari_writings_activate:0 "Increase a random number of leaders §Y(up to a maximum of 3)§! skill levels by a factor between 1-3"
+
+ btr_relic.1.name:0 "Writings Study"
+ btr_relic.1.desc:0 "Having been granted access to Matriarch Dilinaga's writings, §Y[leader_1.GetName]§! has found, through in-depth study, that [leader_1.GetHerHis] knowledge and understanding of [leader_1.GetHerHis] leadership field has increased."
+ btr_relic.2.desc:0 "Having been granted access to Matriarch Dilinaga's writings, §Y[leader_1.GetName]§! and §Y[leader_2.GetName]§! have found, through in-depth study, that their knowledge and understanding of their leadership field has increased."
+ btr_relic.3.desc:0 "Having been granted access to Matriarch Dilinaga's writings, §Y[leader_1.GetName]§!, §Y[leader_2.GetName]§! and §Y[leader_3.GetName]§! have found, through in-depth study, that their knowledge and understanding of their leadership field has increased."
+
+ ### Prothean Sphere ###
+ r_prothean_sphere:0 "Prothean Sphere"
+ r_prothean_sphere_desc:0 "A rare and extremely powerful artifact, this Prothean Sphere was a never used, experimental weapon designed to destroy Reaper vessels. By combining the power of biotics and mass effect energy, a pulse can be sent over vast distances to instantly disable Reaper ships."
+ relic_prothean_sphere_passive_tooltip:0 "§G+50%§! damage against end-game crises"
+ relic_prothean_sphere_activate:0 "Instantly destroys a random Reaper (or crisis) ship.\n\n§YCannot be used against Sovereign§!"
+
+ requires_ongoing_crisis:0 "$TRIGGER_FAIL$§RRequires an ongoing end-game crisis.§!"
+ 
+ btr_relic.4.name:0 "Prothean Sphere Activation"
+ btr_relic.4.desc:0 "Using the power of the Prothean Sphere, the vessel [destroyed_crisis_ship.GetName] has been destroyed." 

@@ -1,0 +1,1004 @@
+
+# Cronos Station - Hydroponics bays
+d_hydroponics_bays = {
+	is_for_colonizeable = yes
+	icon = d_hydroponics_bay
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			food = 25
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Cronos Station - Science labs
+d_cronos_science_labs = {
+	is_for_colonizeable = yes
+	icon = d_cronos_research_labs
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			physics_research = 5
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Cronos Station - Reactor
+d_cronos_reactor = {
+	is_for_colonizeable = yes
+	icon = d_cronos_reactor
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			energy = 20
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Collector Base - Consumption chambers
+d_consumption_chambers = {
+	is_for_colonizeable = yes
+	icon = d_collector_consumption_chambers
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			food = 35
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Collector Base - De-construction bays
+d_deconstruction_bays = {
+	is_for_colonizeable = yes
+	icon = d_collector_deconstruction_bays
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			minerals = 20
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Citadel - Wards
+d_wards = {
+	is_for_colonizeable = yes
+	icon = d_citadel_wards
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_housing_add = 8
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Citadel - Presidium
+d_presidium = {
+	is_for_colonizeable = yes
+	icon = d_citadel_presidium
+	category = deposit_cat_rare
+	planet_modifier = {
+		trade_value_add = 10
+		pop_happiness = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Citadel - Citadel Tower
+d_citadel_tower = {
+	is_for_colonizeable = yes
+	icon = d_citadel_tower
+	category = deposit_cat_rare
+	country_modifier = {
+		country_admin_cap_mult = 0.25
+		diplo_weight_mult = 0.50
+	}
+	resources = {
+		produces = {
+			unity = 10
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Citadel - C-Sec Offices
+d_citadel_csec = {
+	is_for_colonizeable = yes
+	icon = d_citadel_csec
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_stability_add = 20
+		pop_defense_armies_add = 5
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Citadel - Keeper workshops
+d_keeper_workshops = {
+	is_for_colonizeable = yes
+	icon = d_citadel_keeper_workshops
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_building_build_speed_mult = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Citadel - Huerta Memorial Hospital
+d_huerta_memorial_hospital = {
+	is_for_colonizeable = yes
+	icon = d_citadel_huerta
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_growth_speed = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Citadel - Purgatory Bar
+d_purgatory_bar = {
+	is_for_colonizeable = yes
+	icon = d_citadel_purgatory
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_amenities_add = 20
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Earth - Vancouver (Alliance courts)
+d_vancouver = {
+	is_for_colonizeable = yes
+	icon = d_earth_vancouver
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_stability_add = 20
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Earth - São Paulo shipyards
+d_sao_paulo_shipyards = {
+	is_for_colonizeable = yes
+	icon = d_earth_sao_paulo_shipyards
+	category = deposit_cat_rare
+	country_modifier = {
+		starbase_shipyard_build_speed_mult = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Earth - London
+d_london = {
+	is_for_colonizeable = yes
+	icon = d_earth_london
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_amenities_add = 10
+		pop_happiness = 0.05
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Earth - Atmospheric purifiers
+d_atmospheric_purifiers = {
+	is_for_colonizeable = yes
+	icon = d_earth_atmo
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_growth_speed = 0.05
+		pop_environment_tolerance = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Mars - Lowell City
+d_mars_lowell_city = {
+	is_for_colonizeable = yes
+	icon = d_mars_lowell_city
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_housing_add = 4
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Mars - Farming Habitats
+d_mars_farming_habitats = {
+	is_for_colonizeable = yes
+	icon = d_mars_farming_habitats
+	category = deposit_cat_rare
+	planet_modifier = {
+		district_farming_max = 4
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Mars - Maxwell mining base
+d_mars_maxwell_mining_base = {
+	is_for_colonizeable = yes
+	icon = d_mars_maxwell_mining_base
+	category = deposit_cat_rare
+	planet_modifier = {
+		district_mining_max = 3
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Mars - Olympus Mons
+d_mars_olympus_mons = {
+	is_for_colonizeable = yes
+	icon = d_mars_olympus_mons
+	category = deposit_cat_rare
+	planet_modifier = {
+		district_mining_max = 2
+	}
+    resources = {
+		produces = {
+			alloys = 4
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Mars - Tharsis solar arrays
+d_mars_tharsis_solar_arrays = {
+	is_for_colonizeable = yes
+	icon = d_mars_tharsis_solar_arrays
+	category = deposit_cat_rare
+	planet_modifier = {
+		district_generator_max = 4
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Mars - Mars Archive
+d_mars_archive = {
+	is_for_colonizeable = yes
+	icon = d_mars_archive
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			physics_research = 15
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Palaven - Radiation
+d_palaven_radiation = {
+	is_for_colonizeable = yes
+	icon = d_palaven_radiation
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_immigration_pull_mult = -0.25
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Palaven - Cipritine
+d_palaven_cipritine = {
+	is_for_colonizeable = yes
+	icon = d_palaven_cipritine
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_orbital_bombardment_damage = -0.50
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Palaven - Sercusium River
+d_sercusium_river = {
+	is_for_colonizeable = yes
+	icon = d_palaven_river
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			unity = 8
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Surkesh - Parkan Research Institute
+d_surkesh_parkan_research_institute = {
+	is_for_colonizeable = yes
+	icon = d_surkesh_parkan_research_institute
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			physics_research = 10
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Surkesh - Wesbii Forest
+d_surkesh_wesbii_forest = {
+	is_for_colonizeable = yes
+	icon = d_surkesh_wesbii_forest
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			society_research = 5
+		}
+	}
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Tuchanka - Underground Tunnels
+d_tuchanka_underground_tunnels = {
+	is_for_colonizeable = yes
+	icon = d_tuchanka_underground_tunnels
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_housing_add = 2
+		district_generator_max = 4
+		district_mining_max = 6
+		district_farming_max = 4
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Tuchanka - Thresher Maw Nest
+d_tuchanka_thresher_maw_nest = {
+	is_for_colonizeable = yes
+	icon = d_tuchanka_thresher_maw_nest
+	category = deposit_cat_blockers
+	planet_modifier = {
+		pop_growth_speed = -0.10
+		pop_happiness = -0.05
+	}
+	time = 2400
+	potential = { always = no }
+	resources = {
+		category = deposit_blockers
+		cost = { energy = 1200 minerals = 600 }
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Tuchanka - Ruins of Nakmor
+d_tuchanka_nakmor_ruined = {
+	is_for_colonizeable = yes
+	icon = d_tuchanka_nakmor_ruined
+	category = deposit_cat_blockers
+	planet_modifier = {
+		planet_max_districts_add = -2
+		planet_stability_add = -5
+	}
+	time = 3600
+	potential = { always = no }
+	use_weights_for_blocker_swap_types = no
+    blocker_swap_types = { d_tuchanka_nakmor_rebuilt }
+	resources = {
+		category = deposit_blockers
+		cost = { energy = 4500 minerals = 3000 }
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Tuchanka - Rebuilt Nakmor
+d_tuchanka_nakmor_rebuilt = {
+	is_for_colonizeable = yes
+	icon = d_tuchanka_nakmor_rebuilt
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_max_districts_add = 4
+	}
+	resources = {
+		produces = {
+			unity = 20
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Tuchanka - The Hollows
+d_tuchanka_the_hollows = {
+	is_for_colonizeable = yes
+	icon = d_tuchanka_the_hollows
+	category = deposit_cat_rare
+	resources = {
+		produces = {
+			unity = 4
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Khar'shan - Qnobis
+d_kharshan_qnobis = {
+	is_for_colonizeable = yes
+	icon = d_kharshan_qnobis
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_housing_add = 4
+		planet_stability_add = -5
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Khar'shan - Dizesh Slave Market
+d_kharshan_dizesh = {
+	is_for_colonizeable = yes
+	icon = d_kharshan_dizesh
+	category = deposit_cat_rare
+	planet_modifier = {
+		trade_value_add = 10
+		planet_jobs_slave_produces_mult = 0.50
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Dekuuna - Unovasereng
+d_dekuuna_unovasereng = {
+	is_for_colonizeable = yes
+	icon = d_dekuuna_unovasereng
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_housing_add = 4
+		planet_amenities_add = 10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Dekuuna - Forests
+d_dekuuna_forests = {
+	is_for_colonizeable = yes
+	icon = d_dekuuna_forests
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_max_districts_add = -2
+		pop_happiness = 0.20
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Rannoch - Geth Base
+d_rannoch_geth_base = {
+	is_for_colonizeable = yes
+	icon = d_rannoch_geth_base
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_defense_armies_add = 4
+		planet_orbital_bombardment_damage = -0.30
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Rannoch - Quarian Ruins
+d_rannoch_quarian_ruins = {
+	is_for_colonizeable = yes
+	icon = d_rannoch_quarian_ruins
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+	resources = {
+		produces = {
+			alloys = 2
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Rannoch - Consensus Core
+d_rannoch_consensus_core = {
+	is_for_colonizeable = yes
+	icon = d_rannoch_consensus_core
+	category = deposit_cat_rare
+	country_modifier = {
+		country_admin_cap_mult = 0.25
+	}
+	resources = {
+		produces = {
+			unity = 15
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Rannoch - Geth Factory
+d_rannoch_geth_factory = {
+	is_for_colonizeable = yes
+	icon = d_rannoch_geth_factory
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_assembly_speed = 0.20
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Irune - Lenos Interstellar Bank
+d_irune_lenos = {
+	is_for_colonizeable = yes
+	icon = d_irune_lenos
+	category = deposit_cat_rare
+	planet_modifier = {
+		trade_value_add = 15
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Omega - Afterlife
+d_omega_afterlife = {
+	is_for_colonizeable = yes
+	icon = d_omega_afterlife
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_amenities_add = 10
+		planet_stability_add = -5
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Omega - Element Zero Refineries
+d_omega_element_zero_refineries = {
+	is_for_colonizeable = yes
+	icon = d_omega_element_zero_refineries
+	category = deposit_cat_rare
+	resources = {
+		category = planet_deposits
+		produces = {
+			element_zero = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Kahje - Rasiil Life Dome
+d_kahje_rasiil_life_dome = {
+	is_for_colonizeable = yes
+	icon = d_kahje_rasiil_life_dome
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_environment_tolerance = 0.20
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Kahje - Mount Vassla
+d_kahje_mount_vassla = {
+	is_for_colonizeable = yes
+	icon = d_kahje_mount_vassla
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_ethic_fanatic_spiritualist_attraction_mult = 0.20
+		pop_ethic_spiritualist_attraction_mult = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Noveria - Port Hanshan
+d_noveria_port_hanshan = {
+	is_for_colonizeable = yes
+	icon = d_noveria_port_hanshan
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_environment_tolerance = 0.25
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Noveria - Peak Research Facility
+d_noveria_peak_research_facility = {
+	is_for_colonizeable = yes
+	icon = d_noveria_peak_research_facility
+	category = deposit_cat_rare
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Armali
+d_asari_republic_armali = {
+	is_for_colonizeable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Nosdesera
+d_asari_nosdesera = {
+	is_for_colonizeable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Serrice University
+d_asari_serrice_university = {
+	is_for_colonizeable = yes
+	icon = d_building_complex
+	
+	#category = deposit_cat_rare
+	
+	planet_modifier = {
+		district_generator_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Cresyl Plateau
+d_asari_cresyl_plateau = {
+	is_for_colonizeable = yes
+	icon = d_betharian_deposit
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Askasian Mountains
+d_asari_askasian_mountains = {
+	is_for_colonizeable = yes
+	icon = d_mountain_range
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Pulian Delta
+d_asari_pulian_delta = {
+	is_for_colonizeable = yes
+	icon = d_great_river
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Senecan Lakes
+d_asari_senecan_lakes = {
+	is_for_colonizeable = yes
+	icon = d_crystal_reef
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Irssal Tea
+d_asari_irssal_tea = {
+	is_for_colonizeable = yes
+	icon = d_black_soil
+	
+	planet_modifier = { 
+		district_farming_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Athame Temple
+d_asari_athame_temple = {
+	is_for_colonizeable = yes
+	icon = d_monument
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.20
+	}
+	
+	#resources = {
+	#	category = planet_deposits
+	#	produces = {
+	#		society_research = 5
+	#		physics_research = 5
+	#		engineering_research = 5
+	#	}
+	#}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Eezo Deposits
+d_asari_eezo_deposits = {
+	is_for_colonizeable = yes
+	icon = d_infestation
+	
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			element_zero = 1
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Thessia - Thessia Net
+d_asari_thessia_net = {
+	is_for_colonizeable = yes
+	icon = d_city
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		planet_amenities_mult = 0.20
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Blockers
+d_asari_zalis_spill = {
+	icon = d_bubbling_swamp
+	time = 120
+	
+	is_for_colonizeable = yes
+	category = deposit_cat_blockers
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_asari_zalis_sea
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 600
+		}
+	}
+}
+
+d_asari_zalis_sea = {
+	is_for_colonizeable = yes
+	icon = d_teeming_reef
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_asari_yisrin_devastated = {
+	icon = d_city_ruins
+	time = 240
+	
+	is_for_colonizeable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_asari_yisrin_restored
+	}
+	
+	on_cleared = {
+		create_pop = {
+			species = owner
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 450
+		}
+	}
+}
+
+d_asari_yisrin_restored = {
+	is_for_colonizeable = yes
+	icon = d_building
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+objectTypes = {
+    pdxmesh = {
+        name = "mass_effect_citadel_core_menu_mesh"
+        file = "gfx/models/ships/mass_effect/citadel/mass_effect_citadel.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "hull_1"
+            index = 0
+            texture_diffuse = "mass_effect_citadel_hull_1_diffuse.dds"
+            texture_normal = "mass_effect_citadel_hull_1_normal.dds"
+            texture_specular = "mass_effect_citadel_hull_1_specular.dds"
+            shader = "PdxMeshShip"
+        }
+
+        meshsettings = {
+            name = "hull_2"
+            index = 0
+            texture_diffuse = "mass_effect_citadel_hull_2_diffuse.dds"
+            texture_normal = "mass_effect_citadel_hull_2_normal.dds"
+            texture_specular = "mass_effect_citadel_hull_2_specular.dds"
+            shader = "PdxMeshShip"
+        }
+    }
+	
+	pdxmesh = {
+        name = "mass_effect_citadel_core_mesh"
+        file = "gfx/models/ships/mass_effect/citadel/mass_effect_citadel.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "hull_1"
+            index = 0
+            texture_diffuse = "mass_effect_citadel_hull_1_diffuse.dds"
+            texture_normal = "mass_effect_citadel_hull_1_normal.dds"
+            texture_specular = "mass_effect_citadel_hull_1_specular.dds"
+            shader = "PdxMeshShip"
+        }
+
+        meshsettings = {
+            name = "hull_2"
+            index = 0
+            texture_diffuse = "mass_effect_citadel_hull_2_diffuse.dds"
+            texture_normal = "mass_effect_citadel_hull_2_normal.dds"
+            texture_specular = "mass_effect_citadel_hull_2_specular.dds"
+            shader = "PdxMeshShip"
+        }
+    }
+	
+	pdxmesh = {
+		name = "cerberus_cronos_frame_menu_mesh"
+		file = "gfx/models/ships/cerberus/cronos/cerberus_cronos_frame.mesh"
+		scale = 0.0
+			meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+	
+	pdxmesh = {
+		name = "cerberus_cronos_frame_mesh"
+		file = "gfx/models/ships/cerberus/cronos/cerberus_cronos_frame.mesh"
+		scale = 0.0
+			meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+}

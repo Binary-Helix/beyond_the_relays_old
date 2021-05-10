@@ -1,0 +1,163 @@
+namespace = mec_asari_anomaly
+
+# root = ship scope
+# from = planet scope
+
+## Tarith (Chlorinated Flora)
+ship_event = {
+	id = mec_asari_anomaly.1
+	title = "mec_asari_anomaly.1.name"
+	desc = "mec_asari_anomaly.1.desc"
+  	picture = GFX_evt_aggressive_flora
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_anomaly.1.a
+		from = {
+			add_deposit = d_mec_asari_tarith_flora
+		}
+	}
+}
+
+## Doriae (Primodial Toxic Waste Puddle)
+ship_event = {
+	id = mec_asari_anomaly.2
+	title = "mec_asari_anomaly.2.name"
+	desc = "mec_asari_anomaly.2.desc"
+  	picture = GFX_evt_microscopic_life
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_anomaly.2.a
+		from = {
+			add_deposit = d_mec_asari_doriae_bacteria
+		}
+	}
+}
+
+## Niacal (Atmospheric Overabundance)
+ship_event = {
+	id = mec_asari_anomaly.3
+	title = "mec_asari_anomaly.3.name"
+	desc = "mec_asari_anomaly.3.desc"
+  	picture = GFX_evt_tropical
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_anomaly.3.a
+		from = {
+			add_modifier = {
+				modifier = mec_asari_mod_planet_niacal_atmosphere
+				days = -1
+			}
+		}
+	}
+}
+
+## Kralla (Demon of Misfortune)
+ship_event = {
+	id = mec_asari_anomaly.4
+	title = "mec_asari_anomaly.4.name"
+	desc = "mec_asari_anomaly.4.desc"
+  	picture = GFX_evt_glitchy_matrix
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			set_name = "Kralla"
+		}
+		leader = {
+			save_event_target_as = mec_asari_kralla_scientist
+		}
+	}
+
+	option = {
+		name = mec_asari_anomaly.4.a
+		event_target:mec_asari_kralla_scientist = {
+			add_experience = 200
+		}
+	}
+
+	option = {
+		name = mec_asari_anomaly.4.b
+		owner = {
+			add_resource = { influence = 150 }
+		}
+		custom_tooltip = mec_asari_anomaly.4.b.tooltip
+		
+		hidden_effect = {
+			event_target:mec_asari_kralla_scientist = { 
+				kill_leader = {
+					show_notification = no
+					type = scientist
+				}			
+			}
+		}
+	}
+
+	option = {
+		name = mec_asari_anomaly.4.c
+		owner = {
+			add_resource = {
+				physics_research = 200
+			}
+		}
+	}
+}
+
+## Tritogenith (Worlds Colliding)
+ship_event = {
+	id = mec_asari_anomaly.5
+	title = "mec_asari_anomaly.5.name"
+	desc = "mec_asari_anomaly.5.desc"
+  	picture = GFX_evt_asteroid_approaching_planet
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+		solar_system = {
+			random_system_planet = {
+				limit = {
+					has_planet_flag = mec_asari_planet_promavess
+				}
+				save_event_target_as = mec_asari_planet_promavess
+			}
+			random_system_planet = {
+				limit = {
+					has_planet_flag = mec_asari_planet_sotera
+				}
+				save_event_target_as = mec_asari_planet_sotera
+			}
+		}
+	}
+
+	option = {
+		name = mec_asari_anomaly.5.a
+		from = {
+			add_deposit = d_mec_asari_tritogenith_collision
+		}
+	}
+}

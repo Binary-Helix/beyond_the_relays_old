@@ -1,0 +1,96 @@
+@civilian_ships_combat_speed = 0.5
+@corvette_combat_speed = 1.5 	# assault ships
+@corvette_combat_rotation = 0.08
+@corvette_collision_radius = 2.0
+
+@destroyer_combat_speed = 1.0	 # picket ships, should stay with the battleships
+@destroyer_combat_rotation = 0.05
+@destroyer_collision_radius = 2.5
+
+@cruiser_combat_speed = 1.25	 # assault ships
+@cruiser_combat_rotation = 0.025
+@cruiser_collision_radius = 3
+
+@battleship_combat_speed = 0.75	
+@battleship_combat_rotation = 0.02
+@battleship_collision_radius = 3
+
+@titan_combat_speed = 0.75
+@titan_combat_rotation = 0.02
+@titan_collision_radius = 15
+
+@build_block_radius_none = 0
+@build_block_radius_civilian = 20
+@build_block_radius_military = 200
+
+@speed_very_slow = 80
+@speed_slow = 100
+@speed_default = 120
+@speed_fast = 140
+@speed_very_fast = 160
+
+# Sovereign ME1
+reaper_sovereign_me1 = {
+	is_space_object = yes
+	entity = reaper_01_sovereign_me1_mid_1_entity
+	max_speed = @speed_very_slow
+	acceleration = 0.3
+	rotation_speed = 0.05
+	collision_radius = 7
+	modifier = {
+		ship_armor_add = 30000
+		ship_evasion_add = -10
+	}
+	max_hitpoints = 100000
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 1
+	is_space_station = no
+	is_civilian = no
+	class = shipclass_military
+	is_designable = no
+}
+
+# Harbinger
+reaper_harbinger = {
+	is_space_object = yes
+	entity = reaper_01_harbinger_mid_1_entity
+	max_speed = @speed_very_slow
+	acceleration = 0.3
+	rotation_speed = 0.05
+	collision_radius = 7
+	modifier = {
+		ship_armor_add = 50000
+		ship_evasion_add = -10
+	}
+	max_hitpoints = 200000
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 2
+	is_space_station = no
+	is_civilian = no
+	class = shipclass_military
+	is_designable = no
+}
+
+# Sovereign
+reaper_sovereign = {
+	is_space_object = yes
+	entity = reaper_01_sovereign_mid_1_entity
+	max_speed = @speed_very_slow
+	acceleration = 0.3
+	rotation_speed = 0.05
+	collision_radius = 7
+	modifier = {
+		ship_armor_add = 30000
+		ship_evasion_add = -10
+	}
+	max_hitpoints = 100000
+	fleet_slot_size = 1
+	section_slots = { "mid" = { locator = "part1" } }
+	num_target_locators = 2
+	is_space_station = no
+	is_civilian = no
+	class = shipclass_military
+	is_designable = no
+}

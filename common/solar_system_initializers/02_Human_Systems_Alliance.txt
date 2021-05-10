@@ -2645,6 +2645,55 @@ sys_anadius_init = {
 		type = rocky_asteroid_belt
 		radius = 150
 	}
+
+	flags = { empire_home_system btr_cerberus_system custom_system }
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Cronos Station"
+		class = "pc_cronos_station"
+		orbit_distance = 122
+		orbit_angle = 215
+		size = 12
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		flags = { btr_cerberus_cronos_station special_start_planet } 
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_entity = {
+				entity = "cerberus_cronos_01_game_entity"
+			}
+			set_planet_flag = megastructure
+			set_planet_flag = habitat
+			clear_deposits = yes 
+			random_country = {
+				limit = { has_country_flag = "cerberus" }
+				save_event_target_as = anadiusOwner
+				save_global_event_target_as = cerberus
+				species = { save_global_event_target_as = humanSpecies }
+			}
+			set_capital = yes
+			set_owner = event_target:cerberus
+			while = {
+				count = 26
+				create_pop = { species = event_target:humanSpecies }
+			}
+			generate_btr_cronos_buildings = yes
+			set_name = "Cronos Station"
+		}
+	}
+
 	
     init_effect = { 
 		spawn_megastructure = { 
@@ -2864,6 +2913,9 @@ sys_pax_init = {
     name = "Pax"
     class = "sc_k"
 
+	flags = { MEG_noveria_development_corporation_system custom_system }
+
+
     planet = {
 		name = "Pax"
         class = "pc_k_star"
@@ -2887,13 +2939,69 @@ sys_pax_init = {
 
     planet = {
         name = "Noveria"
-        class = "pc_frozen"
+        class = "pc_arctic"
         orbit_distance = 30
         orbit_angle = 107
         size = 14
+		flags = { btr_planet_noveria special_planet }		
 		init_effect = {
 			set_planet_flag = noveria_codex
+			prevent_anomaly = yes
+			create_country = {
+				civics = { civic = civic_efficient_bureaucracy }
+				authority = auth_oligarchic
+				species = event_target:salarianSpecies
+				ethos = { ethic = ethic_fanatic_materialist ethic = ethic_authoritarian }
+				type = primitive
+				flag = {
+					icon={
+						category="masseffect"
+						file="noveria.dds"
+					}
+					background={
+						category="backgrounds"
+						file="00_solid.dds"
+					}
+					colors={
+						"red"
+						"black"
+						"null"
+						"null"
+					}
+				}
 			}
+			last_created_country = {
+				set_graphical_culture = mammalian_01
+				set_country_flag = noveria_development_corporation
+				set_primitive_age = me_minor_corp_faction
+				save_global_event_target_as = noveria_development_corporation
+				set_name = "noveria_development_corporation"
+			}
+			while = {
+				count = 4
+				create_pop = { species = event_target:salarianSpecies }
+			}
+			while = {
+				count = 4
+				create_pop = { species = event_target:humanSpecies }
+			}
+			while = {
+				count = 4
+				create_pop = { species = event_target:asariSpecies }
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:turianSpecies }
+			}
+			add_building = building_primitive_capital
+			add_building = building_primitive_farm
+			add_building = building_primitive_mine
+			add_building = building_primitive_power_plant
+			add_building = building_primitive_factory
+			add_building = building_urban_dwellings
+			add_deposit = d_noveria_port_hanshan
+			set_name = "Noveria"
+		}
 
         has_ring = no
 
@@ -3099,24 +3207,24 @@ sys_harsa_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			# generate_MEG_major_empire_start_buildings = yes
+			generate_btr_major_empire_start_buildings = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "batarian_hegemony" }
-			# 	save_event_target_as = harsaOwner
-			# 	save_global_event_target_as = batarian_hegemony
-			# 	species = { save_global_event_target_as = batarianSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:batarianSpecies }
-			# }
-			# set_name = "Khar'shan"
-			# add_deposit = d_kharshan_qnobis
-			# add_deposit = d_kharshan_dizesh
+			random_country = {
+				limit = { has_country_flag = "batarian_hegemony" }
+				save_event_target_as = harsaOwner
+				save_global_event_target_as = batarian_hegemony
+				species = { save_global_event_target_as = batarianSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:batarianSpecies }
+			}
+			set_name = "Khar'shan"
+			add_deposit = d_kharshan_qnobis
+			add_deposit = d_kharshan_dizesh
 		}		
 		init_effect = {
-			set_planet_flag = khar'san_codex
+			set_planet_flag = khar'shan_codex
 			}
 
 
@@ -4044,24 +4152,24 @@ sys_sol_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_start_deposits_and_blockers = yes
-			# generate_MEG_major_empire_start_buildings = yes
-			# random_country = {
-			# 	limit = { has_country_flag = "systems_alliance" }
-			# 	save_event_target_as = solOwner
-			# 	save_global_event_target_as = systems_alliance
-			# 	species = { save_global_event_target_as = humanSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:humanSpecies }
-			# }
-			# add_deposit = d_great_pacific_garbage_patch
-			# add_deposit = d_failing_infrastructure_earth
-			# add_deposit = d_decrepit_dwellings
-			# add_deposit = d_vancouver
-			# add_deposit = d_london
-			# add_deposit = d_sao_paulo_shipyards
-			# add_deposit = d_atmospheric_purifiers
+			generate_btr_major_empire_start_buildings = yes
+			random_country = {
+				limit = { has_country_flag = "systems_alliance" }
+				save_event_target_as = solOwner
+				save_global_event_target_as = systems_alliance
+				species = { save_global_event_target_as = humanSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:humanSpecies }
+			}
+			add_deposit = d_great_pacific_garbage_patch
+			add_deposit = d_failing_infrastructure_earth
+			add_deposit = d_decrepit_dwellings
+			add_deposit = d_vancouver
+			add_deposit = d_london
+			add_deposit = d_sao_paulo_shipyards
+			add_deposit = d_atmospheric_purifiers
 			set_name = "Earth"
 		}
 		moon = {
@@ -4091,25 +4199,25 @@ sys_sol_init = {
 		entity = "barren_planet_mars_entity"
 		flags = { btr_systems_alliance_planet_mars special_start_colony }
 		
-		# init_effect = {
-		# 	set_owner = event_target:solOwner
-		# 	create_colony = {
-		# 		owner = event_target:solOwner
-		# 		species = event_target:humanSpecies
-		# 		ethos = owner
-		# 	}
-		# 	while = {
-		# 		count = 7
-		# 		create_pop = { species = event_target:humanSpecies }
-		# 	}
-		# 	# generate_MEG_mars_start_buildings = yes
-		# 	clear_deposits = yes
-		# 	# add_deposit = d_mars_lowell_city
-		# 	# add_deposit = d_mars_farming_habitats
-		# 	# add_deposit = d_mars_maxwell_mining_base
-		# 	# add_deposit = d_mars_olympus_mons
-		# 	# add_deposit = d_mars_tharsis_solar_arrays
-		# }		
+		init_effect = {
+			set_owner = event_target:solOwner
+			create_colony = {
+				owner = event_target:solOwner
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			while = {
+				count = 7
+				create_pop = { species = event_target:humanSpecies }
+			}
+			generate_btr_mars_start_buildings = yes
+			clear_deposits = yes
+			add_deposit = d_mars_lowell_city
+			add_deposit = d_mars_farming_habitats
+			add_deposit = d_mars_maxwell_mining_base
+			add_deposit = d_mars_olympus_mons
+			add_deposit = d_mars_tharsis_solar_arrays
+		}		
 	}
 	
 	planet = {
@@ -4953,7 +5061,7 @@ sys_bahak_init = {
 		orbit_distance = 15
 		size = 3
 		init_effect = {
-			set_planet_flag = 157golgotha_codex
+			set_planet_flag = golgotha_codex
 			}
 	}	
 
@@ -5317,6 +5425,470 @@ sys_yangtze_init = {
 		} 
 	}
 }
+
+sys_patella_init = {
+	name = "Patella"
+	class = "sc_a"
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+	max_instances = 1
+
+	flags = { mercenary_home_system btr_blue_suns_system custom_system }
+
+	planet = {
+		name = "Patella"
+		class = "pc_a_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 33
+		has_ring = no
+		init_effect = {
+			create_species = {
+				name = "Blue Suns Merc"
+				plural = "Blue Suns Mercs"
+				class = "BLU"
+				portrait = blue_suns
+				name_list = btr_merc
+				traits = {
+					trait="trait_talented"
+		            trait="trait_deviants"
+		            trait="trait_adaptive"
+		            trait="trait_quarrelsome"
+		            trait="trait_quick_learners"
+				}
+			}
+			create_country = {
+				namelist = btr_merc
+				species = last_created
+				type = mercenary
+				civics = { civic = civic_anarcho_tribalism }
+				origin = "origin_default"
+				flag = {
+					icon={
+						category="masseffect"
+						file="Blue Suns.dds"
+					}
+					background={
+						category="backgrounds"
+						file="00_solid.dds"
+					}
+					colors={
+						"blue"
+						"grey"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_fanatic_militarist
+					ethic = ethic_xenophobe
+				}
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_graphical_culture = pirate_01
+				save_global_event_target_as = blue_suns
+				set_country_flag = blue_suns
+				set_name = "Blue Suns"
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
+				add_ship_design = last_created_design
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 40
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 90
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 140
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 200
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 250
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 280
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 330
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 0
+					}				
+				}
+			}
+
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Ancestral_Glory"
+						graphical_culture = "pirate_01"
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+
+			create_ambient_object = {
+				type = "abandoned_starbase_01_object"
+				location = this
+			}
+		}
+	}
+
+	planet = {
+		name = "Yavo"
+		class = "pc_molten"
+		orbit_distance = 90
+		orbit_angle = { min = 1 max = 360 }
+		size = 14
+		has_ring = no
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					while = {
+						count = 22
+						create_ship = {
+							name = random
+							design = "NAME_Outrider"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 14
+						create_ship = {
+							name = random
+							design = "NAME_Lancer"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Void_Champion"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+		}
+	}
+	planet = {
+		name = "Eperuis"
+		class = "pc_barren"
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 15
+		has_ring = no
+		flags = { raid_source }
+		moon = {
+			name = "Qiop"
+			class = "pc_frozen"
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+		}
+	}
+	planet = {
+		name = "Xra"
+		class = "pc_tundra"
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 19
+		has_ring = no
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					while = {
+						count = 22
+						create_ship = {
+							name = random
+							design = "NAME_Outrider"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 14
+						create_ship = {
+							name = random
+							design = "NAME_Lancer"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Void_Champion"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+		}
+		moon = {
+			name = "Tryon"
+			class = "pc_barren"
+			orbit_distance = 12
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "Pryon"
+			class = "pc_barren"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+	}
+	planet = {
+		name = "Grand Luxon"
+		class = "pc_gas_giant"
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 37
+		change_orbit = 8
+		has_ring = yes
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}
+		}
+	}
+	planet = {
+		name = "Second Luxon"
+		class = "pc_ice_giant"
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 27
+		change_orbit = 5
+		has_ring = no
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}
+		}
+		moon = {
+			name = "SL-1"
+			class = "pc_barren"
+			orbit_distance = 12
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-2"
+			class = "pc_frozen"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 1
+		}
+		moon = {
+			name = "SL-3"
+			class = "pc_desolate"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+		moon = {
+			name = "SL-4"
+			class = "pc_frozen"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-5"
+			class = "pc_barren"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+		moon = {
+			name = "SL-6"
+			class = "pc_frozen"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-7"
+			class = "pc_frozen"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-8"
+			class = "pc_barren"
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+	}
+}
+
 
 
 #####Zhūquè's (朱雀) Nest#####   ########UNFINISHED SECTOR######## #Anomaly central, this is gonna be fun for the lore bois

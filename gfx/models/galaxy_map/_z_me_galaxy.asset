@@ -9,8 +9,8 @@ entity = {
 	default_state = "map"
 	state = {
 		name = "map" state_time = 30 looping = yes
-		start_event = { time = 0 particle = "meg_galaxy_particle" trigger_once = yes keep_particle = yes }
-		start_event = { time = 1 particle = "meg_background_particle" trigger_once = yes keep_particle = yes }
+		start_event = { particle = "btr_galaxy_particle" trigger_once = yes keep_particle = yes }
+		start_event = { particle = "btr_background_particle" trigger_once = yes keep_particle = yes }
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_galaxy_map_01" } } 
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_galaxy_map_02" } } 
 	}

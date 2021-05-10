@@ -1,0 +1,56 @@
+# Citadel Exploration
+citadel_dig_site = {
+	desc = citadel_dig_site_desc
+	picture = btr_GFX_evt_citadel_1
+	stages = 7
+	max_instances = 1
+	weight = { base = 0 }
+	potential = {}
+	visible = { 
+		default_site_visible_trigger = yes
+		#has_country_flag = "discovered_citadel_first"
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		#owner = { has_country_flag = "discovered_citadel_first" }
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.2
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.3
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.4
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.5
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.6
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.7
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.8
+	}
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}

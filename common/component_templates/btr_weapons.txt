@@ -1,0 +1,38 @@
+# ####################
+#  Magnetohydrodynamic Cannon
+# ####################
+
+# Magnetohydrodynamic(Reaper) Cannon
+weapon_component_template = {
+	key = "REAPER_CANNON_1"
+	size = extra_large
+	type = instant
+	
+	icon = "GFX_ship_part_energy_lance_1"
+	icon_frame = 1
+	
+	firing_arc = 25.0
+	min_range = 10.0
+	use_ship_kill_target = no
+	
+	component_set = "REAPER_CANNON_1"
+	projectile_gfx = "laser_reaper_cannon_01"
+	tags = { weapon_type_energy }
+	ai_tags = { weapon_role_artillery }
+	ai_tag_weight = 0
+	resources = {
+		category = ship_components
+		cost = {
+			alloys = @xl_t5_cost
+			rare_crystals = @xl_t5_rare
+		}		
+		upkeep = {
+			energy = @xl_t5_upkeep_energy
+			alloys = @xl_t5_upkeep_alloys
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

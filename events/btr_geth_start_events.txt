@@ -1,0 +1,444 @@
+
+namespace = btr_geth_start
+
+# AI Geth country change
+country_event = {
+	id = btr_geth_start.1
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = geth_consensus
+		is_ai = yes
+		is_country_type = default
+	}
+	immediate = {
+		event_target:geth_consensus = {
+			set_country_type = geth
+			force_add_civic = civic_machine_warbots
+			force_add_civic = civic_machine_unitary_cohesion
+			country_add_ethic = ethic_gestalt_consciousness
+		}
+	}
+}
+
+# AI Geth add systems
+country_event = {
+	id = btr_geth_start.2
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = geth_consensus
+		is_ai = yes
+	}
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = geth_consensus
+				is_ai = yes
+				any_system_within_border = {
+					has_star_flag = btr_geth_consensus_system
+				}
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = btr_dholen
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = btr_maat
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = btr_typhon
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = btr_salahiel
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = btr_chomos
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_1
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_2
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_3
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_4
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_5
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_6
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_7
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_8
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_9
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_10
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_11
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_12
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_13
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_14
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_15
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_16
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_17
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_18
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_19
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_20
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_21
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_23
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_24
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_25
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_26
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_27
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_28
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_29
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_30
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_31
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_32
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_33
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = geth_space_34
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				generate_btr_stations = yes
+			}
+			random_planet = {
+				limit = {
+					has_planet_flag = btr_haestrom 
+				}
+				save_event_target_as = btr_haestrom_planet
+			}
+			event_target:btr_haestrom_planet = {
+				set_owner = root
+				create_colony = {
+					owner = root
+					species = owner_main_species
+					ethos = owner
+				}
+				while = {
+					count = 7
+					create_pop = { species = owner_main_species }
+				}
+				generate_btr_mars_start_buildings = yes
+			}
+		}
+	}
+}
+

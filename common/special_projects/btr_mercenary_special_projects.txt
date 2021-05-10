@@ -1,0 +1,33 @@
+
+# Investigate Marauders
+special_project = {
+	key = "INVESTIGATE_MERCENARIES"
+	picture = GFX_evt_star_chart
+	icon = "gfx/interface/icons/situation_log/situation_log_radar.dds"
+	cost = 500
+	tech_department = society_technology
+	days_to_research = 0
+	location = no
+	timelimit = -1
+
+	event_scope = planet_event
+
+	requirements = {
+	}
+
+	abort_trigger = {
+		OR = {
+			NOT = { exists = event_target:encountered_mercenary }
+			has_communications = event_target:encountered_mercenary
+		}
+	}
+
+	on_success = {
+		owner = {
+			country_event = { id = btr_mercenary.2 }
+		}
+	}
+
+	on_fail = {
+	}
+}

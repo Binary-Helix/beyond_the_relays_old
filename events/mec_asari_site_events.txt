@@ -1,0 +1,456 @@
+###########################
+#  Asari Dig Site Events  #
+###########################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_asari_site
+
+##########################
+# Temple of Athame
+##########################
+
+# Stage 1
+fleet_event = {
+	id = mec_asari_site.101
+	title = "mec_asari_site.101.name"
+	desc = "mec_asari_site.101.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.101.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 48
+				min = 1000
+				max = 1000
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 48
+				min = 2000
+				max = 2000
+			}
+		}
+	}
+}
+
+# Stage 2
+fleet_event = {
+	id = mec_asari_site.102
+	title = "mec_asari_site.102.name"
+	desc = "mec_asari_site.102.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.102.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 48
+				min = 2000
+				max = 2000
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 48
+				min = 1000
+				max = 1000
+			}
+		}
+	}
+}
+
+# Stage 3
+fleet_event = {
+	id = mec_asari_site.103
+	title = "mec_asari_site.103.name"
+	desc = "mec_asari_site.103.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.103.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 48
+				min = 3000
+				max = 3000
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 48
+				min = 3000
+				max = 3000
+			}
+		}
+	}
+}
+
+# Stage 4
+fleet_event = {
+	id = mec_asari_site.104
+	title = "mec_asari_site.104.name"
+	desc = "mec_asari_site.104.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		owner ={
+			country_event = { id = mec_asari_asr.301 }
+		}
+		#from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.104.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 48
+				min = 6000
+				max = 6000
+			}
+		}
+	}
+}
+
+# Stage 5
+fleet_event = {
+	id = mec_asari_site.105
+	title = "mec_asari_site.105.name"
+	desc = "mec_asari_site.105.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.105.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 48
+				min = 6000
+				max = 6000
+			}
+		}
+	}
+}
+
+# Stage 6
+fleet_event = {
+	id = mec_asari_site.106
+	title = "mec_asari_site.106.name"
+	desc = "mec_asari_site.106.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.106.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 48
+				min = 6000
+				max = 6000
+			}
+		}
+	}
+}
+
+# Stage 7
+fleet_event = {
+	id = mec_asari_site.107
+	title = "mec_asari_site.107.name"
+	desc = "mec_asari_site.107.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no }
+		owner = {
+			if = {
+				limit = { has_country_flag = mec_story_thessia_beacon_301_A }
+				country_event = {
+					id = mec_asari_asr.304
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = mec_story_thessia_beacon_301_B }
+				country_event = {
+					id = mec_asari_asr.305
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = mec_asari_site.107.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = physics_research
+				value = 48
+				min = 8000
+				max = 8000
+			}
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 48
+				min = 8000
+				max = 8000
+			}
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = 48
+				min = 8000
+				max = 8000
+			}
+		}
+	}
+}
+
+# Mini 1
+fleet_event = {
+	id = mec_asari_site.110
+	title = "mec_asari_site.110.name"
+	desc = "mec_asari_site.110.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal_light
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+		owner = { set_country_flag = mec_story_thessia_beacon_mini_110 }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.110.a
+		fromfrom = { add_stage_clues = -1 }
+	}
+}
+
+# Mini 2
+fleet_event = {
+	id = mec_asari_site.111
+	title = "mec_asari_site.111.name"
+	desc = "mec_asari_site.111.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal_light
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+		owner = { set_country_flag = mec_story_thessia_beacon_mini_111 }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.111.a
+		leader = {
+			add_experience = 300
+		}
+	}
+}
+
+# Mini 3
+fleet_event = {
+	id = mec_asari_site.112
+	title = "mec_asari_site.112.name"
+	desc = "mec_asari_site.112.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal_light
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+		owner = { set_country_flag = mec_story_thessia_beacon_mini_112 }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.112.a
+		fromfrom = { add_stage_clues = -2 }
+	}
+}
+
+# Mini 4
+fleet_event = {
+	id = mec_asari_site.113
+	title = "mec_asari_site.113.name"
+	desc = "mec_asari_site.113.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal_light
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+		owner = { set_country_flag = mec_story_thessia_beacon_mini_113 }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.113.a
+		fromfrom = { add_stage_clues = -3 }
+		leader = {
+			add_experience = 300
+		}
+	}
+}
+
+# Mini 5
+fleet_event = {
+	id = mec_asari_site.114
+	title = "mec_asari_site.114.name"
+	desc = "mec_asari_site.114.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal_light
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+		owner = { set_country_flag = mec_story_thessia_beacon_mini_114 }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.114.a
+		fromfrom = { add_stage_clues = -1 }
+	}
+}
+
+# Mini 6
+fleet_event = {
+	id = mec_asari_site.115
+	title = "mec_asari_site.115.name"
+	desc = "mec_asari_site.115.desc"
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_mystic_reveal_light
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+		owner = { set_country_flag = mec_story_thessia_beacon_mini_115 }
+	}
+
+	after = { 
+		fromfrom = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = mec_asari_site.115.a
+		fromfrom = { add_stage_clues = -2 }
+	}
+}

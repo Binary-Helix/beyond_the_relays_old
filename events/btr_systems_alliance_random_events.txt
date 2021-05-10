@@ -1,0 +1,179 @@
+
+namespace = btr_alliance_random
+
+# Distress Call
+country_event = {
+	id = btr_alliance_random.1
+	title = btr_alliance_random.1.name
+	desc = btr_alliance_random.1.desc
+	picture = btr_GFX_evt_galaxy_map_1
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = systems_alliance
+		NOT = { has_country_flag = distress_call_event }
+	}
+	immediate = {
+		set_country_flag = distress_call_event
+		random_system = {
+			limit = {
+				NOT = { any_system_planet = { is_capital = yes is_colony = yes } }
+				has_owner = no
+				any_system_planet = {
+					#OR = {
+					#	is_planet_class = pc_barren
+					#	is_planet_class = pc_barren_cold
+					#	is_planet_class = pc_arctic
+					#	is_planet_class = pc_frozen
+					#	is_planet_class = pc_toxic
+					#	is_planet_class = pc_molten
+					#}
+					is_planet_class = pc_molten
+				}
+			}
+			weights = {
+				base = 1
+				modifier = { add = 1000 distance = { source = root.capital_scope max_distance >= 200 } }
+				modifier = { add = 500 distance = { source = root.capital_scope max_distance >= 100 } }
+				modifier = { add = 250 distance = { source = root.capital_scope max_distance >= 75 } }
+			}
+			save_global_event_target_as = distress_call_system
+			random_system_planet = {
+				limit = {
+					is_colony = no
+					is_star = no
+					has_owner = no
+					#OR = {
+					#	is_planet_class = pc_barren
+					#	is_planet_class = pc_barren_cold
+					#	is_planet_class = pc_arctic
+					#	is_planet_class = pc_frozen
+					#	is_planet_class = pc_toxic
+					#	is_planet_class = pc_molten
+					#}
+					is_planet_class = pc_molten
+				}
+				#weights = {
+				#	base = 1
+				#	modifier = { add = 1000 is_planet_class = pc_molten }
+				#}
+				save_global_event_target_as = distress_call_planet
+			}
+		}
+	}
+	option = {
+		name = btr_alliance_random.1.a # Let's hear it.
+		country_event = { id = btr_alliance_random.2 scopes = { from = event_target:distress_call_planet fromfrom = event_target:distress_call_system } }
+	}
+}
+
+# Distress Call - 2
+country_event = {
+	id = btr_alliance_random.2
+	title = btr_alliance_random.1.name
+	desc = btr_alliance_random.2.desc
+	picture = btr_GFX_evt_no_video_feed
+	is_triggered_only = yes
+	show_sound = event_distress_call
+	location = FROM
+
+	option = {
+		name = btr_alliance_random.2.a
+		enable_special_project = {
+			name = DISTRESS_CALL_PROJECT
+			owner = root
+			location = event_target:distress_call_planet
+		}
+	}
+}
+
+# Distress Call - Arrival at planet
+ship_event = {
+	id = btr_alliance_random.6
+	title = btr_alliance_random.1.name
+	desc = btr_alliance_random.6.desc
+	picture = btr_GFX_evt_molten_surface
+	is_triggered_only = yes
+	location = FROM
+	immediate = {
+		fleet = { set_event_locked = yes }
+	}
+
+	option = {
+		name = btr_alliance_random.6.a
+		hidden_effect = {
+			ship_event = { id = btr_alliance_random.3 days = 20 scopes = { from = root.from fromfrom = root.fromfrom } }
+		}
+	}
+}
+
+# Distress Call - found some wreckage
+ship_event = {
+	id = btr_alliance_random.3
+	title = btr_alliance_random.1.name
+	desc = btr_alliance_random.3.desc
+	picture = btr_GFX_evt_molten_surface
+	is_triggered_only = yes
+	location = FROM
+
+	option = {
+		name = btr_alliance_random.3.a # continue search for survivors - level 2 hazard - dangerous
+		hidden_effect = {
+			random_list = {
+				50 = { ship_event = { id = btr_alliance_random.4 days = 20 scopes = { from = root.from fromfrom = root.fromfrom } } } # good - TODO add tech modifier for possible future tech: Devlon Industries armor
+				50 = { ship_event = { id = btr_alliance_random.5 days = 20 scopes = { from = root.from fromfrom = root.fromfrom } } } # bad
+			}
+		}
+	}
+	option = {
+		name = btr_alliance_random.3.b # abandon search
+		hidden_effect = {
+			fleet = { set_event_locked = no }
+		}
+	}
+}
+
+# Distress Call - good find survivors - also find desposit of crystals
+ship_event = {
+	id = btr_alliance_random.4
+	title = btr_alliance_random.1.name
+	desc = btr_alliance_random.4.desc
+	picture = btr_GFX_evt_crashed_ship_1
+	is_triggered_only = yes
+	location = FROM
+
+	option = {
+		name = btr_alliance_random.4.a
+		hidden_effect = {
+			fleet = { set_event_locked = no }
+		}
+		leader = {
+			add_experience = 500
+		}
+		owner = {
+			add_resource = {
+				influence = 100
+				rare_crystals = 150
+			}
+		}
+	}
+}
+
+# Distress Call - bad - rescue team die
+ship_event = {
+	id = btr_alliance_random.5
+	title = btr_alliance_random.1.name
+	desc = btr_alliance_random.5.desc
+	picture = btr_GFX_evt_molten_surface
+	is_triggered_only = yes
+	location = FROM
+
+	option = {
+		name = btr_alliance_random.5.a
+		hidden_effect = {
+			fleet = { set_event_locked = no }
+		}
+		kill_leader = {
+			show_notification = yes
+		}
+	}
+}

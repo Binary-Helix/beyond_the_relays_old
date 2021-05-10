@@ -13,95 +13,196 @@
 # gender: yes|no (default: yes). whether the species have a gender
 # portrait_modding: yes|no (default: no). whether the portrait can be modified with genemodding/robomodding
 
-ASA = {
+### MAIN ###
+
+MECASA = {
 	archetype = BIOLOGICAL
-
+	
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-
+	
 	portraits = {
-		"asari"
+		"mec_asari"
 	}
-
+	
 	# These should not be used for randomly generated species
 	non_randomized_portraits = {
-		"asari"
+		"mec_asari"
 	}
-
-	graphical_culture = humanoid_01
+	
+	graphical_culture = mec_asari_01
 	move_pop_sound_effect = "moving_pop_confirmation"
+	
+	resources = {}
+	
+	trait = "mec_asari_trait_core"
 }
 
-COL = {
-	archetype = BIOLOGICAL
-
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-
-	portraits = {
-		"collector"
-	}
-
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-		"collector"
-	}
-
-	graphical_culture = humanoid_01
-	move_pop_sound_effect = "moving_pop_confirmation"
+HUM = { 
+	archetype = BIOLOGICAL 
+	portraits = { "human" } 
+	graphical_culture = alliance_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "HUM" 
+	uplifted_portraits = { "human" } 
 }
 
-
-QUA = {
-	archetype = BIOLOGICAL
-
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-
-	portraits = {
-		"quarian"
-	}
-
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-		"quarian"
-	}
-
-	graphical_culture = humanoid_01
-	move_pop_sound_effect = "moving_pop_confirmation"
+VOL = { 
+	archetype = BIOLOGICAL 
+	portraits = { "volus" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "VOL" 
+	uplifted_portraits = { "volus" }
 }
 
-COL = {
-	archetype = BIOLOGICAL
-
-	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
-
-	portraits = {
-		"human"
-		"humanoid_02"
-		"humanoid_03"
-		"humanoid_04"
-		"humanoid_05"
-	}
-	custom_portraits = {
-		randomized = { host_has_dlc = "Humanoids Species Pack" }
-		playable = { local_has_dlc = "Humanoids Species Pack" }
-		portraits = {
-			"humanoid_hp_01"
-			"humanoid_hp_02"
-			"humanoid_hp_06"
-			"humanoid_hp_07"
-			"humanoid_hp_08"
-			"humanoid_hp_09"
-			"humanoid_hp_10"
-			"humanoid_hp_11"
-			"humanoid_hp_12"
-			"humanoid_hp_13"
-		}
-	}
-
-	# These should not be used for randomly generated species
-	non_randomized_portraits = {
-		"human"
-	}
-
-	graphical_culture = humanoid_01
-	move_pop_sound_effect = "moving_pop_confirmation"
+SAL = { 
+	archetype = BIOLOGICAL 
+	portraits = { "salarian" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "SAL" 
+	uplifted_portraits = { "salarian" } 
 }
+
+TUR = { 
+	archetype = BIOLOGICAL 
+	portraits = { "turian" } graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "TUR" 
+	uplifted_portraits = { "turian" } 
+}
+
+KRO = { 
+	archetype = BIOLOGICAL 
+	portraits = { "krogan" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "KRO" 
+	uplifted_portraits = { "krogan" } 
+}
+
+HAN = { 
+	archetype = BIOLOGICAL 
+	portraits = { "hanar" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "HAN" 
+	uplifted_portraits = { "hanar" } 
+}
+
+DRE = { 
+	archetype = BIOLOGICAL 
+	portraits = { "drell" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "DRE" 
+	uplifted_portraits = { "drell" } 
+}
+
+BAT = { 
+	archetype = BIOLOGICAL 
+	portraits = { "batarian" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "BAT" 
+	uplifted_portraits = { "batarian" } 
+}
+QUA = { 
+	archetype = BIOLOGICAL 
+	portraits = { "quarian" } 
+	graphical_culture = quarian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "QUA" 
+	uplifted_portraits = { "quarian" } 
+}
+
+GTH = { 
+	archetype = MACHINE 
+	portraits = { "geth" } 
+	graphical_culture = geth_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "GTH" 
+	uplifted_portraits = { "geth" } 
+}
+
+COL = { 
+	archetype = BIOLOGICAL 
+	portraits = { "collector" } 
+	graphical_culture = collector_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "COL" 
+	uplifted_portraits = { "collector" } 
+}
+
+VOR = { 
+	archetype = BIOLOGICAL 
+	portraits = { "vorcha" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "VOR" 
+	uplifted_portraits = { "vorcha" } 
+}
+
+PRO = { 
+	archetype = BIOLOGICAL 
+	portraits = { "prothean" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "PRO" 
+	uplifted_portraits = { "prothean" } 
+}
+
+ELC = { 
+	archetype = BIOLOGICAL 
+	portraits = { "elcor" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "ELC" 
+	uplifted_portraits = { "elcor" } 
+}
+
+YAH = { 
+	archetype = BIOLOGICAL 
+	portraits = { "yahg" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "YAH" 
+	uplifted_portraits = { "yahg" } 
+}
+
+HSK = { 
+	archetype = BIOLOGICAL 
+	playable = { always = no } 
+	portraits = { "husk" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "HSK" 
+	uplifted_portraits = { "husk" } 
+}
+
+BLU = { 
+	archetype = BIOLOGICAL 
+	portraits = { "blue_suns" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "BLU" 
+	uplifted_portraits = { "blue_suns" } 
+} 
+
+CAT = { 
+	archetype = BIOLOGICAL 
+	portraits = { "cat6" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "CAT" 
+	uplifted_portraits = { "cat6" } 
+} 
+
+ECL = { 
+	archetype = BIOLOGICAL 
+	portraits = { "eclipse" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "ECL" 
+	uplifted_portraits = { "eclipse" } 
+} 

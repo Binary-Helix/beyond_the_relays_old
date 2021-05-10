@@ -1,14 +1,15 @@
-# Advanced Resouces
 
-element_zero = {
+###########################
+### Advanced Resources  ###
+###########################
+
+helium_3 = {
 	tradable = yes
-	market_amount = 10
-	market_price = 300
-	max = 1000
+	market_amount = 20
+	market_price = 100
+	max = 15000
 	
-	prerequisites = { "tech_mine_eezo_extraction" }
-	
-	deficit_modifier = element_zero_deficit #found in static modifiers
+	prerequisites = { "tech_mine_helium_3" }
 	
 	ai_weight = {
 		weight = 10
@@ -18,3 +19,23 @@ element_zero = {
 		base = 10
 	}
 }
+
+element_zero = {
+	tradable = yes
+	market_amount = 1
+	market_price = 100
+	max = 15000
+	
+	prerequisites = { "tech_mine_element_zero" }
+	
+	deficit_modifier = element_zero_deficit #found in static modifiers
+	
+	ai_weight = {
+		weight = 100
+	}
+
+	ai_wants = {
+		base = 100
+	}
+}
+

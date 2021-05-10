@@ -1,13 +1,13 @@
 static_galaxy_scenario = {
     name = "Beyond_the_Relays_500_v1"
     priority = 2
-    default = no
+    default = yes
     colonizable_planet_odds = 0.25
     num_empires = { min = 1 max = 15 }
     num_empire_default = 9
     advanced_empire_default = 0
     core_radius = 25
-    random_hyperlanes = yes
+    random_hyperlanes = no
 
     system = {
         id = "0"
@@ -17,8 +17,12 @@ static_galaxy_scenario = {
         }
         initializer = sys_kyzil_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = vorcha_chiefdom
+				} 
+		}        
     }
 
     system = {
@@ -335,8 +339,12 @@ static_galaxy_scenario = {
         }
         initializer = sys_sahrabarik_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = omega
+                } 
+        }         
     }
 
     system = {
@@ -412,7 +420,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "45"
+        id = "44"
         position = {
             x = -126.4115
             y = -322.8936
@@ -421,7 +429,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "47"
+        id = "45"
         position = {
             x = -130.6893
             y = -299.3636
@@ -430,7 +438,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "50"
+        id = "46"
         position = {
             x = -132.0803
             y = -222.2927
@@ -439,7 +447,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "51"
+        id = "47"
         position = {
             x = -117.142
             y = -230.9118
@@ -448,7 +456,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "52"
+        id = "48"
         position = {
             x = -122.5546
             y = -245.3553
@@ -457,7 +465,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "53"
+        id = "49"
         position = {
             x = -137.5954
             y = -244.3518
@@ -466,7 +474,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "54"
+        id = "50"
         position = {
             x = -155.6441
             y = -233.8228
@@ -475,7 +483,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "55"
+        id = "51"
         position = {
             x = -87.19479
             y = -203.1049
@@ -484,7 +492,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "56"
+        id = "52"
         position = {
             x = -19.45697
             y = -156.0447
@@ -493,7 +501,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "57"
+        id = "53"
         position = {
             x = -8.048157
             y = -171.0174
@@ -502,7 +510,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "58"
+        id = "54"
         position = {
             x = -21.59572
             y = -170.305
@@ -511,7 +519,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "59"
+        id = "55"
         position = {
             x = -17.31763
             y = -185.2789
@@ -520,7 +528,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "60"
+        id = "56"
         position = {
             x = -39.42137
             y = -178.1476
@@ -529,7 +537,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "61"
+        id = "57"
         position = {
             x = -37.28262
             y = -161.0352
@@ -538,7 +546,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "62"
+        id = "58"
         position = {
             x = -222.6704
             y = -305.7801
@@ -547,7 +555,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "63"
+        id = "59"
         position = {
             x = -247.6265
             y = -317.1895
@@ -556,7 +564,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "64"
+        id = "60"
         position = {
             x = -235.505
             y = -253.7295
@@ -565,7 +573,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "65"
+        id = "61"
         position = {
             x = -239.0701
             y = -232.339
@@ -574,7 +582,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "66"
+        id = "62"
         position = {
             x = -258.3221
             y = -227.3474
@@ -583,7 +591,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "67"
+        id = "63"
         position = {
             x = -259.7481
             y = -197.3996
@@ -592,7 +600,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "68"
+        id = "64"
         position = {
             x = -249.7656
             y = -185.9913
@@ -601,7 +609,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "69"
+        id = "65"
         position = {
             x = -256.1827
             y = -173.8695
@@ -610,7 +618,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "70"
+        id = "66"
         position = {
             x = -269.0172
             y = -188.1298
@@ -619,7 +627,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "71"
+        id = "67"
         position = {
             x = -283.9911
             y = -192.4091
@@ -628,7 +636,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "72"
+        id = "68"
         position = {
             x = -276.8604
             y = -171.731
@@ -637,7 +645,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "73"
+        id = "69"
         position = {
             x = -184.8798
             y = -113.9751
@@ -646,7 +654,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "74"
+        id = "70"
         position = {
             x = -200.5664
             y = -123.9573
@@ -655,7 +663,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "75"
+        id = "71"
         position = {
             x = -214.827
             y = -131.0875
@@ -664,7 +672,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "76"
+        id = "72"
         position = {
             x = -199.1404
             y = -103.2805
@@ -673,7 +681,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "77"
+        id = "73"
         position = {
             x = -214.827
             y = -111.8367
@@ -682,7 +690,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "78"
+        id = "74"
         position = {
             x = -374.546
             y = -299.3636
@@ -691,7 +699,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "79"
+        id = "75"
         position = {
             x = -388.8066
             y = -288.6678
@@ -700,19 +708,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "80"
+        id = "76"
         position = {
             x = -411.6234
             y = -243.7473
         }
         initializer = sys_tikkun_init
 		spawn_weight = { 
-			base = 1
-		}       
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = geth_consensus
+                } 
+        }         
     }
 
     system = {
-        id = "81"
+        id = "77"
         position = {
             x = -399.2453
             y = -117.6509
@@ -721,7 +733,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "82"
+        id = "78"
         position = {
             x = -411.307
             y = -126.972
@@ -730,19 +742,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "83"
+        id = "79"
         position = {
             x = -424.4671
             y = -139.5832
         }
         initializer = sys_azedes_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = raloi_republic
+                } 
+        }         
     }
 
     system = {
-        id = "84"
+        id = "80"
         position = {
             x = -423.9179
             y = -114.361
@@ -751,7 +767,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "85"
+        id = "81"
         position = {
             x = -436.5299
             y = -125.8755
@@ -760,7 +776,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "86"
+        id = "82"
         position = {
             x = -315.3643
             y = -89.73265
@@ -769,7 +785,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "87"
+        id = "83"
         position = {
             x = -333.9033
             y = -106.1326
@@ -778,7 +794,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "88"
+        id = "84"
         position = {
             x = -254.7567
             y = 3.67395
@@ -787,7 +803,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "89"
+        id = "85"
         position = {
             x = -265.4522
             y = -24.133
@@ -796,7 +812,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "90"
+        id = "86"
         position = {
             x = -102.0621
             y = -95.17044
@@ -805,7 +821,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "91"
+        id = "87"
         position = {
             x = -113.0278
             y = -107.2332
@@ -814,7 +830,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "92"
+        id = "88"
         position = {
             x = -97.67584
             y = -75.97971
@@ -823,7 +839,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "93"
+        id = "89"
         position = {
             x = -122.3496
             y = -84.20428
@@ -832,7 +848,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "94"
+        id = "90"
         position = {
             x = -127.2839
             y = -102.2983
@@ -841,19 +857,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "95"
+        id = "91"
         position = {
             x = -147.0892
             y = -61.21091
         }
         initializer = sys_maskimxul_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = rachni_hive
+                } 
+        }        
     }
 
     system = {
-        id = "96"
+        id = "92"
         position = {
             x = -161.3497
             y = -49.09024
@@ -862,7 +882,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "97"
+        id = "93"
         position = {
             x = -142.8059
             y = -2.81847
@@ -871,7 +891,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "98"
+        id = "94"
         position = {
             x = -148.5107
             y = 11.44303
@@ -880,7 +900,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "99"
+        id = "95"
         position = {
             x = -159.2068
             y = -5.670696
@@ -889,7 +909,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "100"
+        id = "96"
         position = {
             x = -174.181
             y = -12.80148
@@ -898,7 +918,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "101"
+        id = "97"
         position = {
             x = -170.6157
             y = 8.590728
@@ -907,7 +927,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "102"
+        id = "98"
         position = {
             x = -156.3543
             y = 59.93197
@@ -916,7 +936,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "103"
+        id = "99"
         position = {
             x = -167.7635
             y = 69.91498
@@ -925,7 +945,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "104"
+        id = "100"
         position = {
             x = -167.7635
             y = 43.5313
@@ -934,7 +954,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "105"
+        id = "101"
         position = {
             x = -186.3035
             y = 52.0882
@@ -943,7 +963,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "106"
+        id = "102"
         position = {
             x = -192.0077
             y = 131.9524
@@ -952,7 +972,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "107"
+        id = "103"
         position = {
             x = -204.1302
             y = 111.2733
@@ -961,7 +981,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "108"
+        id = "104"
         position = {
             x = -212.6872
             y = 120.5432
@@ -970,7 +990,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "109"
+        id = "105"
         position = {
             x = -139.9534
             y = 146.9268
@@ -979,7 +999,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "110"
+        id = "106"
         position = {
             x = -152.7893
             y = 170.4583
@@ -988,7 +1008,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "111"
+        id = "107"
         position = {
             x = -165.6243
             y = 150.4922
@@ -997,7 +1017,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "112"
+        id = "108"
         position = {
             x = -201.9911
             y = 201.8334
@@ -1006,7 +1026,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "113"
+        id = "109"
         position = {
             x = -192.7211
             y = 185.4328
@@ -1015,7 +1035,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "114"
+        id = "110"
         position = {
             x = -215.5392
             y = 182.5805
@@ -1024,7 +1044,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "115"
+        id = "111"
         position = {
             x = -278.2896
             y = 134.8047
@@ -1033,7 +1053,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "116"
+        id = "112"
         position = {
             x = -293.9771
             y = 130.5262
@@ -1042,7 +1062,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "117"
+        id = "113"
         position = {
             x = -301.108
             y = 154.0576
@@ -1051,7 +1071,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "118"
+        id = "114"
         position = {
             x = -370.2762
             y = 18.57374
@@ -1060,7 +1080,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "119"
+        id = "115"
         position = {
             x = -384.9383
             y = 24.09393
@@ -1069,7 +1089,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "120"
+        id = "116"
         position = {
             x = -390.4534
             y = 42.64497
@@ -1078,7 +1098,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "121"
+        id = "117"
         position = {
             x = -403.9902
             y = 26.60083
@@ -1087,7 +1107,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "122"
+        id = "118"
         position = {
             x = -366.7109
             y = 42.10519
@@ -1096,7 +1116,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "123"
+        id = "119"
         position = {
             x = -360.2934
             y = 116.2647
@@ -1105,7 +1125,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "124"
+        id = "120"
         position = {
             x = -354.5887
             y = 104.1426
@@ -1114,7 +1134,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "125"
+        id = "121"
         position = {
             x = -371.7023
             y = 94.15948
@@ -1123,7 +1143,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "126"
+        id = "122"
         position = {
             x = -385.251
             y = 89.88107
@@ -1132,7 +1152,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "127"
+        id = "123"
         position = {
             x = -375.981
             y = 116.2647
@@ -1141,7 +1161,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "128"
+        id = "124"
         position = {
             x = -364.5715
             y = 185.4328
@@ -1150,7 +1170,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "129"
+        id = "125"
         position = {
             x = -380.9724
             y = 173.3105
@@ -1159,7 +1179,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "130"
+        id = "126"
         position = {
             x = -383.8246
             y = 201.1204
@@ -1168,7 +1188,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "131"
+        id = "127"
         position = {
             x = -304.4444
             y = 248.6826
@@ -1177,7 +1197,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "132"
+        id = "128"
         position = {
             x = -288.8889
             y = 235.4144
@@ -1186,7 +1206,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "133"
+        id = "129"
         position = {
             x = -275.6208
             y = 228.5514
@@ -1195,7 +1215,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "134"
+        id = "130"
         position = {
             x = -297.543
             y = 213.2426
@@ -1204,7 +1224,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "135"
+        id = "131"
         position = {
             x = -306.7324
             y = 225.8063
@@ -1213,7 +1233,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "136"
+        id = "132"
         position = {
             x = -149.9368
             y = 269.5754
@@ -1222,7 +1242,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "137"
+        id = "133"
         position = {
             x = -140.6667
             y = 248.8963
@@ -1231,7 +1251,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "138"
+        id = "134"
         position = {
             x = -157.0674
             y = 238.9132
@@ -1240,7 +1260,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "139"
+        id = "135"
         position = {
             x = -169.9026
             y = 248.8963
@@ -1249,7 +1269,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "140"
+        id = "136"
         position = {
             x = -154.2148
             y = 318.7774
@@ -1258,7 +1278,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "141"
+        id = "137"
         position = {
             x = -167.7635
             y = 327.3343
@@ -1267,7 +1287,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "142"
+        id = "138"
         position = {
             x = -160.6326
             y = 299.5244
@@ -1276,7 +1296,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "143"
+        id = "139"
         position = {
             x = -170.6157
             y = 308.7943
@@ -1285,7 +1305,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "144"
+        id = "140"
         position = {
             x = -184.1641
             y = 313.0728
@@ -1294,7 +1314,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "145"
+        id = "141"
         position = {
             x = -166.3374
             y = 378.6754
@@ -1303,7 +1323,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "146"
+        id = "142"
         position = {
             x = -159.9196
             y = 366.5533
@@ -1312,7 +1332,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "147"
+        id = "143"
         position = {
             x = -167.0507
             y = 350.1526
@@ -1321,19 +1341,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "148"
+        id = "144"
         position = {
             x = -181.3121
             y = 350.1526
         }
         initializer = sys_harsa_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = batarian_hegemony
+                } 
+        }        
     }
 
     system = {
-        id = "149"
+        id = "145"
         position = {
             x = -189.1558
             y = 362.9879
@@ -1342,7 +1366,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "150"
+        id = "146"
         position = {
             x = -100.0217
             y = 408.6245
@@ -1351,7 +1375,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "151"
+        id = "147"
         position = {
             x = -129.2573
             y = 414.3291
@@ -1360,7 +1384,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "152"
+        id = "148"
         position = {
             x = -77.91632
             y = 331.6128
@@ -1369,7 +1393,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "153"
+        id = "149"
         position = {
             x = -40.12344
             y = 285.2629
@@ -1378,7 +1402,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "154"
+        id = "150"
         position = {
             x = -52.2454
             y = 260.3055
@@ -1387,7 +1411,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "155"
+        id = "151"
         position = {
             x = -73.63799
             y = 275.993
@@ -1396,7 +1420,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "156"
+        id = "152"
         position = {
             x = -65.08131
             y = 287.4022
@@ -1405,7 +1429,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "157"
+        id = "153"
         position = {
             x = 9.791679
             y = 320.9166
@@ -1414,7 +1438,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "158"
+        id = "154"
         position = {
             x = -6.60891
             y = 297.3852
@@ -1423,7 +1447,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "159"
+        id = "155"
         position = {
             x = -16.59229
             y = 312.3598
@@ -1432,7 +1456,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "160"
+        id = "156"
         position = {
             x = -21.58369
             y = 298.8114
@@ -1441,7 +1465,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "161"
+        id = "157"
         position = {
             x = 49.72343
             y = 307.3683
@@ -1450,19 +1474,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "162"
+        id = "158"
         position = {
             x = 29.75785
             y = 299.5244
         }
         initializer = sys_sol_init
 		spawn_weight = { 
-			base = 1
-		}	
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = systems_alliance
+                } 
+        }         
     }
 
     system = {
-        id = "163"
+        id = "159"
         position = {
             x = 36.17536
             y = 290.9675
@@ -1471,7 +1499,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "164"
+        id = "160"
         position = {
             x = 21.20058
             y = 281.6976
@@ -1480,16 +1508,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "165"
+        id = "161"
         position = {
             x = -25.86202
             y = 212.5295
         }
         initializer = sys_anadius_init
+		spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+						has_country_flag = cerberus
+				}
+		}        
     }
 
     system = {
-        id = "166"
+        id = "162"
         position = {
             x = -45.11514
             y = 216.808
@@ -1498,7 +1533,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "167"
+        id = "163"
         position = {
             x = -52.95876
             y = 196.8419
@@ -1507,7 +1542,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "168"
+        id = "164"
         position = {
             x = -41.54986
             y = 186.1459
@@ -1516,7 +1551,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "169"
+        id = "165"
         position = {
             x = -23.0098
             y = 195.4158
@@ -1525,19 +1560,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "170"
+        id = "166"
         position = {
             x = 79.67298
             y = 195.4158
         }
         initializer = sys_pranas_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = salarian_union
+                } 
+        }         
     }
 
     system = {
-        id = "171"
+        id = "167"
         position = {
             x = 98.92579
             y = 186.1459
@@ -1546,7 +1585,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "172"
+        id = "168"
         position = {
             x = 78.24686
             y = 174.7367
@@ -1555,7 +1594,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "173"
+        id = "169"
         position = {
             x = 68.26348
             y = 186.8589
@@ -1564,7 +1603,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "174"
+        id = "170"
         position = {
             x = 121.0311
             y = 312.3597
@@ -1573,7 +1612,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "175"
+        id = "171"
         position = {
             x = 108.9086
             y = 293.1067
@@ -1582,7 +1621,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "176"
+        id = "172"
         position = {
             x = 93.22105
             y = 305.9421
@@ -1591,7 +1630,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "177"
+        id = "173"
         position = {
             x = 148.1275
             y = 375.1101
@@ -1600,7 +1639,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "178"
+        id = "174"
         position = {
             x = 145.2753
             y = 356.5702
@@ -1609,19 +1648,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "179"
+        id = "175"
         position = {
             x = 134.315
             y = 346.2097
         }
         initializer = sys_aru_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = vol_protectorate
+                } 
+        }        
     }
 
     system = {
-        id = "180"
+        id = "176"
         position = {
             x = 122.4572
             y = 353.0048
@@ -1630,7 +1673,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "181"
+        id = "177"
         position = {
             x = 207.0606
             y = 332.0267
@@ -1639,19 +1682,16 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "182"
+        id = "178"
         position = {
             x = 213.4659
             y = 313.7259
         }
         initializer = sys_trebia_init
-		spawn_weight = { 
-			base = 1
-		}		
     }
 
     system = {
-        id = "183"
+        id = "179"
         position = {
             x = 234.5122
             y = 313.7259
@@ -1660,7 +1700,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "184"
+        id = "180"
         position = {
             x = 182.3552
             y = 272.4277
@@ -1669,7 +1709,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "185"
+        id = "181"
         position = {
             x = 165.2415
             y = 257.4531
@@ -1678,16 +1718,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "186"
+        id = "182"
         position = {
             x = 154.5454
             y = 269.5753
         }
         initializer = sys_mactare_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = turian_hierarchy
+                } 
+        }        
     }
 
     system = {
-        id = "187"
+        id = "183"
         position = {
             x = 185.5569
             y = 255.6212
@@ -1696,7 +1743,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "188"
+        id = "184"
         position = {
             x = 211.1782
             y = 202.0908
@@ -1705,7 +1752,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "189"
+        id = "185"
         position = {
             x = 190.5899
             y = 191.5684
@@ -1714,19 +1761,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "190"
+        id = "186"
         position = {
             x = 175.9493
             y = 199.8031
         }
         initializer = sys_aralakh_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = krogan_chiefdom
+                } 
+        }        
     }
 
     system = {
-        id = "191"
+        id = "187"
         position = {
             x = 218.4128
             y = 156.5171
@@ -1735,7 +1786,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "192"
+        id = "188"
         position = {
             x = 196.3501
             y = 140.6989
@@ -1744,7 +1795,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "193"
+        id = "189"
         position = {
             x = 214.2493
             y = 125.2969
@@ -1753,7 +1804,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "194"
+        id = "190"
         position = {
             x = 222.1597
             y = 115.7228
@@ -1762,7 +1813,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "195"
+        id = "191"
         position = {
             x = 227.9873
             y = 136.1199
@@ -1771,7 +1822,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "196"
+        id = "192"
         position = {
             x = 166.6676
             y = 96.29865
@@ -1780,7 +1831,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "197"
+        id = "193"
         position = {
             x = 158.1107
             y = 107.7078
@@ -1789,19 +1840,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "198"
+        id = "194"
         position = {
             x = 151.6928
             y = 89.16795
         }
         initializer = sys_kanala_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = illuminated_primacy
+                } 
+        }        
     }
 
     system = {
-        id = "199"
+        id = "195"
         position = {
             x = 165.2415
             y = 80.61105
@@ -1810,7 +1865,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "200"
+        id = "196"
         position = {
             x = 143.8492
             y = 77.75874
@@ -1819,7 +1874,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "201"
+        id = "197"
         position = {
             x = 129.5878
             y = 88.45489
@@ -1828,7 +1883,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "202"
+        id = "198"
         position = {
             x = 257.6745
             y = 62.78427
@@ -1837,7 +1892,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "203"
+        id = "199"
         position = {
             x = 234.143
             y = 55.65356
@@ -1846,7 +1901,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "204"
+        id = "200"
         position = {
             x = 254.1092
             y = 36.40059
@@ -1855,7 +1910,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "205"
+        id = "201"
         position = {
             x = 263.3789
             y = -14.94072
@@ -1864,7 +1919,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "206"
+        id = "202"
         position = {
             x = 249.8504
             y = -27.38911
@@ -1873,7 +1928,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "207"
+        id = "203"
         position = {
             x = 236.6923
             y = -38.35464
@@ -1882,7 +1937,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "208"
+        id = "204"
         position = {
             x = 251.4955
             y = -46.03065
@@ -1891,7 +1946,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "209"
+        id = "205"
         position = {
             x = 261.9126
             y = -36.16162
@@ -1900,19 +1955,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "210"
+        id = "206"
         position = {
             x = 361.07
             y = -47.74206
         }
         initializer = sys_chabtan_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = parnack_regime
+                } 
+        }         
     }
 
     system = {
-        id = "211"
+        id = "207"
         position = {
             x = 342.53
             y = -64.14272
@@ -1921,7 +1980,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "212"
+        id = "208"
         position = {
             x = 329.6949
             y = -47.029
@@ -1930,19 +1989,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "213"
+        id = "209"
         position = {
             x = 335.3994
             y = 135.5177
         }
         initializer = sys_parnitha_init
 		spawn_weight = { 
-			base = 1
-		}	       
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = asari_republics
+                } 
+        }        
     }
 
     system = {
-        id = "214"
+        id = "210"
         position = {
             x = 328.9819
             y = 122.6823
@@ -1951,7 +2014,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "215"
+        id = "211"
         position = {
             x = 322.5644
             y = 147.64
@@ -1960,17 +2023,16 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "216"
+        id = "212"
         position = {
             x = 348.235
             y = 153.3445
         }
         initializer = sys_tomaros_init
-		
     }
 
     system = {
-        id = "217"
+        id = "213"
         position = {
             x = 351.0872
             y = 131.9523
@@ -1979,7 +2041,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "218"
+        id = "214"
         position = {
             x = 405.2807
             y = 139.0831
@@ -1988,7 +2050,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "219"
+        id = "215"
         position = {
             x = 396.724
             y = 124.1084
@@ -1997,7 +2059,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "220"
+        id = "216"
         position = {
             x = 418.8293
             y = 116.9778
@@ -2006,7 +2068,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "221"
+        id = "217"
         position = {
             x = 428.8121
             y = 130.5262
@@ -2015,7 +2077,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "222"
+        id = "218"
         position = {
             x = 346.6233
             y = 219.7899
@@ -2024,7 +2086,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "223"
+        id = "219"
         position = {
             x = 344.1261
             y = 203.9717
@@ -2033,19 +2095,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "224"
+        id = "220"
         position = {
             x = 332.4698
             y = 200.6415
         }
         initializer = sys_phontes_init
 		spawn_weight = { 
-			base = 1
-		}		
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = courts_of_dekuuna
+                } 
+        }        
     }
 
     system = {
-        id = "225"
+        id = "221"
         position = {
             x = 319.1496
             y = 193.1487
@@ -2054,7 +2120,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "226"
+        id = "222"
         position = {
             x = 329.5561
             y = 218.9574
@@ -2063,7 +2129,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "227"
+        id = "223"
         position = {
             x = 398.5847
             y = 69.38943
@@ -2072,7 +2138,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "228"
+        id = "224"
         position = {
             x = 406.4092
             y = 50.68055
@@ -2081,7 +2147,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "229"
+        id = "225"
         position = {
             x = 390.4216
             y = 40.47557
@@ -2090,7 +2156,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "230"
+        id = "226"
         position = {
             x = 377.4948
             y = 54.76236
@@ -2099,7 +2165,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "231"
+        id = "227"
         position = {
             x = 441.6478
             y = -38.4721
@@ -2108,7 +2174,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "232"
+        id = "228"
         position = {
             x = 425.9599
             y = -52.7336
@@ -2117,7 +2183,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "233"
+        id = "229"
         position = {
             x = 447.3516
             y = -62.00348
@@ -2126,7 +2192,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "234"
+        id = "230"
         position = {
             x = 343.2436
             y = -143.2938
@@ -2135,7 +2201,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "235"
+        id = "231"
         position = {
             x = 331.1211
             y = -132.5978
@@ -2144,7 +2210,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "236"
+        id = "232"
         position = {
             x = 324.7036
             y = -114.7709
@@ -2153,7 +2219,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "237"
+        id = "233"
         position = {
             x = 307.5896
             y = -132.5978
@@ -2162,7 +2228,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "238"
+        id = "234"
         position = {
             x = 130.7481
             y = -88.38716
@@ -2171,7 +2237,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "239"
+        id = "235"
         position = {
             x = 108.6427
             y = -106.214
@@ -2180,16 +2246,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "240"
+        id = "236"
         position = {
             x = 0.9682617
             y = -3.531452
         }
         initializer = sys_tartarusdebrisfield_init
+		spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+					has_country_flag = collectors
+				}
+		}        
     }
 
     system = {
-        id = "241"
+        id = "237"
         position = {
             x = -247.7827
             y = 288.7616
@@ -2198,7 +2271,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "242"
+        id = "238"
         position = {
             x = -267.9139
             y = 288.7616
@@ -2207,7 +2280,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "243"
+        id = "239"
         position = {
             x = -238.1745
             y = 306.6052
@@ -2216,7 +2289,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "244"
+        id = "240"
         position = {
             x = -261.0508
             y = 309.8077
@@ -2225,72 +2298,71 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "0"
+        id = "241"
         position = {
             x = -426
             y = -55
         }
     }
-##### START OF RANDOMIZED SYSTEMS #####
+
+    system = {
+        id = "242"
+        position = {
+            x = -404.5967
+            y = 67.77259
+        }
+    }
+
+    system = {
+        id = "243"
+        position = {
+            x = -312.2231
+            y = 68.1138
+        }
+    }
+
+    system = {
+        id = "244"
+        position = {
+            x = -389.2212
+            y = 150.1887
+        }
+    }
+
+    system = {
+        id = "245"
+        position = {
+            x = -304.6079
+            y = 95.19005
+        }
+    }
 
     system = {
         id = "246"
         position = {
-            x = -393.8432
-            y = 63.83519
+            x = -352.8375
+            y = 72.34447
         }
     }
 
     system = {
         id = "247"
         position = {
-            x = -402
-            y = 159
+            x = -342.6839
+            y = 231.4175
         }
     }
 
     system = {
         id = "248"
         position = {
-            x = -357.4765
-            y = 66.93021
+            x = -364.8505
+            y = -195.1644
         }
     }
 
     system = {
         id = "249"
-        position = {
-            x = -283.9695
-            y = 81.63162
-        }
-    }
-
-    system = {
-        id = "250"
-        position = {
-            x = -366.7616
-            y = 232.5146
-        }
-    }
-
-    system = {
-        id = "251"
-        position = {
-            x = -280.1006
-            y = 185.3153
-        }
-    }
-
-    system = {
-        id = "252"
-        position = {
-            x = -380
-            y = -173
-        }
-    }
-
-    system = {
-        id = "253"
         position = {
             x = -380
             y = -4
@@ -2298,7 +2370,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "254"
+        id = "250"
         position = {
             x = -363
             y = -161
@@ -2306,23 +2378,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "255"
+        id = "251"
         position = {
-            x = -369.8567
-            y = -124.962
+            x = -383.2983
+            y = -55.42164
         }
     }
 
     system = {
-        id = "256"
+        id = "252"
         position = {
-            x = -346.6439
-            y = 154.365
+            x = -333.3764
+            y = 118.8818
         }
     }
 
     system = {
-        id = "257"
+        id = "253"
         position = {
             x = -328
             y = -35
@@ -2330,15 +2402,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "258"
+        id = "254"
         position = {
-            x = -342.0013
-            y = 260.3699
+            x = -289.4344
+            y = 273.6379
         }
     }
 
     system = {
-        id = "259"
+        id = "255"
         position = {
             x = -325
             y = 41
@@ -2346,15 +2418,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "260"
+        id = "256"
         position = {
-            x = -324.2049
-            y = 121.0933
+            x = -338.4532
+            y = 159.4962
         }
     }
 
     system = {
-        id = "261"
+        id = "257"
         position = {
             x = -321
             y = 191
@@ -2362,55 +2434,55 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "258"
+        position = {
+            x = -339.372
+            y = -4.586024
+        }
+    }
+
+    system = {
+        id = "259"
+        position = {
+            x = -284.3388
+            y = -286.8866
+        }
+    }
+
+    system = {
+        id = "260"
+        position = {
+            x = -318.9894
+            y = -310.3267
+        }
+    }
+
+    system = {
+        id = "261"
+        position = {
+            x = -268.0326
+            y = -102.423
+        }
+    }
+
+    system = {
         id = "262"
         position = {
-            x = -302
-            y = 31
+            x = -308.7979
+            y = 18.85409
         }
     }
 
     system = {
         id = "263"
         position = {
-            x = -296
-            y = -292
+            x = -248.7631
+            y = 217.8793
         }
     }
 
     system = {
         id = "264"
-        position = {
-            x = -293
-            y = -346
-        }
-    }
-
-    system = {
-        id = "265"
-        position = {
-            x = -292
-            y = -103
-        }
-    }
-
-    system = {
-        id = "266"
-        position = {
-            x = -314.146
-            y = 81.63164
-        }
-    }
-
-    system = {
-        id = "267"
-        position = {
-            x = -255.3403
-            y = 210.0756
-        }
-    }
-
-    system = {
-        id = "268"
         position = {
             x = -263
             y = 46
@@ -2418,31 +2490,31 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "269"
+        id = "265"
         position = {
-            x = -261
-            y = -112
+            x = -241.5351
+            y = -89.17428
         }
     }
 
     system = {
-        id = "270"
+        id = "266"
         position = {
-            x = -252
-            y = -356
+            x = -264.9753
+            y = -338.8625
         }
     }
 
     system = {
-        id = "271"
+        id = "267"
         position = {
-            x = -252
-            y = 137
+            x = -250.7073
+            y = 105.4806
         }
     }
 
     system = {
-        id = "272"
+        id = "268"
         position = {
             x = -249
             y = 165
@@ -2450,7 +2522,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "273"
+        id = "269"
         position = {
             x = -245
             y = -141
@@ -2458,23 +2530,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "274"
+        id = "270"
         position = {
-            x = -184.9284
-            y = -342.3882
+            x = -209.8411
+            y = -343.9531
         }
     }
 
     system = {
-        id = "275"
+        id = "271"
         position = {
-            x = -191.1184
-            y = 157.46
+            x = -267.0134
+            y = 80.0022
         }
     }
 
     system = {
-        id = "276"
+        id = "272"
         position = {
             x = -216
             y = 337
@@ -2482,7 +2554,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "277"
+        id = "273"
         position = {
             x = -213
             y = 245
@@ -2490,15 +2562,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "278"
+        id = "274"
         position = {
-            x = -258.4354
-            y = 95.55928
+            x = -215.0375
+            y = 81.02134
         }
     }
 
     system = {
-        id = "279"
+        id = "275"
         position = {
             x = -194
             y = -375
@@ -2506,7 +2578,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "280"
+        id = "276"
         position = {
             x = -194
             y = -246
@@ -2514,63 +2586,63 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "277"
+        position = {
+            x = -232.3629
+            y = -46.37059
+        }
+    }
+
+    system = {
+        id = "278"
+        position = {
+            x = -205.8654
+            y = -30.06442
+        }
+    }
+
+    system = {
+        id = "279"
+        position = {
+            x = -208.9227
+            y = 7.643589
+        }
+    }
+
+    system = {
+        id = "280"
+        position = {
+            x = -197.7123
+            y = -65.73416
+        }
+    }
+
+    system = {
         id = "281"
         position = {
-            x = -201.1773
-            y = -14.31447
+            x = -216.0567
+            y = 42.29419
         }
     }
 
     system = {
         id = "282"
         position = {
-            x = -239.0914
-            y = -46.81233
+            x = -237.4585
+            y = 261.4083
         }
     }
 
     system = {
         id = "283"
         position = {
-            x = -219.7475
-            y = 21.27844
+            x = -202.8079
+            y = 285.8675
         }
     }
 
     system = {
         id = "284"
-        position = {
-            x = -186
-            y = -65
-        }
-    }
-
-    system = {
-        id = "285"
-        position = {
-            x = -230.5801
-            y = 42.94369
-        }
-    }
-
-    system = {
-        id = "286"
-        position = {
-            x = -139.2765
-            y = 347.8046
-        }
-    }
-
-    system = {
-        id = "287"
-        position = {
-            x = -182
-            y = 284
-        }
-    }
-
-    system = {
-        id = "288"
         position = {
             x = -179
             y = -211
@@ -2578,15 +2650,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "289"
+        id = "285"
         position = {
-            x = -215.8786
-            y = 61.5139
+            x = -169.1764
+            y = 98.34663
         }
     }
 
     system = {
-        id = "290"
+        id = "286"
         position = {
             x = -176
             y = 205
@@ -2594,31 +2666,31 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "291"
+        id = "287"
         position = {
-            x = -214.3311
-            y = 283.5827
+            x = -90.70301
+            y = 205.3558
         }
     }
 
     system = {
-        id = "292"
+        id = "288"
         position = {
-            x = -170
-            y = -125
+            x = -154.8424
+            y = -184.8801
         }
     }
 
     system = {
-        id = "293"
+        id = "289"
         position = {
-            x = -229.8063
-            y = 82.40538
+            x = -285.3579
+            y = -61.65761
         }
     }
 
     system = {
-        id = "294"
+        id = "290"
         position = {
             x = -168
             y = -95
@@ -2626,71 +2698,71 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "291"
+        position = {
+            x = 66.24381
+            y = 262.4274
+        }
+    }
+
+    system = {
+        id = "292"
+        position = {
+            x = -157
+            y = -119
+        }
+    }
+
+    system = {
+        id = "293"
+        position = {
+            x = -124.3815
+            y = 209.418
+        }
+    }
+
+    system = {
+        id = "294"
+        position = {
+            x = -117.6125
+            y = 361.7219
+        }
+    }
+
+    system = {
         id = "295"
         position = {
-            x = -159
-            y = 212
+            x = -151
+            y = 30
         }
     }
 
     system = {
         id = "296"
         position = {
-            x = -211.2361
-            y = -46.03857
+            x = -142.6789
+            y = 114.6528
         }
     }
 
     system = {
         id = "297"
         position = {
-            x = -244.5077
-            y = 257.2749
+            x = -136
+            y = -139
         }
     }
 
     system = {
         id = "298"
         position = {
-            x = -154
-            y = 425
+            x = -170.0728
+            y = -277.9547
         }
     }
 
     system = {
         id = "299"
-        position = {
-            x = -275.4581
-            y = -56.09744
-        }
-    }
-
-    system = {
-        id = "300"
-        position = {
-            x = -138
-            y = 122
-        }
-    }
-
-    system = {
-        id = "301"
-        position = {
-            x = -124.5752
-            y = -134.2471
-        }
-    }
-
-    system = {
-        id = "302"
-        position = {
-            x = -167.1319
-            y = -284.3563
-        }
-    }
-
-    system = {
-        id = "303"
         position = {
             x = -133
             y = 276
@@ -2698,71 +2770,71 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "300"
+        position = {
+            x = -109.9973
+            y = -144.2657
+        }
+    }
+
+    system = {
+        id = "301"
+        position = {
+            x = -104.9205
+            y = 117.1895
+        }
+    }
+
+    system = {
+        id = "302"
+        position = {
+            x = -127.7661
+            y = -272.0318
+        }
+    }
+
+    system = {
+        id = "303"
+        position = {
+            x = -116
+            y = -174
+        }
+    }
+
+    system = {
         id = "304"
         position = {
-            x = -149.3354
-            y = -148.1747
+            x = -75.30587
+            y = -271.1856
         }
     }
 
     system = {
         id = "305"
         position = {
-            x = -164.8106
-            y = 104.0706
+            x = -106
+            y = 40
         }
     }
 
     system = {
         id = "306"
         position = {
-            x = -136.1816
-            y = -274.2975
+            x = -96.81783
+            y = 163.5713
         }
     }
 
     system = {
         id = "307"
         position = {
-            x = -140.0504
-            y = -171.3875
+            x = -131.4684
+            y = 81.02133
         }
     }
 
     system = {
         id = "308"
-        position = {
-            x = -84.33973
-            y = -259.596
-        }
-    }
-
-    system = {
-        id = "309"
-        position = {
-            x = -99.04111
-            y = 40.6224
-        }
-    }
-
-    system = {
-        id = "310"
-        position = {
-            x = -105
-            y = 135
-        }
-    }
-
-    system = {
-        id = "311"
-        position = {
-            x = -103
-            y = 105
-        }
-    }
-
-    system = {
-        id = "312"
         position = {
             x = -99
             y = -59
@@ -2770,31 +2842,31 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "313"
+        id = "309"
         position = {
-            x = -99.04107
-            y = 371.7911
+            x = -69.38287
+            y = 388.7982
         }
     }
 
     system = {
-        id = "314"
+        id = "310"
         position = {
-            x = -61.90073
-            y = -286.6776
+            x = -30.46082
+            y = -273.724
         }
     }
 
     system = {
-        id = "315"
+        id = "311"
         position = {
-            x = -120.7064
-            y = -22.05206
+            x = -65.15228
+            y = -290.6467
         }
     }
 
     system = {
-        id = "316"
+        id = "312"
         position = {
             x = -93
             y = 246
@@ -2802,151 +2874,151 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "313"
+        position = {
+            x = -105.9901
+            y = 69.81083
+        }
+    }
+
+    system = {
+        id = "314"
+        position = {
+            x = -109.9973
+            y = 320.2614
+        }
+    }
+
+    system = {
+        id = "315"
+        position = {
+            x = -196.3029
+            y = -160.3422
+        }
+    }
+
+    system = {
+        id = "316"
+        position = {
+            x = -84.61334
+            y = -240.7248
+        }
+    }
+
+    system = {
         id = "317"
         position = {
-            x = -119.1588
-            y = 53.00254
+            x = -82.54994
+            y = 97.32748
         }
     }
 
     system = {
         id = "318"
         position = {
-            x = -120.7063
-            y = 307.5692
+            x = -158.2269
+            y = -157.8038
         }
     }
 
     system = {
         id = "319"
         position = {
-            x = -137.729
-            y = 31.3373
+            x = -107.4589
+            y = 289.8006
         }
     }
 
     system = {
         id = "320"
         position = {
-            x = -76.60213
-            y = -168.2925
+            x = 92.74133
+            y = 149.3034
         }
     }
 
     system = {
         id = "321"
         position = {
-            x = -135.4078
-            y = 82.40538
+            x = -53.30641
+            y = -245.8017
         }
     }
 
     system = {
         id = "322"
         position = {
-            x = -103.6837
-            y = -151.2698
+            x = 32.99921
+            y = 245.8017
         }
     }
 
     system = {
         id = "323"
         position = {
-            x = -106.0049
-            y = 281.2614
+            x = -110.8434
+            y = -3.807534
         }
     }
 
     system = {
         id = "324"
         position = {
-            x = -64.99572
-            y = 101.7493
+            x = -98.15144
+            y = 11.42286
         }
     }
 
     system = {
         id = "325"
         position = {
-            x = -167.9057
-            y = -158.2336
+            x = -65
+            y = 144
         }
     }
 
     system = {
         id = "326"
         position = {
-            x = -121.4801
-            y = 235.6096
+            x = 89.68389
+            y = -184.973
         }
     }
 
     system = {
         id = "327"
         position = {
-            x = -94.39855
-            y = 79.31033
+            x = -60.9216
+            y = -224.6483
         }
     }
 
     system = {
         id = "328"
         position = {
-            x = -103.6837
-            y = 9.67205
+            x = -57
+            y = -117
         }
     }
 
     system = {
         id = "329"
         position = {
-            x = -62.67444
-            y = 167.5188
+            x = -86.30558
+            y = -29.19153
         }
     }
 
     system = {
         id = "330"
         position = {
-            x = -63
-            y = -105
+            x = -78.69038
+            y = -56.2678
         }
     }
 
     system = {
         id = "331"
-        position = {
-            x = -70.41207
-            y = -229.4194
-        }
-    }
-
-    system = {
-        id = "332"
-        position = {
-            x = -78.14965
-            y = -128.057
-        }
-    }
-
-    system = {
-        id = "333"
-        position = {
-            x = -87.43474
-            y = -17.40951
-        }
-    }
-
-    system = {
-        id = "334"
-        position = {
-            x = -77.37588
-            y = -54.54994
-        }
-    }
-
-    system = {
-        id = "335"
         position = {
             x = -50
             y = 237
@@ -2954,7 +3026,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "336"
+        id = "332"
         position = {
             x = -49
             y = -342
@@ -2962,15 +3034,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "337"
+        id = "333"
         position = {
-            x = -64.99572
-            y = 131.9259
+            x = -48
+            y = 113
         }
     }
 
     system = {
-        id = "338"
+        id = "334"
         position = {
             x = -44
             y = -423
@@ -2978,47 +3050,47 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "335"
+        position = {
+            x = -40
+            y = -203
+        }
+    }
+
+    system = {
+        id = "336"
+        position = {
+            x = -80.38267
+            y = -139.1888
+        }
+    }
+
+    system = {
+        id = "337"
+        position = {
+            x = -68.28205
+            y = 69.81083
+        }
+    }
+
+    system = {
+        id = "338"
+        position = {
+            x = -57.53706
+            y = -77.42113
+        }
+    }
+
+    system = {
         id = "339"
         position = {
-            x = -47.97306
-            y = -200.0166
+            x = -37
+            y = -107
         }
     }
 
     system = {
         id = "340"
-        position = {
-            x = -12.38016
-            y = -206.2067
-        }
-    }
-
-    system = {
-        id = "341"
-        position = {
-            x = 1.547528
-            y = 122.6408
-        }
-    }
-
-    system = {
-        id = "342"
-        position = {
-            x = -49.52057
-            y = -73.12016
-        }
-    }
-
-    system = {
-        id = "343"
-        position = {
-            x = -39.46171
-            y = -123.4145
-        }
-    }
-
-    system = {
-        id = "344"
         position = {
             x = -31
             y = 95
@@ -3026,31 +3098,31 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "345"
+        id = "341"
         position = {
-            x = -30
-            y = -447
+            x = 72.35859
+            y = -259.3699
         }
     }
 
     system = {
-        id = "346"
+        id = "342"
         position = {
-            x = -99.81486
-            y = 185.3153
+            x = 0.8461532
+            y = 229.7252
         }
     }
 
     system = {
-        id = "347"
+        id = "343"
         position = {
-            x = 18.5702
-            y = -169.84
+            x = -28
+            y = -133
         }
     }
 
     system = {
-        id = "348"
+        id = "344"
         position = {
             x = -24
             y = -305
@@ -3058,31 +3130,31 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "349"
+        id = "345"
         position = {
-            x = -23
-            y = 137
+            x = -34.65059
+            y = 152.3608
         }
     }
 
     system = {
-        id = "350"
+        id = "346"
         position = {
-            x = 41.78296
-            y = -195.3741
+            x = -21
+            y = -211
         }
     }
 
     system = {
-        id = "351"
+        id = "347"
         position = {
-            x = -20
-            y = 356
+            x = -27.07622
+            y = 358.3374
         }
     }
 
     system = {
-        id = "352"
+        id = "348"
         position = {
             x = -19
             y = -430
@@ -3090,143 +3162,143 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "349"
+        position = {
+            x = -25.38396
+            y = 407.4131
+        }
+    }
+
+    system = {
+        id = "350"
+        position = {
+            x = 2.29681E-05
+            y = 262.7244
+        }
+    }
+
+    system = {
+        id = "351"
+        position = {
+            x = -10.99974
+            y = -84.19019
+        }
+    }
+
+    system = {
+        id = "352"
+        position = {
+            x = -9.307475
+            y = -114.651
+        }
+    }
+
+    system = {
         id = "353"
         position = {
-            x = -43.33044
-            y = 409.7053
+            x = 2
+            y = 347
         }
     }
 
     system = {
         id = "354"
         position = {
-            x = -16
-            y = 241
+            x = 14.38425
+            y = -191.6491
         }
     }
 
     system = {
         id = "355"
         position = {
-            x = -23.98653
-            y = -88.59534
+            x = -3.384499
+            y = 378.6446
         }
     }
 
     system = {
         id = "356"
         position = {
-            x = -8.511357
-            y = -125.7358
+            x = -53.30643
+            y = -319.4153
         }
     }
 
     system = {
         id = "357"
         position = {
-            x = 18.57024
-            y = 360.1847
+            x = 19.36356
+            y = -113.6336
         }
     }
 
     system = {
         id = "358"
         position = {
-            x = -37.9142
-            y = -241.0258
+            x = 22.84563
+            y = 419.2589
         }
     }
 
     system = {
         id = "359"
         position = {
-            x = -0.7737234
-            y = 402.7415
+            x = 32.15303
+            y = -290.6467
         }
     }
 
     system = {
         id = "360"
         position = {
-            x = 28.62905
-            y = -363.2798
+            x = -5.095662
+            y = 159.4947
         }
     }
 
     system = {
         id = "361"
         position = {
-            x = 72.73331
-            y = -121.867
+            x = 61.14811
+            y = -195.1644
         }
     }
 
     system = {
         id = "362"
         position = {
-            x = 45.65179
-            y = 400.4202
+            x = 16.30615
+            y = -145.2267
         }
     }
 
     system = {
         id = "363"
         position = {
-            x = -15.47521
-            y = -371.0174
+            x = 27
+            y = -85
         }
     }
 
     system = {
         id = "364"
         position = {
-            x = 23
-            y = 144
+            x = 51.61415
+            y = 382.0291
         }
     }
 
     system = {
         id = "365"
         position = {
-            x = 68.86451
-            y = -217.8131
+            x = 41.46052
+            y = -123.9585
         }
     }
 
     system = {
         id = "366"
-        position = {
-            x = 34.81913
-            y = -137.3421
-        }
-    }
-
-    system = {
-        id = "367"
-        position = {
-            x = 19.34396
-            y = -109.4868
-        }
-    }
-
-    system = {
-        id = "368"
-        position = {
-            x = 58.03193
-            y = 353.9947
-        }
-    }
-
-    system = {
-        id = "369"
-        position = {
-            x = 37.91417
-            y = -83.17902
-        }
-    }
-
-    system = {
-        id = "370"
         position = {
             x = 34
             y = 123
@@ -3234,15 +3306,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "371"
+        id = "367"
         position = {
-            x = 2.321291
-            y = 164.4238
+            x = 120.997
+            y = 25.8071
         }
     }
 
     system = {
-        id = "372"
+        id = "368"
         position = {
             x = 40
             y = 212
@@ -3250,15 +3322,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "373"
+        id = "369"
         position = {
-            x = 18.57023
-            y = 195.3741
+            x = 37.70802
+            y = 165.6095
         }
     }
 
     system = {
-        id = "374"
+        id = "370"
         position = {
             x = 47
             y = -238
@@ -3266,15 +3338,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "375"
+        id = "371"
         position = {
-            x = 62.67447
-            y = 100.2018
+            x = -3.057395
+            y = 123.825
         }
     }
 
     system = {
-        id = "376"
+        id = "372"
         position = {
             x = 48
             y = -158
@@ -3282,7 +3354,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "377"
+        id = "373"
         position = {
             x = 55
             y = -301
@@ -3290,15 +3362,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "378"
+        id = "374"
         position = {
-            x = 55.71065
-            y = 251.0847
+            x = 16.92268
+            y = 194.1876
         }
     }
 
     system = {
-        id = "379"
+        id = "375"
         position = {
             x = 77
             y = -341
@@ -3306,63 +3378,63 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "376"
+        position = {
+            x = 58.38318
+            y = -88.42087
+        }
+    }
+
+    system = {
+        id = "377"
+        position = {
+            x = 60.07546
+            y = 90.95936
+        }
+    }
+
+    system = {
+        id = "378"
+        position = {
+            x = 97.83701
+            y = 243.0638
+        }
+    }
+
+    system = {
+        id = "379"
+        position = {
+            x = 101.9135
+            y = 69.81081
+        }
+    }
+
+    system = {
         id = "380"
         position = {
-            x = 91.30353
-            y = -172.1613
+            x = 61.76774
+            y = 331.2612
         }
     }
 
     system = {
         id = "381"
         position = {
-            x = 91.30354
-            y = 132.6997
+            x = 76.99812
+            y = -58.80621
         }
     }
 
     system = {
         id = "382"
         position = {
-            x = 120.7064
-            y = 210.8493
+            x = 131.4684
+            y = 56.56206
         }
     }
 
     system = {
         id = "383"
-        position = {
-            x = 85
-            y = 77
-        }
-    }
-
-    system = {
-        id = "384"
-        position = {
-            x = 102.9099
-            y = 250.311
-        }
-    }
-
-    system = {
-        id = "385"
-        position = {
-            x = 64.99572
-            y = -96.33293
-        }
-    }
-
-    system = {
-        id = "386"
-        position = {
-            x = 95
-            y = 41
-        }
-    }
-
-    system = {
-        id = "387"
         position = {
             x = 97
             y = 359
@@ -3370,7 +3442,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "388"
+        id = "384"
         position = {
             x = 101
             y = -377
@@ -3378,103 +3450,103 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "385"
+        position = {
+            x = 92.74129
+            y = -231.8533
+        }
+    }
+
+    system = {
+        id = "386"
+        position = {
+            x = 180.3869
+            y = 60.63859
+        }
+    }
+
+    system = {
+        id = "387"
+        position = {
+            x = 106
+            y = -26
+        }
+    }
+
+    system = {
+        id = "388"
+        position = {
+            x = 82.07493
+            y = 412.4899
+        }
+    }
+
+    system = {
         id = "389"
         position = {
-            x = 85.11344
-            y = -254.1797
+            x = 65.9984
+            y = 145.958
         }
     }
 
     system = {
         id = "390"
         position = {
-            x = 101
-            y = -11
+            x = 57.07155
+            y = -357.207
         }
     }
 
     system = {
         id = "391"
         position = {
-            x = 98.26736
-            y = -46.0386
+            x = 98.85612
+            y = 105.4806
         }
     }
 
     system = {
         id = "392"
         position = {
-            x = 77.37589
-            y = 393.4563
+            x = 140.6407
+            y = -226.7576
         }
     }
 
     system = {
         id = "393"
         position = {
-            x = 73.5071
-            y = 155.1387
+            x = 130.4493
+            y = 164.5904
         }
     }
 
     system = {
         id = "394"
         position = {
-            x = 137.729
-            y = -421.3117
+            x = 120.9971
+            y = 417.5667
         }
     }
 
     system = {
         id = "395"
         position = {
-            x = 100.5886
-            y = 104.8444
+            x = 129.4302
+            y = 218.6046
         }
     }
 
     system = {
         id = "396"
         position = {
-            x = 106.7787
-            y = -226.3244
+            x = 127.7661
+            y = 270.3395
         }
     }
 
     system = {
         id = "397"
-        position = {
-            x = 104.4574
-            y = 152.0436
-        }
-    }
-
-    system = {
-        id = "398"
-        position = {
-            x = 123.8014
-            y = 408.9315
-        }
-    }
-
-    system = {
-        id = "399"
-        position = {
-            x = 136.9553
-            y = 173.7089
-        }
-    }
-
-    system = {
-        id = "400"
-        position = {
-            x = 132
-            y = 290
-        }
-    }
-
-    system = {
-        id = "401"
         position = {
             x = 137
             y = -67
@@ -3482,55 +3554,55 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "398"
+        position = {
+            x = 119.2388
+            y = -198.2218
+        }
+    }
+
+    system = {
+        id = "399"
+        position = {
+            x = 141
+            y = -311
+        }
+    }
+
+    system = {
+        id = "400"
+        position = {
+            x = 126.0738
+            y = 134.1122
+        }
+    }
+
+    system = {
+        id = "401"
+        position = {
+            x = 161.0234
+            y = 20.89231
+        }
+    }
+
+    system = {
         id = "402"
         position = {
-            x = 123.0276
-            y = -200.0166
+            x = 142.679
+            y = -6.624338
         }
     }
 
     system = {
         id = "403"
         position = {
-            x = 150.8829
-            y = -272.7499
+            x = 153.1501
+            y = 188.2647
         }
     }
 
     system = {
         id = "404"
-        position = {
-            x = 135.4078
-            y = 141.211
-        }
-    }
-
-    system = {
-        id = "405"
-        position = {
-            x = 151
-            y = 42
-        }
-    }
-
-    system = {
-        id = "406"
-        position = {
-            x = 153
-            y = 18
-        }
-    }
-
-    system = {
-        id = "407"
-        position = {
-            x = 220.5213
-            y = 181.4465
-        }
-    }
-
-    system = {
-        id = "408"
         position = {
             x = 159
             y = 143
@@ -3538,15 +3610,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "409"
+        id = "405"
         position = {
-            x = 195.7609
-            y = 67.70393
+            x = 235.225
+            y = 202.6489
         }
     }
 
     system = {
-        id = "410"
+        id = "406"
         position = {
             x = 170
             y = -92
@@ -3554,7 +3626,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "411"
+        id = "407"
         position = {
             x = 177
             y = 377
@@ -3562,15 +3634,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "412"
+        id = "408"
         position = {
-            x = 133.0865
-            y = -250.311
+            x = 131.4684
+            y = -252.236
         }
     }
 
     system = {
-        id = "413"
+        id = "409"
         position = {
             x = 181
             y = 334
@@ -3578,7 +3650,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "414"
+        id = "410"
         position = {
             x = 188
             y = 98
@@ -3586,15 +3658,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "415"
+        id = "411"
         position = {
-            x = 166.3581
-            y = -330.7819
+            x = 166.6882
+            y = -277.1086
         }
     }
 
     system = {
-        id = "416"
+        id = "412"
         position = {
             x = 196
             y = 32
@@ -3602,47 +3674,47 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "413"
+        position = {
+            x = 154.8424
+            y = -40.19129
+        }
+    }
+
+    system = {
+        id = "414"
+        position = {
+            x = 212.9993
+            y = 251.2169
+        }
+    }
+
+    system = {
+        id = "415"
+        position = {
+            x = 180.2264
+            y = -13.11503
+        }
+    }
+
+    system = {
+        id = "416"
+        position = {
+            x = 206.4565
+            y = -3.807562
+        }
+    }
+
+    system = {
         id = "417"
         position = {
-            x = 211.2361
-            y = -51.45493
+            x = 197.149
+            y = -41.03742
         }
     }
 
     system = {
         id = "418"
-        position = {
-            x = 232.9014
-            y = 269.655
-        }
-    }
-
-    system = {
-        id = "419"
-        position = {
-            x = 206
-            y = -14
-        }
-    }
-
-    system = {
-        id = "420"
-        position = {
-            x = 174.8695
-            y = -6.576911
-        }
-    }
-
-    system = {
-        id = "421"
-        position = {
-            x = 140.8241
-            y = -27.4684
-        }
-    }
-
-    system = {
-        id = "422"
         position = {
             x = 216
             y = -205
@@ -3650,23 +3722,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "423"
+        id = "419"
         position = {
-            x = 234.4489
-            y = -175.2563
+            x = 82.92104
+            y = -138.3427
         }
     }
 
     system = {
-        id = "424"
+        id = "420"
         position = {
-            x = 158.6205
-            y = 222.4557
+            x = 267.3781
+            y = 167.9575
         }
     }
 
     system = {
-        id = "425"
+        id = "421"
         position = {
             x = 222
             y = -300
@@ -3674,63 +3746,63 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "422"
+        position = {
+            x = 219.1141
+            y = 94.27006
+        }
+    }
+
+    system = {
+        id = "423"
+        position = {
+            x = 214.0184
+            y = -103.4422
+        }
+    }
+
+    system = {
+        id = "424"
+        position = {
+            x = 296.5684
+            y = -17.83484
+        }
+    }
+
+    system = {
+        id = "425"
+        position = {
+            x = 244.5925
+            y = -113.6336
+        }
+    }
+
+    system = {
         id = "426"
         position = {
-            x = 225
-            y = 106
+            x = 266.5319
+            y = 140.035
         }
     }
 
     system = {
         id = "427"
         position = {
-            x = 229
-            y = -95
+            x = 305.454
+            y = 37.65295
         }
     }
 
     system = {
         id = "428"
         position = {
-            x = 229
-            y = 11
+            x = 233.5327
+            y = 19.88416
         }
     }
 
     system = {
         id = "429"
-        position = {
-            x = 296.3496
-            y = -39.0748
-        }
-    }
-
-    system = {
-        id = "430"
-        position = {
-            x = 205.8198
-            y = 245.6684
-        }
-    }
-
-    system = {
-        id = "431"
-        position = {
-            x = 204.2723
-            y = -73.89393
-        }
-    }
-
-    system = {
-        id = "432"
-        position = {
-            x = 284.7432
-            y = 34.4323
-        }
-    }
-
-    system = {
-        id = "433"
         position = {
             x = 247
             y = -73
@@ -3738,47 +3810,47 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "430"
+        position = {
+            x = 318.9922
+            y = 6.346025
+        }
+    }
+
+    system = {
+        id = "431"
+        position = {
+            x = 165.0999
+            y = -121.7867
+        }
+    }
+
+    system = {
+        id = "432"
+        position = {
+            x = 203.072
+            y = -78.26729
+        }
+    }
+
+    system = {
+        id = "433"
+        position = {
+            x = 256
+            y = 8
+        }
+    }
+
+    system = {
         id = "434"
         position = {
-            x = 258.4354
-            y = 11.21953
+            x = 238.4777
+            y = 276.6953
         }
     }
 
     system = {
         id = "435"
-        position = {
-            x = 169.4532
-            y = -50.68117
-        }
-    }
-
-    system = {
-        id = "436"
-        position = {
-            x = 255
-            y = -130
-        }
-    }
-
-    system = {
-        id = "437"
-        position = {
-            x = 288.612
-            y = -0.3868498
-        }
-    }
-
-    system = {
-        id = "438"
-        position = {
-            x = 261.5305
-            y = 250.311
-        }
-    }
-
-    system = {
-        id = "439"
         position = {
             x = 260
             y = -290
@@ -3786,7 +3858,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "440"
+        id = "436"
         position = {
             x = 261
             y = -149
@@ -3794,7 +3866,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "441"
+        id = "437"
         position = {
             x = 261
             y = 94
@@ -3802,15 +3874,15 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "442"
+        id = "438"
         position = {
-            x = 273
-            y = -92
+            x = 268.0326
+            y = -87.13605
         }
     }
 
     system = {
-        id = "443"
+        id = "439"
         position = {
             x = 274
             y = -265
@@ -3818,7 +3890,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "444"
+        id = "440"
         position = {
             x = 277
             y = -179
@@ -3826,7 +3898,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "445"
+        id = "441"
         position = {
             x = 279
             y = -116
@@ -3834,7 +3906,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "446"
+        id = "442"
         position = {
             x = 304
             y = -67
@@ -3842,63 +3914,63 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "443"
+        position = {
+            x = 364.6834
+            y = -171.3419
+        }
+    }
+
+    system = {
+        id = "444"
+        position = {
+            x = 316.4538
+            y = 86.72867
+        }
+    }
+
+    system = {
+        id = "445"
+        position = {
+            x = 324.085
+            y = 251.2169
+        }
+    }
+
+    system = {
+        id = "446"
+        position = {
+            x = 391.348
+            y = 188.0305
+        }
+    }
+
+    system = {
         id = "447"
         position = {
-            x = 302.5397
-            y = -87.8216
+            x = 365.5295
+            y = -85.88249
         }
     }
 
     system = {
         id = "448"
         position = {
-            x = 372.9517
-            y = 107.9394
+            x = 351.1452
+            y = 19.03802
         }
     }
 
     system = {
         id = "449"
         position = {
-            x = 355.929
-            y = 228.6458
+            x = 409.5284
+            y = -0.4230475
         }
     }
 
     system = {
         id = "450"
-        position = {
-            x = 377.5942
-            y = 174.4826
-        }
-    }
-
-    system = {
-        id = "451"
-        position = {
-            x = 389.9744
-            y = -124.1883
-        }
-    }
-
-    system = {
-        id = "452"
-        position = {
-            x = 386.1056
-            y = -69.2514
-        }
-    }
-
-    system = {
-        id = "453"
-        position = {
-            x = 398
-            y = 20
-        }
-    }
-
-    system = {
-        id = "454"
         position = {
             x = 404
             y = -93
@@ -3906,7 +3978,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "455"
+        id = "451"
         position = {
             x = 418
             y = 80
@@ -3914,384 +3986,388 @@ static_galaxy_scenario = {
     }
 
     system = {
+        id = "452"
+        position = {
+            x = 280.2622
+            y = 274.657
+        }
+    }
+
+    system = {
+        id = "453"
+        position = {
+            x = 253.7647
+            y = 242.0447
+        }
+    }
+
+    system = {
+        id = "454"
+        position = {
+            x = 293.511
+            y = 238.9873
+        }
+    }
+
+    system = {
+        id = "455"
+        position = {
+            x = 276.1857
+            y = 209.4324
+        }
+    }
+
+    system = {
         id = "456"
         position = {
-            x = 353.6077
-            y = 6.576974
+            x = 301.664
+            y = 174.7817
         }
     }
 
     system = {
         id = "457"
         position = {
-            x = 314.9198
-            y = 33.65853
+            x = 293.511
+            y = 115.6719
         }
     }
 
     system = {
         id = "458"
         position = {
-            x = 351.2865
-            y = 76.98902
+            x = 377.08
+            y = 100.3848
         }
     }
 
     system = {
         id = "459"
         position = {
-            x = 300.9922
-            y = 69.25144
+            x = 381.1566
+            y = 148.2842
         }
     }
 
     system = {
         id = "460"
         position = {
-            x = 297.8971
-            y = 119.5458
+            x = 365.8696
+            y = 171.7243
         }
     }
 
     system = {
         id = "461"
         position = {
-            x = 253.7928
-            y = 139.6635
+            x = 338.3529
+            y = 55.5429
         }
     }
 
     system = {
         id = "462"
         position = {
-            x = 294.8021
-            y = 169.8401
+            x = 346.506
+            y = 97.32745
         }
     }
 
     system = {
         id = "463"
         position = {
-            x = 250.6978
-            y = 179.1252
+            x = 291.4727
+            y = 67.77253
         }
     }
 
     system = {
         id = "464"
         position = {
-            x = 277.0056
-            y = 218.5869
+            x = 376.0609
+            y = -8.66263
         }
     }
 
     system = {
         id = "465"
         position = {
-            x = 235.9964
-            y = 221.6819
+            x = 396.4437
+            y = -46.37064
         }
     }
 
     system = {
         id = "466"
         position = {
-            x = 316.4673
-            y = -1.93437
+            x = 394.4054
+            y = -140.1311
         }
     }
 
     system = {
         id = "467"
         position = {
-            x = 346.6439
-            y = 43.71739
+            x = 324.085
+            y = -169.686
         }
     }
 
     system = {
         id = "468"
         position = {
-            x = 328.8474
-            y = 87.04788
+            x = 352.6208
+            y = -209.4323
         }
     }
 
     system = {
         id = "469"
         position = {
-            x = -48.74676
-            y = 379.5287
+            x = 314.9128
+            y = -262.4273
         }
     }
 
     system = {
         id = "470"
         position = {
-            x = -305.6347
-            y = -13.5407
+            x = 305.7406
+            y = -326.6329
         }
     }
 
     system = {
         id = "471"
         position = {
-            x = -322.6573
-            y = 9.672068
+            x = 269.0517
+            y = -322.5564
         }
     }
 
     system = {
         id = "472"
         position = {
-            x = -351.2865
-            y = -17.40949
+            x = 241.5351
+            y = -353.1304
         }
     }
 
     system = {
         id = "473"
         position = {
-            x = -376.8205
-            y = -42.94353
+            x = 294.5301
+            y = -290.9631
         }
     }
 
     system = {
         id = "474"
         position = {
-            x = -389.2007
-            y = -76.98891
+            x = 231.3437
+            y = -330.7094
         }
     }
 
     system = {
         id = "475"
         position = {
-            x = -290.1595
-            y = -142.7584
+            x = 175.2913
+            y = -318.4798
         }
     }
 
     system = {
         id = "476"
         position = {
-            x = -331.1688
-            y = -154.3648
+            x = 251.7264
+            y = -185.9922
         }
     }
 
     system = {
         id = "477"
         position = {
-            x = -311.8248
-            y = -189.184
+            x = 247.6498
+            y = -227.7767
         }
     }
 
     system = {
         id = "478"
         position = {
-            x = -335.8114
-            y = -199.2428
+            x = 202.8079
+            y = -332.7477
         }
     }
 
     system = {
         id = "479"
         position = {
-            x = -301.7659
-            y = -239.4783
+            x = 131.4684
+            y = -351.0921
         }
     }
 
     system = {
         id = "480"
         position = {
-            x = -269.2681
-            y = -269.6549
+            x = 156.9468
+            y = -355.1687
         }
     }
 
     system = {
         id = "481"
         position = {
-            x = -61.90074
-            y = -380.3025
+            x = 171.2147
+            y = -396.9533
         }
     }
 
     system = {
         id = "482"
         position = {
-            x = -56.48442
-            y = -316.0805
+            x = 128.411
+            y = -395.9341
         }
     }
 
     system = {
         id = "483"
         position = {
-            x = -113.7426
-            y = -355.5421
+            x = 141.6598
+            y = -420.3934
         }
     }
 
     system = {
         id = "484"
         position = {
-            x = -153.978
-            y = -341.6145
+            x = 105.99
+            y = -429.5656
         }
     }
 
     system = {
         id = "485"
         position = {
-            x = -183.3808
-            y = -309.1166
+            x = 22.42095
+            y = -374.5323
         }
     }
 
     system = {
         id = "486"
         position = {
-            x = -78.14967
-            y = -352.4471
+            x = -17.32534
+            y = -389.8193
         }
     }
 
     system = {
         id = "487"
         position = {
-            x = 404.6758
-            y = -143.5322
+            x = 13.24872
+            y = -412.2402
         }
     }
 
     system = {
         id = "488"
         position = {
-            x = 379.1418
-            y = -188.4103
+            x = -67.26297
+            y = -385.7428
         }
     }
 
     system = {
         id = "489"
         position = {
-            x = 362.8929
-            y = -160.5549
+            x = -90.70309
+            y = -353.1304
         }
     }
 
     system = {
         id = "490"
         position = {
-            x = 288.612
-            y = -153.5911
+            x = -176.3104
+            y = -315.4223
         }
     }
 
     system = {
         id = "491"
         position = {
-            x = 339.6801
-            y = -200.7904
+            x = -139.6216
+            y = -355.1686
         }
     }
 
     system = {
         id = "492"
         position = {
-            x = 345.8701
-            y = -237.9308
+            x = -285.3579
+            y = -245.102
         }
     }
 
     system = {
         id = "493"
         position = {
-            x = 283.9695
-            y = -319.9493
+            x = -322.0468
+            y = -263.4464
         }
     }
 
     system = {
         id = "494"
         position = {
-            x = 224.39
-            y = -340.8408
+            x = -325.1042
+            y = -229.815
         }
     }
 
     system = {
         id = "495"
         position = {
-            x = 123.8014
-            y = 23.59969
+            x = -323.0659
+            y = -164.5903
         }
     }
 
     system = {
         id = "496"
         position = {
-            x = -200.4035
-            y = -179.1251
+            x = -281.2814
+            y = -138.0928
         }
     }
 
     system = {
         id = "497"
         position = {
-            x = 162.4893
-            y = -378.7549
+            x = -371.9844
+            y = -134.0162
         }
     }
 
     system = {
         id = "498"
         position = {
-            x = 125.3489
-            y = -353.9947
+            x = -310.8363
+            y = -197.2026
         }
     }
 
     system = {
         id = "499"
         position = {
-            x = 283.9695
-            y = 278.1663
+            x = -363.8313
+            y = -237.968
         }
     }
-	
-    system = {
-        id = "500"
-        position = {
-            x = 14.70144
-            y = 251.8585
-        }
-    }	
-
-    # system = {
-        # id = "501"
-        # position = {
-            # x = -317.2411
-            # y = -466.9634
-        # }
-        # initializer = retalyx_random_spawn
-        # spawn_weight = { base = 1 }
-    # }
-
-    # system = {
-        # id = "502"
-        # position = {
-            # x = -436.4001
-            # y = -453.0358
-        # }
-        # initializer = retalyx_random_spawn
-        # spawn_weight = { base = 1 }
-    # }
 
     nebula = {
         name = "Ismar_Frontier"
@@ -4299,7 +4375,7 @@ static_galaxy_scenario = {
             x = 445.066
             y = -46.96038
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4308,7 +4384,7 @@ static_galaxy_scenario = {
             x = 343.53
             y = -46.96037
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4317,7 +4393,7 @@ static_galaxy_scenario = {
             x = 329.9919
             y = -127.343
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4326,7 +4402,7 @@ static_galaxy_scenario = {
             x = 392.6058
             y = 49.49881
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4335,7 +4411,7 @@ static_galaxy_scenario = {
             x = 414.6052
             y = 130.7276
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4344,7 +4420,7 @@ static_galaxy_scenario = {
             x = 335.9149
             y = 140.035
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4353,7 +4429,7 @@ static_galaxy_scenario = {
             x = 331.6842
             y = 207.7257
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4362,7 +4438,7 @@ static_galaxy_scenario = {
             x = 220.8408
             y = 320.2614
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4371,7 +4447,7 @@ static_galaxy_scenario = {
             x = 166.6882
             y = 264.4167
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4380,7 +4456,7 @@ static_galaxy_scenario = {
             x = 192.0723
             y = 203.4951
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4389,7 +4465,7 @@ static_galaxy_scenario = {
             x = 213.2256
             y = 134.9583
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4398,7 +4474,7 @@ static_galaxy_scenario = {
             x = 249.6093
             y = 53.72948
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4407,7 +4483,7 @@ static_galaxy_scenario = {
             x = 255.5322
             y = -30.88383
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4416,7 +4492,7 @@ static_galaxy_scenario = {
             x = 148.0733
             y = 94.34389
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4425,7 +4501,7 @@ static_galaxy_scenario = {
             x = 83.76719
             y = 194.1876
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4434,7 +4510,7 @@ static_galaxy_scenario = {
             x = 106.0564
             y = 310.2205
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4443,7 +4519,7 @@ static_galaxy_scenario = {
             x = 137.9197
             y = 362.568
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4452,7 +4528,7 @@ static_galaxy_scenario = {
             x = 34.69148
             y = 299.1081
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4461,7 +4537,7 @@ static_galaxy_scenario = {
             x = -5.076771
             y = 312.6462
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4470,7 +4546,7 @@ static_galaxy_scenario = {
             x = -37.22984
             y = 204.3412
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4479,7 +4555,7 @@ static_galaxy_scenario = {
             x = -56.69089
             y = 277.9548
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4488,7 +4564,7 @@ static_galaxy_scenario = {
             x = -79.53647
             y = 338.0302
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4497,7 +4573,7 @@ static_galaxy_scenario = {
             x = -113.3818
             y = 417.5667
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4506,7 +4582,7 @@ static_galaxy_scenario = {
             x = -175.9956
             y = 366.7987
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4515,7 +4591,7 @@ static_galaxy_scenario = {
             x = -169.1896
             y = 313.7859
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4524,7 +4600,7 @@ static_galaxy_scenario = {
             x = -159.073
             y = 255.1092
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4533,7 +4609,7 @@ static_galaxy_scenario = {
             x = -258.0706
             y = 300.8004
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4542,7 +4618,7 @@ static_galaxy_scenario = {
             x = -208.1487
             y = 193.3415
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4551,7 +4627,7 @@ static_galaxy_scenario = {
             x = -150.6117
             y = 160.3423
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4560,7 +4636,7 @@ static_galaxy_scenario = {
             x = -296.1466
             y = 231.4175
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4569,7 +4645,7 @@ static_galaxy_scenario = {
             x = -205.6103
             y = 123.9586
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4578,7 +4654,7 @@ static_galaxy_scenario = {
             x = -291.0698
             y = 146.8042
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4587,7 +4663,7 @@ static_galaxy_scenario = {
             x = -380.7599
             y = 192.4954
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4596,7 +4672,7 @@ static_galaxy_scenario = {
             x = -374.8369
             y = 108.7282
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4605,7 +4681,7 @@ static_galaxy_scenario = {
             x = -171.765
             y = 56.26792
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4614,7 +4690,7 @@ static_galaxy_scenario = {
             x = -264.8397
             y = -3.807521
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4623,7 +4699,7 @@ static_galaxy_scenario = {
             x = -384.1444
             y = 29.19168
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4632,7 +4708,7 @@ static_galaxy_scenario = {
             x = -160.7653
             y = 1.269269
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4641,7 +4717,7 @@ static_galaxy_scenario = {
             x = 1.109618E-07
             y = 1.269254
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4650,7 +4726,7 @@ static_galaxy_scenario = {
             x = -110.8435
             y = -93.49765
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4659,7 +4735,7 @@ static_galaxy_scenario = {
             x = -205.6104
             y = -112.1126
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4668,7 +4744,7 @@ static_galaxy_scenario = {
             x = -329.9919
             y = -91.80537
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4677,7 +4753,7 @@ static_galaxy_scenario = {
             x = -421.3743
             y = -123.1123
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4686,7 +4762,7 @@ static_galaxy_scenario = {
             x = -263.9936
             y = -184.0339
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4695,7 +4771,7 @@ static_galaxy_scenario = {
             x = -243.6864
             y = -236.4942
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4704,7 +4780,7 @@ static_galaxy_scenario = {
             x = -380.7599
             y = -285.5699
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4713,7 +4789,7 @@ static_galaxy_scenario = {
             x = -412.0669
             y = -239.0325
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4722,7 +4798,7 @@ static_galaxy_scenario = {
             x = -117.6125
             y = -309.2616
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4731,7 +4807,7 @@ static_galaxy_scenario = {
             x = -134.5352
             y = -234.8019
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4740,7 +4816,7 @@ static_galaxy_scenario = {
             x = -88.84399
             y = -198.4182
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4749,7 +4825,7 @@ static_galaxy_scenario = {
             x = -234.3789
             y = -310.1078
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4758,7 +4834,7 @@ static_galaxy_scenario = {
             x = -25.38401
             y = -165.419
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4767,7 +4843,7 @@ static_galaxy_scenario = {
             x = 13.53811
             y = -241.571
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4776,7 +4852,7 @@ static_galaxy_scenario = {
             x = 1.692237
             y = -332.9534
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4785,7 +4861,7 @@ static_galaxy_scenario = {
             x = -129.4584
             y = -414.1822
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4794,7 +4870,7 @@ static_galaxy_scenario = {
             x = 113.3818
             y = -93.49767
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4803,7 +4879,7 @@ static_galaxy_scenario = {
             x = 144.6888
             y = -160.3422
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4812,7 +4888,7 @@ static_galaxy_scenario = {
             x = 205.6104
             y = -151.0347
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4821,7 +4897,7 @@ static_galaxy_scenario = {
             x = 179.3802
             y = -199.2643
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4830,7 +4906,7 @@ static_galaxy_scenario = {
             x = 293.6082
             y = -224.6483
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4839,7 +4915,7 @@ static_galaxy_scenario = {
             x = 207.3026
             y = -255.9552
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4848,7 +4924,7 @@ static_galaxy_scenario = {
             x = 110.8434
             y = -308.4155
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4857,7 +4933,7 @@ static_galaxy_scenario = {
             x = 53.30636
             y = -420.1051
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4866,7 +4942,7 @@ static_galaxy_scenario = {
             x = 213.2256
             y = -387.106
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4875,7 +4951,7 @@ static_galaxy_scenario = {
             x = 349.453
             y = -299.1081
         }
-        radius = 20
+        radius = 10
     }
 
     nebula = {
@@ -4884,325 +4960,933 @@ static_galaxy_scenario = {
             x = -154.8424
             y = -48.65259
         }
-        radius = 20
+        radius = 10
     }
 
-    add_hyperlane = { from = "83" to = "85" }
-    add_hyperlane = { from = "84" to = "82" }
-    add_hyperlane = { from = "81" to = "82" }
-    add_hyperlane = { from = "81" to = "84" }
-    add_hyperlane = { from = "82" to = "83" }
-    add_hyperlane = { from = "84" to = "85" }
-    add_hyperlane = { from = "85" to = "82" }
-    add_hyperlane = { from = "78" to = "79" }
-    add_hyperlane = { from = "66" to = "65" }
-    add_hyperlane = { from = "70" to = "67" }
-    add_hyperlane = { from = "70" to = "68" }
-    add_hyperlane = { from = "70" to = "69" }
-    add_hyperlane = { from = "70" to = "72" }
-    add_hyperlane = { from = "70" to = "71" }
-    add_hyperlane = { from = "67" to = "71" }
-    add_hyperlane = { from = "71" to = "72" }
-    add_hyperlane = { from = "72" to = "69" }
-    add_hyperlane = { from = "69" to = "68" }
-    add_hyperlane = { from = "68" to = "67" }
-    add_hyperlane = { from = "62" to = "63" }
-    add_hyperlane = { from = "54" to = "53" }
-    add_hyperlane = { from = "54" to = "50" }
-    add_hyperlane = { from = "54" to = "51" }
-    add_hyperlane = { from = "50" to = "53" }
-    add_hyperlane = { from = "50" to = "52" }
-    add_hyperlane = { from = "52" to = "53" }
-    add_hyperlane = { from = "52" to = "51" }
-    add_hyperlane = { from = "51" to = "50" }
-    add_hyperlane = { from = "47" to = "45" }
-    add_hyperlane = { from = "47" to = "43" }
-    add_hyperlane = { from = "43" to = "45" }
-    add_hyperlane = { from = "41" to = "39" }
-    add_hyperlane = { from = "40" to = "42" }
-    add_hyperlane = { from = "41" to = "42" }
-    add_hyperlane = { from = "41" to = "40" }
-    add_hyperlane = { from = "40" to = "39" }
-    add_hyperlane = { from = "39" to = "42" }
-    add_hyperlane = { from = "61" to = "58" }
-    add_hyperlane = { from = "61" to = "60" }
-    add_hyperlane = { from = "61" to = "59" }
-    add_hyperlane = { from = "61" to = "56" }
-    add_hyperlane = { from = "58" to = "57" }
-    add_hyperlane = { from = "57" to = "56" }
-    add_hyperlane = { from = "57" to = "59" }
-    add_hyperlane = { from = "57" to = "60" }
-    add_hyperlane = { from = "60" to = "59" }
-    add_hyperlane = { from = "58" to = "56" }
-    add_hyperlane = { from = "58" to = "59" }
-    add_hyperlane = { from = "58" to = "60" }
-    add_hyperlane = { from = "90" to = "91" }
-    add_hyperlane = { from = "91" to = "94" }
-    add_hyperlane = { from = "94" to = "93" }
-    add_hyperlane = { from = "93" to = "92" }
-    add_hyperlane = { from = "90" to = "92" }
-    add_hyperlane = { from = "90" to = "93" }
-    add_hyperlane = { from = "93" to = "91" }
-    add_hyperlane = { from = "94" to = "90" }
-    add_hyperlane = { from = "95" to = "96" }
-    add_hyperlane = { from = "99" to = "98" }
-    add_hyperlane = { from = "99" to = "101" }
-    add_hyperlane = { from = "99" to = "97" }
-    add_hyperlane = { from = "99" to = "100" }
-    add_hyperlane = { from = "100" to = "101" }
-    add_hyperlane = { from = "101" to = "98" }
-    add_hyperlane = { from = "98" to = "97" }
-    add_hyperlane = { from = "88" to = "89" }
-    add_hyperlane = { from = "76" to = "73" }
-    add_hyperlane = { from = "76" to = "74" }
-    add_hyperlane = { from = "74" to = "77" }
-    add_hyperlane = { from = "77" to = "75" }
-    add_hyperlane = { from = "75" to = "74" }
-    add_hyperlane = { from = "74" to = "73" }
-    add_hyperlane = { from = "76" to = "77" }
-    add_hyperlane = { from = "86" to = "87" }
-    add_hyperlane = { from = "104" to = "103" }
-    add_hyperlane = { from = "103" to = "102" }
-    add_hyperlane = { from = "102" to = "105" }
-    add_hyperlane = { from = "105" to = "103" }
-    add_hyperlane = { from = "105" to = "104" }
-    add_hyperlane = { from = "104" to = "102" }
-    add_hyperlane = { from = "107" to = "106" }
-    add_hyperlane = { from = "106" to = "108" }
-    add_hyperlane = { from = "108" to = "107" }
-    add_hyperlane = { from = "115" to = "117" }
-    add_hyperlane = { from = "117" to = "116" }
-    add_hyperlane = { from = "116" to = "115" }
-    add_hyperlane = { from = "122" to = "118" }
-    add_hyperlane = { from = "122" to = "119" }
-    add_hyperlane = { from = "119" to = "120" }
-    add_hyperlane = { from = "120" to = "121" }
-    add_hyperlane = { from = "121" to = "119" }
-    add_hyperlane = { from = "119" to = "118" }
-    add_hyperlane = { from = "122" to = "120" }
-    add_hyperlane = { from = "125" to = "127" }
-    add_hyperlane = { from = "125" to = "126" }
-    add_hyperlane = { from = "125" to = "123" }
-    add_hyperlane = { from = "125" to = "124" }
-    add_hyperlane = { from = "124" to = "123" }
-    add_hyperlane = { from = "123" to = "127" }
-    add_hyperlane = { from = "127" to = "126" }
-    add_hyperlane = { from = "128" to = "130" }
-    add_hyperlane = { from = "130" to = "129" }
-    add_hyperlane = { from = "128" to = "129" }
-    add_hyperlane = { from = "132" to = "131" }
-    add_hyperlane = { from = "131" to = "135" }
-    add_hyperlane = { from = "135" to = "134" }
-    add_hyperlane = { from = "134" to = "132" }
-    add_hyperlane = { from = "135" to = "132" }
-    add_hyperlane = { from = "132" to = "133" }
-    add_hyperlane = { from = "133" to = "134" }
-    add_hyperlane = { from = "112" to = "113" }
-    add_hyperlane = { from = "112" to = "114" }
-    add_hyperlane = { from = "114" to = "113" }
-    add_hyperlane = { from = "110" to = "109" }
-    add_hyperlane = { from = "109" to = "111" }
-    add_hyperlane = { from = "111" to = "110" }
-    add_hyperlane = { from = "138" to = "136" }
-    add_hyperlane = { from = "137" to = "139" }
-    add_hyperlane = { from = "138" to = "139" }
-    add_hyperlane = { from = "139" to = "136" }
-    add_hyperlane = { from = "136" to = "137" }
-    add_hyperlane = { from = "137" to = "138" }
-    add_hyperlane = { from = "143" to = "140" }
-    add_hyperlane = { from = "141" to = "144" }
-    add_hyperlane = { from = "144" to = "143" }
-    add_hyperlane = { from = "143" to = "141" }
-    add_hyperlane = { from = "141" to = "140" }
-    add_hyperlane = { from = "140" to = "142" }
-    add_hyperlane = { from = "142" to = "143" }
-    add_hyperlane = { from = "166" to = "169" }
-    add_hyperlane = { from = "165" to = "168" }
-    add_hyperlane = { from = "168" to = "167" }
-    add_hyperlane = { from = "167" to = "165" }
-    add_hyperlane = { from = "169" to = "165" }
-    add_hyperlane = { from = "165" to = "166" }
-    add_hyperlane = { from = "167" to = "166" }
-    add_hyperlane = { from = "168" to = "169" }
-    add_hyperlane = { from = "169" to = "167" }
-    add_hyperlane = { from = "166" to = "168" }
-    add_hyperlane = { from = "154" to = "156" }
-    add_hyperlane = { from = "155" to = "153" }
-    add_hyperlane = { from = "153" to = "154" }
-    add_hyperlane = { from = "154" to = "155" }
-    add_hyperlane = { from = "155" to = "156" }
-    add_hyperlane = { from = "156" to = "153" }
-    add_hyperlane = { from = "159" to = "158" }
-    add_hyperlane = { from = "158" to = "160" }
-    add_hyperlane = { from = "160" to = "159" }
-    add_hyperlane = { from = "157" to = "158" }
-    add_hyperlane = { from = "158" to = "157" }
-    add_hyperlane = { from = "159" to = "157" }
-    add_hyperlane = { from = "163" to = "164" }
-    add_hyperlane = { from = "164" to = "161" }
-    add_hyperlane = { from = "161" to = "163" }
-    add_hyperlane = { from = "157" to = "160" }
-    add_hyperlane = { from = "170" to = "172" }
-    add_hyperlane = { from = "172" to = "173" }
-    add_hyperlane = { from = "173" to = "171" }
-    add_hyperlane = { from = "171" to = "172" }
-    add_hyperlane = { from = "171" to = "170" }
-    add_hyperlane = { from = "243" to = "242" }
-    add_hyperlane = { from = "242" to = "244" }
-    add_hyperlane = { from = "244" to = "241" }
-    add_hyperlane = { from = "241" to = "243" }
-    add_hyperlane = { from = "243" to = "244" }
-    add_hyperlane = { from = "242" to = "241" }
-    add_hyperlane = { from = "148" to = "145" }
-    add_hyperlane = { from = "146" to = "149" }
-    add_hyperlane = { from = "149" to = "147" }
-    add_hyperlane = { from = "147" to = "148" }
-    add_hyperlane = { from = "148" to = "149" }
-    add_hyperlane = { from = "149" to = "145" }
-    add_hyperlane = { from = "145" to = "146" }
-    add_hyperlane = { from = "146" to = "147" }
-    add_hyperlane = { from = "147" to = "145" }
-    add_hyperlane = { from = "151" to = "150" }
-    add_hyperlane = { from = "177" to = "178" }
-    add_hyperlane = { from = "178" to = "179" }
-    add_hyperlane = { from = "179" to = "180" }
-    add_hyperlane = { from = "180" to = "177" }
-    add_hyperlane = { from = "177" to = "179" }
-    add_hyperlane = { from = "178" to = "180" }
-    add_hyperlane = { from = "181" to = "182" }
-    add_hyperlane = { from = "183" to = "182" }
-    add_hyperlane = { from = "183" to = "181" }
-    add_hyperlane = { from = "184" to = "185" }
-    add_hyperlane = { from = "186" to = "187" }
-    add_hyperlane = { from = "184" to = "187" }
-    add_hyperlane = { from = "187" to = "185" }
-    add_hyperlane = { from = "185" to = "186" }
-    add_hyperlane = { from = "186" to = "184" }
-    add_hyperlane = { from = "188" to = "189" }
-    add_hyperlane = { from = "189" to = "190" }
-    add_hyperlane = { from = "190" to = "188" }
-    add_hyperlane = { from = "222" to = "224" }
-    add_hyperlane = { from = "223" to = "226" }
-    add_hyperlane = { from = "222" to = "226" }
-    add_hyperlane = { from = "224" to = "226" }
-    add_hyperlane = { from = "224" to = "223" }
-    add_hyperlane = { from = "223" to = "222" }
-    add_hyperlane = { from = "224" to = "225" }
-    add_hyperlane = { from = "226" to = "225" }
-    add_hyperlane = { from = "223" to = "225" }
-    add_hyperlane = { from = "218" to = "220" }
-    add_hyperlane = { from = "219" to = "221" }
-    add_hyperlane = { from = "221" to = "220" }
-    add_hyperlane = { from = "220" to = "219" }
-    add_hyperlane = { from = "218" to = "219" }
-    add_hyperlane = { from = "218" to = "221" }
-    add_hyperlane = { from = "216" to = "213" }
-    add_hyperlane = { from = "216" to = "217" }
-    add_hyperlane = { from = "217" to = "214" }
-    add_hyperlane = { from = "214" to = "215" }
-    add_hyperlane = { from = "215" to = "216" }
-    add_hyperlane = { from = "213" to = "215" }
-    add_hyperlane = { from = "213" to = "214" }
-    add_hyperlane = { from = "213" to = "217" }
-    add_hyperlane = { from = "195" to = "191" }
-    add_hyperlane = { from = "191" to = "192" }
-    add_hyperlane = { from = "192" to = "193" }
-    add_hyperlane = { from = "193" to = "194" }
-    add_hyperlane = { from = "194" to = "195" }
-    add_hyperlane = { from = "195" to = "193" }
-    add_hyperlane = { from = "191" to = "193" }
-    add_hyperlane = { from = "192" to = "195" }
-    add_hyperlane = { from = "197" to = "198" }
-    add_hyperlane = { from = "198" to = "196" }
-    add_hyperlane = { from = "196" to = "199" }
-    add_hyperlane = { from = "199" to = "197" }
-    add_hyperlane = { from = "197" to = "196" }
-    add_hyperlane = { from = "196" to = "200" }
-    add_hyperlane = { from = "200" to = "201" }
-    add_hyperlane = { from = "201" to = "198" }
-    add_hyperlane = { from = "198" to = "199" }
-    add_hyperlane = { from = "197" to = "201" }
-    add_hyperlane = { from = "200" to = "199" }
-    add_hyperlane = { from = "202" to = "204" }
-    add_hyperlane = { from = "204" to = "203" }
-    add_hyperlane = { from = "203" to = "202" }
-    add_hyperlane = { from = "227" to = "229" }
-    add_hyperlane = { from = "229" to = "230" }
-    add_hyperlane = { from = "230" to = "228" }
-    add_hyperlane = { from = "227" to = "228" }
-    add_hyperlane = { from = "227" to = "230" }
-    add_hyperlane = { from = "229" to = "228" }
-    add_hyperlane = { from = "231" to = "233" }
-    add_hyperlane = { from = "233" to = "232" }
-    add_hyperlane = { from = "232" to = "231" }
-    add_hyperlane = { from = "210" to = "211" }
-    add_hyperlane = { from = "211" to = "212" }
-    add_hyperlane = { from = "212" to = "210" }
-    add_hyperlane = { from = "209" to = "205" }
-    add_hyperlane = { from = "205" to = "206" }
-    add_hyperlane = { from = "206" to = "208" }
-    add_hyperlane = { from = "208" to = "207" }
-    add_hyperlane = { from = "207" to = "209" }
-    add_hyperlane = { from = "209" to = "208" }
-    add_hyperlane = { from = "208" to = "206" }
-    add_hyperlane = { from = "207" to = "206" }
-    add_hyperlane = { from = "206" to = "209" }
-    add_hyperlane = { from = "236" to = "235" }
-    add_hyperlane = { from = "235" to = "234" }
-    add_hyperlane = { from = "234" to = "237" }
-    add_hyperlane = { from = "237" to = "235" }
-    add_hyperlane = { from = "236" to = "237" }
-    add_hyperlane = { from = "17" to = "19" }
-    add_hyperlane = { from = "19" to = "18" }
-    add_hyperlane = { from = "18" to = "17" }
-    add_hyperlane = { from = "17" to = "16" }
-    add_hyperlane = { from = "16" to = "19" }
-    add_hyperlane = { from = "16" to = "18" }
-    add_hyperlane = { from = "6" to = "5" }
-    add_hyperlane = { from = "5" to = "4" }
+    add_hyperlane = { from = "0" to = "1" }
+    add_hyperlane = { from = "0" to = "2" }
+    add_hyperlane = { from = "0" to = "3" }
+    add_hyperlane = { from = "1" to = "3" }
+    add_hyperlane = { from = "2" to = "3" }
+    add_hyperlane = { from = "4" to = "5" }
     add_hyperlane = { from = "4" to = "6" }
-    add_hyperlane = { from = "20" to = "22" }
-    add_hyperlane = { from = "22" to = "21" }
-    add_hyperlane = { from = "21" to = "20" }
-    add_hyperlane = { from = "20" to = "23" }
-    add_hyperlane = { from = "23" to = "22" }
-    add_hyperlane = { from = "21" to = "23" }
-    add_hyperlane = { from = "238" to = "239" }
-    add_hyperlane = { from = "14" to = "15" }
-    add_hyperlane = { from = "11" to = "12" }
-    add_hyperlane = { from = "12" to = "13" }
-    add_hyperlane = { from = "13" to = "10" }
+    add_hyperlane = { from = "5" to = "6" }
+    add_hyperlane = { from = "7" to = "8" }
+    add_hyperlane = { from = "8" to = "9" }
     add_hyperlane = { from = "10" to = "12" }
     add_hyperlane = { from = "10" to = "11" }
     add_hyperlane = { from = "11" to = "13" }
-    add_hyperlane = { from = "3" to = "0" }
-    add_hyperlane = { from = "0" to = "1" }
-    add_hyperlane = { from = "1" to = "2" }
-    add_hyperlane = { from = "2" to = "3" }
-    add_hyperlane = { from = "3" to = "1" }
-    add_hyperlane = { from = "0" to = "2" }
-    add_hyperlane = { from = "7" to = "8" }
-    add_hyperlane = { from = "9" to = "8" }
-    add_hyperlane = { from = "24" to = "25" }
+    add_hyperlane = { from = "12" to = "13" }
+    add_hyperlane = { from = "14" to = "15" }
+    add_hyperlane = { from = "16" to = "19" }
+    add_hyperlane = { from = "16" to = "17" }
+    add_hyperlane = { from = "17" to = "18" }
+    add_hyperlane = { from = "18" to = "19" }
+    add_hyperlane = { from = "20" to = "22" }
+    add_hyperlane = { from = "20" to = "21" }
+    add_hyperlane = { from = "21" to = "23" }
+    add_hyperlane = { from = "21" to = "22" }
+    add_hyperlane = { from = "22" to = "23" }
+    add_hyperlane = { from = "24" to = "399" }
     add_hyperlane = { from = "26" to = "27" }
-    add_hyperlane = { from = "30" to = "29" }
-    add_hyperlane = { from = "28" to = "30" }
     add_hyperlane = { from = "28" to = "29" }
+    add_hyperlane = { from = "28" to = "30" }
+    add_hyperlane = { from = "29" to = "30" }
+    add_hyperlane = { from = "29" to = "32" }
     add_hyperlane = { from = "29" to = "31" }
-    add_hyperlane = { from = "30" to = "31" }
-    add_hyperlane = { from = "35" to = "38" }
+    add_hyperlane = { from = "31" to = "32" }
     add_hyperlane = { from = "33" to = "35" }
-    add_hyperlane = { from = "35" to = "34" }
+    add_hyperlane = { from = "33" to = "370" }
+    add_hyperlane = { from = "34" to = "36" }
+    add_hyperlane = { from = "34" to = "35" }
     add_hyperlane = { from = "35" to = "36" }
     add_hyperlane = { from = "35" to = "37" }
-    add_hyperlane = { from = "38" to = "37" }
-    add_hyperlane = { from = "37" to = "36" }
-    add_hyperlane = { from = "36" to = "38" }
-    add_hyperlane = { from = "38" to = "33" }
-    add_hyperlane = { from = "33" to = "34" }
-    add_hyperlane = { from = "34" to = "36" }
-    add_hyperlane = { from = "174" to = "175" }
-    add_hyperlane = { from = "175" to = "176" }
-    add_hyperlane = { from = "176" to = "174" }
+    add_hyperlane = { from = "36" to = "37" }
+    add_hyperlane = { from = "37" to = "38" }
+    add_hyperlane = { from = "39" to = "40" }
+    add_hyperlane = { from = "39" to = "42" }
+    add_hyperlane = { from = "40" to = "41" }
+    add_hyperlane = { from = "40" to = "42" }
+    add_hyperlane = { from = "41" to = "42" }
+    add_hyperlane = { from = "44" to = "45" }
+    add_hyperlane = { from = "46" to = "47" }
+    add_hyperlane = { from = "46" to = "49" }
+    add_hyperlane = { from = "46" to = "48" }
+    add_hyperlane = { from = "47" to = "48" }
+    add_hyperlane = { from = "47" to = "49" }
+    add_hyperlane = { from = "48" to = "49" }
+    add_hyperlane = { from = "49" to = "50" }
+    add_hyperlane = { from = "52" to = "54" }
+    add_hyperlane = { from = "52" to = "57" }
+    add_hyperlane = { from = "52" to = "53" }
+    add_hyperlane = { from = "52" to = "343" }
+    add_hyperlane = { from = "53" to = "54" }
+    add_hyperlane = { from = "53" to = "55" }
+    add_hyperlane = { from = "54" to = "55" }
+    add_hyperlane = { from = "54" to = "57" }
+    add_hyperlane = { from = "55" to = "56" }
+    add_hyperlane = { from = "56" to = "57" }
+    add_hyperlane = { from = "56" to = "335" }
+    add_hyperlane = { from = "60" to = "61" }
+    add_hyperlane = { from = "61" to = "62" }
+    add_hyperlane = { from = "63" to = "66" }
+    add_hyperlane = { from = "63" to = "64" }
+    add_hyperlane = { from = "63" to = "65" }
+    add_hyperlane = { from = "63" to = "67" }
+    add_hyperlane = { from = "64" to = "65" }
     add_hyperlane = { from = "64" to = "66" }
+    add_hyperlane = { from = "65" to = "66" }
+    add_hyperlane = { from = "65" to = "68" }
+    add_hyperlane = { from = "66" to = "67" }
+    add_hyperlane = { from = "67" to = "68" }
+    add_hyperlane = { from = "69" to = "72" }
+    add_hyperlane = { from = "69" to = "70" }
+    add_hyperlane = { from = "70" to = "71" }
+    add_hyperlane = { from = "70" to = "73" }
+    add_hyperlane = { from = "70" to = "72" }
+    add_hyperlane = { from = "71" to = "73" }
+    add_hyperlane = { from = "72" to = "73" }
+    add_hyperlane = { from = "74" to = "75" }
+    add_hyperlane = { from = "77" to = "78" }
+    add_hyperlane = { from = "77" to = "80" }
+    add_hyperlane = { from = "78" to = "80" }
+    add_hyperlane = { from = "78" to = "79" }
+    add_hyperlane = { from = "79" to = "81" }
+    add_hyperlane = { from = "80" to = "81" }
+    add_hyperlane = { from = "82" to = "83" }
+    add_hyperlane = { from = "86" to = "87" }
+    add_hyperlane = { from = "86" to = "88" }
+    add_hyperlane = { from = "86" to = "89" }
+    add_hyperlane = { from = "87" to = "90" }
+    add_hyperlane = { from = "87" to = "89" }
+    add_hyperlane = { from = "88" to = "308" }
+    add_hyperlane = { from = "89" to = "90" }
+    add_hyperlane = { from = "91" to = "92" }
+    add_hyperlane = { from = "93" to = "94" }
+    add_hyperlane = { from = "93" to = "95" }
+    add_hyperlane = { from = "94" to = "295" }
+    add_hyperlane = { from = "94" to = "95" }
+    add_hyperlane = { from = "94" to = "97" }
+    add_hyperlane = { from = "95" to = "96" }
+    add_hyperlane = { from = "95" to = "97" }
+    add_hyperlane = { from = "96" to = "97" }
+    add_hyperlane = { from = "98" to = "99" }
+    add_hyperlane = { from = "98" to = "100" }
+    add_hyperlane = { from = "100" to = "101" }
+    add_hyperlane = { from = "100" to = "295" }
+    add_hyperlane = { from = "102" to = "104" }
+    add_hyperlane = { from = "102" to = "103" }
+    add_hyperlane = { from = "103" to = "104" }
+    add_hyperlane = { from = "106" to = "107" }
+    add_hyperlane = { from = "108" to = "109" }
+    add_hyperlane = { from = "108" to = "110" }
+    add_hyperlane = { from = "109" to = "110" }
+    add_hyperlane = { from = "111" to = "112" }
+    add_hyperlane = { from = "112" to = "113" }
+    add_hyperlane = { from = "114" to = "115" }
+    add_hyperlane = { from = "114" to = "118" }
+    add_hyperlane = { from = "114" to = "249" }
+    add_hyperlane = { from = "115" to = "117" }
+    add_hyperlane = { from = "115" to = "116" }
+    add_hyperlane = { from = "116" to = "117" }
+    add_hyperlane = { from = "116" to = "118" }
+    add_hyperlane = { from = "119" to = "120" }
+    add_hyperlane = { from = "119" to = "123" }
+    add_hyperlane = { from = "119" to = "121" }
+    add_hyperlane = { from = "120" to = "121" }
+    add_hyperlane = { from = "120" to = "123" }
+    add_hyperlane = { from = "121" to = "122" }
+    add_hyperlane = { from = "121" to = "123" }
+    add_hyperlane = { from = "124" to = "125" }
+    add_hyperlane = { from = "124" to = "126" }
+    add_hyperlane = { from = "125" to = "244" }
+    add_hyperlane = { from = "127" to = "128" }
+    add_hyperlane = { from = "127" to = "131" }
+    add_hyperlane = { from = "128" to = "129" }
+    add_hyperlane = { from = "128" to = "131" }
+    add_hyperlane = { from = "128" to = "130" }
+    add_hyperlane = { from = "130" to = "131" }
+    add_hyperlane = { from = "132" to = "299" }
+    add_hyperlane = { from = "132" to = "133" }
+    add_hyperlane = { from = "133" to = "134" }
+    add_hyperlane = { from = "134" to = "135" }
+    add_hyperlane = { from = "136" to = "137" }
+    add_hyperlane = { from = "136" to = "139" }
+    add_hyperlane = { from = "136" to = "138" }
+    add_hyperlane = { from = "137" to = "139" }
+    add_hyperlane = { from = "137" to = "140" }
+    add_hyperlane = { from = "137" to = "143" }
+    add_hyperlane = { from = "138" to = "139" }
+    add_hyperlane = { from = "139" to = "140" }
+    add_hyperlane = { from = "141" to = "142" }
+    add_hyperlane = { from = "142" to = "143" }
+    add_hyperlane = { from = "143" to = "144" }
+    add_hyperlane = { from = "144" to = "145" }
+    add_hyperlane = { from = "149" to = "156" }
+    add_hyperlane = { from = "150" to = "331" }
+    add_hyperlane = { from = "151" to = "152" }
+    add_hyperlane = { from = "154" to = "156" }
+    add_hyperlane = { from = "154" to = "155" }
+    add_hyperlane = { from = "155" to = "156" }
+    add_hyperlane = { from = "157" to = "159" }
+    add_hyperlane = { from = "157" to = "158" }
+    add_hyperlane = { from = "158" to = "159" }
+    add_hyperlane = { from = "158" to = "160" }
+    add_hyperlane = { from = "159" to = "160" }
+    add_hyperlane = { from = "161" to = "165" }
+    add_hyperlane = { from = "161" to = "162" }
+    add_hyperlane = { from = "162" to = "331" }
+    add_hyperlane = { from = "162" to = "163" }
+    add_hyperlane = { from = "163" to = "164" }
+    add_hyperlane = { from = "164" to = "165" }
+    add_hyperlane = { from = "166" to = "169" }
+    add_hyperlane = { from = "166" to = "168" }
+    add_hyperlane = { from = "166" to = "167" }
+    add_hyperlane = { from = "167" to = "168" }
+    add_hyperlane = { from = "168" to = "169" }
+    add_hyperlane = { from = "170" to = "171" }
+    add_hyperlane = { from = "171" to = "172" }
+    add_hyperlane = { from = "173" to = "174" }
+    add_hyperlane = { from = "174" to = "175" }
+    add_hyperlane = { from = "174" to = "176" }
+    add_hyperlane = { from = "175" to = "176" }
+    add_hyperlane = { from = "177" to = "178" }
+    add_hyperlane = { from = "178" to = "179" }
+    add_hyperlane = { from = "180" to = "183" }
+    add_hyperlane = { from = "180" to = "181" }
+    add_hyperlane = { from = "181" to = "182" }
+    add_hyperlane = { from = "181" to = "183" }
+    add_hyperlane = { from = "184" to = "185" }
+    add_hyperlane = { from = "184" to = "405" }
+    add_hyperlane = { from = "185" to = "186" }
+    add_hyperlane = { from = "187" to = "191" }
+    add_hyperlane = { from = "188" to = "189" }
+    add_hyperlane = { from = "189" to = "190" }
+    add_hyperlane = { from = "189" to = "191" }
+    add_hyperlane = { from = "190" to = "191" }
+    add_hyperlane = { from = "190" to = "422" }
+    add_hyperlane = { from = "192" to = "193" }
+    add_hyperlane = { from = "192" to = "195" }
+    add_hyperlane = { from = "192" to = "194" }
+    add_hyperlane = { from = "192" to = "410" }
+    add_hyperlane = { from = "193" to = "194" }
+    add_hyperlane = { from = "194" to = "196" }
+    add_hyperlane = { from = "194" to = "195" }
+    add_hyperlane = { from = "195" to = "196" }
+    add_hyperlane = { from = "196" to = "197" }
+    add_hyperlane = { from = "196" to = "382" }
+    add_hyperlane = { from = "198" to = "199" }
+    add_hyperlane = { from = "201" to = "202" }
+    add_hyperlane = { from = "201" to = "205" }
+    add_hyperlane = { from = "201" to = "433" }
+    add_hyperlane = { from = "202" to = "205" }
+    add_hyperlane = { from = "202" to = "203" }
+    add_hyperlane = { from = "202" to = "204" }
+    add_hyperlane = { from = "203" to = "204" }
+    add_hyperlane = { from = "204" to = "205" }
+    add_hyperlane = { from = "206" to = "207" }
+    add_hyperlane = { from = "207" to = "208" }
+    add_hyperlane = { from = "209" to = "210" }
+    add_hyperlane = { from = "209" to = "213" }
+    add_hyperlane = { from = "209" to = "211" }
+    add_hyperlane = { from = "209" to = "212" }
+    add_hyperlane = { from = "210" to = "213" }
+    add_hyperlane = { from = "212" to = "213" }
+    add_hyperlane = { from = "214" to = "215" }
+    add_hyperlane = { from = "215" to = "216" }
+    add_hyperlane = { from = "216" to = "217" }
+    add_hyperlane = { from = "218" to = "219" }
+    add_hyperlane = { from = "218" to = "222" }
+    add_hyperlane = { from = "218" to = "220" }
+    add_hyperlane = { from = "219" to = "220" }
+    add_hyperlane = { from = "219" to = "222" }
+    add_hyperlane = { from = "220" to = "221" }
+    add_hyperlane = { from = "220" to = "222" }
+    add_hyperlane = { from = "223" to = "224" }
+    add_hyperlane = { from = "223" to = "451" }
+    add_hyperlane = { from = "224" to = "225" }
+    add_hyperlane = { from = "225" to = "226" }
+    add_hyperlane = { from = "227" to = "228" }
+    add_hyperlane = { from = "227" to = "229" }
+    add_hyperlane = { from = "228" to = "229" }
+    add_hyperlane = { from = "230" to = "231" }
+    add_hyperlane = { from = "231" to = "232" }
+    add_hyperlane = { from = "231" to = "233" }
+    add_hyperlane = { from = "232" to = "233" }
+    add_hyperlane = { from = "234" to = "397" }
+    add_hyperlane = { from = "237" to = "238" }
+    add_hyperlane = { from = "237" to = "239" }
+    add_hyperlane = { from = "237" to = "240" }
+    add_hyperlane = { from = "238" to = "240" }
+    add_hyperlane = { from = "239" to = "240" }
+    add_hyperlane = { from = "304" to = "311" }
+    add_hyperlane = { from = "308" to = "330" }
+    add_hyperlane = { from = "321" to = "327" }
+    add_hyperlane = { from = "323" to = "324" }
+    add_hyperlane = { from = "328" to = "339" }
+    add_hyperlane = { from = "332" to = "356" }
+    add_hyperlane = { from = "333" to = "340" }
+    add_hyperlane = { from = "335" to = "346" }
+    add_hyperlane = { from = "357" to = "365" }
+    add_hyperlane = { from = "472" to = "474" }
+    add_hyperlane = { from = "1" to = "2" }
+    add_hyperlane = { from = "1" to = "469" }
+    add_hyperlane = { from = "3" to = "470" }
+    add_hyperlane = { from = "4" to = "469" }
+    add_hyperlane = { from = "4" to = "439" }
+    add_hyperlane = { from = "5" to = "439" }
+    add_hyperlane = { from = "5" to = "469" }
+    add_hyperlane = { from = "6" to = "477" }
+    add_hyperlane = { from = "6" to = "439" }
+    add_hyperlane = { from = "7" to = "472" }
+    add_hyperlane = { from = "7" to = "9" }
+    add_hyperlane = { from = "7" to = "474" }
+    add_hyperlane = { from = "8" to = "481" }
+    add_hyperlane = { from = "8" to = "472" }
+    add_hyperlane = { from = "9" to = "481" }
+    add_hyperlane = { from = "10" to = "13" }
+    add_hyperlane = { from = "10" to = "421" }
+    add_hyperlane = { from = "11" to = "12" }
+    add_hyperlane = { from = "11" to = "418" }
+    add_hyperlane = { from = "12" to = "421" }
+    add_hyperlane = { from = "13" to = "411" }
+    add_hyperlane = { from = "14" to = "418" }
+    add_hyperlane = { from = "14" to = "17" }
+    add_hyperlane = { from = "14" to = "18" }
+    add_hyperlane = { from = "15" to = "392" }
+    add_hyperlane = { from = "15" to = "22" }
+    add_hyperlane = { from = "15" to = "418" }
+    add_hyperlane = { from = "16" to = "18" }
+    add_hyperlane = { from = "16" to = "436" }
+    add_hyperlane = { from = "17" to = "19" }
+    add_hyperlane = { from = "19" to = "423" }
+    add_hyperlane = { from = "20" to = "23" }
+    add_hyperlane = { from = "20" to = "431" }
+    add_hyperlane = { from = "21" to = "398" }
+    add_hyperlane = { from = "23" to = "398" }
+    add_hyperlane = { from = "24" to = "25" }
+    add_hyperlane = { from = "24" to = "479" }
+    add_hyperlane = { from = "25" to = "375" }
+    add_hyperlane = { from = "25" to = "399" }
+    add_hyperlane = { from = "25" to = "373" }
+    add_hyperlane = { from = "26" to = "484" }
+    add_hyperlane = { from = "27" to = "487" }
+    add_hyperlane = { from = "28" to = "359" }
+    add_hyperlane = { from = "28" to = "32" }
+    add_hyperlane = { from = "30" to = "31" }
+    add_hyperlane = { from = "30" to = "485" }
+    add_hyperlane = { from = "31" to = "485" }
+    add_hyperlane = { from = "32" to = "332" }
+    add_hyperlane = { from = "33" to = "38" }
+    add_hyperlane = { from = "33" to = "34" }
+    add_hyperlane = { from = "34" to = "37" }
+    add_hyperlane = { from = "36" to = "38" }
+    add_hyperlane = { from = "38" to = "346" }
+    add_hyperlane = { from = "39" to = "41" }
+    add_hyperlane = { from = "41" to = "491" }
+    add_hyperlane = { from = "43" to = "44" }
+    add_hyperlane = { from = "43" to = "45" }
+    add_hyperlane = { from = "43" to = "489" }
+    add_hyperlane = { from = "43" to = "311" }
+    add_hyperlane = { from = "44" to = "491" }
+    add_hyperlane = { from = "44" to = "489" }
+    add_hyperlane = { from = "45" to = "302" }
+    add_hyperlane = { from = "45" to = "298" }
+    add_hyperlane = { from = "46" to = "50" }
+    add_hyperlane = { from = "47" to = "316" }
+    add_hyperlane = { from = "48" to = "302" }
+    add_hyperlane = { from = "50" to = "284" }
+    add_hyperlane = { from = "51" to = "327" }
+    add_hyperlane = { from = "51" to = "316" }
+    add_hyperlane = { from = "51" to = "303" }
+    add_hyperlane = { from = "51" to = "335" }
+    add_hyperlane = { from = "53" to = "354" }
+    add_hyperlane = { from = "55" to = "346" }
+    add_hyperlane = { from = "57" to = "343" }
+    add_hyperlane = { from = "58" to = "59" }
+    add_hyperlane = { from = "58" to = "270" }
+    add_hyperlane = { from = "58" to = "490" }
+    add_hyperlane = { from = "59" to = "266" }
+    add_hyperlane = { from = "59" to = "270" }
+    add_hyperlane = { from = "59" to = "259" }
+    add_hyperlane = { from = "60" to = "62" }
+    add_hyperlane = { from = "60" to = "276" }
+    add_hyperlane = { from = "61" to = "276" }
+    add_hyperlane = { from = "61" to = "64" }
+    add_hyperlane = { from = "62" to = "492" }
+    add_hyperlane = { from = "67" to = "498" }
+    add_hyperlane = { from = "69" to = "290" }
+    add_hyperlane = { from = "69" to = "292" }
+    add_hyperlane = { from = "71" to = "269" }
+    add_hyperlane = { from = "71" to = "72" }
+    add_hyperlane = { from = "73" to = "265" }
+    add_hyperlane = { from = "76" to = "499" }
+    add_hyperlane = { from = "77" to = "497" }
+    add_hyperlane = { from = "77" to = "79" }
+    add_hyperlane = { from = "78" to = "81" }
+    add_hyperlane = { from = "79" to = "80" }
+    add_hyperlane = { from = "82" to = "289" }
+    add_hyperlane = { from = "82" to = "261" }
+    add_hyperlane = { from = "83" to = "497" }
+    add_hyperlane = { from = "84" to = "85" }
+    add_hyperlane = { from = "84" to = "264" }
+    add_hyperlane = { from = "84" to = "279" }
+    add_hyperlane = { from = "85" to = "277" }
+    add_hyperlane = { from = "85" to = "289" }
+    add_hyperlane = { from = "86" to = "90" }
+    add_hyperlane = { from = "87" to = "88" }
+    add_hyperlane = { from = "88" to = "89" }
+    add_hyperlane = { from = "90" to = "292" }
+    add_hyperlane = { from = "91" to = "290" }
+    add_hyperlane = { from = "91" to = "308" }
+    add_hyperlane = { from = "92" to = "96" }
+    add_hyperlane = { from = "92" to = "280" }
+    add_hyperlane = { from = "92" to = "290" }
+    add_hyperlane = { from = "93" to = "97" }
+    add_hyperlane = { from = "93" to = "323" }
+    add_hyperlane = { from = "96" to = "278" }
+    add_hyperlane = { from = "98" to = "295" }
+    add_hyperlane = { from = "98" to = "101" }
+    add_hyperlane = { from = "99" to = "101" }
+    add_hyperlane = { from = "99" to = "100" }
+    add_hyperlane = { from = "99" to = "285" }
+    add_hyperlane = { from = "101" to = "281" }
+    add_hyperlane = { from = "102" to = "107" }
+    add_hyperlane = { from = "102" to = "285" }
+    add_hyperlane = { from = "103" to = "274" }
+    add_hyperlane = { from = "103" to = "285" }
+    add_hyperlane = { from = "104" to = "274" }
+    add_hyperlane = { from = "104" to = "267" }
+    add_hyperlane = { from = "105" to = "107" }
+    add_hyperlane = { from = "105" to = "106" }
+    add_hyperlane = { from = "105" to = "296" }
+    add_hyperlane = { from = "105" to = "301" }
+    add_hyperlane = { from = "106" to = "286" }
+    add_hyperlane = { from = "106" to = "109" }
+    add_hyperlane = { from = "107" to = "296" }
+    add_hyperlane = { from = "108" to = "286" }
+    add_hyperlane = { from = "108" to = "273" }
+    add_hyperlane = { from = "109" to = "286" }
+    add_hyperlane = { from = "110" to = "268" }
+    add_hyperlane = { from = "110" to = "286" }
+    add_hyperlane = { from = "111" to = "113" }
+    add_hyperlane = { from = "111" to = "267" }
+    add_hyperlane = { from = "111" to = "268" }
+    add_hyperlane = { from = "112" to = "245" }
+    add_hyperlane = { from = "112" to = "252" }
+    add_hyperlane = { from = "113" to = "256" }
+    add_hyperlane = { from = "113" to = "257" }
+    add_hyperlane = { from = "114" to = "116" }
+    add_hyperlane = { from = "115" to = "118" }
+    add_hyperlane = { from = "117" to = "249" }
+    add_hyperlane = { from = "117" to = "118" }
+    add_hyperlane = { from = "119" to = "252" }
+    add_hyperlane = { from = "120" to = "252" }
+    add_hyperlane = { from = "122" to = "123" }
+    add_hyperlane = { from = "122" to = "242" }
+    add_hyperlane = { from = "124" to = "256" }
+    add_hyperlane = { from = "124" to = "244" }
+    add_hyperlane = { from = "125" to = "126" }
+    add_hyperlane = { from = "125" to = "256" }
+    add_hyperlane = { from = "127" to = "254" }
+    add_hyperlane = { from = "127" to = "129" }
+    add_hyperlane = { from = "129" to = "130" }
+    add_hyperlane = { from = "129" to = "263" }
+    add_hyperlane = { from = "130" to = "257" }
+    add_hyperlane = { from = "131" to = "247" }
+    add_hyperlane = { from = "132" to = "135" }
+    add_hyperlane = { from = "132" to = "134" }
+    add_hyperlane = { from = "133" to = "299" }
+    add_hyperlane = { from = "133" to = "135" }
+    add_hyperlane = { from = "134" to = "293" }
+    add_hyperlane = { from = "135" to = "273" }
+    add_hyperlane = { from = "136" to = "140" }
+    add_hyperlane = { from = "138" to = "140" }
+    add_hyperlane = { from = "141" to = "145" }
+    add_hyperlane = { from = "141" to = "143" }
+    add_hyperlane = { from = "141" to = "144" }
+    add_hyperlane = { from = "142" to = "144" }
+    add_hyperlane = { from = "142" to = "145" }
+    add_hyperlane = { from = "145" to = "272" }
+    add_hyperlane = { from = "146" to = "147" }
+    add_hyperlane = { from = "146" to = "309" }
+    add_hyperlane = { from = "148" to = "314" }
+    add_hyperlane = { from = "148" to = "152" }
+    add_hyperlane = { from = "148" to = "294" }
+    add_hyperlane = { from = "149" to = "152" }
+    add_hyperlane = { from = "149" to = "150" }
+    add_hyperlane = { from = "149" to = "151" }
+    add_hyperlane = { from = "150" to = "151" }
+    add_hyperlane = { from = "150" to = "152" }
+    add_hyperlane = { from = "151" to = "312" }
+    add_hyperlane = { from = "153" to = "353" }
+    add_hyperlane = { from = "153" to = "155" }
+    add_hyperlane = { from = "153" to = "154" }
+    add_hyperlane = { from = "153" to = "158" }
+    add_hyperlane = { from = "154" to = "160" }
+    add_hyperlane = { from = "155" to = "353" }
+    add_hyperlane = { from = "156" to = "350" }
+    add_hyperlane = { from = "157" to = "380" }
+    add_hyperlane = { from = "157" to = "160" }
+    add_hyperlane = { from = "159" to = "291" }
+    add_hyperlane = { from = "161" to = "164" }
+    add_hyperlane = { from = "161" to = "163" }
+    add_hyperlane = { from = "162" to = "165" }
+    add_hyperlane = { from = "163" to = "165" }
+    add_hyperlane = { from = "164" to = "345" }
+    add_hyperlane = { from = "166" to = "368" }
+    add_hyperlane = { from = "167" to = "169" }
+    add_hyperlane = { from = "167" to = "320" }
+    add_hyperlane = { from = "168" to = "320" }
+    add_hyperlane = { from = "169" to = "369" }
+    add_hyperlane = { from = "170" to = "172" }
+    add_hyperlane = { from = "170" to = "175" }
+    add_hyperlane = { from = "170" to = "176" }
+    add_hyperlane = { from = "171" to = "396" }
+    add_hyperlane = { from = "172" to = "380" }
+    add_hyperlane = { from = "172" to = "396" }
+    add_hyperlane = { from = "173" to = "407" }
+    add_hyperlane = { from = "173" to = "175" }
+    add_hyperlane = { from = "173" to = "176" }
+    add_hyperlane = { from = "174" to = "407" }
+    add_hyperlane = { from = "177" to = "409" }
+    add_hyperlane = { from = "177" to = "179" }
+    add_hyperlane = { from = "178" to = "409" }
+    add_hyperlane = { from = "178" to = "434" }
+    add_hyperlane = { from = "179" to = "434" }
+    add_hyperlane = { from = "180" to = "182" }
+    add_hyperlane = { from = "180" to = "414" }
+    add_hyperlane = { from = "181" to = "396" }
+    add_hyperlane = { from = "182" to = "396" }
+    add_hyperlane = { from = "182" to = "183" }
+    add_hyperlane = { from = "183" to = "414" }
+    add_hyperlane = { from = "184" to = "186" }
+    add_hyperlane = { from = "184" to = "187" }
+    add_hyperlane = { from = "185" to = "403" }
+    add_hyperlane = { from = "185" to = "187" }
+    add_hyperlane = { from = "186" to = "403" }
+    add_hyperlane = { from = "187" to = "188" }
+    add_hyperlane = { from = "188" to = "191" }
+    add_hyperlane = { from = "188" to = "190" }
+    add_hyperlane = { from = "189" to = "422" }
+    add_hyperlane = { from = "193" to = "195" }
+    add_hyperlane = { from = "193" to = "410" }
+    add_hyperlane = { from = "197" to = "382" }
+    add_hyperlane = { from = "197" to = "379" }
+    add_hyperlane = { from = "198" to = "200" }
+    add_hyperlane = { from = "198" to = "437" }
+    add_hyperlane = { from = "198" to = "463" }
+    add_hyperlane = { from = "199" to = "200" }
+    add_hyperlane = { from = "199" to = "428" }
+    add_hyperlane = { from = "199" to = "422" }
+    add_hyperlane = { from = "200" to = "428" }
+    add_hyperlane = { from = "200" to = "433" }
+    add_hyperlane = { from = "201" to = "204" }
+    add_hyperlane = { from = "203" to = "205" }
+    add_hyperlane = { from = "203" to = "429" }
+    add_hyperlane = { from = "206" to = "208" }
+    add_hyperlane = { from = "206" to = "465" }
+    add_hyperlane = { from = "206" to = "447" }
+    add_hyperlane = { from = "207" to = "447" }
+    add_hyperlane = { from = "207" to = "442" }
+    add_hyperlane = { from = "208" to = "442" }
+    add_hyperlane = { from = "208" to = "424" }
+    add_hyperlane = { from = "210" to = "211" }
+    add_hyperlane = { from = "210" to = "462" }
+    add_hyperlane = { from = "211" to = "212" }
+    add_hyperlane = { from = "211" to = "213" }
+    add_hyperlane = { from = "212" to = "460" }
+    add_hyperlane = { from = "214" to = "217" }
+    add_hyperlane = { from = "214" to = "459" }
+    add_hyperlane = { from = "214" to = "216" }
+    add_hyperlane = { from = "215" to = "459" }
+    add_hyperlane = { from = "215" to = "458" }
+    add_hyperlane = { from = "216" to = "451" }
+    add_hyperlane = { from = "218" to = "221" }
+    add_hyperlane = { from = "219" to = "221" }
+    add_hyperlane = { from = "221" to = "456" }
+    add_hyperlane = { from = "222" to = "445" }
+    add_hyperlane = { from = "223" to = "226" }
+    add_hyperlane = { from = "223" to = "225" }
+    add_hyperlane = { from = "224" to = "226" }
+    add_hyperlane = { from = "224" to = "451" }
+    add_hyperlane = { from = "225" to = "448" }
+    add_hyperlane = { from = "226" to = "461" }
+    add_hyperlane = { from = "227" to = "465" }
+    add_hyperlane = { from = "227" to = "449" }
+    add_hyperlane = { from = "228" to = "465" }
+    add_hyperlane = { from = "228" to = "450" }
+    add_hyperlane = { from = "230" to = "467" }
+    add_hyperlane = { from = "230" to = "232" }
+    add_hyperlane = { from = "230" to = "443" }
+    add_hyperlane = { from = "231" to = "467" }
+    add_hyperlane = { from = "232" to = "441" }
+    add_hyperlane = { from = "233" to = "441" }
+    add_hyperlane = { from = "233" to = "467" }
+    add_hyperlane = { from = "234" to = "235" }
+    add_hyperlane = { from = "234" to = "406" }
+    add_hyperlane = { from = "234" to = "431" }
+    add_hyperlane = { from = "235" to = "419" }
+    add_hyperlane = { from = "235" to = "397" }
+    add_hyperlane = { from = "237" to = "282" }
+    add_hyperlane = { from = "238" to = "254" }
+    add_hyperlane = { from = "238" to = "239" }
+    add_hyperlane = { from = "239" to = "272" }
+    add_hyperlane = { from = "240" to = "254" }
+    add_hyperlane = { from = "241" to = "251" }
+    add_hyperlane = { from = "243" to = "245" }
+    add_hyperlane = { from = "243" to = "255" }
+    add_hyperlane = { from = "243" to = "246" }
+    add_hyperlane = { from = "243" to = "271" }
+    add_hyperlane = { from = "245" to = "252" }
+    add_hyperlane = { from = "245" to = "271" }
+    add_hyperlane = { from = "246" to = "122" }
+    add_hyperlane = { from = "247" to = "257" }
+    add_hyperlane = { from = "248" to = "250" }
+    add_hyperlane = { from = "248" to = "499" }
+    add_hyperlane = { from = "249" to = "258" }
+    add_hyperlane = { from = "250" to = "497" }
+    add_hyperlane = { from = "250" to = "495" }
+    add_hyperlane = { from = "253" to = "258" }
+    add_hyperlane = { from = "255" to = "262" }
+    add_hyperlane = { from = "255" to = "246" }
+    add_hyperlane = { from = "255" to = "258" }
+    add_hyperlane = { from = "256" to = "257" }
+    add_hyperlane = { from = "258" to = "262" }
+    add_hyperlane = { from = "259" to = "492" }
+    add_hyperlane = { from = "259" to = "260" }
+    add_hyperlane = { from = "259" to = "493" }
+    add_hyperlane = { from = "260" to = "493" }
+    add_hyperlane = { from = "261" to = "265" }
+    add_hyperlane = { from = "261" to = "496" }
+    add_hyperlane = { from = "261" to = "289" }
+    add_hyperlane = { from = "263" to = "273" }
+    add_hyperlane = { from = "263" to = "282" }
+    add_hyperlane = { from = "264" to = "271" }
+    add_hyperlane = { from = "264" to = "281" }
+    add_hyperlane = { from = "265" to = "277" }
+    add_hyperlane = { from = "265" to = "280" }
+    add_hyperlane = { from = "267" to = "271" }
+    add_hyperlane = { from = "267" to = "274" }
+    add_hyperlane = { from = "269" to = "496" }
+    add_hyperlane = { from = "269" to = "68" }
+    add_hyperlane = { from = "270" to = "275" }
+    add_hyperlane = { from = "270" to = "490" }
+    add_hyperlane = { from = "273" to = "282" }
+    add_hyperlane = { from = "274" to = "281" }
+    add_hyperlane = { from = "276" to = "284" }
+    add_hyperlane = { from = "276" to = "298" }
+    add_hyperlane = { from = "277" to = "278" }
+    add_hyperlane = { from = "277" to = "280" }
+    add_hyperlane = { from = "278" to = "280" }
+    add_hyperlane = { from = "278" to = "279" }
+    add_hyperlane = { from = "279" to = "281" }
+    add_hyperlane = { from = "282" to = "283" }
+    add_hyperlane = { from = "284" to = "288" }
+    add_hyperlane = { from = "285" to = "296" }
+    add_hyperlane = { from = "287" to = "293" }
+    add_hyperlane = { from = "287" to = "312" }
+    add_hyperlane = { from = "287" to = "306" }
+    add_hyperlane = { from = "288" to = "318" }
+    add_hyperlane = { from = "288" to = "303" }
+    add_hyperlane = { from = "288" to = "315" }
+    add_hyperlane = { from = "290" to = "292" }
+    add_hyperlane = { from = "291" to = "378" }
+    add_hyperlane = { from = "291" to = "322" }
+    add_hyperlane = { from = "292" to = "297" }
+    add_hyperlane = { from = "293" to = "312" }
+    add_hyperlane = { from = "294" to = "314" }
+    add_hyperlane = { from = "296" to = "307" }
+    add_hyperlane = { from = "297" to = "300" }
+    add_hyperlane = { from = "297" to = "318" }
+    add_hyperlane = { from = "298" to = "490" }
+    add_hyperlane = { from = "298" to = "302" }
+    add_hyperlane = { from = "299" to = "319" }
+    add_hyperlane = { from = "299" to = "138" }
+    add_hyperlane = { from = "300" to = "336" }
+    add_hyperlane = { from = "300" to = "303" }
+    add_hyperlane = { from = "301" to = "317" }
+    add_hyperlane = { from = "301" to = "307" }
+    add_hyperlane = { from = "301" to = "306" }
+    add_hyperlane = { from = "303" to = "297" }
+    add_hyperlane = { from = "304" to = "316" }
+    add_hyperlane = { from = "304" to = "321" }
+    add_hyperlane = { from = "304" to = "310" }
+    add_hyperlane = { from = "305" to = "324" }
+    add_hyperlane = { from = "305" to = "313" }
+    add_hyperlane = { from = "305" to = "323" }
+    add_hyperlane = { from = "305" to = "295" }
+    add_hyperlane = { from = "306" to = "325" }
+    add_hyperlane = { from = "307" to = "313" }
+    add_hyperlane = { from = "308" to = "329" }
+    add_hyperlane = { from = "309" to = "349" }
+    add_hyperlane = { from = "310" to = "344" }
+    add_hyperlane = { from = "310" to = "321" }
+    add_hyperlane = { from = "310" to = "311" }
+    add_hyperlane = { from = "311" to = "356" }
+    add_hyperlane = { from = "312" to = "331" }
+    add_hyperlane = { from = "313" to = "317" }
+    add_hyperlane = { from = "313" to = "337" }
+    add_hyperlane = { from = "314" to = "319" }
+    add_hyperlane = { from = "315" to = "318" }
+    add_hyperlane = { from = "316" to = "327" }
+    add_hyperlane = { from = "317" to = "337" }
+    add_hyperlane = { from = "317" to = "333" }
+    add_hyperlane = { from = "320" to = "389" }
+    add_hyperlane = { from = "320" to = "400" }
+    add_hyperlane = { from = "321" to = "335" }
+    add_hyperlane = { from = "322" to = "368" }
+    add_hyperlane = { from = "322" to = "342" }
+    add_hyperlane = { from = "322" to = "350" }
+    add_hyperlane = { from = "323" to = "329" }
+    add_hyperlane = { from = "324" to = "329" }
+    add_hyperlane = { from = "325" to = "345" }
+    add_hyperlane = { from = "325" to = "333" }
+    add_hyperlane = { from = "326" to = "361" }
+    add_hyperlane = { from = "326" to = "398" }
+    add_hyperlane = { from = "326" to = "385" }
+    add_hyperlane = { from = "326" to = "419" }
+    add_hyperlane = { from = "327" to = "346" }
+    add_hyperlane = { from = "328" to = "336" }
+    add_hyperlane = { from = "328" to = "343" }
+    add_hyperlane = { from = "328" to = "338" }
+    add_hyperlane = { from = "329" to = "330" }
+    add_hyperlane = { from = "330" to = "338" }
+    add_hyperlane = { from = "332" to = "489" }
+    add_hyperlane = { from = "332" to = "344" }
+    add_hyperlane = { from = "333" to = "345" }
+    add_hyperlane = { from = "334" to = "348" }
+    add_hyperlane = { from = "334" to = "486" }
+    add_hyperlane = { from = "334" to = "488" }
+    add_hyperlane = { from = "337" to = "340" }
+    add_hyperlane = { from = "338" to = "339" }
+    add_hyperlane = { from = "339" to = "343" }
+    add_hyperlane = { from = "339" to = "352" }
+    add_hyperlane = { from = "340" to = "371" }
+    add_hyperlane = { from = "341" to = "370" }
+    add_hyperlane = { from = "341" to = "385" }
+    add_hyperlane = { from = "341" to = "373" }
+    add_hyperlane = { from = "342" to = "350" }
+    add_hyperlane = { from = "342" to = "374" }
+    add_hyperlane = { from = "344" to = "356" }
+    add_hyperlane = { from = "345" to = "360" }
+    add_hyperlane = { from = "347" to = "355" }
+    add_hyperlane = { from = "347" to = "353" }
+    add_hyperlane = { from = "347" to = "349" }
+    add_hyperlane = { from = "348" to = "487" }
+    add_hyperlane = { from = "348" to = "486" }
+    add_hyperlane = { from = "349" to = "355" }
+    add_hyperlane = { from = "349" to = "358" }
+    add_hyperlane = { from = "351" to = "352" }
+    add_hyperlane = { from = "351" to = "363" }
+    add_hyperlane = { from = "351" to = "357" }
+    add_hyperlane = { from = "351" to = "338" }
+    add_hyperlane = { from = "352" to = "357" }
+    add_hyperlane = { from = "352" to = "362" }
+    add_hyperlane = { from = "353" to = "355" }
+    add_hyperlane = { from = "355" to = "358" }
+    add_hyperlane = { from = "357" to = "363" }
+    add_hyperlane = { from = "358" to = "364" }
+    add_hyperlane = { from = "359" to = "373" }
+    add_hyperlane = { from = "360" to = "371" }
+    add_hyperlane = { from = "360" to = "374" }
+    add_hyperlane = { from = "360" to = "369" }
+    add_hyperlane = { from = "361" to = "372" }
+    add_hyperlane = { from = "361" to = "370" }
+    add_hyperlane = { from = "361" to = "354" }
+    add_hyperlane = { from = "362" to = "365" }
+    add_hyperlane = { from = "362" to = "372" }
+    add_hyperlane = { from = "363" to = "376" }
+    add_hyperlane = { from = "363" to = "365" }
+    add_hyperlane = { from = "364" to = "388" }
+    add_hyperlane = { from = "365" to = "372" }
+    add_hyperlane = { from = "366" to = "371" }
+    add_hyperlane = { from = "366" to = "389" }
+    add_hyperlane = { from = "366" to = "377" }
+    add_hyperlane = { from = "366" to = "369" }
+    add_hyperlane = { from = "367" to = "382" }
+    add_hyperlane = { from = "367" to = "402" }
+    add_hyperlane = { from = "367" to = "401" }
+    add_hyperlane = { from = "367" to = "379" }
+    add_hyperlane = { from = "368" to = "374" }
+    add_hyperlane = { from = "368" to = "342" }
+    add_hyperlane = { from = "369" to = "389" }
+    add_hyperlane = { from = "372" to = "419" }
+    add_hyperlane = { from = "373" to = "375" }
+    add_hyperlane = { from = "375" to = "390" }
+    add_hyperlane = { from = "375" to = "384" }
+    add_hyperlane = { from = "376" to = "381" }
+    add_hyperlane = { from = "377" to = "391" }
+    add_hyperlane = { from = "377" to = "379" }
+    add_hyperlane = { from = "378" to = "395" }
+    add_hyperlane = { from = "379" to = "382" }
+    add_hyperlane = { from = "380" to = "383" }
+    add_hyperlane = { from = "381" to = "387" }
+    add_hyperlane = { from = "384" to = "482" }
+    add_hyperlane = { from = "384" to = "479" }
+    add_hyperlane = { from = "384" to = "390" }
+    add_hyperlane = { from = "385" to = "398" }
+    add_hyperlane = { from = "385" to = "408" }
+    add_hyperlane = { from = "386" to = "412" }
+    add_hyperlane = { from = "386" to = "410" }
+    add_hyperlane = { from = "387" to = "402" }
+    add_hyperlane = { from = "388" to = "394" }
+    add_hyperlane = { from = "390" to = "485" }
+    add_hyperlane = { from = "391" to = "197" }
+    add_hyperlane = { from = "391" to = "400" }
+    add_hyperlane = { from = "392" to = "408" }
+    add_hyperlane = { from = "393" to = "400" }
+    add_hyperlane = { from = "393" to = "403" }
+    add_hyperlane = { from = "393" to = "404" }
+    add_hyperlane = { from = "395" to = "403" }
+    add_hyperlane = { from = "397" to = "413" }
+    add_hyperlane = { from = "397" to = "406" }
+    add_hyperlane = { from = "399" to = "475" }
+    add_hyperlane = { from = "399" to = "479" }
+    add_hyperlane = { from = "400" to = "404" }
+    add_hyperlane = { from = "401" to = "402" }
+    add_hyperlane = { from = "401" to = "412" }
+    add_hyperlane = { from = "401" to = "415" }
+    add_hyperlane = { from = "402" to = "413" }
+    add_hyperlane = { from = "405" to = "455" }
+    add_hyperlane = { from = "405" to = "453" }
+    add_hyperlane = { from = "405" to = "420" }
+    add_hyperlane = { from = "406" to = "431" }
+    add_hyperlane = { from = "406" to = "432" }
+    add_hyperlane = { from = "407" to = "409" }
+    add_hyperlane = { from = "408" to = "411" }
+    add_hyperlane = { from = "410" to = "422" }
+    add_hyperlane = { from = "411" to = "475" }
+    add_hyperlane = { from = "412" to = "416" }
+    add_hyperlane = { from = "412" to = "428" }
+    add_hyperlane = { from = "413" to = "415" }
+    add_hyperlane = { from = "413" to = "417" }
+    add_hyperlane = { from = "414" to = "434" }
+    add_hyperlane = { from = "414" to = "453" }
+    add_hyperlane = { from = "415" to = "416" }
+    add_hyperlane = { from = "415" to = "417" }
+    add_hyperlane = { from = "416" to = "428" }
+    add_hyperlane = { from = "416" to = "417" }
+    add_hyperlane = { from = "417" to = "432" }
+    add_hyperlane = { from = "418" to = "477" }
+    add_hyperlane = { from = "420" to = "426" }
+    add_hyperlane = { from = "420" to = "456" }
+    add_hyperlane = { from = "420" to = "455" }
+    add_hyperlane = { from = "421" to = "474" }
+    add_hyperlane = { from = "421" to = "478" }
+    add_hyperlane = { from = "423" to = "432" }
+    add_hyperlane = { from = "423" to = "425" }
+    add_hyperlane = { from = "423" to = "429" }
+    add_hyperlane = { from = "424" to = "430" }
+    add_hyperlane = { from = "425" to = "441" }
+    add_hyperlane = { from = "425" to = "438" }
+    add_hyperlane = { from = "425" to = "436" }
+    add_hyperlane = { from = "426" to = "457" }
+    add_hyperlane = { from = "426" to = "437" }
+    add_hyperlane = { from = "426" to = "456" }
+    add_hyperlane = { from = "427" to = "463" }
+    add_hyperlane = { from = "427" to = "430" }
+    add_hyperlane = { from = "427" to = "461" }
+    add_hyperlane = { from = "427" to = "448" }
+    add_hyperlane = { from = "429" to = "438" }
+    add_hyperlane = { from = "430" to = "448" }
+    add_hyperlane = { from = "432" to = "429" }
+    add_hyperlane = { from = "434" to = "453" }
+    add_hyperlane = { from = "435" to = "439" }
+    add_hyperlane = { from = "435" to = "471" }
+    add_hyperlane = { from = "435" to = "473" }
+    add_hyperlane = { from = "436" to = "440" }
+    add_hyperlane = { from = "436" to = "441" }
+    add_hyperlane = { from = "437" to = "457" }
+    add_hyperlane = { from = "437" to = "463" }
+    add_hyperlane = { from = "438" to = "442" }
+    add_hyperlane = { from = "440" to = "476" }
+    add_hyperlane = { from = "440" to = "467" }
+    add_hyperlane = { from = "442" to = "424" }
+    add_hyperlane = { from = "443" to = "468" }
+    add_hyperlane = { from = "443" to = "466" }
+    add_hyperlane = { from = "444" to = "463" }
+    add_hyperlane = { from = "444" to = "462" }
+    add_hyperlane = { from = "444" to = "457" }
+    add_hyperlane = { from = "444" to = "461" }
+    add_hyperlane = { from = "445" to = "454" }
+    add_hyperlane = { from = "445" to = "452" }
+    add_hyperlane = { from = "446" to = "460" }
+    add_hyperlane = { from = "446" to = "459" }
+    add_hyperlane = { from = "447" to = "450" }
+    add_hyperlane = { from = "448" to = "464" }
+    add_hyperlane = { from = "449" to = "464" }
+    add_hyperlane = { from = "449" to = "465" }
+    add_hyperlane = { from = "450" to = "466" }
+    add_hyperlane = { from = "451" to = "458" }
+    add_hyperlane = { from = "452" to = "454" }
+    add_hyperlane = { from = "452" to = "453" }
+    add_hyperlane = { from = "454" to = "455" }
+    add_hyperlane = { from = "455" to = "456" }
+    add_hyperlane = { from = "458" to = "462" }
+    add_hyperlane = { from = "459" to = "460" }
+    add_hyperlane = { from = "461" to = "462" }
+    add_hyperlane = { from = "469" to = "473" }
+    add_hyperlane = { from = "470" to = "471" }
+    add_hyperlane = { from = "470" to = "473" }
+    add_hyperlane = { from = "471" to = "474" }
+    add_hyperlane = { from = "471" to = "473" }
+    add_hyperlane = { from = "472" to = "478" }
+    add_hyperlane = { from = "475" to = "478" }
+    add_hyperlane = { from = "475" to = "480" }
+    add_hyperlane = { from = "476" to = "477" }
+    add_hyperlane = { from = "479" to = "480" }
+    add_hyperlane = { from = "480" to = "481" }
+    add_hyperlane = { from = "480" to = "482" }
+    add_hyperlane = { from = "481" to = "483" }
+    add_hyperlane = { from = "482" to = "483" }
+    add_hyperlane = { from = "482" to = "484" }
+    add_hyperlane = { from = "483" to = "484" }
+    add_hyperlane = { from = "485" to = "487" }
+    add_hyperlane = { from = "486" to = "487" }
+    add_hyperlane = { from = "488" to = "489" }
+    add_hyperlane = { from = "492" to = "493" }
+    add_hyperlane = { from = "492" to = "494" }
+    add_hyperlane = { from = "493" to = "494" }
+    add_hyperlane = { from = "494" to = "498" }
+    add_hyperlane = { from = "494" to = "499" }
+    add_hyperlane = { from = "495" to = "498" }
+    add_hyperlane = { from = "495" to = "68" }
+    add_hyperlane = { from = "495" to = "496" }
+    add_hyperlane = { from = "24" to = "408" }
+    add_hyperlane = { from = "58" to = "60" }
+    add_hyperlane = { from = "75" to = "76" }
+    add_hyperlane = { from = "126" to = "247" }
+    add_hyperlane = { from = "126" to = "244" }
+    add_hyperlane = { from = "146" to = "294" }
+    add_hyperlane = { from = "147" to = "294" }
+    add_hyperlane = { from = "148" to = "319" }
+    add_hyperlane = { from = "171" to = "378" }
+    add_hyperlane = { from = "177" to = "407" }
+    add_hyperlane = { from = "186" to = "395" }
+    add_hyperlane = { from = "229" to = "450" }
+    add_hyperlane = { from = "235" to = "376" }
+    add_hyperlane = { from = "248" to = "498" }
+    add_hyperlane = { from = "251" to = "249" }
+    add_hyperlane = { from = "253" to = "289" }
+    add_hyperlane = { from = "262" to = "264" }
+    add_hyperlane = { from = "268" to = "263" }
+    add_hyperlane = { from = "306" to = "293" }
+    add_hyperlane = { from = "309" to = "347" }
+    add_hyperlane = { from = "341" to = "359" }
+    add_hyperlane = { from = "364" to = "383" }
+    add_hyperlane = { from = "364" to = "380" }
+    add_hyperlane = { from = "488" to = "486" }
+    add_hyperlane = { from = "491" to = "490" }
+    add_hyperlane = { from = "2" to = "470" }
+    add_hyperlane = { from = "40" to = "491" }
+    add_hyperlane = { from = "74" to = "260" }
+    add_hyperlane = { from = "75" to = "499" }
+    add_hyperlane = { from = "82" to = "253" }
+    add_hyperlane = { from = "179" to = "409" }
+    add_hyperlane = { from = "251" to = "253" }
+    add_hyperlane = { from = "262" to = "84" }
+    add_hyperlane = { from = "358" to = "388" }
+    add_hyperlane = { from = "377" to = "389" }
+    add_hyperlane = { from = "388" to = "383" }
 }

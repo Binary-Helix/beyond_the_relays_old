@@ -13,10 +13,51 @@ sys_ialessa_init = {
 		radius = 55
 	}
 
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		closest_system = {
+			limit = { has_star_flag = mec_asari_parnitha_system }
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	flags = { mec_asari_ialessa_system custom_system }
+
 	planet = {
 		name = "Ialessa"
 		class = "pc_g_star"
 		size = 30
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_3
+						
+			# Nebula Effect
+			
+			If = {
+				Limit = { is_inside_nebula = no }
+				create_ambient_object = {
+					type = "nebula_2"
+					entity_offset_height = -5
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -26,6 +67,10 @@ sys_ialessa_init = {
 		orbit_angle = 65
 		size = 16
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 
 	planet = {
@@ -35,6 +80,9 @@ sys_ialessa_init = {
 		orbit_angle = 170
 		size = 18
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}		
 	}
 	
 	planet = {
@@ -43,6 +91,11 @@ sys_ialessa_init = {
 		orbit_distance = 22
 		orbit_angle = 35
 		size = 35
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_mec_asari_zylium_eezo
+		}		
 	}
 	
 	planet = {
@@ -52,6 +105,10 @@ sys_ialessa_init = {
 		orbit_angle = 150
 		size = 4
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
@@ -61,6 +118,10 @@ sys_ialessa_init = {
 		orbit_angle = 20
 		size = 25
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}	
 }
 
@@ -68,10 +129,51 @@ sys_orisoni_init = {
 	name = "Orisoni"
 	class = "sc_g"
 
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		closest_system = {
+			limit = { has_star_flag = mec_asari_parnitha_system }
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	flags = { mec_asari_orisoni_system custom_system }
+
 	planet = {
 		name = "Orisoni"
 		class = pc_g_star
 		size = 20
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_2
+						
+			# Nebula Effect
+			
+			If = {
+				Limit = { is_inside_nebula = no }
+				create_ambient_object = {
+					type = "nebula_2"
+					entity_offset_height = -5
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -81,6 +183,10 @@ sys_orisoni_init = {
 		orbit_angle = 60
 		size = 15
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
@@ -90,6 +196,9 @@ sys_orisoni_init = {
 		orbit_angle = 90
 		size = 25
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}		
 	}
 	
 	planet = {
@@ -99,6 +208,10 @@ sys_orisoni_init = {
 		orbit_angle = 130
 		size = 14
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
@@ -109,6 +222,11 @@ sys_orisoni_init = {
 		size = 36
 		has_ring = yes
         satellite_naming_policy = lower_case_latin_letters
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_trade_value_3
+		}		
         moon = {
             count = { min = 2 max = 3 }
 			class = random
@@ -167,6 +285,28 @@ sys_parnitha_init = {
 		orbit_angle = 1
 		size = 26
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_5
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_mining_target
+						
+			# Nebula Effect
+			
+			create_ambient_object = {
+				type = "rare_nebula_1"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -176,6 +316,13 @@ sys_parnitha_init = {
 		orbit_angle = 15
 		size = 10
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_physics_3
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_research_target
+		}		
 	}
 	
 	planet = {
@@ -192,26 +339,26 @@ sys_parnitha_init = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			# mec_asari_generate_thessia_deposits = yes
-			# mec_asari_setup_origin_homeworld = yes
+			mec_asari_generate_thessia_deposits = yes
+			mec_asari_setup_origin_homeworld = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "asari_republics" }
-			# 	save_event_target_as = parnithaOwner
-			# 	save_global_event_target_as = asari_republics
-			# 	species = { save_global_event_target_as = asariSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:asariSpecies }
-			# }
+			random_country = {
+				limit = { has_country_flag = "asari_republics" }
+				save_event_target_as = parnithaOwner
+				save_global_event_target_as = asari_republics
+				species = { save_global_event_target_as = asariSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:asariSpecies }
+			}
 			
-			# if = {
-			# 	limit = {
-			# 		NOT = { exists = event_target:mec_asari_planet_thessia }
-			# 	}
-			# 	save_global_event_target_as = mec_asari_planet_thessia
-			# }
+			if = {
+				limit = {
+					NOT = { exists = event_target:mec_asari_planet_thessia }
+				}
+				save_global_event_target_as = mec_asari_planet_thessia
+			}
 		}
 	}
     
@@ -223,6 +370,13 @@ sys_parnitha_init = {
 		orbit_angle = 70
 		size = 15
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_5
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_mining_target
+		}		
 	}
 
 	planet = {
@@ -231,6 +385,13 @@ sys_parnitha_init = {
 		orbit_distance = 25
 		orbit_angle = { min = 40 max = 100 }
 		size = 1
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_5
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_mining_target
+		}		
 	}
 	
 	planet = {
@@ -240,6 +401,12 @@ sys_parnitha_init = {
 		orbit_angle = -60
 		size = 33
 		has_ring = yes
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_engineering_2
+			set_planet_flag = starting_deposit
+		}		
 	}
 	
 	planet = {
@@ -249,6 +416,13 @@ sys_parnitha_init = {
 		orbit_angle = -100
 		size = 35
 		has_ring = yes
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_5
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+		}		
 	}
 	
 	planet = {
@@ -259,12 +433,53 @@ sys_parnitha_init = {
 		size = 25
 		has_ring = no
         satellite_naming_policy = lower_case_latin_letters
-        moon = {
-            count = { min = 1 max = 3 }
-            class = random
-            orbit_distance = 8
-            orbit_angle = { min = 90 max = 270 }
-        }
+		init_effect = {
+			clear_deposits = yes
+			prevent_anomaly = yes
+		}		
+		moon = {
+			name = "Tevura I"
+			count = 1
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 13
+			size = 2
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Tevura II"
+			count = 1
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 0
+			size = 3
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Tevura III"
+			count = 1
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 7
+			size = 4
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_minerals_3
+				set_planet_flag = starting_deposit
+			}
+		}
     }
     
 	init_effect = { 
@@ -282,6 +497,25 @@ sys_tomaros_init = {
 	name = "Tomaros"
 	class = sc_g
 
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		closest_system = {
+			limit = { has_star_flag = mec_asari_parnitha_system }
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}	
+
+		flags = { mec_asari_tomaros_system custom_system }
+
 	planet = {
 		name = "Tomaros"
 		class = pc_g_star
@@ -289,6 +523,29 @@ sys_tomaros_init = {
 		orbit_angle = 1
 		size = 16
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_4
+						
+			# Nebula Effect
+			
+			If = {
+				Limit = { is_inside_nebula = no }
+				create_ambient_object = {
+					type = "nebula_2"
+					entity_offset_height = -5
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -298,6 +555,9 @@ sys_tomaros_init = {
 		orbit_angle = 110
 		size = 21
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}		
 	}
 	
 	planet = {
@@ -307,6 +567,10 @@ sys_tomaros_init = {
 		orbit_angle = -160
 		size = 34
 		has_ring = yes
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
@@ -317,12 +581,23 @@ sys_tomaros_init = {
 		size = 24
 		has_ring = no
         satellite_naming_policy = lower_case_latin_letters
-        moon = {
-            count = { min = 2 max = 6 }
-            class = random
-            orbit_distance = 8
-            orbit_angle = { min = 90 max = 270 }
-        }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
+		moon = {
+			name = "Pronoia I"
+			count = 1
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 14
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_minerals_4
+			}
+		}
 	}
 	
 	planet = {
@@ -332,6 +607,10 @@ sys_tomaros_init = {
 		orbit_angle = 100
 		size = 26
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
     
 	init_effect = { 
@@ -354,6 +633,24 @@ sys_vernio_init = {
 		radius = 90
 	}
 
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		closest_system = {
+			limit = { has_star_flag = mec_asari_parnitha_system }
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	flags = { mec_asari_vernio_system custom_system }
+
 	planet = {
 		name = "Vernio"
 		class = pc_f_star
@@ -361,6 +658,29 @@ sys_vernio_init = {
 		orbit_angle = 1
 		size = 20
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_3
+						
+			# Nebula Effect
+			
+			If = {
+				Limit = { is_inside_nebula = no }
+				create_ambient_object = {
+					type = "nebula_4"
+					entity_offset_height = -5
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -370,6 +690,10 @@ sys_vernio_init = {
 		orbit_angle = -90
 		size = 25
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
@@ -379,6 +703,10 @@ sys_vernio_init = {
 		orbit_angle = 70
 		size = 16
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
@@ -388,6 +716,10 @@ sys_vernio_init = {
 		orbit_angle = 50
 		size = 12
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 
 	planet = {
@@ -398,17 +730,45 @@ sys_vernio_init = {
 		size = 33
 		has_ring = no
         satellite_naming_policy = lower_case_latin_letters
-        moon = {
-            count = { min = 1 max = 5 }
-            class = random
-            orbit_distance = 8
-            orbit_angle = { min = 90 max = 270 }
-        }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			add_deposit = d_mec_asari_tritogenith_collision
+		}		
+		moon = {
+			name = "Tritogenith I"
+			count = 1
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 15
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Tritogenith II"
+			count = 1
+			class = random_non_colonizable
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 0
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
 		moon = {
 			name = "Mavote"
 			class = "pc_frozen"
 			orbit_distance = 8
 			size = 10
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}			
 		}	
 	}
 	
@@ -419,13 +779,89 @@ sys_vernio_init = {
 		orbit_angle = -135
 		size = 25
 		has_ring = yes
-        satellite_naming_policy = lower_case_latin_letters		
-        moon = {
-            count = { min = 4 max = 5 }
-            class = random
-            orbit_distance = 8
-            orbit_angle = { min = 90 max = 270 }
-        }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_7
+		}
+		
+		moon = {
+			name = "Polissa I"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 13
+			size = 2
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Polissa VI"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 0
+			size = 1
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Polissa XI"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 4
+			size = 2
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Polissa XV"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 0
+			size = 3
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Polissa XX"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 4
+			size = 2
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
+		
+		moon = {
+			name = "Polissa XXVI"
+			class = random_non_colonizable
+			orbit_angle = { min = 45 max = 270 }
+			orbit_distance = 0
+			size = 3
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+			}
+		}
 	}
 }
 
@@ -1151,22 +1587,50 @@ sys_widow_init = {
     name = "Widow"
     class = "sc_b_giant"
 
-    planet = {
-	    name = "Widow"
-        class = "pc_b_giant_star"
-        size = 30
-        orbit_distance = 0
-        orbit_angle = 180
-    }
+	flags = { widow_system }
 
     planet = {
-        name = "Citadel"
-        class = pc_habitat
-        orbit_distance = 150
-        orbit_angle = 144
-        size = 20
-		entity = "btr_citadel_entity"
-        }       
+	    name = "Widow"
+        class = "pc_b_star"
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+	planet = {
+		name = "Citadel"
+		class = pc_citadel
+		orbit_distance = 100
+		orbit_angle = 215
+		size = 12
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		flags = { btr_citadel special_planet }
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_entity = {
+				entity = "mass_effect_citadel_01_game_entity"
+			}
+			add_modifier = {
+				modifier = "unexplored_citadel" # change to partially terraformed
+				days = -1
+			}
+			generate_btr_citadel_districts = yes
+			set_planet_flag = megastructure
+			set_planet_flag = habitat
+			clear_deposits = yes
+			add_deposit = d_citadel_tower
+			add_deposit = d_presidium
+			add_deposit = d_wards
+			add_deposit = d_citadel_csec
+			add_deposit = d_keeper_workshops
+			add_deposit = d_huerta_memorial_hospital
+			add_deposit = d_purgatory_bar
+			set_name = "The Citadel"
+		}
+	}   
 
 
 	init_effect = { 
@@ -1420,21 +1884,21 @@ sys_phontes_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			# generate_MEG_major_empire_start_buildings = yes
+			generate_btr_major_empire_start_buildings = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "courts_of_dekuuna" }
-			# 	save_event_target_as = phontesOwner
-			# 	save_global_event_target_as = courts_of_dekuuna
-			# 	species = { save_global_event_target_as = elcorSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:elcorSpecies }
-			# }
-			# set_name = "Dekuuna"
-			# add_deposit = d_dekuuna_unovasereng
-			# add_deposit = d_dekuuna_forests
+			random_country = {
+				limit = { has_country_flag = "courts_of_dekuuna" }
+				save_event_target_as = phontesOwner
+				save_global_event_target_as = courts_of_dekuuna
+				species = { save_global_event_target_as = elcorSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:elcorSpecies }
+			}
+			set_name = "Dekuuna"
+			add_deposit = d_dekuuna_unovasereng
+			add_deposit = d_dekuuna_forests
 		}		
         moon = {
             name = "Oltan"

@@ -1,0 +1,279 @@
+
+namespace = btr_mars
+
+# On_action event - hidden
+country_event = {
+	id = btr_mars.0
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = "systems_alliance"
+		any_owned_planet = {
+			has_planet_flag = "btr_systems_alliance_planet_mars"
+			is_colony = yes
+		}
+		NOT = {
+			has_country_flag = "mars_digsite_event"
+		}
+	}
+
+	immediate = {
+		country_event = {
+			id = btr_mars.1
+			days = 720 random = 220
+		}
+	}
+}
+
+# Expedition proposal pop up
+country_event = {
+	id = btr_mars.1
+	title = btr_mars.1.name
+	desc = btr_mars.1.desc
+	picture = btr_GFX_evt_mars_1
+	is_triggered_only = yes
+
+	trigger = {
+		has_country_flag = "systems_alliance"
+		any_owned_planet = {
+			has_planet_flag = "btr_systems_alliance_planet_mars"
+			is_colony = yes
+		}
+		NOT = {
+			has_country_flag = "mars_digsite_event"
+		}
+	}
+
+	immediate = {
+		set_country_flag = "mars_digsite_event"
+		random_owned_planet = {
+			limit = { has_planet_flag = "btr_systems_alliance_planet_mars" }
+			save_global_event_target_as = btr_mars_planet
+		}
+		random_system_within_border = {
+			limit = {
+				any_system_planet = {
+					has_planet_flag = "btr_systems_alliance_planet_earth"
+				}
+			}
+			save_global_event_target_as = btr_sol_system
+		}
+	}
+
+	option = {
+		name = btr_mars.1.a # yes
+		ai_chance = {
+			factor = 100
+		}
+		event_target:btr_mars_planet = {
+			create_archaeological_site = mars_dig_site
+		}
+	}
+
+	option = {
+		name = btr_mars.1.b # no
+		ai_chance = {
+			factor = 0
+		}		
+	}
+}
+
+# Dig Site 1 # todo add sound effects
+fleet_event = {
+	id = btr_mars.2
+	title = btr_mars.2.name
+	desc = btr_mars.2.desc
+	picture = btr_GFX_evt_mars_arrival
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.2.a
+	}
+}
+
+# Dig Site 2
+fleet_event = {
+	id = btr_mars.3
+	title = btr_mars.2.name
+	desc = btr_mars.3.desc
+	picture = btr_GFX_evt_mars_vehicle
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.3.a
+	}
+}
+
+# Dig Site 3
+fleet_event = {
+	id = btr_mars.4
+	title = btr_mars.2.name
+	desc = btr_mars.4.desc
+	picture = btr_GFX_evt_mars_crater
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.4.a
+	}
+}
+
+# Dig Site 4
+fleet_event = {
+	id = btr_mars.5
+	title = btr_mars.2.name
+	desc = btr_mars.5.desc
+	picture = btr_GFX_evt_mars_alien_corridor
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.5.a
+	}
+}
+
+# Dig Site 5
+fleet_event = {
+	id = btr_mars.6
+	title = btr_mars.2.name
+	desc = btr_mars.6.desc
+	picture = btr_GFX_evt_mars_prothean
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.6.a
+		owner = {
+			add_resource = {
+				minor_artifacts = 5
+			}
+		}
+	}
+}
+
+# Dig Site 6
+fleet_event = {
+	id = btr_mars.7
+	title = btr_mars.2.name
+	desc = btr_mars.7.desc
+	picture = btr_GFX_evt_mars_alien_core
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.7.a
+	}
+}
+
+# Dig Site 7
+fleet_event = {
+	id = btr_mars.8
+	title = btr_mars.2.name
+	desc = btr_mars.8.desc
+	picture = btr_GFX_evt_mars_alien_hangar
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.8.a
+		owner = {
+			add_resource = {
+				physics_research = 250
+			}
+		}
+	}
+}
+
+# Dig Site 8
+fleet_event = {
+	id = btr_mars.9
+	title = btr_mars.2.name
+	desc = btr_mars.9.desc
+	picture = btr_GFX_evt_relay_inactive
+	archaeology = yes
+	is_triggered_only = yes
+	immediate = {
+		fromfrom = { set_site_progress_locked = yes }
+	}
+	after = {
+		fromfrom = { set_site_progress_locked = no }
+	}
+	option = {
+		name = btr_mars.9.a
+		owner = {
+			add_resource = {
+				physics_research = 2500
+				engineering_research = 2500
+			}
+			if = {
+				limit = { NOT = { has_technology = tech_hyper_drive_2 } }
+				give_technology = {
+					tech = tech_hyper_drive_2
+				}
+			}	
+			if = {
+				limit = { NOT = { has_technology = tech_fusion_power } }
+				give_technology = {
+					tech = tech_fusion_power
+				}
+			}
+			if = {
+				limit = { NOT = { has_technology = tech_gateway_activation } }
+				give_technology = {
+					tech = tech_gateway_activation
+				}
+			}	
+		}
+		owner = {
+			random_owned_planet = {
+				limit = { has_planet_flag = btr_systems_alliance_planet_mars }
+				add_deposit = d_mars_archive
+			}
+		}
+		hidden_effect = {
+			owner = {
+				country_event = {
+					id = btr_pluto.1
+					days = 10
+				}
+			}
+		}	
+	}
+}

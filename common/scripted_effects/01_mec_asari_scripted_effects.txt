@@ -1,0 +1,676 @@
+#	Example:
+#
+#	example_effect = {
+#		add_energy = -100
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+# Replaces a leader's Resilient Trait with something more useful
+# This = Leader
+mec_asari_leader_trait_replace_resilient = {
+	remove_trait = leader_trait_resilient
+
+	add_trait = mec_asari_leader_trait_farsighted
+}
+
+# Clears randomly generated features and replaces them with unique Illium features
+# This = Planet
+mec_asari_generate_illium_deposits = {
+	clear_deposits = yes
+	clear_blockers = yes
+	
+	add_deposit = d_mec_asari_nosastra_metropolis
+	add_deposit = d_mec_asari_manjoros_plaza
+	add_deposit = d_mec_asari_saefos_valley
+	add_deposit = d_mec_asari_sulsara_oasis
+	add_deposit = d_mec_asari_nosedana_vertical
+	add_deposit = d_mec_asari_kyatari_thanoris
+	add_deposit = d_mec_asari_sedera_canyon
+	add_deposit = d_mec_asari_azarbilhos_industrial
+	add_deposit = d_mec_asari_arcology_unfinished
+	add_deposit = d_mec_asari_nosparnalo_quarantine
+	add_deposit = d_mec_asari_makeara_slums
+	add_deposit = d_mec_asari_esiyo_jungle
+	add_deposit = d_mec_asari_sub_equatorial_land
+	add_deposit = d_mec_asari_tartaos_fissures
+	add_deposit = d_mec_asari_equatorial_hostile
+}
+
+# Clears randomly generated features and replaces them with unique Illium features
+# This = Planet
+mec_asari_generate_thessia_deposits = {
+	clear_deposits = yes
+	clear_blockers = yes
+	
+	add_deposit = d_mec_asari_republic_armali	
+	add_deposit = d_mec_asari_nosdesera
+	add_deposit = d_mec_asari_serrice_university
+	add_deposit = d_mec_asari_cresyl_plateau
+	add_deposit = d_mec_asari_askasian_mountains	
+	add_deposit = d_mec_asari_pulian_delta
+	add_deposit = d_mec_asari_senecan_lakes
+	add_deposit = d_mec_asari_irssal_tea
+	#add_deposit = d_mec_asari_athame_temple
+	add_deposit = d_mec_asari_eezo_deposits
+	add_deposit = d_mec_asari_thessia_net
+	add_deposit = d_mec_asari_zalis_spill
+	add_deposit = d_mec_asari_yisrin_devastated
+}
+
+# Sets up the asari homeworlds, used instead of the vanilla generate_start_buildings_and_districts
+# Root = Country
+# This = Planet
+mec_asari_setup_origin_homeworld = {
+	if = {
+		limit = { 
+			has_planet_flag = mec_asari_planet_illium
+		}
+
+		while = {
+			count = 4
+			add_district = { district_type = district_city ignore_cap = yes }
+		}
+		while = {
+			count = 2
+			add_district = { district_type = district_industrial ignore_cap = yes }
+		}
+		while = {
+			count = 2
+			add_district = { district_type = district_farming ignore_cap = yes }
+		}
+		while = {
+			count = 2
+			add_district = { district_type = district_mining ignore_cap = yes }
+		}
+		while = {
+			count = 1
+			add_district = { district_type = district_generator ignore_cap = yes }
+		}
+
+		# 3 jobs
+		add_building = building_capital
+
+		# 2 jobs
+		add_building = building_bureaucratic_1
+
+		# 2 jobs
+		add_building = building_research_lab_1
+
+		# 5 jobs
+		add_building = building_commercial_zone
+
+		owner = {
+			add_resource = { food = 200 }
+		}
+	}
+	else_if = {
+		limit = { 
+			has_planet_flag = mec_asari_planet_thessia
+		}
+		while = {
+			count = 3
+			add_district = { district_type = district_city ignore_cap = yes }
+		}
+		while = {
+			count = 2
+			add_district = { district_type = district_industrial ignore_cap = yes }
+		}
+		while = {
+			count = 2
+			add_district = { district_type = district_farming ignore_cap = yes }
+		}
+		while = {
+			count = 2
+			add_district = { district_type = district_mining ignore_cap = yes }
+		}
+		while = {
+			count = 2
+			add_district = { district_type = district_generator ignore_cap = yes }
+		}
+
+		# 3 jobs
+		add_building = building_capital
+
+		# 2 jobs
+		add_building = building_bureaucratic_1
+
+		# 2 jobs
+		add_building = building_research_lab_1
+
+		# 5 jobs
+		add_building = building_commercial_zone
+
+		owner = {
+			add_resource = { food = 200 }
+		}
+	}
+}
+
+# Sets up specific non-homeworld planets with preset deposits, modifiers and, if applicable, colonies
+# Root = Country
+# This = System
+mec_asari_setup_origin_planets = {
+	random_system_planet = {
+		limit = { has_planet_flag = mec_asari_planet_sanves }
+		set_planet_flag = colony_event
+		clear_planet_modifiers = yes
+		clear_deposits = yes
+	
+		add_modifier = {
+			modifier = natural_beauty 
+			days = -1
+		}
+		add_deposit = d_mec_asari_sanves_etheai_arcologies
+		add_deposit = d_mec_asari_sanves_tesanda_caldera
+		add_deposit = d_mec_asari_sanves_ulemas_forests
+		add_deposit = d_lush_jungle
+		add_deposit = d_tropical_island
+		add_deposit = d_teeming_reef
+		add_deposit = d_prosperous_mesa
+		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs
+
+		create_colony = {
+			owner = root
+		}
+
+		add_district = district_city	#1
+		add_district = district_farming	#2
+		add_district = district_farming	#2
+		add_building = building_capital	#3
+		add_building = building_bureaucratic_1	#2
+			
+		while = {
+			limit = { num_pops < 10 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+
+		set_name = "Sanves"
+	}
+
+	random_system_planet = {
+		limit = { has_planet_flag = mec_asari_planet_niacal }
+		set_planet_flag = colony_event
+		clear_planet_modifiers = yes
+		clear_deposits = yes
+
+		add_modifier = {
+			modifier = mec_asari_mod_planet_niacal_atmosphere
+			days = -1
+		}
+		add_deposit = d_mec_asari_niacal_aurolis
+		add_deposit = d_mec_asari_niacal_jungles
+		add_deposit = d_mec_asari_niacal_tumilasal_delta
+		add_deposit = d_bountiful_plains
+		add_deposit = d_bountiful_plains
+		add_deposit = d_underwater_vent
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_veiny_cliffs
+
+		create_colony = {
+			owner = root
+		}
+
+		add_district = district_farming	#2
+		add_district = district_farming	#2
+		add_building = building_capital	#3
+		add_building = building_research_lab_1	#2
+		
+		while = {
+			limit = { num_pops < 8 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+
+		set_name = "Niacal"
+	}
+		
+	random_system_planet = {
+		limit = { has_planet_flag = mec_asari_planet_lusia }
+		set_planet_flag = colony_event
+		clear_planet_modifiers = yes
+		clear_deposits = yes
+	
+		add_deposit = d_mec_asari_lusia_monoi_metropolis
+		add_deposit = d_mec_asari_lusia_tatenis_chain
+		add_deposit = d_mec_asari_lusia_noskonetis
+		add_deposit = d_mec_asari_lusia_shali_desert
+		add_deposit = d_tempestous_mountain
+		add_deposit = d_rugged_woods
+		add_deposit = d_green_hills
+		add_deposit = d_fertile_lands
+
+		create_colony = {
+			owner = root
+		}
+	
+		add_district = district_city	#1
+		add_district = district_industrial	#2
+		add_district = district_industrial	#2
+		add_district = district_mining	#2
+		add_district = district_mining	#2
+		add_building = building_capital	#3
+		add_building = building_factory_1	#1
+			
+		while = {
+			limit = { num_pops < 14 }
+			create_pop = {
+				species = owner_main_species
+				ethos = random
+			}
+		}
+
+		set_name = "Lusia"
+	}
+
+	random_system_planet = {
+		limit = { has_planet_flag = mec_asari_planet_tarith }
+		set_planet_flag = colony_event
+		clear_planet_modifiers = yes
+		clear_deposits = yes
+
+		add_deposit = d_mec_asari_tarith_flora
+		add_deposit = d_mec_asari_tarith_toxic_platinum
+		add_deposit = d_mec_asari_tarith_toxic_klixos
+		add_deposit = d_fungal_caves
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_rich_mountain
+		add_deposit = d_veiny_cliffs
+		add_deposit = d_geothermal_vent
+		add_deposit = d_underwater_vent
+
+		set_name = "Tarith"
+	}
+
+	random_system_planet = {
+		limit = { has_planet_flag = mec_asari_planet_helyme }
+		set_planet_flag = colony_event
+		clear_planet_modifiers = yes
+		clear_deposits = yes
+		
+		add_modifier = {
+			modifier = hazardous_weather 
+			days = -1
+		}
+		add_deposit = d_mec_asari_helyme_arthenn_ruins
+		add_deposit = d_mec_asari_helyme_terlanis_mountain
+		add_deposit = d_mec_asari_helyme_editos_ocean
+		add_deposit = d_ruined_arcology
+		add_deposit = d_ruined_arcology
+		add_deposit = d_ruined_arcology
+		add_deposit = d_frozen_gas_lake
+		add_deposit = d_tempestous_mountain
+		add_deposit = d_rich_mountain
+
+		set_name = "Helyme"
+	}
+
+	random_system_planet = {
+		limit = { has_planet_flag = mec_asari_planet_epho }
+		set_planet_flag = colony_event
+		clear_planet_modifiers = yes
+		clear_deposits = yes
+
+		add_modifier = {
+			modifier = mec_asari_mod_planet_epho_atmosphere
+			days = -1
+		}
+		add_deposit = d_mec_asari_epho_arthenn_traces
+		add_deposit = d_mec_asari_epho_zapote_caves
+		add_deposit = d_mineral_fields
+		add_deposit = d_mineral_fields
+		add_deposit = d_mineral_fields
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_underwater_vent
+		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs
+
+		set_name = "Epho"
+	}
+}
+
+# Puts orbital stations over all valid planets in the system
+# Root = Country
+# This = Planet
+mec_asari_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = root
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = root
+		}
+	}
+}
+
+mec_asari_generate_advanced_thessia = {
+	add_district = district_city
+	add_district = district_city
+	add_district = district_city
+	add_district = district_city
+	add_district = district_city
+	add_district = district_mining
+	add_district = district_generator
+	add_district = district_farming
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_factory_1
+	add_building = building_holo_theatres
+	add_building = building_precinct_house
+	add_building = building_commercial_zone
+	add_building = building_commercial_zone
+
+	while = {
+		limit = { num_pops < 57 }
+		create_pop = {
+			species = owner_main_species
+			ethos = random
+		}
+	}
+
+	owner = {
+		create_fleet = {
+			effect = {
+				set_owner = prev
+				create_ship = {
+					name = random
+					random_existing_design = science
+				}
+				set_fleet_stance = evasive
+				set_location = prev.capital_scope.star
+				owner = {
+					create_leader = {
+						class = scientist
+						sub_type = survey
+						name = random
+						species = owner_main_species
+					}
+				}
+				set_leader = last_created_leader
+			}
+		}
+	}
+}
+
+# Calculates the chance of a new Gynogenetic pop developing the Ardat-Yakshi condition
+# This = Planet
+# FromFrom = Pop
+# From = Country
+mec_asari_evaluate_ardatyakshi_chance = {
+	random_list = {
+		0 = {
+			# Lack of genetic diversity increases the odds of Ardat-Yakshi
+			modifier = {
+				add = 1	# ~0.54%
+				pop_percentage = {
+					percentage >= 0.2
+					limit = { 
+						is_same_species = fromfrom
+					}
+				}
+			}
+			modifier = {
+				add = 2	# ~1.60%
+				pop_percentage = {
+					percentage >= 0.4
+					limit = { 
+						is_same_species = fromfrom
+					}
+				}
+			}
+			modifier = {
+				add = 3	# ~3.14%
+				pop_percentage = {
+					percentage >= 0.6
+					limit = { 
+						is_same_species = fromfrom
+					}
+				}
+			}
+			modifier = {
+				add = 4	# ~5.13%
+				pop_percentage = {
+					percentage >= 0.8
+					limit = { 
+						is_same_species = fromfrom
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~7.50%
+				pop_percentage = {
+					percentage >= 1.0
+					limit = { 
+						is_same_species = fromfrom
+					}
+				}
+			}
+			# If TRUE, add the Ardat-Yakshi modifier to the new pop
+			fromfrom = {
+				add_modifier = {
+					modifier = "mec_asari_mod_pop_ardatyakshi"
+					#years = 500
+					days = -1
+				}
+			}
+		}
+		185 = {
+			# do nothing
+		}
+	}
+}
+
+# Calculates the chance of a Gynogenetic species taking over the newly grown pop
+# This = Planet
+# FromFrom = Pop
+# From = Country
+mec_asari_evaluate_flip_chance = {
+	# A safeguard to prevent multiple gynogenetic species from evaluating as one (it is still a negative trait, the positive effect shouldn't occur too often)
+	# Pick one gynogenetic pop and base the calculations only around its species
+	random_owned_pop = {
+		limit = {
+			NOT = { is_same_species = fromfrom }
+			pop_has_trait = mec_asari_trait_core
+			has_population_control = no
+		}
+		save_event_target_as = mec_asari_mother_pop
+		species = { save_event_target_as = mec_asari_mother_species }
+	}
+	random_list = {
+		15 = {	# ~7.50%
+			# Scale chance to the number of alien gynogenetic pops
+			modifier = {
+				add = 5	# ~10.00%
+				pop_percentage = {
+					percentage >= 0.1
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~12.50%
+				pop_percentage = {
+					percentage >= 0.2
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~15.00%
+				pop_percentage = {
+					percentage >= 0.3
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~17.50%
+				pop_percentage = {
+					percentage >= 0.4
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~20.00%
+				pop_percentage = {
+					percentage >= 0.5
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~22.50%
+				pop_percentage = {
+					percentage >= 0.6
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~25.00%
+				pop_percentage = {
+					percentage >= 0.7
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~27.50%
+				pop_percentage = {
+					percentage >= 0.8
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			modifier = {
+				add = 5	# ~30.00%
+				pop_percentage = {
+					percentage >= 0.9
+					limit = { 
+						is_same_species = event_target:mec_asari_mother_pop
+						pop_has_trait = mec_asari_trait_core
+						has_population_control = no
+					}
+				}
+			}
+			# If TRUE, switch the newly grown pop's species to the "mother" pop's
+			if = {
+				limit = {
+					exists = event_target:mec_asari_mother_species
+				}
+				fromfrom = {
+					change_species = event_target:mec_asari_mother_species
+					set_species_flag = mec_asari_cross
+				}
+			}
+		}
+		185 = {
+			# do nothing
+		}
+	}
+}
+
+# Failure mini-events that can randomly occur during the Temple of Athame excavation
+mec_asari_site_thessia_mini_events = {
+	random_list = {
+		20 = {
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_mini_110 }
+			}
+			fleet_event = { id = mec_asari_site.110 }
+		}
+		50 = {
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_mini_111 }
+			}
+			fleet_event = { id = mec_asari_site.111 }
+		}
+		30 = {
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_mini_112 }
+			}
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_301_B }
+			}
+			fleet_event = { id = mec_asari_site.112 }
+		}
+		40 = {
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_mini_113 }
+			}
+			fleet_event = { id = mec_asari_site.113 }
+		}
+		30 = {
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_mini_114 }
+			}
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_301_B }
+			}
+			fleet_event = { id = mec_asari_site.114 }
+		}
+		20 = {
+			modifier = {
+				factor = 0
+				owner = { has_country_flag = mec_story_thessia_beacon_mini_115 }
+			}
+			fleet_event = { id = mec_asari_site.115 }
+		}
+	}
+}

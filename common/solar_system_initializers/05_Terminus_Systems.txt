@@ -199,6 +199,24 @@ sys_lusarn_init = {
 		radius = 100
 	}
 
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		closest_system = {
+			limit = { has_star_flag = mec_asari_tasale_system }
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	flags = { mec_asari_lusarn_system custom_system }
+
 	planet = {
 	    name = "Lusarn"
 		count = 1
@@ -207,6 +225,29 @@ sys_lusarn_init = {
 		orbit_angle = 1
 		size = 25
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_4
+						
+			# Nebula Effect
+			
+			If = {
+				Limit = { is_inside_nebula = no }
+				create_ambient_object = {
+					type = "nebula_3"
+					entity_offset_height = -5
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -216,6 +257,11 @@ sys_lusarn_init = {
 		orbit_angle = 20
 		size = 36
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_trade_value_3
+		}		
 	}
 	
 	planet = {
@@ -225,6 +271,11 @@ sys_lusarn_init = {
 		orbit_angle = -160
 		size = 19
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_4
+		}		
 	}
 	
 	change_orbit = 35
@@ -235,6 +286,11 @@ sys_lusarn_init = {
 		orbit_distance = 0
 		size = 1
 		orbit_angle = { min = 10 max = 190 }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_3
+		}		
 	}
 	
 	planet = {
@@ -244,6 +300,11 @@ sys_lusarn_init = {
 		orbit_angle = 35
 		size = 21
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_mec_asari_doriae_bacteria
+		}		
 	}
 
 	planet = {
@@ -253,6 +314,11 @@ sys_lusarn_init = {
 		orbit_angle = -30
 		size = 14
 		has_ring = no
+		flags = { mec_asari_planet_tarith }
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}		
 	}
 	
 	planet = {
@@ -262,12 +328,21 @@ sys_lusarn_init = {
 		orbit_angle = 25
 		size = 29
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 		moon = {
 			name = "Gesis"
 			class = "pc_frozen"
 			orbit_angle = { min = 45 max = 270 }
 			orbit_distance = 12
 			size = 6
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_society_3
+			}			
 		}
 	}
 	
@@ -296,6 +371,24 @@ sys_ondeste_init = {
     name = "Ondeste"
 	class = "sc_m"
 
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		closest_system = {
+			limit = { has_star_flag = mec_asari_tasale_system }
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	flags = { mec_asari_ondeste_system custom_system }
+
 	planet = {
 		name = "Ondeste"
 		class = "pc_m_star"
@@ -303,6 +396,29 @@ sys_ondeste_init = {
 		orbit_angle = 1
 		size = 20
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_3
+						
+			# Nebula Effect
+			
+			If = {
+				Limit = { is_inside_nebula = no }
+				create_ambient_object = {
+					type = "nebula_1"
+					entity_offset_height = -5
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -312,6 +428,11 @@ sys_ondeste_init = {
 		orbit_angle = 150
 		size = 14
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_4
+		}		
 	}
 	
 	planet = {
@@ -321,12 +442,22 @@ sys_ondeste_init = {
 		orbit_angle = 120
 		size = 15
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_3
+		}		
 		moon = {
 			name = "Acaeria_a"
 			class = "pc_desolate"
 			orbit_angle = { min = 45 max = 270 }
 			orbit_distance = 15
 			size = 10
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				set_deposit = d_minerals_2
+			}			
 		}
 	}
 	
@@ -337,6 +468,10 @@ sys_ondeste_init = {
 		orbit_angle = 120
 		size = 9
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}	
 	}
 
 	init_effect = { 
@@ -359,6 +494,19 @@ sys_tasale_init = {
 		radius = 140
 	}
 
+	flags = { empire_home_system mec_asari_tasale_system custom_system }
+	
+	usage = origin
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+
 	planet = {
 		name = "Tasale"
 		class = "pc_g_star"
@@ -366,6 +514,28 @@ sys_tasale_init = {
 		orbit_angle = 1
 		size = 35
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_5
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_mining_target
+						
+			# Nebula Effect
+			
+			create_ambient_object = {
+				type = "rare_nebula_2"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -375,7 +545,13 @@ sys_tasale_init = {
 		orbit_angle = 15
 		size = 25
 		has_ring = no
-
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_5
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_mining_target
+		}
 	}
 	
 	planet = {
@@ -384,7 +560,21 @@ sys_tasale_init = {
 		orbit_distance = 30
 		orbit_angle = 160
 		size = 18
+		starting_planet = yes		
 		has_ring = no
+		modifiers = none
+		deposit_blockers = none
+		flags = { mec_asari_planet_illium special_start_planet }		
+		init_effect = {
+			prevent_anomaly = yes
+			
+			if = {
+				limit = {
+					NOT = { exists = event_target:mec_asari_planet_illium }
+				}
+				save_global_event_target_as = mec_asari_planet_illium
+			}
+		}		
 	}
 	
 	planet = {
@@ -394,6 +584,13 @@ sys_tasale_init = {
 		orbit_angle = 180
 		size = 14
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_physics_3
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_research_target
+		}		
 	}
 	
 	change_orbit = 34
@@ -403,12 +600,22 @@ sys_tasale_init = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = { min = 40 max = 100 }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = { min = 40 max = 100 }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_3	
+			set_planet_flag = starting_deposit
+		}		
 	}
 	
 	planet = {
@@ -417,6 +624,13 @@ sys_tasale_init = {
 		orbit_distance = 0
 		orbit_angle = { min = 40 max = 100 }
 		size = 2
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_5
+			set_planet_flag = starting_deposit
+			set_planet_flag = starting_mining_target
+		}		
 	}
 	
 	planet = {
@@ -426,7 +640,12 @@ sys_tasale_init = {
 		orbit_angle = 170
 		size = 38
 		has_ring = yes
-
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_2
+			set_planet_flag = starting_deposit
+		}
 	}
 	
 	planet = {
@@ -436,7 +655,13 @@ sys_tasale_init = {
 		orbit_angle = -75
 		size = 34
 		has_ring = no
-
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_5
+			set_planet_flag = starting_mining_target
+			set_planet_flag = starting_deposit
+		}
 	}
 
     init_effect = { 
@@ -464,6 +689,24 @@ sys_zelene_init = {
     name = "Zelene"
 	class = sc_k
 
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+
+		closest_system = {
+			limit = { has_star_flag = mec_asari_tasale_system }
+			add_hyperlane = {
+				from = this
+				to = prev
+			}
+		}
+	}
+	flags = { mec_asari_zelene_system custom_system }
+
 	planet = {
 		name = "Zelene"
 		class = pc_k_star
@@ -471,6 +714,29 @@ sys_zelene_init = {
 		orbit_angle = 1
 		size = 20
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_energy_3
+						
+			# Nebula Effect
+			
+			If = {
+				Limit = { is_inside_nebula = no }
+				create_ambient_object = {
+					type = "nebula_2"
+					entity_offset_height = -5
+					location = this
+				}
+				last_created_ambient_object = {
+					set_location = {
+						target = prev
+						distance = 0
+						angle = random
+					}
+				}
+			}
+		}		
 	}
 	
 	planet = {
@@ -480,6 +746,11 @@ sys_zelene_init = {
 		orbit_angle = 15
 		size = 11
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_society_3
+		}		
 	}
 	
 	planet = {
@@ -489,6 +760,9 @@ sys_zelene_init = {
 		orbit_angle = 45
 		size = 13
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}		
 	}
 	
 	planet = {
@@ -498,6 +772,9 @@ sys_zelene_init = {
 		orbit_angle = 150
 		size = 20
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+		}		
 	}
 	
 	planet = {
@@ -507,6 +784,11 @@ sys_zelene_init = {
 		orbit_angle = -60
 		size = 35
 		has_ring = yes
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_engineering_3
+		}		
 	}
 
     init_effect = { 
@@ -644,28 +926,135 @@ sys_maat_init = {
 sys_tartarusdebrisfield_init = {
     name = "Tartarus_Debris_Field"
     class = "sc_black_hole"
-
-    planet = {
-        class = "pc_black_hole"
-        orbit_distance = 0
-        size = 50
-    }
-	
-    planet = {
-        class = "pc_black_hole"
-        orbit_distance = 50
-        size = 20
-    }
-	
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "galacticcore_omeganebula4relay_massrelay" 
-			name = "Tartarus_Relay"
-			orbit_angle = 112 
-			orbit_distance = 200
-			
-		} 
+	usage = custom_empire
+	max_instances = 1
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
 	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 300
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 350
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 400
+	}
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+
+	flags = { empire_home_system btr_collector_system custom_system }
+
+	planet = {
+		name = "Tartarus Debris Field"
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 70
+		has_ring = no
+
+		init_effect = {
+			solar_system = {
+			spawn_megastructure = { 
+				type = "galacticcore_omeganebula4relay_massrelay" 
+				name = "Tartarus_Relay"
+				orbit_angle = 112 
+				orbit_distance = 320
+			} 
+			}
+			while = {
+				count = 100
+				create_ambient_object = {
+					type = large_debris_object
+					entity_offset_height = { min = -10 max = -20 }
+					entity_offset = { min = 96 max = 400 }
+					entity_offset_angle = { min = 1 max = 360 }
+					scale = 3
+				}
+			}
+			while = {
+				count = 35
+				create_ambient_object = {
+					type = ancient_battlefield_02_object
+					entity_offset_height = { min = -10 max = -20 }
+					entity_offset = { min = 96 max = 400 }
+					entity_offset_angle = { min = 1 max = 360 }
+					scale = 3
+				}
+			}
+		}
+	}
+	planet = {
+		name = "Polus"
+		class = "pc_asteroid"
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		name = "Inid"
+		class = "pc_asteroid"
+		orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		name = "Collector Base"
+		class = "pc_collector_base"
+		orbit_distance = 180
+		orbit_angle = 215
+		size = 12
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+		flags = { btr_collectors_collector_station special_start_planet }
+		init_effect = {
+			prevent_anomaly = yes
+			set_planet_entity = {
+				entity = "collector_base_01_game_entity"
+			}
+			set_planet_flag = megastructure
+			set_planet_flag = habitat
+			random_country = {
+				limit = { has_country_flag = "collectors" }
+				save_event_target_as = tartarus_debris_fieldOwner
+				save_global_event_target_as = collectors
+				species = { save_global_event_target_as = collectorSpecies }
+			}
+			generate_btr_collector_base_buildings = yes
+			set_capital = yes
+			set_owner = event_target:collectors
+			while = {
+				count = 26
+				create_pop = { species = event_target:collectorSpecies }
+			}
+			clear_deposits = yes
+			add_deposit = d_consumption_chambers
+			add_deposit = d_deconstruction_bays
+			set_name = "Collector Base"
+		}
+	}	
 }	
 	
 	
@@ -807,16 +1196,217 @@ sys_faryar_init = {
     name = "Faryar"
     class = "sc_g"
 
-    planet = {
-        class = "pc_g_star"
-        orbit_distance = 0
-        size = 20
-    }
-	
 	asteroid_belt = {
 		type = icy_asteroid_belt
 		radius = 180
 	}
+
+    planet = {
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 20
+		init_effect = {
+			create_species = {
+				name = "Eclipse Merc"
+				plural = "Eclipse Mercs"
+				class = "ECL"
+				portrait = eclipse
+				name_list = btr_merc
+				traits = {
+					trait="trait_talented"
+		            trait="trait_deviants"
+		            trait="trait_adaptive"
+		            trait="trait_quarrelsome"
+		            trait="trait_quick_learners"
+				}
+			}
+			create_country = {
+				name_list = btr_merc
+				species = last_created
+				type = mercenary
+				civics = { civic = civic_anarcho_tribalism }
+				origin = "origin_default"
+				flag = {
+					icon={
+						category="masseffect"
+						file="eclipse.dds"
+					}
+					background={
+						category="backgrounds"
+						file="00_solid.dds"
+					}
+					colors={
+						"yellow"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_fanatic_militarist
+					ethic = ethic_xenophobe
+				}
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_graphical_culture = pirate_01
+				save_global_event_target_as = eclipse
+				set_country_flag = eclipse
+				set_name = "Eclipse"
+				create_ship_design = { design = "NAME_Marauder_Starbase" }
+				add_ship_design = last_created_design
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 40
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 90
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 140
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 200
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 250
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 280
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 330
+					}				
+				}
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 0
+					}				
+				}
+			}
+
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Ancestral_Glory"
+						graphical_culture = "pirate_01"
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+
+			create_ambient_object = {
+				type = "abandoned_starbase_01_object"
+				location = this
+			}
+		}
+	}
+
 
     planet = {
         name = "Quarem"
@@ -825,12 +1415,54 @@ sys_faryar_init = {
         orbit_angle = 197
         has_ring = no
 		size = 7
-
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					while = {
+						count = 22
+						create_ship = {
+							name = random
+							design = "NAME_Outrider"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 14
+						create_ship = {
+							name = random
+							design = "NAME_Lancer"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Void_Champion"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+		}
     }
 
     planet = {
         name = "Daratar"
-        class = "pc_desolate"
+        class = "pc_arid"
         orbit_distance = 20
         orbit_angle = 194
         has_ring = no
@@ -845,7 +1477,23 @@ sys_faryar_init = {
         orbit_angle = 266
         has_ring = no
 		size = 25
-
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}
+		}
     }
 
     planet = {
@@ -855,7 +1503,49 @@ sys_faryar_init = {
         orbit_angle = 183
         has_ring = no
 		size = 31
-
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					while = {
+						count = 22
+						create_ship = {
+							name = random
+							design = "NAME_Outrider"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 14
+						create_ship = {
+							name = random
+							design = "NAME_Lancer"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 8
+						create_ship = {
+							name = random
+							design = "NAME_Void_Champion"
+							graphical_culture = "pirate_01"
+						}
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}
+				settings = {
+					garrison = yes
+				}
+			}
+		}
     }
 
     planet = {
@@ -865,7 +1555,23 @@ sys_faryar_init = {
         orbit_angle = 107
         has_ring = no
 		size = 7
-
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}
+		}
     }
 
     planet = {
@@ -875,7 +1581,23 @@ sys_faryar_init = {
         orbit_angle = 158
         has_ring = no
 		size = 3
-
+		init_effect = {
+			create_fleet = {
+				effect = {
+					set_owner = event_target:eclipse
+					create_ship = {
+						name = random
+						design = "NAME_Void_Dwelling"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 0
+					}				
+				}
+			}
+		}
     }
 
     planet = {
@@ -1810,21 +2532,21 @@ sys_sahrabarik_init = {
 		flags = { btr_omega_planet_omgea special_start_planet btr_omega }
 		init_effect = {
 			set_planet_entity = {
-				entity = "habitat_phase_01_entity" # TODO - Get model
+				entity = "omega_station"
 				graphical_culture = humanoid_01
 			}
 			set_planet_flag = megastructure
 			set_planet_flag = habitat
 			prevent_anomaly = yes
 			clear_deposits = yes 
-			# random_country = {
-			# 	limit = { has_country_flag = "omega" }
-			# 	save_event_target_as = sahrabarikOwner
-			# 	save_global_event_target_as = omega
-			# }
-			# set_capital = yes
-			# set_owner = event_target:omega
-			# generate_MEG_omega_districts = yes
+			random_country = {
+				limit = { has_country_flag = "omega" }
+				save_event_target_as = sahrabarikOwner
+				save_global_event_target_as = omega
+			}
+			set_capital = yes
+			set_owner = event_target:omega
+			generate_btr_omega_districts = yes
 			set_name = "Omega"
 		}		
     }
@@ -1915,23 +2637,23 @@ sys_tikkun_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			# generate_MEG_major_empire_start_buildings = yes
+			generate_btr_major_empire_start_buildings = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "geth_consensus" }
-			# 	save_event_target_as = tikkunOwner
-			# 	save_global_event_target_as = geth_consensus
-			# 	species = { save_global_event_target_as = gethSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:gethSpecies }
-			# }
-			# set_name = "Rannoch"
-			# add_deposit = d_rannoch_geth_base
-			# add_deposit = d_rannoch_quarian_ruins
-			# add_deposit = d_rannoch_consensus_core
-			# add_deposit = d_rannoch_geth_factory
+			random_country = {
+				limit = { has_country_flag = "geth_consensus" }
+				save_event_target_as = tikkunOwner
+				save_global_event_target_as = geth_consensus
+				species = { save_global_event_target_as = gethSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:gethSpecies }
+			}
+			set_name = "Rannoch"
+			add_deposit = d_rannoch_geth_base
+			add_deposit = d_rannoch_quarian_ruins
+			add_deposit = d_rannoch_consensus_core
+			add_deposit = d_rannoch_geth_factory
 		}
 		
 		moon = {
@@ -2929,18 +3651,18 @@ sys_kyzil_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			# generate_MEG_major_empire_start_buildings = yes
+			generate_btr_major_empire_start_buildings = yes
 
-			# random_country = {
-			# 	limit = { has_country_flag = "vorcha_chiefdom" }
-			# 	save_event_target_as = kyzilOwner
-			# 	save_global_event_target_as = vorcha_chiefdom
-			# 	species = { save_global_event_target_as = vorchaSpecies }
-			# }
-			# while = {
-			# 	count = 26
-			# 	create_pop = { species = event_target:vorchaSpecies }
-			# }
+			random_country = {
+				limit = { has_country_flag = "vorcha_chiefdom" }
+				save_event_target_as = kyzilOwner
+				save_global_event_target_as = vorcha_chiefdom
+				species = { save_global_event_target_as = vorchaSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:vorchaSpecies }
+			}
 			set_name = "Heshtok"
 		}		
     }
@@ -3976,6 +4698,9 @@ sys_raheelleyya_init = {
         size = 15
         orbit_distance = 30
         orbit_angle = { min = 90 max = 270 }
+		init_effect = {
+			save_global_event_target_as = migrant_fleet_home_star
+		}		
     }
 
     planet = {
@@ -3985,6 +4710,138 @@ sys_raheelleyya_init = {
         orbit_distance = 0
         orbit_angle = 180
     }
+	init_effect = {
+		save_global_event_target_as = migrant_fleet_home_system
+		create_species = {
+			name = "Quarian"
+			plural = "Quarians"
+			adjective = "Quarian"
+			class = "QUA"
+			portrait = quarian
+			name_list = btr_quarian
+			traits = {
+				trait="trait_natural_engineers"
+		        trait="trait_nonadaptive"
+		        trait="trait_communal"
+		        trait="trait_traditional"
+		        trait="trait_quick_learners"
+				ideal_planet_class = "pc_savannah" 
+			}
+		}
+		create_country = {
+			name_list = btr_quarian
+			species = last_created
+			type = migrant_fleet
+			authority = auth_oligarchic
+			civics = {
+				civic = civic_caravaneer_fleet1
+			}
+			flag = {
+				icon={
+					category="masseffect"
+					file="Migrant Fleet.dds"
+				}
+				background={
+					category="backgrounds"
+					file="00_solid.dds"
+				}
+				colors={
+					"dark_purple"
+					"black"
+					"null"
+					"null"
+				}
+			}
+			ethos = {
+				ethic = ethic_egalitarian
+	            ethic = ethic_materialist
+			}
+			ignore_initial_colony_error = yes
+			effect = {
+				set_country_flag = migrant_fleet
+				set_graphical_culture = caravaneer_01
+				save_global_event_target_as = migrant_fleet
+				create_leader = {
+					class = admiral
+					species = event_target:quarianSpecies
+					name = "Zaal'Koris vas Qwib-Qwib"
+					gender = male
+					skill = 5
+					immortal = yes
+				}
+				create_fleet = {
+					name = "Migrant Fleet"
+					settings = { spawn_debris = no }
+					effect = {
+						set_fleet_stance = passive
+						set_formation_scale = 2.5
+						set_owner = prev
+						create_ship = {
+							name = "Chayym"
+							design = migrant_fleet_liveship
+							effect = {
+								set_ship_flag = migrant_fleet_liveship_chayym
+								save_global_event_target_as = migrant_fleet_liveship_chayym
+							}
+						}
+						create_ship = {
+							name = "Rayya"
+							design = migrant_fleet_liveship
+							effect = {
+								set_ship_flag = migrant_fleet_liveship_rayya
+								save_global_event_target_as = migrant_fleet_liveship_rayya
+							}
+						}
+						create_ship = {
+							name = "Shellen"
+							design = migrant_fleet_liveship
+							effect = {
+								set_ship_flag = migrant_fleet_liveship_shellen
+								save_global_event_target_as = migrant_fleet_liveship_shellen
+							}
+						}
+						while = {
+							count = 30
+							create_ship = {
+								name = random
+								design = migrant_fleet_frigate
+							}
+						}
+						while = {
+							count = 14
+							create_ship = {
+								name = random
+								design = migrant_fleet_cruiser
+							}
+						}
+						set_location = {
+							target = event_target:migrant_fleet_home_star
+							angle = 90
+							distance = 40
+						}
+						set_fleet_flag = migrant_fleet_1
+						save_global_event_target_as = migrant_fleet1_fleet
+						prev = {
+							set_custom_capital_location = event_target:migrant_fleet1_fleet
+						}
+						assign_leader = last_created_leader
+					}
+				}
+				create_leader = {
+					class = ruler
+					species = event_target:quarianSpecies
+					name = "Admiral Shala'Raan vas Tonbay"
+					skill = 5
+					immortal = yes
+				}
+				set_leader = last_created_leader
+			}
+		}
+		last_created_country = {
+			set_name = "Migrant Fleet"
+		}
+	}
+
 
     init_effect = { 
 		spawn_megastructure = { 

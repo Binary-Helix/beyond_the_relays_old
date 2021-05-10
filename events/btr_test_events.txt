@@ -1,0 +1,102 @@
+
+namespace = btr_test
+
+ship_event = {
+	id = btr_test.1
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_fleet = {
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "Sovereign"
+					design = "NAME_sovereign"
+				}
+				set_location = this
+				set_name = "Sovereign"
+				set_fleet_stance = passive
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = btr_test.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_fleet = {
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "Harbinger"
+					design = "NAME_harbinger"
+				}
+				set_location = this
+				set_name = "Harbinger"
+				set_fleet_stance = passive
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = btr_test.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_fleet = {
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "Harbinger"
+					design = "migrant_fleet_liveship"
+				}
+				set_location = this
+				set_name = "Harbinger"
+				set_fleet_stance = passive
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = btr_test.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_fleet = {
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "Harbinger"
+					design = "migrant_fleet_cruiser"
+				}
+				set_location = this
+				set_name = "Harbinger"
+				set_fleet_stance = passive
+			}
+		}
+	}
+}
+
+ship_event = {
+	id = btr_test.5
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		create_fleet = {
+			effect = {
+				set_owner = root.owner
+				create_ship = {
+					name = "Harbinger"
+					design = "migrant_fleet_frigate"
+				}
+				set_location = this
+				set_name = "Harbinger"
+				set_fleet_stance = passive
+			}
+		}
+	}
+}
