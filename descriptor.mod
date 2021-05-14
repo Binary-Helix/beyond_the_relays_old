@@ -1,4 +1,4 @@
-name="Beyond the Relays Map - Alpha Test "
+name="Beyond the Relays"
 version="0.1"
 tags={
 	"Events"

@@ -1116,6 +1116,7 @@ vol_protectorate={
 		trait="trait_weak"
 		trait="trait_thrifty"
 		trait="trait_sedentary"
+		trait="trait_pc_ammonia_continental_preference"		
 	}
 	name="Vol Protectorate"
 	adjective="Vol Protectorate"
@@ -1184,6 +1185,7 @@ vol_protectorate_b={
 		trait="trait_weak"
 		trait="trait_thrifty"
 		trait="trait_sedentary"
+		trait="trait_pc_ammonia_continental_preference"
 	}
 	name="Vol Protectorate"
 	adjective="Vol Protectorate"
@@ -1317,7 +1319,7 @@ parnack_regime={
 		name="Yahg"
 		plural="Yahgs"
 		adjective="Yahg"
-		name_list="btr_yahg"
+		name_list= btr_yahg
 		trait="trait_very_strong"
 		trait="trait_deviants"
 		trait="trait_quarrelsome"
@@ -1330,9 +1332,9 @@ parnack_regime={
 	government="gov_military_dictatorship"
 	planet_name="Parnack"
 	planet_class="pc_continental"
-	system_name="Hythus"
+	system_name="Chabtan"
 	initializer="sys_chabtan_init"
-	graphical_culture="avian_01"
+	graphical_culture="industrial_01"
 	city_graphical_culture="mammalian_01"
 	flags={
 		parnack_regime
@@ -1340,21 +1342,16 @@ parnack_regime={
 		btr_minor
 	}
 	empire_flag={
-		icon={
-			category="masseffect"
-			file="yahg.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"red"
-			"red_orange"
-			"null"
-			"null"
-		}
-	}
+			icon = { 
+				category = "masseffectblack"
+				file = "Parnack Regime.dds"
+			}	
+				background = {
+					category = "backgrounds"
+					file = "00_solid.dds"
+				}
+				colors = { "red" "red" "null" "null"}
+			}
 	ruler={
 		gender=female
 		name="Lynevach Brysgant"
@@ -1367,12 +1364,12 @@ parnack_regime={
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 	room="yahg_room"
-	spawn_enabled=always
-	ethic="ethic_fanatic_authoritarian"
-	ethic="ethic_militarist"
+	spawn_enabled= no
+	ethic = "ethic_fanatic_xenophobe"
+	ethic = "ethic_militarist"
 	civics={
-		"civic_slaver_guilds"
-		"civic_cutthroat_politics"
+		"civic_warrior_culture"
+		"civic_barbaric_despoilers"
 	}
 	origin="origin_parnack_regime"
 }

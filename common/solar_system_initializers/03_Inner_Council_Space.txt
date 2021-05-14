@@ -7,7 +7,7 @@
 sys_aru_init = {
     name = "Aru"
     class = "sc_g"
-
+	max_instances = 1
 	flags = { empire_home_system btr_vol_protectorate_system custom_system }
 	
 	usage = custom_empire
@@ -52,17 +52,17 @@ sys_aru_init = {
         orbit_distance = 20
         orbit_angle = 251
         size = 25
-        init_effect = {
-			set_planet_flag = irune_codex
-			}
+		has_ring = no		
 		starting_planet = yes
+
+		deposit_blockers = none		
 		modifiers = none
-		flags = { btr_vol_protectorate_planet_irune special_start_planet }
+		flags = { irune_codex btr_vol_protectorate_planet_irune special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
+			generate_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "vol_protectorate" }
 				save_event_target_as = aruOwner
@@ -73,8 +73,8 @@ sys_aru_init = {
 				count = 26
 				create_pop = { species = event_target:volSpecies }
 			}
-			set_name = "Irune"
 			add_deposit = d_irune_lenos
+			set_name = "Irune"			
 		}            
 	}
 
@@ -157,7 +157,7 @@ sys_aru_init = {
 sys_esori_init = {
     name = "Esori"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Esori"	
         class = "pc_g_star"
@@ -229,7 +229,7 @@ sys_esori_init = {
 sys_nura_init = {
     name = "Nura"
     class = "sc_f"
-	
+	max_instances = 1	
     planet = {
 	    name = "Nura"
         class = "pc_f_star"
@@ -303,7 +303,7 @@ sys_nura_init = {
 sys_satuarrd_init = {
     name = "Satu_Arrd"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
         class = "pc_g_star"
         orbit_distance = 0
@@ -353,7 +353,7 @@ sys_satuarrd_init = {
 sys_ilhani_init = {
     name = "Ilhani"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 		name = "Ilhani"
         class = "pc_g_star"
@@ -416,7 +416,7 @@ sys_ilhani_init = {
 sys_nasurn_init = {
     name = "Nasurn"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Nasurn"
         class = "pc_g_star"
@@ -476,7 +476,7 @@ sys_nasurn_init = {
 sys_pranas_init = {
     name = "Pranas"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
         class = "pc_g_star"
         orbit_distance = 0
@@ -520,18 +520,15 @@ sys_pranas_init = {
         orbit_distance = 20
         orbit_angle = 179
         size = 16
-        init_effect = {
-			set_planet_flag = surkesh_codex
-			}
+		has_ring = no		
 		starting_planet = yes
-		has_ring = no
 		modifiers = none
 		flags = { btr_salarian_union_planet_surkesh special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
+			generate_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "salarian_union" }
 				save_event_target_as = pranasOwner
@@ -603,7 +600,7 @@ sys_pranas_init = {
 sys_rothila_init = {
     name = "Rothila"
     class = "sc_f"
-
+	max_instances = 1
     planet = {
         class = "pc_f_star"
         orbit_distance = 0
@@ -708,7 +705,7 @@ sys_rothila_init = {
 sys_castellus_init = {
     name = "Castellus"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Castellus"
         class = "pc_g_star"
@@ -797,7 +794,7 @@ sys_castellus_init = {
 sys_gemmae_init = {
     name = "Gemmae"
     class = "sc_b_giant"
-
+	max_instances = 1
     planet = {
         class = "pc_b_giant_star"
         orbit_distance = 0
@@ -830,7 +827,7 @@ sys_gemmae_init = {
 sys_trebia_init = {
     name = "Trebia"
     class = "sc_g"
-
+	max_instances = 1
 	flags = { empire_home_system btr_turian_hierarchy_system custom_system }
 	
 	usage = custom_empire
@@ -881,15 +878,17 @@ sys_trebia_init = {
         orbit_distance = 20
         orbit_angle = 156
         size = 22
+		has_ring = no		
 		starting_planet = yes
-		has_ring = no
+
+		deposit_blockers = none		
 		modifiers = none
-		flags = { btr_turian_hierarchy_planet_palaven special_start_planet }
+		flags = { palaven_codex btr_turian_hierarchy_planet_palaven special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
+			generate_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "turian_hierarchy" }
 				save_event_target_as = trebiaOwner
@@ -905,9 +904,6 @@ sys_trebia_init = {
 			add_deposit = d_palaven_cipritine
 			add_deposit = d_sercusium_river
 		}        
-        init_effect = {
-            set_planet_flag = palaven_codex
-            }
         moon = {
             name = "Menae"
             class = "pc_barren"
@@ -995,7 +991,7 @@ sys_trebia_init = {
 sys_aralakh_init = {
     name = "Aralakh"
     class = "sc_f"
-
+	max_instances = 1
 	flags = { empire_home_system btr_krogan_chiefdom_system custom_system }
 	
 	usage = custom_empire
@@ -1058,18 +1054,17 @@ sys_aralakh_init = {
         orbit_distance = 30
         orbit_angle = 66
         size = 20
-        init_effect = {
-            set_planet_flag = tuchanka_codex
-            }
-		starting_planet = yes
 		has_ring = no
+		starting_planet = yes
+
+		deposit_blockers = none
 		modifiers = none
-		flags = { btr_krogan_chiefdom_planet_tuchanka special_start_planet }
+		flags = { tuchanka_codex btr_krogan_chiefdom_planet_tuchanka special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
+			generate_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "krogan_chiefdom" }
 				save_event_target_as = aralakhOwner
@@ -1080,11 +1075,11 @@ sys_aralakh_init = {
 				count = 26
 				create_pop = { species = event_target:kroganSpecies }
 			}
-			set_name = "Tuchanka"
 			add_deposit = d_tuchanka_underground_tunnels
 			add_deposit = d_tuchanka_the_hollows
 			add_deposit = d_tuchanka_thresher_maw_nest
 			add_deposit = d_tuchanka_nakmor_ruined
+			set_name = "Tuchanka"
 		}
     }
 
@@ -1132,7 +1127,7 @@ sys_aralakh_init = {
 sys_dranek_init = {
     name = "Dranek"
     class = "sc_m"
-
+	max_instances = 1
     planet = {
 	    name = "Dranek"
         class = "pc_m_star"
@@ -1192,7 +1187,7 @@ sys_dranek_init = {
 sys_nith_init = {
     name = "Nith"
     class = "sc_b_super"
-
+	max_instances = 1
     planet = {
         class = "pc_b_super_star"
         orbit_distance = 0
@@ -1253,7 +1248,8 @@ sys_nith_init = {
 sys_elunia_init = {
     name = "Elunia"
     class = "sc_k"
-	asteroid_belt = {
+	max_instances = 1
+    asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 320
 	}
@@ -1758,7 +1754,7 @@ sys_elunia_init = {
 sys_kasatum_init = {
     name = "Kasatum"
     class = "sc_b_giant"
-
+	max_instances = 1
     planet = {
 		name = "Kasatum"	
         class = "pc_b_giant_star"
@@ -1850,7 +1846,7 @@ sys_kasatum_init = {
 sys_mactare_init = {
     name = "Mactare"
     class = "sc_k"
-
+	max_instances = 1
     planet = {
 	    name = "Mactare"
         class = "pc_k_star"
@@ -1954,7 +1950,7 @@ sys_mactare_init = {
 sys_narbo_init = {
     name = "Narbo"
     class = "sc_k_giant"
-
+	max_instances = 1
     planet = {
 	    name = "Narbo"
         class = "pc_k_giant_star"
@@ -2009,7 +2005,7 @@ sys_narbo_init = {
 sys_bedi_init = {
 	name = "Bedi"
 	class = "sc_m"
-	
+	max_instances = 1	
 	planet = {
 		name = "Bedi"
 		class = "pc_m_star"
@@ -2030,7 +2026,7 @@ sys_bedi_init = {
 sys_kanala_init = {
     name = "Kanala"
     class = "sc_a"
-	
+	max_instances = 1	
     asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 40
@@ -2076,17 +2072,16 @@ sys_kanala_init = {
         orbit_angle = 169
         has_ring = no
         size = 20
-        init_effect = {
-            set_planet_flag = kahje_codex
-            }
 		starting_planet = yes
+
+		deposit_blockers = none
 		modifiers = none
-		flags = { btr_illuminated_primacy_planet_kahje special_start_planet }
+		flags = { kahje_codex btr_illuminated_primacy_planet_kahje special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
+			generate_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "illuminated_primacy" }
 				save_event_target_as = kanalaOwner
@@ -2183,7 +2178,7 @@ sys_kanala_init = {
 sys_darkcurrent_init = {
     name = "Dark_Current"
     class = "sc_l"
-
+	max_instances = 1
     planet = {
 	    name = "Dark_Current"
         class = "pc_l_star"
@@ -2219,7 +2214,7 @@ sys_darkcurrent_init = {
 sys_obek_init = {
     name = "Obek"
     class = "sc_m"
-
+	max_instances = 1
     planet = {
         class = "pc_m_star"
         orbit_distance = 0
@@ -2294,7 +2289,7 @@ sys_obek_init = {
 sys_thunderingtrench_init = {
     name = "Thundering_Trench"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Thundering_Trench"
         class = "pc_g_star"
@@ -2346,7 +2341,7 @@ sys_thunderingtrench_init = {
 sys_warmestshoal_init = {
     name = "Warmest_Shoal"
     class = "sc_k"
-
+	max_instances = 1
     planet = {
 	    name = "Warmest_Shoal"
         class = "pc_k_star"
@@ -2379,7 +2374,7 @@ sys_warmestshoal_init = {
 sys_iotapersei_init = {
     name = "Iota_Persei"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Iota_Persei"
         class = "pc_g_star"
@@ -2425,7 +2420,7 @@ sys_iotapersei_init = {
 sys_carrini_init = {
     name = "Carrini"
     class = "sc_m"
-
+	max_instances = 1
     planet = {
 	    name = "Carrini"
         class = "pc_m_star"
@@ -2480,7 +2475,7 @@ sys_carrini_init = {
 sys_yuan_init = {
     name = "Yuan"
     class = "sc_black_hole"
-
+	max_instances = 1
     planet = {
 		name = "Yuan"	
         class = "pc_black_hole"

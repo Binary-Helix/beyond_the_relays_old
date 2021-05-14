@@ -1,48 +1,36 @@
 # This is a template which multiple species can use. 
 
 krogan_clothes_01 = {
-	default = "gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
+	default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 	
 	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
-		default = "gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 	}
 	
 	#species scope
 	species = { #generic portrait for a species
-		default = "gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 		
 		random = {
 			list = {
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_black.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_equalised.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_1.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_2.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_3.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_red.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 			}
 		}
 	}
 	
 	#pop scope
 	pop = { #for a specific pop
-		default = "gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 		random = {
 			list = {
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_black.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_equalised.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_1.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_2.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_3.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_red.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 			}
 		}
 	}
 
 	#leader scope
 	leader = { #scientists, generals, admirals, governor
-		default = "gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 
 		random = {
 			trigger = { 
@@ -54,81 +42,56 @@ krogan_clothes_01 = {
 				}
 			}
 			list = {
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_black.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_equalised.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_1.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_2.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_3.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_red.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 			}
 		}
 	}
 
 	#leader scope 
 	ruler = { #for rulers
-		default = "gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 		
 		# All Governments type
 		random = {
 			list = {
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_black.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_equalised.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_1.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_2.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_hue_3.dds"
-				"gfx/models/portraits/krogan/krogan_molluscoid_massive_outfit_red.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 			}
 		}
 	}
 }
 
 krogan_clothes_02 = {
-	default = "gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
+	default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 	
 	game_setup = {#will run with a limited country scope. species and government is set but the country does not actually exist
-		default = "gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 	}
 	
 	#species scope
 	species = { #generic portrait for a species
-		default = "gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 		
 		random = {
 			list = {
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_2.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_3.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_4.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_5.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_6.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_7.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_8.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 			}
 		}
 	}
 	
 	#pop scope
 	pop = { #for a specific pop
-		default = "gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 		random = {
 			list = {
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_2.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_3.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_4.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_5.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_6.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_7.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_8.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
+
 			}
 		}
 	}
 
 	#leader scope
 	leader = { #scientists, generals, admirals, governor
-		default = "gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 
 		random = {
 			trigger = { 
@@ -140,33 +103,19 @@ krogan_clothes_02 = {
 				}
 			}
 			list = {
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_2.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_3.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_4.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_5.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_6.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_7.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_8.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 			}
 		}
 	}
 
 	#leader scope 
 	ruler = { #for rulers
-		default = "gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
+		default = "gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 		
 		# All Governments type
 		random = {
 			list = {
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_1.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_2.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_3.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_4.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_5.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_6.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_7.dds"
-				"gfx/models/portraits/krogan/krogan_humanoid_03_outfit_8.dds"
+				"gfx/models/portraits/krogan/krogan_empty_clothes.dds"
 			}
 		}
 	}

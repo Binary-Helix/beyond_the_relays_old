@@ -558,10 +558,6 @@ sys_chabtan_init = {
 		}
 		generate_home_system_resources = yes
 	}
-
-    flags = {
-        chabtan_system
-    }
 	
     planet = {
 		name = "Chabtan"	
@@ -601,31 +597,96 @@ sys_chabtan_init = {
         class = "pc_continental"
         orbit_distance = 50
         orbit_angle = 0
-        init_effect = {
-			set_planet_flag = parnack_codex
-        }
+		size = 16
+		has_ring = no
 		starting_planet = yes
-		modifiers = none
 		deposit_blockers = none
-		flags = { btr_parnack_regime_planet_parnack special_start_planet }
+		modifiers = none
+
+		flags = { parnack_codex btr_parnack_regime_planet_parnack special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
-			 generate_btr_major_empire_start_buildings = yes
-
-			 random_country = {
-			 	limit = { has_country_flag = "parnack_regime" }
-			 	save_event_target_as = chabtanOwner
-			 	save_global_event_target_as = parnack_regime
-			 	species = { save_global_event_target_as = yahgSpecies }
-			 }
-			 while = {
-			 	count = 26
-			 	create_pop = { species = event_target:yahgSpecies }
+			set_global_flag = yahg_homeworld_spawned
+			if = {
+				limit = {
+					NOT = {
+						any_country = { 
+							has_country_flag = parnack_regime }
+				}
 			}
-			set_name = "Parnack"
-	    }        
-    }
+			create_species = {
+					name = "Yahg"
+					class = YAH
+					homeworld = THIS
+					namelist = btr_yahg
+					traits = {		
+						trait="trait_very_strong"
+						trait="trait_deviants"
+						trait="trait_quarrelsome"
+						trait="trait_intelligent"
+						trait="trait_repugnant"
+					}
+				}
+			
+			create_country = {
+				name = "NAME_Parnack_Regime"
+				ship_prefix = "PRV"
+				type = primitive 
+				civics = {
+						civic = civic_warrior_culture
+						civic = civic_barbaric_despoilers
+				}
+				authority = auth_dictatorial
+				name_list = btr_yahg
+				ethos = { 
+					ethic = "ethic_fanatic_xenophobe"
+					ethic = "ethic_militarist"
+				}
+
+				species = event_target:yahgSpecies
+				flag = {
+					icon = { 
+						category = "masseffectblack"
+						file = "Parnack Regime.dds"
+					}	
+						background = {
+							category = "backgrounds"
+							file = "00_solid.dds"
+						}
+						colors = { "red" "red" "null" "null"}
+					}
+			}	
+				last_created_country = {
+					set_graphical_culture = industrial_01
+					set_country_flag = parnack_regime
+					set_country_flag = minor_faction
+					save_global_event_target_as = parnack_regime
+				}
+				create_colony = { 
+					owner = last_created_country 
+					species = last_created 
+				}
+				create_fleet = { 
+					name = "Space Station" 
+				}
+				last_created_fleet = {
+					set_owner = last_created_country
+					create_ship = {
+						name = "Space Station"
+						design = "NAME_Space_Station"
+					}
+					set_location = PREV
+				}
+				create_pop = { species = last_created }
+				create_pop = { species = last_created }
+				create_pop = { species = last_created }								
+			}
+			add_building = building_primitive_capital
+			last_created_species = { save_global_event_target_as = yahgSpecies }			
+		}	
+	}			
+
 
     planet = {
         name = "Noviz"
@@ -641,7 +702,7 @@ sys_chabtan_init = {
 			type = "bulucnebula_ismarfrontier_massrelay" 
 			name = "Buluc_3_Relay"
 			random_pos = NO 
-			orbit_distance = 43
+			orbit_distance = 430
 			
 		} 
 	}	
@@ -762,7 +823,7 @@ sys_ubroni_init = {
 sys_aysur_init = {
     name = "Aysur"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Aysur"
         class = "pc_g_star"
@@ -885,7 +946,7 @@ sys_aysur_init = {
 sys_balor_init = {
     name = "Balor"
     class = "sc_m"
-
+	max_instances = 1
     planet = {
 	    name = "Balor"
         class = "pc_m_star"
@@ -972,7 +1033,7 @@ sys_balor_init = {
 sys_solveig_init = {
     name = "Solveig"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Solveig"
         class = "pc_g_star"
@@ -1029,7 +1090,7 @@ sys_solveig_init = {
 sys_talava_init = {
     name = "Talava"
     class = "sc_f"
-
+	max_instances = 1
     planet = {
 	    name = "Talava"
         class = "pc_f_star"
@@ -1109,7 +1170,7 @@ sys_talava_init = {
 sys_yakawa_init = {
     name = "Yakawa"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Yakawa"
         class = "pc_g_star"
@@ -1746,7 +1807,17 @@ sys_azedes_init = {
 
 	flags = { empire_home_system btr_raloi_republic_system custom_system }	
 
-	usage = custom_empire    
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
 
 	planet = {
         class = "pc_g_star"
@@ -1777,20 +1848,18 @@ sys_azedes_init = {
 		class = "pc_dextro_savannah"
 		orbit_distance = 45
         orbit_angle = 140
+		size = 15		
         has_ring = no		
-		size = 15
-        init_effect = {
-			set_planet_flag = turvess_codex
-        }
 		starting_planet = yes
-		modifiers = none
+
 		deposit_blockers = none
-		flags = { MEG_raloi_republic_planet_turvess special_start_planet } 
+		modifiers = none
+		flags = { turvess_codex btr_raloi_republic_planet_turvess special_start_planet } 
 
 		init_effect = {
 			prevent_anomaly = yes
+			generate_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "raloi_republic" }
 				save_event_target_as = azedesOwner
@@ -3688,7 +3757,10 @@ sys_maskimxul_init = {
     name = "Maskim_Xul"
     class = "sc_m"
 	max_instances = 1
+
 	flags = { empire_home_system btr_rachni_hive_system custom_system }
+
+	usage = custom_empire	
 
 	init_effect = {
 		every_neighbor_system = {
@@ -3720,14 +3792,14 @@ sys_maskimxul_init = {
         size = 7
         has_ring = no
 		starting_planet = yes
+		deposit_blockers = none		
 		modifiers = none
-		flags = { btr_rachni_hive_planet_suen special_start_planet }
+		flags = { suen_codex btr_rachni_hive_planet_suen special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
-			clear_blockers = yes
+			generate_start_deposits_and_blockers = yes
 			generate_btr_rachni_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "rachni_hive" }
 				save_event_target_as = maskimxulOwner
@@ -3740,9 +3812,6 @@ sys_maskimxul_init = {
 			}
 			add_deposit = d_geothermal_vent
 			add_deposit = d_rich_mountain
-			add_deposit = d_forgiving_tundra
-			add_deposit = d_forgiving_tundra
-			add_deposit = d_forgiving_tundra
 			set_name = "Suen"
 		}
 
@@ -3875,7 +3944,7 @@ sys_dakka_init = {
         size = 30
 		init_effect = {
 			create_country = {
-				namelist = btr_krogan
+				name_list = btr_krogan
 				species = event_target:kroganSpecies
 				type = mercenary
 				civics = { civic = civic_anarcho_tribalism }
@@ -4769,12 +4838,21 @@ sys_refuge_init = {
     name = "Refuge"
     class = "sc_binary_g_t"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "refuge_relay_system"
-    }
 
-	flags = { empire_home_system MEG_prothean_remnant_system custom_system }
-	
+	# flags = { empire_home_system btr_prothean_remnant_system custom_system }
+
+	# usage = custom_empire
+
+	# init_effect = {
+	# 	every_neighbor_system = {
+	# 		set_star_flag = empire_cluster
+	# 		every_neighbor_system = {
+	# 			set_star_flag = empire_cluster
+	# 		}
+	# 	}
+	# 	generate_home_system_resources = yes
+	# }	
+
 	planet = {
         class = "pc_t_star"
         name = "Refuge_A"
@@ -4797,129 +4875,129 @@ sys_refuge_init = {
         orbit_angle = 142
         has_ring = no
 		size = 15
-        init_effect = {
-			set_planet_flag = agetoton_codex
-			create_pirate_country = yes
-			event_target:pirate_country = {
-				if = {
-					limit = {
-						NOT = {
-							has_modifier = pirate_power
-						}
-					}
-					add_modifier = {
-						modifier = pirate_power
-						days = -1
-					}
-				}
-			}
-			every_country = {
-				establish_communications_no_message = event_target:pirate_country
-			}
+        # init_effect = {
+		# 	set_planet_flag = agetoton_codex
+		# 	create_pirate_country = yes
+		# 	event_target:pirate_country = {
+		# 		if = {
+		# 			limit = {
+		# 				NOT = {
+		# 					has_modifier = pirate_power
+		# 				}
+		# 			}
+		# 			add_modifier = {
+		# 				modifier = pirate_power
+		# 				days = -1
+		# 			}
+		# 		}
+		# 	}
+		# 	every_country = {
+		# 		establish_communications_no_message = event_target:pirate_country
+		# 	}
 			
-			create_fleet = {
-				name = "NAME_Old_Guard"
-				effect = {
-					set_owner = event_target:pirate_country
-					set_fleet_flag = pirate_home_system_fleet
-					while = {
-						count = 1
-						create_ship = {
-							name = random
-							design = "NAME_Pirate_Galleon"
-							graphical_culture = "pirate_01"
-						}
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 250
-					set_location = {
-						target = prev
-						distance = 90
-						angle = 330
-					}
-					set_fleet_flag = pirate_home_system_fleet
-				}
-			}
+		# 	create_fleet = {
+		# 		name = "NAME_Old_Guard"
+		# 		effect = {
+		# 			set_owner = event_target:pirate_country
+		# 			set_fleet_flag = pirate_home_system_fleet
+		# 			while = {
+		# 				count = 1
+		# 				create_ship = {
+		# 					name = random
+		# 					design = "NAME_Pirate_Galleon"
+		# 					graphical_culture = "pirate_01"
+		# 				}
+		# 			}
+		# 			set_fleet_stance = aggressive
+		# 			set_aggro_range_measure_from = self
+		# 			set_aggro_range = 250
+		# 			set_location = {
+		# 				target = prev
+		# 				distance = 90
+		# 				angle = 330
+		# 			}
+		# 			set_fleet_flag = pirate_home_system_fleet
+		# 		}
+		# 	}
 
-			create_fleet = {
-				name = "NAME_Scarred_Veterans"
-				effect = {
-					set_owner = event_target:pirate_country
-					set_fleet_flag = pirate_home_system_fleet
-					while = {
-						count = 6
-						create_ship = {
-							name = random
-							design = "NAME_Corsair"
-							graphical_culture = "pirate_01"
-						}
-					}
-					while = {
-						count = 10
-						create_ship = {
-							name = random
-							design = "NAME_Marauder"
-							graphical_culture = "pirate_01"
-						}
-					}
-					while = {
-						count = 20
-						create_ship = {
-							name = random
-							design = "NAME_Black_Earl"
-							graphical_culture = "pirate_01"
-						}
-					}
-					while = {
-						count = 4
-						create_ship = {
-							name = random
-							design = "NAME_Skull"
-							graphical_culture = "pirate_01"
-						}
-					}
-					set_fleet_flag = pirate_home_system_fleet
-					set_formation_scale = 2
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 250
-					set_location = {
-						target = prev
-						distance = 90
-						angle = 120
-					}
-				}
-			}
+		# 	create_fleet = {
+		# 		name = "NAME_Scarred_Veterans"
+		# 		effect = {
+		# 			set_owner = event_target:pirate_country
+		# 			set_fleet_flag = pirate_home_system_fleet
+		# 			while = {
+		# 				count = 6
+		# 				create_ship = {
+		# 					name = random
+		# 					design = "NAME_Corsair"
+		# 					graphical_culture = "pirate_01"
+		# 				}
+		# 			}
+		# 			while = {
+		# 				count = 10
+		# 				create_ship = {
+		# 					name = random
+		# 					design = "NAME_Marauder"
+		# 					graphical_culture = "pirate_01"
+		# 				}
+		# 			}
+		# 			while = {
+		# 				count = 20
+		# 				create_ship = {
+		# 					name = random
+		# 					design = "NAME_Black_Earl"
+		# 					graphical_culture = "pirate_01"
+		# 				}
+		# 			}
+		# 			while = {
+		# 				count = 4
+		# 				create_ship = {
+		# 					name = random
+		# 					design = "NAME_Skull"
+		# 					graphical_culture = "pirate_01"
+		# 				}
+		# 			}
+		# 			set_fleet_flag = pirate_home_system_fleet
+		# 			set_formation_scale = 2
+		# 			set_fleet_stance = aggressive
+		# 			set_aggro_range_measure_from = self
+		# 			set_aggro_range = 250
+		# 			set_location = {
+		# 				target = prev
+		# 				distance = 90
+		# 				angle = 120
+		# 			}
+		# 		}
+		# 	}
 
-			create_fleet = {
-				name = "NAME_Young_Blood"
-				effect = {
-					set_owner = event_target:pirate_country
-					create_ship_design = {
-						design = "NAME_Reaver"
-					}
-					while = {
-						count = 12
-						create_ship = {
-							name = random
-							design = last_created_design
-							graphical_culture = "pirate_01"
-						}
-					}
-					set_location = {
-						target = prev
-						distance = 90
-						angle = 200
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 150
-					set_fleet_flag = pirate_home_system_fleet
-					save_global_event_target_as = young_blood
-				}
-			}
-		}
+		# 	create_fleet = {
+		# 		name = "NAME_Young_Blood"
+		# 		effect = {
+		# 			set_owner = event_target:pirate_country
+		# 			create_ship_design = {
+		# 				design = "NAME_Reaver"
+		# 			}
+		# 			while = {
+		# 				count = 12
+		# 				create_ship = {
+		# 					name = random
+		# 					design = last_created_design
+		# 					graphical_culture = "pirate_01"
+		# 				}
+		# 			}
+		# 			set_location = {
+		# 				target = prev
+		# 				distance = 90
+		# 				angle = 200
+		# 			}
+		# 			set_fleet_stance = aggressive
+		# 			set_aggro_range_measure_from = self
+		# 			set_aggro_range = 150
+		# 			set_fleet_flag = pirate_home_system_fleet
+		# 			save_global_event_target_as = young_blood
+		# 		}
+		# 	}
+		# }
     }
 
     planet = {
@@ -6085,7 +6163,7 @@ sys_erebus_init = {
 sys_karaht_init = {
 	name = "Karaht"
 	class = "sc_g"
-	
+	max_instances = 1	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 150
@@ -6149,7 +6227,7 @@ sys_karaht_init = {
 sys_phlegethon_init = {
 	name = "Phlegethon"
 	class = "sc_g"
-	
+	max_instances = 1	
 	planet = {
 		name = "Phlegethon"
 		class = "pc_g_star"
@@ -6175,7 +6253,7 @@ sys_phlegethon_init = {
 sys_timshar_init = {
 	name = "Timshar"
 	class = "sc_pulsar"
-	
+	max_instances = 1	
 	planet = {
 		name = "Timshar"
 		class = "pc_pulsar"

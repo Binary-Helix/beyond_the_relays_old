@@ -7,7 +7,7 @@
 sys_ialessa_init = {
 	name = "Ialessa"
 	class = "sc_g"
-	
+	max_instances = 1	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 55
@@ -39,24 +39,7 @@ sys_ialessa_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			set_deposit = d_energy_3
-						
-			# Nebula Effect
-			
-			If = {
-				Limit = { is_inside_nebula = no }
-				create_ambient_object = {
-					type = "nebula_2"
-					entity_offset_height = -5
-					location = this
-				}
-				last_created_ambient_object = {
-					set_location = {
-						target = prev
-						distance = 0
-						angle = random
-					}
-				}
-			}
+					
 		}		
 	}
 	
@@ -128,7 +111,7 @@ sys_ialessa_init = {
 sys_orisoni_init = {	
 	name = "Orisoni"
 	class = "sc_g"
-
+	max_instances = 1
 	init_effect = {
 		every_neighbor_system = {
 			set_star_flag = empire_cluster
@@ -136,15 +119,8 @@ sys_orisoni_init = {
 				set_star_flag = empire_cluster
 			}
 		}
-
-		closest_system = {
-			limit = { has_star_flag = mec_asari_parnitha_system }
-			add_hyperlane = {
-				from = this
-				to = prev
-			}
-		}
 	}
+
 	flags = { mec_asari_orisoni_system custom_system }
 
 	planet = {
@@ -155,24 +131,6 @@ sys_orisoni_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			set_deposit = d_energy_2
-						
-			# Nebula Effect
-			
-			If = {
-				Limit = { is_inside_nebula = no }
-				create_ambient_object = {
-					type = "nebula_2"
-					entity_offset_height = -5
-					location = this
-				}
-				last_created_ambient_object = {
-					set_location = {
-						target = prev
-						distance = 0
-						angle = random
-					}
-				}
-			}
 		}		
 	}
 	
@@ -249,25 +207,16 @@ sys_orisoni_init = {
 sys_parnitha_init = {
 	name = "Parnitha"	
     class = "sc_g"
-
-	flags = { empire_home_system mec_asari_parnitha_system custom_system }
-	
-	usage = custom_empire
-	
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-	}	
-
+	max_instances = 1
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 160
 	}
+
+	flags = { empire_home_system mec_asari_parnitha_system custom_system }
+
 	usage = custom_empire
+
 	init_effect = {
 		every_neighbor_system = {
 			set_star_flag = empire_cluster
@@ -291,21 +240,6 @@ sys_parnitha_init = {
 			set_deposit = d_energy_5
 			set_planet_flag = starting_deposit
 			set_planet_flag = starting_mining_target
-						
-			# Nebula Effect
-			
-			create_ambient_object = {
-				type = "rare_nebula_1"
-				entity_offset_height = -5
-				location = this
-			}
-			last_created_ambient_object = {
-				set_location = {
-					target = prev
-					distance = 0
-					angle = random
-				}
-			}
 		}		
 	}
 	
@@ -331,10 +265,11 @@ sys_parnitha_init = {
 		orbit_distance = 40
 		orbit_angle = 80
 		size = 14
-		starting_planet = yes
 		has_ring = no
-		modifiers = none
+		starting_planet = yes
+
 		deposit_blockers = none
+		modifiers = none
 		flags = { btr_asari_planet_thessia special_start_planet }
 		
 		init_effect = {
@@ -351,13 +286,6 @@ sys_parnitha_init = {
 			while = {
 				count = 26
 				create_pop = { species = event_target:asariSpecies }
-			}
-			
-			if = {
-				limit = {
-					NOT = { exists = event_target:mec_asari_planet_thessia }
-				}
-				save_global_event_target_as = mec_asari_planet_thessia
 			}
 		}
 	}
@@ -496,7 +424,7 @@ sys_parnitha_init = {
 sys_tomaros_init = {
 	name = "Tomaros"
 	class = sc_g
-
+	max_instances = 1
 	init_effect = {
 		every_neighbor_system = {
 			set_star_flag = empire_cluster
@@ -504,17 +432,9 @@ sys_tomaros_init = {
 				set_star_flag = empire_cluster
 			}
 		}
-
-		closest_system = {
-			limit = { has_star_flag = mec_asari_parnitha_system }
-			add_hyperlane = {
-				from = this
-				to = prev
-			}
-		}
 	}	
 
-		flags = { mec_asari_tomaros_system custom_system }
+	flags = { mec_asari_tomaros_system custom_system }
 
 	planet = {
 		name = "Tomaros"
@@ -527,24 +447,6 @@ sys_tomaros_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			set_deposit = d_energy_4
-						
-			# Nebula Effect
-			
-			If = {
-				Limit = { is_inside_nebula = no }
-				create_ambient_object = {
-					type = "nebula_2"
-					entity_offset_height = -5
-					location = this
-				}
-				last_created_ambient_object = {
-					set_location = {
-						target = prev
-						distance = 0
-						angle = random
-					}
-				}
-			}
 		}		
 	}
 	
@@ -627,7 +529,7 @@ sys_tomaros_init = {
 sys_vernio_init = {
 	name = "Vernio"
 	class = sc_f
-	
+	max_instances = 1	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 90
@@ -662,24 +564,6 @@ sys_vernio_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			set_deposit = d_energy_3
-						
-			# Nebula Effect
-			
-			If = {
-				Limit = { is_inside_nebula = no }
-				create_ambient_object = {
-					type = "nebula_4"
-					entity_offset_height = -5
-					location = this
-				}
-				last_created_ambient_object = {
-					set_location = {
-						target = prev
-						distance = 0
-						angle = random
-					}
-				}
-			}
 		}		
 	}
 	
@@ -871,7 +755,7 @@ sys_vernio_init = {
 sys_arrae_init = {
     name = "Arrae"
     class = "sc_a"
-
+	max_instances = 1
     planet = {
 	    name = "Arrae"
         class = "pc_a_star"
@@ -933,7 +817,7 @@ sys_arrae_init = {
 sys_caestus_init = {
     name = "Caestus"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Caestus"
         class = "pc_g_star"
@@ -975,7 +859,7 @@ sys_caestus_init = {
 sys_fortis_init = {
     name = "Fortis"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Fortis"
         class = "pc_g_star"
@@ -1037,7 +921,7 @@ sys_fortis_init = {
 sys_uba_init = {
     name = "Uba"
     class = "sc_m"
-
+	max_instances = 1
     planet = {
 	    name = "Uba"
         class = "pc_m_star"
@@ -1095,7 +979,7 @@ sys_uba_init = {
 sys_agaiou_init = {
     name = "Agaiou"
     class = "sc_binary_f_k"
-
+	max_instances = 1
     planet = {
         class = "pc_f_star"
         name = "Hali"
@@ -1137,7 +1021,7 @@ sys_agaiou_init = {
 sys_kallini_init = {
     name = "Kallini"
     class = "sc_f"
-
+	max_instances = 1
     planet = {
 	    name = "Kallini"
         class = "pc_f_star"
@@ -1189,7 +1073,7 @@ sys_kallini_init = {
 sys_mesana_init = {
     name = "Mesana"
     class = "sc_m"
-
+	max_instances = 1
     planet = {
 	    name = "Mesana"
         class = "pc_m_star"
@@ -1267,7 +1151,7 @@ sys_mesana_init = {
 sys_pelion_init = {
     name = "Pelion"
     class = "sc_b_giant"
-
+	max_instances = 1
     planet = {
 	    name = "Pelion"
         class = "pc_b_giant_star"
@@ -1332,7 +1216,7 @@ sys_pelion_init = {
 sys_boltzmann_init = {
     name = "Boltzmann"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Boltzmann"
         class = "pc_g_star"
@@ -1415,7 +1299,7 @@ sys_boltzmann_init = {
 sys_sovak_init = {
     name = "Sovak"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
         class = "pc_g_star"
         size = 30
@@ -1458,7 +1342,7 @@ sys_sovak_init = {
 sys_terevan_init = {
     name = "Terevan"
     class = "sc_a"
-
+	max_instances = 1
     planet = {
 	    name = "Terevan"
         class = "pc_a_star"
@@ -1511,7 +1395,7 @@ sys_terevan_init = {
 sys_totau_init = {
     name = "Totau"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Totau"
         class = "pc_g_star"
@@ -1586,7 +1470,7 @@ sys_totau_init = {
 sys_widow_init = {
     name = "Widow"
     class = "sc_b_giant"
-
+	max_instances = 1
 	flags = { widow_system }
 
     planet = {
@@ -1660,7 +1544,7 @@ sys_widow_init = {
 sys_kypladon_init = {
     name = "Kypladon"
     class = "sc_k"
-
+	max_instances = 1
     planet = {
 	    name = "Kypladon"
         class = "pc_g_star"
@@ -1737,7 +1621,7 @@ sys_kypladon_init = {
 sys_loropi_init = {
     name = "Loropi"
     class = "sc_a"
-
+	max_instances = 1
     planet = {
 	    name = "Loropi"
         class = "pc_a_star"
@@ -1784,7 +1668,7 @@ sys_loropi_init = {
 sys_nahuala_init = {
     name = "Nahuala"
     class = "sc_k"
-
+	max_instances = 1
     planet = {
         class = "pc_k_star"
         orbit_distance = 0
@@ -1836,6 +1720,7 @@ sys_nahuala_init = {
 sys_phontes_init = {
     name = "Phontes"
     class = "sc_g"
+	max_instances = 1
 
 	flags = { empire_home_system btr_courts_of_dekuuna_system custom_system }
 	
@@ -1878,14 +1763,17 @@ sys_phontes_init = {
         orbit_distance = 30
         orbit_angle = 256
         size = 25
+		has_ring = no
 		starting_planet = yes
+
 		modifiers = none
-		flags = { btr_courts_of_dekuuna_planet_dekuuna special_start_planet }
+		deposit_blockers = none		
+		flags = { dekuuna_codex btr_courts_of_dekuuna_planet_dekuuna special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
+			generate_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
-
 			random_country = {
 				limit = { has_country_flag = "courts_of_dekuuna" }
 				save_event_target_as = phontesOwner
@@ -1934,7 +1822,7 @@ sys_phontes_init = {
 sys_teyolia_init = {
     name = "Teyolia"
     class = "sc_m"
-
+	max_instances = 1
     planet = {
         class = "pc_m_star"
         orbit_distance = 0
@@ -2015,7 +1903,7 @@ sys_teyolia_init = {
 sys_herculaneum_init = {
     name = "Herculaneum"
     class = "sc_m_giant"
-
+	max_instances = 1
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 80
@@ -2061,7 +1949,7 @@ sys_herculaneum_init = {
 sys_stabiae_init = {
     name = "Stabiae"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Stabiae"
         class = "pc_g_star"
@@ -2106,7 +1994,7 @@ sys_stabiae_init = {
 sys_pompeii_init = {
     name = "Pompeii"
     class = "sc_g"
-
+	max_instances = 1
     planet = {
 	    name = "Pompeii"
         class = "pc_g_star"
