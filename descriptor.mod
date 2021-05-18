@@ -1,11 +1,9 @@
-name="Beyond the Relays"
-version="0.1"
+version="3.0.*"
 tags={
-	"Events"
-	"Gameplay"
-	"Technologies"
-	"Species"
+	"Overhaul"
+	"Total Conversion"
+	"Galaxy Generation"
 }
-
-picture="btr.png"
-supported_version="3.0.*"
+name="Mass Effect: Beyond the Relays - PREALPHA"
+supported_version="3.0.2"
+remote_file_id="2486649583"
