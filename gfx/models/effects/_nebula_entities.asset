@@ -1,0 +1,1140 @@
+##############################################
+##############	Rare Nebulas	##############
+##############################################
+
+
+@entity_scale_1 = 6
+
+### Star system: a, b, black hole, f, Neutron Star, Pulsar, t, 
+entity = {
+	name = "nebula_rare_1_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = @entity_scale_1
+
+#	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_8_entity" }
+	cull_radius = 2000
+}
+
+### Star system:  a, g, black hole, k, m, neutron star, pulsar, 
+
+entity = {
+	name = "nebula_rare_2_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = @entity_scale_1
+
+	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_8_2_entity" }
+	cull_radius = 2000
+}
+
+##############################################
+##############	Classic Nebulas	##############
+##############################################
+
+## a, b, black hole, f, g, k, m, neutron, pulsar, t
+
+### Star system: black hole, g, k, m
+## Brown nebula
+entity = {
+	name = "nebula_classic_1_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = @entity_scale_1
+	
+	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_5_entity" }
+#	attach = { "root" = "nebula_5_color_entity" }
+	attach = { "root" = "nebula_6_entity" }
+#	attach = { "root" = "nebula_6_color_entity" }
+	cull_radius = 2000}
+
+### Star system: black hole, k, m, 
+## Brown nebula with teal tints
+entity = {
+	name = "nebula_classic_2_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = @entity_scale_1
+	
+	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_2_entity" }
+	attach = { "root" = "nebula_6_entity" }
+	cull_radius = 2000
+}
+
+### Star system: a, b, black hole, f, neutron star, pulsar star, t 
+## Purple nebula with teal tints
+entity = {
+	name = "nebula_classic_3_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = @entity_scale_1
+	
+	attach = { "root" = "nebula_core_2_entity" }
+	attach = { "root" = "nebula_5_2_entity" }
+	attach = { "root" = "nebula_5_color_2_entity" }
+	attach = { "root" = "nebula_6_2_entity" }
+#	attach = { "root" = "nebula_6_color_2_entity" }
+	cull_radius = 2000
+}
+
+### Star system: a, b , black hole, f, neutron star, pulsar star
+## Blue nebula with light blue tints
+entity = {
+	name = "nebula_classic_4_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = @entity_scale_1
+	
+	attach = { "root" = "nebula_core_3_entity" }
+	attach = { "root" = "nebula_5_3_entity" }
+	attach = { "root" = "nebula_5_color_3_entity" }
+	attach = { "root" = "nebula_6_3_entity" }
+#	attach = { "root" = "nebula_6_color_2_entity" }
+	cull_radius = 2000
+}
+
+
+
+##############################################
+############## 	Nebula Parts	##############
+##############################################
+
+entity = {
+	name = "nebula_1_entity"
+	pdxmesh = "nebula_1_mesh"
+	locator = { name = "root" }
+	scale = 1.5
+		
+	default_state = "idle"
+	state = { name = "idle"  animation = "idle" animation_speed = 0.1 looping = yes 	}
+	
+		game_data = {
+		bloom_factor			= .1
+		uv_animation_speed 		= .015
+		uv_animation_direction 	= { .2 1.0 }
+		}
+#	attach = { "root" = "nebula_core_entity" }
+}
+
+## Animations
+
+	animation = {
+	name = "nebula_idle_animation"
+	file = "nebula_1_idle.anim"
+	}
+	
+	animation = {
+	name = "nebula_2_idle_animation"
+	file = "nebula_2_idle.anim"
+	}
+	
+	animation = {
+	name = "nebula_3_idle_animation"
+	file = "nebula_3_idle.anim"
+	}
+	
+	
+entity = {
+	name = "nebula_2_entity"
+	pdxmesh = "nebula_2_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  animation = "idle" animation_speed = 0.03 looping = yes 	}
+		game_data = {
+		bloom_factor			= 0.16
+		uv_animation_speed 		= 0.007
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_4_entity"
+	pdxmesh = "nebula_4_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+		game_data = {
+		bloom_factor			= 0.16
+		uv_animation_speed 		= 0.005
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_4_color_entity"
+	pdxmesh = "nebula_4_color_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+#		uv_animation_speed 		= 0.007
+#		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_4_color_2_entity"
+	pdxmesh = "nebula_4_color_2_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+#		uv_animation_speed 		= 0.007
+#		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_3_entity"
+	pdxmesh = "nebula_3_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  animation = "idle" animation_speed = 0.03 looping = yes 	}
+		game_data = {
+		bloom_factor			= 0.16
+		uv_animation_speed 		= 0.005
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+#	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_core_entity" }
+}
+
+entity = {
+	name = "nebula_5_color_entity"
+	pdxmesh = "nebula_5_color_mesh"
+	locator = { name = "root" }
+	scale = 1.4
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+#		uv_animation_speed 		= 0.007
+#		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_5_color_2_entity"
+	pdxmesh = "nebula_5_color_2_mesh"
+	locator = { name = "root" }
+	scale = 1.4
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+#		uv_animation_speed 		= 0.007
+#		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_5_color_3_entity"
+	pdxmesh = "nebula_5_color_3_mesh"
+	locator = { name = "root" }
+	scale = 1.4
+		
+		game_data = {
+		bloom_factor			= 0.25
+#		uv_animation_speed 		= 0.007
+#		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_5_entity"
+	pdxmesh = "nebula_5_mesh"
+	locator = { name = "root" }
+	scale = 1.4
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+		uv_animation_speed 		= -0.007
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_5_2_entity"
+	pdxmesh = "nebula_5_2_mesh"
+	locator = { name = "root" }
+	scale = 1.4
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+		uv_animation_speed 		= -0.007
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_5_3_entity"
+	pdxmesh = "nebula_5_3_mesh"
+	locator = { name = "root" }
+	scale = 1.4
+		
+		game_data = {
+		bloom_factor			= 0.25
+		uv_animation_speed 		= -0.007
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_6_entity"
+	pdxmesh = "nebula_6_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+		uv_animation_speed 		= -0.007
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_6_2_entity"
+	pdxmesh = "nebula_6_2_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+		uv_animation_speed 		= -0.007
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_6_3_entity"
+	pdxmesh = "nebula_6_3_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+		game_data = {
+		bloom_factor			= 0.25
+		uv_animation_speed 		= -0.007
+		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_6_color_entity"
+	pdxmesh = "nebula_6_color_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+#		uv_animation_speed 		= 0.007
+#		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_6_color_2_entity"
+	pdxmesh = "nebula_6_color_2_mesh"
+	locator = { name = "root" }
+	scale = 1
+		
+	default_state = "idle"
+	state = { name = "idle"  
+	#animation = "idle" animation_speed = 0.05 looping = yes 	
+	}
+		game_data = {
+		bloom_factor			= 0.25
+#		uv_animation_speed 		= 0.007
+#		uv_animation_direction 	= { 0.2 1.0 }
+		}
+}
+
+entity = {
+	name = "nebula_7_entity"
+	pdxmesh = "nebula_7_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.75
+		}
+}
+
+entity = {
+	name = "nebula_7_2_entity"
+	pdxmesh = "nebula_7_2_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.9
+		}
+}
+
+entity = {
+	name = "nebula_7_3_entity"
+	pdxmesh = "nebula_7_3_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.9
+		}
+}
+
+entity = {
+	name = "nebula_8_entity"
+	pdxmesh = "nebula_8_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.75
+		}
+}
+
+entity = {
+	name = "nebula_8_2_entity"
+	pdxmesh = "nebula_8_2_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.75
+		}
+}
+
+entity = {
+	name = "nebula_8_3_entity"
+	pdxmesh = "nebula_8_3_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.75
+		}
+}
+
+
+entity = {
+	name = "nebula_core_entity"
+	scale = 1
+
+	locator = {
+		name = "root"
+	}
+	
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			#node = "root"
+			particle = "nebula_core_particle"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "nebula_core_2_entity"
+	scale = 1
+
+	locator = {
+		name = "root"
+	}
+	
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0 	particle = "nebula_core_2_particle"		trigger_once = yes		keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "nebula_core_3_entity"
+	scale = 1
+
+	locator = {
+		name = "root"
+	}
+	
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0 	particle = "nebula_core_3_particle"		trigger_once = yes		keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "nebula_planet_smoke_entity"
+	scale = 1
+
+	locator = {
+		name = "root"
+	}
+	
+	default_state = "idle"
+	state = {
+		name = "idle"
+		state_time = 5
+		event = {
+			time = 0
+			#node = "root"
+			particle = "nebula_planet_smoke"
+			trigger_once = yes
+			keep_particle = yes
+		}
+	}
+}
+
+entity = {
+	name = "nebula_4_2_entity"
+	locator = { name = "root"  rotation = { 0 22 0 } }
+	scale = 1.9
+
+	attach = { "root" = "nebula_4_entity" }
+	attach = { "root" = "nebula_4_color_entity" }
+
+}
+
+############## Large ################
+entity = {
+	name = "nebula_L3_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1.3
+
+	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_3_entity" }
+	attach = { "root" = "nebula_4_entity" }
+	attach = { "root" = "nebula_4_color_entity" }
+	cull_radius = 2000}
+
+
+entity = {
+	name = "nebula_L4_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1.3
+
+	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_3_entity" }
+	attach = { "root" = "nebula_4_entity" }
+	attach = { "root" = "nebula_4_color_2_entity" }
+	cull_radius = 2000}
+
+
+entity = {
+	name = "nebula_L5_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+#	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_5_entity" }
+#	attach = { "root" = "nebula_5_color_entity" }
+	attach = { "root" = "nebula_6_entity" }
+#	attach = { "root" = "nebula_6_color_entity" }
+	cull_radius = 2000}
+
+entity = {
+	name = "nebula_L6_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+#	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_entity" }
+	attach = { "root" = "nebula_6_entity" }
+#	attach = { "root" = "nebula_6_color_entity" }
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_L7_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+#	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_entity" }
+	cull_radius = 2000	}
+
+entity = {
+	name = "nebula_L8_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+#	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_entity" }
+	attach = { "root" = "nebula_6_entity" }
+	attach = { "root" = "nebula_6_color_entity" }
+	cull_radius = 2000}
+
+
+entity = {
+	name = "nebula_L9_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 0.8
+
+	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_2_entity" }
+	attach = { "root" = "nebula_6_entity" }
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_L10_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+	attach = { "root" = "nebula_core_2_entity" }
+	attach = { "root" = "nebula_5_2_entity" }
+	attach = { "root" = "nebula_5_color_2_entity" }
+	attach = { "root" = "nebula_6_2_entity" }
+#	attach = { "root" = "nebula_6_color_2_entity" }
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_L11_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_7_entity" }
+	cull_radius = 2000
+}
+
+
+entity = {
+	name = "nebula_L12_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+#	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_8_entity" }
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_L13_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_8_2_entity" }
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_L14_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+	attach = { "root" = "nebula_core_2_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_8_3_entity" }
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_L15_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+	attach = { "root" = "nebula_core_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_7_2_entity" }
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_L16_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 1
+
+	attach = { "root" = "nebula_core_2_entity" }
+#	attach = { "root" = "nebula_6_entity" }
+
+	attach = { "root" = "nebula_7_3_entity" }
+	cull_radius = 2000
+}
+
+########## Small ##############
+
+entity = {
+	name = "nebula_S3_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 0.025
+
+	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_3_entity" }
+	attach = { "root" = "nebula_4_entity" }
+	attach = { "root" = "nebula_4_color_entity" }
+
+}
+
+entity = {
+	name = "nebula_S4_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 0.025
+
+	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_3_entity" }
+	attach = { "root" = "nebula_4_entity" }
+	attach = { "root" = "nebula_4_color_2_entity" }
+
+}
+
+entity = {
+	name = "nebula_S5_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 0.025
+
+	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_3_entity" }
+	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_entity" }
+
+}
+entity = {
+	name = "nebula_S8_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 0.025
+
+#	attach = { "root" = "nebula_1_entity" }
+	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_entity" }
+	attach = { "root" = "nebula_6_entity" }
+	attach = { "root" = "nebula_6_color_entity" }
+	cull_radius = 2000}
+	
+entity = {
+	name = "nebula_S10_entity"
+	locator = { name = "root"  rotation = { 0 0 0 } }
+	scale = 0.025
+
+	attach = { "root" = "nebula_core_2_entity" }
+#	attach = { "root" = "nebula_5_entity" }
+	attach = { "root" = "nebula_5_color_2_entity" }
+	attach = { "root" = "nebula_6_color_2_entity" }
+	cull_radius = 2000
+}
+###########################################
+########### Turbulent Nebula Parts ########
+###########################################
+entity = {
+	name = "turbulent_nebula_1_entity"
+	pdxmesh = "system_lightning_locations_mesh"
+	scale = @entity_scale_1
+	locator = {		name = "root"	}
+	locator = {		name = "lightning_core_1"	position = { 0 -200 -200 }		 rotation = { 0	0	0}}
+	locator = {		name = "lightning_core_2"	position = { -50 300 -300 }	 rotation = { 50 50 120 }}
+
+#	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_turbulent_1_entity" }
+#	attach = { "root" = "system_lightning_combined_ani_2_entity" }
+	
+#	default_state = "idle"
+#	state = {		name = "idle"		state_time = 20 looping = yes
+#		event = {	time = 0 	particle = "nebula_core_3_particle"		trigger_once = yes		keep_particle = yes		}
+#		event = {	time = 0 	node = "lightning_core_1" entity = "system_lightning_combined_ani_2_entity"	life = 60 }
+#		event = {	time = 10 	node = "lightning_core_2" entity = "system_lightning_combined_ani_1_entity"	life = 60 }
+#	}
+	
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 35 looping = yes
+		event = {	time = 0 		node = "lightning_01" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 4 		node = "lightning_02" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 8 		node = "lightning_03" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 12 		node = "lightning_04" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		event = {	time = 17		node = "lightning_05" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 21 		node = "lightning_06" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 25		node = "lightning_07" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 30		node = "lightning_08" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 36		node = "lightning_09" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 44		node = "lightning_10" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 48		node = "lightning_11" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 55		node = "lightning_12" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+																											   
+		event = {	time = 1 		node = "lightning_03" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 6 		node = "lightning_01" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 7 		node = "lightning_02" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 11 		node = "lightning_07" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		event = {	time = 15		node = "lightning_06" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 20 		node = "lightning_05" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 27		node = "lightning_04" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 33		node = "lightning_09" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 38		node = "lightning_10" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 49		node = "lightning_08" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 52		node = "lightning_12" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 59		node = "lightning_11" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+
+		start_event = {		trigger_once = yes		sound = { soundeffect = sfx_amb_nebula_turbulent } }
+	
+	}
+	cull_radius = 2000
+}
+
+entity = {
+	name = "turbulent_nebula_2_entity"
+	pdxmesh = "system_lightning_locations_mesh"
+	scale = @entity_scale_1
+	locator = {		name = "root"	}
+	locator = {		name = "lightning_core_1"	position = { 0 -200 0 }}
+	locator = {		name = "lightning_core_2"	position = { 0 -300 0 } rotation = { 0 0 120 }}
+
+#	attach = { "root" = "nebula_core_entity" }
+	attach = { "root" = "nebula_turbulent_2_entity" }
+#	attach = { "root" = "system_lightning_combined_ani_2_entity" }
+	
+#	default_state = "idle"
+#	state = {		name = "idle"		state_time = 20 looping = yes
+#		event = {	time = 0 	particle = "nebula_core_3_particle"		trigger_once = yes		keep_particle = yes		}
+#		event = {	time = 0 	node = "lightning_core_1" entity = "system_lightning_combined_ani_2_entity"	life = 60 }
+#		event = {	time = 10 	node = "lightning_core_2" entity = "system_lightning_combined_ani_1_entity"	life = 60 }
+#	}
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 35 looping = yes
+		event = {	time = 0 		node = "lightning_01" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 4 		node = "lightning_02" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 8 		node = "lightning_03" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 12 		node = "lightning_04" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		event = {	time = 17		node = "lightning_05" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 21 		node = "lightning_06" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 25		node = "lightning_07" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 30		node = "lightning_08" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 36		node = "lightning_09" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 44		node = "lightning_10" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 48		node = "lightning_11" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 55		node = "lightning_12" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+																											   
+		event = {	time = 1 		node = "lightning_03" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 5 		node = "lightning_01" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 7 		node = "lightning_02" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 14 		node = "lightning_07" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+		event = {	time = 18		node = "lightning_06" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 22 		node = "lightning_05" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 24		node = "lightning_04" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 32		node = "lightning_09" 	entity = "system_lightning_ani_2_entity"	life = 30	}
+		event = {	time = 35		node = "lightning_10" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 42		node = "lightning_08" 	entity = "system_lightning_ani_1_entity"	life = 30	}
+		event = {	time = 46		node = "lightning_12" 	entity = "system_lightning_ani_3_entity"	life = 30	}
+		event = {	time = 59		node = "lightning_11" 	entity = "system_lightning_ani_4_entity"	life = 30	}
+
+		start_event = {		trigger_once = yes		sound = { soundeffect = sfx_amb_nebula_turbulent } }
+	
+	}
+	cull_radius = 2000
+}
+
+entity = {
+	name = "nebula_turbulent_1_entity"
+	pdxmesh = "nebula_turbulent_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 10 looping = yes
+#		event = {	time = 0 	particle = "nebula_core_3_particle"		trigger_once = yes		keep_particle = yes		}
+	}		
+		game_data = {
+		bloom_factor			= 0.75
+		}
+}
+
+entity = {
+	name = "nebula_turbulent_2_entity"
+	pdxmesh = "nebula_turbulent_2_mesh"
+	locator = { name = "root" }
+	scale = 0.8
+	state = { name = "death"		state_time = 5 
+
+	}		
+		game_data = {
+		bloom_factor			= 0.75
+		}
+}
+
+
+
+entity = {
+	name = "system_lightning_combined_ani_2_entity"
+	pdxmesh = "system_lightning_locations_mesh"
+	scale = 1
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 60 looping = yes
+		event = {	time = 0 		node = "lightning_01" 	entity = "system_lightning_ani_1_entity"	life = 60	}
+		event = {	time = 4 		node = "lightning_02" 	entity = "system_lightning_ani_2_entity"	life = 60	}
+		event = {	time = 8 		node = "lightning_03" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 12 		node = "lightning_04" 	entity = "system_lightning_ani_4_entity"	life = 60	}
+		event = {	time = 17		node = "lightning_05" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 21 		node = "lightning_06" 	entity = "system_lightning_ani_1_entity"	life = 60	}
+		event = {	time = 25		node = "lightning_07" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 30		node = "lightning_08" 	entity = "system_lightning_ani_2_entity"	life = 60	}
+		event = {	time = 36		node = "lightning_09" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 44		node = "lightning_10" 	entity = "system_lightning_ani_1_entity"	life = 60	}
+		event = {	time = 48		node = "lightning_11" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 55		node = "lightning_12" 	entity = "system_lightning_ani_4_entity"	life = 60	}
+	
+	}
+
+}
+
+entity = {
+	name = "system_lightning_combined_ani_1_entity"
+	pdxmesh = "system_lightning_locations_mesh"
+	scale = 1
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 60 looping = yes
+		event = {	time = 0 		node = "lightning_01" 	entity = "system_lightning_ani_1_entity"	life = 60	}
+		event = {	time = 4 		node = "lightning_02" 	entity = "system_lightning_ani_2_entity"	life = 60	}
+		event = {	time = 8 		node = "lightning_03" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 12 		node = "lightning_04" 	entity = "system_lightning_ani_4_entity"	life = 60	}
+		event = {	time = 17		node = "lightning_05" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 21 		node = "lightning_06" 	entity = "system_lightning_ani_1_entity"	life = 60	}
+		event = {	time = 25		node = "lightning_07" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 30		node = "lightning_08" 	entity = "system_lightning_ani_2_entity"	life = 60	}
+		event = {	time = 36		node = "lightning_09" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 44		node = "lightning_10" 	entity = "system_lightning_ani_1_entity"	life = 60	}
+		event = {	time = 48		node = "lightning_11" 	entity = "system_lightning_ani_3_entity"	life = 60	}
+		event = {	time = 55		node = "lightning_12" 	entity = "system_lightning_ani_4_entity"	life = 60	}
+	
+	}
+
+}
+
+entity = {
+	name = "system_lightning_ani_1_entity"
+	scale = 1
+	locator = {		name = "1"	position = { 0 0 0 }	rotation = { 0 10 0 }}
+	locator = {		name = "2"	position = { 5 0 -3 }	rotation = { 0 60 -20 }}
+	locator = {		name = "3"	position = { 0 1 2 }	rotation = { 0 120 10 }}
+	locator = {		name = "4"	position = { -1 -1 0 }	rotation = { 0 50 20 }}
+
+	locator = {		name = "5"	position = { -300 0 0 }		rotation = { 5 10 15 }}
+	locator = {		name = "6"	position = { -305 0 3 }		rotation = { 15 30 -20 }}
+	locator = {		name = "7"	position = { -300 -1 1 }	rotation = { -10 10 5 }}
+	locator = {		name = "8"	position = { -302 1 0 }		rotation = { 10 20 -20 }}
+	
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 7 looping = yes
+		event = {	time = 0 		node = "1" 	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 0.1 		node = "2"	entity = "system_lightning_5_entity"	life = 0.2	}
+		event = {	time = 0.07 	node = "3"	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 0.12 	node = "4"	entity = "system_lightning_10_entity"	life = 0.2	}
+		event = {	time = 0.13 	node = "2"	entity = "system_lightning_5_entity"	life = 0.5	}
+		event = {   time = 0.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+		
+		event = {	time = 3.2 		node = "5" 	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 3.1 		node = "6"	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 3.07 	node = "7"	entity = "system_lightning_5_entity"	life = 0.3	}
+		event = {	time = 3.12 	node = "8"	entity = "system_lightning_10_entity"	life = 0.5	}
+		event = {	time = 3.13 	node = "5"	entity = "system_lightning_10_entity"	life = 0.6	}
+		event = {   time = 3.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+	}
+}
+
+entity = {
+	name = "system_lightning_ani_2_entity"
+	scale = 1.9
+	locator = {		name = "1"	position = { 0 0 0 }	rotation = { 0 10 0 }}
+	locator = {		name = "2"	position = { 5 0 -3 }	rotation = { 0 60 -20 }}
+	locator = {		name = "3"	position = { 0 1 2 }	rotation = { 0 120 10 }}
+	locator = {		name = "4"	position = { -1 -1 0 }	rotation = { 0 50 20 }}
+
+	locator = {		name = "5"	position = { -300 0 0 }		rotation = { 5 10 15 }}
+	locator = {		name = "6"	position = { -305 0 3 }		rotation = { 15 30 -20 }}
+	locator = {		name = "7"	position = { -300 -1 1 }	rotation = { -10 10 5 }}
+	locator = {		name = "8"	position = { -302 1 0 }		rotation = { 10 20 -20 }}
+	
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 10.4 looping = yes
+		event = {	time = 3 		node = "1" 	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 3.1 		node = "2"	entity = "system_lightning_5_entity"	life = 0.2	}
+		event = {	time = 3.07 	node = "3"	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 3.12 	node = "4"	entity = "system_lightning_10_entity"	life = 0.2	}
+		event = {	time = 3.13 	node = "2"	entity = "system_lightning_5_entity"	life = 0.5	}
+		event = {   time = 3.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+		
+		event = {	time = 7.2 		node = "5" 	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 7.1 		node = "6"	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 7.07 	node = "7"	entity = "system_lightning_5_entity"	life = 0.3	}
+		event = {	time = 7.12 	node = "8"	entity = "system_lightning_10_entity"	life = 0.5	}
+		event = {	time = 7.13 	node = "5"	entity = "system_lightning_10_entity"	life = 0.6	}
+		event = {   time = 7.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+	}
+}
+
+entity = {
+	name = "system_lightning_ani_3_entity"
+	scale = 1.5
+	locator = {		name = "1"	position = { 0 0 0 }	rotation = { 0 10 0 }}
+	locator = {		name = "2"	position = { 5 0 -3 }	rotation = { 0 60 -20 }}
+	locator = {		name = "3"	position = { 0 1 2 }	rotation = { 0 120 10 }}
+	locator = {		name = "4"	position = { -1 -1 0 }	rotation = { 0 50 20 }}
+
+	locator = {		name = "5"	position = { -300 0 0 }		rotation = { 5 10 15 }}
+	locator = {		name = "6"	position = { -305 0 3 }		rotation = { 15 30 -20 }}
+	locator = {		name = "7"	position = { -300 -1 1 }	rotation = { -10 10 5 }}
+	locator = {		name = "8"	position = { -302 1 0 }		rotation = { 10 20 -20 }}
+	
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 6.4 looping = yes
+		event = {	time = 2 		node = "1" 	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 2.1 		node = "2"	entity = "system_lightning_5_entity"	life = 0.2	}
+		event = {	time = 2.07 	node = "3"	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 2.12 	node = "4"	entity = "system_lightning_10_entity"	life = 0.2	}
+		event = {	time = 2.13 	node = "2"	entity = "system_lightning_5_entity"	life = 0.5	}
+		event = {   time = 2.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+		
+		event = {	time = 4.2 		node = "5" 	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 4.1 		node = "6"	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 4.07 	node = "7"	entity = "system_lightning_5_entity"	life = 0.3	}
+		event = {	time = 4.12 	node = "8"	entity = "system_lightning_10_entity"	life = 0.5	}
+		event = {	time = 4.13 	node = "5"	entity = "system_lightning_10_entity"	life = 0.6	}
+		event = {   time = 4.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+	}
+}
+
+entity = {
+	name = "system_lightning_ani_4_entity"
+	scale = 3
+	locator = {		name = "1"	position = { 0 0 0 }	rotation = { 0 10 0 }}
+	locator = {		name = "2"	position = { 5 0 -3 }	rotation = { 0 60 -20 }}
+	locator = {		name = "3"	position = { 0 1 2 }	rotation = { 0 120 10 }}
+	locator = {		name = "4"	position = { -1 -1 0 }	rotation = { 0 50 20 }}
+
+	locator = {		name = "5"	position = { -300 0 0 }		rotation = { 5 10 15 }}
+	locator = {		name = "6"	position = { -305 0 3 }		rotation = { 15 30 -20 }}
+	locator = {		name = "7"	position = { -300 -1 1 }	rotation = { -10 10 5 }}
+	locator = {		name = "8"	position = { -302 1 0 }		rotation = { 10 20 -20 }}
+	
+	default_state = "idle"
+	state = {		name = "idle"		state_time = 19.4 looping = yes
+		event = {	time = 2 		node = "1" 	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 2.1 		node = "2"	entity = "system_lightning_5_entity"	life = 0.2	}
+		event = {	time = 2.07 	node = "3"	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 2.12 	node = "4"	entity = "system_lightning_10_entity"	life = 0.2	}
+		event = {	time = 2.13 	node = "2"	entity = "system_lightning_5_entity"	life = 0.5	}
+		event = {   time = 2.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+		
+		event = {	time = 12.2 	node = "5" 	entity = "system_lightning_10_entity"	life = 0.4	}
+		event = {	time = 12.1 	node = "6"	entity = "system_lightning_20_entity"	life = 0.3	}
+		event = {	time = 12.07 	node = "7"	entity = "system_lightning_5_entity"	life = 0.3	}
+		event = {	time = 12.12 	node = "8"	entity = "system_lightning_10_entity"	life = 0.5	}
+		event = {	time = 12.13 	node = "5"	entity = "system_lightning_10_entity"	life = 0.6	}
+		event = {   time = 12.13 	sound = { soundeffect = sfx_amb_vfx_thunderclap } }
+	}
+}
+
+
+entity = {
+	name = "system_lightning_20_entity"
+	pdxmesh = "system_lightning_1_mesh"
+	
+	erosion_in = 0.05
+	erosion_out = 0.5
+	scale = 20
+		game_data = {
+		bloom_factor			= 2
+		}
+}
+
+entity = {
+	name = "system_lightning_10_entity"
+	pdxmesh = "system_lightning_1_mesh"
+	erosion_in = 0.05
+	erosion_out = 0.5
+	scale = 10
+		game_data = {
+		bloom_factor			= 2
+		}
+}
+
+entity = {
+	name = "system_lightning_5_entity"
+	pdxmesh = "system_lightning_1_mesh"
+	erosion_in = 0.05
+	erosion_out = 0.5
+	scale = 5
+		game_data = {
+		bloom_factor			= 2
+		}
+}
