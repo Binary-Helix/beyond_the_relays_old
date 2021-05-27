@@ -56,12 +56,12 @@ btr_element_zero_edict_ftl = {
 # Biotics
 #################
 
-mec_biotics_edict_armies = {
+btr_biotics_edict_armies = {
 	length = @BioticsDuration
 	resources = {
 		category = edicts
 		cost = {
-			mec_biotics = @Biotics2Cost
+			btr_biotics = @Biotics2Cost
 		}
 	}
 
@@ -74,7 +74,7 @@ mec_biotics_edict_armies = {
 	potential = {
 		any_owned_pop = {
 			OR = {
-				has_trait = mec_asari_trait_biotic
+				has_trait = btr_asari_trait_biotic
 				is_species_class = PRO
 			}
 		}
@@ -89,12 +89,12 @@ mec_biotics_edict_armies = {
 	}
 }
 
-mec_biotics_edict_research = {
+btr_biotics_edict_research = {
 	length = @BioticsDuration
 	resources = {
 		category = edicts
 		cost = {
-			mec_biotics = @Biotics3Cost
+			btr_biotics = @Biotics3Cost
 		}
 	}
 
@@ -105,7 +105,7 @@ mec_biotics_edict_research = {
 	potential = {
 		any_owned_pop = {
 			OR = {
-				has_trait = mec_asari_trait_biotic
+				has_trait = btr_asari_trait_biotic
 				is_species_class = PRO
 			}
 		}
@@ -120,12 +120,12 @@ mec_biotics_edict_research = {
 	}
 }
 
-mec_biotics_edict_upkeep = {
+btr_biotics_edict_upkeep = {
 	length = @BioticsDuration
 	resources = {
 		category = edicts
 		cost = {
-			mec_biotics = @Biotics4Cost
+			btr_biotics = @Biotics4Cost
 		}
 	}
 
@@ -140,7 +140,7 @@ mec_biotics_edict_upkeep = {
 	potential = {
 		any_owned_pop = {
 			OR = {
-				has_trait = mec_asari_trait_biotic
+				has_trait = btr_asari_trait_biotic
 				is_species_class = PRO
 			}
 		}
@@ -161,12 +161,12 @@ mec_biotics_edict_upkeep = {
 }
 
 #Sell surplus if no other option available
-mec_biotics_edict_sell = {
+btr_biotics_edict_sell = {
 	length = 0
 	resources = {
 		category = edicts
 		cost = {
-			mec_biotics = @Biotics1Cost
+			btr_biotics = @Biotics1Cost
 		}
 	}
 
@@ -182,7 +182,7 @@ mec_biotics_edict_sell = {
 	potential = {
 		any_owned_pop = {
 			OR = {
-				has_trait = mec_asari_trait_biotic
+				has_trait = btr_asari_trait_biotic
 				is_species_class = PRO
 			}
 		}
@@ -193,20 +193,20 @@ mec_biotics_edict_sell = {
 		modifier = {
 			weight = 10
 			resource_stockpile_compare = {
-				resource = mec_biotics
+				resource = btr_biotics
 				value > 3500
 			}
 		}
 		modifier = {
 			weight = 5
 			resource_stockpile_compare = {
-				resource = mec_biotics
+				resource = btr_biotics
 				value > 1000
 			}
-			has_edict = mec_biotics_edict_upkeep
+			has_edict = btr_biotics_edict_upkeep
 			OR = {
-			has_edict = mec_biotics_edict_research
-			has_edict = mec_biotics_edict_armies
+			has_edict = btr_biotics_edict_research
+			has_edict = btr_biotics_edict_armies
 			}
 		}
 	}

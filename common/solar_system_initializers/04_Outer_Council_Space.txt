@@ -22,14 +22,14 @@ sys_ialessa_init = {
 		}
 
 		closest_system = {
-			limit = { has_star_flag = mec_asari_parnitha_system }
+			limit = { has_star_flag = btr_asari_parnitha_system }
 			add_hyperlane = {
 				from = this
 				to = prev
 			}
 		}
 	}
-	flags = { mec_asari_ialessa_system custom_system }
+	flags = { btr_asari_ialessa_system custom_system }
 
 	planet = {
 		name = "Ialessa"
@@ -77,7 +77,7 @@ sys_ialessa_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			set_deposit = d_mec_asari_zylium_eezo
+			set_deposit = d_btr_asari_zylium_eezo
 		}		
 	}
 	
@@ -121,7 +121,7 @@ sys_orisoni_init = {
 		}
 	}
 
-	flags = { mec_asari_orisoni_system custom_system }
+	flags = { btr_asari_orisoni_system custom_system }
 
 	planet = {
 		name = "Orisoni"
@@ -213,7 +213,7 @@ sys_parnitha_init = {
 		radius = 160
 	}
 
-	flags = { empire_home_system mec_asari_parnitha_system custom_system }
+	flags = { empire_home_system btr_asari_parnitha_system custom_system }
 
 	usage = custom_empire
 
@@ -274,8 +274,8 @@ sys_parnitha_init = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			mec_asari_generate_thessia_deposits = yes
-			mec_asari_setup_origin_homeworld = yes
+			btr_asari_generate_thessia_deposits = yes
+			btr_asari_setup_origin_homeworld = yes
 
 			random_country = {
 				limit = { has_country_flag = "asari_republics" }
@@ -434,7 +434,7 @@ sys_tomaros_init = {
 		}
 	}	
 
-	flags = { mec_asari_tomaros_system custom_system }
+	flags = { btr_asari_tomaros_system custom_system }
 
 	planet = {
 		name = "Tomaros"
@@ -544,14 +544,14 @@ sys_vernio_init = {
 		}
 
 		closest_system = {
-			limit = { has_star_flag = mec_asari_parnitha_system }
+			limit = { has_star_flag = btr_asari_parnitha_system }
 			add_hyperlane = {
 				from = this
 				to = prev
 			}
 		}
 	}
-	flags = { mec_asari_vernio_system custom_system }
+	flags = { btr_asari_vernio_system custom_system }
 
 	planet = {
 		name = "Vernio"
@@ -617,7 +617,7 @@ sys_vernio_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			add_deposit = d_mec_asari_tritogenith_collision
+			add_deposit = d_btr_asari_tritogenith_collision
 		}		
 		moon = {
 			name = "Tritogenith I"
@@ -1495,7 +1495,7 @@ sys_widow_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			set_planet_entity = {
-				entity = "mass_effect_citadel_01_game_entity"
+				entity = "btr_citadel_entity"
 			}
 			add_modifier = {
 				modifier = "unexplored_citadel" # change to partially terraformed

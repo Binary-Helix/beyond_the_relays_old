@@ -1,0 +1,188 @@
+
+namespace = btr_setup
+
+# Kill Vanilla Countries
+event = {
+	id = btr_setup.100
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = { has_country_flag = btr_empire }
+				is_ai = yes
+			}
+			erase_invalid_spawn_system = yes
+		}
+	}
+}
+
+# Add starting resources
+country_event = {
+	id = btr_setup.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		add_resource = { energy = 100	}
+		add_resource = { minerals = 100 }
+		add_resource = { alloys = 100	}
+		add_resource = { influence = 100 }
+		add_resource = { food = 200	}
+		add_resource = { consumer_goods = 100 }
+	}
+}
+
+# Cerberus setup
+country_event = {
+	id = btr_setup.2
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = cerberus }
+			give_technology = {
+				tech = tech_hydroponics
+				message = no
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = btr_cerberus_cronos_station
+				}
+				add_deposit = d_hydroponics_bays
+				add_deposit = d_cronos_science_labs
+				add_deposit = d_cronos_reactor
+			}
+		}
+	}
+}
+
+# Set Volus as Protectorate
+country_event = {
+	id = btr_setup.3
+	hide_window = yes
+	is_triggered_only = yes
+	trigger = {
+		has_country_flag = vol_protectorate
+	}
+	immediate = {
+		if = {
+			limit = { exists = event_target:vol_protectorate exists = event_target:turian_hierarchy }
+			event_target:vol_protectorate = {
+				establish_communications_no_message = event_target:turian_hierarchy
+				set_subject_of = { who = event_target:turian_hierarchy subject_type = special_protectorate }
+			}
+		}
+	}
+}
+
+# this: capital planet
+# from: founder species
+planet_event = {
+	id = btr_setup.4
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_planet_flag = btr_systems_alliance_planet_earth
+					has_planet_flag = btr_systems_alliance_planet_mars
+					has_planet_flag = btr_collectors_collector_station
+					has_planet_flag = btr_cerberus_cronos_station
+				}
+			}
+			generate_btr_start_deposits_and_blockers = yes
+		}
+	}
+}
+
+# Omega setup
+country_event = {
+	id = btr_setup.5
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = { has_country_flag = omega }
+			give_technology = {
+				tech = tech_hydroponics
+				message = no
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = btr_omega_planet_omgea
+				}
+				while = {
+					count = 5
+					create_pop = { species = event_target:humanSpecies }
+				}
+				while = {
+					count = 5
+					create_pop = { species = event_target:turianSpecies }
+				}
+				while = {
+					count = 5
+					create_pop = { species = event_target:kroganSpecies }
+				}
+				while = {
+					count = 5
+					create_pop = { species = event_target:vorchaSpecies }
+				}
+				while = {
+					count = 5
+					create_pop = { species = event_target:batarianSpecies }
+				}
+				while = {
+					count = 1
+					create_pop = { species = event_target:salarianSpecies }
+				}
+				add_deposit = d_omega_afterlife
+				add_deposit = d_omega_element_zero_refineries
+				add_building = building_hydroponics_farm
+			}
+			country_event = { id = btr_setup.6 days = 5 }
+		}
+	}
+}
+
+# Omega Setup continued
+country_event = {
+	id = btr_setup.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		every_owned_pop_species = {
+			limit = {
+				NOR = { 
+					is_species_class = MECASA 
+				}
+			}
+			set_citizenship_type = { country = root type = citizenship_full cooldown = no }
+			set_living_standard = { country = root type = living_standard_normal cooldown = no }
+		}
+	}
+}
+
+# Set Minor Empires
+country_event = {
+	id = btr_setup.7
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = btr_minor
+			}
+			add_modifier = {
+				modifier = btr_minor_empire
+				days = 7300
+			}
+		}
+	}
+}
+
+

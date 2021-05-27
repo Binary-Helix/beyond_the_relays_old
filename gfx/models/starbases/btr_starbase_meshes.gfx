@@ -1,0 +1,35 @@
+objectTypes = {
+
+	#############################
+#Citadel
+	pdxmesh = {
+		name = "btr_citadel_mesh"
+		file = "gfx/models/starbases/btr_citadel.mesh"
+		scale = 0.8
+			
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "btr_citadel_diff.dds"
+			texture_normal = "btr_citadel_norm.dds"
+			texture_specular = "btr_citadel_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}	
+
+#Omega
+	pdxmesh = {
+		name = "btr_omega_mesh"
+		file = "gfx/models/starbases/btr_omega.mesh"
+		scale = 1.0
+			
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "btr_omega_diffuse.dds"
+			texture_normal = "btr_omega_norm.dds"
+			texture_specular = "btr_omega_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}	
+}

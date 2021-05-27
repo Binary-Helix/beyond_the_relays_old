@@ -208,7 +208,7 @@ sys_lusarn_init = {
 		}
 	}
 
-	flags = { mec_asari_lusarn_system custom_system }
+	flags = { btr_asari_lusarn_system custom_system }
 
 	planet = {
 	    name = "Lusarn"
@@ -278,7 +278,7 @@ sys_lusarn_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			set_deposit = d_mec_asari_doriae_bacteria
+			set_deposit = d_btr_asari_doriae_bacteria
 		}		
 	}
 
@@ -289,7 +289,7 @@ sys_lusarn_init = {
 		orbit_angle = -30
 		size = 14
 		has_ring = no
-		flags = { mec_asari_planet_tarith }
+		flags = { btr_asari_planet_tarith }
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -355,7 +355,7 @@ sys_ondeste_init = {
 		}
 	}
 
-	flags = { mec_asari_ondeste_system custom_system }
+	flags = { btr_asari_ondeste_system custom_system }
 
 	planet = {
 		name = "Ondeste"
@@ -444,7 +444,7 @@ sys_tasale_init = {
 		radius = 140
 	}
 
-	flags = { empire_home_system mec_asari_tasale_system custom_system }
+	flags = { empire_home_system btr_asari_tasale_system custom_system }
 	
 	usage = origin
 	
@@ -500,7 +500,7 @@ sys_tasale_init = {
 		
 		deposit_blockers = none
 		modifiers = none
-		flags = { illium_codex mec_asari_planet_illium special_start_planet }		
+		flags = { illium_codex btr_asari_planet_illium special_start_planet }		
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -641,14 +641,14 @@ sys_zelene_init = {
 		}
 
 		closest_system = {
-			limit = { has_star_flag = mec_asari_tasale_system }
+			limit = { has_star_flag = btr_asari_tasale_system }
 			add_hyperlane = {
 				from = this
 				to = prev
 			}
 		}
 	}
-	flags = { mec_asari_zelene_system custom_system }
+	flags = { btr_asari_zelene_system custom_system }
 
 	planet = {
 		name = "Zelene"

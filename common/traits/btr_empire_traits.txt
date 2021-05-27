@@ -49,7 +49,7 @@
 # 	}	
 # }
 
-mec_asari_trait_core = {
+btr_asari_trait_core = {
 	cost = 0
 	potential_crossbreeding_chance = 0.0
 	opposites = { "trait_enduring" "trait_venerable" "trait_fleeting" "trait_slow_breeders" "trait_rapid_breeders" }
@@ -70,9 +70,9 @@ mec_asari_trait_core = {
 		weight = 0
 	}
 
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_core.dds"
+	icon = "gfx/interface/icons/btr_asari/btr_asari_trait_core.dds"
 
-	custom_tooltip = mec_asari_trait_CORE_EFFECT
+	custom_tooltip = btr_asari_trait_CORE_EFFECT
 	modifier = {
 		leader_age = 900
 		leaders_cost_mult = 1.00
@@ -81,14 +81,14 @@ mec_asari_trait_core = {
 	}
 }
 
-#mec_asari_trait_age = {
+#btr_asari_trait_age = {
 #	cost = 4
 #	potential_crossbreeding_chance = 1.0
 #	opposites = { "trait_enduring" "trait_venerable" "trait_fleeting" }
 #	allowed_archetypes = { BIOLOGICAL }
 #	modification = yes
 #	randomized = no
-#	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_age.dds"
+#	icon = "gfx/interface/icons/btr_asari/btr_asari_trait_age.dds"
 	
 #	leader_age_min = 250
 #	leader_age_max = 750
@@ -98,62 +98,62 @@ mec_asari_trait_core = {
 #		leaders_cost_mult = 1.00
 #		leaders_upkeep_mult = 1.00
 #	}
-#	custom_tooltip = mec_asari_trait_AGE_EFFECT
+#	custom_tooltip = btr_asari_trait_AGE_EFFECT
 #
 	#slave_cost = {
 	#	energy = 100
 	#}
 #}
 
-#mec_asari_trait_gynogenetic = {
+#btr_asari_trait_gynogenetic = {
 #	cost = -4
 #	potential_crossbreeding_chance = 0.0
 #	opposites = { "trait_slow_breeders" "trait_rapid_breeders" }
 #	allowed_archetypes = { BIOLOGICAL }
 #	modification = yes
 #	randomized = no
-#	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_gynogenetic.dds"
+#	icon = "gfx/interface/icons/btr_asari/btr_asari_trait_gynogenetic.dds"
 #	modifier = {
 #		pop_growth_speed = -0.25
 #	}
-#	custom_tooltip = mec_asari_trait_GYNOGENETIC_EFFECT
+#	custom_tooltip = btr_asari_trait_GYNOGENETIC_EFFECT
 #	
 	#slave_cost = {
 	#	energy = -100
 	#}
 #}
 
-mec_asari_trait_biotic = {
+btr_asari_trait_biotic = {
 	cost = 2
 	potential_crossbreeding_chance = 0.75
 	#opposites = { }
 	allowed_archetypes = { BIOLOGICAL }
 	modification = yes
 	randomized = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_biotic.dds"
+	icon = "gfx/interface/icons/btr_asari/btr_asari_trait_biotic.dds"
 	
 	modifier = {
 	}
-	custom_tooltip = mec_asari_trait_BIOTIC_EFFECT
+	custom_tooltip = btr_asari_trait_BIOTIC_EFFECT
 	
 	slave_cost = {
 		energy = 500
 	}
 }
 
-mec_asari_trait_sophisticated = {
+btr_asari_trait_sophisticated = {
 	cost = -2
 	potential_crossbreeding_chance = 0.75
 	opposites = { trait_hive_mind }
 	allowed_archetypes = { BIOLOGICAL }
 	modification = yes
 	randomized = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_sophisticated.dds"
+	icon = "gfx/interface/icons/btr_asari/btr_asari_trait_sophisticated.dds"
 	
 	modifier = {
 		pop_amenities_usage_mult = 0.20
 	}
-	#custom_tooltip = mec_asari_trait_SOPHISTICATED_EFFECT
+	#custom_tooltip = btr_asari_trait_SOPHISTICATED_EFFECT
 	
 	#slave_cost = {
 	#	energy = 150
@@ -164,10 +164,10 @@ mec_asari_trait_sophisticated = {
 # Leader Traits  #
 ##################
 
-mec_asari_leader_trait_farsighted = {
+btr_asari_leader_trait_farsighted = {
 	cost = 1
 	modification = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_philosopher.dds"
+	icon = "gfx/interface/icons/btr_asari/btr_asari_trait_philosopher.dds"
 	self_modifier = {
 		leader_skill_levels = 1
 	}
