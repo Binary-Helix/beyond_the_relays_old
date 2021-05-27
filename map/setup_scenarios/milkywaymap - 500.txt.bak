@@ -1,10 +1,10 @@
 static_galaxy_scenario = {
-    name = "Beyond_the_Relays_500_v1"
+    name = "BTR - Map Playtest 1 (500)"
     priority = 2
-    default = yes
+    default = no
     colonizable_planet_odds = 0.25
-    num_empires = { min = 1 max = 15 }
-    num_empire_default = 9
+    num_empires = { min = 17 max = 17 }
+    num_empire_default = 17
     advanced_empire_default = 0
     core_radius = 25
     random_hyperlanes = no
@@ -1688,6 +1688,13 @@ static_galaxy_scenario = {
             y = 313.7259
         }
         initializer = sys_trebia_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = turian_hierarchy
+                } 
+        }  		
     }
 
     system = {
@@ -1724,13 +1731,6 @@ static_galaxy_scenario = {
             y = 269.5753
         }
         initializer = sys_mactare_init
-		spawn_weight = { 
-			base = 0
-                modifier = { 
-                        add = 100000 
-                        has_country_flag = turian_hierarchy
-                } 
-        }        
     }
 
     system = {
@@ -4375,7 +4375,7 @@ static_galaxy_scenario = {
             x = 445.066
             y = -46.96038
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4384,7 +4384,7 @@ static_galaxy_scenario = {
             x = 343.53
             y = -46.96037
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4393,7 +4393,7 @@ static_galaxy_scenario = {
             x = 329.9919
             y = -127.343
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4402,7 +4402,7 @@ static_galaxy_scenario = {
             x = 392.6058
             y = 49.49881
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4411,7 +4411,7 @@ static_galaxy_scenario = {
             x = 414.6052
             y = 130.7276
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4420,7 +4420,7 @@ static_galaxy_scenario = {
             x = 335.9149
             y = 140.035
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4429,7 +4429,7 @@ static_galaxy_scenario = {
             x = 331.6842
             y = 207.7257
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4438,7 +4438,7 @@ static_galaxy_scenario = {
             x = 220.8408
             y = 320.2614
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4447,7 +4447,7 @@ static_galaxy_scenario = {
             x = 166.6882
             y = 264.4167
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4456,7 +4456,7 @@ static_galaxy_scenario = {
             x = 192.0723
             y = 203.4951
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4465,7 +4465,7 @@ static_galaxy_scenario = {
             x = 213.2256
             y = 134.9583
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4474,7 +4474,7 @@ static_galaxy_scenario = {
             x = 249.6093
             y = 53.72948
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4483,7 +4483,7 @@ static_galaxy_scenario = {
             x = 255.5322
             y = -30.88383
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4492,7 +4492,7 @@ static_galaxy_scenario = {
             x = 148.0733
             y = 94.34389
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4501,7 +4501,7 @@ static_galaxy_scenario = {
             x = 83.76719
             y = 194.1876
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4510,7 +4510,7 @@ static_galaxy_scenario = {
             x = 106.0564
             y = 310.2205
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4519,7 +4519,7 @@ static_galaxy_scenario = {
             x = 137.9197
             y = 362.568
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4528,7 +4528,7 @@ static_galaxy_scenario = {
             x = 34.69148
             y = 299.1081
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4537,7 +4537,7 @@ static_galaxy_scenario = {
             x = -5.076771
             y = 312.6462
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4546,7 +4546,7 @@ static_galaxy_scenario = {
             x = -37.22984
             y = 204.3412
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4555,7 +4555,7 @@ static_galaxy_scenario = {
             x = -56.69089
             y = 277.9548
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4564,7 +4564,7 @@ static_galaxy_scenario = {
             x = -79.53647
             y = 338.0302
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4573,7 +4573,7 @@ static_galaxy_scenario = {
             x = -113.3818
             y = 417.5667
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4582,7 +4582,7 @@ static_galaxy_scenario = {
             x = -175.9956
             y = 366.7987
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4591,7 +4591,7 @@ static_galaxy_scenario = {
             x = -169.1896
             y = 313.7859
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4600,7 +4600,7 @@ static_galaxy_scenario = {
             x = -159.073
             y = 255.1092
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4609,7 +4609,7 @@ static_galaxy_scenario = {
             x = -258.0706
             y = 300.8004
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4618,7 +4618,7 @@ static_galaxy_scenario = {
             x = -208.1487
             y = 193.3415
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4627,7 +4627,7 @@ static_galaxy_scenario = {
             x = -150.6117
             y = 160.3423
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4636,7 +4636,7 @@ static_galaxy_scenario = {
             x = -296.1466
             y = 231.4175
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4645,7 +4645,7 @@ static_galaxy_scenario = {
             x = -205.6103
             y = 123.9586
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4654,7 +4654,7 @@ static_galaxy_scenario = {
             x = -291.0698
             y = 146.8042
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4663,7 +4663,7 @@ static_galaxy_scenario = {
             x = -380.7599
             y = 192.4954
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4672,7 +4672,7 @@ static_galaxy_scenario = {
             x = -374.8369
             y = 108.7282
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4681,7 +4681,7 @@ static_galaxy_scenario = {
             x = -171.765
             y = 56.26792
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4690,7 +4690,7 @@ static_galaxy_scenario = {
             x = -264.8397
             y = -3.807521
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4699,7 +4699,7 @@ static_galaxy_scenario = {
             x = -384.1444
             y = 29.19168
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4708,7 +4708,7 @@ static_galaxy_scenario = {
             x = -160.7653
             y = 1.269269
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4717,7 +4717,7 @@ static_galaxy_scenario = {
             x = 1.109618E-07
             y = 1.269254
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4726,7 +4726,7 @@ static_galaxy_scenario = {
             x = -110.8435
             y = -93.49765
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4735,7 +4735,7 @@ static_galaxy_scenario = {
             x = -205.6104
             y = -112.1126
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4744,7 +4744,7 @@ static_galaxy_scenario = {
             x = -329.9919
             y = -91.80537
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4753,7 +4753,7 @@ static_galaxy_scenario = {
             x = -421.3743
             y = -123.1123
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4762,7 +4762,7 @@ static_galaxy_scenario = {
             x = -263.9936
             y = -184.0339
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4771,7 +4771,7 @@ static_galaxy_scenario = {
             x = -243.6864
             y = -236.4942
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4780,7 +4780,7 @@ static_galaxy_scenario = {
             x = -380.7599
             y = -285.5699
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4789,7 +4789,7 @@ static_galaxy_scenario = {
             x = -412.0669
             y = -239.0325
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4798,7 +4798,7 @@ static_galaxy_scenario = {
             x = -117.6125
             y = -309.2616
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4807,7 +4807,7 @@ static_galaxy_scenario = {
             x = -134.5352
             y = -234.8019
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4816,7 +4816,7 @@ static_galaxy_scenario = {
             x = -88.84399
             y = -198.4182
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4825,7 +4825,7 @@ static_galaxy_scenario = {
             x = -234.3789
             y = -310.1078
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4834,7 +4834,7 @@ static_galaxy_scenario = {
             x = -25.38401
             y = -165.419
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4843,7 +4843,7 @@ static_galaxy_scenario = {
             x = 13.53811
             y = -241.571
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4852,7 +4852,7 @@ static_galaxy_scenario = {
             x = 1.692237
             y = -332.9534
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4861,7 +4861,7 @@ static_galaxy_scenario = {
             x = -129.4584
             y = -414.1822
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4870,7 +4870,7 @@ static_galaxy_scenario = {
             x = 113.3818
             y = -93.49767
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4879,7 +4879,7 @@ static_galaxy_scenario = {
             x = 144.6888
             y = -160.3422
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4888,7 +4888,7 @@ static_galaxy_scenario = {
             x = 205.6104
             y = -151.0347
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4897,7 +4897,7 @@ static_galaxy_scenario = {
             x = 179.3802
             y = -199.2643
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4906,7 +4906,7 @@ static_galaxy_scenario = {
             x = 293.6082
             y = -224.6483
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4915,7 +4915,7 @@ static_galaxy_scenario = {
             x = 207.3026
             y = -255.9552
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4924,7 +4924,7 @@ static_galaxy_scenario = {
             x = 110.8434
             y = -308.4155
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4933,7 +4933,7 @@ static_galaxy_scenario = {
             x = 53.30636
             y = -420.1051
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4942,7 +4942,7 @@ static_galaxy_scenario = {
             x = 213.2256
             y = -387.106
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4951,7 +4951,7 @@ static_galaxy_scenario = {
             x = 349.453
             y = -299.1081
         }
-        radius = 10
+        radius = 20
     }
 
     nebula = {
@@ -4960,7 +4960,7 @@ static_galaxy_scenario = {
             x = -154.8424
             y = -48.65259
         }
-        radius = 10
+        radius = 20
     }
 
     add_hyperlane = { from = "0" to = "1" }

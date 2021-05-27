@@ -160,6 +160,8 @@ btr_asari_trait_sophisticated = {
 	#}
 }
 
+
+
 ##################
 # Leader Traits  #
 ##################
@@ -176,4 +178,80 @@ btr_asari_leader_trait_farsighted = {
 
 	initial = no
 	randomized = no
+}
+
+
+#################
+# KROGAN TRAITS #
+#################
+
+btr_krogan_trait_core = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = { "btr_volus_trait_core" "trait_enduring" "trait_venerable" "trait_fleeting" }
+
+	initial = yes
+	randomized = no
+	modification = no
+
+	leader_age_min = 300
+	leader_age_max = 2000
+
+	allowed_archetypes = { BIOLOGICAL }
+	ai_weight = {
+		weight = 0
+	}
+
+	modifier = {
+		pc_nuked_habitability = 0.8
+	}
+	slave_cost = {
+		energy = 450
+	}
+}
+
+btr_krogan_genophage = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = { "trait_slow_breeders" "trait_rapid_breeders" }
+
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+	
+	advanced_trait = yes	
+	custom_tooltip = btr_genophage_trait
+	prerequisites = {  }
+	modifier = {
+		pop_growth_speed = -.75	}
+}
+
+
+#################
+# VOLUS  TRAITS #
+#################
+
+btr_volus_trait_core = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = { "btr_krogan_genophage" "btr_krogan_trait_core" }
+
+	initial = yes
+	randomized = no
+	modification = no
+
+	allowed_archetypes = { BIOLOGICAL }
+	ai_weight = {
+		weight = 0
+	}
+
+	modifier = {
+		pc_ammonia_habitability = 0.8
+		country_resource_max_energy_add = 5000
+		country_base_energy_produces_add = 50
+	}
+	slave_cost = {
+		energy = 40
+	}
 }

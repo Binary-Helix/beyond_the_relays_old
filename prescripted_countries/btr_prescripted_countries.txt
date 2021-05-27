@@ -289,8 +289,8 @@ krogan_chiefdom={
 		plural="Krogans"
 		adjective="Krogan"
 		name_list="btr_krogan"
-		trait="trait_rapid_breeders"
-		trait="trait_solitary"
+		trait="btr_krogan_genophage"		
+		trait="btr_krogan_trait_core"
 		trait="trait_quarrelsome"
 		trait="trait_very_strong"
 		trait="trait_slow_learners"
@@ -849,7 +849,7 @@ rachni_hive={
 	authority="auth_hive_mind"
 	government="gov_devouring_swarm"
 	planet_name="Suen"
-	planet_class="pc_toxic_arid"
+	planet_class="pc_arid"
 	system_name="Maskim Xul"
 	initializer="sys_maskimxul_init"
 	graphical_culture= "molluscoid_01"
@@ -1116,14 +1116,14 @@ vol_protectorate={
 		trait="trait_weak"
 		trait="trait_thrifty"
 		trait="trait_sedentary"
-		trait="trait_pc_ammonia_continental_preference"		
+		trait="btr_volus_trait_core"		
 	}
 	name="Vol Protectorate"
 	adjective="Vol Protectorate"
 	authority="auth_corporate"
 	government="gov_trade_league"
 	planet_name="Irune"
-	planet_class="pc_ammonia_continental"
+	planet_class="pc_ammonia"
 	system_name="Aru"
 	initializer="sys_aru_init"
 	graphical_culture= "mammalian_01"
@@ -1185,14 +1185,14 @@ vol_protectorate_b={
 		trait="trait_weak"
 		trait="trait_thrifty"
 		trait="trait_sedentary"
-		trait="trait_pc_ammonia_continental_preference"
+		trait="btr_volus_trait_core"
 	}
 	name="Vol Protectorate"
 	adjective="Vol Protectorate"
 	authority="auth_oligarchic"
 	government= "gov_executive_committee"
 	planet_name="Irune"
-	planet_class="pc_ammonia_continental"
+	planet_class="pc_ammonia"
 	system_name="Aru"
 	initializer="sys_aru_init"
 	graphical_culture= "mammalian_01"
@@ -1441,7 +1441,7 @@ raloi_republic={
 }
 
 ## Asari Corporate Interests
-btr_asariillium_civ = {
+asari_corporate_interests = {
 	name = "Asari Corporate Interests"
 	adjective = "Asari"
 	spawn_enabled = no # yes / no / always
@@ -1452,12 +1452,12 @@ btr_asariillium_civ = {
 	ship_prefix = ""
 	
 	species = {
-		class = "MECASA"
+		class = "ASA"
 		portrait = "btr_asari"
 		name = "Asari"
 		plural = "Asari"
 		adjective = "Asari"
-		name_list = "btr_asari_names"
+		name_list = "btr_asari"
 		trait = "btr_asari_trait_core"
 		trait = "btr_asari_trait_biotic"
 		trait = "trait_charismatic"
@@ -1483,8 +1483,8 @@ btr_asariillium_civ = {
 	initializer = "sys_tasale_init"
 	system_name = "Tasale"
 	
-	graphical_culture = "btr_asari_01"
-	city_graphical_culture = "btr_asari_01"
+	graphical_culture = "asari_01"
+	city_graphical_culture = "asari_01"
 	
 	empire_flag = {
 		icon = {
@@ -1516,7 +1516,7 @@ btr_asariillium_civ = {
 }
 
 ## Asari Republics
-btr_asarirepublics_civ = {
+asari_republics = {
 	name = "Asari Republics"
 	adjective = "Asari"
 	spawn_enabled = no # yes / no / always
@@ -1527,12 +1527,12 @@ btr_asarirepublics_civ = {
 	ship_prefix = ""
 	
 	species = {
-		class = "MECASA"
+		class = "ASA"
 		portrait = "btr_asari"
 		name = "Asari"
 		plural = "Asari"
 		adjective = "Asari"
-		name_list = "btr_asari_names"
+		name_list = "btr_asari"
 		trait = "btr_asari_trait_core"
 		trait = "btr_asari_trait_biotic"
 		trait = "trait_charismatic"
@@ -1556,8 +1556,8 @@ btr_asarirepublics_civ = {
 	system_name = "Parnitha"
 	initializer= "sys_parnitha_init"
 	
-	graphical_culture = "btr_asari_01"
-	city_graphical_culture = "btr_asari_01"
+	graphical_culture = "asari_01"
+	city_graphical_culture = "asari_01"
 	
 	empire_flag = {
 		icon = {

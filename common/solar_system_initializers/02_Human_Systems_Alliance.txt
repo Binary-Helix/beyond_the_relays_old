@@ -2647,6 +2647,8 @@ sys_anadius_init = {
 	}
 
 	flags = { empire_home_system btr_cerberus_system custom_system }
+	
+	usage = custom_empire
 
 	init_effect = {
 		every_neighbor_system = {
@@ -4176,16 +4178,13 @@ sys_sol_init = {
 	
 	planet = {
 		name = "Mars"
-		class = "pc_barren"
+		class = "pc_arid"
 		orbit_distance = 25
 		orbit_angle = 60
 		size = 13
-		init_effect = {
-			set_planet_flag = mars_codex
-			}
 		has_ring = no
 		entity = "barren_planet_mars_entity"
-		flags = { btr_systems_alliance_planet_mars special_start_colony }
+		flags = { btr_systems_alliance_planet_mars special_start_colony pd_ignore}
 		
 		init_effect = {
 			set_owner = event_target:solOwner
@@ -4205,6 +4204,7 @@ sys_sol_init = {
 			add_deposit = d_mars_maxwell_mining_base
 			add_deposit = d_mars_olympus_mons
 			add_deposit = d_mars_tharsis_solar_arrays
+			set_planet_flag = mars_codex			
 		}		
 	}
 	

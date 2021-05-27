@@ -3938,6 +3938,7 @@ sys_dakka_init = {
 	max_instances = 1
     init_effect = {
         save_global_event_target_as = "dakka_relay_system"
+		generate_home_system_resources = yes
     }
 
 	flags = { mercenary_home_system btr_blood_pack_system custom_system }

@@ -11,7 +11,7 @@ static_galaxy_scenario = {
 	num_gateways_default = 0
     advanced_empire_default = 0
     core_radius = 25
-    random_hyperlanes = yes
+    random_hyperlanes = no
 
     system = {
         id = "0"
@@ -20,6 +20,13 @@ static_galaxy_scenario = {
             y = -292.9458
         }
         initializer = sys_kyzil_init
+				spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = vorcha_chiefdom
+				} 
+		}  
     }
 
     system = {
@@ -335,6 +342,13 @@ static_galaxy_scenario = {
             y = -239.5111
         }
         initializer = sys_sahrabarik_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = omega
+                } 
+        }  		
     }
 
     system = {
@@ -704,7 +718,13 @@ static_galaxy_scenario = {
             y = -243.7473
         }
         initializer = sys_tikkun_init
-        spawn_weight = { base = 1 }        
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = geth_consensus
+                } 
+        }      
     }
 
     system = {
@@ -732,6 +752,13 @@ static_galaxy_scenario = {
             y = -139.5832
         }
         initializer = sys_azedes_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = raloi_republic
+                } 
+        } 		
     }
 
     system = {
@@ -840,6 +867,13 @@ static_galaxy_scenario = {
             y = -61.21091
         }
         initializer = sys_maskimxul_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = rachni_hive
+                } 
+        }		
     }
 
     system = {
@@ -1317,6 +1351,13 @@ static_galaxy_scenario = {
             y = 350.1526
         }
         initializer = sys_harsa_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = batarian_hegemony
+                } 
+        }  		
     }
 
     system = {
@@ -1443,6 +1484,13 @@ static_galaxy_scenario = {
             y = 299.5244
         }
         initializer = sys_sol_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = systems_alliance
+                } 
+        } 		
     }
 
     system = {
@@ -1470,6 +1518,13 @@ static_galaxy_scenario = {
             y = 212.5295
         }
         initializer = sys_anadius_init
+		spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+						has_country_flag = cerberus
+				}
+		} 		
     }
 
     system = {
@@ -1515,6 +1570,13 @@ static_galaxy_scenario = {
             y = 195.4158
         }
         initializer = sys_pranas_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = salarian_union
+                } 
+        } 		
     }
 
     system = {
@@ -1596,6 +1658,13 @@ static_galaxy_scenario = {
             y = 346.2097
         }
         initializer = sys_aru_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = vol_protectorate
+                } 
+        }		
     }
 
     system = {
@@ -1623,6 +1692,13 @@ static_galaxy_scenario = {
             y = 313.7259
         }
         initializer = sys_trebia_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = turian_hierarchy
+                } 
+        }		
     }
 
     system = {
@@ -1695,6 +1771,13 @@ static_galaxy_scenario = {
             y = 199.8031
         }
         initializer = sys_aralakh_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = krogan_chiefdom
+                } 
+        }		
     }
 
     system = {
@@ -1767,6 +1850,13 @@ static_galaxy_scenario = {
             y = 89.16795
         }
         initializer = sys_kanala_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = illuminated_primacy
+                } 
+        }		
     }
 
     system = {
@@ -1875,6 +1965,13 @@ static_galaxy_scenario = {
             y = -47.74206
         }
         initializer = sys_chabtan_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = parnack_regime
+                } 
+        }		
     }
 
     system = {
@@ -1902,7 +1999,13 @@ static_galaxy_scenario = {
             y = 135.5177
         }
         initializer = sys_parnitha_init
-        spawn_weight = { base = 1 }        
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = asari_republics
+                } 
+        }        
     }
 
     system = {
@@ -2002,6 +2105,13 @@ static_galaxy_scenario = {
             y = 200.6415
         }
         initializer = sys_phontes_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = courts_of_dekuuna
+                } 
+        } 		
     }
 
     system = {
@@ -2146,6 +2256,13 @@ static_galaxy_scenario = {
             y = -3.531452
         }
         initializer = sys_tartarusdebrisfield_init
+		spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+					has_country_flag = collectors
+				}
+		} 		
     }
 
     system = {
