@@ -1,0 +1,241 @@
+# ##################
+# Trading
+# ##################
+
+#Project Architect: Explanetary Resource Exploitation
+tech_mec_illium_architect_01 = {
+	icon = tech_tomb_world_adaption
+	cost = @tier2cost1
+	area = society
+	tier = 1
+	category = { new_worlds }
+	weight = 0
+
+	potential = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 20
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = "d_mec_asari_nosparnalo_quarantine"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_monthly_income = {
+					resource = society_research
+					value < 50
+				}
+			}
+		}
+	}
+}
+
+#Project Architect: Incentive Redefinition Synergy
+tech_mec_illium_architect_02 = {
+	icon = tech_slave_colonies
+	cost = @tier2cost1
+	area = society
+	tier = 1
+	category = { new_worlds }
+	weight = 0
+
+	potential = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 20
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = "d_mec_asari_makeara_slums"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_monthly_income = {
+					resource = society_research
+					value < 50
+				}
+			}
+		}
+	}
+}
+
+#Project Architect: Agile Ecology Solutions
+tech_mec_illium_architect_03 = {
+	icon = tech_noxious_swamp
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { new_worlds }
+	weight = 0
+
+	potential = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	modifier = {
+		deposit_blockers_cost_mult = -0.10
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 20
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = "d_mec_asari_esiyo_jungle"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_monthly_income = {
+					resource = society_research
+					value < 60
+				}
+			}
+		}
+	}
+}
+
+#Project Architect: Asset Utility Maximisation
+tech_mec_illium_architect_04 = {
+	icon = tech_colonization_4
+	cost = @tier2cost2
+	area = society
+	tier = 2
+	category = { new_worlds }
+	weight = 0
+
+	potential = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	modifier = {
+		planet_building_refund_mult = 0.10
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 20
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = "d_mec_asari_esiyo_urban"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_monthly_income = {
+					resource = society_research
+					value < 60
+				}
+			}
+		}
+	}
+}
+
+#Project Architect: Mass Resource Acquisition
+tech_mec_illium_architect_05 = {
+	icon = tech_deep_sinkhole
+	cost = @tier2cost3
+	area = society
+	tier = 2
+	category = { new_worlds }
+	weight = 0
+
+	potential = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	modifier = {
+		terraforming_cost_mult = -0.10
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 20
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = "d_mec_asari_sub_equatorial_land"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_monthly_income = {
+					resource = society_research
+					value < 70
+				}
+			}
+		}
+	}
+}
+
+#Project Architect: Environmental Paradigm Shift
+tech_mec_illium_architect_06 = {
+	icon = tech_colonization_5
+	cost = @tier3cost1
+	area = society
+	tier = 3
+	category = { new_worlds }
+	weight = 0
+
+	potential = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	modifier = {
+		terraform_speed_mult = 0.10
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 20
+		}
+		modifier = {
+			factor = 0
+			NOT = {
+				any_owned_planet =  {
+					has_deposit = "d_mec_asari_tartaos_fissures"
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			NOT = {
+				has_monthly_income = {
+					resource = society_research
+					value < 80
+				}
+			}
+		}
+	}
+}

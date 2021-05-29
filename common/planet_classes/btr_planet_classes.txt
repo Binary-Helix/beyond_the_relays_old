@@ -8,7 +8,8 @@
 pc_dextro_desert = {
 	entity = "desert_planet"
 	icon_frame = 1
-
+	picture = pc_desert
+	tile_set = pc_desert
 	climate = "dry"
 	initial = yes
 
@@ -45,7 +46,8 @@ pc_dextro_arid = {
 	entity = "arid_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 2
-
+	picture = pc_arid
+	tile_set = pc_arid
 	climate = "dry"
 	initial = yes
 
@@ -78,7 +80,8 @@ pc_dextro_savannah = {
 	entity = "savannah_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 20
-
+	picture = pc_savannah
+	tile_set = pc_savannah
 	climate = "dry"
 	initial = yes
 
@@ -112,7 +115,8 @@ pc_dextro_tropical = {
 	entity = "tropical_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 5
-
+	picture = pc_tropical
+	tile_set = pc_tropical
 	climate = "wet"
 	initial = yes
 
@@ -145,7 +149,8 @@ pc_dextro_continental = {
 	entity = "continental_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 4
-
+	picture = pc_continental
+	tile_set = pc_continental
 	climate = "wet"
 	initial = yes
 
@@ -179,7 +184,8 @@ pc_dextro_ocean = {
 	entity = "ocean_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 6
-
+	picture = pc_ocean
+	tile_set = 	pc_ocean
 	climate = "wet"
 	initial = yes
 	
@@ -213,7 +219,8 @@ pc_dextro_tundra = {
 	entity = "tundra_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 3
-
+	picture = pc_tundra
+	tile_set = pc_arctic	
 	climate = "cold"
 	initial = yes
 
@@ -246,7 +253,8 @@ pc_dextro_arctic = {
 	entity = "arctic_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 7
-
+	picture = pc_arctic
+	tile_set = pc_arctic
 	climate = "cold"
 	initial = yes
 
@@ -279,7 +287,8 @@ pc_dextro_alpine = {
 	entity = "alpine_planet"
 	entity_scale = @planet_standard_scale
 	icon_frame = 19
-
+	picture = pc_alpine
+	tile_set = pc_alpine
 	climate = "cold"
 	initial = yes
 
@@ -1061,6 +1070,24 @@ pc_chlorine = {
 }
 
 
+pc_cryovolcanic = {
+	entity = "subglacial_planet"
+	entity_scale = @planet_standard_scale
+	icon_frame = 13
+	#appearance
+	picture = pc_subglacial
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+	#planet defines
+	colonizable = yes
+	#colonization_tech = { }		
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+}
+
+
 # ###########
 # Random Lists
 # ###########
@@ -1166,7 +1193,7 @@ random_list = {
 }
 
 random_list = {
-	name = "rl_habitable_all"
+	name = "rl_habitable_normal"
 	planets = {
 		"pc_desert"
 		"pc_tropical"

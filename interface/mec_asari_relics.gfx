@@ -1,0 +1,75 @@
+spriteTypes = {
+
+	###########################
+	## PROTHEAN BEACON RELIC ##
+	###########################
+	SpriteType = {
+		name = "GFX_mec_relic_asari_prothean_beacon"
+
+		texturefile = "gfx/interface/icons/relics/r_mec_asari_prothean_beacon.dds"			
+		effectFile = "gfx/FX/buttonstate.lua"
+		
+		## BURNY COLUMN EFFECT ##
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_mec_asari_prothean_beacon_beam_burn.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/r_mec_asari_flame_column.dds" 	# <- the animated file
+			animationrotation = 90		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 24				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		#legacy_lazy_load = no
+
+		## SHUFFLE EFFECT ##
+		animation = {
+			animationmaskfile = "gfx/interface/icons/relics/r_mec_asari_prothean_beacon_glow.dds"			
+			animationtexturefile = "gfx/interface/icons/relics/glow_overlay.dds" 	# <- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = yes			# yes or no ;)
+			animationtime = 8				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+		
+		## NOTE: Disabled due to only 2 animations being possible per relic!!
+		## PULSING BURN GLOW ##
+		# animation = {
+		# 	animationmaskfile = "gfx/interface/icons/relics/r_mec_asari_prothean_beacon_beam_burn.dds"			
+		# 	animationtexturefile = "gfx/interface/icons/relics/r_mec_asari_prothean_beacon_beam_burn_mask.dds" 	# <- the animated file
+		# 	animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+		# 	animationlooping = yes			# yes or no ;)
+		# 	animationtime = 18				# in seconds
+		# 	animationdelay = 0			# in seconds
+		# 	animationblendmode = "add"       #add, multiply, overlay
+		# 	animationtype = "pulsing"      #scrolling, rotating, pulsing
+		# 	animationrotationoffset = { x = 0.0 y = 0.0 }
+		# 	animationtexturescale = { x = 1.0 y = 1.0 }
+		# }
+		# legacy_lazy_load = no
+
+
+		## NOTE: Leaving this "zazzle" effect here for reference on future relics! It creates a rapid shine effect.
+		## QUICK ZAZZLE EFFECT ##
+		# animation = {
+		# 	animationmaskfile = "gfx/interface/icons/relics/r_mec_asari_prothean_beacon_glow.dds"			
+		# 	animationtexturefile = "gfx/interface/icons/relics/shine_overlay.dds" 	# <- the animated file
+		# 	animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+		# 	animationlooping = yes			# yes or no ;)
+		# 	animationtime = 1				# in seconds
+		# 	animationdelay = 8			# in seconds
+		# 	animationblendmode = "add"       #add, multiply, overlay
+		# 	animationtype = "scrolling"      #scrolling, rotating, pulsing
+		# 	animationrotationoffset = { x = 0.0 y = 0.0 }
+		# 	animationtexturescale = { x = 1.0 y = 1.0 }
+		# }
+		# legacy_lazy_load = no
+	}
+}

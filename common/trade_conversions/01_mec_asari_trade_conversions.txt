@@ -1,0 +1,81 @@
+#First is set to default
+#
+
+mec_asari_illium_basic_conversion =
+{
+	potential = {
+		has_valid_civic = mec_asari_civic_illium
+	}
+	
+	weight = {
+		weight = 201
+	}
+	
+	conversion_rate = {
+		energy = 1
+		influence = 0.002
+	}
+
+	economic_category = trade_routes
+}
+
+mec_asari_illium_consumer_goods_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_consumer_goods
+		has_valid_civic = mec_asari_civic_illium
+	}
+	
+	weight = {
+		weight = 210
+	}
+	
+	conversion_rate = {
+		energy = 0.5
+		consumer_goods = 0.25
+		influence = 0.002
+	}
+
+	economic_category = trade_routes
+}
+
+mec_asari_illium_unity_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_unity
+		has_valid_civic = mec_asari_civic_illium
+	}
+	
+	weight = {
+		weight = 210
+	}
+	
+	conversion_rate = {
+		energy = 0.5
+		unity = 0.25
+		influence = 0.002
+	}
+
+	economic_category = trade_routes
+}
+
+mec_asari_illium_trade_league_conversion =
+{
+	potential = {
+		has_policy_flag = trade_conversion_trade_league
+		has_valid_civic = mec_asari_civic_illium
+	}
+	
+	weight = {
+		weight = 300
+	}
+	
+	conversion_rate = {
+		energy = 0.5
+		consumer_goods = 0.25
+		unity = 0.25
+		influence = 0.002
+	}
+
+	economic_category = trade_routes
+}

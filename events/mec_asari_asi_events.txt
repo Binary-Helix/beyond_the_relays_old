@@ -1,0 +1,388 @@
+###########################
+#  Asari Illium Events  #
+###########################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_asari_asi
+
+country_event = {
+	id = mec_asari_asi.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = mec_asari_origin_illium
+			}
+			give_technology = { message = no tech = tech_housing_1 }
+			give_technology = { message = no tech = tech_housing_2 }
+		}
+	}
+}
+
+#Using static event targets instead of planet owner scope should prevent the edge case of interruption if a project completes while planet is controlled by another empire
+#The conqueror should also be unable to continue the story on their own
+
+country_event = {
+	id = mec_asari_asi.102
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	immediate = {
+		random_owned_planet = {
+			limit = { has_planet_flag = mec_asari_planet_illium }
+			set_planet_flag = mec_asari_illium_owned_by_@prev
+			save_global_event_target_as = mec_asari_illium_owned_by_@prev
+			owner = {
+				set_country_flag = mec_asari_illium_owner_of_@prev
+				save_global_event_target_as = mec_asari_illium_owner_of_@prev
+			}
+		}
+		if = {
+			limit = {
+				has_origin = mec_asari_origin_illium
+				any_system_within_border = {
+					has_star_flag = mec_asari_tasale_system
+				}
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = mec_asari_lusarn_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				mec_asari_setup_origin_planets = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = mec_asari_zelene_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				mec_asari_setup_origin_planets = yes
+			}
+			closest_system = {
+				limit = {
+					has_star_flag = mec_asari_ondeste_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+			}
+		}
+	}
+}
+
+#Project Architect Guide
+#Intro
+country_event = {
+	id = mec_asari_asi.201
+	title = mec_asari_asi.201.name
+	desc = mec_asari_asi.201.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = mec_asari_origin_illium
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.201.a
+	}
+
+	after = {
+	}
+}
+
+#Abandoned Arcology
+country_event = {
+	id = mec_asari_asi.202
+	title = mec_asari_asi.202.name
+	desc = mec_asari_asi.202.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.202.a
+	}
+
+	after = {
+	}
+}
+
+#Quarantine Zone
+country_event = {
+	id = mec_asari_asi.203
+	title = mec_asari_asi.203.name
+	desc = mec_asari_asi.203.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.203.a
+	}
+
+	after = {
+	}
+}
+
+#Makeara Slums
+country_event = {
+	id = mec_asari_asi.204
+	title = mec_asari_asi.204.name
+	desc = mec_asari_asi.204.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.204.a
+	}
+
+	after = {
+		if = {
+			limit = {
+				any_galaxy_planet = {
+					has_planet_flag = mec_asari_illium_owned_by_@root
+					NOT = { has_deposit = d_mec_asari_esiyo_jungle }
+				}
+			}
+			country_event = { id = mec_asari_asi.206 }
+		}
+	}
+}
+
+#Jungle
+country_event = {
+	id = mec_asari_asi.205
+	title = mec_asari_asi.205.name
+	desc = mec_asari_asi.205.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.205.a
+	}
+
+	after = {
+		if = {
+			limit = {
+				any_galaxy_planet = {
+					has_planet_flag = mec_asari_illium_owned_by_@root
+					NOT = { has_deposit = d_mec_asari_makeara_slums }
+				}
+			}
+			country_event = { id = mec_asari_asi.206 }
+		}
+	}
+}
+
+#Urbanisation
+country_event = {
+	id = mec_asari_asi.206
+	title = mec_asari_asi.206.name
+	desc = mec_asari_asi.206.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.206.a
+	}
+
+	after = {
+	}
+}
+
+#Nos Eos
+country_event = {
+	id = mec_asari_asi.207
+	title = mec_asari_asi.207.name
+	desc = mec_asari_asi.207.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.207.a
+	}
+
+	after = {
+	}
+}
+
+#Strip-Mining
+country_event = {
+	id = mec_asari_asi.208
+	title = mec_asari_asi.208.name
+	desc = mec_asari_asi.208.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.208.a
+	}
+
+	after = {
+	}
+}
+
+#Tartaos
+country_event = {
+	id = mec_asari_asi.209
+	title = mec_asari_asi.209.name
+	desc = mec_asari_asi.209.desc
+	picture = GFX_mec_event_illium_02
+	show_sound = event_administrative_work
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.209.a
+	}
+
+	after = {
+	}
+}
+
+#Project Complete
+country_event = {
+	id = mec_asari_asi.210
+	title = mec_asari_asi.210.name
+	desc = mec_asari_asi.210.desc
+	picture = GFX_evt_city_planet
+	show_sound = event_cityscape
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asi.210.a
+	}
+
+	after = {
+	}
+}
+
+#Influence income scaling with Ruler level
+#It didn't really fit Illium, leader focus does not feel right
+#But it might be perfect for Omega. Should bookmark it for later.
+
+#country_event = {
+#	id = mec_asari_asi.101
+#	hide_window = yes
+
+#	is_triggered_only = yes
+
+#	immediate = {
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_01"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_02"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_03"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_04"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_05"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_06"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_07"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_08"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_09"
+#		remove_modifier = "mec_asari_mod_civic_illium_influence_10"
+
+#		if = {
+#			limit = {
+#				has_valid_civic = mec_asari_civic_illium
+#				exists = ruler
+#			}
+#			ruler = {
+#				switch = {
+#					trigger = has_level
+#					10 >= { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_10 days = -1 } } }
+#					9 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_09 days = -1 } } }
+#					8 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_08 days = -1 } } }
+#					7 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_07 days = -1 } } }
+#					6 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_06 days = -1 } } }
+#					5 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_05 days = -1 } } }
+#					4 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_04 days = -1 } } }
+#					3 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_03 days = -1 } } }
+#					2 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_02 days = -1 } } }
+#					1 = { prev = { add_modifier = { modifier = mec_asari_mod_civic_illium_influence_01 days = -1 } } }
+#				}
+#			}
+#		}
+#	}
+#}
+
+# Illium à la Mode - Branch Office Partnership
+planet_event = {
+	id = mec_asari_asi.301
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		has_branch_office = yes
+		branch_office_owner = { has_valid_civic = mec_asari_civic_illium }
+		OR = {
+			last_building_changed = mec_asari_branch_illium_inv_entertainment
+			last_building_changed = mec_asari_branch_illium_inv_consumer
+			last_building_changed = mec_asari_branch_illium_inv_alloys
+		}
+	}
+
+	immediate = {
+		branch_office_owner = {
+			#Branch Owner is informed that the investments paid off and a local company has partnered up with Illium
+		}
+	}
+}

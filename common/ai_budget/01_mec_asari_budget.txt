@@ -1,0 +1,220 @@
+## Categories used in this file must have use_for_ai_budget = yes defined in economic_categories ##
+## It is possible to have multiple entries with the same category and resource ##
+
+#################
+## Expenditure ##
+#################
+#mec_energy_expenditure_mec_asari_leaders_exploration = {
+#	resource = energy 
+#	type = expenditure
+#	category = leaders
+	
+#	potential = {
+#		species = {
+#			has_trait = mec_asari_trait_core
+#		}
+#		any_owned_ship = {
+#			is_ship_class = shipclass_science_ship
+#			NOT = { exists = leader }
+#		}
+#	}
+	
+#	fraction = {
+#		weight = 2.0
+#	}
+
+#	static_min = {
+#		base = 400
+#	}
+#}
+
+# Because Asari leaders cost so much, they need extra leader budget
+mec_energy_expenditure_mec_asari_leaders = {
+	resource = energy 
+	type = expenditure
+	category = leaders
+	
+	potential = {
+		species = {
+			has_trait = mec_asari_trait_core
+		}
+		# only needed early on; once economy gets bigger, default plans can handle it
+		resource_stockpile_compare = {
+			resource = energy
+			value < 3000
+		}
+	}
+	
+	fraction = {
+		weight = 1.0
+
+		modifier = {
+			factor = 5.0
+
+			# make SUPER sure we have enough surveyors early game
+			any_owned_ship = {
+				is_ship_class = shipclass_science_ship
+				NOT = { exists = leader }
+			}
+		}
+	}
+}
+
+# Illium requires extra energy and minerals to deal with special blockers
+mec_energy_expenditure_illium_blockers = {
+	resource = energy 
+	type = expenditure
+	category = deposit_blockers
+	
+	potential = {
+		has_origin = mec_asari_origin_illium
+		NOT = { has_country_flag = mec_story_illium_architect_ending_A }
+		any_owned_planet = {
+			OR = {
+				AND = {
+					has_deposit = d_mec_asari_tartaos_fissures
+					owner = { has_technology = tech_mec_illium_architect_06 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_sub_equatorial_land
+					owner = { has_technology = tech_mec_illium_architect_05 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_esiyo_urban
+					owner = { has_technology = tech_mec_illium_architect_04 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_esiyo_jungle
+					owner = { has_technology = tech_mec_illium_architect_03 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_makeara_slums
+					owner = { has_technology = tech_mec_illium_architect_02 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_nosparnalo_quarantine
+					owner = { has_technology = tech_mec_illium_architect_01 }
+				}
+				has_deposit = d_mec_asari_arcology_unfinished
+			}
+		}
+	}
+	
+	fraction = {
+		weight = 2.0
+	}
+
+	static_min = {
+		base = 1000
+	}
+
+	static_max = {
+		base = 2000
+	}
+}
+
+mec_minerals_expenditure_illium_blockers = {
+	resource = minerals
+	type = expenditure
+	category = deposit_blockers
+	
+	potential = {
+		has_origin = mec_asari_origin_illium
+		NOT = { has_country_flag = mec_story_illium_architect_ending_A }
+		any_owned_planet = {
+			OR = {
+				AND = {
+					has_deposit = d_mec_asari_tartaos_fissures
+					owner = { has_technology = tech_mec_illium_architect_06 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_sub_equatorial_land
+					owner = { has_technology = tech_mec_illium_architect_05 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_esiyo_urban
+					owner = { has_technology = tech_mec_illium_architect_04 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_esiyo_jungle
+					owner = { has_technology = tech_mec_illium_architect_03 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_makeara_slums
+					owner = { has_technology = tech_mec_illium_architect_02 }
+				}
+				AND = {
+					has_deposit = d_mec_asari_nosparnalo_quarantine
+					owner = { has_technology = tech_mec_illium_architect_01 }
+				}
+				has_deposit = d_mec_asari_arcology_unfinished
+			}
+		}
+	}
+	
+	fraction = {
+		weight = 2.0
+	}
+
+	static_min = {
+		base = 1000
+	}
+
+	static_max = {
+		base = 2000
+	}
+}
+
+# Illium needs a lot of influence to complete Project Architect
+mec_influence_expenditure_illium_decision_architect = {
+	resource = influence
+	type = expenditure
+	category = decisions
+	
+	potential = {
+		has_origin = mec_asari_origin_illium
+		NOT = { has_country_flag = mec_story_illium_architect_ending_A }
+		any_owned_planet = {
+			has_planet_flag = mec_asari_planet_illium
+			NOR = {
+				is_planet_class = pc_city
+				has_deposit = d_mec_asari_tartaos_fissures
+				has_deposit = d_mec_asari_sub_equatorial_land
+				has_deposit = d_mec_asari_esiyo_urban
+				has_deposit = d_mec_asari_esiyo_jungle
+				has_deposit = d_mec_asari_makeara_slums
+				has_deposit = d_mec_asari_nosparnalo_quarantine
+				has_deposit = d_mec_asari_arcology_unfinished
+			}
+		}
+	}
+	
+	fraction = {
+		weight = 1.0
+	}
+	
+	static_min = {
+		base = 200
+	}
+
+	static_max = {
+		base = 200
+	}
+}
+
+# Use Biotics whenever available
+mec_biotics_expenditure_edicts = {
+	resource = mec_biotics
+	type = expenditure
+	category = edicts
+	
+	potential = {
+		any_owned_species = {
+			has_trait = mec_asari_trait_biotic
+		}
+	}
+	
+	fraction = {
+		weight = 1.0
+	}
+}

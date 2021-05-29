@@ -1,0 +1,697 @@
+###########################
+#  Asari Thessia Events  #
+###########################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_asari_asr
+
+country_event = {
+	id = mec_asari_asr.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#if = {
+		#	limit = {
+		#		has_origin = mec_asari_origin_thessia
+		#	}
+			#dig site goes here
+		#}
+	}
+}
+
+#Using static event targets instead of planet owner scope should prevent the edge case of interruption if a project completes while planet is controlled by another empire
+#The conqueror should also be unable to continue the story on their own
+
+country_event = {
+	id = mec_asari_asr.102
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		has_origin = mec_asari_origin_thessia
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = mec_asari_mod_origin_thessia_stagnation
+			years = 20
+		}
+		random_owned_planet = {
+			limit = { has_planet_flag = mec_asari_planet_thessia }
+			set_planet_flag = mec_asari_thessia_owned_by_@prev
+			save_global_event_target_as = mec_asari_thessia_owned_by_@prev
+			owner = {
+				set_country_flag = mec_asari_thessia_owner_of_@prev
+				save_global_event_target_as = mec_asari_thessia_owner_of_@prev
+			}
+			create_archaeological_site = mec_asari_site_thessia_beacon
+		}
+		if = {
+			limit = {
+				has_origin = mec_asari_origin_thessia
+				any_system_within_border = {
+					has_star_flag = mec_asari_parnitha_system
+				}
+			}
+			closest_system = {
+				min_steps = 0
+				max_steps = 2
+				limit = {
+					has_star_flag = mec_asari_ialessa_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				mec_asari_setup_origin_planets = yes
+				mec_asari_generate_stations = yes
+			}
+			closest_system = {
+				min_steps = 0
+				max_steps = 2
+				limit = {
+					has_star_flag = mec_asari_orisoni_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				mec_asari_setup_origin_planets = yes
+				mec_asari_generate_stations = yes
+			}
+			closest_system = {
+				min_steps = 0
+				max_steps = 2
+				limit = {
+					has_star_flag = mec_asari_tomaros_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				mec_asari_setup_origin_planets = yes
+				mec_asari_generate_stations = yes
+			}
+			closest_system = {
+				min_steps = 0
+				max_steps = 2
+				limit = {
+					has_star_flag = mec_asari_vernio_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = root
+				}
+				mec_asari_generate_stations = yes
+			}
+		}
+	}
+}
+
+#Events related to Thessian Statocracy Civic
+
+planet_event = {
+	id = mec_asari_asr.201
+	title = mec_asari_asr.201.name
+	desc = mec_asari_asr.201.desc
+	picture = GFX_evt_galactic_community
+	#show_sound = event_conversation
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_planet_flag = mec_asari_decision_establishing_republic
+	}
+
+	option = {
+		name = mec_asari_asr.201.a
+		trigger = {
+			count_owned_pop = { limit = { is_egalitarian = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_authoritarian = yes }
+			}
+		}
+		custom_tooltip = mec_asari_asr.201.a.tooltip
+		add_deposit = d_mec_asari_republic_egalitarian
+	}
+	option = {
+		name = mec_asari_asr.201.b
+		trigger = {
+			count_owned_pop = { limit = { is_authoritarian = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_egalitarian = yes }
+			}
+		}
+		custom_tooltip = mec_asari_asr.201.b.tooltip
+		add_deposit = d_mec_asari_republic_authoritarian
+	}
+	option = {
+		name = mec_asari_asr.201.c
+		trigger = {
+			count_owned_pop = { limit = { is_xenophile = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_xenophobe = yes }
+			}
+		}
+		custom_tooltip = mec_asari_asr.201.c.tooltip
+		add_deposit = d_mec_asari_republic_xenophile
+	}
+	option = {
+		name = mec_asari_asr.201.d
+		trigger = {
+			count_owned_pop = { limit = { is_xenophobe = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_xenophile = yes }
+			}
+		}
+		custom_tooltip = mec_asari_asr.201.d.tooltip
+		add_deposit = d_mec_asari_republic_xenophobe
+	}
+	option = {
+		name = mec_asari_asr.201.e
+		trigger = {
+			count_owned_pop = { limit = { is_pacifist = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_militarist = yes }
+			}
+		}
+		custom_tooltip = mec_asari_asr.201.e.tooltip
+		add_deposit = d_mec_asari_republic_pacifist
+	}
+	option = {
+		name = mec_asari_asr.201.f
+		trigger = {
+			count_owned_pop = { limit = { is_militarist = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_pacifist = yes }
+			}
+		}
+		custom_tooltip = mec_asari_asr.201.f.tooltip
+		add_deposit = d_mec_asari_republic_militarist
+	}
+	option = {
+		name = mec_asari_asr.201.g
+		trigger = {
+			count_owned_pop = { limit = { is_materialist = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_spiritualist = yes }
+			}
+		}
+		custom_tooltip = mec_asari_asr.201.g.tooltip
+		add_deposit = d_mec_asari_republic_materialist
+	}
+	option = {
+		name = mec_asari_asr.201.h
+		trigger = {
+			count_owned_pop = { limit = { is_spiritualist = yes } count >= 5 }
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.75
+				owner = { is_materialist = yes }
+			}
+		}
+		if = {
+			limit = { owner = { is_spiritualist = yes } }
+			custom_tooltip = mec_asari_asr.201.ha.tooltip
+		}
+		else = {
+			custom_tooltip = mec_asari_asr.201.h.tooltip
+		}
+		add_deposit = d_mec_asari_republic_spiritualist
+	}
+	option = {
+		name = mec_asari_asr.201.i
+		ai_chance = {
+			factor = 0
+		}
+		owner = { add_resource = { influence = 100 } }
+	}
+
+	after = {
+		remove_planet_flag = mec_asari_decision_establishing_republic
+	}
+}
+
+country_event = {
+	id = mec_asari_asr.202
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		NOT = { has_civic = mec_asari_civic_thessia }
+		any_owned_planet = {
+			OR = {
+				has_deposit = d_mec_asari_republic_egalitarian
+				has_deposit = d_mec_asari_republic_authoritarian
+				has_deposit = d_mec_asari_republic_xenophile
+				has_deposit = d_mec_asari_republic_xenophobe
+				has_deposit = d_mec_asari_republic_pacifist
+				has_deposit = d_mec_asari_republic_militarist
+				has_deposit = d_mec_asari_republic_materialist
+				has_deposit = d_mec_asari_republic_spiritualist
+			}
+		}
+	}
+
+	immediate = {
+		every_owned_planet = {
+			remove_deposit = d_mec_asari_republic_egalitarian
+			remove_deposit = d_mec_asari_republic_authoritarian
+			remove_deposit = d_mec_asari_republic_xenophile
+			remove_deposit = d_mec_asari_republic_xenophobe
+			remove_deposit = d_mec_asari_republic_pacifist
+			remove_deposit = d_mec_asari_republic_militarist
+			remove_deposit = d_mec_asari_republic_materialist
+			remove_deposit = d_mec_asari_republic_spiritualist
+
+			create_message = {
+				type = EVENT_MESSAGE_TYPE
+				localization = MEC_ASARI_REPUBLIC_EXPIRED_NO_CIVIC
+				days = 30
+				target = this # the Go To
+				variable = {
+					type = name
+					localization = PLANET
+					scope = this
+				}
+			}
+		}
+	}
+}
+
+event = {
+	id = mec_asari_asr.203
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_galaxy_planet = {
+			has_owner = no
+			OR = {
+				has_deposit = d_mec_asari_republic_egalitarian
+				has_deposit = d_mec_asari_republic_authoritarian
+				has_deposit = d_mec_asari_republic_xenophile
+				has_deposit = d_mec_asari_republic_xenophobe
+				has_deposit = d_mec_asari_republic_pacifist
+				has_deposit = d_mec_asari_republic_militarist
+				has_deposit = d_mec_asari_republic_materialist
+				has_deposit = d_mec_asari_republic_spiritualist
+			}
+		}
+	}
+
+	immediate = {
+		every_galaxy_planet = {
+			limit = { has_owner = no }
+			remove_deposit = d_mec_asari_republic_egalitarian
+			remove_deposit = d_mec_asari_republic_authoritarian
+			remove_deposit = d_mec_asari_republic_xenophile
+			remove_deposit = d_mec_asari_republic_xenophobe
+			remove_deposit = d_mec_asari_republic_pacifist
+			remove_deposit = d_mec_asari_republic_militarist
+			remove_deposit = d_mec_asari_republic_materialist
+			remove_deposit = d_mec_asari_republic_spiritualist
+		}
+	}
+}
+
+#Events related to the Prothean Beacon
+
+#Questions - locks out ending A (if revealed) or C (if kept secret)
+country_event = {
+	id = mec_asari_asr.301
+	title = mec_asari_asr.301.name
+	desc = mec_asari_asr.301.desc
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_conversation
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asr.301.a
+		ai_chance = {
+			factor = 100
+		}	
+		custom_tooltip = mec_asari_asr.301.a.tooltip
+		set_country_flag = mec_story_thessia_beacon_301_A
+		add_resource = { influence = 200 }
+		hidden_effect = {
+			country_event = { id = mec_asari_asr.302 }
+		}
+	}
+	option = {
+		name = mec_asari_asr.301.b
+		ai_chance = {
+			factor = 0
+		}	
+		custom_tooltip = mec_asari_asr.301.b.tooltip
+		set_country_flag = mec_story_thessia_beacon_301_B
+		add_monthly_resource_mult = {
+			resource = unity
+			value = 36
+		}
+		hidden_effect = {
+			country_event = { id = mec_asari_asr.303 }
+		}
+	}
+
+	after = {
+		random_galaxy_planet = {
+			limit = { has_planet_flag = mec_asari_thessia_owned_by_@prev }
+			archaeological_site = {
+				set_site_progress_locked = no
+			}
+		}
+	}
+}
+
+#Route A - Followup
+country_event = {
+	id = mec_asari_asr.302
+	title = mec_asari_asr.302.name
+	desc = mec_asari_asr.302.desc
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_conversation
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asr.302.a
+	}
+
+	after = {
+	}
+}
+
+#Route B - Followup
+country_event = {
+	id = mec_asari_asr.303
+	title = mec_asari_asr.303.name
+	desc = mec_asari_asr.303.desc
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_conversation
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asr.303.a
+	}
+
+	after = {
+	}
+}
+
+#Ending A/B - The Clique
+country_event = {
+	id = mec_asari_asr.304
+	title = mec_asari_asr.304.name
+	desc = mec_asari_asr.304.desc
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asr.304.a
+		ai_chance = {
+			factor = 100
+		}	
+		custom_tooltip = mec_asari_asr.304.a.tooltip
+		hidden_effect = {
+			country_event = { id = mec_asari_asr.306 }
+		}
+	}
+	option = {
+		name = mec_asari_asr.304.b
+		ai_chance = {
+			factor = 0
+		}	
+		custom_tooltip = mec_asari_asr.304.b.tooltip
+		hidden_effect = {
+			country_event = { id = mec_asari_asr.307 }
+		}
+	}
+
+	after = {
+	}
+}
+
+#Ending B/C - The Plebiscite
+country_event = {
+	id = mec_asari_asr.305
+	title = mec_asari_asr.305.name
+	desc = mec_asari_asr.305.desc
+	picture = GFX_mec_event_thessia_01
+	show_sound = event_vote
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_asari_asr.305.a
+		ai_chance = {
+			factor = 100
+		}	
+		custom_tooltip = mec_asari_asr.305.a.tooltip
+		hidden_effect = {
+			country_event = { id = mec_asari_asr.308 }
+		}
+	}
+	option = {
+		name = mec_asari_asr.305.b
+		ai_chance = {
+			factor = 0
+		}	
+		custom_tooltip = mec_asari_asr.305.b.tooltip
+		hidden_effect = {
+			country_event = { id = mec_asari_asr.309 }
+		}
+	}
+
+	after = {
+	}
+}
+
+#Ending A - Clique - Status Quo
+country_event = {
+	id = mec_asari_asr.306
+	title = mec_asari_asr.306.name
+	desc = mec_asari_asr.306.desc
+	picture = GFX_mec_event_thessia_03
+	show_sound = event_whispering
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = mec_story_thessia_beacon_ending_A
+		add_relic = r_mec_asari_prothean_beacon
+	}
+
+	option = {
+		name = mec_asari_asr.306.a
+	}
+
+	after = {
+	}
+}
+
+#Ending B - Clique - Galactic Good
+country_event = {
+	id = mec_asari_asr.307
+	title = mec_asari_asr.307.name
+	desc = mec_asari_asr.307.desc
+	picture = GFX_mec_event_thessia_02
+	show_sound = event_celebration
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = mec_story_thessia_beacon_ending_B
+		if = {
+			limit = { is_galactic_community_formed = yes }
+			every_country = {
+				country_event = { id = mec_asari_asr.310 }
+			}
+		}
+	}
+
+	option = {
+		name = mec_asari_asr.307.a
+	}
+
+	after = {
+	}
+}
+
+#Ending B - Plebiscite - Galactic Good
+country_event = {
+	id = mec_asari_asr.308
+	title = mec_asari_asr.308.name
+	desc = mec_asari_asr.308.desc
+	picture = GFX_mec_event_thessia_02
+	show_sound = event_celebration
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = mec_story_thessia_beacon_ending_B
+		if = {
+			limit = { is_galactic_community_formed = yes }
+			every_country = {
+				country_event = { id = mec_asari_asr.310 }
+			}
+		}
+	}
+
+	option = {
+		name = mec_asari_asr.308.a
+	}
+
+	after = {
+	}
+}
+
+#Ending C - Plebiscite - Ascendancy
+country_event = {
+	id = mec_asari_asr.309
+	title = mec_asari_asr.309.name
+	desc = mec_asari_asr.309.desc
+	picture = GFX_mec_event_thessia_04
+	show_sound = event_announcement
+
+	is_triggered_only = yes
+
+	immediate = {
+		set_country_flag = mec_story_thessia_beacon_ending_C
+		
+		if = {
+			limit = {
+				has_ethic = ethic_fanatic_xenophile
+			}
+			shift_ethic = "ethic_xenophile"
+		}
+		if = {
+			limit = {
+				is_militarist = no
+			}
+			shift_ethic = "ethic_militarist"
+		}
+		#change_government = {
+		#	civics = {
+		#		civic = mec_asari_civic_ascendancy
+		#		civic = civic_nationalistic_zeal
+		#		civic = civic_diplomatic_corps
+		#	}
+		#}
+		force_remove_civic = mec_asari_civic_thessia
+		force_add_civic = mec_asari_civic_ascendancy
+		set_name = "mec_asari_ascendancy"
+
+		while = {
+			count = 15
+			random_owned_pop = {
+				limit = {
+					is_same_species = owner.species
+					NOT = { has_ethic = "ethic_militarist" }
+				}
+				pop_change_ethic = "ethic_militarist"
+			}
+		}
+	}
+
+	option = {
+		name = mec_asari_asr.309.a
+	}
+
+	after = {
+	}
+}
+
+# Galactic Good Research Gained
+country_event = {
+	id = mec_asari_asr.310
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			has_country_flag = mec_story_thessia_beacon_ending_B
+		}
+		#is_galactic_community_member = yes
+	}
+
+	immediate = {
+		add_modifier = {
+			modifier = mec_asari_mod_prothean_archives_access
+			days = -1
+		}
+	}
+}
+
+# Galactic Good Research Lost
+country_event = {
+	id = mec_asari_asr.311
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_country = {
+			has_country_flag = mec_story_thessia_beacon_ending_B
+		}
+		#is_galactic_community_member = no
+	}
+
+	immediate = {
+		remove_modifier = mec_asari_mod_prothean_archives_access
+	}
+}

@@ -1,0 +1,75 @@
+## Asari Corporate Interests
+mec_asariillium_civ = {
+	name = "Asari Corporate Interests"
+	adjective = "Asari"
+	spawn_enabled = no # yes / no / always
+	#ignore_portrait_duplication = yes
+
+	playable = mec_asari_req_asi
+	
+	ship_prefix = ""
+	
+	species = {
+		class = "MECASA"
+		portrait = "mec_asari"
+		name = "Asari"
+		plural = "Asari"
+		adjective = "Asari"
+		name_list = "mec_asari_names"
+		trait = "mec_asari_trait_core"
+		trait = "mec_asari_trait_biotic"
+		trait = "trait_charismatic"
+		trait = "mec_asari_trait_sophisticated"
+	}
+	
+	advisor_voice_type = "l_slick_corp"
+	
+	room = "personality_peaceful_traders_room"
+	
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_xenophile"
+	ethic = "ethic_materialist"
+	
+	flags = {}
+	
+	authority = "auth_corporate"
+	government = gov_megacorporation
+	civics = { "mec_asari_civic_illium" "civic_indentured_assets" }
+	origin = "mec_asari_origin_illium"
+	
+	planet_name = "Illium"
+	planet_class = "pc_continental"
+	initializer = "mec_asi_system_initializer"
+	system_name = "Tasale"
+	
+	graphical_culture = "mec_asari_01"
+	city_graphical_culture = "mec_asari_01"
+	
+	empire_flag = {
+		icon = {
+			category = "mec_asari_civ"
+			file = "mec_asari_illium_flag.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "pattern_01.dds"
+		}
+		colors = {
+			"dark_purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	
+	ruler = {
+		name = "Selesta T'Zeala" #"Ishta Linnadhiel"
+		gender = female
+		portrait = "mec_asari_1"
+		texture = 3
+		hair = 0
+		clothes = 3
+		#ruler_title = RT_CEO
+		#ruler_title_female = RT_CEO_FEMALE
+	}
+}

@@ -504,7 +504,7 @@ sys_tasale_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_major_empire_start_buildings = yes			
 			random_country = {
 				limit = { has_country_flag = "asari_corporate_interests" }
@@ -969,7 +969,7 @@ sys_tartarusdebrisfield_init = {
 		flags = { btr_collectors_collector_station special_start_planet }
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_collector_base_buildings = yes						
 			random_country = {
 				limit = { has_country_flag = "collectors" }
@@ -2470,7 +2470,7 @@ sys_sahrabarik_init = {
 
 		init_effect = {
 			prevent_anomaly = yes		
-			generate_start_deposits_and_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_omega_districts = yes							
 			set_planet_flag = megastructure
 			set_planet_flag = habitat
@@ -2574,7 +2574,7 @@ sys_tikkun_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "geth_consensus" }
@@ -3588,7 +3588,7 @@ sys_kyzil_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "vorcha_chiefdom" }

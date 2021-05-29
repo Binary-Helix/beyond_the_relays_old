@@ -1,0 +1,53 @@
+#################################
+#			Projects			#
+#################################
+
+#A Monster Lurks - Research
+special_project = {
+	key = "MEC_EG_SP_0031"
+	cost = 0
+	days_to_research = 60
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_society_research
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		random_list ={
+			40 = { ship_event = { id = mec_eg_anomaly.0031 } } 	#Success
+			60 = { ship_event = { id = mec_eg_anomaly.0032 } }	#Failure
+		}
+	}
+}
+
+#A Monster Lurks - Hunt
+special_project = {
+	key = "MEC_EG_SP_0032"
+	cost = 0
+	days_to_research = 180
+	tech_department = society_technology
+	icon = "gfx/interface/icons/situation_log/situation_log_planet.dds"
+	picture = GFX_evt_alien_wildlife
+	
+	event_scope = ship_event
+	
+	requirements = {
+		shipclass_science_ship = 1
+		leader = scientist
+		#skill = 3
+	}
+	
+	on_success = {
+		random_list ={
+			30 = { ship_event = { id = mec_eg_anomaly.0033 } }	#Success
+			70 = { ship_event = { id = mec_eg_anomaly.0034 } }	#Failure
+		}
+	}
+}

@@ -1,0 +1,27 @@
+###########################
+#  Asari Biotics Events  #
+###########################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_asari_biotics
+
+country_event = {
+	id = mec_asari_biotics.101
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		any_owned_pop = {
+			has_trait = mec_asari_trait_biotic
+		}
+	}
+
+	immediate = {
+		every_owned_pop = {
+			limit = { has_trait = mec_asari_trait_biotic }
+			from = { add_resource = { mec_biotics = 0.1 } }
+		}
+	}
+}

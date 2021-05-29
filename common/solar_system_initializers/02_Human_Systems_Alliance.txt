@@ -3210,7 +3210,7 @@ sys_harsa_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "batarian_hegemony" }
@@ -4141,7 +4141,7 @@ sys_sol_init = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "systems_alliance" }

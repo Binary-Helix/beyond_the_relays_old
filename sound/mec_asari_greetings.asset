@@ -1,0 +1,71 @@
+category = {
+ name = "Voice"
+ soundeffects = {
+	mec_asari_greetings_A
+	mec_asari_greetings_B
+	mec_asari_greetings_C
+ }
+ 
+}
+
+sound = 
+{
+	name = "mec_asari_greetings_A01"
+	file = "audiofiles/mec_asari_greetings_A01.wav"
+}
+sound = 
+{
+	name = "mec_asari_greetings_A02"
+	file = "audiofiles/mec_asari_greetings_A02.wav"
+}
+sound = 
+{
+	name = "mec_asari_greetings_B01"
+	file = "audiofiles/mec_asari_greetings_B01.wav"
+}
+sound = 
+{
+	name = "mec_asari_greetings_B02"
+	file = "audiofiles/mec_asari_greetings_B02.wav"
+}
+sound = 
+{
+	name = "mec_asari_greetings_B03"
+	file = "audiofiles/mec_asari_greetings_B03.wav"
+}
+sound = 
+{
+	name = "mec_asari_greetings_C01"
+	file = "audiofiles/mec_asari_greetings_C01.wav"
+}
+sound = 
+{
+	name = "mec_asari_greetings_C02"
+	file = "audiofiles/mec_asari_greetings_C02.wav"
+}
+
+soundeffect = {
+	name = mec_asari_greetings_A
+	sounds = {
+		sound = mec_asari_greetings_A01
+		sound = mec_asari_greetings_A02
+	}  
+	volume = 0.75
+}
+soundeffect = {
+	name = mec_asari_greetings_B
+	sounds = {
+		sound = mec_asari_greetings_B01
+		sound = mec_asari_greetings_B02
+		sound = mec_asari_greetings_B03
+	}  
+	volume = 0.75
+}
+soundeffect = {
+	name = mec_asari_greetings_C
+	sounds = {
+		sound = mec_asari_greetings_C01
+		sound = mec_asari_greetings_C02
+	}  
+	volume = 0.75
+}

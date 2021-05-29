@@ -1,0 +1,49 @@
+##############
+# NAME PARTS #
+##############
+
+### ASARI
+
+# Various States
+empire_name_parts_list = {
+	key = "mec_en_asr"
+	parts = {
+		"Republics" = 6
+		"Systems" = 4
+		"Colonies" = 3
+		"Territories" = 1
+		"Provinces" = 2
+		"Nations" = 3
+		"States" = 4
+		"Holdings" = 1
+		"Domains" = 1
+		"Planet-States" = 3
+		"Commonalities" = 1
+		"Dominions" = 1
+	}
+}
+
+################
+# NAME FORMATS #
+################
+
+### Imperial Militarist 
+
+# Generic Democratic 1
+empire_name_format = {
+	random_weight = {
+		factor = 0
+		modifier = {
+			add = 1
+			has_government = gov_mec_asr
+			is_pirate = no
+			is_primitive = no
+			NOT = { is_country_type = fallen_empire }
+			NOT = { is_country_type = awakened_fallen_empire }
+		}
+	}
+	format = "format.mec_en_asr.1"
+	noun = "[This.GetSpeciesName]"
+	prefix_format = "[This.GetSpeciesName] <mec_en_asr>"
+	# Human Colonies
+}

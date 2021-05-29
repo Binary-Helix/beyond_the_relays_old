@@ -1,0 +1,490 @@
+####################################
+# Anomalies - Random 
+####################################
+
+namespace = mec_eg_anomaly
+
+#Ancient Commercial Dispute
+ship_event = {
+	id = mec_eg_anomaly.001
+	title = "mec_eg_anomaly.001.name"
+	desc = "mec_eg_anomaly.001.desc"
+	picture = GFX_evt_resource_cache
+	show_sound = event_ship_bridge
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.001.a
+		owner = {
+			add_resource = {
+				energy = 400		#NO DEPOSIT
+			}
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+#A Peek into the Past
+ship_event = {
+	id = mec_eg_anomaly.002
+	title = "mec_eg_anomaly.002.name"
+	desc = "mec_eg_anomaly.002.desc"
+	picture = GFX_evt_star_chart
+	show_sound = event_sensor_ping
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.002.a
+		owner = {
+			add_resource = {
+				society_research = 100		#NO DEPOSIT
+			}
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+#A Monster Lurks
+ship_event = {
+	id = mec_eg_anomaly.003
+	title = "mec_eg_anomaly.003.name"
+	desc = "mec_eg_anomaly.003.desc"
+	picture = GFX_evt_in_the_dark
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.003.a #Do Nothing
+		owner = {
+			add_resource = {
+				influence = 50		#NO DEPOSIT
+			}
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.003.b #Research Creatur
+		from = {
+			enable_special_project = {
+				name = "MEC_EG_SP_0031"
+				location = this
+				owner = root.owner
+			}
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.003.c #Hunt Creature
+		trigger = { owner = { OR = { has_ethic = ethic_xenophobe has_ethic = ethic_fanatic_xenophobe has_ethic = ethic_militarist has_ethic = ethic_fanatic_militarist } } }
+		from = {
+			enable_special_project = {
+				name = "MEC_EG_SP_0032"
+				location = this
+				owner = root.owner
+			}
+		}
+	}
+}
+
+##################################
+
+#A Monster Lurks - Research - Success
+ship_event = {
+	id = mec_eg_anomaly.0031
+	title = "mec_eg_anomaly.0031.name"
+	desc = "mec_eg_anomaly.0031.desc"
+	picture = GFX_evt_society_research
+	show_sound = event_alien_nature
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = mec_eg_anomaly_3_scientist
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.0031.a
+		event_target:mec_eg_anomaly_3_scientist = {
+			add_experience = 200
+		}
+		owner = {
+			add_resource = {
+				society_research = 600		#NO DEPOSIT
+			}
+		}
+	}
+}
+
+#A Monster Lurks - Research - Failure
+ship_event = {
+	id = mec_eg_anomaly.0032
+	title = "mec_eg_anomaly.0032.name"
+	desc = "mec_eg_anomaly.0032.desc"
+	picture = GFX_evt_archaeologists_escaping
+	show_sound = event_life_support_fail
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = mec_eg_anomaly_3_scientist
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.0032.a
+		custom_tooltip = mec_eg_anomaly.0032.a.tooltip
+		hidden_effect = {
+			event_target:mec_eg_anomaly_3_scientist = {
+				kill_leader = {
+					type = scientist
+				}
+			}
+		}
+	}
+}
+
+##################################
+
+#A Monster Lurks - Hunt - Success
+ship_event = {
+	id = mec_eg_anomaly.0033
+	title = "mec_eg_anomaly.0033.name"
+	desc = "mec_eg_anomaly.0033.desc"
+	picture = GFX_evt_alien_wildlife
+	show_sound = event_ship_bridge
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.0033.a
+		owner = {
+			add_resource = {
+				energy = 500		#NO DEPOSIT
+				influence = 50
+			}
+		}
+	}
+}
+
+#A Monster Lurks - Hunt - Failure
+ship_event = {
+	id = mec_eg_anomaly.0034
+	title = "mec_eg_anomaly.0034.name"
+	desc = "mec_eg_anomaly.0034.desc"
+	picture = GFX_evt_archaeologists_escaping
+	show_sound = event_ground_battle
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = mec_eg_anomaly_3_scientist
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.0034.a
+		custom_tooltip = mec_eg_anomaly.0032.a.tooltip
+		hidden_effect = {
+			event_target:mec_eg_anomaly_3_scientist = {
+				kill_leader = {
+					type = scientist
+				}
+			}
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+#A Child's Playground - Normal
+ship_event = {
+	id = mec_eg_anomaly.004
+	title = "mec_eg_anomaly.004.name"
+	desc = "mec_eg_anomaly.004.desc"
+	picture = GFX_evt_gas_giant_station
+	show_sound = event_sensor_ping
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+		leader = {
+			save_event_target_as = mec_eg_anomaly_4_scientist
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.004.a #Try to save them
+		hidden_effect = {
+			random_list ={
+				50 = { ship_event = { id = mec_eg_anomaly.0041 days = 0 } }	#Success
+				50 = { ship_event = { id = mec_eg_anomaly.0042 days = 0 } }	#Failure
+			}
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.004.b #Destroy the Station
+		custom_tooltip = mec_eg_anomaly.004.b.tooltip
+		hidden_effect = {
+			event_target:mec_eg_anomaly_4_scientist = {
+				kill_leader = {
+					type = scientist
+				}
+			}
+		}
+	}
+}
+
+##################################
+
+#A Child's Playground - Normal - Success
+ship_event = {
+	id = mec_eg_anomaly.0041
+	title = "mec_eg_anomaly.0041.name"
+	desc = "mec_eg_anomaly.0041.desc"
+	picture = GFX_evt_ancient_databank
+	show_sound = event_ship_bridge
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.0041.a
+		owner = {
+			add_tech_progress = {
+				tech = tech_administrative_ai
+				progress = 0.50
+			}
+			add_resource = {
+				physics_research = 500		#NO DEPOSIT
+			}
+		}
+	}
+
+}
+
+#A Child's Playground - Normal - Failure
+ship_event = {
+	id = mec_eg_anomaly.0042
+	title = "mec_eg_anomaly.0042.name"
+	desc = "mec_eg_anomaly.0042.desc"
+	picture = GFX_evt_debris
+	show_sound = event_ship_explosion
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.0042.a
+		hidden_effect = {
+			fleet = {
+				kill_leader = { type = scientist show_notification = no }
+				destroy_fleet = this
+			}
+		}
+	}
+
+}
+
+###########################################################################################
+
+#A Child's Playground - Machine Intelligence
+ship_event = {
+	id = mec_eg_anomaly.005
+	title = "mec_eg_anomaly.005.name"
+	desc = "mec_eg_anomaly.005.desc"
+	picture = GFX_evt_gas_giant_station
+	show_sound = event_sensor_ping
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.005.a #Establish Communications
+		hidden_effect = {
+			random_list ={
+				70 = { ship_event = { id = mec_eg_anomaly.0051 days = 20 } } 	#Success
+				30 = { ship_event = { id = mec_eg_anomaly.0052 days = 10 } }	#Failure
+			}
+		}
+	}
+	option = {
+		name = mec_eg_anomaly.005.b #Destroy the Station
+		owner = {
+			add_resource = {
+				influence = 50
+			}
+		}
+	}
+}
+
+##################################
+
+#A Child's Playground - Machine - Success
+ship_event = {
+	id = mec_eg_anomaly.0051
+	title = "mec_eg_anomaly.0051.name"
+	desc = "mec_eg_anomaly.0051.desc"
+	picture = GFX_evt_ancient_databank
+	show_sound = event_ship_bridge
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.0051.a
+		owner = {
+			add_research_option = tech_administrative_ai
+			add_tech_progress = {
+				tech = tech_administrative_ai
+				progress = 0.50
+			}
+			add_resource = {
+				physics_research = 500		#NO DEPOSIT
+			}
+		}
+	}
+}
+
+#A Child's Playground - Machine - Failure
+ship_event = {
+	id = mec_eg_anomaly.0052
+	title = "mec_eg_anomaly.0052.name"
+	desc = "mec_eg_anomaly.0052.desc"
+	picture = GFX_evt_debris
+	show_sound = event_ship_explosion
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.0052.a
+		hidden_effect = {
+			fleet = {
+				kill_leader = { type = scientist show_notification = no }
+				destroy_fleet = this
+			}
+		}
+	}
+
+}
+
+#################################################################################################################################################################################################
+
+#Ancient Supercollider
+ship_event = {
+	id = mec_eg_anomaly.006
+	title = "mec_eg_anomaly.006.name"
+	desc = "mec_eg_anomaly.006.desc"
+	picture = GFX_evt_megastructure_construction
+	show_sound = event_ship_bridge
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.006.a
+		owner = {
+			add_resource = {
+				physics_research = 500		#NO DEPOSIT
+			}
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+#Anomaly for Digsite - A Lost City
+ship_event = {
+	id = mec_eg_anomaly.3007
+	title = "mec_eg_anomaly.3007.name"
+	desc = "mec_eg_anomaly.3007.desc"
+	picture = GFX_evt_underwater_ruins
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.3007.a
+		from = {
+			create_archaeological_site = mec_eg_site_prowater_ruins
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+#Void Cruise
+ship_event = {
+	id = mec_eg_anomaly.008
+	title = "mec_eg_anomaly.008.name"
+	desc = "mec_eg_anomaly.008.desc"
+	picture = GFX_evt_scanning_remains
+	show_sound = event_ship_bridge
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.008.a
+		owner = {
+			add_resource = {
+				society_research = 500		#NO DEPOSIT
+			}
+		}
+	}
+}

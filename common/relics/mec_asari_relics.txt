@@ -1,0 +1,87 @@
+@activation_cost = 150
+@triumph_duration = 3600
+@triumph_duration_short = 1800
+@triumph_duration_veryshort = 900
+
+r_mec_asari_prothean_beacon = {
+	activation_duration = @triumph_duration
+	portrait = "GFX_mec_relic_asari_prothean_beacon"
+	sound = relic_activation_isolated_contingency_core
+
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = @activation_cost
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+		modifier = {
+			factor = 2.0
+			any_country = {
+				is_country_type = default
+				tech_unlocked_ratio = {
+					who = prev
+					ratio > 1.0
+				}
+			}
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		diplo_weight_technology_mult = 0.25
+	}
+
+	score = 1000
+
+	active_effect = {
+		custom_tooltip = mec_asari_relic_prothean_beacon_active
+		custom_tooltip = relic_triumph_cooldown
+		hidden_effect = {
+			add_modifier = {
+				modifier = "relic_activation_cooldown"
+				days = @triumph_duration
+			}
+			add_random_research_option = {
+				add_progress = 0.50
+				ignore_prereqs = no
+				fail_effects = {
+					random_list = {
+						50 = {
+							add_monthly_resource_mult = {
+     							resource = society_research
+     							value = 60
+     						}
+						}
+						50 = {
+							add_monthly_resource_mult = {
+     							resource = physics_research
+     							value = 60
+     						}
+						}
+						50 = {
+							add_monthly_resource_mult = {
+     							resource = engineering_research
+     							value = 60
+     						}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	# Possible check for activation
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_relic_no_cooldown"
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+}

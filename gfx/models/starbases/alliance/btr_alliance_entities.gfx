@@ -1,0 +1,44 @@
+objectTypes = {
+
+	#############################
+#Arcturus
+	pdxmesh = {
+		name = "alliance_station_arcturus_reis_mesh"
+		file = "gfx/models/starbases/alliance/alliance_station_arcturus_reis.mesh"
+		scale = 0.8
+			
+		meshsettings = {
+			name = "Alliance_Station_Arcturus_Reis"
+			index = 0
+			texture_diffuse = "alliance_station_arcturus_reis_diff.dds"
+			texture_normal = "alliance_station_arcturus_reis_norm.dds"
+			texture_specular = "alliance_station_arcturus_reis_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}	
+
+#Omega
+	pdxmesh = {
+		name = "alliance_station_grissom_reis_mesh"
+		file = "gfx/models/starbases/alliance/alliance_station_grissom_reis.mesh"
+		scale = 1.0
+			
+		meshsettings = {
+			name = "Grissom_Academy_Systems_Alliance"
+			index = 0
+			texture_diffuse = "alliance_station_grissom_reis_diff.dds"
+			texture_normal = "alliance_station_grissom_reis_norm.dds"
+			texture_specular = "alliance_station_grissom_reis_spec.dds"
+			shader = "PdxMeshShip"
+		}
+		
+		meshsettings = {
+			name = "Sphere"
+			texture_diffuse = "alliance_station_grissom_sphere_reis_diff.dds"
+			texture_normal = "alliance_station_grissom_sphere_reis_norm.dds"
+			texture_specular = "alliance_station_grissom_sphere_reis_spec.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}		
+	}	
+}

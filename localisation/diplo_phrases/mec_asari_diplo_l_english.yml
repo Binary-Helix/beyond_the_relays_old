@@ -1,0 +1,95 @@
+﻿l_english:
+ #Note: insult_propose and dow_propose uses reverse FROM and ROOT
+
+ ####################################
+ # Asari Republics
+ ####################################
+ personality_mec_asari_ai_asr:0 "Alluring Architects"
+ personality_mec_asari_ai_asr_desc:0 "Alluring Architects naturally settle into the role of mediatiors, finding common language and building bridges between nations, species and cultures. Their beguiling influence has a way of worming itself into alien societies and slowly reshaping them to better fit the Architects' perfect design."
+
+ # AI Personality-based replies
+ # Greetings
+ MEC_ASA_ASR_HOSTILE_GREETING_01:0 "Do not mistake our gentleness for weakness. Some of the loveliest flowers grow throns to survive in the wild. Try to pluck them... and you might just hurt yourself."
+ MEC_ASA_ASR_HOSTILE_GREETING_02:0 "How [From.GetSpeciesNamePlural] tolerate such uncooperative government is beyond me..."
+ MEC_ASA_ASR_HOSTILE_GREETING_03:0 "The [Root.GetAllianceName] works towards a brighter future for the civilized galaxy. It is so unfortunate that [From.GetName] has set on a course that involves neither civilization nor future."
+ MEC_ASA_ASR_DOMINEERING_GREETING_01:0 "We tuly do wish to develop closer relations with [Root.GetName]. A referendum is in progreess to decide if [From.GetRulerTitle]'s authority should be recognized in the matter."
+ MEC_ASA_ASR_NEUTRAL_GREETING_01:0 "We seek consensus, stability and prosperity for all denizens of the galaxy. Allow us to advise you, and you too will reap benefits."
+ MEC_ASA_ASR_NEUTRAL_GREETING_02:0 "We speak for the [Root.GetAllianceName], the heart of galactic prosperity."
+ MEC_ASA_ASR_NEUTRAL_GREETING_03:0 "The [Root.GetAllianceName] ensures independence where it matters through interdependence where it's needed."
+ MEC_ASA_ASR_NEUTRAL_GREETING_04:0 "The path of progress is a long, winding labirynth full of challenges. Take our hand and we will guide you through it."
+ MEC_ASA_ASR_THREATENED_GREETING_01:0 "[From.GetRulerTitle]. Is this some kind of game? Are you calling us just so you can cut us off again?"
+ MEC_ASA_ASR_FRIENDLY_GREETING_01:0 "Wisdom is the foundation of all lasting success. The actions of [From.GetRulerName] bespeak foresight rivalling even that of ours."
+ MEC_ASA_ASR_FRIENDLY_GREETING_02:0 "The [Root.GetAllianceName] is fortunate to share the galactic community with [From.GetName]. We can only hope that in time we will grow even closer together."
+ MEC_ASA_ASR_FRIENDLY_GREETING_03:0 "The [Root.GetAllianceName] would be incomplete without [From.GetName]. The perfect society we are creating together will shape the galaxy for aeons to come."
+ MEC_ASA_ASR_FRIENDLY_GREETING_04:0 "With your support and our guidance, the [Root.GetAllianceName] will write the future of the galaxy."
+ MEC_ASA_ASR_WAR_GREETING_01:0 "Have you faced an [Root.GetSpeciesAdj] commando unit before? Few [From.GetSpeciesNamePlural] have. I hope you consider surrender before it comes to that."
+ MEC_ASA_ASR_WAR_GREETING_02:0 "It sickens me to see that the [From.GetAdj] government would drag its people into a war against the [Root.GetAllianceName] and the safe, prosperous, civilized galaxy it represents."
+ MEC_ASA_ASR_WAR_GREETING_03:0 "The [Root.GetAllianceName] stands united against all threats to the future of our galaxy. What ideals does your savagery represent?"
+ 
+ MEC_ASA_ASR_VASSAL_GREETING_01:0 "Do not be alarmed by the dissenting voices of uncertainty you may have heard amongst our citizens. Let us instead talk about how we might bring our respective people together! We have some proposals for you to review if you please..."
+ MEC_ASA_ASR_VASSAL_GREETING_DISLOYAL_01:0 "[From.GetSpeciesAdj] directives are being followed to the letter and according to schedule. That's what you wanted to hear, was it not?"
+ MEC_ASA_ASR_VASSAL_GREETING_DISLOYAL_02:0 "The arrangement between us is just an unpleasant necessity, it's not because we- ugh... Just don't get the wrong idea."
+ MEC_ASA_ASR_OVERLORD_GREETING_01:0 "[From.GetName] should have no cause for concern. With our guidance, [From.GetSpeciesNamePlural] will in time reach the same heights as us."
+ 
+ # Actions
+ MEC_ASA_ASR_DOW_PROPOSE_01:0 "You forced our hand, and now you will feel what it's like when the gloves are off, [Root.GetRulerTitle]."
+ 
+ MEC_ASA_ASR_DOW_ACCEPT_01:0 "*Sigh* We are not angry. Or even surprised. Just... disappointed."
+ MEC_ASA_ASR_DOW_ACCEPT_02:0 "Whatever your reasons are, they are misguided. [From.GetName] needs to be stopped for its own good."
+ MEC_ASA_ASR_DOW_ACCEPT_03:0 "Why... would you do such a thing? What happened to our relations? How long in planning was this betrayal? No matter. Once we have restored the peace, we will cure whatever sickness has taken root in the [From.GetName]"
+ 
+ # Insults
+ MEC_ASA_ASR_01_INSULT_PROPOSE:0 "Credit where it's due, it is mostly thanks to the [Root.GetName] that our citizens' interest in foreign relations has been positively *soaring* lately. They are both deeply concerned... and very entertained by your nation's constant fumbling."
+
+ MEC_ASA_ASR_01_INSULT_ACCEPT:0 "Do not waste my time again, [From.GetRulerTitle]. I fail to find it amusing."
+ 
+ ####################################
+ # Asari Corporate Interests
+ ####################################
+ personality_mec_asari_ai_asi:0 "Fashionable Financiers"
+ personality_mec_asari_ai_asi_desc:0 "Fashionable Financiers are a decadent capitalist society built upon lax business regulations and rampant celebrity culture. Its quadrillionaire elite seek to drive the cutting edge of technological innovation and wrap the galactic economy around their fingers by any means they can get away with."
+
+ # AI Personality-based replies
+ # Greetings
+ MEC_ASA_ASI_HOSTILE_GREETING_01:0 "I'm just about to have an interview and photoshoot for my Nos Astra Times Galaxy's Sexiest CEOs feature, so whatever it is, can I have the one-minute version? I would love that, thank you."
+ MEC_ASA_ASI_HOSTILE_GREETING_02:0 "§Y<<VI Secretary>>§! Live channel to the office of [Root.GetRulerTitle] [Root.GetRulerName] is unavailable at this time. If you wish to leave a message..."
+ MEC_ASA_ASI_HOSTILE_GREETING_03:0 "Every minute of my time you waste costs the company twelve hundred credits. I will keep a running tally."
+ MEC_ASA_ASI_HOSTILE_GREETING_04:0 "I am in the middle of nine things, all of them annoying. Be a darling and make it eight for me by pressing that disconnect button, would you?"
+ MEC_ASA_ASI_HOSTILE_GREETING_05:0 "§Y<<VI Secretary>>§! Thank you! Your message will be relayed to the [Root.GetRulerTitle]'s PR department secretary's assistant's VI assistant and processed at her earliest convenience."
+ MEC_ASA_ASI_DOMINEERING_GREETING_01:0 "I have been toying with the idea of acquiring [Root.GetName]. Of course, some layoffs after the merger are to be expected but... you know how it goes."
+ MEC_ASA_ASI_NEUTRAL_GREETING_01:0 "Perhaps you could visit [Root.Capital.GetName] if you have the chance? One of the many industry leaders operating out of there might have exactly what you need."
+ MEC_ASA_ASI_NEUTRAL_GREETING_02:0 "Whatever you may have heard of us, all of it is likely to be true. And if that interests you, let us trade."
+ MEC_ASA_ASI_NEUTRAL_GREETING_03:0 "Please keep in mind that [Root.GetName] is beholden only to its shareholders. Respect our autonomy and do not interfere with our business, and [Root.Capital.GetName] will provide anything you need. And many things you don't, but will want more of once you try them."
+ MEC_ASA_ASI_NEUTRAL_GREETING_04:0 "Don't get too bold in your requests. When we downsize, subsidiaries are always the first to go."
+ MEC_ASA_ASI_THREATENED_GREETING_01:0 "We may be willing to compromise our interests somewhat to accommodate your strong position."
+ MEC_ASA_ASI_FRIENDLY_GREETING_01:0 "Ah! My favourite partners in the galaxy! How shall we enrich each other today?"
+ MEC_ASA_ASI_FRIENDLY_GREETING_02:0 "What can [Root.GetName] offer you today? The choices include everything, of course, if you can meet the price. Affiliate discount applies."
+ MEC_ASA_ASI_FRIENDLY_GREETING_03:0 "Profit and pleasure tend to go together on [Root.Capital.GetName]. Let's discuss one and I shall arrange for the other."
+ MEC_ASA_ASI_FRIENDLY_GREETING_04:0 "A pleasure doing business with you, [From.GetRulerTitle]. I always enjoy mutually profitable intercourse. Mhm... Why do I have a feeling it didn't translate well..."
+ MEC_ASA_ASI_FRIENDLY_GREETING_05:0 "A pleasure doing business with you, [From.GetRulerTitle]. I always enjoy mutually profitable intercourse."
+ MEC_ASA_ASI_WAR_GREETING_01:0 "Have you faced an [Root.GetSpeciesAdj] commando unit before? Few [From.GetSpeciesNamePlural] have. I'll make sure you have the opportunity before it's over."
+ MEC_ASA_ASI_WAR_GREETING_02:0 "Time is credits and this feels like SUCH a waste of both. Is your surrender declaration ready yet? Do you require any help with that? Just for you, I'll even cover the lawyer's fee."
+ MEC_ASA_ASI_WAR_GREETING_03:0 "There is no reason for either of us to take this conflict personally; it's simply about the bottom line."
+ MEC_ASA_ASI_WAR_GREETING_04:0 "This is not my first hostile takeover. I always get what I want, no matter the price."
+ 
+ MEC_ASA_ASI_VASSAL_GREETING_01:0 "The [Root.GetName] always strives to deliver the best service to our holding company."
+ MEC_ASA_ASI_VASSAL_GREETING_DISLOYAL_01:0 "Our patience with your mismanagement is wearing thin. Do you intend to run the [Root.GetName] into the ground?"
+ MEC_ASA_ASI_OVERLORD_GREETING_01:0 "We are receiving you, [From.GetSpeciesName]. Are there any policies you would like to review?"
+ 
+ # Actions
+ MEC_ASA_ASI_DOW_PROPOSE_01:0 "You seem to have an issue with stray scrap littering your space. Our fleet is on its way to clear it out for you."
+ 
+ MEC_ASA_ASI_DOW_ACCEPT_01:0 "Mmm... An interesting order... Very well, we shall deliver the requested shipment of munitions straight to your doorstep. You won't be disappointed."
+ MEC_ASA_ASI_DOW_ACCEPT_02:0 "Getting dragged into war is terrible for business... So you can be sure we will bill you for every credit lost. And interest!"
+ MEC_ASA_ASI_DOW_ACCEPT_03:0 "Awww.. But I suppose all good partnerships come to an end. The important thing is to embrace the time that you have to spend with the fish."
+ 
+ # Insults
+ MEC_ASA_ASI_01_INSULT_PROPOSE:0 "If this whole [Root.GetRulerTitle] gig doesn't pan out, have you considered indentured servitude for one of the companies on [From.Capital.GetName]?"
+ 
+ MEC_ASA_ASI_01_INSULT_ACCEPT:0 "Ah... It brings a sense of order and stability to my universe knowing that you still have nothing of value to offer."
+
+ ####################################
+ # Asari Ascendancy
+ ####################################
+ personality_mec_asari_ai_asc:0 "Dominant Descendants"
+ personality_mec_asari_ai_asc_desc:0 "Dominant Descendants seek to restore the empire of their ancient benefactors. Whether by subjugation or diplomacy, they will lead the galaxy unto a new era of greatness."

@@ -28,35 +28,28 @@ sys_gagarin_init = {
     planet = {
         name = "Junthor"
         class = "pc_chlorine"
-        orbit_distance = 80
-        orbit_angle = 300
+        orbit_distance = 65
+        orbit_angle = 165
         has_ring = no
 		size = 25 
 		entity = "chlorine_planet_01_entity"
-		flags = { junthor planetary_ruins }		
-		
-		init_effect = {
-			add_modifier = {
-				modifier = "junthor_codex"
-				days = -1
-			}
-		}
+		flags = { junthor planetary_ruins pd_ignore asari_writings }		
 
 		moon = {
 			name = "Junthor_a"
-			class = "pc_barren"
+			class = "pc_iron"
 			orbit_distance = 8
 			size = 5
 		}
 		moon = {
 			name = "Junthor_b"
-			class = "pc_barren"
+			class = "pc_carbon"
 			orbit_distance = 8
 			size = 3
 		}
 		moon = {
 			name = "Junthor_c"
-			class = "pc_frozen"
+			class = "pc_subglacial"
 			orbit_distance = 8
 			size = 3
 		}		
@@ -65,35 +58,48 @@ sys_gagarin_init = {
     planet = {
         name = "Pressha"
         class = "pc_ice_giant"
-        orbit_distance = 50
+        orbit_distance = 45
         orbit_angle = 202
         has_ring = no
 		size = 30
 		entity = "pressha_entity"
-		flags = { pressha ice_giant }		
+		flags = { pressha pd_ignore }		
 		moon = {
 			name = "Pressha_a"
 			class = "pc_iron"
-			orbit_distance = 8
+			orbit_distance = 14
 			size = 7			
 		}
 		moon = {
 			name = "Pressha_b"
 			class = "pc_frozen"
-			orbit_distance = 16
+			orbit_distance = 10
 			size = 8
 		}
     }
 
     planet = {
         name = "Rayingri"
-        class = "pc_barren"
-        orbit_distance = 50
+        class = "pc_hadesert"
+        orbit_distance = 40
         orbit_angle = 245
         has_ring = no
 		size = 13
 		entity = "rayingri_entity"
-		flags = { rayingri no_atmo }		
+		flags = { rayingri pd_ignore league_of_one }
+		init_effect = {
+			set_owner = event_target:geth_consensus
+			create_colony = {
+				owner = event_target:geth_consensus
+				species = event_target:gethSpecies
+				ethos = owner
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:gethSpecies }
+			}
+			generate_btr_geth_incursion_start_buildings = yes			
+		}
 		moon = {
 			name = "Vahtz"
 			class = "pc_iron"
@@ -110,18 +116,103 @@ sys_gagarin_init = {
         has_ring = no
 		size = 11
 		entity = "sogelrus_entity"
-		flags = { sogelrus argon_atmo cryovolcanic }
+		flags = { sogelrus pd_ignore }
+		init_effect = {
+			set_deposit = d_cryovolcanos
+			set_deposit = d_cryovolcanos			
+			set_deposit = d_cryovolcanos			
+		}
     }
 
     planet = {
         name = "Antirumgon"
         class = "pc_methane"
-        orbit_distance = 50
+        orbit_distance = 35
         orbit_angle = 289
         has_ring = no
 		size = 23
 		entity = "antirumgon_entity"
-		flags = { antirumgon methane_atmo }		
+		flags = { antirumgon pd_ignore planetary_ruins }	
+		init_effect = {
+			prevent_anomaly = yes
+			set_deposit = d_energy_4
+			create_pirate_country = yes
+			event_target:pirate_country = {
+				create_leader = {
+					class = admiral
+					species = event_target:batarianSpecies
+					name = "Red Qorayk"
+					skill = 1
+					traits = {
+						trait = random_trait
+					}
+				}				
+				if = {
+					limit = {
+						NOT = {
+							has_modifier = pirate_power
+						}
+					}
+					add_modifier = {
+						modifier = pirate_power
+						days = -1
+					}
+				}
+			}
+			every_country = {
+				establish_communications_no_message = event_target:pirate_country
+			}
+			create_fleet = {
+				name = "NAME_Pirate_Station"
+				effect = {
+					set_owner = event_target:pirate_country
+					create_ship = {
+						name = random
+						design = "NAME_Pirate_Nest"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 6
+						angle = 120
+					}
+				}
+			}			
+			create_fleet = {
+				name = "NAME_Reds_Raiders"
+				effect = {
+					set_owner = event_target:pirate_country
+					set_fleet_flag = pirate_home_system_fleet
+					while = {
+						count = 1
+						create_ship = {
+							name = "Khi'shar"
+							design = "NAME_Brigand"
+							graphical_culture = "pirate_01"
+						}
+					}
+					while = {
+						count = 6
+						create_ship = {
+							name = random
+							design = "NAME_Reaver"
+							graphical_culture = "pirate_01"
+						}
+					}
+					assign_leader = last_created_leader					
+					set_fleet_flag = pirate_home_system_fleet
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 150
+					set_location = {
+						target = prev
+						distance = 10
+						angle = 120
+					}
+				}
+			}			
+		}			
     }
 
     init_effect = { 
@@ -129,7 +220,7 @@ sys_gagarin_init = {
 			type = "armstrongnebula_atticanbeta_massrelay" 
 			name = "Armstrong_4_Relay"			
 			orbit_angle = 197 
-			orbit_distance = 235		
+			orbit_distance = 275		
 			
 		} 
 	}	    
@@ -1863,7 +1954,7 @@ sys_azedes_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "raloi_republic" }
@@ -3803,7 +3894,7 @@ sys_maskimxul_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes
+			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_rachni_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "rachni_hive" }

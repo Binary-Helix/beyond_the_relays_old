@@ -1,0 +1,138 @@
+##########################################################################
+# Decisions
+##########################################################################
+
+#This allows to establish an Asari Republic on a planet
+#A republic is associated with a specific ethos and each option requires at least 5 pops following the same ethic
+mec_asari_decision_civic_republic_establish = {
+	owned_planets_only = yes
+	sound = event_conversation
+	icon = decision_galactic_senate
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+	
+	potential = {
+		owner = { has_valid_civic = mec_asari_civic_thessia }
+		NOR = {
+			has_deposit = d_mec_asari_republic_egalitarian
+			has_deposit = d_mec_asari_republic_authoritarian
+			has_deposit = d_mec_asari_republic_xenophile
+			has_deposit = d_mec_asari_republic_xenophobe
+			has_deposit = d_mec_asari_republic_pacifist
+			has_deposit = d_mec_asari_republic_militarist
+			has_deposit = d_mec_asari_republic_materialist
+			has_deposit = d_mec_asari_republic_spiritualist
+		}
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = mec_asari_decision_busy
+			planet = { NOT = { has_planet_flag = mec_asari_decision_establishing_republic } }
+		}
+		custom_tooltip = {
+			fail_text = mec_asari_decision_civic_republic_establish_condition_1
+			success_text = mec_asari_decision_civic_republic_establish_condition_1a
+			OR = {
+				count_owned_pop = { limit = { is_egalitarian = yes } count >= 5 }
+				count_owned_pop = { limit = { is_authoritarian = yes } count >= 5 }
+				count_owned_pop = { limit = { is_xenophile = yes } count >= 5 }
+				count_owned_pop = { limit = { is_xenophobe = yes } count >= 5 }
+				count_owned_pop = { limit = { is_pacifist = yes } count >= 5 }
+				count_owned_pop = { limit = { is_militarist = yes } count >= 5 }
+				count_owned_pop = { limit = { is_materialist = yes } count >= 5 }
+				count_owned_pop = { limit = { is_spiritualist = yes } count >= 5 }
+			}
+		}
+		custom_tooltip = {
+			fail_text = mec_asari_decision_civic_republic_establish_condition_2
+			success_text = mec_asari_decision_civic_republic_establish_condition_2a
+			NOR = {
+				has_deposit = d_mec_asari_republic_egalitarian
+				has_deposit = d_mec_asari_republic_authoritarian
+				has_deposit = d_mec_asari_republic_xenophile
+				has_deposit = d_mec_asari_republic_xenophobe
+				has_deposit = d_mec_asari_republic_pacifist
+				has_deposit = d_mec_asari_republic_militarist
+				has_deposit = d_mec_asari_republic_materialist
+				has_deposit = d_mec_asari_republic_spiritualist
+			}
+		}
+		has_upgraded_capital = yes
+	}	
+	
+	effect = {
+		#custom_tooltip = mec_asari_decision_civic_republic_establish_effects
+		#add_deposit = d_mec_asari_republic_egalitarian
+		planet_event = { id = mec_asari_asr.201 }
+	}
+	
+	ai_weight = {
+		weight = 10
+		
+		#Making sure the AI only considers this if it has nothing better to do with influence
+		modifier = {
+			factor = 0
+			from = {
+				resource_stockpile_compare = { resource = influence value < 200 }
+			}
+		}
+	}
+}
+
+mec_asari_decision_civic_republic_dissolve = {
+	owned_planets_only = yes
+	sound = event_conversation
+	icon = decision_galactic_senate
+	
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		owner = { has_valid_civic = mec_asari_civic_thessia }
+		OR = {
+			has_deposit = d_mec_asari_republic_egalitarian
+			has_deposit = d_mec_asari_republic_authoritarian
+			has_deposit = d_mec_asari_republic_xenophile
+			has_deposit = d_mec_asari_republic_xenophobe
+			has_deposit = d_mec_asari_republic_pacifist
+			has_deposit = d_mec_asari_republic_militarist
+			has_deposit = d_mec_asari_republic_materialist
+			has_deposit = d_mec_asari_republic_spiritualist
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = mec_asari_decision_busy
+			planet = { NOT = { has_planet_flag = mec_asari_decision_establishing_republic } }
+		}
+	}
+
+	effect = {
+		custom_tooltip = mec_asari_decision_civic_republic_dissolve_effects
+		hidden_effect = {
+			remove_deposit = d_mec_asari_republic_egalitarian
+			remove_deposit = d_mec_asari_republic_authoritarian
+			remove_deposit = d_mec_asari_republic_xenophile
+			remove_deposit = d_mec_asari_republic_xenophobe
+			remove_deposit = d_mec_asari_republic_pacifist
+			remove_deposit = d_mec_asari_republic_militarist
+			remove_deposit = d_mec_asari_republic_materialist
+			remove_deposit = d_mec_asari_republic_spiritualist
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}

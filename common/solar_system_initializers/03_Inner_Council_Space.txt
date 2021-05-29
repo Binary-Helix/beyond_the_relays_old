@@ -61,7 +61,7 @@ sys_aru_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "vol_protectorate" }
@@ -527,7 +527,7 @@ sys_pranas_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "salarian_union" }
@@ -843,6 +843,7 @@ sys_trebia_init = {
 	}
 
     planet = {
+		name = "Trebia"
         class = "pc_g_star"
         orbit_distance = 0
         size = 25
@@ -887,7 +888,7 @@ sys_trebia_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "turian_hierarchy" }
@@ -903,10 +904,11 @@ sys_trebia_init = {
 			add_deposit = d_palaven_radiation
 			add_deposit = d_palaven_cipritine
 			add_deposit = d_sercusium_river
-		}        
+		}       
+
         moon = {
             name = "Menae"
-            class = "pc_barren"
+            class = "pc_dextro_arid"
             orbit_distance = 10
             orbit_angle = 336
             has_ring = no
@@ -1063,7 +1065,7 @@ sys_aralakh_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "krogan_chiefdom" }
@@ -2080,7 +2082,7 @@ sys_kanala_init = {
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_start_deposits_and_blockers = yes			
+			generate_btr_start_deposits_and_blockers = yes			
 			generate_btr_major_empire_start_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "illuminated_primacy" }

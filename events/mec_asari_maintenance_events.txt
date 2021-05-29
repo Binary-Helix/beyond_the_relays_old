@@ -1,0 +1,34 @@
+###########################
+# Asari On-Action Events #
+###########################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_asari_maintenance
+
+country_event = {
+	id = mec_asari_maintenance.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	#Has to be done this way because restricting the actual civics to origins in possible = {} causes the game to freeze on Status Quo liberation/subjugation
+	#Poke Paradox about it mercilessly until it's fixed
+	#UPDATE 12 May 2020: Fixed as of 2.7.1, this script is no longer necessary. Disabled in 7.1.0.
+	trigger = {
+		OR = {
+			has_civic = mec_asari_civic_illium
+			has_civic = mec_asari_civic_thessia
+			has_civic = mec_asari_civic_ascendancy
+		}
+		NOR = {
+			has_origin = mec_asari_origin_illium
+			has_origin = mec_asari_origin_thessia
+		}
+	}
+
+	immediate = {
+		change_government = {
+			civics = random
+		}
+	}
+}

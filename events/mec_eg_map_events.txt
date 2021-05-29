@@ -1,0 +1,961 @@
+########################################
+# MEC Expanded Galaxy On-Action Events #
+########################################
+
+### Key: TGGS = T(type) G(group) S(subgroup)
+
+namespace = mec_eg_map
+
+### Hidden Game Start Event
+### These events relate to initialisers, hyperlanes and geography
+
+# Ensure that all systems are connected via hyperlanes to their "canon" Mass Relay system
+# This ONLY works correctly if there's one instance of the same initialiser in the game. Spawning duplicates is not recommended.
+
+# Argos Rho
+event = {
+	id = mec_eg_map.101
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_argos_rho_hydra_system }
+				save_global_event_target_as = mec_argos_rho_hydra_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_argos_rho_gorgon_system }
+				save_global_event_target_as = mec_argos_rho_gorgon_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_argos_rho_phoenix_system }
+				save_global_event_target_as = mec_argos_rho_phoenix_system
+			}
+			
+			event_target:mec_argos_rho_hydra_system = {
+				add_hyperlane = {
+					from = event_target:mec_argos_rho_hydra_system
+					to = event_target:mec_argos_rho_gorgon_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_argos_rho_hydra_system
+					to = event_target:mec_argos_rho_phoenix_system
+				}
+			}
+		}
+	}
+}
+
+# Armstrong Nebula
+event = {
+	id = mec_eg_map.102
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_armstrong_nebula_gagarin_system }
+				save_global_event_target_as = mec_armstrong_nebula_gagarin_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_armstrong_nebula_grissom_system }
+				save_global_event_target_as = mec_armstrong_nebula_grissom_system 
+			}
+			random_system = {
+				limit = { has_star_flag = mec_armstrong_nebula_hong_system }
+				save_global_event_target_as = mec_armstrong_nebula_hong_system 
+			}
+			random_system = {
+				limit = { has_star_flag = mec_armstrong_nebula_tereshkova_system }
+				save_global_event_target_as = mec_armstrong_nebula_tereshkova_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_armstrong_nebula_vamshi_system }
+				save_global_event_target_as = mec_armstrong_nebula_vamshi_system 
+			}
+		
+			event_target:mec_armstrong_nebula_gagarin_system = {
+				add_hyperlane = {
+					from = event_target:mec_armstrong_nebula_gagarin_system
+					to = event_target:mec_armstrong_nebula_grissom_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_armstrong_nebula_gagarin_system
+					to = event_target:mec_armstrong_nebula_hong_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_armstrong_nebula_gagarin_system
+					to = event_target:mec_armstrong_nebula_tereshkova_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_armstrong_nebula_gagarin_system
+					to = event_target:mec_armstrong_nebula_vamshi_system 
+				}
+			}
+		}
+	}
+}
+
+# Artemis Tau
+event = {
+	id = mec_eg_map.103
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_artemis_tau_macedon_system }
+				save_global_event_target_as = mec_artemis_tau_macedon_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_artemis_tau_athens_system }
+				save_global_event_target_as = mec_artemis_tau_athens_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_artemis_tau_sparta_system }
+				save_global_event_target_as = mec_artemis_tau_sparta_system 
+			}
+			random_system = {
+				limit = { has_star_flag = mec_artemis_tau_knossos_system }
+				save_global_event_target_as = mec_artemis_tau_knossos_system
+			}
+		
+			event_target:mec_artemis_tau_macedon_system = {
+				add_hyperlane = {
+					from = event_target:mec_artemis_tau_macedon_system
+					to = event_target:mec_artemis_tau_athens_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_artemis_tau_macedon_system
+					to = event_target:mec_artemis_tau_sparta_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_artemis_tau_macedon_system
+					to = event_target:mec_artemis_tau_knossos_system
+				}
+			}
+		}
+	}
+}
+
+# Attican Beta
+event = {
+	id = mec_eg_map.104
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_attican_beta_hercules_system }
+				save_global_event_target_as = mec_attican_beta_hercules_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_attican_beta_theseus_system  }
+				save_global_event_target_as = mec_attican_beta_theseus_system 
+			}
+			
+			event_target:mec_attican_beta_hercules_system = {
+				add_hyperlane = {
+					from = event_target:mec_attican_beta_hercules_system
+					to = event_target:mec_attican_beta_theseus_system 
+				}
+			}
+		}
+	}
+}
+
+# Caleston Rift
+event = {
+	id = mec_eg_map.105
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_caleston_rift_balor_system }
+				save_global_event_target_as = mec_caleston_rift_balor_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_caleston_rift_aysur_system }
+				save_global_event_target_as = mec_caleston_rift_aysur_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_caleston_rift_solveig_system }
+				save_global_event_target_as = mec_caleston_rift_solveig_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_caleston_rift_talava_system }
+				save_global_event_target_as = mec_caleston_rift_talava_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_caleston_rift_yakawa_system }
+				save_global_event_target_as = mec_caleston_rift_yakawa_system
+			}
+		
+			event_target:mec_caleston_rift_balor_system = {
+				add_hyperlane = {
+					from = event_target:mec_caleston_rift_balor_system
+					to = event_target:mec_caleston_rift_aysur_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_caleston_rift_balor_system
+					to = event_target:mec_caleston_rift_solveig_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_caleston_rift_balor_system
+					to = event_target:mec_caleston_rift_talava_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_caleston_rift_balor_system
+					to = event_target:mec_caleston_rift_yakawa_system
+				}
+			}
+		}
+	}
+}
+
+# Eagle Nebula
+event = {
+	id = mec_eg_map.106
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_eagle_nebula_imir_system }
+				save_global_event_target_as = mec_eagle_nebula_imir_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_eagle_nebula_amun_system }
+				save_global_event_target_as = mec_eagle_nebula_amun_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_eagle_nebula_malgus_system }
+				save_global_event_target_as = mec_eagle_nebula_malgus_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_eagle_nebula_relic_system }
+				save_global_event_target_as = mec_eagle_nebula_relic_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_eagle_nebula_strabo_system }
+				save_global_event_target_as = mec_eagle_nebula_strabo_system
+			}
+		
+			event_target:mec_eagle_nebula_imir_system = {
+				add_hyperlane = {
+					from = event_target:mec_eagle_nebula_imir_system
+					to = event_target:mec_eagle_nebula_amun_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_eagle_nebula_imir_system
+					to = event_target:mec_eagle_nebula_malgus_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_eagle_nebula_imir_system
+					to = event_target:mec_eagle_nebula_relic_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_eagle_nebula_imir_system
+					to = event_target:mec_eagle_nebula_strabo_system
+				}
+			}
+		}
+	}
+}
+
+# Gemini Sigma
+event = {
+	id = mec_eg_map.107
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_gemini_sigma_han_system }
+				save_global_event_target_as = mec_gemini_sigma_han_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_gemini_sigma_ming_system }
+				save_global_event_target_as = mec_gemini_sigma_ming_system
+			}
+			
+			event_target:mec_gemini_sigma_han_system = {
+				add_hyperlane = {
+					from = event_target:mec_gemini_sigma_han_system
+					to = event_target:mec_gemini_sigma_ming_system
+				}
+			}
+		}
+	}
+}
+
+# Hades Gamma
+event = {
+	id = mec_eg_map.108
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_hades_gamma_antaeus_system }
+				save_global_event_target_as = mec_hades_gamma_antaeus_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hades_gamma_cacus_system }
+				save_global_event_target_as = mec_hades_gamma_cacus_system 
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hades_gamma_dis_system }
+				save_global_event_target_as = mec_hades_gamma_dis_system 
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hades_gamma_farinata_system }
+				save_global_event_target_as = mec_hades_gamma_farinata_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hades_gamma_plutus_system }
+				save_global_event_target_as = mec_hades_gamma_plutus_system 
+			}
+		
+			event_target:mec_hades_gamma_antaeus_system = {
+				add_hyperlane = {
+					from = event_target:mec_hades_gamma_antaeus_system
+					to = event_target:mec_hades_gamma_cacus_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_hades_gamma_antaeus_system
+					to = event_target:mec_hades_gamma_dis_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_hades_gamma_antaeus_system
+					to = event_target:mec_hades_gamma_farinata_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_hades_gamma_antaeus_system
+					to = event_target:mec_hades_gamma_plutus_system 
+				}
+			}
+		}
+	}
+}
+
+# Hades Nexus
+event = {
+	id = mec_eg_map.109
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_hades_nexus_hekate_system }
+				save_global_event_target_as = mec_hades_nexus_hekate_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hades_nexus_hoplos_system }
+				save_global_event_target_as = mec_hades_nexus_hoplos_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hades_nexus_pamyat_system }
+				save_global_event_target_as = mec_hades_nexus_pamyat_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hades_nexus_sheol_system }
+				save_global_event_target_as = mec_hades_nexus_sheol_system
+			}
+		
+			event_target:mec_hades_nexus_hekate_system = {
+				add_hyperlane = {
+					from = event_target:mec_hades_nexus_hekate_system
+					to = event_target:mec_hades_nexus_hoplos_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_hades_nexus_hekate_system
+					to = event_target:mec_hades_nexus_pamyat_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_hades_nexus_hekate_system
+					to = event_target:mec_hades_nexus_sheol_system
+				}
+			}
+		}
+	}
+}
+
+# Hawking Eta
+event = {
+	id = mec_eg_map.110
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_hawking_eta_chandrasekhar_system }
+				save_global_event_target_as = mec_hawking_eta_chandrasekhar_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hawking_eta_century_system }
+				save_global_event_target_as = mec_hawking_eta_century_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hawking_eta_schwarzschild_system }
+				save_global_event_target_as = mec_hawking_eta_schwarzschild_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hawking_eta_thorne_system }
+				save_global_event_target_as = mec_hawking_eta_thorne_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hawking_eta_verr_system }
+				save_global_event_target_as = mec_hawking_eta_verr_system
+			}
+		
+			event_target:mec_hawking_eta_chandrasekhar_system = {
+				add_hyperlane = {
+					from = event_target:mec_hawking_eta_chandrasekhar_system
+					to = event_target:mec_hawking_eta_century_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_hawking_eta_chandrasekhar_system
+					to = event_target:mec_hawking_eta_schwarzschild_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_hawking_eta_chandrasekhar_system
+					to = event_target:mec_hawking_eta_thorne_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_hawking_eta_chandrasekhar_system
+					to = event_target:mec_hawking_eta_verr_system 
+				}
+			}
+		}
+	}
+}
+
+# Hourglass Nebula
+event = {
+	id = mec_eg_map.111
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_hourglass_nebula_osun_system }
+				save_global_event_target_as = mec_hourglass_nebula_osun_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hourglass_nebula_faryar_system }
+				save_global_event_target_as = mec_hourglass_nebula_faryar_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hourglass_nebula_ploitari_system }
+				save_global_event_target_as = mec_hourglass_nebula_ploitari_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_hourglass_nebula_sowilo_system }
+				save_global_event_target_as = mec_hourglass_nebula_sowilo_system
+			}
+		
+			event_target:mec_hourglass_nebula_osun_system = {
+				add_hyperlane = {
+					from = event_target:mec_hourglass_nebula_osun_system
+					to = event_target:mec_hourglass_nebula_faryar_system 
+				}
+				add_hyperlane = {
+					from = event_target:mec_hourglass_nebula_osun_system
+					to = event_target:mec_hourglass_nebula_ploitari_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_hourglass_nebula_osun_system
+					to = event_target:mec_hourglass_nebula_sowilo_system
+				}
+			}
+		}
+	}
+}
+
+# Ismar Frontier
+event = {
+	id = mec_eg_map.112
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_ismar_frontier_aquila_system }
+				save_global_event_target_as = mec_ismar_frontier_aquila_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_ismar_frontier_elysta_system }
+				save_global_event_target_as = mec_ismar_frontier_elysta_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_ismar_frontier_faia_system }
+				save_global_event_target_as = mec_ismar_frontier_faia_system
+			}
+			
+			event_target:mec_ismar_frontier_aquila_system = {
+				add_hyperlane = {
+					from = event_target:mec_ismar_frontier_aquila_system
+					to = event_target:mec_ismar_frontier_elysta_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_ismar_frontier_aquila_system
+					to = event_target:mec_ismar_frontier_faia_system
+				}
+			}
+		}
+	}
+}
+
+# Kepler Verge
+event = {
+	id = mec_eg_map.113
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_kepler_verge_newton_system }
+				save_global_event_target_as = mec_kepler_verge_newton_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_kepler_verge_herschel_system   }
+				save_global_event_target_as = mec_kepler_verge_herschel_system 
+			}
+			
+			event_target:mec_kepler_verge_newton_system = {
+				add_hyperlane = {
+					from = event_target:mec_kepler_verge_newton_system
+					to = event_target:mec_kepler_verge_herschel_system 
+				}
+			}
+		}
+	}
+}
+
+# Maroon Sea
+event = {
+	id = mec_eg_map.114
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_maroon_sea_matano_system }
+				save_global_event_target_as = mec_maroon_sea_matano_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_maroon_sea_caspian_system }
+				save_global_event_target_as = mec_maroon_sea_caspian_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_maroon_sea_vostok_system }
+				save_global_event_target_as = mec_maroon_sea_vostok_system
+			}
+			
+			event_target:mec_maroon_sea_matano_system = {
+				add_hyperlane = {
+					from = event_target:mec_maroon_sea_matano_system
+					to = event_target:mec_maroon_sea_caspian_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_maroon_sea_matano_system
+					to = event_target:mec_maroon_sea_vostok_system
+				}
+			}
+		}
+	}
+}
+
+# Nubian Expanse
+event = {
+	id = mec_eg_map.115
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_nubian_expanse_dakka_system }
+				save_global_event_target_as = mec_nubian_expanse_dakka_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_nubian_expanse_kalabsha_system }
+				save_global_event_target_as = mec_nubian_expanse_kalabsha_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_nubian_expanse_qertassi_system }
+				save_global_event_target_as = mec_nubian_expanse_qertassi_system
+			}
+			
+			event_target:mec_nubian_expanse_dakka_system = {
+				add_hyperlane = {
+					from = event_target:mec_nubian_expanse_dakka_system
+					to = event_target:mec_nubian_expanse_kalabsha_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_nubian_expanse_dakka_system
+					to = event_target:mec_nubian_expanse_qertassi_system
+				}
+			}
+		}
+	}
+}
+
+# Pylos Nebula
+event = {
+	id = mec_eg_map.117
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_pylos_nebula_nariph_system }
+				save_global_event_target_as = mec_pylos_nebula_nariph_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_pylos_nebula_dirada_system }
+				save_global_event_target_as = mec_pylos_nebula_dirada_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_pylos_nebula_kriseroi_system }
+				save_global_event_target_as = mec_pylos_nebula_kriseroi_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_pylos_nebula_satent_system }
+				save_global_event_target_as = mec_pylos_nebula_satent_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_pylos_nebula_zaherin_system }
+				save_global_event_target_as = mec_pylos_nebula_zaherin_system
+			}
+		
+			event_target:mec_pylos_nebula_nariph_system = {
+				add_hyperlane = {
+					from = event_target:mec_pylos_nebula_nariph_system
+					to = event_target:mec_pylos_nebula_dirada_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_pylos_nebula_nariph_system
+					to = event_target:mec_pylos_nebula_kriseroi_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_pylos_nebula_nariph_system
+					to = event_target:mec_pylos_nebula_satent_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_pylos_nebula_nariph_system
+					to = event_target:mec_pylos_nebula_zaherin_system
+				}
+			}
+		}
+	}
+}
+
+# Rosetta Nebula
+event = {
+	id = mec_eg_map.118
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_rosetta_nebula_enoch_system }
+				save_global_event_target_as = mec_rosetta_nebula_enoch_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_rosetta_nebula_phi_clio_system }
+				save_global_event_target_as = mec_rosetta_nebula_phi_clio_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_rosetta_nebula_alpha_draconis_system }
+				save_global_event_target_as = mec_rosetta_nebula_alpha_draconis_system
+			}
+			
+			event_target:mec_rosetta_nebula_enoch_system = {
+				add_hyperlane = {
+					from = event_target:mec_rosetta_nebula_enoch_system
+					to = event_target:mec_rosetta_nebula_phi_clio_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_rosetta_nebula_enoch_system
+					to = event_target:mec_rosetta_nebula_alpha_draconis_system
+				}
+			}
+		}
+	}
+}
+
+# Sigurd's Cradle
+event = {
+	id = mec_eg_map.121
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_sigurds_cradle_skepsis_system }
+				save_global_event_target_as = mec_sigurds_cradle_skepsis_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_sigurds_cradle_mil_system }
+				save_global_event_target_as = mec_sigurds_cradle_mil_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_sigurds_cradle_lenal_system }
+				save_global_event_target_as = mec_sigurds_cradle_lenal_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_sigurds_cradle_decoris_system }
+				save_global_event_target_as = mec_sigurds_cradle_decoris_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_sigurds_cradle_psi_tophet_system }
+				save_global_event_target_as = mec_sigurds_cradle_psi_tophet_system
+			}
+		
+			event_target:mec_sigurds_cradle_skepsis_system = {
+				add_hyperlane = {
+					from = event_target:mec_sigurds_cradle_skepsis_system
+					to = event_target:mec_sigurds_cradle_mil_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_sigurds_cradle_skepsis_system
+					to = event_target:mec_sigurds_cradle_lenal_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_sigurds_cradle_skepsis_system
+					to = event_target:mec_sigurds_cradle_decoris_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_sigurds_cradle_skepsis_system
+					to = event_target:mec_sigurds_cradle_psi_tophet_system 
+				}
+			}
+		}
+	}
+}
+
+# Styx Theta
+event = {
+	id = mec_eg_map.122
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_styx_theta_acheron_system }
+				save_global_event_target_as = mec_styx_theta_acheron_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_styx_theta_erebus_system  }
+				save_global_event_target_as = mec_styx_theta_erebus_system 
+			}
+			
+			event_target:mec_styx_theta_acheron_system = {
+				add_hyperlane = {
+					from = event_target:mec_styx_theta_archeron_system
+					to = event_target:mec_styx_theta_erebus_system
+				}
+			}
+		}
+	}
+}
+
+# The Phoenix Massing
+event = {
+	id = mec_eg_map.123
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_phoenix_massing_tassrah_system }
+				save_global_event_target_as = mec_phoenix_massing_tassrah_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_phoenix_massing_typhon_system }
+				save_global_event_target_as = mec_phoenix_massing_typhon_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_phoenix_massing_chomos_system }
+				save_global_event_target_as = mec_phoenix_massing_chomos_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_phoenix_massing_salahiel_system }
+				save_global_event_target_as = mec_phoenix_massing_salahiel_system
+			}
+		
+			event_target:mec_phoenix_massing_tassrah_system = {
+				add_hyperlane = {
+					from = event_target:mec_phoenix_massing_tassrah_system
+					to = event_target:mec_phoenix_massing_typhon_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_phoenix_massing_tassrah_system
+					to = event_target:mec_phoenix_massing_chomos_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_phoenix_massing_tassrah_system
+					to = event_target:mec_phoenix_massing_salahiel_system
+				}
+			}
+		}
+	}
+}
+
+# The Shrike Abyssal
+event = {
+	id = mec_eg_map.124
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_shrike_abyssal_xe_cha_system }
+				save_global_event_target_as =  mec_shrike_abyssal_xe_cha_system
+			}
+			random_system = {
+				limit = { has_star_flag =  mec_shrike_abyssal_kyzil_system }
+				save_global_event_target_as = mec_shrike_abyssal_kyzil_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_shrike_abyssal_thal_system }
+				save_global_event_target_as = mec_shrike_abyssal_thal_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_shrike_abyssal_urla_rast_system }
+				save_global_event_target_as = mec_shrike_abyssal_urla_rast_system
+			}
+		
+			event_target:mec_shrike_abyssal_xe_cha_system = {
+				add_hyperlane = {
+					from = event_target:mec_shrike_abyssal_xe_cha_system
+					to = event_target:mec_shrike_abyssal_kyzil_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_shrike_abyssal_xe_cha_system
+					to = event_target:mec_shrike_abyssal_thal_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_shrike_abyssal_xe_cha_system
+					to = event_target:mec_shrike_abyssal_urla_rast_system
+				}
+			}
+		}
+	}
+}
+
+# Valhallan Threshold
+event = {
+	id = mec_eg_map.126
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_valhallan_threshold_raheel_leyya_system }
+				save_global_event_target_as = mec_valhallan_threshold_raheel_leyya_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_valhallan_threshold_micah_system }
+				save_global_event_target_as = mec_valhallan_threshold_micah_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_valhallan_threshold_paz_system }
+				save_global_event_target_as = mec_valhallan_threshold_paz_system
+			}
+			
+			event_target:mec_valhallan_threshold_raheel_leyya_system = {
+				add_hyperlane = {
+					from = event_target:mec_valhallan_threshold_raheel_leyya_system
+					to = event_target:mec_valhallan_threshold_micah_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_valhallan_threshold_raheel_leyya_system
+					to = event_target:mec_valhallan_threshold_paz_system
+				}
+			}
+		}
+	}
+}
+
+# Voyager Cluster
+event = {
+	id = mec_eg_map.127
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	immediate = {
+		no_scope = {	
+			random_system = {
+				limit = { has_star_flag = mec_voyager_cluster_amazon_system }
+				save_global_event_target_as = mec_voyager_cluster_amazon_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_voyager_cluster_columbia_system }
+				save_global_event_target_as = mec_voyager_cluster_columbia_system
+			}
+			random_system = {
+				limit = { has_star_flag = mec_voyager_cluster_yangtze_system }
+				save_global_event_target_as = mec_voyager_cluster_yangtze_system
+			}
+			
+			event_target:mec_voyager_cluster_amazon_system = {
+				add_hyperlane = {
+					from = event_target:mec_voyager_cluster_amazon_system
+					to = event_target:mec_voyager_cluster_columbia_system
+				}
+				add_hyperlane = {
+					from = event_target:mec_voyager_cluster_amazon_system
+					to = event_target:mec_voyager_cluster_yangtze_system
+				}
+			}
+		}
+	}
+}
