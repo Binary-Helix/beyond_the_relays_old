@@ -2356,18 +2356,17 @@ sys_warmestshoal_init = {
 		class = "pc_iron"
 		orbit_distance = 120
         size = 10
-        init_effect = {
-            set_planet_flag = solitary_mist_codex
-            }
-		    init_effect = { #isnt this a layer too deep?
-				spawn_megastructure = { 
+	}
+
+	init_effect = {
+			spawn_megastructure = { 
 				type = "olinprotectorate_horseheadnebula_massrelay" 
 				name = "Olin_2_Relay"
-				orbit_angle = 144 
-				orbit_distance = 20
-			}
-		} 
-	}		
+				orbit_angle = 0 
+				orbit_distance = 170
+		}
+	} 
+			
 }
 
 

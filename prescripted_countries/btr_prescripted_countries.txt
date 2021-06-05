@@ -1441,7 +1441,7 @@ raloi_republic={
 }
 
 ## Asari Corporate Interests
-asari_corporate_interests = {
+mec_asariillium_civ = {
 	name = "Asari Corporate Interests"
 	adjective = "Asari"
 	spawn_enabled = no # yes / no / always
@@ -1463,7 +1463,8 @@ asari_corporate_interests = {
 		trait = "trait_charismatic"
 		trait = "mec_asari_trait_sophisticated"
 	}
-
+	
+	advisor_voice_type = "l_slick_corp"
 	
 	room = "personality_peaceful_traders_room"
 	
@@ -1480,16 +1481,16 @@ asari_corporate_interests = {
 	
 	planet_name = "Illium"
 	planet_class = "pc_continental"
-	initializer = "sys_tasale_init"
+	initializer = "mec_asi_system_initializer"
 	system_name = "Tasale"
 	
-	graphical_culture = "asari_01"
-	city_graphical_culture = "asari_01"
+	graphical_culture = "mec_asari_01"
+	city_graphical_culture = "mec_asari_01"
 	
 	empire_flag = {
 		icon = {
-			category = "btr_asari_civ"
-			file = "btr_asari_illium_flag.dds"
+			category = "mec_asari_civ"
+			file = "mec_asari_illium_flag.dds"
 		}
 		background = {
 			category = "backgrounds"
@@ -1516,7 +1517,7 @@ asari_corporate_interests = {
 }
 
 ## Asari Republics
-asari_republics = {
+mec_asarirepublics_civ = {
 	name = "Asari Republics"
 	adjective = "Asari"
 	spawn_enabled = no # yes / no / always
@@ -1539,6 +1540,8 @@ asari_republics = {
 		trait = "mec_asari_trait_sophisticated"
 	}
 	
+	advisor_voice_type = "l_pacifist"
+	
 	room = "personality_metalheads_room"
 	
 	ethic = "ethic_fanatic_xenophile"
@@ -1554,15 +1557,15 @@ asari_republics = {
 	planet_name = "Thessia"
 	planet_class = "pc_continental"
 	system_name = "Parnitha"
-	initializer= "sys_parnitha_init"
+	initializer= "mec_asr_system_initializer"
 	
-	graphical_culture = "asari_01"
-	city_graphical_culture = "asari_01"
+	graphical_culture = "mec_asari_01"
+	city_graphical_culture = "mec_asari_01"
 	
 	empire_flag = {
 		icon = {
-			category = "btr_asari_civ"
-			file = "btr_asari_thessia_flag.dds"
+			category = "mec_asari_civ"
+			file = "mec_asari_thessia_flag.dds"
 		}
 		background = {
 			category = "backgrounds"

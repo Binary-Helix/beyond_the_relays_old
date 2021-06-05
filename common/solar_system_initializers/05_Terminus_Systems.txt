@@ -2407,7 +2407,15 @@ sys_kairavamori_init = {
 			orbit_angle = 118 
 			orbit_distance = 200
 			
-		} 
+		}
+
+		spawn_megastructure = { 
+			type = "radanaburst_omeganebula_massrelay" 
+			name = "Omega_10_Relay"
+			orbit_angle = 118 
+			orbit_distance = 240
+				
+		}		
 	}		
 }
 
@@ -3035,7 +3043,7 @@ sys_jintanei_init = {
 			name = "Esse_a"
 			class = "pc_arid"
 			orbit_angle = 270
-			orbit_distance = 8
+			orbit_distance = 80
 		}	
 	}
 
@@ -3064,8 +3072,8 @@ sys_jintanei_init = {
 		spawn_megastructure = { 
 			type = "radanaburst_omeganebula_massrelay" 
 			name = "Radana_3_Relay"
-			random_pos = NO 
-			orbit_distance = 150
+			random_pos = yes 
+			orbit_distance = 240
 			
 		} 
 	}
@@ -3074,8 +3082,8 @@ sys_jintanei_init = {
 		spawn_megastructure = { 
 			type = "radanaburst_sigurdscradle_massrelay" 
 			name = "Radana_4_Relay"
-			random_pos = NO 
-			orbit_distance = 150
+			random_pos = yes 
+			orbit_distance = 275
 			
 		} 
 	}	
