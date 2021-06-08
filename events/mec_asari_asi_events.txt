@@ -36,7 +36,7 @@ country_event = {
 
 	immediate = {
 		random_owned_planet = {
-			limit = { has_planet_flag = mec_asari_planet_illium }
+			limit = { has_planet_flag = btr_asari_planet_illium }
 			set_planet_flag = mec_asari_illium_owned_by_@prev
 			save_global_event_target_as = mec_asari_illium_owned_by_@prev
 			owner = {
@@ -48,12 +48,12 @@ country_event = {
 			limit = {
 				has_origin = mec_asari_origin_illium
 				any_system_within_border = {
-					has_star_flag = mec_asari_tasale_system
+					has_star_flag = btr_asari_tasale_system
 				}
 			}
 			closest_system = {
 				limit = {
-					has_star_flag = mec_asari_lusarn_system
+					has_star_flag = btr_asari_lusarn_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -63,7 +63,7 @@ country_event = {
 			}
 			closest_system = {
 				limit = {
-					has_star_flag = mec_asari_zelene_system
+					has_star_flag = btr_asari_zelene_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -73,7 +73,7 @@ country_event = {
 			}
 			closest_system = {
 				limit = {
-					has_star_flag = mec_asari_ondeste_system
+					has_star_flag = btr_asari_ondeste_system
 				}
 				create_starbase = {
 					size = starbase_outpost

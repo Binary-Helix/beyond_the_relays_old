@@ -32,20 +32,20 @@ planet_event = {
 	immediate = {
 		if = {
 			limit = { 
-				has_planet_flag = mec_asari_planet_illium
+				has_planet_flag = btr_asari_planet_illium
 				owner = { has_origin = mec_asari_origin_illium }
 			}
-			mec_asari_generate_illium_deposits = yes
-			mec_asari_setup_origin_homeworld = yes
+			btr_asari_generate_illium_deposits = yes
+			btr_asari_setup_origin_homeworld = yes
 			generate_start_pops = yes
 		}
 		else_if = {
 			limit = { 
-				has_planet_flag = mec_asari_planet_thessia
+				has_planet_flag = btr_asari_planet_thessia
 				owner = { has_origin = mec_asari_origin_thessia }
 			}
-			mec_asari_generate_thessia_deposits = yes
-			mec_asari_setup_origin_homeworld = yes
+			btr_asari_generate_thessia_deposits = yes
+			btr_asari_setup_origin_homeworld = yes
 			generate_start_pops = yes
 		}
 	}
@@ -184,7 +184,7 @@ event = {
 					owner = {
 						is_ai = yes
 					}
-					has_planet_flag = mec_asari_planet_tarith
+					has_planet_flag = btr_asari_planet_tarith
 				}
 				
 				set_name = "Tarith"
@@ -195,7 +195,7 @@ event = {
 					owner = {
 						is_ai = yes
 					}
-					has_planet_flag = mec_asari_planet_helyme
+					has_planet_flag = btr_asari_planet_helyme
 				}
 				
 				set_name = "Helyme"
@@ -206,7 +206,7 @@ event = {
 					owner = {
 						is_ai = yes
 					}
-					has_planet_flag = mec_asari_planet_epho
+					has_planet_flag = btr_asari_planet_epho
 				}
 				
 				set_name = "Epho"
@@ -217,7 +217,7 @@ event = {
 					owner = {
 						is_ai = yes
 					}
-					has_planet_flag = mec_asari_planet_sanves
+					has_planet_flag = btr_asari_planet_sanves
 				}
 				
 				set_name = "Sanves"
@@ -228,7 +228,7 @@ event = {
 					owner = {
 						is_ai = yes
 					}
-					has_planet_flag = mec_asari_planet_niacal
+					has_planet_flag = btr_asari_planet_niacal
 				}
 				
 				set_name = "Niacal"
@@ -239,7 +239,7 @@ event = {
 					owner = {
 						is_ai = yes
 					}
-					has_planet_flag = mec_asari_planet_lusia
+					has_planet_flag = btr_asari_planet_lusia
 				}
 				
 				set_name = "Lusia"
@@ -261,7 +261,7 @@ country_event = {
 	trigger = {
 		has_origin = mec_asari_origin_illium
 		any_system = {
-			has_star_flag = mec_asari_parnitha_system
+			has_star_flag = btr_asari_parnitha_system
 		}
 		NOT = {
 			any_country = {
@@ -273,7 +273,7 @@ country_event = {
 	immediate = {
 		save_event_target_as = mec_asari_setup_spawner
 		random_system = {
-			limit = { has_star_flag = mec_asari_parnitha_system }
+			limit = { has_star_flag = btr_asari_parnitha_system }
 			save_event_target_as = mec_asari_setup_system
 		}
 	}
@@ -324,7 +324,7 @@ country_event = {
 		host_has_dlc = Megacorp
 		has_origin = mec_asari_origin_thessia
 		any_system = {
-			has_star_flag = mec_asari_tasale_system
+			has_star_flag = btr_asari_tasale_system
 		}
 		NOT = {
 			any_country = {
@@ -336,7 +336,7 @@ country_event = {
 	immediate = {
 		save_event_target_as = mec_asari_setup_spawner
 		random_system = {
-			limit = { has_star_flag = mec_asari_tasale_system }
+			limit = { has_star_flag = btr_asari_tasale_system }
 			save_event_target_as = mec_asari_setup_system
 		}
 	}
@@ -370,7 +370,7 @@ country_event = {
 	
 	immediate = {
 		random_galaxy_planet = {
-			limit = { has_planet_flag = mec_asari_planet_thessia }
+			limit = { has_planet_flag = btr_asari_planet_thessia }
 			clear_planet_modifiers = yes
 			create_country = {
 				species = event_target:mec_asari_setup_spawner
@@ -388,8 +388,8 @@ country_event = {
 				origin = "mec_asari_origin_thessia"
 				flag = {
 					icon = {
-						category = "mec_asari_civ"
-						file = "mec_asari_thessia_flag.dds"
+						category = "masseffect"
+						file = "Asari - Thessia.dds"
 					}
 					background = {
 						category = "backgrounds"
@@ -415,8 +415,8 @@ country_event = {
 			create_colony = {
 				owner = event_target:mec_asari_setup_spawnee
 			}
-			mec_asari_generate_thessia_deposits = yes
-			mec_asari_setup_origin_homeworld = yes
+			btr_asari_generate_thessia_deposits = yes
+			btr_asari_setup_origin_homeworld = yes
 			generate_start_pops = yes
 			set_name = "Thessia"
 			set_owner = event_target:mec_asari_setup_spawnee
@@ -473,9 +473,9 @@ country_event = {
 	
 	immediate = {
 		random_galaxy_planet = {
-			limit = { has_planet_flag = mec_asari_planet_illium }
+			limit = { has_planet_flag = btr_asari_planet_illium }
 			clear_planet_modifiers = yes
-			change_pc = pc_mec_illium
+			change_pc = pc_tropical
 			create_country = {
 				species = event_target:mec_asari_setup_spawner
 				name_list = event_target:mec_asari_setup_spawner
@@ -493,8 +493,8 @@ country_event = {
 				origin = "mec_asari_origin_illium"
 				flag = {
 					icon = {
-						category = "mec_asari_civ"
-						file = "mec_asari_illium_flag.dds"
+						category = "masseffect"
+						file = "Asari - Illium 2.dds"
 					}
 					background = {
 						category = "backgrounds"
@@ -520,8 +520,8 @@ country_event = {
 			create_colony = {
 				owner = event_target:mec_asari_setup_spawnee
 			}
-			mec_asari_generate_illium_deposits = yes
-			mec_asari_setup_origin_homeworld = yes
+			btr_asari_generate_illium_deposits = yes
+			btr_asari_setup_origin_homeworld = yes
 			generate_start_pops = yes
 			set_name = "Illium"
 			set_owner = event_target:mec_asari_setup_spawnee

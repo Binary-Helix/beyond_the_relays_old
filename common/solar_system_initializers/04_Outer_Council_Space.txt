@@ -66,6 +66,7 @@ sys_ialessa_init = {
 		init_effect = {
 			prevent_anomaly = yes
 		}		
+		flags = { btr_asari_planet_sanves }
 	}
 	
 	planet = {
@@ -77,7 +78,7 @@ sys_ialessa_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			set_deposit = d_btr_asari_zylium_eezo
+			set_deposit = d_mec_asari_zylium_eezo
 		}		
 	}
 	
@@ -156,7 +157,8 @@ sys_orisoni_init = {
 		has_ring = no
 		init_effect = {
 			prevent_anomaly = yes
-		}		
+		}	
+		flags = { btr_asari_planet_niacal }	
 	}
 	
 	planet = {
@@ -460,6 +462,7 @@ sys_tomaros_init = {
 		init_effect = {
 			prevent_anomaly = yes
 		}		
+		flags = { btr_asari_planet_lusia }
 	}
 	
 	planet = {
@@ -617,7 +620,7 @@ sys_vernio_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			add_deposit = d_btr_asari_tritogenith_collision
+			add_deposit = d_mec_asari_tritogenith_collision
 		}		
 		moon = {
 			name = "Tritogenith I"

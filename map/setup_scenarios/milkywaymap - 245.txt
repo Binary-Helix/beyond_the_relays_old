@@ -2229,6 +2229,13 @@ static_galaxy_scenario = {
             y = -132.5978
         }
         initializer = sys_tasale_init
+				spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = asari_corporate_interests
+				} 
+		}		
     }
 
     system = {

@@ -300,7 +300,7 @@ krogan_chiefdom={
 	authority="auth_democratic"
 	government="gov_bandit_commune"
 	planet_name="Tuchanka"
-	planet_class="pc_nuked"
+	planet_class="pc_arid"
 	system_name="Aralakh"
 	initializer="sys_aralakh_init"
 	graphical_culture="reptilian_01"
@@ -311,8 +311,8 @@ krogan_chiefdom={
 	}
 	empire_flag={
 		icon={
-			category="masseffect"
-			file="Kalros.dds"
+			category="masseffectsilver"
+			file="KroganFlag3.dds"
 		}
 		background={
 			category="backgrounds"
@@ -828,7 +828,7 @@ geth_consensus={
 	origin="origin_geth_consensus"
 }
 
-#11 Rachni Hive
+#11 Rachni swarm
 rachni_hive={
 	ship_prefix="PRESCRIPTED_ship_prefix_rachni_hive"
 	species={
@@ -844,8 +844,8 @@ rachni_hive={
 		trait="trait_strong"
 		trait="trait_traditional"
 	}
-	name="Rachni Hive"
-	adjective="Rachni Hive"
+	name="Rachni Swarm"
+	adjective="Rachni Swarm"
 	authority="auth_hive_mind"
 	government="gov_devouring_swarm"
 	planet_name="Suen"
@@ -1444,7 +1444,7 @@ raloi_republic={
 mec_asariillium_civ = {
 	name = "Asari Corporate Interests"
 	adjective = "Asari"
-	spawn_enabled = no # yes / no / always
+	spawn_enabled = always # yes / no / always
 	#ignore_portrait_duplication = yes
 
 	playable = mec_asari_req_asi
@@ -1472,7 +1472,7 @@ mec_asariillium_civ = {
 	ethic = "ethic_xenophile"
 	ethic = "ethic_materialist"
 	
-	flags = {}
+	flags = { asari_corporate_interests }
 	
 	authority = "auth_corporate"
 	government = gov_megacorporation
@@ -1481,7 +1481,7 @@ mec_asariillium_civ = {
 	
 	planet_name = "Illium"
 	planet_class = "pc_continental"
-	initializer = "mec_asi_system_initializer"
+	initializer = "sys_tasale_init"
 	system_name = "Tasale"
 	
 	graphical_culture = "mec_asari_01"
@@ -1489,8 +1489,8 @@ mec_asariillium_civ = {
 	
 	empire_flag = {
 		icon = {
-			category = "mec_asari_civ"
-			file = "mec_asari_illium_flag.dds"
+			category = "masseffect"
+			file = "Asari - Illium 2.dds"
 		}
 		background = {
 			category = "backgrounds"
@@ -1520,7 +1520,7 @@ mec_asariillium_civ = {
 mec_asarirepublics_civ = {
 	name = "Asari Republics"
 	adjective = "Asari"
-	spawn_enabled = no # yes / no / always
+	spawn_enabled = always # yes / no / always
 	#ignore_portrait_duplication = yes
 
 	playable = mec_asari_req_asr
@@ -1547,7 +1547,7 @@ mec_asarirepublics_civ = {
 	ethic = "ethic_fanatic_xenophile"
 	ethic = "ethic_egalitarian"
 	
-	flags = {}
+	flags = { asari_republics }
 	
 	authority = "auth_democratic"
 	government = gov_mec_asr
@@ -1557,15 +1557,15 @@ mec_asarirepublics_civ = {
 	planet_name = "Thessia"
 	planet_class = "pc_continental"
 	system_name = "Parnitha"
-	initializer= "mec_asr_system_initializer"
+	initializer= "sys_parnitha_init"
 	
 	graphical_culture = "mec_asari_01"
 	city_graphical_culture = "mec_asari_01"
 	
 	empire_flag = {
 		icon = {
-			category = "mec_asari_civ"
-			file = "mec_asari_thessia_flag.dds"
+			category = "masseffect"
+			file = "Asari - Thessia.dds"
 		}
 		background = {
 			category = "backgrounds"

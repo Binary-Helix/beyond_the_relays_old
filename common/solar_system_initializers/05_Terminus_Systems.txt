@@ -497,15 +497,15 @@ sys_tasale_init = {
 		size = 18
 		has_ring = no		
 		starting_planet = yes		
-		
+		entity = "mec_asari_01_planet_habitable_illium_01_entity"		
 		deposit_blockers = none
 		modifiers = none
 		flags = { illium_codex btr_asari_planet_illium special_start_planet }		
 
 		init_effect = {
 			prevent_anomaly = yes
-			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_major_empire_start_buildings = yes			
+			btr_asari_generate_illium_deposits = yes
+			btr_asari_setup_origin_homeworld = yes
 			random_country = {
 				limit = { has_country_flag = "asari_corporate_interests" }
 				save_event_target_as = tasaleOwner
@@ -514,7 +514,7 @@ sys_tasale_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:humanSpecies }
+				create_pop = { species = event_target:asariSpecies }
 			}
 			set_name = "Illium"			
 		}		
@@ -687,7 +687,8 @@ sys_zelene_init = {
 		has_ring = no
 		init_effect = {
 			prevent_anomaly = yes
-		}		
+		}
+		flags = { btr_asari_planet_helyme }		
 	}
 	
 	planet = {
@@ -700,6 +701,7 @@ sys_zelene_init = {
 		init_effect = {
 			prevent_anomaly = yes
 		}		
+		flags = { btr_asari_planet_epho }
 	}
 	
 	planet = {
@@ -1164,7 +1166,7 @@ sys_faryar_init = {
 				origin = "origin_default"
 				flag = {
 					icon={
-						category="masseffect"
+						category="masseffectblack"
 						file="eclipse.dds"
 					}
 					background={

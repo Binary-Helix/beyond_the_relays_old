@@ -39,7 +39,7 @@ country_event = {
 			years = 20
 		}
 		random_owned_planet = {
-			limit = { has_planet_flag = mec_asari_planet_thessia }
+			limit = { has_planet_flag = btr_asari_planet_thessia }
 			set_planet_flag = mec_asari_thessia_owned_by_@prev
 			save_global_event_target_as = mec_asari_thessia_owned_by_@prev
 			owner = {
@@ -52,14 +52,14 @@ country_event = {
 			limit = {
 				has_origin = mec_asari_origin_thessia
 				any_system_within_border = {
-					has_star_flag = mec_asari_parnitha_system
+					has_star_flag = btr_asari_parnitha_system
 				}
 			}
 			closest_system = {
 				min_steps = 0
 				max_steps = 2
 				limit = {
-					has_star_flag = mec_asari_ialessa_system
+					has_star_flag = btr_asari_ialessa_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -72,7 +72,7 @@ country_event = {
 				min_steps = 0
 				max_steps = 2
 				limit = {
-					has_star_flag = mec_asari_orisoni_system
+					has_star_flag = btr_asari_orisoni_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -85,7 +85,7 @@ country_event = {
 				min_steps = 0
 				max_steps = 2
 				limit = {
-					has_star_flag = mec_asari_tomaros_system
+					has_star_flag = btr_asari_tomaros_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -98,7 +98,7 @@ country_event = {
 				min_steps = 0
 				max_steps = 2
 				limit = {
-					has_star_flag = mec_asari_vernio_system
+					has_star_flag = btr_asari_vernio_system
 				}
 				create_starbase = {
 					size = starbase_outpost

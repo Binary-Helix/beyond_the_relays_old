@@ -22,7 +22,7 @@ mec_asari_leader_trait_replace_resilient = {
 
 # Clears randomly generated features and replaces them with unique Illium features
 # This = Planet
-mec_asari_generate_illium_deposits = {
+btr_asari_generate_illium_deposits = {
 	clear_deposits = yes
 	clear_blockers = yes
 	
@@ -45,7 +45,7 @@ mec_asari_generate_illium_deposits = {
 
 # Clears randomly generated features and replaces them with unique Illium features
 # This = Planet
-mec_asari_generate_thessia_deposits = {
+btr_asari_generate_thessia_deposits = {
 	clear_deposits = yes
 	clear_blockers = yes
 	
@@ -67,10 +67,10 @@ mec_asari_generate_thessia_deposits = {
 # Sets up the asari homeworlds, used instead of the vanilla generate_start_buildings_and_districts
 # Root = Country
 # This = Planet
-mec_asari_setup_origin_homeworld = {
+btr_asari_setup_origin_homeworld = {
 	if = {
 		limit = { 
-			has_planet_flag = mec_asari_planet_illium
+			has_planet_flag = btr_asari_planet_illium
 		}
 
 		while = {
@@ -112,7 +112,7 @@ mec_asari_setup_origin_homeworld = {
 	}
 	else_if = {
 		limit = { 
-			has_planet_flag = mec_asari_planet_thessia
+			has_planet_flag = btr_asari_planet_thessia
 		}
 		while = {
 			count = 3
@@ -158,7 +158,7 @@ mec_asari_setup_origin_homeworld = {
 # This = System
 mec_asari_setup_origin_planets = {
 	random_system_planet = {
-		limit = { has_planet_flag = mec_asari_planet_sanves }
+		limit = { has_planet_flag = btr_asari_planet_sanves }
 		set_planet_flag = colony_event
 		clear_planet_modifiers = yes
 		clear_deposits = yes
@@ -199,7 +199,7 @@ mec_asari_setup_origin_planets = {
 	}
 
 	random_system_planet = {
-		limit = { has_planet_flag = mec_asari_planet_niacal }
+		limit = { has_planet_flag = btr_asari_planet_niacal }
 		set_planet_flag = colony_event
 		clear_planet_modifiers = yes
 		clear_deposits = yes
@@ -238,7 +238,7 @@ mec_asari_setup_origin_planets = {
 	}
 		
 	random_system_planet = {
-		limit = { has_planet_flag = mec_asari_planet_lusia }
+		limit = { has_planet_flag = btr_asari_planet_lusia }
 		set_planet_flag = colony_event
 		clear_planet_modifiers = yes
 		clear_deposits = yes
@@ -276,7 +276,7 @@ mec_asari_setup_origin_planets = {
 	}
 
 	random_system_planet = {
-		limit = { has_planet_flag = mec_asari_planet_tarith }
+		limit = { has_planet_flag = btr_asari_planet_tarith }
 		set_planet_flag = colony_event
 		clear_planet_modifiers = yes
 		clear_deposits = yes
@@ -297,7 +297,7 @@ mec_asari_setup_origin_planets = {
 	}
 
 	random_system_planet = {
-		limit = { has_planet_flag = mec_asari_planet_helyme }
+		limit = { has_planet_flag = btr_asari_planet_helyme }
 		set_planet_flag = colony_event
 		clear_planet_modifiers = yes
 		clear_deposits = yes
@@ -320,7 +320,7 @@ mec_asari_setup_origin_planets = {
 	}
 
 	random_system_planet = {
-		limit = { has_planet_flag = mec_asari_planet_epho }
+		limit = { has_planet_flag = btr_asari_planet_epho }
 		set_planet_flag = colony_event
 		clear_planet_modifiers = yes
 		clear_deposits = yes
