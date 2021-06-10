@@ -1,13 +1,17 @@
 #Made with Retalyx Static Galaxy Generator v0.9
 static_galaxy_scenario = {
-    name = "Milky Way Full - 2K FULL"
-    priority = 0
+    name = "BTR - Map Playtest 1 (2K)"
+    priority = 3
     default = no
-    colonizable_planet_odds = 1.0
-    num_empires = { min = 1 max = 1 }
-    num_empire_default = 1
+    colonizable_planet_odds = 0.25
+	num_empires = { min = 17 max = 17 }
+	num_empire_default = 17
+	num_hyperlanes = { min = 1 max = 5 }
+	num_hyperlanes_default = 5
+	num_gateways = { min = 0 max = 0 }
+	num_gateways_default = 0
     advanced_empire_default = 0
-    core_radius = 0
+    core_radius = 25
     random_hyperlanes = no
 
     system = {
@@ -17,6 +21,13 @@ static_galaxy_scenario = {
             y = -292.9458
         }
         initializer = sys_kyzil_init
+				spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = vorcha_chiefdom
+				} 
+		}  
     }
 
     system = {
@@ -332,6 +343,13 @@ static_galaxy_scenario = {
             y = -239.5111
         }
         initializer = sys_sahrabarik_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = omega
+                } 
+        }  		
     }
 
     system = {
@@ -407,7 +425,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "44"
+        id = "45"
         position = {
             x = -126.4115
             y = -322.8936
@@ -416,7 +434,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "45"
+        id = "47"
         position = {
             x = -130.6893
             y = -299.3636
@@ -425,7 +443,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "46"
+        id = "50"
         position = {
             x = -132.0803
             y = -222.2927
@@ -434,7 +452,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "47"
+        id = "51"
         position = {
             x = -117.142
             y = -230.9118
@@ -443,7 +461,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "48"
+        id = "52"
         position = {
             x = -122.5546
             y = -245.3553
@@ -452,7 +470,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "49"
+        id = "53"
         position = {
             x = -137.5954
             y = -244.3518
@@ -461,7 +479,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "50"
+        id = "54"
         position = {
             x = -155.6441
             y = -233.8228
@@ -470,7 +488,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "51"
+        id = "55"
         position = {
             x = -87.19479
             y = -203.1049
@@ -479,7 +497,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "52"
+        id = "56"
         position = {
             x = -19.45697
             y = -156.0447
@@ -488,7 +506,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "53"
+        id = "57"
         position = {
             x = -8.048157
             y = -171.0174
@@ -497,7 +515,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "54"
+        id = "58"
         position = {
             x = -21.59572
             y = -170.305
@@ -506,7 +524,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "55"
+        id = "59"
         position = {
             x = -17.31763
             y = -185.2789
@@ -515,7 +533,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "56"
+        id = "60"
         position = {
             x = -39.42137
             y = -178.1476
@@ -524,7 +542,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "57"
+        id = "61"
         position = {
             x = -37.28262
             y = -161.0352
@@ -533,7 +551,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "58"
+        id = "62"
         position = {
             x = -222.6704
             y = -305.7801
@@ -542,7 +560,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "59"
+        id = "63"
         position = {
             x = -247.6265
             y = -317.1895
@@ -551,7 +569,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "60"
+        id = "64"
         position = {
             x = -235.505
             y = -253.7295
@@ -560,7 +578,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "61"
+        id = "65"
         position = {
             x = -239.0701
             y = -232.339
@@ -569,7 +587,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "62"
+        id = "66"
         position = {
             x = -258.3221
             y = -227.3474
@@ -578,7 +596,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "63"
+        id = "67"
         position = {
             x = -259.7481
             y = -197.3996
@@ -587,7 +605,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "64"
+        id = "68"
         position = {
             x = -249.7656
             y = -185.9913
@@ -596,7 +614,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "65"
+        id = "69"
         position = {
             x = -256.1827
             y = -173.8695
@@ -605,7 +623,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "66"
+        id = "70"
         position = {
             x = -269.0172
             y = -188.1298
@@ -614,7 +632,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "67"
+        id = "71"
         position = {
             x = -283.9911
             y = -192.4091
@@ -623,7 +641,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "68"
+        id = "72"
         position = {
             x = -276.8604
             y = -171.731
@@ -632,7 +650,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "69"
+        id = "73"
         position = {
             x = -184.8798
             y = -113.9751
@@ -641,7 +659,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "70"
+        id = "74"
         position = {
             x = -200.5664
             y = -123.9573
@@ -650,7 +668,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "71"
+        id = "75"
         position = {
             x = -214.827
             y = -131.0875
@@ -659,7 +677,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "72"
+        id = "76"
         position = {
             x = -199.1404
             y = -103.2805
@@ -668,7 +686,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "73"
+        id = "77"
         position = {
             x = -214.827
             y = -111.8367
@@ -677,7 +695,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "74"
+        id = "78"
         position = {
             x = -374.546
             y = -299.3636
@@ -686,7 +704,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "75"
+        id = "79"
         position = {
             x = -388.8066
             y = -288.6678
@@ -695,16 +713,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "76"
+        id = "80"
         position = {
             x = -411.6234
             y = -243.7473
         }
         initializer = sys_tikkun_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = geth_consensus
+                } 
+        }      
     }
 
     system = {
-        id = "77"
+        id = "81"
         position = {
             x = -399.2453
             y = -117.6509
@@ -713,7 +738,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "78"
+        id = "82"
         position = {
             x = -411.307
             y = -126.972
@@ -722,16 +747,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "79"
+        id = "83"
         position = {
             x = -424.4671
             y = -139.5832
         }
         initializer = sys_azedes_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = raloi_republic
+                } 
+        } 		
     }
 
     system = {
-        id = "80"
+        id = "84"
         position = {
             x = -423.9179
             y = -114.361
@@ -740,7 +772,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "81"
+        id = "85"
         position = {
             x = -436.5299
             y = -125.8755
@@ -749,7 +781,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "82"
+        id = "86"
         position = {
             x = -315.3643
             y = -89.73265
@@ -758,7 +790,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "83"
+        id = "87"
         position = {
             x = -333.9033
             y = -106.1326
@@ -767,7 +799,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "84"
+        id = "88"
         position = {
             x = -254.7567
             y = 3.67395
@@ -776,7 +808,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "85"
+        id = "89"
         position = {
             x = -265.4522
             y = -24.133
@@ -785,7 +817,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "86"
+        id = "90"
         position = {
             x = -102.0621
             y = -95.17044
@@ -794,7 +826,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "87"
+        id = "91"
         position = {
             x = -113.0278
             y = -107.2332
@@ -803,7 +835,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "88"
+        id = "92"
         position = {
             x = -97.67584
             y = -75.97971
@@ -812,7 +844,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "89"
+        id = "93"
         position = {
             x = -122.3496
             y = -84.20428
@@ -821,7 +853,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "90"
+        id = "94"
         position = {
             x = -127.2839
             y = -102.2983
@@ -830,16 +862,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "91"
+        id = "95"
         position = {
             x = -147.0892
             y = -61.21091
         }
         initializer = sys_maskimxul_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = rachni_hive
+                } 
+        }		
     }
 
     system = {
-        id = "92"
+        id = "96"
         position = {
             x = -161.3497
             y = -49.09024
@@ -848,7 +887,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "93"
+        id = "97"
         position = {
             x = -142.8059
             y = -2.81847
@@ -857,7 +896,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "94"
+        id = "98"
         position = {
             x = -148.5107
             y = 11.44303
@@ -866,7 +905,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "95"
+        id = "99"
         position = {
             x = -159.2068
             y = -5.670696
@@ -875,7 +914,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "96"
+        id = "100"
         position = {
             x = -174.181
             y = -12.80148
@@ -884,7 +923,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "97"
+        id = "101"
         position = {
             x = -170.6157
             y = 8.590728
@@ -893,7 +932,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "98"
+        id = "102"
         position = {
             x = -156.3543
             y = 59.93197
@@ -902,7 +941,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "99"
+        id = "103"
         position = {
             x = -167.7635
             y = 69.91498
@@ -911,7 +950,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "100"
+        id = "104"
         position = {
             x = -167.7635
             y = 43.5313
@@ -920,7 +959,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "101"
+        id = "105"
         position = {
             x = -186.3035
             y = 52.0882
@@ -929,7 +968,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "102"
+        id = "106"
         position = {
             x = -192.0077
             y = 131.9524
@@ -938,7 +977,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "103"
+        id = "107"
         position = {
             x = -204.1302
             y = 111.2733
@@ -947,7 +986,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "104"
+        id = "108"
         position = {
             x = -212.6872
             y = 120.5432
@@ -956,7 +995,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "105"
+        id = "109"
         position = {
             x = -139.9534
             y = 146.9268
@@ -965,7 +1004,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "106"
+        id = "110"
         position = {
             x = -152.7893
             y = 170.4583
@@ -974,7 +1013,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "107"
+        id = "111"
         position = {
             x = -165.6243
             y = 150.4922
@@ -983,7 +1022,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "108"
+        id = "112"
         position = {
             x = -201.9911
             y = 201.8334
@@ -992,7 +1031,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "109"
+        id = "113"
         position = {
             x = -192.7211
             y = 185.4328
@@ -1001,7 +1040,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "110"
+        id = "114"
         position = {
             x = -215.5392
             y = 182.5805
@@ -1010,7 +1049,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "111"
+        id = "115"
         position = {
             x = -278.2896
             y = 134.8047
@@ -1019,7 +1058,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "112"
+        id = "116"
         position = {
             x = -293.9771
             y = 130.5262
@@ -1028,7 +1067,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "113"
+        id = "117"
         position = {
             x = -301.108
             y = 154.0576
@@ -1037,7 +1076,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "114"
+        id = "118"
         position = {
             x = -370.2762
             y = 18.57374
@@ -1046,7 +1085,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "115"
+        id = "119"
         position = {
             x = -384.9383
             y = 24.09393
@@ -1055,7 +1094,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "116"
+        id = "120"
         position = {
             x = -390.4534
             y = 42.64497
@@ -1064,7 +1103,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "117"
+        id = "121"
         position = {
             x = -403.9902
             y = 26.60083
@@ -1073,7 +1112,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "118"
+        id = "122"
         position = {
             x = -366.7109
             y = 42.10519
@@ -1082,7 +1121,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "119"
+        id = "123"
         position = {
             x = -360.2934
             y = 116.2647
@@ -1091,7 +1130,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "120"
+        id = "124"
         position = {
             x = -354.5887
             y = 104.1426
@@ -1100,7 +1139,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "121"
+        id = "125"
         position = {
             x = -371.7023
             y = 94.15948
@@ -1109,7 +1148,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "122"
+        id = "126"
         position = {
             x = -385.251
             y = 89.88107
@@ -1118,7 +1157,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "123"
+        id = "127"
         position = {
             x = -375.981
             y = 116.2647
@@ -1127,7 +1166,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "124"
+        id = "128"
         position = {
             x = -364.5715
             y = 185.4328
@@ -1136,7 +1175,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "125"
+        id = "129"
         position = {
             x = -380.9724
             y = 173.3105
@@ -1145,7 +1184,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "126"
+        id = "130"
         position = {
             x = -383.8246
             y = 201.1204
@@ -1154,7 +1193,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "127"
+        id = "131"
         position = {
             x = -304.4444
             y = 248.6826
@@ -1163,7 +1202,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "128"
+        id = "132"
         position = {
             x = -288.8889
             y = 235.4144
@@ -1172,7 +1211,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "129"
+        id = "133"
         position = {
             x = -275.6208
             y = 228.5514
@@ -1181,7 +1220,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "130"
+        id = "134"
         position = {
             x = -297.543
             y = 213.2426
@@ -1190,7 +1229,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "131"
+        id = "135"
         position = {
             x = -306.7324
             y = 225.8063
@@ -1199,7 +1238,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "132"
+        id = "136"
         position = {
             x = -149.9368
             y = 269.5754
@@ -1208,7 +1247,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "133"
+        id = "137"
         position = {
             x = -140.6667
             y = 248.8963
@@ -1217,7 +1256,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "134"
+        id = "138"
         position = {
             x = -157.0674
             y = 238.9132
@@ -1226,7 +1265,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "135"
+        id = "139"
         position = {
             x = -169.9026
             y = 248.8963
@@ -1235,7 +1274,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "136"
+        id = "140"
         position = {
             x = -154.2148
             y = 318.7774
@@ -1244,7 +1283,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "137"
+        id = "141"
         position = {
             x = -167.7635
             y = 327.3343
@@ -1253,7 +1292,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "138"
+        id = "142"
         position = {
             x = -160.6326
             y = 299.5244
@@ -1262,7 +1301,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "139"
+        id = "143"
         position = {
             x = -170.6157
             y = 308.7943
@@ -1271,7 +1310,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "140"
+        id = "144"
         position = {
             x = -184.1641
             y = 313.0728
@@ -1280,7 +1319,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "141"
+        id = "145"
         position = {
             x = -166.3374
             y = 378.6754
@@ -1289,7 +1328,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "142"
+        id = "146"
         position = {
             x = -159.9196
             y = 366.5533
@@ -1298,7 +1337,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "143"
+        id = "147"
         position = {
             x = -167.0507
             y = 350.1526
@@ -1307,16 +1346,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "144"
+        id = "148"
         position = {
             x = -181.3121
             y = 350.1526
         }
         initializer = sys_harsa_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = batarian_hegemony
+                } 
+        }  		
     }
 
     system = {
-        id = "145"
+        id = "149"
         position = {
             x = -189.1558
             y = 362.9879
@@ -1325,7 +1371,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "146"
+        id = "150"
         position = {
             x = -100.0217
             y = 408.6245
@@ -1334,7 +1380,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "147"
+        id = "151"
         position = {
             x = -129.2573
             y = 414.3291
@@ -1343,7 +1389,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "148"
+        id = "152"
         position = {
             x = -77.91632
             y = 331.6128
@@ -1352,7 +1398,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "149"
+        id = "153"
         position = {
             x = -40.12344
             y = 285.2629
@@ -1361,7 +1407,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "150"
+        id = "154"
         position = {
             x = -52.2454
             y = 260.3055
@@ -1370,7 +1416,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "151"
+        id = "155"
         position = {
             x = -73.63799
             y = 275.993
@@ -1379,7 +1425,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "152"
+        id = "156"
         position = {
             x = -65.08131
             y = 287.4022
@@ -1388,7 +1434,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "153"
+        id = "157"
         position = {
             x = 9.791679
             y = 320.9166
@@ -1397,7 +1443,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "154"
+        id = "158"
         position = {
             x = -6.60891
             y = 297.3852
@@ -1406,7 +1452,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "155"
+        id = "159"
         position = {
             x = -16.59229
             y = 312.3598
@@ -1415,7 +1461,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "156"
+        id = "160"
         position = {
             x = -21.58369
             y = 298.8114
@@ -1424,7 +1470,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "157"
+        id = "161"
         position = {
             x = 49.72343
             y = 307.3683
@@ -1433,16 +1479,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "158"
+        id = "162"
         position = {
             x = 29.75785
             y = 299.5244
         }
         initializer = sys_sol_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = systems_alliance
+                } 
+        } 		
     }
 
     system = {
-        id = "159"
+        id = "163"
         position = {
             x = 36.17536
             y = 290.9675
@@ -1451,7 +1504,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "160"
+        id = "164"
         position = {
             x = 21.20058
             y = 281.6976
@@ -1460,16 +1513,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "161"
+        id = "165"
         position = {
             x = -25.86202
             y = 212.5295
         }
         initializer = sys_anadius_init
+		spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+						has_country_flag = cerberus
+				}
+		} 		
     }
 
     system = {
-        id = "162"
+        id = "166"
         position = {
             x = -45.11514
             y = 216.808
@@ -1478,7 +1538,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "163"
+        id = "167"
         position = {
             x = -52.95876
             y = 196.8419
@@ -1487,7 +1547,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "164"
+        id = "168"
         position = {
             x = -41.54986
             y = 186.1459
@@ -1496,7 +1556,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "165"
+        id = "169"
         position = {
             x = -23.0098
             y = 195.4158
@@ -1505,16 +1565,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "166"
+        id = "170"
         position = {
             x = 79.67298
             y = 195.4158
         }
         initializer = sys_pranas_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = salarian_union
+                } 
+        } 		
     }
 
     system = {
-        id = "167"
+        id = "171"
         position = {
             x = 98.92579
             y = 186.1459
@@ -1523,7 +1590,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "168"
+        id = "172"
         position = {
             x = 78.24686
             y = 174.7367
@@ -1532,7 +1599,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "169"
+        id = "173"
         position = {
             x = 68.26348
             y = 186.8589
@@ -1541,7 +1608,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "170"
+        id = "174"
         position = {
             x = 121.0311
             y = 312.3597
@@ -1550,7 +1617,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "171"
+        id = "175"
         position = {
             x = 108.9086
             y = 293.1067
@@ -1559,7 +1626,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "172"
+        id = "176"
         position = {
             x = 93.22105
             y = 305.9421
@@ -1568,7 +1635,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "173"
+        id = "177"
         position = {
             x = 148.1275
             y = 375.1101
@@ -1577,7 +1644,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "174"
+        id = "178"
         position = {
             x = 145.2753
             y = 356.5702
@@ -1586,16 +1653,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "175"
+        id = "179"
         position = {
             x = 134.315
             y = 346.2097
         }
         initializer = sys_aru_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = vol_protectorate
+                } 
+        }		
     }
 
     system = {
-        id = "176"
+        id = "180"
         position = {
             x = 122.4572
             y = 353.0048
@@ -1604,7 +1678,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "177"
+        id = "181"
         position = {
             x = 207.0606
             y = 332.0267
@@ -1613,16 +1687,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "178"
+        id = "182"
         position = {
             x = 213.4659
             y = 313.7259
         }
         initializer = sys_trebia_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = turian_hierarchy
+                } 
+        }		
     }
 
     system = {
-        id = "179"
+        id = "183"
         position = {
             x = 234.5122
             y = 313.7259
@@ -1631,7 +1712,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "180"
+        id = "184"
         position = {
             x = 182.3552
             y = 272.4277
@@ -1640,7 +1721,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "181"
+        id = "185"
         position = {
             x = 165.2415
             y = 257.4531
@@ -1649,7 +1730,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "182"
+        id = "186"
         position = {
             x = 154.5454
             y = 269.5753
@@ -1658,7 +1739,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "183"
+        id = "187"
         position = {
             x = 185.5569
             y = 255.6212
@@ -1667,7 +1748,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "184"
+        id = "188"
         position = {
             x = 211.1782
             y = 202.0908
@@ -1676,7 +1757,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "185"
+        id = "189"
         position = {
             x = 190.5899
             y = 191.5684
@@ -1685,16 +1766,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "186"
+        id = "190"
         position = {
             x = 175.9493
             y = 199.8031
         }
         initializer = sys_aralakh_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = krogan_chiefdom
+                } 
+        }		
     }
 
     system = {
-        id = "187"
+        id = "191"
         position = {
             x = 218.4128
             y = 156.5171
@@ -1703,7 +1791,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "188"
+        id = "192"
         position = {
             x = 196.3501
             y = 140.6989
@@ -1712,7 +1800,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "189"
+        id = "193"
         position = {
             x = 214.2493
             y = 125.2969
@@ -1721,7 +1809,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "190"
+        id = "194"
         position = {
             x = 222.1597
             y = 115.7228
@@ -1730,7 +1818,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "191"
+        id = "195"
         position = {
             x = 227.9873
             y = 136.1199
@@ -1739,7 +1827,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "192"
+        id = "196"
         position = {
             x = 166.6676
             y = 96.29865
@@ -1748,7 +1836,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "193"
+        id = "197"
         position = {
             x = 158.1107
             y = 107.7078
@@ -1757,16 +1845,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "194"
+        id = "198"
         position = {
             x = 151.6928
             y = 89.16795
         }
         initializer = sys_kanala_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = illuminated_primacy
+                } 
+        }		
     }
 
     system = {
-        id = "195"
+        id = "199"
         position = {
             x = 165.2415
             y = 80.61105
@@ -1775,7 +1870,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "196"
+        id = "200"
         position = {
             x = 143.8492
             y = 77.75874
@@ -1784,7 +1879,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "197"
+        id = "201"
         position = {
             x = 129.5878
             y = 88.45489
@@ -1793,7 +1888,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "198"
+        id = "202"
         position = {
             x = 257.6745
             y = 62.78427
@@ -1802,7 +1897,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "199"
+        id = "203"
         position = {
             x = 234.143
             y = 55.65356
@@ -1811,7 +1906,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "200"
+        id = "204"
         position = {
             x = 254.1092
             y = 36.40059
@@ -1820,7 +1915,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "201"
+        id = "205"
         position = {
             x = 263.3789
             y = -14.94072
@@ -1829,7 +1924,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "202"
+        id = "206"
         position = {
             x = 249.8504
             y = -27.38911
@@ -1838,7 +1933,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "203"
+        id = "207"
         position = {
             x = 236.6923
             y = -38.35464
@@ -1847,7 +1942,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "204"
+        id = "208"
         position = {
             x = 251.4955
             y = -46.03065
@@ -1856,7 +1951,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "205"
+        id = "209"
         position = {
             x = 261.9126
             y = -36.16162
@@ -1865,16 +1960,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "206"
+        id = "210"
         position = {
             x = 361.07
             y = -47.74206
         }
         initializer = sys_chabtan_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = parnack_regime
+                } 
+        }		
     }
 
     system = {
-        id = "207"
+        id = "211"
         position = {
             x = 342.53
             y = -64.14272
@@ -1883,7 +1985,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "208"
+        id = "212"
         position = {
             x = 329.6949
             y = -47.029
@@ -1892,16 +1994,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "209"
+        id = "213"
         position = {
             x = 335.3994
             y = 135.5177
         }
         initializer = sys_parnitha_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = asari_republics
+                } 
+        }        
     }
 
     system = {
-        id = "210"
+        id = "214"
         position = {
             x = 328.9819
             y = 122.6823
@@ -1910,7 +2019,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "211"
+        id = "215"
         position = {
             x = 322.5644
             y = 147.64
@@ -1919,7 +2028,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "212"
+        id = "216"
         position = {
             x = 348.235
             y = 153.3445
@@ -1928,7 +2037,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "213"
+        id = "217"
         position = {
             x = 351.0872
             y = 131.9523
@@ -1937,7 +2046,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "214"
+        id = "218"
         position = {
             x = 405.2807
             y = 139.0831
@@ -1946,7 +2055,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "215"
+        id = "219"
         position = {
             x = 396.724
             y = 124.1084
@@ -1955,7 +2064,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "216"
+        id = "220"
         position = {
             x = 418.8293
             y = 116.9778
@@ -1964,7 +2073,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "217"
+        id = "221"
         position = {
             x = 428.8121
             y = 130.5262
@@ -1973,7 +2082,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "218"
+        id = "222"
         position = {
             x = 346.6233
             y = 219.7899
@@ -1982,7 +2091,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "219"
+        id = "223"
         position = {
             x = 344.1261
             y = 203.9717
@@ -1991,16 +2100,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "220"
+        id = "224"
         position = {
             x = 332.4698
             y = 200.6415
         }
         initializer = sys_phontes_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = courts_of_dekuuna
+                } 
+        } 		
     }
 
     system = {
-        id = "221"
+        id = "225"
         position = {
             x = 319.1496
             y = 193.1487
@@ -2009,7 +2125,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "222"
+        id = "226"
         position = {
             x = 329.5561
             y = 218.9574
@@ -2018,7 +2134,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "223"
+        id = "227"
         position = {
             x = 398.5847
             y = 69.38943
@@ -2027,7 +2143,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "224"
+        id = "228"
         position = {
             x = 406.4092
             y = 50.68055
@@ -2036,7 +2152,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "225"
+        id = "229"
         position = {
             x = 390.4216
             y = 40.47557
@@ -2045,7 +2161,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "226"
+        id = "230"
         position = {
             x = 377.4948
             y = 54.76236
@@ -2054,7 +2170,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "227"
+        id = "231"
         position = {
             x = 441.6478
             y = -38.4721
@@ -2063,7 +2179,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "228"
+        id = "232"
         position = {
             x = 425.9599
             y = -52.7336
@@ -2072,7 +2188,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "229"
+        id = "233"
         position = {
             x = 447.3516
             y = -62.00348
@@ -2081,7 +2197,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "230"
+        id = "234"
         position = {
             x = 343.2436
             y = -143.2938
@@ -2090,7 +2206,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "231"
+        id = "235"
         position = {
             x = 331.1211
             y = -132.5978
@@ -2099,7 +2215,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "232"
+        id = "236"
         position = {
             x = 324.7036
             y = -114.7709
@@ -2108,16 +2224,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "233"
+        id = "237"
         position = {
             x = 307.5896
             y = -132.5978
         }
         initializer = sys_tasale_init
+				spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = asari_corporate_interests
+				} 
+		}		
     }
 
     system = {
-        id = "234"
+        id = "238"
         position = {
             x = 130.7481
             y = -88.38716
@@ -2126,7 +2249,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "235"
+        id = "239"
         position = {
             x = 108.6427
             y = -106.214
@@ -2135,16 +2258,23 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "236"
+        id = "240"
         position = {
             x = 0.9682617
             y = -3.531452
         }
         initializer = sys_tartarusdebrisfield_init
+		spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+					has_country_flag = collectors
+				}
+		} 		
     }
 
     system = {
-        id = "237"
+        id = "241"
         position = {
             x = -247.7827
             y = 288.7616
@@ -2153,7 +2283,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "238"
+        id = "242"
         position = {
             x = -267.9139
             y = 288.7616
@@ -2162,7 +2292,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "239"
+        id = "243"
         position = {
             x = -238.1745
             y = 306.6052
@@ -2171,7 +2301,7 @@ static_galaxy_scenario = {
     }
 
     system = {
-        id = "240"
+        id = "244"
         position = {
             x = -261.0508
             y = 309.8077
@@ -16272,7 +16402,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Ismar_Frontier"
+        name = "Ismar Frontier"
         position = {
             x = 445.066
             y = -46.96038
@@ -16281,7 +16411,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Buluc_Nebula"
+        name = "Buluc Nebula"
         position = {
             x = 343.53
             y = -46.96037
@@ -16290,7 +16420,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Crescent_Nebula"
+        name = "Crescent Nebula"
         position = {
             x = 329.9919
             y = -127.343
@@ -16299,7 +16429,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Minos_Wasteland"
+        name = "Minos Wasteland"
         position = {
             x = 392.6058
             y = 49.49881
@@ -16308,7 +16438,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Nimbus_Cluster"
+        name = "Nimbus Cluster"
         position = {
             x = 414.6052
             y = 130.7276
@@ -16317,7 +16447,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Athena_Nebula"
+        name = "Athena Nebula"
         position = {
             x = 335.9149
             y = 140.035
@@ -16326,7 +16456,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Silean_Nebula"
+        name = "Silean Nebula"
         position = {
             x = 331.6842
             y = 207.7257
@@ -16335,7 +16465,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Apien_Crest"
+        name = "Apien Crest"
         position = {
             x = 220.8408
             y = 320.2614
@@ -16344,7 +16474,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Meade_Cluster"
+        name = "Meade Cluster"
         position = {
             x = 166.6882
             y = 264.4167
@@ -16353,7 +16483,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Krogan_DMZ"
+        name = "Krogan DMZ"
         position = {
             x = 192.0723
             y = 203.4951
@@ -16362,7 +16492,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Serpent_Nebula"
+        name = "Serpent Nebula"
         position = {
             x = 213.2256
             y = 134.9583
@@ -16371,7 +16501,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Vesuvius_Nebula"
+        name = "Vesuvius Nebula"
         position = {
             x = 249.6093
             y = 53.72948
@@ -16380,7 +16510,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Eagle_Nebula"
+        name = "Eagle Nebula"
         position = {
             x = 255.5322
             y = -30.88383
@@ -16389,7 +16519,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Olin_Protectorate"
+        name = "Olin Protectorate"
         position = {
             x = 148.0733
             y = 94.34389
@@ -16398,7 +16528,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Annos_Basin"
+        name = "Annos Basin"
         position = {
             x = 83.76719
             y = 194.1876
@@ -16407,7 +16537,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Xingyun_Cluster"
+        name = "Xingyun Cluster"
         position = {
             x = 106.0564
             y = 310.2205
@@ -16416,7 +16546,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Aethon_Cluster"
+        name = "Aethon Cluster"
         position = {
             x = 137.9197
             y = 362.568
@@ -16425,7 +16555,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Local_Cluster"
+        name = "Local Cluster"
         position = {
             x = 34.69148
             y = 299.1081
@@ -16434,7 +16564,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Arcturus_Stream"
+        name = "Arcturus Stream"
         position = {
             x = -5.076771
             y = 312.6462
@@ -16443,7 +16573,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Horse_Head_Nebula"
+        name = "Horse Head Nebula"
         position = {
             x = -37.22984
             y = 204.3412
@@ -16452,7 +16582,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Exodus_Cluster"
+        name = "Exodus Cluster"
         position = {
             x = -56.69089
             y = 277.9548
@@ -16461,7 +16591,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Petra_Nebula"
+        name = "Petra Nebula"
         position = {
             x = -79.53647
             y = 338.0302
@@ -16470,7 +16600,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Viper_Nebula"
+        name = "Viper Nebula"
         position = {
             x = -113.3818
             y = 417.5667
@@ -16479,7 +16609,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Kites_Nest"
+        name = "Kites Nest"
         position = {
             x = -175.9956
             y = 366.7987
@@ -16488,7 +16618,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Llewyn_Nebula"
+        name = "Llewyn Nebula"
         position = {
             x = -169.1896
             y = 313.7859
@@ -16497,7 +16627,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Mkali_Pool"
+        name = "Mkali Pool"
         position = {
             x = -159.073
             y = 255.1092
@@ -16506,7 +16636,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Artemis_Tau"
+        name = "Artemis Tau"
         position = {
             x = -258.0706
             y = 300.8004
@@ -16515,7 +16645,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Gemini_Sigma"
+        name = "Gemini Sigma"
         position = {
             x = -208.1487
             y = 193.3415
@@ -16524,7 +16654,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Argos_Rho"
+        name = "Argos Rho"
         position = {
             x = -150.6117
             y = 160.3423
@@ -16533,7 +16663,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Hades_Gamma"
+        name = "Hades Gamma"
         position = {
             x = -296.1466
             y = 231.4175
@@ -16542,7 +16672,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Maroon_Sea"
+        name = "Maroon Sea"
         position = {
             x = -205.6103
             y = 123.9586
@@ -16551,7 +16681,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Attican_Beta"
+        name = "Attican Beta"
         position = {
             x = -291.0698
             y = 146.8042
@@ -16560,7 +16690,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Voyager_Cluster"
+        name = "Voyager Cluster"
         position = {
             x = -380.7599
             y = 192.4954
@@ -16569,7 +16699,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Armstrong_Nebula"
+        name = "Armstrong Nebula"
         position = {
             x = -374.8369
             y = 108.7282
@@ -16578,7 +16708,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Shadow_Sea"
+        name = "Shadow Sea"
         position = {
             x = -171.765
             y = 56.26792
@@ -16587,7 +16717,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Kepler_Verge"
+        name = "Kepler Verge"
         position = {
             x = -264.8397
             y = -3.807521
@@ -16596,7 +16726,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Nubian_Expanse"
+        name = "Nubian Expanse"
         position = {
             x = -384.1444
             y = 29.19168
@@ -16605,7 +16735,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Styx_Theta"
+        name = "Styx Theta"
         position = {
             x = -160.7653
             y = 1.269269
@@ -16614,7 +16744,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Galactic_Core"
+        name = "Galactic Core"
         position = {
             x = 1.109618E-07
             y = 1.269254
@@ -16623,7 +16753,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Hawking_Eta"
+        name = "Hawking Eta"
         position = {
             x = -110.8435
             y = -93.49765
@@ -16632,7 +16762,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Caleston_Rift"
+        name = "Caleston Rift"
         position = {
             x = -205.6104
             y = -112.1126
@@ -16641,7 +16771,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Sentry_Omega"
+        name = "Sentry Omega"
         position = {
             x = -329.9919
             y = -91.80537
@@ -16650,7 +16780,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Hades_Nexus"
+        name = "Hades Nexus"
         position = {
             x = -421.3743
             y = -123.1123
@@ -16659,7 +16789,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Phoenix_Massing"
+        name = "Phoenix Massing"
         position = {
             x = -263.9936
             y = -184.0339
@@ -16668,7 +16798,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Savian_Abyssal"
+        name = "Savian Abyssal"
         position = {
             x = -243.6864
             y = -236.4942
@@ -16677,7 +16807,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Far_Rim"
+        name = "Far Rim"
         position = {
             x = -380.7599
             y = -285.5699
@@ -16686,7 +16816,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Perseus_Veil"
+        name = "Perseus Veil"
         position = {
             x = -412.0669
             y = -239.0325
@@ -16695,7 +16825,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Radana_Burst"
+        name = "Radana Burst"
         position = {
             x = -117.6125
             y = -309.2616
@@ -16704,7 +16834,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Pylos_Nebula"
+        name = "Pylos Nebula"
         position = {
             x = -134.5352
             y = -234.8019
@@ -16713,7 +16843,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Pangaea_Expanse"
+        name = "Pangaea Expanse"
         position = {
             x = -88.84399
             y = -198.4182
@@ -16722,7 +16852,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Basillae_Flare"
+        name = "Basillae Flare"
         position = {
             x = -234.3789
             y = -310.1078
@@ -16731,7 +16861,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Yggdrasil_Nebula"
+        name = "Yggdrasil Nebula"
         position = {
             x = -25.38401
             y = -165.419
@@ -16740,7 +16870,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Omega_Nebula"
+        name = "Omega Nebula"
         position = {
             x = 13.53811
             y = -241.571
@@ -16749,7 +16879,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Sigurds_Cradle"
+        name = "Sigurds Cradle"
         position = {
             x = 1.692237
             y = -332.9534
@@ -16758,7 +16888,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Rosetta_Nebula"
+        name = "Rosetta Nebula"
         position = {
             x = -129.4584
             y = -414.1822
@@ -16767,7 +16897,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Oshibka_Cliff"
+        name = "Oshibka Cliff"
         position = {
             x = 113.3818
             y = -93.49767
@@ -16776,7 +16906,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_SinKelar_Cluster"
+        name = "SinKelar Cluster"
         position = {
             x = 144.6888
             y = -160.3422
@@ -16785,7 +16915,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Nemean_Alpha"
+        name = "Nemean Alpha"
         position = {
             x = 205.6104
             y = -151.0347
@@ -16794,7 +16924,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Nemean_Depths"
+        name = "Nemean Depths"
         position = {
             x = 179.3802
             y = -199.2643
@@ -16803,7 +16933,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Homunculus_Cluster"
+        name = "Homunculus Cluster"
         position = {
             x = 293.6082
             y = -224.6483
@@ -16812,7 +16942,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Hourglass_Nebula"
+        name = "Hourglass Nebula"
         position = {
             x = 207.3026
             y = -255.9552
@@ -16821,7 +16951,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Byenzine_Cloud"
+        name = "Byenzine Cloud"
         position = {
             x = 110.8434
             y = -308.4155
@@ -16830,7 +16960,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_TItan_Nebula"
+        name = "TItan Nebula"
         position = {
             x = 53.30636
             y = -420.1051
@@ -16839,7 +16969,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Valhallan_Threshold"
+        name = "Valhallan Threshold"
         position = {
             x = 213.2256
             y = -387.106
@@ -16848,7 +16978,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Shrike_Abyssal"
+        name = "Shrike Abyssal"
         position = {
             x = 349.453
             y = -299.1081
@@ -16857,7 +16987,7 @@ static_galaxy_scenario = {
     }
 
     nebula = {
-        name = "NAME_Ninmah_Cluster"
+        name = "Ninmah Cluster"
         position = {
             x = -154.8424
             y = -48.65259
