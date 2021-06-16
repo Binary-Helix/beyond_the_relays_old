@@ -3,8 +3,8 @@ static_galaxy_scenario = {
     priority = 1
     default = yes
     colonizable_planet_odds = 0.25
-	num_empires = { min = 17 max = 17 }
-	num_empire_default = 17
+	num_empires = { min = 15 max = 15 }
+	num_empire_default = 15
 	num_hyperlanes = { min = 1 max = 5 }
 	num_hyperlanes_default = 5
 	num_gateways = { min = 0 max = 0 }
@@ -2605,14 +2605,14 @@ static_galaxy_scenario = {
         radius = 20
     }
 
-    nebula = {
-        name = "Armstrong Nebula"
-        position = {
-            x = -374.8369
-            y = 108.7282
-        }
-        radius = 20
-    }
+    # nebula = {
+    #     name = "Armstrong Nebula"
+    #     position = {
+    #         x = -374.8369
+    #         y = 108.7282
+    #     }
+    #     radius = 20
+    # }
 
     nebula = {
         name = "Shadow Sea"

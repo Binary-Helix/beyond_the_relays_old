@@ -4,8 +4,8 @@ static_galaxy_scenario = {
     priority = 2
     default = no
     colonizable_planet_odds = 0.25
-	num_empires = { min = 17 max = 17 }
-	num_empire_default = 17
+	num_empires = { min = 15 max = 15 }
+	num_empire_default = 15
 	num_hyperlanes = { min = 1 max = 5 }
 	num_hyperlanes_default = 5
 	num_gateways = { min = 0 max = 0 }
@@ -13,6 +13,17 @@ static_galaxy_scenario = {
     advanced_empire_default = 0
     core_radius = 25
     random_hyperlanes = no
+    num_wormhole_pairs = { min = 0 max = 0 }
+    open_space_partitions = { max_systems = 0 min_systems = 0 min_bridges = 0 max_bridges = 0 method = depth_first }
+    home_system_partitions = { max_systems = 0 min_systems = 0 min_bridges = 0 max_bridges = 0 method = breadth_first }
+    num_wormhole_pairs_default = 0
+    max_hyperlane_distance = 0
+    crisis_strength = 2.5
+    primitive_odds = 0.25
+    marauder_empire_default = 0
+    marauder_empire_max = 0
+    fallen_empire_max = 0
+    fallen_empire_default = 0
 
     system = {
         id = "0"

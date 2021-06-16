@@ -12,9 +12,7 @@ sys_gagarin_init = {
     }	
 	max_instances = 1
 	
-	flags = {
-		gagarin_system
-	}	
+	flags = { gagarin_system btr_system }	
 	
 	planet = {
 		name = "Gagarin"
@@ -33,24 +31,39 @@ sys_gagarin_init = {
         has_ring = no
 		size = 25 
 		entity = "chlorine_planet_01_entity"
-		flags = { junthor planetary_ruins pd_ignore asari_writings }		
+		flags = { junthor pd_ignore asari_writings mec_eg_planet_junthro }		
+
+		init_effect = {
+			prevent_anomaly = yes
+
+			add_anomaly = {
+				category = MEC_EG_ANO_JUNTHOR_1021_CAT			###Junthor Anomaly (Ancient Obelisk)
+			}
+			
+			add_modifier = {
+				modifier = bleak_planet
+				days = -1
+			}
+		}	
 
 		moon = {
 			name = "Junthor_a"
 			class = "pc_iron"
-			orbit_distance = 8
-			size = 5
+			orbit_distance = 9
+			size = 5			
 		}
+
 		moon = {
 			name = "Junthor_b"
 			class = "pc_carbon"
-			orbit_distance = 8
-			size = 3
+			orbit_distance = 3
+			size = 3		
 		}
+
 		moon = {
 			name = "Junthor_c"
 			class = "pc_subglacial"
-			orbit_distance = 8
+			orbit_distance = 3
 			size = 3
 		}		
     }
@@ -63,19 +76,39 @@ sys_gagarin_init = {
         has_ring = no
 		size = 30
 		entity = "pressha_entity"
-		flags = { pressha pd_ignore }		
+		flags = { pressha pd_ignore }	
+		
+		init_effect = {
+			prevent_anomaly = yes
+
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
 		moon = {
 			name = "Pressha_a"
 			class = "pc_iron"
-			orbit_distance = 14
-			size = 7			
+			orbit_distance = 16
+			size = 7
 		}
+
 		moon = {
 			name = "Pressha_b"
 			class = "pc_frozen"
-			orbit_distance = 10
+			orbit_distance = 4
 			size = 8
 		}
+
+		moon = {
+			name = "Pressha_c"
+			count = 1
+			class = pc_barren_cold
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 4
+			size = 9
+		}		
     }
 
     planet = {
@@ -86,8 +119,12 @@ sys_gagarin_init = {
         has_ring = no
 		size = 13
 		entity = "rayingri_entity"
-		flags = { rayingri pd_ignore league_of_one }
+		flags = { rayingri pd_ignore league_of_one mec_eg_planet_rayingri }
+
 		init_effect = {
+			add_anomaly = {
+				category = MEC_EG_ANO_RAYINGRI_1022_CAT			###Rayingri Anomaly (Collision Course)
+			}			
 			set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
@@ -100,11 +137,12 @@ sys_gagarin_init = {
 			}
 			generate_btr_geth_incursion_start_buildings = yes			
 		}
+
 		moon = {
 			name = "Vahtz"
 			class = "pc_iron"
 			orbit_distance = 5
-			size = 6
+			size = 6			
 		}
     }
 
@@ -133,9 +171,16 @@ sys_gagarin_init = {
 		size = 23
 		entity = "antirumgon_entity"
 		flags = { antirumgon pd_ignore planetary_ruins }	
+
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_energy_4
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+			
+			add_modifier = {
+				modifier = carbon_world
+				days = -1
+			}
 			create_pirate_country = yes
 			event_target:pirate_country = {
 				create_leader = {
