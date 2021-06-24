@@ -12,7 +12,7 @@ sys_gagarin_init = {
     }	
 	max_instances = 1
 	
-	flags = { gagarin_system btr_system }	
+	flags = { gagarin_system btr_system custom_system mec_armstrong_nebula_gagarin_system }	
 	
 	planet = {
 		name = "Gagarin"
@@ -55,7 +55,7 @@ sys_gagarin_init = {
 
 		moon = {
 			name = "Junthor_b"
-			class = "pc_carbon"
+			class = "pc_subglacial"
 			orbit_distance = 3
 			size = 3		
 		}
@@ -104,7 +104,7 @@ sys_gagarin_init = {
 		moon = {
 			name = "Pressha_c"
 			count = 1
-			class = pc_barren_cold
+			class = "pc_barren_cold"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 4
 			size = 9
@@ -141,6 +141,7 @@ sys_gagarin_init = {
 		moon = {
 			name = "Vahtz"
 			class = "pc_iron"
+			flags = { pd_ignore }		
 			orbit_distance = 5
 			size = 6			
 		}
@@ -148,7 +149,7 @@ sys_gagarin_init = {
 
     planet = {
         name = "Sogelrus"
-        class = "pc_cryovolcanic"
+        class = "pc_glacial"
         orbit_distance = 50
         orbit_angle = 286
         has_ring = no
@@ -164,7 +165,7 @@ sys_gagarin_init = {
 
     planet = {
         name = "Antirumgon"
-        class = "pc_methane"
+        class = "pc_hydrocarbon"
         orbit_distance = 35
         orbit_angle = 289
         has_ring = no
@@ -279,7 +280,7 @@ sys_grissom_init = {
         save_global_event_target_as = "grissom_relay_system"
     }
 	
-    flags = { grissom_system }
+    flags = { btr_system grissom_system mec_armstrong_nebula_grissom_system custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -308,9 +309,17 @@ sys_grissom_init = {
         has_ring = no
 		size = 17
 		entity = "benda_entity"		
+		flags = { benda pd_ignore }
 		init_effect = {
-			set_planet_flag = benda_codex
-			}	
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			clear_planet_modifiers = yes 	
+
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+		}				
     }
 
     planet = {
@@ -321,9 +330,16 @@ sys_grissom_init = {
         has_ring = no
 		size = 16
 		entity = "zaherux_entity"
+		flags = { zaherux pd_ignore mec_eg_planet_zaherux }
 		init_effect = {
-			set_planet_flag = zaherux_codex
-			}	
+			prevent_anomaly = yes			
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			add_anomaly = {
+				category = MEC_EG_ANO_ZAHERUX_1023_CAT			###Zaherux Anomaly (Sea of Sands)
+			}
+		}		
 		moon = {
 			name = "Zaherux_a"
 			class = "pc_barren"
@@ -335,39 +351,107 @@ sys_grissom_init = {
 	change_orbit = 50
 	
     planet = {
-        count = { min = 0 max = 2 }
+        count = 3
         class = pc_asteroid
         orbit_distance = 0
+		orbit_angle = { min = 10 max = 190 }		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+	
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}		
     }	
 	
     planet = {
         name = "Notanban"
         class = "pc_gas_giant"
-        orbit_distance = 80
+        orbit_distance = 40
         orbit_angle = 267
         has_ring = no
 		size = 37
 		entity = "notanban_entity"
-		init_effect = {
-			set_planet_flag = notanban_codex
-			}				
+		flags = { notanban pd_ignore }		
 		change_orbit = 10
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 		
+
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}		
 		moon = {
 			name = "Notanban_a"
 			class = "pc_iron"
 			orbit_distance = 8			
 			size = 7
 		}
+
 		moon = {
 			name = "Solcrum"
-			class = "pc_barren"
+			class = "pc_salt"
 			orbit_distance = 8
 			entity = "solcrum_entity"
 			size = 11
+			flags = { solcrum pd_ignore }
 			init_effect = {
-				set_planet_flag = solcrum_codex
-			}			
+				prevent_anomaly = yes
+				clear_deposits = yes	
+				clear_planet_modifiers = yes 	
+	
+				add_modifier = {
+					modifier = tidal_locked
+					days = -1
+				}
+				set_owner = event_target:geth_consensus
+				create_colony = {
+					owner = event_target:geth_consensus
+					species = event_target:gethSpecies
+					ethos = owner
+				}
+				while = {
+					count = 2
+					create_pop = { species = event_target:gethSpecies }
+				}
+				generate_btr_geth_incursion_start_buildings = yes			
+			}				
+		}						
+	}
+
+		moon = {
+			name = "Notanban c"
+			count = 1
+			class = "pc_barren"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 0
+			size = 4
+			entity = "mec_barren_red_01"
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
 		}
+		
+		moon = {
+			name = "Notanban d"
+			count = 1
+			class = "pc_frozen"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 5
+			size = 6
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}		
     }
 
     init_effect = { 
@@ -388,9 +472,7 @@ sys_hong_init = {
         save_global_event_target_as = "hong_hyperlane"
     }
 
-    flags = {
-        hong_system
-    }
+	flags = { btr_system mec_armstrong_nebula_hong_system custom_system }
 
 	planet = {
 		name = "Hong"
@@ -399,6 +481,14 @@ sys_hong_init = {
 		orbit_angle = 1
 		size = 25
 		has_ring = no
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			set_deposit = d_energy_2
+			set_planet_flag = starting_deposit
+		}		
 	}
 
     planet = {
@@ -408,33 +498,53 @@ sys_hong_init = {
         orbit_angle = 150
         has_ring = no
 		size = 24
+		flags = { mec_eg_planet_pomal pomal pd_ignore }		
 		init_effect = {
-			set_planet_flag = pomal_codex
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			add_anomaly = {
+				category = MEC_EG_ANO_POMAL_1024_CAT			###Pomal Anomaly (Shallow Seas)
 			}
+		}
     }
 
     planet = {
         name = "Casbin"
-        class = "pc_continental"
+        class = "pc_primal"
         orbit_distance = 30
         orbit_angle = 116
         has_ring = no
 		size = 19
+		flags = { mec_eg_planet_casbin casbin sanctuary_world pd_ignore }
+		
 		init_effect = {
-			set_planet_flag = casbin_codex
+			prevent_anomaly = yes	
+			clear_planet_modifiers = yes 
+
+			add_anomaly = {
+				category = MEC_EG_ANO_CASBIN_1025_CAT			###Casbin Anomaly (Pre-Garden World)
 			}
+		}
     }
 
     planet = {
         name = "Matar"
-        class = "pc_frozen"
+        class = "pc_subglacial"
         orbit_distance = 30
         orbit_angle = 59
         has_ring = no
 		size = 11
+		flags = { matar pd_ignore }
 		init_effect = {
-			set_planet_flag = matar_codex
-			}	
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 			
+			add_modifier = {
+				modifier = btr_no_magnetic_field
+				days = -1
+		}			
     }
 
     planet = {
@@ -444,40 +554,76 @@ sys_hong_init = {
         orbit_angle = 41
         has_ring = no
 		size = 36
-		init_effect = {
-			set_planet_flag = theshaca_codex
+		flags = { theshaca pd_ignore }
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			
+				add_modifier = {
+					modifier = extensive_moon_system
+					days = -1
+				}
 			}
+
 		moon = {
 			name = "Theshaca_a"
 			class = "pc_iron"
-			orbit_distance = 8			
+			orbit_distance = 16			
 			size = 6
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}			
 		}
+
 		moon = {
 			name = "Theshaca_b"
 			class = "pc_frozen"
-			orbit_distance = 8			
+			orbit_distance = 4			
 			size = 9
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}			
 		}			
+		
 		moon = {
 			name = "Theshaca_c"
 			class = "pc_frozen"
-			orbit_distance = 8			
+			orbit_distance = 4			
 			size = 4
+
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}			
 		}					
     }
 
     planet = {
         name = "Treagir"
-        class = "pc_frozen"
+        class = "pc_subglacial"
         orbit_distance = 30
         orbit_angle = 136
         has_ring = no
 		size = 3
-		init_effect = {
-			set_planet_flag = treagir_codex
-			}	
-    }
+		flags = { treagir pd_ignore }
+
+	init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
+	}			
+
+
     init_effect = { 
 		spawn_megastructure = { 
 			type = "armstrongnebula_nubianexpanse_massrelay" 
@@ -496,9 +642,7 @@ sys_tereshkova_init = {
         save_global_event_target_as = "tereshkova_relay_system"
     }
 
-    flags = {
-        tereshkova_system
-    }
+    flags = { btr_system mec_armstrong_nebula_tereshkova_system custom_system pd_ignore }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -512,6 +656,10 @@ sys_tereshkova_init = {
 		orbit_angle = 90
 		size = 30
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
 	planet = {
@@ -521,17 +669,40 @@ sys_tereshkova_init = {
 		orbit_angle = 180
 		size = 20
 		has_ring = no
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
 	}
 	
     planet = {
         name = "Antibaar"
-        class = "pc_toxic"
+        class = "pc_methane"
         orbit_distance = 80
         orbit_angle = 148
         has_ring = no
 		size = 16
+		flags = { mec_eg_planet_antibaar antibaar pd_ignore }
+
 		init_effect = {
-			set_planet_flag = antibaar_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			clear_planet_modifiers = yes
+		
+			add_anomaly = {
+				category = MEC_EG_ANO_ANTIBAAR_1026_CAT			###Antibaar Anomaly (Terraforming Candidate)
+			}
+			set_owner = event_target:geth_consensus
+			create_colony = {
+				owner = event_target:geth_consensus
+				species = event_target:gethSpecies
+				ethos = owner
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:gethSpecies }
+			}
+			generate_btr_geth_incursion_start_buildings = yes			
 		}			
 	}
 
@@ -542,9 +713,12 @@ sys_tereshkova_init = {
         orbit_angle = 242
         has_ring = no
 		size = 14
-		init_effect = {
-			set_planet_flag = patamalrus_codex
-			}
+		flags = { patamalrus pd_ignore }
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}			
 		}
 
     planet = {
@@ -554,21 +728,32 @@ sys_tereshkova_init = {
         orbit_angle = 202
         has_ring = no
 		size = 25
-		init_effect = {
-			set_planet_flag = hunsalra_codex
-			}
+		flags = { hunsalra pd_ignore }
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}			
 		}
 
     planet = {
         name = "Thegeuse"
-        class = "pc_frozen"
+        class = "pc_hydrocarbon"
         orbit_distance = 45
         orbit_angle = 202
         has_ring = no
 		size = 12
-		init_effect = {
-			set_planet_flag = thegeuse_codex
-			}
+		flags = { thegeuse pd_ignore }
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+				clear_planet_modifiers = yes 	
+			
+				add_modifier = {
+					modifier = tidal_locked
+					days = -1
+				}
+			}			
 		}
 
     planet = {
@@ -578,9 +763,12 @@ sys_tereshkova_init = {
         orbit_angle = 94
         has_ring = no
 		size = 36
-		init_effect = {
-			set_planet_flag = solmarlon_codex
-			}	
+		flags = { solmarlon pd_ignore }
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}				
 		}
 
     planet = {
@@ -590,9 +778,17 @@ sys_tereshkova_init = {
         orbit_angle = 326
         has_ring = no
 		size = 3
+		flags = { mawinor pd_ignore }
 		init_effect = {
-			set_planet_flag = mawinor_codex
-			}		
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			clear_planet_modifiers = yes 	
+		
+			add_modifier = {
+				modifier = low_gravity
+				days = -1
+			}
+		}				
 		}
 
     init_effect = { 
@@ -612,15 +808,21 @@ sys_vamshi_init = {
     class = "sc_binary_a_mg"
 	max_instances = 1
 
-    flags = {
-        vamshi_system
-    }
+	flags = { btr_system mec_armstrong_nebula_vamshi_system custom_system }
 	
     planet = {
         class = "pc_a_star"
 		name = "Vamshi-A"
         size = 25
         orbit_distance = 25
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			
+			set_deposit = d_energy_3
+			set_planet_flag = starting_deposit
+		}		
         
     }
 	
@@ -630,30 +832,53 @@ sys_vamshi_init = {
         size = 50
         orbit_distance = 10
         orbit_angle = 180
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}	
+
     }
 
     planet = {
         name = "Maji"
-        class = "pc_frozen"
+        class = "pc_methane"
         orbit_distance = 90
         orbit_angle = 167
         has_ring = no
 		size = 14
+		flags = { maji pd_ignore }
 		init_effect = {
-			set_planet_flag = maji_codex
-			}	
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_owner = event_target:geth_consensus
+			create_colony = {
+				owner = event_target:geth_consensus
+				species = event_target:gethSpecies
+				ethos = owner
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:gethSpecies }
+			}
+			generate_btr_geth_incursion_start_buildings = yes			
+		}				
     }
 
     planet = {
         name = "Pregel"
-        class = "pc_frozen"
+        class = "pc_hydrocarbon"
         orbit_distance = 30
         orbit_angle = 202
         has_ring = no
 		size = 25
+		flags = { pregel pd_ignore }
+
 		init_effect = {
-			set_planet_flag = pregel_codex
-			}
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}		
     }
 
     planet = {
@@ -663,9 +888,13 @@ sys_vamshi_init = {
         orbit_angle = 118
         has_ring = no
 		size = 35
+		flags = { almos pd_ignore }
+
 		init_effect = {
-			set_planet_flag = almos_codex
-			}
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}		
     }
 }
 
