@@ -1,7 +1,35 @@
 
-triggered_geth = {
-	trigger = {
-		has_country_flag = geth_consensus
-	}
-	opinion = { base = -1000 }
+    triggered_geth = {
+		trigger = {
+			has_country_flag = geth_consensus
+		}
+		opinion = { base = -1000 }
 }
+
+	hate_for_genophage = {
+		trigger = {
+			has_country_flag = krogan_chiefdom	
+			is_pacifist = no
+			is_democracy = no
+			FROM = {
+				has_country_flag = genophage_empire
+			}
+
+		}
+		opinion = {
+			base = -200
+		}
+	}
+
+	genophage_sentiment = {
+		trigger = {
+			has_country_flag = council_race	
+			FROM = {
+				has_country_flag = krogan_chiefdom	
+			}
+
+		}
+		opinion = {
+			base = -50
+		}
+	}
