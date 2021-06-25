@@ -171,6 +171,8 @@ salarian_union={
 	flags={
 		salarian_union
 		btr_empire
+		genophage_empire
+		council_race
 	}
 	empire_flag={
 		icon={
@@ -238,6 +240,9 @@ turian_hierarchy={
 	flags={
 		turian_hierarchy
 		btr_empire
+		genophage_empire
+		council_race 
+
 	}
 	empire_flag={
 		icon={
@@ -1547,7 +1552,9 @@ mec_asarirepublics_civ = {
 	ethic = "ethic_fanatic_xenophile"
 	ethic = "ethic_egalitarian"
 	
-	flags = { asari_republics }
+	flags = { 
+		asari_republics 
+		council_race}
 	
 	authority = "auth_democratic"
 	government = gov_mec_asr
