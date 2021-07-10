@@ -12,7 +12,7 @@ sys_gagarin_init = {
     }	
 	max_instances = 1
 	
-	flags = { gagarin_system btr_system custom_system mec_armstrong_nebula_gagarin_system }	
+	flags = { gagarin_system armstrong_nebula btr_system custom_system mec_armstrong_nebula_gagarin_system }	
 	
 	planet = {
 		name = "Gagarin"
@@ -280,7 +280,7 @@ sys_grissom_init = {
         save_global_event_target_as = "grissom_relay_system"
     }
 	
-    flags = { btr_system grissom_system mec_armstrong_nebula_grissom_system custom_system }
+    flags = { btr_system grissom_system armstrong_nebula mec_armstrong_nebula_grissom_system custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -420,7 +420,6 @@ sys_grissom_init = {
 				generate_btr_geth_incursion_start_buildings = yes			
 			}				
 		}						
-	}
 
 		moon = {
 			name = "Notanban c"
@@ -472,7 +471,7 @@ sys_hong_init = {
         save_global_event_target_as = "hong_hyperlane"
     }
 
-	flags = { btr_system mec_armstrong_nebula_hong_system custom_system }
+	flags = { btr_system armstrong_nebula mec_armstrong_nebula_hong_system custom_system }
 
 	planet = {
 		name = "Hong"
@@ -544,8 +543,9 @@ sys_hong_init = {
 			add_modifier = {
 				modifier = btr_no_magnetic_field
 				days = -1
-		}			
-    }
+			}			
+    	}
+	}	
 
     planet = {
         name = "Theshaca"
@@ -642,7 +642,7 @@ sys_tereshkova_init = {
         save_global_event_target_as = "tereshkova_relay_system"
     }
 
-    flags = { btr_system mec_armstrong_nebula_tereshkova_system custom_system pd_ignore }
+    flags = { btr_system armstrong_nebula mec_armstrong_nebula_tereshkova_system custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -808,7 +808,7 @@ sys_vamshi_init = {
     class = "sc_binary_a_mg"
 	max_instances = 1
 
-	flags = { btr_system mec_armstrong_nebula_vamshi_system custom_system }
+	flags = { btr_system armstrong_nebula mec_armstrong_nebula_vamshi_system custom_system }
 	
     planet = {
         class = "pc_a_star"
@@ -906,7 +906,7 @@ sys_chabtan_init = {
     class = "sc_m_super"
 	max_instances = 1
 
-    flags = { empire_home_system btr_parnack_regime_system custom_system }
+    flags = { empire_home_system buluc_nebula btr_parnack_regime_system custom_system btr_system }
 
 	usage = custom_empire
 
@@ -964,7 +964,7 @@ sys_chabtan_init = {
 		deposit_blockers = none
 		modifiers = none
 
-		flags = { parnack_codex btr_parnack_regime_planet_parnack special_start_planet }
+		flags = { parnack_codex btr_parnack_regime_planet_parnack special_start_planet pd_ignore }
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -1077,19 +1077,34 @@ sys_fragotz_init = {
         save_global_event_target_as = "fragotz_relay_system"
     }
 
-    flags = {
-        fragotz_system
-    }
+    flags = { fragotz_system btr_system buluc_nebula }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 145
 	}	
 
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 155
+	}	
+
     planet = {
         class = "pc_a_star"
         orbit_distance = 0
         size = 40
+    }
+
+    planet = {
+        count = { min = 4 max = 10 }
+        class = pc_asteroid
+        orbit_distance = 150
+		orbit_angle = { min = 10 max = 190 }		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_2
+		}		
     }
 
     init_effect = { 
@@ -1112,9 +1127,7 @@ sys_ubroni_init = {
         save_global_event_target_as = "ubroni_relay_system"
     }
 
-    flags = {
-        ubroni_system
-    }
+    flags = { ubroni_system btr_system buluc_nebula }
 	
     planet = {
         class = "pc_m_star"
@@ -1185,6 +1198,15 @@ sys_aysur_init = {
     name = "Aysur"
     class = "sc_g"
 	max_instances = 1
+
+    flags = { aysur_system caleston_rift btr_system }
+	init_effect = {
+		prevent_anomaly = yes
+		clear_deposits = yes
+
+		set_deposit = d_energy_3
+		set_planet_flag = starting_deposit
+	}	
     planet = {
 	    name = "Aysur"
         class = "pc_g_star"
@@ -1194,7 +1216,7 @@ sys_aysur_init = {
 	
 	asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 90
+		radius = 125
 	}
 	
     planet = {
@@ -1204,21 +1226,28 @@ sys_aysur_init = {
         orbit_angle = 316
         has_ring = no
 		size = 12
-        init_effect = {
-			set_planet_flag = agnin_codex
-        }
+		flags = { pd_ignore agnin }
+
+		init_effect = {
+			prevent_anomaly = yes			
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
         name = "Shasu"
-        class = "pc_barren"
+        class = "pc_iron"
         orbit_distance = 10
         orbit_angle = 198
         has_ring = no
 		size = 3
-        init_effect = {
-			set_planet_flag = shasu_codex
-        }
+		flags = { pd_ignore shasu }		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
@@ -1228,9 +1257,32 @@ sys_aysur_init = {
         orbit_angle = 186
         has_ring = no
 		size = 37
-        init_effect = {
-			set_planet_flag = dranen_codex
-        }
+		flags = { pd_ignore dranen }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+		
+		moon = {
+			name = "Dranen_a"
+			count = 1
+			class = "pc_hydrocarbon"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 18
+			size = 5
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
 
 		moon = {
             name = "Arvuna"
@@ -1239,13 +1291,92 @@ sys_aysur_init = {
             orbit_angle = 169
             has_ring = no
 			size = 16
-            init_effect = {
-                set_planet_flag = arvuna_codex
-                }
+			init_effect = {
+				prevent_anomaly = yes
+				clear_planet_modifiers = yes 
+			
+				add_modifier = {
+					modifier = dangerous_wildlife
+					days = -1
+				}
+			}
+		}	
 
-        }
+		moon = {
+			name = "Alahya"
+			count = 1
+			class = "pc_barren"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 7
+			size = 8
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}	
+		
+		
+		moon = {
+			name = "Dranen_d"
+			count = 1
+			class = "pc_barren_cold"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 0
+			size = 6
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Dranen_e"
+			count = 1
+			class = "pc_molten"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 4
+			size = 4
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}		
+	}
 
-    }
+	change_orbit = 55
+	
+	planet = {
+		count = 2
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 10 max = 190 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		name = "Mahavid"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 40
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}
+	}
 
     planet = {
         name = "Alformus"
@@ -1254,9 +1385,12 @@ sys_aysur_init = {
         orbit_angle = 206
         has_ring = no
 		size = 36
-        init_effect = {
-			set_planet_flag = alformus_codex
-        }
+		flags = { pd_ignore alformus }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
@@ -1266,21 +1400,30 @@ sys_aysur_init = {
         orbit_angle = 34
         has_ring = no
 		size = 12
-        init_effect = {
-			set_planet_flag = shir_codex
-        }
+		flags = { pd_ignore shir }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Tamgauta"
-        class = "pc_iron"
+        class = "pc_subglacial"
         orbit_distance = 25
         orbit_angle = 289
         has_ring = no
 		size = 8
-        init_effect = {
-			set_planet_flag = tamgauta_codex
-        }
+		flags = { pd_ignore tamgauta }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     init_effect = { 
@@ -1327,9 +1470,13 @@ sys_balor_init = {
         orbit_angle = 165
         has_ring = no
 		size = 32
-        init_effect = {
-			set_planet_flag = cernunnos_codex
-        }
+		flags = { cernunnos pd_ignore}
+		}
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
 
         moon = {
             name = "Caleston"
@@ -1338,11 +1485,22 @@ sys_balor_init = {
             orbit_angle = 180
             has_ring = no
 			size = 16
-            init_effect = {
-                set_planet_flag = caleston_codex
-                }
-        }
-    }
+			flags = { Caleston pd_ignore}
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+
+				set_deposit = d_trade_value_3
+				set_planet_flag = starting_deposit			
+	
+				add_modifier = {
+					modifier = unstable_tectonics
+					days = -1
+				}
+			}
+       }
+
 
     planet = {
         name = "Bres"
@@ -1351,9 +1509,15 @@ sys_balor_init = {
         orbit_angle = 141
         has_ring = no
 		size = 2
-        init_effect = {
-			set_planet_flag = bres_codex
-        }
+		flags = { bres pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1363,9 +1527,7 @@ sys_balor_init = {
         orbit_angle = 102
         has_ring = no
         size = 4		
-        init_effect = {
-			set_planet_flag = elatha_codex
-        }
+		flags = { elatha pd_ignore }
     }
 
     planet = {
@@ -1375,10 +1537,8 @@ sys_balor_init = {
         orbit_angle = 154
         has_ring = no
 		size = 25
-        init_effect = {
-			set_planet_flag = partholon_codex
-        }
-    }
+		flags = { partholon pd_ignore }
+	}
 
     init_effect = { 
 		spawn_megastructure = { 
@@ -1400,7 +1560,17 @@ sys_solveig_init = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 25
-    }
+		flags = { mec_eg_star_solveig }
+		
+		init_effect = {
+			prevent_anomaly = yes						
+			clear_deposits = yes
+
+			add_anomaly = {
+				category = MEC_EG_ANO_SOLVEIG_1051_CAT			###Solveig Anomaly (Birth of a Red Giant)
+			}		
+    	}
+	}
 
     planet = {
         name = "Surtur"
@@ -1409,9 +1579,7 @@ sys_solveig_init = {
         orbit_angle = 179
         has_ring = no
 		size = 11
-        init_effect = {
-			set_planet_flag = surtur_codex
-        }
+		flags = { surtur pd_ignore }
         moon = {
             name = "Sinmara"
             class = "pc_frozen"
@@ -1419,9 +1587,7 @@ sys_solveig_init = {
             orbit_angle = 169
             has_ring = no
 			size = 3
-            init_effect = {
-                set_planet_flag = sinmara_codex
-                }
+			flags = { sinmara }
         }
     }
 
@@ -1432,9 +1598,37 @@ sys_solveig_init = {
         orbit_angle = 189
         has_ring = yes
 		size = 30
-        init_effect = {
-			set_planet_flag = thrivaldi_codex
-        }
+		flags = { thrivaldi pd_ignore }
+
+		moon = {
+			name = "Thrivaldi a"
+			count = 1
+			class = "pc_barren"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 14
+			size = 6
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Thrivaldi b"
+			count = 1
+			class = "pc_barren_cold"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+			size = 8
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
     }
 
     init_effect = { 
@@ -1457,6 +1651,13 @@ sys_talava_init = {
         class = "pc_f_star"
         orbit_distance = 0
         size = 20
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			set_deposit = d_energy_3
+			set_planet_flag = starting_deposit
+		}		
     }
 
     planet = {
@@ -1466,10 +1667,22 @@ sys_talava_init = {
         orbit_angle = 304
         has_ring = no
 		size = 22
-        init_effect = {
-			set_planet_flag = aitarus_codex
-        }
-    }
+		flags = { aitarus pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 		
+		
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+    	}
+	}	
 
     planet = {
         name = "Kaushus"
@@ -1478,9 +1691,17 @@ sys_talava_init = {
         orbit_angle = 177
         has_ring = no
 		size = 15
-        init_effect = {
-			set_planet_flag = kaushus_codex
-        }
+		flags = { kaushus pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			clear_planet_modifiers = yes 	
+		
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -1490,9 +1711,12 @@ sys_talava_init = {
         orbit_angle = 293
         has_ring = no
 		size = 14
-        init_effect = {
-			set_planet_flag = maitrum_codex
-        }
+		flags = { maitrum pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
@@ -1502,9 +1726,15 @@ sys_talava_init = {
         orbit_angle = 142
         has_ring = no
 		size = 11
-        init_effect = {
-			set_planet_flag = taitus_codex
-        }
+		flags = { taitus pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     init_effect = { 
@@ -1537,6 +1767,10 @@ sys_yakawa_init = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 24
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
     }
 
     planet = {
@@ -1546,9 +1780,17 @@ sys_yakawa_init = {
         orbit_angle = 98
         has_ring = no
 		size = 25
-        init_effect = {
-			set_planet_flag = sakata_codex
-        }
+		flags = { sakata pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			
+			add_modifier = {
+				modifier = strong_magnetic_field
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -1558,10 +1800,12 @@ sys_yakawa_init = {
         orbit_angle = 210
         has_ring = yes
 		size = 32
-        init_effect = {
-			set_planet_flag = nambu_codex
-        }
-        satellite_naming_policy = lower_case_latin_letters
+		flags = { nambu pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
 
 		moon = {
 			name = "Sumiko"
@@ -1569,14 +1813,45 @@ sys_yakawa_init = {
 			orbit_distance = 8
 			has_ring = no
 			size = 6
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+
+				set_deposit = d_trade_value_2
+				set_planet_flag = starting_deposit
+			}			
         }
 
 		moon = {
-            count = { min = 1 max = 2 }
-			class = random
-            orbit_distance = 8
-            orbit_angle = { min = 90 max = 270 }
-        }	
+			name = "Nambu b"
+			count = 1
+			class = "pc_barren"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 4
+			size = 6
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Nambu c"
+			count = 1
+			class = "pc_barren"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+			size = 8
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}	
     }
 
     planet = {
@@ -1586,9 +1861,15 @@ sys_yakawa_init = {
         orbit_angle = 293
         has_ring = no
 		size = 17
-        init_effect = {
-			set_planet_flag = maskawa_codex
-        }
+		flags = { maskawa pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1598,9 +1879,17 @@ sys_yakawa_init = {
         orbit_angle = 151
         has_ring = no
 		size = 16
-        init_effect = {
-			set_planet_flag = karumto_codex
-        }
+		flags = { karumto pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -1610,15 +1899,45 @@ sys_yakawa_init = {
         orbit_angle = 134
         has_ring = yes
 		size = 29
-        init_effect = {
-			set_planet_flag = kobayashi_codex
-        }
-        moon = {
-            count = { min = 1 max = 3 }
-			class = random
-            orbit_distance = 8
-            orbit_angle = { min = 90 max = 270 }
-        }			
+		flags = { kobayashi pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_exotic_gases_1
+			set_planet_flag = starting_deposit
+		}
+		
+		moon = {
+			name = "Kobayashi a"
+			count = 1
+			class = "pc_barren"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 14
+			size = 8
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Kobayashi b"
+			count = 1
+			class = "pc_frozen"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+			size = 4
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}		
     }
 
     init_effect = { 
@@ -1651,6 +1970,10 @@ sys_amun_init = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 28
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}		
     }
 
     planet = {
@@ -1660,9 +1983,12 @@ sys_amun_init = {
         orbit_angle = 198
         has_ring = yes
 		size = 30
-        init_effect = {
-			set_planet_flag = sekhmet_codex
-        }
+		flags = { sekhmet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
@@ -1672,17 +1998,49 @@ sys_amun_init = {
         orbit_angle = 192
         has_ring = no
 		size = 35
-        init_effect = {
-			set_planet_flag = sobek_codex
-        }
-        moon = {
-			name = "Sobek_a"
-			class = "pc_barren"
-			orbit_distance = 8
-			orbit_angle = 192
-			has_ring = no
-			size = 3
-        }
+		flags = { sobek pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}			
+		}
+		
+		moon = {
+			name = "Sobek a"
+			count = 1
+			class = pc_molten
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 17
+			size = 4
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Sobek b"
+			count = 1
+			class = pc_barren
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+			size = 6
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+
+				set_deposit = d_minerals_2
+				set_planet_flag = starting_deposit
+			}
+		}
         moon = {
 			name = "Heqet"
 			class = "pc_desert"
@@ -1690,7 +2048,41 @@ sys_amun_init = {
 			orbit_angle = 250
 			has_ring = no
 			size = 6
-        }		
+        }
+
+		moon = {
+			name = "Sobek d"
+			count = 1
+			class = pc_toxic
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 0
+			size = 4
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Sobek e"
+			count = 1
+			class = pc_barren_cold
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+			size = 8
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+
+				set_deposit = d_minerals_2
+				set_planet_flag = starting_deposit
+			}
+		}
+		
     }
 
     planet = {
@@ -1700,9 +2092,12 @@ sys_amun_init = {
         orbit_angle = 294
         has_ring = no
 		size = 17
-        init_effect = {
-			set_planet_flag = anhur_codex
-			}
+		flags = { mec_eg_planet_anhur  anhur pd_ignore }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
@@ -1712,9 +2107,30 @@ sys_amun_init = {
         orbit_angle = 61
         has_ring = no
 		size = 17
-        init_effect = {
-			set_planet_flag = neith_codex
-        }
+		flags = { neith }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+		
+		moon = {
+			name = "Neith a"
+			count = 1
+			class = pc_frozen
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 8
+			size = 3
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}		
     }
 
     planet = {
@@ -1724,25 +2140,42 @@ sys_amun_init = {
         orbit_angle = 175
         has_ring = no
 		size = 26
-        init_effect = {
-			set_planet_flag = bast_codex
-        }
-        moon = {
-			name = "Bast_a"
-			class = "pc_frozen"
-			orbit_distance = 8
-			orbit_angle = 192
-			has_ring = no
-			size = 3
-        }
-        moon = {
-			name = "Bast_b"
-			class = "pc_frozen"
-			orbit_distance = 8
-			orbit_angle = 250
-			has_ring = no
+		flags = { bast pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
+		
+		moon = {
+			name = "Bast a"
+			count = 1
+			class = "pc_iron"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 16
 			size = 6
-        }	
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Bast b"
+			count = 1
+			class = "pc_frozen"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 6
+			size = 8
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}	
     }
 
     init_effect = { 
@@ -1764,15 +2197,20 @@ sys_imir_init = {
     init_effect = {
         save_global_event_target_as = "imir_relay_system"
     }
-
-    flags = {
-        imir_system
-    }
+	flags = { mec_eagle_nebula_imir_system custom_system imir_system btr_system }	
 
     planet = {
+		name = "Imir"
         class = "pc_g_star"
         orbit_distance = 0
         size = 29
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			set_deposit = d_energy_3
+			set_planet_flag = starting_deposit
+		}		
     }
 	
 	asteroid_belt = {
@@ -1787,9 +2225,12 @@ sys_imir_init = {
         orbit_angle = 324
         has_ring = no
 		size = 6
-        init_effect = {
-			set_planet_flag = osalri_codex
-        }
+		flags = { osalri pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
@@ -1799,10 +2240,27 @@ sys_imir_init = {
         orbit_angle = 217
         has_ring = no
 		size = 17
-        init_effect = {
-			set_planet_flag = korlus_codex
-        }
+		flags = { mec_eg_planet_korlus korlus pd_ignore }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_planet_modifiers = yes 
+		}
     }
+
+	change_orbit = 30
+
+	planet = {
+		count = 2
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 10 max = 190 }
+		
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
 
     planet = {
         name = "Quodis"
@@ -1811,9 +2269,12 @@ sys_imir_init = {
         orbit_angle = 203
         has_ring = no
 		size = 32
-        init_effect = {
-			set_planet_flag = quodis_codex
-        }
+		flags = { quodis pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
 
     planet = {
@@ -1823,9 +2284,12 @@ sys_imir_init = {
         orbit_angle = 191
         has_ring = no
 		size = 13
-        init_effect = {
-			set_planet_flag = gregas_codex
-        }
+		flags = { gregas pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+		}
     }
     init_effect = { 
 		spawn_megastructure = { 
@@ -1846,13 +2310,16 @@ sys_malgus_init = {
         save_global_event_target_as = "malgus_hyperlane"
     }
 
-    flags = {
-        malgus_system
-    }
+	flags = { mec_eagle_nebula_malgus_system custom_system malgus_system }
+
     planet = {
         class = "pc_k_star"
         orbit_distance = 0
         size = 25
+		init_effect = {
+			prevent_anomaly = yes						
+			clear_deposits = yes
+		}		
     }
 
     planet = {
@@ -1862,23 +2329,42 @@ sys_malgus_init = {
         orbit_angle = 186
         has_ring = no
 		size = 37
-        init_effect = {
-			set_planet_flag = uzin_codex
-        }
-		moon = {
-			name = "Uzin_a"
-			class = "pc_molten"
-			orbit_distance = 8
-			orbit_angle = 90
-			size = 5
+		flags = { uzin_malgus pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
 		}
+		
 		moon = {
-			name = "Uzin_b"
+			name = "Uzin a"
+			count = 1
 			class = "pc_molten"
-			orbit_distance = 8
-			orbit_angle = 180
-			size = 4
-		}		
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 18
+			size = 7
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}
+		
+		moon = {
+			name = "Uzin b"
+			count = 1
+			class = "pc_molten"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 7
+			size = 6
+			
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
+		}	
 	}
 	
     planet = {
@@ -1888,9 +2374,15 @@ sys_malgus_init = {
         orbit_angle = 148
         has_ring = no
 		size = 15
-        init_effect = {
-			set_planet_flag = wrill_codex
-        }
+		flags = { wrill pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1900,9 +2392,15 @@ sys_malgus_init = {
         orbit_angle = 184
         has_ring = no
 		size = 14
-        init_effect = {
-			set_planet_flag = flett_codex
-			}
+		flags = { flett pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 	
     init_effect = { 
