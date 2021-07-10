@@ -622,3 +622,35 @@ trait_pc_collector_base_preference = {
 		weight = 0
 	}
 }
+# Made the Cerberus Habitability Preference similar to the Continental Preference because it wouldnt make sense for them to be not able to colonize
+# Using the icon from Habitat preference as filler
+trait_pc_cronos_station_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_ring_preference.dds"
+	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID}
+	sorting_priority = 30
+	modifier = {
+		pc_arid_habitability = @senary
+		pc_desert_habitability = @quinary
+		pc_savannah_habitability = @quaternary
+		pc_tropical_habitability = @tertiary
+		pc_ocean_habitability = @secondary
+		pc_continental_habitability = @primary
+		pc_alpine_habitability = @secondary
+		pc_tundra_habitability = @tertiary
+		pc_arctic_habitability = @quaternary
+					
+		pc_dextro_arid_habitability = @septenary
+		pc_dextro_desert_habitability = @senary
+		pc_dextro_savannah_habitability = @quinary
+		pc_dextro_tropical_habitability = @quaternary
+		pc_dextro_ocean_habitability = @tertiary
+		pc_dextro_continental_habitability = @secondary
+		pc_dextro_alpine_habitability = @tertiary
+		pc_dextro_tundra_habitability = @quaternary
+		pc_dextro_arctic_habitability = @quinary
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
