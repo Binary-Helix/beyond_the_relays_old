@@ -2,7 +2,7 @@
 #### Major Empires ####
 #######################
 
-#1 Systems Alliance
+# Systems Alliance
 systems_alliance={
 	ship_prefix = "PRESCRIPTED_ship_prefix_systems_alliance"
 	species={
@@ -72,7 +72,7 @@ systems_alliance={
 	origin="origin_systems_alliance"
 }
 
-#2 Cerberus
+# Cerberus
 cerberus={
 	ship_prefix="PRESCRIPTED_ship_prefix_cerberus"
 	species={
@@ -143,7 +143,7 @@ cerberus={
 	origin="origin_cerberus"
 }
 
-#3 Salarian Union 
+# Salarian Union 
 salarian_union={
 	ship_prefix= "PRESCRIPTED_ship_prefix_salarian_union"
 	species={
@@ -212,7 +212,7 @@ salarian_union={
 	origin="origin_salarian_union"
 }
 
-#4 Turian Hierarchy
+# Turian Hierarchy
 turian_hierarchy={
 	ship_prefix= "PRESCRIPTED_ship_prefix_turian_hierarchy"
 	species={
@@ -284,7 +284,7 @@ turian_hierarchy={
 	origin="origin_turian_hierarchy"
 }
 
-#5 Krogan Chiefdom
+# Krogan Chiefdom
 krogan_chiefdom={
 	ship_prefix="PRESCRIPTED_ship_prefix_krogan"
 	species={
@@ -352,7 +352,7 @@ krogan_chiefdom={
 	origin="origin_krogan_chiefdom"
 }
 
-#6 Illuminated Primacy
+# Illuminated Primacy
 illuminated_primacy={
 	ship_prefix="PRESCRIPTED_ship_prefix_illuminated_primacy"
 	species={
@@ -559,7 +559,7 @@ omega_b={
 	origin="origin_omega"
 }
 
-#7 Drell Compact
+# Drell Compact
 #drell_compact={
 	#ship_prefix=""
 	#species={
@@ -626,7 +626,7 @@ omega_b={
 	#origin="origin_default"
 #}
 
-#8 Batarian Hegemony
+# Batarian Hegemony
 batarian_hegemony={
 	ship_prefix= "PRESCRIPTED_ship_prefix_batarian_hegemony"
 	species={
@@ -696,7 +696,7 @@ batarian_hegemony={
 	origin="origin_batarian_hegemony"
 }
 
-#9 Quarian Admiralty - TODO - Add back in!
+# Quarian Admiralty - TODO - Add back in!
 #quarian_admiralty={
 #	ship_prefix=""
 #	species={
@@ -765,7 +765,7 @@ batarian_hegemony={
 #	origin="origin_default"
 #}
 
-#10 Geth Consensus
+# Geth Consensus
 geth_consensus={
 	ship_prefix="PRESCRIPTED_ship_prefix_geth_consensus"
 	species={
@@ -833,7 +833,7 @@ geth_consensus={
 	origin="origin_geth_consensus"
 }
 
-#11 Rachni swarm
+# Rachni swarm
 rachni_hive={
 	ship_prefix="PRESCRIPTED_ship_prefix_rachni_hive"
 	species={
@@ -900,7 +900,7 @@ rachni_hive={
 	origin="origin_rachni_hive"
 }
 
-#12 Collectors
+# Collectors
 collectors={
 	ship_prefix="PRESCRIPTED_ship_prefix_collectors"
 	species={
@@ -970,7 +970,7 @@ collectors={
 	origin="origin_collectors"
 }
 
-#13 Vorcha Chiefdom
+# Vorcha Chiefdom
 vorcha_chiefdom={
 	ship_prefix="PRESCRIPTED_ship_prefix_vorcha"
 	species={
@@ -999,6 +999,7 @@ vorcha_chiefdom={
 	flags={
 		vorcha_chiefdom
 		btr_empire
+		btr_minor
 	}
 	empire_flag={
 		icon={
@@ -1106,7 +1107,7 @@ vorcha_chiefdom={
 #	origin="origin_default"
 #}
 
-#14 Vol Protectorate
+# Vol Protectorate
 vol_protectorate={
 	ship_prefix="PRESCRIPTED_ship_prefix_vol"
 	playable = has_megacorp
@@ -1175,7 +1176,7 @@ vol_protectorate={
 	origin="origin_vol_protectorate"
 }
 
-#14 Vol Protectorate - no megacorp
+# Vol Protectorate - no megacorp
 vol_protectorate_b={
 	ship_prefix="PRESCRIPTED_ship_prefix_vol"
 	playable = has_not_megacorp
@@ -1245,7 +1246,7 @@ vol_protectorate_b={
 }
 
 
-#15 Courts of Dekuuna
+# Courts of Dekuuna
 courts_of_dekuuna={
 	ship_prefix= "PRESCRIPTED_ship_prefix_courts_of_dekuuna"
 	species={
@@ -1315,7 +1316,7 @@ courts_of_dekuuna={
 	origin="origin_courts_of_dekuuna"
 }
 
-# 16 Parnack Regime
+# Parnack Regime
 parnack_regime={
 	ship_prefix="PRESCRIPTED_ship_prefix_parnack_regime"
 	species={
@@ -1445,7 +1446,7 @@ raloi_republic={
 	origin="origin_raloi_republic"
 }
 
-## Asari Corporate Interests
+# Asari Corporate Interests
 mec_asariillium_civ = {
 	name = "Asari Corporate Interests"
 	adjective = "Asari"
@@ -1521,7 +1522,7 @@ mec_asariillium_civ = {
 	}
 }
 
-## Asari Republics
+# Asari Republics
 mec_asarirepublics_civ = {
 	name = "Asari Republics"
 	adjective = "Asari"
@@ -1597,3 +1598,4 @@ mec_asarirepublics_civ = {
 		#ruler_title_female = "Councilor"
 	}
 }
+

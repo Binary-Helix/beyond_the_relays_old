@@ -5436,23 +5436,9 @@ sys_patella_init = {
 		size = 33
 		has_ring = no
 		init_effect = {
-			create_species = {
-				name = "Blue Suns Merc"
-				plural = "Blue Suns Mercs"
-				class = "BLU"
-				portrait = blue_suns
-				name_list = btr_merc
-				traits = {
-					trait="trait_talented"
-		            trait="trait_deviants"
-		            trait="trait_adaptive"
-		            trait="trait_quarrelsome"
-		            trait="trait_quick_learners"
-				}
-			}
 			create_country = {
-				namelist = btr_merc
-				species = last_created
+				name_list = btr_merc
+				species = event_target:humanSpecies
 				type = mercenary
 				civics = { civic = civic_anarcho_tribalism }
 				origin = "origin_default"

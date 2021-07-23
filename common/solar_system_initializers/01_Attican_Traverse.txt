@@ -12,7 +12,7 @@ sys_gagarin_init = {
     }	
 	max_instances = 1
 	
-	flags = { gagarin_system armstrong_nebula btr_system custom_system mec_armstrong_nebula_gagarin_system }	
+	flags = { gagarin_system armstrong_nebula btr_system custom_system }	
 	
 	planet = {
 		name = "Gagarin"
@@ -31,7 +31,7 @@ sys_gagarin_init = {
         has_ring = no
 		size = 25 
 		entity = "chlorine_planet_01_entity"
-		flags = { junthor pd_ignore asari_writings mec_eg_planet_junthro }		
+		flags = { junthor pd_ignore }		
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -119,7 +119,7 @@ sys_gagarin_init = {
         has_ring = no
 		size = 13
 		entity = "rayingri_entity"
-		flags = { rayingri pd_ignore league_of_one mec_eg_planet_rayingri }
+		flags = { rayingri pd_ignore }
 
 		init_effect = {
 			add_anomaly = {
@@ -280,7 +280,7 @@ sys_grissom_init = {
         save_global_event_target_as = "grissom_relay_system"
     }
 	
-    flags = { btr_system grissom_system armstrong_nebula mec_armstrong_nebula_grissom_system custom_system }
+    flags = { btr_system grissom_system armstrong_nebula custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -330,7 +330,7 @@ sys_grissom_init = {
         has_ring = no
 		size = 16
 		entity = "zaherux_entity"
-		flags = { zaherux pd_ignore mec_eg_planet_zaherux }
+		flags = { zaherux pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes			
 			clear_deposits = yes
@@ -471,7 +471,7 @@ sys_hong_init = {
         save_global_event_target_as = "hong_hyperlane"
     }
 
-	flags = { btr_system armstrong_nebula mec_armstrong_nebula_hong_system custom_system }
+	flags = { btr_system armstrong_nebula custom_system }
 
 	planet = {
 		name = "Hong"
@@ -497,7 +497,7 @@ sys_hong_init = {
         orbit_angle = 150
         has_ring = no
 		size = 24
-		flags = { mec_eg_planet_pomal pomal pd_ignore }		
+		flags = { pomal pd_ignore }		
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -516,7 +516,7 @@ sys_hong_init = {
         orbit_angle = 116
         has_ring = no
 		size = 19
-		flags = { mec_eg_planet_casbin casbin sanctuary_world pd_ignore }
+		flags = { casbin sanctuary_world pd_ignore }
 		
 		init_effect = {
 			prevent_anomaly = yes	
@@ -642,7 +642,7 @@ sys_tereshkova_init = {
         save_global_event_target_as = "tereshkova_relay_system"
     }
 
-    flags = { btr_system armstrong_nebula mec_armstrong_nebula_tereshkova_system custom_system }
+    flags = { btr_system armstrong_nebula custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -682,7 +682,7 @@ sys_tereshkova_init = {
         orbit_angle = 148
         has_ring = no
 		size = 16
-		flags = { mec_eg_planet_antibaar antibaar pd_ignore }
+		flags = { antibaar pd_ignore }
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -808,7 +808,7 @@ sys_vamshi_init = {
     class = "sc_binary_a_mg"
 	max_instances = 1
 
-	flags = { btr_system armstrong_nebula mec_armstrong_nebula_vamshi_system custom_system }
+	flags = { btr_system armstrong_nebula custom_system }
 	
     planet = {
         class = "pc_a_star"
@@ -906,7 +906,7 @@ sys_chabtan_init = {
     class = "sc_m_super"
 	max_instances = 1
 
-    flags = { empire_home_system buluc_nebula btr_parnack_regime_system custom_system btr_system }
+    flags = { empire_home_system buluc_nebula custom_system btr_system }
 
 	usage = custom_empire
 
@@ -964,7 +964,7 @@ sys_chabtan_init = {
 		deposit_blockers = none
 		modifiers = none
 
-		flags = { parnack_codex btr_parnack_regime_planet_parnack special_start_planet pd_ignore }
+		flags = { parnack_codex special_start_planet pd_ignore }
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -1560,7 +1560,7 @@ sys_solveig_init = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 25
-		flags = { mec_eg_star_solveig }
+		flags = { }
 		
 		init_effect = {
 			prevent_anomaly = yes						
@@ -1962,9 +1962,7 @@ sys_amun_init = {
         save_global_event_target_as = "amun_relay_system"
     }
 
-    flags = {
-        amun_system
-    }
+    flags = { amun_system custom_system btr_system empire_home_system }
 	
     planet = {
         class = "pc_g_star"
@@ -2027,7 +2025,7 @@ sys_amun_init = {
 		moon = {
 			name = "Sobek b"
 			count = 1
-			class = pc_barren
+			class = pc_iron
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 6
@@ -2087,27 +2085,87 @@ sys_amun_init = {
 
     planet = {
         name = "Anhur"
-        class = "pc_alpine"
+        class = "pc_forest"
         orbit_distance = 40
         orbit_angle = 294
         has_ring = no
 		size = 17
-		flags = { mec_eg_planet_anhur  anhur pd_ignore }
-		
+		flags = { mec_eg_planet_anhur anhur pd_ignore }
+
 		init_effect = {
 			prevent_anomaly = yes
-			clear_planet_modifiers = yes 
-		}
-    }
+			generate_btr_start_deposits_and_blockers = yes
+			generate_btr_major_empire_start_buildings = yes
+			create_country = {
+				name_list = btr_systems_alliance
+				species = event_target:humanSpecies
+				type = independent_colony
+				ethos = {
+					ethic = ethic_authoritarian
+					ethic = ethic_militarist
+					ethic = ethic_materialist
+				}
+				civics = { 
+					civic = civic_indentured_assets
+					civic = civic_ruthless_competition
+				}
+				origin = "origin_default"
+				flag={
+					icon={
+						category="domination"
+						file="domination_9.dds"
+					}
+					background={
+						category="backgrounds"
+						file="circle.dds"
+					}
+					colors={
+						"brown"
+						"light_orange"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_authoritarian
+					ethic = ethic_xenophobe
+				}
+				name="United Anhur Corporations"
+				adjective="UAC"
+				authority="auth_corporate"
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_graphical_culture = industrial_01
+				set_country_flag = united_anhur
+				set_country_flag = independent_colony
+				save_global_event_target_as = united_anhur
+			}
+			create_colony = { 
+				owner = last_created_country 
+				species = last_created 
+			}
+			while = {
+				count = 7
+				create_pop = { species = event_target:batarianSpecies }
+			}
+			while = {
+				count = 7
+				create_pop = { species = event_target:humanSpecies }
+			}			
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+    	}
+	}	
 
     planet = {
         name = "Neith"
-        class = "pc_frozen"
+        class = "pc_salt"
         orbit_distance = 40
         orbit_angle = 61
         has_ring = no
 		size = 17
-		flags = { neith }
+		flags = { neith pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -2165,7 +2223,7 @@ sys_amun_init = {
 		moon = {
 			name = "Bast b"
 			count = 1
-			class = "pc_frozen"
+			class = "pc_subglacial"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 8
@@ -2197,7 +2255,7 @@ sys_imir_init = {
     init_effect = {
         save_global_event_target_as = "imir_relay_system"
     }
-	flags = { mec_eagle_nebula_imir_system custom_system imir_system btr_system }	
+	flags = { custom_system imir_system btr_system }	
 
     planet = {
 		name = "Imir"
@@ -2240,13 +2298,66 @@ sys_imir_init = {
         orbit_angle = 217
         has_ring = no
 		size = 17
-		flags = { mec_eg_planet_korlus korlus pd_ignore }
+		flags = { korlus pd_ignore mec_eg_planet_korlus }
 		
 		init_effect = {
 			prevent_anomaly = yes
 			clear_planet_modifiers = yes 
-		}
-    }
+			generate_btr_major_empire_start_buildings = yes
+			create_colony = {
+				owner = event_target:blue_suns
+				species = event_target:blue_suns
+				ethos = owner
+			}
+			ignore_initial_colony_error = yes
+
+			while = {
+				count = 2
+				create_pop = { species = event_target:humanSpecies }
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:turianSpecies }
+			}
+
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Warrior_Freehold"
+						graphical_culture = "pirate_01"
+					}
+					set_location = {
+						target = prev
+						distance = 230
+						angle = 0
+					}				
+				}
+			}
+
+			create_fleet = {
+				effect = {
+					set_owner = event_target:blue_suns
+					create_ship = {
+						name = random
+						design = "NAME_Ancestral_Glory"
+						graphical_culture = "pirate_01"
+					}
+					set_formation_scale = 2
+					set_fleet_stance = aggressive
+					set_aggro_range_measure_from = self
+					set_aggro_range = 250
+					set_location = {
+						target = prev
+						distance = 20
+						angle = 120
+					}
+				}									
+			}
+    	}
+		
+	}
 
 	change_orbit = 30
 
@@ -2310,7 +2421,7 @@ sys_malgus_init = {
         save_global_event_target_as = "malgus_hyperlane"
     }
 
-	flags = { mec_eagle_nebula_malgus_system custom_system malgus_system }
+	flags = { custom_system malgus_system btr_system }
 
     planet = {
         class = "pc_k_star"
@@ -2369,7 +2480,7 @@ sys_malgus_init = {
 	
     planet = {
         name = "Wrill"
-        class = "pc_barren"
+        class = "pc_methane"
         orbit_distance = 65
         orbit_angle = 148
         has_ring = no
@@ -2379,15 +2490,54 @@ sys_malgus_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
-			set_deposit = d_minerals_2
+			create_country = {
+				name_list = btr_krogan
+				species = event_target:kroganSpecies
+				type = independent_colony
+				civics = { civic = civic_barbaric_despoilers }
+				origin = "origin_default"
+				flag = {
+					icon={
+						category="masseffect"
+						file="KroganFlag2.dds"
+					}
+					background={
+						category="backgrounds"
+						file="00_solid.dds"
+					}
+					colors={
+						"brown"
+						"grey"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_authoritarian
+					ethic = ethic_xenophobe
+				}
+				ignore_initial_colony_error = yes
+				name = "Wrill Mining Consortium"
+			}
+			while = {
+				count = 3
+				create_pop = { species = event_target:kroganSpecies }
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:vorchaSpecies }
+			}			
+			set_deposit = d_minerals_3
 			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier =  gang_wars
+			}
 		}
     }
 
     planet = {
         name = "Flett"
-        class = "pc_toxic"
+        class = "pc_mephitic"
         orbit_distance = 35
         orbit_angle = 184
         has_ring = no
@@ -2397,8 +2547,22 @@ sys_malgus_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
+			create_colony = {
+				owner = event_target:blood_pack
+				species = event_target:kroganSpecies
+				ethos = owner
+			}
+			while = {
+				count = 8
+				create_pop = { species = event_target:vorchaSpecies }
+			}
+			while = {
+				count = 3
+				create_pop = { species = event_target:kroganSpecies }
+			}			
+			generate_btr_start_deposits_and_blockers = yes
 			set_deposit = d_minerals_2
+			set_deposit = d_bloodpack_vorcha
 			set_planet_flag = starting_deposit
 		}
     }
@@ -2431,9 +2595,7 @@ sys_relic_init = {
         save_global_event_target_as = "relic_relay_system"
     }
 
-    flags = {
-        relic_system
-    }
+    flags = {  relic_system btr_system custom_system }
 	
     planet = {
         class = "pc_g_star"
@@ -2448,26 +2610,46 @@ sys_relic_init = {
 
     planet = {
         name = "Murky_Water"
-        class = "pc_barren"
+        class = "pc_methane"
         orbit_distance = 55
         orbit_angle = 243
         has_ring = no
 		size = 25
-        init_effect = {
-			set_planet_flag = murky_water_codex
+		flags = { murky_water pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
 			}
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}		
     }
 
     planet = {
         name = "Fitful_Current"
-        class = "pc_frozen"
+        class = "pc_chthonian"
         orbit_distance = 55
         orbit_angle = 284
         has_ring = no
 		size = 23
-        init_effect = {
-			set_planet_flag = fitful_current_codex
+		flags = { fitful_current }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
 			}
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+   		 }		
     }
 
     planet = {
@@ -2477,9 +2659,42 @@ sys_relic_init = {
         orbit_angle = 58
         has_ring = yes
 		size = 33
-        init_effect = {
-			set_planet_flag = first_land_codex
+		flags = { first_land pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			add_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+   		}		
+
+		moon = {
+			name = "Drifting Skies"
+			count = 1
+			class = "pc_habitat"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 18
+			size = 8
+			flags = { pd_ignore }
+			init_effect = {
+				set_owner = event_target:kanalaOwner
+				create_colony = {
+					owner = event_target:kanalaOwner
+					species = event_target:hanarSpecies
+					ethos = owner
+				}
+				while = {
+					count = 7
+					create_pop = { species = event_target:hanarSpecies }
+				}
+				while = {
+					count = 6
+					create_pop = { species = event_target:drellSpecies }
+				}				
+				generate_btr_major_empire_start_buildings = yes
+				clear_deposits = yes		
 			}
+		}
     }
 
     planet = {
@@ -2489,21 +2704,96 @@ sys_relic_init = {
         orbit_angle = 86
         has_ring = no
 		size = 37
-        init_effect = {
-			set_planet_flag = island_wind_codex
+		flags = { island_wind pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = extreme_storms
 			}
+		}
     }
 
     planet = {
 		name = "Rough_Tide"
-        class = "pc_barren"
+        class = "pc_mephitic"
         orbit_distance = 40
         orbit_angle = 192
         has_ring = no
 		size = 5
-        init_effect = {
-			set_planet_flag = rough_tide_codex
-        }
+		flags = { rough_tide pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			generate_btr_start_deposits_and_blockers = yes
+			generate_btr_major_empire_start_buildings = yes
+			create_country = {
+				name_list = btr_krogan
+				species = event_target:kroganSpecies
+				type = independent_colony
+				ethos = {
+					ethic = ethic_authoritarian
+					ethic = ethic_militarist
+					ethic = ethic_materialist
+				}
+				civics = { 
+					civic = civic_indentured_assets
+					civic = civic_private_military_companies
+					civic = civic_criminal_heritage
+				}
+				origin = "origin_default"
+				flag={
+					icon={
+						category="corporate"
+						file="corporate_2.dds"
+					}
+					background={
+						category="backgrounds"
+						file="circle.dds"
+					}
+					colors={
+						"light_orange"
+						"brown"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_authoritarian
+					ethic = ethic_xenophobe
+				}
+				name="Relic Mineral Works"
+				adjective="RTV"
+				authority="auth_corporate"
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_graphical_culture = industrial_01
+				set_country_flag = relic_minerals
+				set_country_flag = independent_colony
+				save_global_event_target_as = relic_minerals
+			}
+			create_colony = { 
+				owner = last_created_country 
+				species = last_created 
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:kroganSpecies }
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:vorchaSpecies }
+			}	
+			while = {
+				count = 2
+				create_pop = { species = event_target:hanarSpecies }
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:drellSpecies }
+			}			
+
+			set_deposit = d_alloys_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -2513,9 +2803,20 @@ sys_relic_init = {
         orbit_angle = 351
         has_ring = yes
 		size = 31
-        init_effect = {
-			set_planet_flag = preying_mouth_codex
-        }
+		flags = { preying_mouth mec_eg_planet_preyingmouth }
+
+		init_effect = {
+			prevent_anomaly = yes				
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+
+			add_anomaly = {
+				category = MEC_EG_ANO_PREYINGMOUTH_1061_CAT			###Preying Mouth (Lost Ships)
+			}	
+			add_deposit = d_element_zero_2
+			set_planet_flag = starting_deposit
+
+		}		
     }
 
     planet = {
@@ -2525,9 +2826,35 @@ sys_relic_init = {
         orbit_angle = 39
         has_ring = no
 		size = 18
-        init_effect = {
-			set_planet_flag = beach_thunder_codex
-        }
+		flags = { beach_thunder pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes				
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			create_colony = { 
+				owner = last_created_country 
+				species = last_created 
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:kroganSpecies }
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:vorchaSpecies }
+			}	
+			while = {
+				count = 2
+				create_pop = { species = event_target:hanarSpecies }
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:drellSpecies }
+			}	
+			add_deposit = d_alloys_2
+			set_planet_flag = starting_deposit
+
+		}		
     }
 	
     init_effect = { 
@@ -2535,7 +2862,7 @@ sys_relic_init = {
 			type = "eaglenebula_oshibkacliff_massrelay" 
 			name = "Eagle_5_Relay"
 			random_pos = NO 
-			orbit_distance = 25
+			orbit_distance = 250
 			
 		} 
 	}    
@@ -2549,14 +2876,20 @@ sys_strabo_init = {
         save_global_event_target_as = "strabo_relay_system"
     }
 
-    flags = {
-        strabo_system
-    }
+    flags = { strabo_system custom_system btr_system }
 	
     planet = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			set_deposit = d_energy_4
+			set_planet_flag = starting_deposit
+		}
     }
 	
 	asteroid_belt = {
@@ -2567,13 +2900,12 @@ sys_strabo_init = {
     planet = {
         name = "Antigar"
         class = "pc_gas_giant"
-        orbit_distance = 100
+        orbit_distance = 140
         orbit_angle = 174
         has_ring = yes
 		size = 27
-        init_effect = {
-			set_planet_flag = antigar_codex
-        }
+		flags = { antigar pd_ignore }
+
 		moon = {
 			name = "Antigar_a"
 			class = "pc_frozen"
@@ -2590,7 +2922,7 @@ sys_strabo_init = {
 		}
 		moon = {
 			name = "Antigar_c"
-			class = "pc_cryovolcanic"
+			class = "pc_subglacial"
 			size = 3
 			orbit_distance = 4
 			orbit_angle = 97
@@ -2650,6 +2982,36 @@ sys_strabo_init = {
 			size = 3
 			orbit_distance = 7
 			orbit_angle = 99
+		}
+		moon = {
+			name = "Jarrahe Station"
+			count = 1
+			class = "pc_jarrahe_station"
+			entity = "btr_jarrahe_station"
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 18
+			size = 4
+			flags = { jarrahe_station pd_ignore }
+			init_effect = {
+				set_owner = event_target:pranasOwner
+				create_colony = {
+					owner = event_target:pranasOwner
+					species = event_target:salarianSpecies
+					ethos = owner
+				}
+				ignore_initial_colony_error = yes				
+				while = {
+					count = 2
+					create_pop = { species = event_target:salarianSpecies }
+				}
+			
+				add_district = district_pdhab_science
+				add_district = district_pdhab_science	
+				add_district = district_pdhab_mil
+				add_district = district_pdhab_mil											
+				add_deposit = d_jarrahe_vi
+				add_deposit = d_jarrahe_research	
+			}
 		}		
     }
 
@@ -2658,7 +3020,7 @@ sys_strabo_init = {
 			type = "eaglenebula_minoswasteland_massrelay" 
 			name = "Eagle_6_Relay"
 			random_pos = NO 
-			orbit_distance = 25
+			orbit_distance = 250
 			
 		} 
 	}	

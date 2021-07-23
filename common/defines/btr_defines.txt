@@ -1,6 +1,73 @@
+Ncamera = {
+FOV								= 35	# 35	# Field-of-View
+SYSTEM_FAR_PLANE_DISTANCE_BASE = 80000.0
+GALAXY_SPACE_SCALE_MULT			= 2.0	# 2.0
+
+GALAXY_SHOW_FLEETS_ZOOM 		= 2000	# 2300	# Camera zoom interval to show fleet icons
+GALAXY_SHOW_STARNAME_ZOOM 		= 1000	# 800	# Camera zoom interval to show star name
+GALAXY_SHOW_FILTERICONS_ZOOM 	= 600	# NA	# Camera zoom interval to show filter icons
+
+ROTATION_RADIANS_PER_MOUSE_UNIT		= 0.008			# 0.004	# moving the mouse 1 pixel results in rotation of X radians * sensitivity from settings
+MOUSE_MOVEMENT_TO_START_ROTATION_SQ	= 9				# 16	# how far (squared) you need to move the mouse before the game recognizes this as a camera rotation action
+SCROLL_SPEED						= 0.05			# 0.035	# higher values = faster camera. NOTE that this is tweakables from settings as well!
+
+HIDE_ORBITS_ZOOM					= 3000
+											0		1		2		3		4		5		6		7
+ZOOM_STEPS_GALAXY				= { 100		220		450		800		1400	3000 }				# Galaxy zoom steps
+ZOOM_STEPS_SYSTEM_PERCENTAGES	= { 0.004	0.0072	0.0146	0.0334	0.0833	0.2234	0.6398	1.9405 }	# System zoom steps in percent relative to the system size
+
+
+LEAVE_SYSTEM_ZOOM_STEP 			= 2		# 1		# Controls which zoom step is used after leaving system
+ENTER_SYSTEM_ZOOM_STEP 			= 7		# 6		# Controls which zoom step is used after entering system
+SYSTEM_FOCUS_PLANET_STEP 		= 2		# 2		# Controls which zoom step to planet zoom to in a system
+
+SYSTEM_SPACE_SCALE_MULT			= 60.0	# 10.0
+
+SYSTEM_MIN_PITCH				= -89		# 10	# 20.0	# in degrees
+SYSTEM_MAX_PITCH				= 89	# 80.0	# in degrees
+GALAXY_MIN_PITCH				= 1	# 30.0	# in degrees
+GALAXY_MAX_PITCH				= 89	# 85.0	# in degrees
+FOCUSED_MIN_PITCH				= -89	# -80.0	# in degrees used when focused on planet/ship
+FOCUSED_MAX_PITCH				= 89	# 80.0	# in degrees used when focused on planet/ship
+
+FOCUSED_MIN_ZOOM_BASE			= 20.0	# 20.0	# base min zoom. The smaller the value is, the closer of the ENTITY the camera is at minimal zoom
+FOCUSED_MIN_ZOOM_MULT			= 0.6	# 0.5	# The smaller the value is, the closer of the SHIP the camera is at minimal zoom # Minimal zoom = Base + Entity radius * FOCUSED_MIN_ZOOM_MULT
+FOCUSED_PLANET_MIN_ZOOM_MULT	= 1.5	# 1.6	# The smaller the value is, the closer of the PLANET the camera is at minimal zoom
+FOCUS_START_ZOOM_STEP			= 3 	# 4		# which zoom step will be used when focusing on a new object
+
+SYSTEM_HOVER_RANGE				= 0.009	# 0.005
+
+SYSTEM_SLIDE_RADIUS_FACTOR		= 0.25	# 4.0
+}
+
 NGraphics = { 
+
 	ORBIT_HSV = { .567 0.926 0.911 } 
 	SYSTEM_INNER_BORDER_HSV	= { .567 0.926 0.911 }
 	SYSTEM_OUTER_BORDER_HSV	= { .567 0.926 0.911 }
+
+	DEFAULT_PLANET_PLANE			= -75		# -150.0
+	MOON_SCALE 						= 0.5
+	PLANET_SCALE_SYSTEM				= { 0.375	1.4757	1.1130	1.0479	1.5006	1.119	0.7815	0.773 }	# Scale for each System zoom steps
+	ASTEROID_PLANE					= -75.0	# -100.0
+	SHIP_RANDOM_HEIGHT_OFFSET		= 40.0		# 15.0
+}
+
+NGameplay = {
+	
+	PLANET_SHIP_ORBIT_DISTANCE 			= 4.0	#2.0	# how far from the planet ships will orbit
+	PLANET_STATION_ORBIT_DISTANCE		= 3.5	#6.0	# how far from the planet orbital stations will be
+	STARBASE_ORBIT_DISTANCE				= 20.0	#15.0
+
+		}
+
+NCombat = {
+
+	COMBAT_DETECT_RANGE_MULT			= 0.70	# 1.05	# Range to engage in combat with other ships is <fleets max attack range> * COMBAT_DETECT_RANGE_MULT
+	COMBAT_AREA_MIN_ATTACK_RADIUS		= 0.07	# 0.2
+}	
+
+NShip = { 
+	FLEET_BASE_FORMATION_SCALE			= 0.6	# 2.0
 }
 
