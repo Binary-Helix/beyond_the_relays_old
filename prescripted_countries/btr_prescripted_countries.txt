@@ -697,73 +697,148 @@ batarian_hegemony={
 }
 
 # Quarian Admiralty - TODO - Add back in!
-#quarian_admiralty={
-#	ship_prefix=""
-#	species={
-#		class="QUA"
-#		portrait="quarian"
-#		name="Quarian"
-#		plural="Quarians"
-#		adjective="Quarian"
-#		name_list="btr_quarian"
-#		trait="trait_natural_engineers"
-#		trait="trait_nonadaptive"
-#		trait="trait_communal"
-#		trait="trait_traditional"
-#		trait="trait_quick_learners"
-#	}
-#	name="Quarian Admiralty"
-#	adjective="Quarian Admiralty"
-#	authority="auth_democratic"
-#	government="gov_rational_consensus"
-#	planet_name="Nexin VI"
-#	planet_class="pc_savannah"
-#	system_name="Nexin"
-#	initializer=""
-#	graphical_culture="quar_01"
-#	city_graphical_culture="mammalian_01"
-#	flags={
-#		quarian_admiralty
-#	}
-#	empire_flag={
-#		icon={
-#			category="masseffect"
-#			file="Migrant Fleet.dds"
-#		}
-#		background={
-#			category="backgrounds"
-#			file="00_solid.dds"
-#		}
-#		colors={
-#			"dark_purple"
-#			"black"
-#			"null"
-#			"null"
-#		}
-#	}
-#	ruler={
-#		gender=female
-#		name="Yehu'Shosal vas Velarm"
-#		portrait="quarian_female_01"
-#		texture=0
-#		hair=0
-#		clothes=0
-#		ruler_title="First Admiral"
-#		ruler_title_female="First Admiral"
-#		leader_class="ruler"
-#	}
-#	spawn_as_fallen=no
-#	ignore_portrait_duplication=no
-#	room="quarian_room"
-#	spawn_enabled=always
-#	ethic="ethic_egalitarian"
-#	ethic="ethic_fanatic_materialist"
-#	civics={
-#		"civic_technocracy"
-#		"civic_functional_architecture"
-#	}
-#	origin="origin_default"
-#}
+# quarian_admiralty={
+# 	ship_prefix=""
+# 	species={
+# 		class="QUA"
+# 		portrait="quarian"
+# 		name="Quarian"
+# 		plural="Quarians"
+# 		adjective="Quarian"
+# 		name_list="btr_quarian"
+# 		trait="trait_natural_engineers"
+# 		trait="trait_nonadaptive"
+# 		trait="trait_communal"
+# 		trait="trait_traditional"
+# 		trait="trait_quick_learners"
+# 	}
+# 	name="Quarian Admiralty"
+# 	adjective="Quarian Admiralty"
+# 	authority="auth_democratic"
+# 	government="gov_rational_consensus"
+# 	planet_name="Nexin VI"
+# 	planet_class="pc_savannah"
+# 	system_name="Nexin"
+# 	initializer=""
+# 	graphical_culture="quar_01"
+# 	city_graphical_culture="mammalian_01"
+# 	flags={
+# 		quarian_admiralty
+# 	}
+# 	empire_flag={
+# 		icon={
+# 			category="masseffect"
+# 			file="Migrant Fleet.dds"
+# 		}
+# 		background={
+# 			category="backgrounds"
+# 			file="00_solid.dds"
+# 		}
+# 		colors={
+# 			"dark_purple"
+# 			"black"
+# 			"null"
+# 			"null"
+# 		}
+# 	}
+# 	ruler={
+# 		gender=female
+# 		name="Yehu'Shosal vas Velarm"
+# 		portrait="quarian_female_01"
+# 		texture=0
+# 		hair=0
+# 		clothes=0
+# 		ruler_title="First Admiral"
+# 		ruler_title_female="First Admiral"
+# 		leader_class="ruler"
+# 	}
+# 	spawn_as_fallen=no
+# 	ignore_portrait_duplication=no
+# 	room="quarian_room"
+# 	spawn_enabled=always
+# 	ethic="ethic_egalitarian"
+# 	ethic="ethic_fanatic_materialist"
+# 	civics={
+# 		"civic_technocracy"
+# 		"civic_functional_architecture"
+# 	}
+# 	origin="origin_default"
+# }
+
+# Quarian Admiralty
+quarian_admiralty={
+	ship_prefix = ""
+	species={
+		class="QUA"
+		portrait="quarian"
+		name="Quarian"
+		plural="Quarians"
+		adjective="Quarian"
+		name_list="btr_quarian"
+		trait ="trait_void_dweller_1"
+		trait="trait_natural_engineers"
+		trait="trait_nonadaptive"
+		trait="trait_communal"
+		trait="trait_traditional"
+		trait="trait_quick_learners"
+		}
+	name = "Quarian Admiralty"
+	adjective = "Quarian Admiralty"
+	authority = auth_democratic
+	government = gov_rational_consensus
+	planet_name = "Rayya"
+	planet_class = "pc_quarian"
+	system_name = "Raheel-Leyya"
+	advisor_voice_type="l_the_technocrat"
+	initializer = ""
+	graphical_culture = "quarian_01"
+	city_graphical_culture = "quarian_01"
+	flags={
+		quarians
+		btr_empire
+	}
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Migrant Fleet.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+
+	ruler = {
+		name = "Admiral Shala'Raan vas Tonbay"
+		gender = female
+		portrait = "quarian_female_01"
+		texture = 0
+		hair = 0
+		clothes = 0
+		ruler_title="First Admiral"
+		ruler_title_female="First Admiral"
+		leader_class = "ruler"
+	}
+	spawn_as_fallen = no
+	ignore_portrait_duplication = no
+	room = quarian_room
+	spawn_enabled = always
+	ethic = ethic_egalitarian
+	ethic = ethic_fanatic_materialist
+	civics = {
+		civic_technocracy
+		civic_functional_architecture
+	}
+	origin = origin_default
+
+
+}
 
 # Geth Consensus
 geth_consensus={
@@ -1470,8 +1545,6 @@ mec_asariillium_civ = {
 		trait = "mec_asari_trait_sophisticated"
 	}
 	
-	advisor_voice_type = "l_slick_corp"
-	
 	room = "personality_peaceful_traders_room"
 	
 	ethic = "ethic_authoritarian"
@@ -1545,8 +1618,6 @@ mec_asarirepublics_civ = {
 		trait = "trait_charismatic"
 		trait = "mec_asari_trait_sophisticated"
 	}
-	
-	advisor_voice_type = "l_pacifist"
 	
 	room = "personality_metalheads_room"
 	
