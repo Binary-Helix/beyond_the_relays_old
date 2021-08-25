@@ -62,7 +62,7 @@ sys_aru_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_vol_protectorate_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "vol_protectorate" }
 				save_event_target_as = aruOwner
@@ -528,7 +528,7 @@ sys_pranas_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_salarian_union_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "salarian_union" }
 				save_event_target_as = pranasOwner
@@ -889,7 +889,7 @@ sys_trebia_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_turian_hierarchy_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "turian_hierarchy" }
 				save_event_target_as = trebiaOwner
@@ -1066,7 +1066,7 @@ sys_aralakh_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_krogan_chiefdom_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "krogan_chiefdom" }
 				save_event_target_as = aralakhOwner
@@ -2084,7 +2084,7 @@ sys_kanala_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_illuminated_primacy_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "illuminated_primacy" }
 				save_event_target_as = kanalaOwner

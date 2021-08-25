@@ -1,0 +1,19 @@
+objectTypes = {
+
+	#############################
+#Jarrahe Station
+	pdxmesh = {
+		name = "btr_jarrahe_station_mesh"
+		file = "gfx/models/starbases/salarian/btr_jarrahe_station.mesh"
+		scale = 0.3
+			
+		meshsettings = {
+			name = "btr_jarrahe_station_mesh"
+			index = 0
+			texture_diffuse = "btr_jarrahe_station_diff.dds"
+			texture_normal = "btr_jarrahe_station_norm.dds"
+			texture_specular = "btr_jarrahe_station_spec.dds"
+			shader = "PdxMeshPlanetEmissive"
+		}
+	}	
+}

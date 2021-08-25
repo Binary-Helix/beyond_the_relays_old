@@ -99,6 +99,8 @@ planet_event = {
 	}
 }
 
+
+
 # Omega setup
 country_event = {
 	id = btr_setup.5
@@ -181,6 +183,22 @@ country_event = {
 				modifier = btr_minor_empire
 				days = 7300
 			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.8
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_country_flag = parnack_regime_player
+				}
+			}
+			generate_btr_parnack_regime_capitol_buildings = yes
 		}
 	}
 }

@@ -1471,7 +1471,6 @@ sys_balor_init = {
         has_ring = no
 		size = 32
 		flags = { cernunnos pd_ignore}
-		}
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -1500,6 +1499,7 @@ sys_balor_init = {
 				}
 			}
        }
+	} 
 
 
     planet = {
@@ -3035,7 +3035,7 @@ sys_azedes_init = {
     class = "sc_g"
 	max_instances = 1
 
-	flags = { empire_home_system btr_raloi_republic_system custom_system }	
+	flags = { empire_home_system custom_system btr_system azedes }	
 
 	usage = custom_empire
 
@@ -3062,9 +3062,7 @@ sys_azedes_init = {
         orbit_angle = 208
         has_ring = no		
 		size = 12
-        init_effect = {
-			set_planet_flag = vess'kur_codex
-        }
+		flags = { pd_ignore vess'kur}
 		moon = {
 			name = "Mass'kur"
 			class = "pc_barren"
@@ -3084,12 +3082,12 @@ sys_azedes_init = {
 
 		deposit_blockers = none
 		modifiers = none
-		flags = { turvess_codex btr_raloi_republic_planet_turvess special_start_planet } 
+		flags = { turvess btr_raloi_republic_planet_turvess special_start_planet } 
 
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_raloi_republic_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "raloi_republic" }
 				save_event_target_as = azedesOwner
@@ -3105,28 +3103,26 @@ sys_azedes_init = {
 		
 		moon = {
 			name = "Ino"
-			class = "pc_barren"
+			class = "pc_subglacial"
 			orbit_distance = 8
 			size = 4
 		}
 		moon = {
 			name = "Opi"
-			class = "pc_barren"
+			class = "pc_iron"
 			orbit_distance = 8
 			size = 5
 		}		
 	}
 
 	planet = {
-		name = "Ikura"
-		class = "pc_frozen"
+		name = "Iku'ra"
+		class = "pc_iron"
 		orbit_distance = 45
         orbit_angle = 84
         has_ring = no		
 		size = 14
-        init_effect = {
-			set_planet_flag = ikura_codex
-        }
+		flags = { iku'ra }
 		moon = {
 			name = "Ikura_a"
 			class = "pc_frozen"
@@ -3154,15 +3150,27 @@ sys_azedes_init = {
         orbit_angle = 280
         has_ring = yes		
 		size = 36
-        init_effect = {
-			set_planet_flag = vaal_codex
-        }
+		flags = { vaal pd_ignore }
 		moon = {
 			name = "Vaal_a"
 			class = "pc_frozen"
 			orbit_distance = 8
 			size = 3
 		}
+
+		moon = {
+			name = "Vaal_b"
+			class = "pc_iron"
+			orbit_distance = 8
+			size = 3
+		}		
+
+		moon = {
+			name = "Vaal_c"
+			class = "pc_subglacial"
+			orbit_distance = 8
+			size = 3
+		}		
 	}	
 
 	planet = {
@@ -3172,9 +3180,7 @@ sys_azedes_init = {
         orbit_angle = 230
         has_ring = no		
 		size = 35
-        init_effect = {
-			set_planet_flag = sakur_codex
-        }
+		flags = { sakur pd_ignore }
 		moon = {
 			name = "Sakur_a"
 			class = "pc_frozen"
@@ -3187,24 +3193,16 @@ sys_azedes_init = {
 			orbit_distance = 7
 			size = 5
 		}
-		moon = {
-			name = "Sakur_c"
-			class = "pc_frozen"
-			orbit_distance = 7
-			size = 4
-		}
 	}
 
 	planet = {
 		name = "Kuroi"
-		class = "pc_cryovolcanic"
+		class = "pc_ethane_ocean"
 		orbit_distance = 35
         orbit_angle = 120
         has_ring = no		
 		size = 5
-        init_effect = {
-			set_planet_flag = kuroi_codex
-        }
+		flags = { kuroi }
 		moon = {
 			name = "Kuroi_a"
 			class = "pc_iron"
@@ -3224,7 +3222,7 @@ sys_azedes_init = {
 			type = "hadesnexus_calestonrift_massrelay" 
 			name = "Hades_Nexus_1_Relay"
 			random_pos = NO 
-			orbit_distance = 275			
+			orbit_distance = 375			
 		} 
     }   
      
@@ -3234,14 +3232,21 @@ sys_hekate_init = {
     name = "Hekate"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "hekate_relay_system"
-    }
 
-    flags = {
-        hekate_system
-    }
-	
+	flags = { empire_home_system custom_system btr_system hekate }	
+
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}	
+
     planet = {
         class = "pc_g_star"
         orbit_distance = 0
@@ -3250,27 +3255,126 @@ sys_hekate_init = {
 
     planet = {
         name = "Asteria"
-        class = "pc_dextro_arid"
+        class = "pc_sandsea"
         orbit_distance = 60
         orbit_angle = 306
         has_ring = no
 		size = 14
-        init_effect = {
-			set_planet_flag = asteria_codex
-        }
+		flags = { pd_ignore asteria}
+		init_effect = {
+			set_owner = event_target:parnithaOwner
+			create_colony = {
+				owner = event_target:parnithaOwner
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+			while = {
+				count = 3
+				create_pop = { species = event_target:asariSpecies }
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:humanSpecies }
+			}			
+			generate_btr_major_empire_start_buildings = yes
+			clear_deposits = yes
+			prevent_anomaly = yes
+			clear_planet_modifiers = yes 
+			add_modifier = {
+				modifier = mineral_poor
+				days = -1
+			}
+			add_modifier = {
+				modifier = bleak_planet
+				days = -1
+			}			
+   		 }
     }
 
     planet = {
         name = "Ker"
-        class = "pc_barren"
+        class = "pc_antarctic"
         orbit_distance = 45
         orbit_angle = 296
         has_ring = no
 		size = 16
-        init_effect = {
-			set_planet_flag = ker_codex
-        }
-    }
+		flags = { ker pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			generate_btr_start_deposits_and_blockers = yes
+			generate_btr_major_empire_start_buildings = yes
+			create_country = {
+				name_list = btr_batarian
+				species = event_target:batarianSpecies
+				type = independent_colony
+				ethos = {
+					ethic = ethic_authoritarian
+					ethic = ethic_militarist
+					ethic = ethic_materialist
+				}
+				civics = { 
+					civic = civic_indentured_assets
+					civic = civic_private_military_companies
+					civic = civic_criminal_heritage
+				}
+				origin = "origin_default"
+				flag={
+					icon={
+						category="pirate"
+						file="flag_pirate_3.dds"
+					}
+					background={
+						category="backgrounds"
+						file="circle.dds"
+					}
+					colors={
+						"red"
+						"black"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_authoritarian
+					ethic = ethic_xenophobe
+				}
+				name="Criminal Hideout"
+				adjective="CRM"
+				authority="auth_corporate"
+				ignore_initial_colony_error = yes
+			}
+			last_created_country = {
+				set_graphical_culture = industrial_01
+				set_country_flag = relic_minerals
+				set_country_flag = independent_colony
+				save_global_event_target_as = relic_minerals
+			}
+			create_colony = { 
+				owner = last_created_country 
+				species = last_created 
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:kroganSpecies }
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:batarianSpecies }
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:vorchaSpecies }
+			}
+			generate_btr_major_empire_start_buildings = yes
+			clear_deposits = yes
+			prevent_anomaly = yes
+			clear_planet_modifiers = yes 
+			add_modifier = {
+				modifier = mineral_poor
+				days = -1
+			}							
+    	}
+	}
 
     planet = {
         name = "Triodia"
@@ -3279,102 +3383,106 @@ sys_hekate_init = {
         orbit_angle = 293
         has_ring = no
 		size = 27
-        init_effect = {
-			set_planet_flag = triodia_codex
-        }
+		flags = { triodia pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}			
+		}
 		moon = {
-			name = "Triodia_a"
+			name = "Keare"
 			class = "pc_asteroid"
 			orbit_distance = 8
 			orbit_angle = 96
 			size = 3
 			}
 		moon = {
-			name = "Triodia_b"
+			name = "Alovau"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 128
 			size = 2
 			}	
 		moon = {
-			name = "Triodia_c"
+			name = "Emgao"
 			class = "pc_asteroid"
 			orbit_distance = 8
 			orbit_angle = 128
 			size = 1
 			}		
 		moon = {
-			name = "Triodia_d"
+			name = "Phearlea"
 			class = "pc_frozen"
 			orbit_distance = 1
 			orbit_angle = 3
 			size = 3
 			}
 		moon = {
-			name = "Triodia_e"
+			name = "Lysrynia"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 53
 			size = 1
 			}	
 		moon = {
-			name = "Triodia_f"
+			name = "Janariya"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 128
 			size = 1
 			}
 		moon = {
-			name = "Triodia_g"
+			name = "Se'no"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 256
 			size = 1
 			}
 		moon = {
-			name = "Triodia_h"
+			name = "Zeucka"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 180
 			size = 1
 			}
 		moon = {
-			name = "Triodia_i"
+			name = "Falelthea"
 			class = "pc_frozen"
 			orbit_distance = 3
 			orbit_angle = 10
 			size = 6
 			}
 		moon = {
-			name = "Triodia_j"
+			name = "Biumha"
 			class = "pc_asteroid"
 			orbit_distance = 3
 			orbit_angle = 100
 			size = 1
 			}	
 		moon = {
-			name = "Triodia_k"
+			name = "Ushilea"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 145
 			size = 1
 			}	
 		moon = {
-			name = "Triodia_l"
+			name = "Chaessley"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 256
 			size = 1
 			}
 		moon = {
-			name = "Triodia_m"
+			name = "Alaname"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 73
 			size = 1
 			}
 		moon = {
-			name = "Triodia_n"
+			name = "Telestze"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 22
@@ -3384,15 +3492,13 @@ sys_hekate_init = {
 
     planet = {
         name = "Bothros"
-        class = "pc_frozen"
+        class = "pc_subglacial"
         orbit_distance = 60
         orbit_angle = 194
         has_ring = no
 		size = 18
-        init_effect = {
-			set_planet_flag = bothros_codex
-        }
-    }
+		flags = { bothros pd_ignore }
+	}
 
     init_effect = { 
 		spawn_megastructure = { 
@@ -3408,13 +3514,8 @@ sys_hoplos_init = {
     name = "Hoplos"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "hoplos_hyperlane_system"
-    }
 
-    flags = {
-        hoplos_system
-    }
+    flags = { hoplos_system custom_system btr_system }
 	
     planet = {
         class = "pc_g_star"
@@ -3424,14 +3525,18 @@ sys_hoplos_init = {
 
     planet = {
         name = "Talaria"
-        class = "pc_barren"
+        class = "pc_tidallylocked"
         orbit_distance = 50
         orbit_angle = 126
         has_ring = no
 		size = 8
-        init_effect = {
-			set_planet_flag = talaria_codex
-        }
+		flags = { talaria pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -3441,9 +3546,7 @@ sys_hoplos_init = {
         orbit_angle = 83
         has_ring = no
 		size = 11
-        init_effect = {
-			set_planet_flag = makhaira_codex
-        }
+		flags = { Makhaira }
 		moon = {
 			name = "Makhaira_a"
 			class = "pc_barren"
@@ -3459,9 +3562,13 @@ sys_hoplos_init = {
             orbit_angle = 180
             has_ring = no
 			size = 4
-            init_effect = {
-                set_planet_flag = kopis_codex
-                }	
+			flags = { Kopis pd_ignore }
+			init_effect = {
+				add_modifier = {
+					modifier = low_gravity
+					days = -1
+				}
+			}
         }
     }
 
@@ -3472,9 +3579,29 @@ sys_hoplos_init = {
         orbit_angle = 99
         has_ring = no
 		size = 15
-        init_effect = {
-			set_planet_flag = trident_codex
-        }
+		init_effect = {
+			set_owner = event_target:solOwner
+			create_colony = {
+				owner = event_target:solOwner
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			while = {
+				count = 3
+				create_pop = { species = event_target:humanSpecies }
+			}
+			generate_btr_major_empire_start_buildings = yes
+			clear_deposits = yes
+			add_deposit = d_element_zero_1
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
+			add_modifier = {
+				modifier = criminal_underworld
+				days = -1
+			}			
+		}
     }
 
     planet = {
@@ -5029,7 +5156,7 @@ sys_maskimxul_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_rachni_start_buildings = yes
+			generate_btr_rachni_swarm_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "rachni_hive" }
 				save_event_target_as = maskimxulOwner

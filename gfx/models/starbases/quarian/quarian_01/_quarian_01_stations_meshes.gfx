@@ -1,0 +1,78 @@
+objectTypes = {
+	# Liveship
+	pdxmesh = {
+		name = "quarian_01_liveship_frame_mesh"
+		file = "gfx/models/ships/quarian_01/quarian_01_liveship/quarian_01_liveship_frame.mesh"
+
+		meshsettings = {
+			name = "hull_1"
+			texture_diffuse = "quarian_01_liveship_hull_diffuse.dds"
+			texture_normal = "quarian_01_liveship_hull_normal.dds"
+			texture_specular = "quarian_01_liveship_hull_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	# Frigate
+	pdxmesh = {
+		name = "quarian_01_frigate_frame_mesh"
+		file = "gfx/models/ships/quarian_01/quarian_01_frigate/quarian_01_frigate_frame.mesh"
+
+		meshsettings = {
+			name = "hull_1"
+			texture_diffuse = "quarian_01_frigate_hull_1_diffuse.dds"
+			texture_normal = "quarian_01_frigate_hull_1_normal.dds"
+			texture_specular = "quarian_01_frigate_hull_1_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_2"
+			texture_diffuse = "quarian_01_frigate_hull_2_diffuse.dds"
+			texture_normal = "quarian_01_frigate_hull_2_normal.dds"
+			texture_specular = "quarian_01_frigate_hull_2_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_3"
+			texture_diffuse = "quarian_01_frigate_hull_3_diffuse.dds"
+			texture_normal = "quarian_01_frigate_hull_3_normal.dds"
+			texture_specular = "quarian_01_frigate_hull_3_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+
+	# Cruiser
+	pdxmesh = {
+		name = "quarian_01_cruiser_frame_mesh"
+		file = "gfx/models/ships/quarian_01/quarian_01_cruiser/quarian_01_cruiser_frame.mesh" 
+
+		meshsettings = {
+			name = "hull_1"
+			texture_diffuse = "quarian_01_cruiser_hull_1_diffuse.dds"
+			texture_normal = "quarian_01_cruiser_hull_1_normal.dds"
+			texture_specular = "quarian_01_cruiser_hull_1_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_2"
+			texture_diffuse = "quarian_01_cruiser_hull_2_diffuse.dds"
+			texture_normal = "quarian_01_cruiser_hull_2_normal.dds"
+			texture_specular = "quarian_01_cruiser_hull_2_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+		meshsettings = {
+			name = "hull_3"
+			texture_diffuse = "quarian_01_cruiser_hull_3_diffuse.dds"
+			texture_normal = "quarian_01_cruiser_hull_3_normal.dds"
+			texture_specular = "quarian_01_cruiser_hull_3_specular.dds"
+			index = 0
+			shader = "PdxMeshShip"
+		}
+	}
+}

@@ -277,7 +277,7 @@ sys_parnitha_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			btr_asari_generate_thessia_deposits = yes
-			btr_asari_setup_origin_homeworld = yes
+			generate_btr_asari_republics_capitol_buildings = yes
 
 			random_country = {
 				limit = { has_country_flag = "asari_republics" }
@@ -1776,7 +1776,7 @@ sys_phontes_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_courts_of_dekuuna_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "courts_of_dekuuna" }
 				save_event_target_as = phontesOwner

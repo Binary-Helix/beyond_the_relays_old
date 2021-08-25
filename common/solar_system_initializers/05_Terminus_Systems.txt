@@ -505,7 +505,7 @@ sys_tasale_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			btr_asari_generate_illium_deposits = yes
-			btr_asari_setup_origin_homeworld = yes
+			generate_btr_asari_corporate_interests_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "asari_corporate_interests" }
 				save_event_target_as = tasaleOwner
@@ -972,7 +972,7 @@ sys_tartarusdebrisfield_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_collector_base_buildings = yes						
+			generate_btr_collectors_capitol_buildings = yes						
 			random_country = {
 				limit = { has_country_flag = "collectors" }
 				save_event_target_as = tartarus_debris_fieldOwner
@@ -2585,7 +2585,7 @@ sys_tikkun_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_geth_consensus_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "geth_consensus" }
 				save_event_target_as = tikkunOwner
@@ -3599,7 +3599,7 @@ sys_kyzil_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_major_empire_start_buildings = yes
+			generate_btr_vorcha_chiefdom_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "vorcha_chiefdom" }
 				save_event_target_as = kyzilOwner

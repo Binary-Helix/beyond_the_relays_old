@@ -193,8 +193,8 @@ independent_colony = {
 		internal_policies = yes
 		modification = no
 		government = yes
-		traditions = yes
-		construction = yes
+		traditions = no
+		construction = no
 		can_use_market = yes
 		modules = {
 			military_minister_module
@@ -202,7 +202,7 @@ independent_colony = {
 			interior_minister_module
 		}
 		ship_data = {
-			constructor = { min = 0 max = 1 }
+			constructor = { min = 0 max = 0 }
 			starbase_outpost = { min = 0 max = 0 }
 			science	= { min = 0 max = 0 }
 			colonizer = { min = 0 max = 0 }
@@ -266,7 +266,7 @@ independent_colony = {
 	}
 	faction = {
 		needs_colony = yes
-		needs_border_access = yes
+		needs_border_access = no
 	}
 	modules = {
 		standard_event_module = {}
