@@ -4521,6 +4521,13 @@ sys_micah_init = {
         orbit_angle = 265
         has_ring = no
 		size = 30
+		moon={
+			name = "Chayym"
+			class = "pc_habitat"
+			orbit_angle = { min =90 max = 270}
+			orbit_distance = 20
+			size = 12
+		}
     }
 
     planet = {
@@ -4591,6 +4598,13 @@ sys_paz_init = {
         class = "pc_a_star"
         orbit_distance = 0
         size = 28
+		moon={
+			name = "Shellen"
+			class = "pc_habitat"
+			orbit_angle = { min =90 max = 270}
+			orbit_distance = 20
+			size = 12
+		}
     }
 
     planet = {
@@ -4634,6 +4648,19 @@ sys_raheelleyya_init = {
     name = "Raheel-Leyya"
     class = "sc_binary_b_b"
 	max_instances = 1
+	flags={ empire_home_system btr_quarian_system custom_system}
+
+	usage = custom_empire
+
+	init_effect ={
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
     asteroid_belt = {
         type = rocky_asteroid_belt
         radius = 130
@@ -4645,9 +4672,6 @@ sys_raheelleyya_init = {
         size = 15
         orbit_distance = 30
         orbit_angle = { min = 90 max = 270 }
-		init_effect = {
-			save_global_event_target_as = migrant_fleet_home_star
-		}		
     }
 
     planet = {
@@ -4656,137 +4680,168 @@ sys_raheelleyya_init = {
         size = 25 
         orbit_distance = 0
         orbit_angle = 180
+		moon={
+			name = "Rayya"
+			class = "pc_habitat"
+			orbit_angle = { min =90 max = 270}
+			orbit_distance = 30
+			size = 12
+			starting_planet = yes
+			deposit_blockers = none 
+			modifiers = none
+			init_effect = {
+				prevent_anomaly = yes
+				generate_btr_start_deposits_and_blockers = yes
+				generate_btr_collector_base_buildings = yes
+				random_country =  {
+					limit = { has_country_flag = "quarians" }
+					save_event_target_as = raheel-leyya_Owner
+					save_global_event_target_as = quarianSpecies
+					species = { save_global_event_target_as = quarianSpecies }
+				}
+				set_planet_flag = megastructure
+				set_planet_flag = habitat
+				set_capital = yes
+				set_owner = event_target:quarians
+				while = {
+					count = 20
+					create_pop = { species= event_target:quarianSpecies }
+				}
+				clear_deposits = yes
+				set_name = "Rayya"
+			}
+		}
     }
-	init_effect = {
-		save_global_event_target_as = migrant_fleet_home_system
-		create_species = {
-			name = "Quarian"
-			plural = "Quarians"
-			adjective = "Quarian"
-			class = "QUA"
-			portrait = quarian
-			name_list = btr_quarian
-			traits = {
-				trait="trait_natural_engineers"
-		        trait="trait_nonadaptive"
-		        trait="trait_communal"
-		        trait="trait_traditional"
-		        trait="trait_quick_learners"
-				ideal_planet_class = "pc_savannah" 
-			}
-		}
-		create_country = {
-			name_list = btr_quarian
-			species = last_created
-			type = migrant_fleet
-			authority = auth_oligarchic
-			civics = {
-				civic = civic_caravaneer_fleet1
-			}
-			flag = {
-				icon={
-					category="masseffect"
-					file="Migrant Fleet.dds"
-				}
-				background={
-					category="backgrounds"
-					file="00_solid.dds"
-				}
-				colors={
-					"dark_purple"
-					"black"
-					"null"
-					"null"
-				}
-			}
-			ethos = {
-				ethic = ethic_egalitarian
-	            ethic = ethic_materialist
-			}
-			ignore_initial_colony_error = yes
-			effect = {
-				set_country_flag = migrant_fleet
-				set_graphical_culture = caravaneer_01
-				save_global_event_target_as = migrant_fleet
-				create_leader = {
-					class = admiral
-					species = event_target:quarianSpecies
-					name = "Zaal'Koris vas Qwib-Qwib"
-					gender = male
-					skill = 5
-					immortal = yes
-				}
-				create_fleet = {
-					name = "Migrant Fleet"
-					settings = { spawn_debris = no }
-					effect = {
-						set_fleet_stance = passive
-						set_formation_scale = 2.5
-						set_owner = prev
-						create_ship = {
-							name = "Chayym"
-							design = migrant_fleet_liveship
-							effect = {
-								set_ship_flag = migrant_fleet_liveship_chayym
-								save_global_event_target_as = migrant_fleet_liveship_chayym
-							}
-						}
-						create_ship = {
-							name = "Rayya"
-							design = migrant_fleet_liveship
-							effect = {
-								set_ship_flag = migrant_fleet_liveship_rayya
-								save_global_event_target_as = migrant_fleet_liveship_rayya
-							}
-						}
-						create_ship = {
-							name = "Shellen"
-							design = migrant_fleet_liveship
-							effect = {
-								set_ship_flag = migrant_fleet_liveship_shellen
-								save_global_event_target_as = migrant_fleet_liveship_shellen
-							}
-						}
-						while = {
-							count = 30
-							create_ship = {
-								name = random
-								design = migrant_fleet_frigate
-							}
-						}
-						while = {
-							count = 14
-							create_ship = {
-								name = random
-								design = migrant_fleet_cruiser
-							}
-						}
-						set_location = {
-							target = event_target:migrant_fleet_home_star
-							angle = 90
-							distance = 40
-						}
-						set_fleet_flag = migrant_fleet_1
-						save_global_event_target_as = migrant_fleet1_fleet
-						prev = {
-							set_custom_capital_location = event_target:migrant_fleet1_fleet
-						}
-						assign_leader = last_created_leader
-					}
-				}
-				create_leader = {
-					class = ruler
-					species = event_target:quarianSpecies
-					name = "Admiral Shala'Raan vas Tonbay"
-					skill = 5
-					immortal = yes
-				}
-				set_leader = last_created_leader
-			}
-		}
-		last_created_country = {
-			set_name = "Migrant Fleet"
-		}
+	# init_effect = {
+	# 	save_global_event_target_as = migrant_fleet_home_system
+	# 	create_species = {
+	# 		name = "Quarian"
+	# 		plural = "Quarians"
+	# 		adjective = "Quarian"
+	# 		class = "QUA"
+	# 		portrait = quarian
+	# 		name_list = btr_quarian
+	# 		traits = {
+	# 			trait="trait_natural_engineers"
+	# 	        trait="trait_nonadaptive"
+	# 	        trait="trait_communal"
+	# 	        trait="trait_traditional"
+	# 	        trait="trait_quick_learners"
+	# 			ideal_planet_class = "pc_savannah" 
+	# 		}
+	# 	}
+	# 	create_country = {
+	# 		name_list = btr_quarian
+	# 		species = last_created
+	# 		type = migrant_fleet
+	# 		authority = auth_oligarchic
+	# 		civics = {
+	# 			civic = civic_caravaneer_fleet1
+	# 		}
+	# 		flag = {
+	# 			icon={
+	# 				category="masseffect"
+	# 				file="Migrant Fleet.dds"
+	# 			}
+	# 			background={
+	# 				category="backgrounds"
+	# 				file="00_solid.dds"
+	# 			}
+	# 			colors={
+	# 				"dark_purple"
+	# 				"black"
+	# 				"null"
+	# 				"null"
+	# 			}
+	# 		}
+	# 		ethos = {
+	# 			ethic = ethic_egalitarian
+	#             ethic = ethic_materialist
+	# 		}
+	# 		ignore_initial_colony_error = yes
+	# 		effect = {
+	# 			set_country_flag = migrant_fleet
+	# 			set_graphical_culture = caravaneer_01
+	# 			save_global_event_target_as = migrant_fleet
+	# 			create_leader = {
+	# 				class = admiral
+	# 				species = event_target:quarianSpecies
+	# 				name = "Zaal'Koris vas Qwib-Qwib"
+	# 				gender = male
+	# 				skill = 5
+	# 				immortal = yes
+	# 			}
+	# 			create_fleet = {
+	# 				name = "Migrant Fleet"
+	# 				settings = { spawn_debris = no }
+	# 				effect = {
+	# 					set_fleet_stance = passive
+	# 					set_formation_scale = 2.5
+	# 					set_owner = prev
+	# 					create_ship = {
+	# 						name = "Chayym"
+	# 						design = migrant_fleet_liveship
+	# 						effect = {
+	# 							set_ship_flag = migrant_fleet_liveship_chayym
+	# 							save_global_event_target_as = migrant_fleet_liveship_chayym
+	# 						}
+	# 					}
+	# 					create_ship = {
+	# 						name = "Rayya"
+	# 						design = migrant_fleet_liveship
+	# 						effect = {
+	# 							set_ship_flag = migrant_fleet_liveship_rayya
+	# 							save_global_event_target_as = migrant_fleet_liveship_rayya
+	# 						}
+	# 					}
+	# 					create_ship = {
+	# 						name = "Shellen"
+	# 						design = migrant_fleet_liveship
+	# 						effect = {
+	# 							set_ship_flag = migrant_fleet_liveship_shellen
+	# 							save_global_event_target_as = migrant_fleet_liveship_shellen
+	# 						}
+	# 					}
+	# 					while = {
+	# 						count = 30
+	# 						create_ship = {
+	# 							name = random
+	# 							design = migrant_fleet_frigate
+	# 						}
+	# 					}
+	# 					while = {
+	# 						count = 14
+	# 						create_ship = {
+	# 							name = random
+	# 							design = migrant_fleet_cruiser
+	# 						}
+	# 					}
+	# 					set_location = {
+	# 						target = event_target:migrant_fleet_home_star
+	# 						angle = 90
+	# 						distance = 40
+	# 					}
+	# 					set_fleet_flag = migrant_fleet_1
+	# 					save_global_event_target_as = migrant_fleet1_fleet
+	# 					prev = {
+	# 						set_custom_capital_location = event_target:migrant_fleet1_fleet
+	# 					}
+	# 					assign_leader = last_created_leader
+	# 				}
+	# 			}
+	# 			create_leader = {
+	# 				class = ruler
+	# 				species = event_target:quarianSpecies
+	# 				name = "Admiral Shala'Raan vas Tonbay"
+	# 				skill = 5
+	# 				immortal = yes
+	# 			}
+	# 			set_leader = last_created_leader
+	# 		}
+	# 	}
+		# last_created_country = {
+		# 	set_name = "Migrant Fleet"
+		# }
 	}
 
 

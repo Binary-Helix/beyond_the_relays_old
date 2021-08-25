@@ -142,3 +142,39 @@ pc_mephitic = {
 	colonizable = yes
 	show_city = yes
 }
+
+pc_quarian = {
+	habitat = yes
+	entity = "quarian_01_liveship_entity"
+	icon_frame = 22
+	entity_scale = 1.0
+	enable_tilt = no
+	fixed_entity_scale = yes
+	place_entity_on_planet_plane = no
+	entity_face_object = no #disables rotation towards sun or planet
+	atmosphere_color 		= hsv { 0.0 0.0 1.0 }
+	atmosphere_intensity = 1.0
+	atmosphere_width = 0.5
+	show_city = no
+	city_color_lut = "gfx/portraits/misc/colorcorrection_continental.dds"
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+	planet_size = 10
+	moon_size = 1
+	colonizable = yes
+	district_set = habitat
+	ideal = yes
+	starting_planet = yes
+	orbit_lines = yes
+	has_colonization_influence_cost = no
+
+	is_artificial_planet = yes
+	default_planet_selection = yes
+
+	modifier = {
+		planet_colony_development_speed_mult = 2.0 
+		pop_environment_tolerance = 0.75
+	}
+	
+}
