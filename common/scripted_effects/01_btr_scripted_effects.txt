@@ -1,5 +1,5 @@
 
-# For BTR Major empires
+### For BTR Major empires
 generate_btr_major_empire_start_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -12,8 +12,9 @@ generate_btr_major_empire_start_buildings = {
     add_building = building_commercial_zone
 }
 
-# For BTR Major Empire Capitols
+### For BTR Major Empire Capitols
 
+#Asari Republics
 generate_btr_asari_republics_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes }}
 	while = { count = 2	add_district = { district_type = district_industrial ignore_cap = yes }}
@@ -29,6 +30,7 @@ generate_btr_asari_republics_capitol_buildings = {
 	add_building = building_stronghold	
 }
 
+#Asari Corporate Interests
 generate_btr_asari_corporate_interests_capitol_buildings = {
 	while = { count = 4	add_district = { district_type = district_city ignore_cap = yes }}
 	while = { count = 2	add_district = { district_type = district_industrial ignore_cap = yes }}
@@ -43,6 +45,7 @@ generate_btr_asari_corporate_interests_capitol_buildings = {
 	add_building = building_embassy			
 }
 
+#Systems Alliance
 generate_btr_systems_alliance_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -57,6 +60,7 @@ generate_btr_systems_alliance_capitol_buildings = {
 	add_building = building_stronghold	
 }
 
+#Turian Hierarchy
 generate_btr_turian_hierarchy_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -72,6 +76,7 @@ generate_btr_turian_hierarchy_capitol_buildings = {
 	add_building = building_stronghold	
 }
 
+#Courts of Dekuuna
 generate_btr_courts_of_dekuuna_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -87,6 +92,7 @@ generate_btr_courts_of_dekuuna_capitol_buildings = {
 	add_building = building_stronghold	
 }
 
+#Salarian Union
 generate_btr_salarian_union_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -102,6 +108,7 @@ generate_btr_salarian_union_capitol_buildings = {
 	add_building = building_stronghold	
 }
 
+#Vol Protectorate
 generate_btr_vol_protectorate_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -116,6 +123,7 @@ generate_btr_vol_protectorate_capitol_buildings = {
 	add_building = building_galactic_stock_exchange	
 }
 
+#Krogan Chiefdom
 generate_btr_krogan_chiefdom_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -128,6 +136,7 @@ generate_btr_krogan_chiefdom_capitol_buildings = {
 	add_building = building_fortress	
 }
 
+#Illuminated Primacy
 generate_btr_illuminated_primacy_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -142,6 +151,7 @@ generate_btr_illuminated_primacy_capitol_buildings = {
 	add_building = building_holotemple	
 }
 
+#Batarian Hegemony
 generate_btr_batarian_hegemony_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -157,6 +167,7 @@ generate_btr_batarian_hegemony_capitol_buildings = {
 	add_building = building_slave_huts	
 }
 
+#Geth Consensus
 generate_btr_geth_consensus_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -171,6 +182,7 @@ generate_btr_geth_consensus_capitol_buildings = {
 	add_building = building_drone_storage	
 }
 
+#Rachni Swarm
 generate_btr_rachni_swarm_capitol_buildings = {
 	while = { count = 3 add_district = district_city }
 	while = { count = 2 add_district = district_mining }
@@ -185,6 +197,7 @@ generate_btr_rachni_swarm_capitol_buildings = {
 	add_building = building_sentinel_posts
 }
 
+#Collectors
 generate_btr_collectors_capitol_buildings = {
 	while = { count = 3 add_district = district_city }
 	while = { count = 2 add_district = district_mining }
@@ -199,6 +212,7 @@ generate_btr_collectors_capitol_buildings = {
 	add_building = building_sentinel_posts
 }
 
+#Vorcha Chiefdom
 generate_btr_vorcha_chiefdom_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -212,6 +226,7 @@ generate_btr_vorcha_chiefdom_capitol_buildings = {
 	add_building = building_urban_dwellings		
 }
 
+#Parnack Regime
 generate_btr_parnack_regime_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -225,6 +240,7 @@ generate_btr_parnack_regime_capitol_buildings = {
 	add_building = building_commercial_zone		
 }
 
+#Raloi Republic
 generate_btr_raloi_republic_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -238,18 +254,18 @@ generate_btr_raloi_republic_capitol_buildings = {
 	add_building = building_embassy	
 }
 
-generate_btr_rachni_start_buildings = {
-	while = { count = 3 add_district = district_city }
-	while = { count = 2 add_district = district_mining }
-	while = { count = 2 add_district = district_farming }
-	while = { count = 3 add_district = district_generator }
-	add_building = building_hive_capital
-	add_building = building_hive_node
-	add_building = building_research_lab_1
-	add_building = building_foundry_1
-	add_building = building_factory_1
-	add_building = building_hive_warren
-}
+# generate_btr_rachni_start_buildings = {
+# 	while = { count = 3 add_district = district_city }
+# 	while = { count = 2 add_district = district_mining }
+# 	while = { count = 2 add_district = district_farming }
+# 	while = { count = 3 add_district = district_generator }
+# 	add_building = building_hive_capital
+# 	add_building = building_hive_node
+# 	add_building = building_research_lab_1
+# 	add_building = building_foundry_1
+# 	add_building = building_factory_1
+# 	add_building = building_hive_warren
+# }
 
 generate_btr_mars_start_buildings = {
 	while = { count = 2 add_district = district_city }

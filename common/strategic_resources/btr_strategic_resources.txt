@@ -20,6 +20,23 @@ helium_3 = {
 	}
 }
 
+hydrogen = {
+	tradable = yes
+	market_amount = 20
+	market_price = 100
+	max = 15000
+	
+	prerequisites = { "tech_mine_hydrogen" }
+	
+	ai_weight = {
+		weight = 10
+	}
+
+	ai_wants = {
+		base = 10
+	}
+}
+
 element_zero = {
 	tradable = yes
 	market_amount = 1
@@ -39,8 +56,50 @@ element_zero = {
 	}
 }
 
-mec_biotics = {
+iridium = {
+	tradable = yes
+	market_amount = 50
+	market_amount = 100
+	max = 15000
+
+	
 	ai_weight = {
-		weight = 1
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
+	}
+}	
+
+platinum = {
+	tradable = yes
+	market_amount = 50
+	market_amount = 100
+	max = 15000
+
+	
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
+	}
+}
+
+palladium = {
+	tradable = yes
+	market_amount = 50
+	market_amount = 100
+	max = 15000
+
+	
+	ai_weight = {
+		weight = 5
+	}
+
+	ai_wants = {
+		base = 500
 	}
 }

@@ -5,31 +5,31 @@
 ### HOTHOUSE WORLDS ###
 #######################
 
-entity = {
-	name = "hothouse_planet_01_entity"
-	pdxmesh = "planet_clouded_mesh"
+# entity = {
+# 	name = "hothouse_planet_01_entity"
+# 	pdxmesh = "planet_clouded_mesh"
 	
-	meshsettings = {
-	name = "planet_geosphereShape"
-	texture_diffuse = "hothouse_01_diffuse.dds"
-	texture_normal = "gas_giant_01_normal.dds"
-	texture_specular = "gas_giant_01_specular.dds"
-	}
+# 	meshsettings = {
+# 	name = "planet_geosphereShape"
+# 	texture_diffuse = "hothouse_01_diffuse.dds"
+# 	texture_normal = "gas_giant_01_normal.dds"
+# 	texture_specular = "gas_giant_01_specular.dds"
+# 	}
 	
-	##cloud texture override
-	meshsettings = {
-	name = "clouds_geosphereShape"
-	texture_diffuse = "hothouse_clouds_01_diffuse.dds"
-	texture_normal = "hothouse_clouds_01_normal.dds"
-	texture_specular = "clouds_medium_specular.dds"
-	}
+# 	##cloud texture override
+# 	meshsettings = {
+# 	name = "clouds_geosphereShape"
+# 	texture_diffuse = "hothouse_clouds_01_diffuse.dds"
+# 	texture_normal = "hothouse_clouds_01_normal.dds"
+# 	texture_specular = "clouds_medium_specular.dds"
+# 	}
 	
 	
-	default_state = "idle"	
-	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
-		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
-	}
-}
+# 	default_state = "idle"	
+# 	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+# 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class" } }
+# 	}
+# }
 
 # entity = {
 # 	name = "hothouse_planet_02_entity"

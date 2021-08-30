@@ -1,151 +1,151 @@
 
-# Liveship
-ship_design = {
-	name = "migrant_fleet_liveship"
-	ship_size = quarian_liveship
-	section = {
-		template = "quarian_01_liveship_mid_1"
-		slot = mid
+# # Liveship
+# ship_design = {
+# 	name = "migrant_fleet_liveship"
+# 	ship_size = quarian_liveship
+# 	section = {
+# 		template = "quarian_01_liveship_mid_1"
+# 		slot = mid
 
-		component = {
-			slot = LARGE_GUN_01
-			template = LARGE_MASS_DRIVER_5
-		}
-		component = {
-			slot = LARGE_GUN_02
-			template = LARGE_MASS_DRIVER_5
-		}
-		component = {
-			slot = LARGE_GUN_03
-			template = LARGE_MASS_DRIVER_5
-		}
-		component = {
-			slot = LARGE_GUN_04
-			template = LARGE_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_01
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_02
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_03
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_04
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = PD_01
-			template = FLAK_BATTERY_3
-		}
-		component = {
-			slot = SMALL_GUN_01
-			template = TORPEDO_2
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = TORPEDO_2
-		}
-		component = {
-			slot = "AUX_UTILITY_1"
-			template = "AUTO_REPAIR"
-		}
-	}
-	required_component = "HYPER_DRIVE_3"
-	required_component = "SHIP_THRUSTER_3"
-	required_component = "SENSOR_3"
-	required_component = "CRUISER_ANTIMATTER_REACTOR"
-}
+# 		component = {
+# 			slot = LARGE_GUN_01
+# 			template = LARGE_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = LARGE_GUN_02
+# 			template = LARGE_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = LARGE_GUN_03
+# 			template = LARGE_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = LARGE_GUN_04
+# 			template = LARGE_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_01
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_02
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_03
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_04
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = PD_01
+# 			template = FLAK_BATTERY_3
+# 		}
+# 		component = {
+# 			slot = SMALL_GUN_01
+# 			template = TORPEDO_2
+# 		}
+# 		component = {
+# 			slot = SMALL_GUN_02
+# 			template = TORPEDO_2
+# 		}
+# 		component = {
+# 			slot = "AUX_UTILITY_1"
+# 			template = "AUTO_REPAIR"
+# 		}
+# 	}
+# 	required_component = "HYPER_DRIVE_3"
+# 	required_component = "SHIP_THRUSTER_3"
+# 	required_component = "SENSOR_3"
+# 	required_component = "CRUISER_ANTIMATTER_REACTOR"
+# }
 
-# Cruiser
-ship_design = {
-	name = "migrant_fleet_cruiser"
-	ship_size = quarian_cruiser
-	section = {
-		template = "quarian_01_cruiser_mid_1"
-		slot = mid
+# # Cruiser
+# ship_design = {
+# 	name = "migrant_fleet_cruiser"
+# 	ship_size = quarian_cruiser
+# 	section = {
+# 		template = "quarian_01_cruiser_mid_1"
+# 		slot = mid
 
-		component = {
-			slot = LARGE_GUN_01
-			template = LARGE_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_01
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_02
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_03
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_04
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = SMALL_GUN_01
-			template = SMALL_MASS_DRIVER_2
-		}
-		component = {
-			slot = SMALL_GUN_02
-			template = TORPEDO_2
-		}
-		component = {
-			slot = "AUX_UTILITY_1"
-			template = "AUTO_REPAIR"
-		}
-	}
-	required_component = "HYPER_DRIVE_3"
-	required_component = "COMBAT_COMPUTER_LINE_ADVANCED"
-	required_component = "SHIP_THRUSTER_3"
-	required_component = "SENSOR_3"
-	required_component = "CRUISER_ANTIMATTER_REACTOR"
-}
+# 		component = {
+# 			slot = LARGE_GUN_01
+# 			template = LARGE_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_01
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_02
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_03
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_04
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = SMALL_GUN_01
+# 			template = SMALL_MASS_DRIVER_2
+# 		}
+# 		component = {
+# 			slot = SMALL_GUN_02
+# 			template = TORPEDO_2
+# 		}
+# 		component = {
+# 			slot = "AUX_UTILITY_1"
+# 			template = "AUTO_REPAIR"
+# 		}
+# 	}
+# 	required_component = "HYPER_DRIVE_3"
+# 	required_component = "COMBAT_COMPUTER_LINE_ADVANCED"
+# 	required_component = "SHIP_THRUSTER_3"
+# 	required_component = "SENSOR_3"
+# 	required_component = "CRUISER_ANTIMATTER_REACTOR"
+# }
 
-# Frigate
-ship_design = {
-	name = "migrant_fleet_frigate"
-	ship_size = quarian_frigate
-	section = {
-		template = "quarian_01_frigate_mid_1"
-		slot = mid
+# # Frigate
+# ship_design = {
+# 	name = "migrant_fleet_frigate"
+# 	ship_size = quarian_frigate
+# 	section = {
+# 		template = "quarian_01_frigate_mid_1"
+# 		slot = mid
 
-		component = {
-			slot = MEDIUM_GUN_01
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_02
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = MEDIUM_GUN_03
-			template = MEDIUM_MASS_DRIVER_5
-		}
-		component = {
-			slot = PD_01
-			template = FLAK_BATTERY_3
-		}
-		component = {
-			slot = PD_02
-			template = FLAK_BATTERY_3
-		}
-		component = {
-			slot = "AUX_UTILITY_1"
-			template = "AUTO_REPAIR"
-		}
-	}
-	required_component = "HYPER_DRIVE_3"
-	required_component = "COMBAT_COMPUTER_PICKET_ADVANCED"
-	required_component = "SHIP_THRUSTER_3"
-	required_component = "SENSOR_3"
-	required_component = "CRUISER_ANTIMATTER_REACTOR"
-}
+# 		component = {
+# 			slot = MEDIUM_GUN_01
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_02
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = MEDIUM_GUN_03
+# 			template = MEDIUM_MASS_DRIVER_5
+# 		}
+# 		component = {
+# 			slot = PD_01
+# 			template = FLAK_BATTERY_3
+# 		}
+# 		component = {
+# 			slot = PD_02
+# 			template = FLAK_BATTERY_3
+# 		}
+# 		component = {
+# 			slot = "AUX_UTILITY_1"
+# 			template = "AUTO_REPAIR"
+# 		}
+# 	}
+# 	required_component = "HYPER_DRIVE_3"
+# 	required_component = "COMBAT_COMPUTER_PICKET_ADVANCED"
+# 	required_component = "SHIP_THRUSTER_3"
+# 	required_component = "SENSOR_3"
+# 	required_component = "CRUISER_ANTIMATTER_REACTOR"
+# }
