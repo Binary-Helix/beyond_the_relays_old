@@ -4523,7 +4523,7 @@ sys_micah_init = {
 		size = 30
 		moon={
 			name = "Chayym"
-			class = "pc_habitat"
+			class = "pc_dextro_savannah"
 			orbit_angle = { min =90 max = 270}
 			orbit_distance = 20
 			size = 12
@@ -4600,7 +4600,7 @@ sys_paz_init = {
         size = 28
 		moon={
 			name = "Shellen"
-			class = "pc_habitat"
+			class = "pc_dextro_savannah"
 			orbit_angle = { min =90 max = 270}
 			orbit_distance = 20
 			size = 12
@@ -4682,7 +4682,7 @@ sys_raheelleyya_init = {
         orbit_angle = 180
 		moon={
 			name = "Rayya"
-			class = "pc_habitat"
+			class = "pc_dextro_savannah"
 			orbit_angle = { min =90 max = 270}
 			orbit_distance = 30
 			size = 12
@@ -4692,17 +4692,16 @@ sys_raheelleyya_init = {
 			init_effect = {
 				prevent_anomaly = yes
 				generate_btr_start_deposits_and_blockers = yes
-				generate_btr_collector_base_buildings = yes
+				generate_btr_quarian_base_buildings = yes
 				random_country =  {
 					limit = { has_country_flag = "quarians" }
 					save_event_target_as = raheel-leyya_Owner
 					save_global_event_target_as = quarianSpecies
 					species = { save_global_event_target_as = quarianSpecies }
 				}
-				set_planet_flag = megastructure
-				set_planet_flag = habitat
+				#set_planet_flag = megastructure
+				#set_planet_flag = habitat
 				set_capital = yes
-				set_owner = event_target:quarians
 				while = {
 					count = 20
 					create_pop = { species= owner_main_species }
@@ -4842,7 +4841,7 @@ sys_raheelleyya_init = {
 		# last_created_country = {
 		# 	set_name = "Migrant Fleet"
 		# }
-	#}
+	}
 
 
     init_effect = { 
