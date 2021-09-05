@@ -514,7 +514,7 @@ sys_tasale_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:asariSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			set_name = "Illium"			
 		}		
@@ -985,7 +985,7 @@ sys_tartarusdebrisfield_init = {
 			set_owner = event_target:collectors
 			while = {
 				count = 26
-				create_pop = { species = event_target:collectorSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			clear_deposits = yes
 			add_deposit = d_consumption_chambers
@@ -2594,7 +2594,7 @@ sys_tikkun_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:gethSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			add_deposit = d_rannoch_geth_base
 			add_deposit = d_rannoch_quarian_ruins
@@ -3608,7 +3608,7 @@ sys_kyzil_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:vorchaSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			set_name = "Heshtok"
 		}		
@@ -4705,7 +4705,7 @@ sys_raheelleyya_init = {
 				set_owner = event_target:quarians
 				while = {
 					count = 20
-					create_pop = { species= event_target:quarianSpecies }
+					create_pop = { species= owner_main_species }
 				}
 				clear_deposits = yes
 				set_name = "Rayya"

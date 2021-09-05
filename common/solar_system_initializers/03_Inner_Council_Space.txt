@@ -71,7 +71,7 @@ sys_aru_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:volSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			add_deposit = d_irune_lenos
 			set_name = "Irune"			
@@ -537,7 +537,7 @@ sys_pranas_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:salarianSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			set_name = "Sur'Kesh"
 			add_deposit = d_surkesh_parkan_research_institute
@@ -898,7 +898,7 @@ sys_trebia_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:turianSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			set_name = "Palaven"
 			add_deposit = d_palaven_radiation
@@ -1075,7 +1075,7 @@ sys_aralakh_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = event_target:kroganSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			add_deposit = d_tuchanka_underground_tunnels
 			add_deposit = d_tuchanka_the_hollows
@@ -2093,7 +2093,7 @@ sys_kanala_init = {
 			}
 			while = {
 				count = 22
-				create_pop = { species = event_target:hanarSpecies }
+				create_pop = { species = owner_main_species }
 			}
 			ensure_drell_exist = { homeworld = "THIS" }
 			generate_btr_drell_pops = yes
