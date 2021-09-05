@@ -3608,7 +3608,7 @@ sys_kyzil_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:vorchaSpecies }
 			}
 			set_name = "Heshtok"
 		}		
@@ -4648,7 +4648,7 @@ sys_raheelleyya_init = {
     name = "Raheel-Leyya"
     class = "sc_binary_b_b"
 	max_instances = 1
-	flags={ empire_home_system btr_quarian_system custom_system}
+	flags={ empire_home_system btr_quarian_system_raheelleyya custom_system special_start_system}
 
 	usage = custom_empire
 
@@ -4680,7 +4680,7 @@ sys_raheelleyya_init = {
         size = 25 
         orbit_distance = 0
         orbit_angle = 180
-		moon={
+		moon={ 
 			name = "Rayya"
 			class = "pc_dextro_savannah"
 			orbit_angle = { min =90 max = 270}
@@ -4695,22 +4695,21 @@ sys_raheelleyya_init = {
 				generate_btr_major_empire_start_buildings = yes
 				random_country =  {
 					limit = { has_country_flag = "quarians" }
-					save_event_target_as = raheel-leyya_Owner
-					save_global_event_target_as = quarianSpecies
+					save_event_target_as = raheelleyya_Owner
+					save_global_event_target_as = quarians	
 					species = { save_global_event_target_as = quarianSpecies }
 				}
 				#set_planet_flag = megastructure
 				#set_planet_flag = habitat
-				set_capital = yes
 				while = {
 					count = 20
-					create_pop = { species= owner_main_species }
+					create_pop = { species= event_target:quarianSpecies }
 				}
-				clear_deposits = yes
 				set_name = "Rayya"
 			}
 		}
     }
+	
 	# init_effect = {
 	# 	save_global_event_target_as = migrant_fleet_home_system
 	# 	create_species = {
@@ -4841,7 +4840,7 @@ sys_raheelleyya_init = {
 		# last_created_country = {
 		# 	set_name = "Migrant Fleet"
 		# }
-	}
+	
 
 
     init_effect = { 
@@ -4853,6 +4852,7 @@ sys_raheelleyya_init = {
 			
 		} 
 	}
+
 }
 
 
