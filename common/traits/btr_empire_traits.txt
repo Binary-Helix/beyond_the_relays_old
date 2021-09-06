@@ -38,7 +38,7 @@ btr_krogan_genophage = {
 	potential_crossbreeding_chance = 0.0
 	opposites = { "trait_slow_breeders" "trait_rapid_breeders" }
 
-	initial = yes
+	initial = yes 
 	randomized = no
 	modification = yes
 	allowed_archetypes = { BIOLOGICAL }
@@ -60,7 +60,7 @@ btr_volus_trait_core = {
 	potential_crossbreeding_chance = 0.0
 	opposites = { "btr_krogan_genophage" "btr_krogan_trait_core" }
 
-	initial = yes
+	initial = yes 
 	randomized = no
 	modification = no
 
@@ -78,3 +78,60 @@ btr_volus_trait_core = {
 		energy = 40
 	}
 }
+
+
+#################
+# HUMAN  TRAITS #
+#################
+
+btr_human_multicultural = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	opposites = {
+		"trait_traditional"
+		"trait_docile"
+	}
+
+	initial = yes 
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		species_leader_exp_gain = 0.5
+		leader_skill_levels = 2
+		pop_happiness = 0.1
+		planet_jobs_unity_produces_mult = -0.1
+		pop_government_ethic_attraction = -0.15
+		
+
+	}
+	slave_cost = {
+		energy = 200
+}
+
+}
+
+btr_human_flexible = {
+	cost = 0 
+	opposites = { 
+		"trait_very_strong"
+		"trait_adaptive"
+	}
+
+	initial = yes 
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_environment_tolerance = 0.3
+		pop_growth_from_immigration = 0.15
+		army_damage_mult = 0.20
+		army_disengage_chance_mult = 0.25
+	}
+    
+	slave_cost = {
+		energy = 100
+	}
+	}
