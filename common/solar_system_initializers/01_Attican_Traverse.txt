@@ -133,7 +133,7 @@ sys_gagarin_init = {
 			}
 			while = {
 				count = 2
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:gethSpecies }
 			}
 			generate_btr_geth_incursion_start_buildings = yes			
 		}
@@ -415,7 +415,7 @@ sys_grissom_init = {
 				}
 				while = {
 					count = 2
-					create_pop = { species = owner_main_species }
+					create_pop = { species = event_target:gethSpecies }
 				}
 				generate_btr_geth_incursion_start_buildings = yes			
 			}				
@@ -700,7 +700,7 @@ sys_tereshkova_init = {
 			}
 			while = {
 				count = 2
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:gethSpecies }
 			}
 			generate_btr_geth_incursion_start_buildings = yes			
 		}			
@@ -859,7 +859,7 @@ sys_vamshi_init = {
 			}
 			while = {
 				count = 2
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:gethSpecies }
 			}
 			generate_btr_geth_incursion_start_buildings = yes			
 		}				
@@ -1026,7 +1026,7 @@ sys_chabtan_init = {
 				}
 				create_colony = { 
 					owner = last_created_country 
-					species = last_created 
+					species = owner_main_species 
 				}
 				create_fleet = { 
 					name = "Space Station" 
@@ -1039,9 +1039,9 @@ sys_chabtan_init = {
 					}
 					set_location = PREV
 				}
-				create_pop = { species = last_created }
-				create_pop = { species = last_created }
-				create_pop = { species = last_created }								
+				create_pop = { species = owner_main_species }
+				create_pop = { species = owner_main_species }
+				create_pop = { species = owner_main_species }								
 			}
 			add_building = building_primitive_capital
 			last_created_species = { save_global_event_target_as = yahgSpecies }			
@@ -3002,7 +3002,7 @@ sys_strabo_init = {
 				ignore_initial_colony_error = yes				
 				while = {
 					count = 2
-					create_pop = { species =owner_main_species }
+					create_pop = { species = event_target:salarianSpecies }
 				}
 			
 				add_district = district_pdhab_science
@@ -3096,7 +3096,7 @@ sys_azedes_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:raloiSpecies }
 			}
 			set_name = "Turvess"
 		}
@@ -3584,7 +3584,7 @@ sys_hoplos_init = {
 			}
 			while = {
 				count = 3
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:humanSpecies }
 			}
 			generate_btr_major_empire_start_buildings = yes
 			clear_deposits = yes
@@ -5161,7 +5161,7 @@ sys_maskimxul_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:rachniSpecies }
 			}
 			add_deposit = d_geothermal_vent
 			add_deposit = d_rich_mountain

@@ -2691,7 +2691,7 @@ sys_anadius_init = {
 			set_owner = event_target:cerberus
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:humanSpecies }
 			}
 			generate_btr_cronos_buildings = yes
 			set_name = "Cronos Station"
@@ -3221,7 +3221,7 @@ sys_harsa_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:batarianSpecies }
 			}
 			set_name = "Khar'shan"
 			add_deposit = d_kharshan_qnobis
@@ -4152,7 +4152,7 @@ sys_sol_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:humanSpecies }
 			}
 			add_deposit = d_vancouver
 			add_deposit = d_london
@@ -4193,7 +4193,7 @@ sys_sol_init = {
 			}
 			while = {
 				count = 7
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:humanSpecies }
 			}
 			generate_btr_mars_start_buildings = yes
 			clear_deposits = yes

@@ -287,7 +287,7 @@ sys_parnitha_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:asariSpecies }
 			}
 		}
 	}
@@ -1785,7 +1785,7 @@ sys_phontes_init = {
 			}
 			while = {
 				count = 26
-				create_pop = { species = owner_main_species }
+				create_pop = { species = event_target:elcorSpecies }
 			}
 			set_name = "Dekuuna"
 			add_deposit = d_dekuuna_unovasereng

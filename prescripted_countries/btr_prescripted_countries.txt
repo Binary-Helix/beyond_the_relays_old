@@ -719,12 +719,13 @@ quarian_admiralty={
 	planet_name = "Rayya"
 	planet_class = "pc_dextro_savannah"
 	system_name = "Raheel-Leyya"
-	advisor_voice_type="l_the_technocrat"
+	advisor_voice_type="quarian_conclave"
 	initializer = "sys_raheelleyya_init"
 	graphical_culture = "mammalian_01"
 	city_graphical_culture = "quarian_01"
 	flags={
 		quarians
+		quarian_admiralty
 		btr_empire
 	}
 	empire_flag={
@@ -765,7 +766,7 @@ quarian_admiralty={
 		civic_technocracy
 		civic_functional_architecture
 	}
-	origin = origin_default
+	origin = origin_quarian_admiralty
 
 
 }
