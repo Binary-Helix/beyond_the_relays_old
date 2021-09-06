@@ -98,8 +98,6 @@ btr_human_multicultural = {
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		species_leader_exp_gain = 0.5
-		leader_skill_levels = 2
 		pop_happiness = 0.1
 		planet_jobs_unity_produces_mult = -0.1
 		pop_government_ethic_attraction = -0.15
@@ -134,4 +132,13 @@ btr_human_flexible = {
 	slave_cost = {
 		energy = 100
 	}
-	}
+
+}
+
+btr_human_scientists = {
+	cost = 0
+
+	modifier = {
+		species_leader_exp_gain = 0.5
+		leader_skill_levels = 2}
+}
