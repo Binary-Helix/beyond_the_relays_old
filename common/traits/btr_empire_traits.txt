@@ -134,6 +134,10 @@ btr_human_flexible = {
 	}
 }
 
+##################
+# QUARIAN TRAITS #
+##################
+
 btr_quarian_weak_immune_system = {
 	cost = 0
 	opposites = {
@@ -150,18 +154,70 @@ btr_quarian_weak_immune_system = {
 	modifier = {
 		pop_environment_tolerance = -0.2
 		pop_growth_speed_reduction = 0.15
-		country_engineering_research_produces_mult = 0.15
+		#country_engineering_research_produces_mult = 0.15
 		#pc_quarian_habitat_habitability= 0.2
 	}
 	slave_cost = {
-		energy = 200
+		energy = -100
 	}
 
 }
+# Not added yet, still in the works.
 btr_human_scientists = {
 	cost = 0
 
 	modifier = {
 		species_leader_exp_gain = 0.5
-		leader_skill_levels = 2}
+		leader_skill_levels = 2 }
+}
+
+###################
+# SALARIAN TRAITS #
+###################
+
+btr_salarian_genius = {
+	cost = 0
+	opposites = {
+		"trait_natural_engineers"
+		"trait_natural_physicists"
+		"trait_natural_sociologists"
+	}
+
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+	
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_physics_research_produces_mult = 0.2
+		planet_jobs_society_research_produces_mult = 0.2
+		intel_decryption_mult = 0.2
+		intel_encryption_mult = 0.2
+	}
+
+	slave_cost = {
+		energy = 300
+	}
+}
+
+btr_salarian_shortlived = {
+	cost = 0
+	opposites = {
+		"trait_enduring"
+		"trait_venerable"
+		"trait_fleeting"
+	}
+
+	initial = yes
+	randomized = no
+	modification = yes 
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		leader_age = -30
+		army_health = -0.5
+		species_leader_exp_gain = 0.35
+
+	}
 }
