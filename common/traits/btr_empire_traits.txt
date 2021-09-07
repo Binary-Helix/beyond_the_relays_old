@@ -1,4 +1,4 @@
-
+#need to add slave costs
 #################
 # HUMAN  TRAITS #
 #################
@@ -42,7 +42,7 @@ btr_human_flexible = {
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		pop_environment_tolerance = 0.3
+		pop_environment_tolerance = 0.2
 		pop_growth_from_immigration = 0.15
 		army_damage_mult = 0.20
 		army_disengage_chance_mult = 0.25
@@ -88,7 +88,7 @@ btr_salarian_genius = {
 	}
 
 	slave_cost = {
-		energy = 300
+		energy = 100
 	}
 }
 
@@ -110,7 +110,7 @@ btr_salarian_shortlived = {
 
 	modifier = {
 		leader_age = -30
-		species_leader_exp_gain = 0.15
+		species_leader_exp_gain = 0.10
 
 	}
 }
@@ -222,12 +222,44 @@ btr_krogan_genophage = {
 # HANAR TRAITS #
 ################
 
-btr_hanar_1 = {
+btr_hanar_spiritual = {
+	cost = 0 
+	opposites = {
+		"trait_hive_mind"
+		"trait_unruly"
+	}
 
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_happiness = 0.2
+		planet_jobs_produces_mult = 0.2
+		
+	}
+	slave_cost = {
+		energy = 50
+	}
 }
 
-btr_hanar_2 = {
+btr_hanar_bureaucratic = {
+	cost = 0 
+	opposites = {
+		"trait_hive_mind"
+		"trait_strong"
+	}
 
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		species_empire_size_mult = 	-0.1
+		diplo_weight_mult = 0.2
+	}
 }
 
 ###################
