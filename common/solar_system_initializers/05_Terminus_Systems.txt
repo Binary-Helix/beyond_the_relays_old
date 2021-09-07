@@ -4680,35 +4680,36 @@ sys_raheelleyya_init = {
         size = 25 
         orbit_distance = 0
         orbit_angle = 180
-		moon={ 
-			name = "Rayya"
-			class = "pc_dextro_savannah"
-			orbit_angle = { min =90 max = 270}
-			orbit_distance = 30
-			size = 12
-			starting_planet = yes
-			deposit_blockers = none 
-			modifiers = none
-			init_effect = {
-				prevent_anomaly = yes
-				generate_btr_start_deposits_and_blockers = yes
-				generate_btr_major_empire_start_buildings = yes
-				random_country =  {
-					limit = { has_country_flag = "quarians" }
-					save_event_target_as = raheelleyya_Owner
-					save_global_event_target_as = quarians	
-					species = { save_global_event_target_as = quarianSpecies }
-				}
-				#set_planet_flag = megastructure
-				#set_planet_flag = habitat
-				while = {
-					count = 20
-					create_pop = { species= event_target:quarianSpecies }
-				}
-				set_name = "Rayya"
+	}
+			
+	planet ={ 
+		name = "Rayya"
+		class = "pc_dextro_savannah"
+		orbit_angle = { min =90 max = 270}
+		orbit_distance = 30
+		size = 12
+		starting_planet = yes
+		deposit_blockers = none 
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			generate_btr_start_deposits_and_blockers = yes
+			generate_btr_major_empire_start_buildings = yes
+			random_country =  {
+				limit = { has_country_flag = "quarians" }
+				save_event_target_as = raheelleyya_Owner
+				save_global_event_target_as = quarians	
+				species = { save_global_event_target_as = quarianSpecies }
 			}
+			#set_planet_flag = megastructure
+			#set_planet_flag = habitat
+			while = {
+				count = 20
+				create_pop = { species= event_target:quarianSpecies }
+			}
+			set_name = "Rayya"
 		}
-    }
+	}
 	
 	# init_effect = {
 	# 	save_global_event_target_as = migrant_fleet_home_system
