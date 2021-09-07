@@ -193,14 +193,16 @@ country_event = {
 	is_triggered_only = yes
 	immediate = {
 		if = {
-			limit = {
-				NOR = {
-					has_country_flag = parnack_regime_player
-				}
+			limit = { 
+				has_country_flag = parnack_regime_player 
 			}
-			generate_btr_parnack_regime_capitol_buildings = yes
+			random_owned_planet = {
+					limit = {
+						has_planet_flag = parnack
+					}
+				generate_btr_parnack_regime_capitol_buildings = yes
+			}
+
 		}
 	}
 }
-
-
