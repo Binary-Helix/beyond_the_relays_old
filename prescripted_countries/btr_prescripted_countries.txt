@@ -703,11 +703,9 @@ quarian_admiralty={
 		plural="Quarians"
 		adjective="Quarian"
 		name_list="btr_quarian"
-		trait="trait_natural_engineers"
-		trait="trait_nonadaptive"
 		trait="trait_communal"
 		trait="trait_traditional"
-		trait="trait_quick_learners"
+		trait = "btr_quarian_weak_immune_system"
 		}
 	name = "Quarian Admiralty"
 	adjective = "Quarian Admiralty"
@@ -718,7 +716,7 @@ quarian_admiralty={
 	system_name = "Raheel-Leyya"
 	advisor_voice_type="quarian_conclave"
 	initializer = "sys_raheelleyya_init"
-	graphical_culture = "mammalian_01"
+	graphical_culture = "humanoid_01"
 	city_graphical_culture = "quarian_01"
 	flags={
 		quarians

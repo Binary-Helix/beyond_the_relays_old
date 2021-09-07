@@ -108,7 +108,7 @@ btr_human_multicultural = {
 	}
 	slave_cost = {
 		energy = 200
-}
+	}
 
 }
 
@@ -134,4 +134,28 @@ btr_human_flexible = {
 	slave_cost = {
 		energy = 100
 	}
+}
+
+btr_quarian_weak_immune_system = {
+	cost = 0
+	opposites = {
+		"trait_strong"
+		"trait_adaptive"
+		"trait_rapid_breeders"
 	}
+
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_environment_tolerance = -0.2
+		pop_growth_speed_reduction = 0.15
+		country_engineering_research_produces_mult = 0.15
+		#pc_quarian_habitat_habitability= 0.2
+	}
+	slave_cost = {
+		energy = 200
+	}
+}
