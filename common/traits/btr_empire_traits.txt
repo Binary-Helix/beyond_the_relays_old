@@ -1,85 +1,4 @@
 
-
-#################
-# KROGAN TRAITS #
-#################
-
-btr_krogan_trait_core = {
-	cost = 0
-	potential_crossbreeding_chance = 0.0
-	opposites = { "btr_volus_trait_core" "trait_enduring" "trait_venerable" "trait_fleeting" }
-
-	initial = yes
-	randomized = no
-	modification = no
-
-	leader_age_min = 300
-	leader_age_max = 2000
-
-	allowed_archetypes = { BIOLOGICAL }
-	ai_weight = {
-		weight = 0
-	}
-
-	modifier = {
-		pc_nuked_habitability = 0.8
-	}
-	slave_cost = {
-		energy = 450
-	}
-	modifier = {
-		leader_age = 2000
-		army_health = 1.0
-	}
-}
-
-btr_krogan_genophage = {
-	cost = 0
-	potential_crossbreeding_chance = 0.0
-	opposites = { "trait_slow_breeders" "trait_rapid_breeders" }
-
-	initial = yes 
-	randomized = no
-	modification = yes
-	allowed_archetypes = { BIOLOGICAL }
-	
-	advanced_trait = yes	
-	custom_tooltip = btr_genophage_trait
-	prerequisites = {  }
-	modifier = {
-		pop_growth_speed = -.75	}
-}
-
-
-#################
-# VOLUS  TRAITS #
-#################
-
-btr_volus_trait_core = {
-	cost = 0
-	potential_crossbreeding_chance = 0.0
-	opposites = { "btr_krogan_genophage" "btr_krogan_trait_core" }
-
-	initial = yes 
-	randomized = no
-	modification = no
-
-	allowed_archetypes = { BIOLOGICAL }
-	ai_weight = {
-		weight = 0
-	}
-
-	modifier = {
-		pc_ammonia_habitability = 0.8
-		country_resource_max_energy_add = 5000
-		country_base_energy_produces_add = 50
-	}
-	slave_cost = {
-		energy = 40
-	}
-}
-
-
 #################
 # HUMAN  TRAITS #
 #################
@@ -134,34 +53,6 @@ btr_human_flexible = {
 	}
 }
 
-##################
-# QUARIAN TRAITS #
-##################
-
-btr_quarian_weak_immune_system = {
-	cost = 0
-	opposites = {
-		"trait_strong"
-		"trait_adaptive"
-		"trait_rapid_breeders"
-	}
-
-	initial = yes
-	randomized = no
-	modification = yes
-	allowed_archetypes = { BIOLOGICAL }
-
-	modifier = {
-		pop_environment_tolerance = -0.2
-		pop_growth_speed_reduction = 0.15
-		#country_engineering_research_produces_mult = 0.15
-		#pc_quarian_habitat_habitability= 0.2
-	}
-	slave_cost = {
-		energy = -100
-	}
-
-}
 # Not added yet, still in the works.
 btr_human_scientists = {
 	cost = 0
@@ -209,6 +100,9 @@ btr_salarian_shortlived = {
 		"trait_fleeting"
 	}
 
+	leader_age_min = 16
+	leader_age_max = 40
+
 	initial = yes
 	randomized = no
 	modification = yes 
@@ -220,4 +114,262 @@ btr_salarian_shortlived = {
 		species_leader_exp_gain = 0.35
 
 	}
+}
+
+
+#################
+# TURIAN TRAITS #
+#################
+
+btr_turian_militaristic = {
+	cost = 0 
+	opposites = {
+		"trait_nomadic"
+		"trait_nonadaptive"
+		"trait_deviants"
+		"trait_unruly"
+		"trait_weak"
+		"trait_strong"
+		"trait_very_strong"
+	}
+
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		army_damage_mult = 0.25
+		army_morale = 0.25
+		army_health = 0.5
+		ship_fire_rate_mult = 0.25
+		ship_armor_mult = 0.3
+	}
+}
+
+btr_turian_patriotic = {
+	cost = 0
+	opposites = {
+		"trait_traditional"
+		"trait_quarrelsome"
+		"trait_decadent"
+		"trait_deviants"
+		"trait_unruly"
+
+	}
+
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_happiness = 0.2
+		planet_jobs_unity_produces_mult = 0.2
+		pop_resettlement_cost_mult = 0.3
+		pop_growth_speed_reduction = 0.2
+	}
+}
+
+#################
+# KROGAN TRAITS #
+#################
+
+btr_krogan_trait_core = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = { "btr_volus_trait_core" "trait_enduring" "trait_venerable" "trait_fleeting" }
+
+	initial = yes
+	randomized = no
+	modification = no
+
+	leader_age_min = 300
+	leader_age_max = 2000
+
+	allowed_archetypes = { BIOLOGICAL }
+	ai_weight = {
+		weight = 0
+	}
+
+	modifier = {
+		pc_nuked_habitability = 0.8
+	}
+	slave_cost = {
+		energy = 450
+	}
+	modifier = {
+		leader_age = 2000
+		army_health = 1.0
+	}
+}
+
+btr_krogan_genophage = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = { "trait_slow_breeders" "trait_rapid_breeders" }
+
+	initial = yes 
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+	
+	advanced_trait = yes	
+	custom_tooltip = btr_genophage_trait
+	prerequisites = {  }
+	modifier = {
+		pop_growth_speed = -.75	}
+}
+
+################
+# HANAR TRAITS #
+################
+
+btr_hanar_1 = {
+
+}
+
+btr_hanar_2 = {
+
+}
+
+###################
+# BATARIAN TRAITS #
+###################
+
+btr_batarian_1 = {
+
+}
+
+btr_batarian_2 = {
+
+}
+
+##################
+# QUARIAN TRAITS #
+##################
+
+btr_quarian_weak_immune_system = {
+	cost = 0
+	opposites = {
+		"trait_strong"
+		"trait_adaptive"
+		"trait_rapid_breeders"
+	}
+
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_environment_tolerance = -0.2
+		pop_growth_speed_reduction = 0.15
+		#country_engineering_research_produces_mult = 0.15
+		#pc_quarian_habitat_habitability= 0.2
+	}
+	slave_cost = {
+		energy = -100
+	}
+
+}
+
+###############
+# GETH TRAITS #
+###############
+
+btr_geth_trait_1 = {
+
+}
+
+btr_geth_trait_2 = {
+
+}
+
+#################
+# RACHNI TRAITS #
+#################
+
+btr_rachni_trait_1 = {
+
+}
+
+btr_rachni_trait_2 = {
+
+}
+
+#################
+# VORCHA TRAITS #
+#################
+
+btr_vorcha_1 = {
+
+}
+
+btr_vorcha_2 = {
+
+}
+
+#################
+# VOLUS  TRAITS #
+#################
+
+btr_volus_trait_core = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = { "btr_krogan_genophage" "btr_krogan_trait_core" }
+
+	initial = yes 
+	randomized = no
+	modification = no
+
+	allowed_archetypes = { BIOLOGICAL }
+	ai_weight = {
+		weight = 0
+	}
+
+	modifier = {
+		pc_ammonia_habitability = 0.8
+		country_resource_max_energy_add = 5000
+		country_base_energy_produces_add = 50
+	}
+	slave_cost = {
+		energy = 40
+	}
+}
+
+#################
+# ELCOR  TRAITS #
+#################
+
+btr_elcor_1 = {
+
+}
+
+btr_elcor_2 = {
+
+}
+
+################
+# YAHG  TRAITS #
+################
+
+btr_yahg_1 = {
+
+}
+
+btr_yahg_2 = {
+
+}
+
+#################
+# RALOI  TRAITS #
+#################
+
+btr_raloi_1 = {
+
+}
+
+btr_raloi_2 = {
+
 }
