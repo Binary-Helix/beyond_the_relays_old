@@ -102,6 +102,13 @@ static_galaxy_scenario = {
             y = -376.4694
         }
         initializer = sys_raheelleyya_init
+        spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = quarians
+				} 
+		}  
     }
 
     system = {

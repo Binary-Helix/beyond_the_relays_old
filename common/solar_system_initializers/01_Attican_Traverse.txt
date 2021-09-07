@@ -964,7 +964,7 @@ sys_chabtan_init = {
 		deposit_blockers = none
 		modifiers = none
 
-		flags = { parnack_codex special_start_planet pd_ignore }
+		flags = { parnack special_start_planet pd_ignore }
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -973,7 +973,7 @@ sys_chabtan_init = {
 				limit = {
 					NOT = {
 						any_country = { 
-							has_country_flag = parnack_regime }
+							has_country_flag = parnack_regime_player }
 				}
 			}
 			create_species = {
