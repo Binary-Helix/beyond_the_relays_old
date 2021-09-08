@@ -974,9 +974,9 @@ sys_chabtan_init = {
 					NOT = {
 						any_country = { 
 							has_country_flag = parnack_regime_player }
+					}
 				}
-			}
-			create_species = {
+				create_species = {
 					name = "Yahg"
 					class = YAH
 					homeworld = THIS
@@ -5111,7 +5111,7 @@ sys_maskimxul_init = {
     class = "sc_m"
 	max_instances = 1
 
-	flags = { empire_home_system btr_rachni_hive_system custom_system }
+	flags = { empire_home_system btr_rachni_swarm_system custom_system }
 
 	usage = custom_empire	
 
@@ -5147,16 +5147,16 @@ sys_maskimxul_init = {
 		starting_planet = yes
 		deposit_blockers = none		
 		modifiers = none
-		flags = { suen_codex btr_rachni_hive_planet_suen special_start_planet }
+		flags = { suen_codex btr_rachni_swarm_planet_suen special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_rachni_swarm_capitol_buildings = yes
 			random_country = {
-				limit = { has_country_flag = "rachni_hive" }
+				limit = { has_country_flag = "rachni_swarm" }
 				save_event_target_as = maskimxulOwner
-				save_global_event_target_as = rachni_hive
+				save_global_event_target_as = rachni_swarm
 				species = { save_global_event_target_as = rachniSpecies }
 			}
 			while = {

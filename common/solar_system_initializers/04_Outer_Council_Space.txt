@@ -1998,6 +1998,22 @@ sys_pompeii_init = {
     name = "Pompeii"
     class = "sc_g"
 	max_instances = 1
+
+	flags = { empire_home_system btr_drell_compact_system custom_system }
+	
+	usage = custom_empire
+
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
+
+
     planet = {
 	    name = "Pompeii"
         class = "pc_g_star"
@@ -2010,6 +2026,22 @@ sys_pompeii_init = {
 		class = "pc_desert"
 		orbit_distance = 45
 		size = 18
+		init_effect = {
+			prevent_anomaly = yes
+			generate_btr_start_deposits_and_blockers = yes			
+			#generate_btr_drell_compact_capitol_buildings = yes
+			random_country = {
+				limit = { has_country_flag = "drell_compact" }
+				save_event_target_as = pompeiiOwner
+				save_global_event_target_as = drell_compact
+				species = { save_global_event_target_as = drellSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:drellSpecies }
+			}
+			set_name = "Rakhana"
+		}		
 	}
 
 	planet = {

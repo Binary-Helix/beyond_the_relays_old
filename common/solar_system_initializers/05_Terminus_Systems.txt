@@ -3555,7 +3555,7 @@ sys_kyzil_init = {
     name = "Kyzil"
     class = "sc_k"
 	max_instances = 1
-	flags = { empire_home_system btr_vorcha_chiefdom_system custom_system }
+	flags = { empire_home_system btr_vorcha_clandom_system custom_system }
 	usage = custom_empire
 
 	init_effect = {
@@ -3594,16 +3594,16 @@ sys_kyzil_init = {
         has_ring = no
 		starting_planet = yes
 		modifiers = none				
-		flags = { heshtok_codex btr_vorcha_chiefdom_planet_heshtok special_start_planet }
+		flags = { heshtok_codex btr_vorcha_clandom_planet_heshtok special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_vorcha_chiefdom_capitol_buildings = yes
+			generate_btr_vorcha_clandom_capitol_buildings = yes
 			random_country = {
-				limit = { has_country_flag = "vorcha_chiefdom" }
+				limit = { has_country_flag = "vorcha_clandom" }
 				save_event_target_as = kyzilOwner
-				save_global_event_target_as = vorcha_chiefdom
+				save_global_event_target_as = vorcha_clandom
 				species = { save_global_event_target_as = vorchaSpecies }
 			}
 			while = {

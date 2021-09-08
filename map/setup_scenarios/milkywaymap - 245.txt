@@ -3,8 +3,8 @@ static_galaxy_scenario = {
     priority = 1
     default = yes
     colonizable_planet_odds = 0.25
-	num_empires = { min = 14 max = 14 }
-	num_empire_default = 14
+	num_empires = { min = 20 max = 20 }
+	num_empire_default = 20
 	num_hyperlanes = { min = 1 max = 5 }
 	num_hyperlanes_default = 5
 	num_gateways = { min = 0 max = 0 }
@@ -24,7 +24,7 @@ static_galaxy_scenario = {
 			base = 0
                 modifier = { 
                         add = 100000 
-                        has_country_flag = vorcha_chiefdom
+                        has_country_flag = vorcha_clandom
 				} 
 		}  
     }
@@ -94,7 +94,7 @@ static_galaxy_scenario = {
 			base = 0
                 modifier = { 
                         add = 100000 
-                        has_country_flag = quarians
+                        has_country_flag = quarian_conclave
 				} 
 		}  
     }
@@ -878,7 +878,7 @@ static_galaxy_scenario = {
 			base = 0
                 modifier = { 
                         add = 100000 
-                        has_country_flag = rachni_hive
+                        has_country_flag = rachni_swarm
                 } 
         }		
     }
@@ -1909,6 +1909,13 @@ static_galaxy_scenario = {
             y = 55.65356
         }
         initializer = sys_pompeii_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = drell_compact
+                } 
+        }        
     }
 
     system = {

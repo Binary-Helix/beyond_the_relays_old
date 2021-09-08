@@ -70,7 +70,7 @@ origin_geth_consensus = {
 	} 
 }
 
-origin_rachni_hive = { 
+origin_rachni_swarm = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
@@ -88,7 +88,7 @@ origin_collectors = {
 	} 
 }
 
-origin_vorcha_chiefdom = { 
+origin_vorcha_clandom = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
@@ -144,13 +144,22 @@ origin_raloi_republic = {
 	}
 }
 
-origin_quarian_admiralty = {
+origin_quarian_conclave = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_default.dds"
 	picture = GFX_evt_metropolis
 	random_weight = {
 		base = 0
 	}
+}
+
+origin_drell_compact = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
 }
 
 mec_asari_origin_thessia = {
