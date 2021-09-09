@@ -1,7 +1,567 @@
 #######################
-#### Major Empires ####
+#### Council Races ####
 #######################
 
+# Asari Republics
+mec_asarirepublics_civ={
+	playable = mec_asari_req_asr
+    name="Asari Republics"
+    name_list="mec_asari_names"
+	portrait="mec_asari"
+    adjective="PRESCRIPTED_adjective_mec_asarirepublics_civ"
+    ship_prefix="PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"
+    species_name = "PRESCRIPTED_species_name_mec_asarirepublics_civ"
+    species_plural = "PRESCRIPTED_species_plural_mec_asarirepublics_civ"	
+	species_class = "MECASA"
+    species_adjective = "PRESCRIPTED_species_adjective_mec_asarirepublics_civ"
+    species_bio="PRESCRIPTED_species_bio_mec_asarirepublics_civ"	
+
+	authority = "auth_democratic"
+	government = "gov_mec_asr"
+	civics = { "mec_asari_civic_thessia" "civic_diplomatic_corps" }
+
+	flags={ custom_start_screen asari_republics btr_empire council_race }
+
+	ethic = "ethic_fanatic_xenophile"
+	ethic = "ethic_egalitarian"
+
+	trait = "mec_asari_trait_core"
+	trait = "mec_asari_trait_biotic"
+	trait = "trait_charismatic"
+	trait = "mec_asari_trait_sophisticated"
+
+	origin="mec_asari_origin_thessia"	
+
+	planet_name = "Thessia"
+	planet_class = "pc_continental"
+	city_graphical_culture="mec_asari_01"	
+	system_name = "Parnitha"
+	initializer= "sys_parnitha_init"
+	graphical_culture="mec_asari_01"
+	advisor_voice_type = "asari_republics"	
+
+	empire_flag = {
+		icon = {
+			category = "masseffect"
+			file = "Asari - Thessia.dds"
+		}
+		background = {
+			category = "backgrounds"
+			file = "00_solid.dds"
+		}
+		colors = {
+			"indigo"
+			"indigo"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_mec_asarirepublics_civ"
+		portrait = "mec_asari_3"
+		texture = 7
+		hair = 0
+		clothes = 5
+		#ruler_title = "Councilor"
+		#ruler_title_female = "Councilor"
+	}
+	spawn_enabled=always
+	room="personality_metalheads_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Salarian Union 
+salarian_union={
+    name="Salarian Union"
+    name_list="btr_salarian"
+	portrait="salarian"
+    adjective="PRESCRIPTED_adjective_salarian_union"
+    ship_prefix="PRESCRIPTED_ship_prefix_salarian_union"
+    species_name = "PRESCRIPTED_species_name_salarian_union"
+    species_plural = "PRESCRIPTED_species_plural_salarian_union"	
+	species_class = "SAL"
+    species_adjective = "PRESCRIPTED_species_adjective_salarian_union"
+    #species_bio="PRESCRIPTED_species_bio_salarian_union"	
+
+	authority="auth_oligarchic"
+	government="gov_science_directorate"
+	civics={ "civic_technocracy" "civic_meritocracy" }
+
+	flags={ custom_start_screen salarian_union btr_empire genophage_empire council_race }
+
+	ethic="ethic_egalitarian"
+	ethic="ethic_fanatic_materialist"
+
+	trait="btr_salarian_shortlived"
+	trait="btr_salarian_genius"
+	trait="trait_rapid_breeders"
+	trait="trait_weak"
+	
+	origin="origin_salarian_union"	
+
+	planet_name="Sur'Kesh"
+	planet_class="pc_tropical"
+	city_graphical_culture="mammalian_01"	
+	system_name="Pranas"
+	initializer="sys_pranas_init"
+	graphical_culture="humanoid_01"
+	advisor_voice_type = "salarian_union"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Salarian Union.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_salarian_union"
+		portrait="salarian_2"
+		texture=2
+		hair=0
+		clothes=14
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="salarian_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Turian Hierarchy
+turian_hierarchy={
+    name="Turian Hierarchy"
+    name_list="btr_turian"
+	portrait="turian"
+    adjective="PRESCRIPTED_adjective_turian_hierarchy"
+    ship_prefix="PRESCRIPTED_ship_prefix_turian_hierarchy"
+    species_name = "PRESCRIPTED_species_name_turian_hierarchy"
+    species_plural = "PRESCRIPTED_species_plural_turian_hierarchy"	
+	species_class = "TUR"
+    species_adjective = "PRESCRIPTED_species_adjective_turian_hierarchy"
+    #species_bio="PRESCRIPTED_species_bio_turian_hierarchy"	
+
+	authority="auth_oligarchic"
+	government="gov_citizen_stratocracy"
+	civics={ "civic_distinguished_admiralty" "civic_citizen_service" }
+
+	flags={ custom_start_screen turian_hierarchy btr_empire genophage_empire council_race }
+
+	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_militarist"
+
+	trait="btr_turian_patriotic"
+	trait="btr_turian_militaristic"
+	trait="trait_conformists"
+	trait="trait_nonadaptive"
+	trait="trait_talented"
+	
+	origin="origin_turian_hierarchy"	
+
+	planet_name="Palaven"
+	planet_class="pc_dextro_arid"
+	city_graphical_culture="mammalian_01"	
+	system_name="Trebia"
+	initializer="sys_trebia_init"
+	graphical_culture="reptilian_01"
+	advisor_voice_type = "turian_hierarchy"
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Turian Hierarchy 2.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_blue"
+			"grey"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_turian_hierarchy"
+		portrait="turian_3"
+		texture=0
+		hair=0
+		clothes=5
+		ruler_title="High Primarch"
+		ruler_title_female="High Primarch"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="turian_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+#######################
+#### Embassy Races ####
+#######################
+
+# Courts of Dekuuna
+courts_of_dekuuna={
+    name="Courts of Dekuuna"
+    name_list="btr_elcor"
+	portrait="elcor"
+    adjective="PRESCRIPTED_adjective_courts_of_dekuuna"
+    ship_prefix="PRESCRIPTED_ship_prefix_courts_of_dekuuna"
+    species_name = "PRESCRIPTED_species_name_courts_of_dekuuna"
+    species_plural = "PRESCRIPTED_species_plural_courts_of_dekuuna"	
+	species_class = "ELC"
+    species_adjective = "PRESCRIPTED_species_adjective_courts_of_dekuuna"
+    #species_bio="PRESCRIPTED_species_bio_courts_of_dekuuna"	
+
+	authority="auth_oligarchic"
+	government="gov_irenic_bureaucracy"
+	civics={ "civic_environmentalist" "civic_agrarian_idyll" }
+
+	flags={ custom_start_screen courts_of_dekuuna btr_empire }
+
+	ethic="ethic_xenophile"
+	ethic="ethic_fanatic_pacifist"
+
+	trait="trait_very_strong"
+	trait="trait_nomadic"
+	trait="trait_slow_breeders"
+	trait="trait_nonadaptive"
+	trait="trait_traditional"
+	
+	origin="origin_courts_of_dekuuna"	
+
+	planet_name="Dekuuna"
+	planet_class="pc_cascadian"
+	city_graphical_culture="mammalian_01"	
+	system_name="Phontes"
+	initializer="sys_phontes_init"
+	graphical_culture="avian_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Courts of Dekuuna.dds"
+		}
+		background={
+			category="backgrounds"
+			file="rounded_middle.dds"
+		}
+		colors={
+			"dark_teal"
+			"grey"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_courts_of_dekuuna"
+		portrait="elcor_male"
+		texture=2
+		hair=0
+		clothes=0
+		ruler_title="High Elder"
+		ruler_title_female="High Elder"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="elcor_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Illuminated Primacy
+illuminated_primacy={
+    name="Illuminated Primacy"
+    name_list="btr_hanar"
+	portrait="hanar"
+    adjective="PRESCRIPTED_adjective_illuminated_primacy"
+    ship_prefix="PRESCRIPTED_ship_prefix_illuminated_primacy"
+    species_name = "PRESCRIPTED_species_name_illuminated_primacy"
+    species_plural = "PRESCRIPTED_species_plural_illuminated_primacy"	
+	species_class = "HAN"
+    species_adjective = "PRESCRIPTED_species_adjective_illuminated_primacy"
+    #species_bio="PRESCRIPTED_species_bio_illuminated_primacy"	
+
+	authority="auth_oligarchic"
+	government="gov_citizen_stratocracy"
+	civics={ "civic_environmentalist" "civic_functional_architecture" }
+
+	flags={ custom_start_screen illuminated_primacy btr_empire }
+
+	ethic="ethic_pacifist"
+	ethic="ethic_fanatic_spiritualist"
+
+	trait="trait_weak"
+	trait="trait_traditional"
+	trait="trait_communal"
+	trait="btr_hanar_bureaucratic"
+	trait="btr_hanar_spiritual"
+	
+	origin="origin_illuminated_primacy"	
+
+	planet_name="Kahje"
+	planet_class="pc_ocean"
+	city_graphical_culture="avian_01"	
+	system_name="Kanala"
+	initializer="sys_kanala_init"
+	graphical_culture="fungoid_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Hanar.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"pink"
+			"turquoise"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_illuminated_primacy"
+		portrait="hanar"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="hanar_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Systems Alliance
+systems_alliance={
+    name="Systems Alliance"
+    name_list="btr_systems_alliance"
+	portrait="human"
+    adjective="PRESCRIPTED_adjective_systems_alliance"
+    ship_prefix="PRESCRIPTED_ship_prefix_systems_alliance"
+    species_name = "PRESCRIPTED_species_name_systems_alliance"
+    species_plural = "PRESCRIPTED_species_plural_systems_alliance"	
+	species_class = "HUM"
+    species_adjective = "PRESCRIPTED_species_adjective_systems_alliance"
+    #species_bio="PRESCRIPTED_species_bio_systems_alliance"	
+
+	authority="auth_democratic"
+	government="gov_military_commissariat"
+	civics={ "civic_distinguished_admiralty" "civic_beacon_of_liberty" }
+
+	flags={ custom_start_screen systems_alliance btr_empire }
+
+	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_militarist"
+
+	trait="btr_human_flexible"
+	trait="btr_human_multicultural"
+	trait="trait_wasteful"
+	trait="trait_quick_learners"
+	
+	origin="origin_systems_alliance"	
+
+	planet_name="Earth"
+	planet_class="pc_continental"
+	city_graphical_culture="mammalian_01"	
+	system_name="Sol"
+	initializer="sys_sol_init"
+	graphical_culture="alliance_01"
+	advisor_voice_type = "systems_alliance"
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Systems Alliance.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"light_blue"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_systems_alliance"
+		portrait="human_male_05"
+		texture=0
+		hair=4
+		clothes=22
+		ruler_title="Prime Minister"
+		ruler_title_female="Prime Minister"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="systems_alliance_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Vol Protectorate - With Megacorp
+vol_protectorate={
+	playable = has_megacorp	
+    name="Vol Protectorate"
+    name_list="btr_volus"
+	portrait="volus"
+    adjective="PRESCRIPTED_adjective_vol_protectorate"
+    ship_prefix="PRESCRIPTED_ship_prefix_vol_protectorate"
+    species_name = "PRESCRIPTED_species_name_vol_protectorate"
+    species_plural = "PRESCRIPTED_species_plural_vol_protectorate"	
+	species_class = "VOL"
+    species_adjective = "PRESCRIPTED_species_adjective_vol_protectorate"
+    #species_bio="PRESCRIPTED_species_bio_vol_protectorate"	
+
+	authority="auth_corporate"
+	government="gov_trade_league"
+	civics={ "civic_free_traders" "civic_trading_posts" }
+
+	flags={ custom_start_screen vol_protectorate btr_empire }
+
+	ethic="ethic_pacifist"
+	ethic="ethic_fanatic_materialist"
+
+	trait="trait_nonadaptive"
+	trait="trait_weak"
+	trait="btr_volus_tradesmen"
+	trait="trait_sedentary"
+	trait="btr_volus_trait_core"
+	
+	origin="origin_vol_protectorate"	
+
+	planet_name="Irune"
+	planet_class="pc_ammonia"
+	city_graphical_culture="mammalian_01"	
+	system_name="Aru"
+	initializer="sys_aru_init"
+	graphical_culture="mammalian_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Vol Protectorate.dds"
+		}
+		background={
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors={
+			"turquoise"
+			"turquoise"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_vol_protectorate"
+		portrait="volus_female"
+		texture=3
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="vol_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Vol Protectorate - no megacorp
+vol_protectorate_b={
+	playable = has_not_megacorp	
+    name="Vol Protectorate"
+    name_list="btr_volus"
+	portrait="volus"
+    adjective="PRESCRIPTED_adjective_vol_protectorate"
+    ship_prefix="PRESCRIPTED_ship_prefix_vol_protectorate"
+    species_name = "PRESCRIPTED_species_name_vol_protectorate"
+    species_plural = "PRESCRIPTED_species_plural_vol_protectorate"	
+	species_class = "VOL"
+    species_adjective = "PRESCRIPTED_species_adjective_vol_protectorate"
+    #species_bio="PRESCRIPTED_species_bio_vol_protectorate"	
+
+	authority="auth_oligarchic"
+	government= "gov_executive_committee"
+	civics={ "civic_corporate_dominion" "civic_efficient_bureaucracy" }
+
+	flags={ custom_start_screen vol_protectorate btr_empire }
+
+	ethic="ethic_pacifist"
+	ethic="ethic_fanatic_materialist"
+
+	trait="trait_nonadaptive"
+	trait="trait_weak"
+	trait="btr_volus_tradesmen"
+	trait="trait_sedentary"
+	trait="btr_volus_trait_core"
+	
+	origin="origin_vol_protectorate"	
+
+	planet_name="Irune"
+	planet_class="pc_ammonia"
+	city_graphical_culture="mammalian_01"	
+	system_name="Aru"
+	initializer="sys_aru_init"
+	graphical_culture="mammalian_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Vol Protectorate.dds"
+		}
+		background={
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors={
+			"turquoise"
+			"turquoise"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_vol_protectorate"
+		portrait="volus_female"
+		texture=3
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="vol_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+###########################
+#### Non-Citadel Races ####
+###########################
 
 # Asari Corporate Interests
 mec_asariillium_civ={
@@ -70,76 +630,6 @@ mec_asariillium_civ={
 	}
 	spawn_enabled=always
 	room="personality_peaceful_traders_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Asari Republics
-mec_asarirepublics_civ={
-	playable = mec_asari_req_asr
-    name="Asari Republics"
-    name_list="mec_asari_names"
-	portrait="mec_asari"
-    adjective="PRESCRIPTED_adjective_mec_asarirepublics_civ"
-    ship_prefix="PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"
-    species_name = "PRESCRIPTED_species_name_mec_asarirepublics_civ"
-    species_plural = "PRESCRIPTED_species_plural_mec_asarirepublics_civ"	
-	species_class = "MECASA"
-    species_adjective = "PRESCRIPTED_species_adjective_mec_asarirepublics_civ"
-    species_bio="PRESCRIPTED_species_bio_mec_asarirepublics_civ"	
-
-	authority = "auth_democratic"
-	government = "gov_mec_asr"
-	civics = { "mec_asari_civic_thessia" "civic_diplomatic_corps" }
-
-	flags={ custom_start_screen asari_republics btr_empire council_race }
-
-	ethic = "ethic_fanatic_xenophile"
-	ethic = "ethic_egalitarian"
-
-	trait = "mec_asari_trait_core"
-	trait = "mec_asari_trait_biotic"
-	trait = "trait_charismatic"
-	trait = "mec_asari_trait_sophisticated"
-
-	origin="mec_asari_origin_thessia"	
-
-	planet_name = "Thessia"
-	planet_class = "pc_continental"
-	city_graphical_culture="mec_asari_01"	
-	system_name = "Parnitha"
-	initializer= "sys_parnitha_init"
-	graphical_culture="mec_asari_01"
-	advisor_voice_type = "asari_republics"	
-
-	empire_flag = {
-		icon = {
-			category = "masseffect"
-			file = "Asari - Thessia.dds"
-		}
-		background = {
-			category = "backgrounds"
-			file = "00_solid.dds"
-		}
-		colors = {
-			"indigo"
-			"indigo"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_mec_asarirepublics_civ"
-		portrait = "mec_asari_3"
-		texture = 7
-		hair = 0
-		clothes = 5
-		#ruler_title = "Councilor"
-		#ruler_title_female = "Councilor"
-	}
-	spawn_enabled=always
-	room="personality_metalheads_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
@@ -214,216 +704,6 @@ batarian_hegemony={
 	ignore_portrait_duplication=no
 }
 
-## Cerberus
-cerberus={
-    name="Cerberus"
-    name_list="btr_cerberus"
-	portrait="human"
-    adjective="PRESCRIPTED_adjective_cerberus"
-    ship_prefix="PRESCRIPTED_ship_prefix_cerberus"
-    species_name = "PRESCRIPTED_species_name_cerberus"
-    species_plural = "PRESCRIPTED_species_plural_cerberus"	
-	species_class = "HUM"
-    species_adjective = "PRESCRIPTED_species_adjective_cerberus"
-    #species_bio="PRESCRIPTED_species_bio_cerberus"	
-
-	authority="auth_dictatorial"
-	government="gov_military_dictatorship"
-	civics={ "civic_efficient_bureaucracy" "civic_functional_architecture" }
-
-	flags={ custom_start_screen cerberus btr_empire }
-
-	ethic="ethic_authoritarian"
-	ethic="ethic_xenophobe"
-	ethic="ethic_militarist"
-
-	trait="btr_human_flexible"
-	trait="btr_human_multicultural"
-	trait="trait_wasteful"
-	trait="trait_quick_learners"
-	
-	origin="origin_cerberus"	
-
-	planet_name="Cronos Station"
-	planet_class="pc_cronos_station"
-	city_graphical_culture="mammalian_01"	
-	system_name="Anadius"
-	initializer="sys_anadius_init"
-	graphical_culture="reptilian_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Cerberus 2.dds"
-		}
-		background={
-			category="backgrounds"
-			file="v.dds"
-		}
-		colors={
-			"orange"
-			"black"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_cerberus"
-		portrait="human_male_04"
-		texture=0
-		hair=13
-		clothes=23
-		ruler_title="Illusive Man"
-		ruler_title_female="Illusive Woman"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="cerberus_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-## Collectors
-collectors={
-    name="The Collectors"
-    name_list="btr_collectors"
-	portrait="collector"
-    adjective="PRESCRIPTED_adjective_collectors"
-    ship_prefix="PRESCRIPTED_ship_prefix_collectors"
-    species_name = "PRESCRIPTED_species_name_collectors"
-    species_plural = "PRESCRIPTED_species_plural_collectors"	
-	species_class = "COL"
-    species_adjective = "PRESCRIPTED_species_adjective_collectors"
-    #species_bio="PRESCRIPTED_species_bio_collectors"	
-
-	authority="auth_hive_mind"
-	government="gov_devouring_swarm"
-	civics={ "civic_hive_devouring_swarm" "civic_hive_one_mind" }
-
-	flags={ custom_start_screen collectors btr_empire }
-
-	ethic="ethic_gestalt_consciousness"
-
-	trait="trait_hive_mind"
-	trait="trait_repugnant"
-	trait="trait_nomadic"
-	trait="trait_traditional"
-	trait="trait_resilient"
-	trait="trait_strong"
-	
-	origin="origin_collectors"	
-
-	planet_name="Collector Base"
-	planet_class="pc_collector_base"
-	city_graphical_culture="arthropoid_01"	
-	system_name="Tartarus Debris Field"
-	initializer="sys_tartarusdebrisfield_init"
-	graphical_culture="collector_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="collector.dds"
-		}
-		background={
-			category="backgrounds"
-			file="stripe.dds"
-		}
-		colors={
-			"black"
-			"brown"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_collectors"
-		portrait="collector"
-		texture=0
-		hair=0
-		clothes=0
-		leader_class="ruler"
-		ruler_title_male = "General"
-		ruler_title_female = "General"
-	}
-	spawn_enabled=always
-	room="collectors_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Courts of Dekuuna
-courts_of_dekuuna={
-    name="Courts of Dekuuna"
-    name_list="btr_elcor"
-	portrait="elcor"
-    adjective="PRESCRIPTED_adjective_courts_of_dekuuna"
-    ship_prefix="PRESCRIPTED_ship_prefix_courts_of_dekuuna"
-    species_name = "PRESCRIPTED_species_name_courts_of_dekuuna"
-    species_plural = "PRESCRIPTED_species_plural_courts_of_dekuuna"	
-	species_class = "ELC"
-    species_adjective = "PRESCRIPTED_species_adjective_courts_of_dekuuna"
-    #species_bio="PRESCRIPTED_species_bio_courts_of_dekuuna"	
-
-	authority="auth_oligarchic"
-	government="gov_irenic_bureaucracy"
-	civics={ "civic_environmentalist" "civic_agrarian_idyll" }
-
-	flags={ custom_start_screen courts_of_dekuuna btr_empire }
-
-	ethic="ethic_xenophile"
-	ethic="ethic_fanatic_pacifist"
-
-	trait="trait_very_strong"
-	trait="trait_nomadic"
-	trait="trait_slow_breeders"
-	trait="trait_nonadaptive"
-	trait="trait_traditional"
-	
-	origin="origin_courts_of_dekuuna"	
-
-	planet_name="Dekuuna"
-	planet_class="pc_cascadian"
-	city_graphical_culture="mammalian_01"	
-	system_name="Phontes"
-	initializer="sys_phontes_init"
-	graphical_culture="avian_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Courts of Dekuuna.dds"
-		}
-		background={
-			category="backgrounds"
-			file="rounded_middle.dds"
-		}
-		colors={
-			"dark_teal"
-			"grey"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_courts_of_dekuuna"
-		portrait="elcor_male"
-		texture=2
-		hair=0
-		clothes=0
-		ruler_title="High Elder"
-		ruler_title_female="High Elder"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="elcor_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
 # Geth Consensus
 geth_consensus={
     name="Geth Consensus"
@@ -488,74 +768,6 @@ geth_consensus={
 	}
 	spawn_enabled=always
 	room="geth_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Illuminated Primacy
-illuminated_primacy={
-    name="Illuminated Primacy"
-    name_list="btr_hanar"
-	portrait="hanar"
-    adjective="PRESCRIPTED_adjective_illuminated_primacy"
-    ship_prefix="PRESCRIPTED_ship_prefix_illuminated_primacy"
-    species_name = "PRESCRIPTED_species_name_illuminated_primacy"
-    species_plural = "PRESCRIPTED_species_plural_illuminated_primacy"	
-	species_class = "HAN"
-    species_adjective = "PRESCRIPTED_species_adjective_illuminated_primacy"
-    #species_bio="PRESCRIPTED_species_bio_illuminated_primacy"	
-
-	authority="auth_oligarchic"
-	government="gov_citizen_stratocracy"
-	civics={ "civic_environmentalist" "civic_functional_architecture" }
-
-	flags={ custom_start_screen illuminated_primacy btr_empire }
-
-	ethic="ethic_pacifist"
-	ethic="ethic_fanatic_spiritualist"
-
-	trait="trait_weak"
-	trait="trait_traditional"
-	trait="trait_communal"
-	trait="btr_hanar_bureaucratic"
-	trait="btr_hanar_spiritual"
-	
-	origin="origin_illuminated_primacy"	
-
-	planet_name="Kahje"
-	planet_class="pc_ocean"
-	city_graphical_culture="avian_01"	
-	system_name="Kanala"
-	initializer="sys_kanala_init"
-	graphical_culture="fungoid_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Hanar.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"pink"
-			"turquoise"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_illuminated_primacy"
-		portrait="hanar"
-		texture=0
-		hair=0
-		clothes=0
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="hanar_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
@@ -838,6 +1050,7 @@ quarian_conclave={
 	ignore_portrait_duplication=no
 }
 
+
 ## Rachni swarm
 rachni_swarm={
     name="Rachni Swarm"
@@ -904,355 +1117,6 @@ rachni_swarm={
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
-
-# Salarian Union 
-salarian_union={
-    name="Salarian Union"
-    name_list="btr_salarian"
-	portrait="salarian"
-    adjective="PRESCRIPTED_adjective_salarian_union"
-    ship_prefix="PRESCRIPTED_ship_prefix_salarian_union"
-    species_name = "PRESCRIPTED_species_name_salarian_union"
-    species_plural = "PRESCRIPTED_species_plural_salarian_union"	
-	species_class = "SAL"
-    species_adjective = "PRESCRIPTED_species_adjective_salarian_union"
-    #species_bio="PRESCRIPTED_species_bio_salarian_union"	
-
-	authority="auth_oligarchic"
-	government="gov_science_directorate"
-	civics={ "civic_technocracy" "civic_meritocracy" }
-
-	flags={ custom_start_screen salarian_union btr_empire genophage_empire council_race }
-
-	ethic="ethic_egalitarian"
-	ethic="ethic_fanatic_materialist"
-
-	trait="btr_salarian_shortlived"
-	trait="btr_salarian_genius"
-	trait="trait_rapid_breeders"
-	trait="trait_weak"
-	
-	origin="origin_salarian_union"	
-
-	planet_name="Sur'Kesh"
-	planet_class="pc_tropical"
-	city_graphical_culture="mammalian_01"	
-	system_name="Pranas"
-	initializer="sys_pranas_init"
-	graphical_culture="humanoid_01"
-	advisor_voice_type = "salarian_union"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Salarian Union.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"teal"
-			"teal"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_salarian_union"
-		portrait="salarian_2"
-		texture=2
-		hair=0
-		clothes=14
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="salarian_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Systems Alliance
-systems_alliance={
-    name="Systems Alliance"
-    name_list="btr_systems_alliance"
-	portrait="human"
-    adjective="PRESCRIPTED_adjective_systems_alliance"
-    ship_prefix="PRESCRIPTED_ship_prefix_systems_alliance"
-    species_name = "PRESCRIPTED_species_name_systems_alliance"
-    species_plural = "PRESCRIPTED_species_plural_systems_alliance"	
-	species_class = "HUM"
-    species_adjective = "PRESCRIPTED_species_adjective_systems_alliance"
-    #species_bio="PRESCRIPTED_species_bio_systems_alliance"	
-
-	authority="auth_democratic"
-	government="gov_military_commissariat"
-	civics={ "civic_distinguished_admiralty" "civic_beacon_of_liberty" }
-
-	flags={ custom_start_screen systems_alliance btr_empire }
-
-	ethic="ethic_fanatic_egalitarian"
-	ethic="ethic_militarist"
-
-	trait="btr_human_flexible"
-	trait="btr_human_multicultural"
-	trait="trait_wasteful"
-	trait="trait_quick_learners"
-	
-	origin="origin_systems_alliance"	
-
-	planet_name="Earth"
-	planet_class="pc_continental"
-	city_graphical_culture="mammalian_01"	
-	system_name="Sol"
-	initializer="sys_sol_init"
-	graphical_culture="alliance_01"
-	advisor_voice_type = "systems_alliance"
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Systems Alliance.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"light_blue"
-			"black"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_systems_alliance"
-		portrait="human_male_05"
-		texture=0
-		hair=4
-		clothes=22
-		ruler_title="Prime Minister"
-		ruler_title_female="Prime Minister"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="systems_alliance_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Turian Hierarchy
-turian_hierarchy={
-    name="Turian Hierarchy"
-    name_list="btr_turian"
-	portrait="turian"
-    adjective="PRESCRIPTED_adjective_turian_hierarchy"
-    ship_prefix="PRESCRIPTED_ship_prefix_turian_hierarchy"
-    species_name = "PRESCRIPTED_species_name_turian_hierarchy"
-    species_plural = "PRESCRIPTED_species_plural_turian_hierarchy"	
-	species_class = "TUR"
-    species_adjective = "PRESCRIPTED_species_adjective_turian_hierarchy"
-    #species_bio="PRESCRIPTED_species_bio_turian_hierarchy"	
-
-	authority="auth_oligarchic"
-	government="gov_citizen_stratocracy"
-	civics={ "civic_distinguished_admiralty" "civic_citizen_service" }
-
-	flags={ custom_start_screen turian_hierarchy btr_empire genophage_empire council_race }
-
-	ethic="ethic_fanatic_egalitarian"
-	ethic="ethic_militarist"
-
-	trait="btr_turian_patriotic"
-	trait="btr_turian_militaristic"
-	trait="trait_conformists"
-	trait="trait_nonadaptive"
-	trait="trait_talented"
-	
-	origin="origin_turian_hierarchy"	
-
-	planet_name="Palaven"
-	planet_class="pc_dextro_arid"
-	city_graphical_culture="mammalian_01"	
-	system_name="Trebia"
-	initializer="sys_trebia_init"
-	graphical_culture="reptilian_01"
-	advisor_voice_type = "turian_hierarchy"
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Turian Hierarchy 2.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"dark_blue"
-			"grey"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_turian_hierarchy"
-		portrait="turian_3"
-		texture=0
-		hair=0
-		clothes=5
-		ruler_title="High Primarch"
-		ruler_title_female="High Primarch"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="turian_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Vol Protectorate - With Megacorp
-vol_protectorate={
-	playable = has_megacorp	
-    name="Vol Protectorate"
-    name_list="btr_volus"
-	portrait="volus"
-    adjective="PRESCRIPTED_adjective_vol_protectorate"
-    ship_prefix="PRESCRIPTED_ship_prefix_vol_protectorate"
-    species_name = "PRESCRIPTED_species_name_vol_protectorate"
-    species_plural = "PRESCRIPTED_species_plural_vol_protectorate"	
-	species_class = "VOL"
-    species_adjective = "PRESCRIPTED_species_adjective_vol_protectorate"
-    #species_bio="PRESCRIPTED_species_bio_vol_protectorate"	
-
-	authority="auth_corporate"
-	government="gov_trade_league"
-	civics={ "civic_free_traders" "civic_trading_posts" }
-
-	flags={ custom_start_screen vol_protectorate btr_empire }
-
-	ethic="ethic_pacifist"
-	ethic="ethic_fanatic_materialist"
-
-	trait="trait_nonadaptive"
-	trait="trait_weak"
-	trait="btr_volus_tradesmen"
-	trait="trait_sedentary"
-	trait="btr_volus_trait_core"
-	
-	origin="origin_vol_protectorate"	
-
-	planet_name="Irune"
-	planet_class="pc_ammonia"
-	city_graphical_culture="mammalian_01"	
-	system_name="Aru"
-	initializer="sys_aru_init"
-	graphical_culture="mammalian_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Vol Protectorate.dds"
-		}
-		background={
-			category="backgrounds"
-			file="v.dds"
-		}
-		colors={
-			"turquoise"
-			"turquoise"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_vol_protectorate"
-		portrait="volus_female"
-		texture=3
-		hair=0
-		clothes=0
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="vol_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Vol Protectorate - no megacorp
-vol_protectorate_b={
-	playable = has_not_megacorp	
-    name="Vol Protectorate"
-    name_list="btr_volus"
-	portrait="volus"
-    adjective="PRESCRIPTED_adjective_vol_protectorate"
-    ship_prefix="PRESCRIPTED_ship_prefix_vol_protectorate"
-    species_name = "PRESCRIPTED_species_name_vol_protectorate"
-    species_plural = "PRESCRIPTED_species_plural_vol_protectorate"	
-	species_class = "VOL"
-    species_adjective = "PRESCRIPTED_species_adjective_vol_protectorate"
-    #species_bio="PRESCRIPTED_species_bio_vol_protectorate"	
-
-	authority="auth_oligarchic"
-	government= "gov_executive_committee"
-	civics={ "civic_corporate_dominion" "civic_efficient_bureaucracy" }
-
-	flags={ custom_start_screen vol_protectorate btr_empire }
-
-	ethic="ethic_pacifist"
-	ethic="ethic_fanatic_materialist"
-
-	trait="trait_nonadaptive"
-	trait="trait_weak"
-	trait="btr_volus_tradesmen"
-	trait="trait_sedentary"
-	trait="btr_volus_trait_core"
-	
-	origin="origin_vol_protectorate"	
-
-	planet_name="Irune"
-	planet_class="pc_ammonia"
-	city_graphical_culture="mammalian_01"	
-	system_name="Aru"
-	initializer="sys_aru_init"
-	graphical_culture="mammalian_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Vol Protectorate.dds"
-		}
-		background={
-			category="backgrounds"
-			file="v.dds"
-		}
-		colors={
-			"turquoise"
-			"turquoise"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_vol_protectorate"
-		portrait="volus_female"
-		texture=3
-		hair=0
-		clothes=0
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="vol_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-
-
-
 
 #######################
 #### Minor Empires ####
@@ -1600,3 +1464,152 @@ vorcha_clandom={
 #	}
 #	origin="origin_default"
 #}
+
+########################
+### TEMPORARY SPAWNS ###
+########################
+
+## Collectors
+collectors={
+    name="The Collectors"
+    name_list="btr_collectors"
+	portrait="collector"
+    adjective="PRESCRIPTED_adjective_collectors"
+    ship_prefix="PRESCRIPTED_ship_prefix_collectors"
+    species_name = "PRESCRIPTED_species_name_collectors"
+    species_plural = "PRESCRIPTED_species_plural_collectors"	
+	species_class = "COL"
+    species_adjective = "PRESCRIPTED_species_adjective_collectors"
+    #species_bio="PRESCRIPTED_species_bio_collectors"	
+
+	authority="auth_hive_mind"
+	government="gov_devouring_swarm"
+	civics={ "civic_hive_devouring_swarm" "civic_hive_one_mind" }
+
+	flags={ custom_start_screen collectors btr_empire }
+
+	ethic="ethic_gestalt_consciousness"
+
+	trait="trait_hive_mind"
+	trait="trait_repugnant"
+	trait="trait_nomadic"
+	trait="trait_traditional"
+	trait="trait_resilient"
+	trait="trait_strong"
+	
+	origin="origin_collectors"	
+
+	planet_name="Collector Base"
+	planet_class="pc_collector_base"
+	city_graphical_culture="arthropoid_01"	
+	system_name="Tartarus Debris Field"
+	initializer="sys_tartarusdebrisfield_init"
+	graphical_culture="collector_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="collector.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"black"
+			"brown"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_collectors"
+		portrait="collector"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+		ruler_title_male = "General"
+		ruler_title_female = "General"
+	}
+	spawn_enabled=always
+	room="collectors_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+
+
+
+## Cerberus
+cerberus={
+    name="Cerberus"
+    name_list="btr_cerberus"
+	portrait="human"
+    adjective="PRESCRIPTED_adjective_cerberus"
+    ship_prefix="PRESCRIPTED_ship_prefix_cerberus"
+    species_name = "PRESCRIPTED_species_name_cerberus"
+    species_plural = "PRESCRIPTED_species_plural_cerberus"	
+	species_class = "HUM"
+    species_adjective = "PRESCRIPTED_species_adjective_cerberus"
+    #species_bio="PRESCRIPTED_species_bio_cerberus"	
+
+	authority="auth_dictatorial"
+	government="gov_military_dictatorship"
+	civics={ "civic_efficient_bureaucracy" "civic_functional_architecture" }
+
+	flags={ custom_start_screen cerberus btr_empire }
+
+	ethic="ethic_authoritarian"
+	ethic="ethic_xenophobe"
+	ethic="ethic_militarist"
+
+	trait="btr_human_flexible"
+	trait="btr_human_multicultural"
+	trait="trait_wasteful"
+	trait="trait_quick_learners"
+	
+	origin="origin_cerberus"	
+
+	planet_name="Cronos Station"
+	planet_class="pc_cronos_station"
+	city_graphical_culture="mammalian_01"	
+	system_name="Anadius"
+	initializer="sys_anadius_init"
+	graphical_culture="reptilian_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Cerberus 2.dds"
+		}
+		background={
+			category="backgrounds"
+			file="v.dds"
+		}
+		colors={
+			"orange"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_cerberus"
+		portrait="human_male_04"
+		texture=0
+		hair=13
+		clothes=23
+		ruler_title="Illusive Man"
+		ruler_title_female="Illusive Woman"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="cerberus_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+
