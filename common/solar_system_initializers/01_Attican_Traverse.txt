@@ -131,10 +131,7 @@ sys_gagarin_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			while = {
-				count = 2
-				create_pop = { species = event_target:gethSpecies }
-			}
+			generate_geth_incursion_pops = yes
 			generate_btr_geth_incursion_start_buildings = yes			
 		}
 
@@ -225,7 +222,7 @@ sys_gagarin_init = {
 				}
 			}			
 			create_fleet = {
-				name = "NAME_Reds_Raiders"
+				name = "Red's Raiders"
 				effect = {
 					set_owner = event_target:pirate_country
 					set_fleet_flag = pirate_home_system_fleet
@@ -413,10 +410,7 @@ sys_grissom_init = {
 					species = event_target:gethSpecies
 					ethos = owner
 				}
-				while = {
-					count = 2
-					create_pop = { species = event_target:gethSpecies }
-				}
+				generate_geth_incursion_pops = yes
 				generate_btr_geth_incursion_start_buildings = yes			
 			}				
 		}						
@@ -698,10 +692,7 @@ sys_tereshkova_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			while = {
-				count = 2
-				create_pop = { species = event_target:gethSpecies }
-			}
+			generate_geth_incursion_pops = yes
 			generate_btr_geth_incursion_start_buildings = yes			
 		}			
 	}
@@ -857,10 +848,7 @@ sys_vamshi_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			while = {
-				count = 2
-				create_pop = { species = event_target:gethSpecies }
-			}
+			generate_geth_incursion_pops = yes
 			generate_btr_geth_incursion_start_buildings = yes			
 		}				
     }
@@ -1963,6 +1951,7 @@ sys_amun_init = {
     }
 
     flags = { amun_system custom_system btr_system empire_home_system }
+	usage = custom_empire
 	
     planet = {
         class = "pc_g_star"
@@ -2090,72 +2079,87 @@ sys_amun_init = {
         orbit_angle = 294
         has_ring = no
 		size = 17
+		starting_planet = yes
 		flags = { mec_eg_planet_anhur anhur pd_ignore }
-
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_major_empire_start_buildings = yes
-			create_country = {
-				name_list = btr_systems_alliance
-				species = event_target:humanSpecies
-				type = independent_colony
-				ethos = {
-					ethic = ethic_authoritarian
-					ethic = ethic_militarist
-					ethic = ethic_materialist
-				}
-				civics = { 
-					civic = civic_indentured_assets
-					civic = civic_ruthless_competition
-				}
-				origin = "origin_default"
-				flag={
-					icon={
-						category="domination"
-						file="domination_9.dds"
-					}
-					background={
-						category="backgrounds"
-						file="circle.dds"
-					}
-					colors={
-						"brown"
-						"light_orange"
-						"null"
-						"null"
-					}
-				}
-				ethos = {
-					ethic = ethic_authoritarian
-					ethic = ethic_xenophobe
-				}
-				name="United Anhur Corporations"
-				adjective="UAC"
-				authority="auth_corporate"
-				ignore_initial_colony_error = yes
+			generate_btr_anhur_start_buildings = yes			
+			random_country = {
+				limit = { has_country_flag = "united_anhur_corporations" }
+				save_event_target_as = amunOwner
+				save_global_event_target_as = united_anhur_corporations
+				species = { save_global_event_target_as = batarianSpecies }
 			}
-			last_created_country = {
-				set_graphical_culture = industrial_01
-				set_country_flag = united_anhur
-				set_country_flag = independent_colony
-				save_global_event_target_as = united_anhur
-			}
-			create_colony = { 
-				owner = last_created_country 
-				species = last_created 
-			}
-			while = {
-				count = 7
-				create_pop = { species = event_target:batarianSpecies }
-			}
-			while = {
-				count = 7
-				create_pop = { species = event_target:humanSpecies }
-			}			
-			set_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
-    	}
+			generate_anhur_colony_pops = yes
+			generate_anhur_human_pops = yes				
+			set_name = "Anhur"
+		}
+
+		# init_effect = {
+		# 	prevent_anomaly = yes
+		# 	generate_btr_start_deposits_and_blockers = yes
+		# 	generate_btr_major_empire_start_buildings = yes
+		# 	create_country = {
+		# 		name_list = btr_systems_alliance
+		# 		species = event_target:humanSpecies
+		# 		type = independent_colony
+		# 		ethos = {
+		# 			ethic = ethic_authoritarian
+		# 			ethic = ethic_militarist
+		# 			ethic = ethic_materialist
+		# 		}
+		# 		civics = { 
+		# 			civic = civic_indentured_assets
+		# 			civic = civic_ruthless_competition
+		# 		}
+		# 		origin = "origin_default"
+		# 		flag={
+		# 			icon={
+		# 				category="domination"
+		# 				file="domination_9.dds"
+		# 			}
+		# 			background={
+		# 				category="backgrounds"
+		# 				file="circle.dds"
+		# 			}
+		# 			colors={
+		# 				"brown"
+		# 				"light_orange"
+		# 				"null"
+		# 				"null"
+		# 			}
+		# 		}
+		# 		ethos = {
+		# 			ethic = ethic_authoritarian
+		# 			ethic = ethic_xenophobe
+		# 		}
+		# 		name="United Anhur Corporations"
+		# 		adjective="UAC"
+		# 		authority="auth_corporate"
+		# 		ignore_initial_colony_error = yes
+		# 	}
+		# 	last_created_country = {
+		# 		set_graphical_culture = industrial_01
+		# 		set_country_flag = united_anhur
+		# 		set_country_flag = independent_colony
+		# 		save_global_event_target_as = united_anhur
+		# 	}
+		# 	create_colony = { 
+		# 		owner = last_created_country 
+		# 		species = last_created 
+		# 	}
+		# 	while = {
+		# 		count = 7
+		# 		create_pop = { species = event_target:batarianSpecies }
+		# 	}
+		# 	while = {
+		# 		count = 7
+		# 		create_pop = { species = event_target:humanSpecies }
+		# 	}			
+		# 	set_deposit = d_minerals_3
+		# 	set_planet_flag = starting_deposit
+    	# }
 	}	
 
     planet = {

@@ -1261,7 +1261,7 @@ parnack_regime={
 raloi_republic={
     name="Raloi Republic"
     name_list="AVI4"
-	portrait="avi10"
+	portrait="avi11"
     adjective="PRESCRIPTED_adjective_raloi_republic"
     ship_prefix="PRESCRIPTED_ship_prefix_raloi_republic"
     species_name = "PRESCRIPTED_species_name_raloi_republic"
@@ -1390,6 +1390,81 @@ vorcha_clandom={
 	ignore_portrait_duplication=no
 }
 
+##############################
+#### Independent Colonies ####
+##############################
+
+# United Anhur Corporations
+united_anhur_corporations={
+    name="United Anhur Corporations"
+    name_list="btr_batarian"
+	portrait="batarian"
+    adjective="PRESCRIPTED_adjective_united_anhur_corporations"
+    ship_prefix="PRESCRIPTED_ship_prefix_united_anhur_corporations"
+    species_name = "PRESCRIPTED_species_name_united_anhur_corporations"
+    species_plural = "PRESCRIPTED_species_plural_united_anhur_corporations"	
+	species_class = "BAT"
+    species_adjective = "PRESCRIPTED_species_adjective_united_anhur_corporations"
+    #species_bio="PRESCRIPTED_species_bio_united_anhur_corporations"	
+
+	authority="auth_corporate"
+	government="gov_megacorporation"
+	civics={ "civic_indentured_assets" "civic_ruthless_competition" }
+
+	
+	flags={ custom_start_screen united_anhur_corporations btr_empire independent_colony united_anhur }
+
+	ethic = "ethic_authoritarian"
+	ethic = "ethic_militarist"
+	ethic = "ethic_materialist"
+
+	trait="trait_decadent"
+	trait="trait_repugnant"
+	trait="trait_thrifty"
+	trait="trait_industrious"
+	trait="trait_deviants"
+	
+	origin="origin_default"	
+
+	planet_name="Anhur"
+	planet_class="pc_forest"
+	city_graphical_culture="mammalian_01"	
+	system_name="Amun"
+	initializer="sys_amun_init"
+	graphical_culture="industrial_01"
+
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_9.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"brown"
+			"light_orange"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_united_anhur_corporations"
+		portrait="batarian"
+		texture=4
+		hair=0
+		clothes=5
+		ruler_title="Chief Executive Officer"
+		ruler_title_female="Chief Executive Officer"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="batarian_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
 
 ########################
 #### NOT IMPLEMENTED ###

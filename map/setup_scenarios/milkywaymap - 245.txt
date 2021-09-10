@@ -1961,6 +1961,13 @@ static_galaxy_scenario = {
             y = -46.03065
         }
         initializer = sys_amun_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = united_anhur_corporations
+                } 
+        }        
     }
 
     system = {
