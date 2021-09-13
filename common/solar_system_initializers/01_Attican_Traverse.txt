@@ -44,6 +44,7 @@ sys_gagarin_init = {
 				modifier = bleak_planet
 				days = -1
 			}
+			add_deposit = d_minerals_1
 		}	
 
 		moon = {
@@ -85,6 +86,7 @@ sys_gagarin_init = {
 				modifier = extensive_moon_system
 				days = -1
 			}
+			add_deposit = d_helium_3_2
 		}
 
 		moon = {
@@ -336,6 +338,7 @@ sys_grissom_init = {
 			add_anomaly = {
 				category = MEC_EG_ANO_ZAHERUX_1023_CAT			###Zaherux Anomaly (Sea of Sands)
 			}
+			add_deposit = d_minerals_2
 		}		
 		moon = {
 			name = "Zaherux_a"
@@ -380,6 +383,7 @@ sys_grissom_init = {
 				modifier = extensive_moon_system
 				days = -1
 			}
+			add_deposit = d_helium_3_2
 		}		
 		moon = {
 			name = "Notanban_a"
@@ -412,6 +416,7 @@ sys_grissom_init = {
 				}
 				generate_geth_incursion_pops = yes
 				generate_btr_geth_incursion_start_buildings = yes			
+				add_deposit = d_minerals_1
 			}				
 		}						
 
@@ -519,6 +524,7 @@ sys_hong_init = {
 			add_anomaly = {
 				category = MEC_EG_ANO_CASBIN_1025_CAT			###Casbin Anomaly (Pre-Garden World)
 			}
+			add_deposit = d_minerals_1
 		}
     }
 
@@ -559,6 +565,7 @@ sys_hong_init = {
 					modifier = extensive_moon_system
 					days = -1
 				}
+				add_deposit = d_helium_3_2
 			}
 
 		moon = {
@@ -614,7 +621,10 @@ sys_hong_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+		
+			add_deposit = d_minerals_2
 		}
+
 	}			
 
 
@@ -692,6 +702,7 @@ sys_tereshkova_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
+			add_deposit = d_minerals_1
 			generate_geth_incursion_pops = yes
 			generate_btr_geth_incursion_start_buildings = yes			
 		}			
@@ -709,6 +720,7 @@ sys_tereshkova_init = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
+				add_deposit = d_iridium_2
 			}			
 		}
 
@@ -724,6 +736,7 @@ sys_tereshkova_init = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
+				add_deposit = d_helium_3_3
 			}			
 		}
 
@@ -744,6 +757,7 @@ sys_tereshkova_init = {
 					modifier = tidal_locked
 					days = -1
 				}
+				add_deposit = d_minerals_2
 			}			
 		}
 
@@ -759,6 +773,7 @@ sys_tereshkova_init = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
+				add_deposit = d_helium_3_1
 			}				
 		}
 
@@ -849,7 +864,8 @@ sys_vamshi_init = {
 				ethos = owner
 			}
 			generate_geth_incursion_pops = yes
-			generate_btr_geth_incursion_start_buildings = yes			
+			generate_btr_geth_incursion_start_buildings = yes
+			add_deposit = d_minerals_2			
 		}				
     }
 
@@ -882,6 +898,7 @@ sys_vamshi_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			add_deposit = d_minerals_1
 		}		
     }
 }
@@ -1043,7 +1060,9 @@ sys_chabtan_init = {
         orbit_distance = 185
         orbit_angle = 126
         has_ring = no
-
+		init_effect = {
+			add_deposit = d_helium_3_3
+		}
     }
 
     init_effect = { 
@@ -1129,6 +1148,13 @@ sys_ubroni_init = {
         orbit_distance = 84
         orbit_angle = 13
         has_ring = no
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+			add_deposit = d_helium_3_3
+		}
 		moon = {
 			name = "Zankep_a"
 			class = "pc_iron"
@@ -1158,6 +1184,9 @@ sys_ubroni_init = {
         orbit_distance = 61
         orbit_angle = 140
         has_ring = yes
+		init_effect = {
+			add_deposit = d_helium_3_1
+		}
     }
 
     planet = {
@@ -1188,14 +1217,7 @@ sys_aysur_init = {
 	max_instances = 1
 
     flags = { aysur_system caleston_rift btr_system }
-	init_effect = {
-		prevent_anomaly = yes
-		clear_deposits = yes
-
-		set_deposit = d_energy_3
-		set_planet_flag = starting_deposit
-	}	
-    planet = {
+	planet = {
 	    name = "Aysur"
         class = "pc_g_star"
         orbit_distance = 0
@@ -1235,6 +1257,7 @@ sys_aysur_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			add_deposit = d_iridium_3
 		}
     }
 
@@ -1250,11 +1273,11 @@ sys_aysur_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			
 			add_modifier = {
 				modifier = extensive_moon_system
 				days = -1
 			}
+			add_deposit = d_helium_3_2
 		}
 		
 		moon = {
@@ -1348,6 +1371,7 @@ sys_aysur_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
+			add_deposit = d_platinum_2
 		}
 	}
 
@@ -1360,9 +1384,7 @@ sys_aysur_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-
 			set_deposit = d_minerals_4
-			set_planet_flag = starting_deposit
 		}
 	}
 
@@ -1378,6 +1400,7 @@ sys_aysur_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			add_deposit = d_helium_3_2
 		}
     }
 
@@ -1393,9 +1416,7 @@ sys_aysur_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			set_deposit = d_iridium_2
 		}
     }
 
@@ -1411,6 +1432,7 @@ sys_aysur_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			add_deposit = d_palladium_3
 		}
     }
 
@@ -1463,6 +1485,7 @@ sys_balor_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			add_deposit = d_helium_3_4
 		}
 
         moon = {
@@ -1479,8 +1502,8 @@ sys_balor_init = {
 				clear_planet_modifiers = yes 
 
 				set_deposit = d_trade_value_3
-				set_planet_flag = starting_deposit			
-	
+				add_deposit = d_element_zero_2
+				add_deposit = d_palladium_2
 				add_modifier = {
 					modifier = unstable_tectonics
 					days = -1
@@ -1503,7 +1526,8 @@ sys_balor_init = {
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
 
-			set_deposit = d_minerals_3
+			add_deposit = d_iridium_2
+			add_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
     }
@@ -1516,6 +1540,9 @@ sys_balor_init = {
         has_ring = no
         size = 4		
 		flags = { elatha pd_ignore }
+		init_effect = {
+			add_deposit = d_iridium_1
+		}
     }
 
     planet = {
@@ -1526,6 +1553,10 @@ sys_balor_init = {
         has_ring = no
 		size = 25
 		flags = { partholon pd_ignore }
+		init_effect = {
+			add_deposit = d_platinum_3
+			add_deposit = d_element_zero_1
+		}
 	}
 
     init_effect = { 
@@ -1562,12 +1593,15 @@ sys_solveig_init = {
 
     planet = {
         name = "Surtur"
-        class = "pc_barren"
+        class = "pc_iron"
         orbit_distance = 40
         orbit_angle = 179
         has_ring = no
 		size = 11
 		flags = { surtur pd_ignore }
+		init_effect = {
+			add_deposit = d_palladium_3
+		}
         moon = {
             name = "Sinmara"
             class = "pc_frozen"
@@ -1600,6 +1634,7 @@ sys_solveig_init = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
+				add_deposit = d_helium_3_2
 			}
 		}
 		
@@ -1610,11 +1645,12 @@ sys_solveig_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 8
-			
+		
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
+				add_deposit = d_platinum_1
 			}
 		}
     }
@@ -1660,7 +1696,7 @@ sys_talava_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 		
-		
+			add_deposit = d_iridium_2
 			add_modifier = {
 				modifier = high_gravity
 				days = -1
@@ -1669,6 +1705,10 @@ sys_talava_init = {
 				modifier = unstable_tectonics
 				days = -1
 			}
+			add_modifier = {
+				modifier = infinity_caldera
+				days = -1
+			}			
     	}
 	}	
 
@@ -1684,7 +1724,7 @@ sys_talava_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes	
 			clear_planet_modifiers = yes 	
-		
+			add_deposit = d_iridium_2		
 			add_modifier = {
 				modifier = unstable_tectonics
 				days = -1
@@ -1704,6 +1744,7 @@ sys_talava_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			add_deposit = d_iridium_3
 		}
     }
 
@@ -1719,8 +1760,7 @@ sys_talava_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
-			set_deposit = d_minerals_2
+			set_deposit = d_palladium_3
 			set_planet_flag = starting_deposit
 		}
     }
@@ -1773,11 +1813,11 @@ sys_yakawa_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			
 			add_modifier = {
 				modifier = strong_magnetic_field
 				days = -1
 			}
+			add_deposit = d_palladium_2
 		}
     }
 
@@ -1793,6 +1833,8 @@ sys_yakawa_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			add_deposit = d_platinum_2
+			add_deposit = d_helium_3_2
 		}
 
 		moon = {
@@ -1805,7 +1847,6 @@ sys_yakawa_init = {
 				prevent_anomaly = yes
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
-
 				set_deposit = d_trade_value_2
 				set_planet_flag = starting_deposit
 			}			
@@ -1854,8 +1895,7 @@ sys_yakawa_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
-			set_deposit = d_minerals_2
+			set_deposit = d_minerals_3
 			set_planet_flag = starting_deposit
 		}
     }
@@ -1872,11 +1912,11 @@ sys_yakawa_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			
 			add_modifier = {
 				modifier = unstable_tectonics
 				days = -1
 			}
+			add_deposit = d_palladium_2
 		}
     }
 
@@ -1893,7 +1933,8 @@ sys_yakawa_init = {
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
 
-			set_deposit = d_exotic_gases_1
+			set_deposit = d_helium_3_2
+			add_deposit = d_exotic_gases_2
 			set_planet_flag = starting_deposit
 		}
 		

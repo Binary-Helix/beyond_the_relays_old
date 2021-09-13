@@ -4191,10 +4191,10 @@ sys_sol_init = {
 				species = event_target:humanSpecies
 				ethos = owner
 			}
-			while = {
-				count = 7
-				create_pop = { species = event_target:humanSpecies }
-			}
+            while = {
+                count = 7
+                create_pop = { species = owner_main_species }
+            }
 			generate_btr_mars_start_buildings = yes
 			clear_deposits = yes
 			add_deposit = d_mars_lowell_city
