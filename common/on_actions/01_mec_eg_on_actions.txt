@@ -1,0 +1,148 @@
+# This file handles all startup triggers for MEC: Expanded Galaxy.
+# Events are defined in their own folder
+# Triggers when game starts
+
+#### MEC Colony Events
+
+# X years has passed since a planet was colonized (won't trigger on empire homeworld)
+on_colony_1_year_old = {
+	events = {
+	}
+	random_events = {
+		300 = 0
+
+		### Colony Events & Chains
+		#1 = mec_eg_colony.001 #Thresher Maw Attack
+		#1 = mec_bio_evt.001 #Eruption in the Ether
+		#1 = mec_bio_evt.002 #Industrial Ignition
+		#1 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+on_colony_2_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		5 = mec_eg_colony.001 #Thresher Maw Attack
+		5 = mec_bio_evt.001 #Eruption in the Ether
+		#5 = mec_bio_evt.002 #Industrial Ignition
+		5 = mec_bio_evt.003 #Falling Skies
+
+	}
+}
+
+on_colony_3_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		10 = mec_eg_colony.001 #Thresher Maw Attack
+		15 = mec_bio_evt.001 #Eruption in the Ether
+		#10 = mec_bio_evt.002 #Industrial Ignition
+		5 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+on_colony_4_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		20 = mec_eg_colony.001 #Thresher Maw Attack
+		20 = mec_bio_evt.001 #Eruption in the Ether
+		#10 = mec_bio_evt.002 #Industrial Ignition
+		10 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+on_colony_5_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		20 = mec_eg_colony.001 #Thresher Maw Attack
+		30 = mec_bio_evt.001 #Eruption in the Ether
+		10 = mec_bio_evt.002 #Industrial Ignition
+		10 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+
+on_colony_6_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		30 = mec_eg_colony.001 #Thresher Maw Attack
+		30 = mec_bio_evt.001 #Eruption in the Ether
+		10 = mec_bio_evt.002 #Industrial Ignition
+		10 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+on_colony_7_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		15 = mec_eg_colony.001 #Thresher Maw Attack
+		40 = mec_bio_evt.001 #Eruption in the Ether
+		15 = mec_bio_evt.002 #Industrial Ignition
+		20 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+on_colony_8_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		15 = mec_eg_colony.001 #Thresher Maw Attack
+		50 = mec_bio_evt.001 #Eruption in the Ether
+		20 = mec_bio_evt.002 #Industrial Ignition
+		30 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+on_colony_9_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		10 = mec_eg_colony.001 #Thresher Maw Attack
+		50 = mec_bio_evt.001 #Eruption in the Ether
+		25 = mec_bio_evt.002 #Industrial Ignition
+		30 = mec_bio_evt.003 #Falling Skies
+	}
+}
+
+on_colony_10_years_old = {
+	events = {
+	}
+	random_events = {
+		150 = 0
+
+		### Colony Events & Chains
+		5 = mec_eg_colony.001 #Thresher Maw Attack
+		50 = mec_bio_evt.001 #Eruption in the Ether
+		30 = mec_bio_evt.002 #Industrial Ignition
+		30 = mec_bio_evt.003 #Falling Skies
+	}
+}

@@ -7,12 +7,9 @@
 sys_gagarin_init = {
     name = "Gagarin"
     class = "sc_k"
-    init_effect = {
-        save_global_event_target_as = "gagarin_hyperlane_system"
-    }	
 	max_instances = 1
 	
-	flags = { gagarin_system armstrong_nebula btr_system custom_system }	
+	flags = { attican_traverse_system armstrong_nebula_system gagarin_system btr_system custom_system }	
 	
 	planet = {
 		name = "Gagarin"
@@ -21,6 +18,24 @@ sys_gagarin_init = {
 		orbit_angle = 1
 		size = 33
 		has_ring = no
+		flags = { gagarin_star }	
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			create_ambient_object = {
+				type = "nebula_1"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}		
 	}
 
     planet = {
@@ -30,42 +45,67 @@ sys_gagarin_init = {
         orbit_angle = 165
         has_ring = no
 		size = 25 
-		entity = "chlorine_planet_01_entity"
-		flags = { junthor pd_ignore }		
-
 		init_effect = {
 			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			add_deposit = d_aluminum_surface
+			add_deposit = d_aluminum_surface
+			add_deposit = d_aluminum_surface
+			add_deposit = d_nickel_deposits
+			add_deposit = d_nickel_deposits
+			add_deposit = d_junthor_ruins
 
 			add_anomaly = {
 				category = MEC_EG_ANO_JUNTHOR_1021_CAT			###Junthor Anomaly (Ancient Obelisk)
+			}			
+			add_modifier = {
+				modifier = junthor_codex_untranslated
+				days = -1
 			}
-			
 			add_modifier = {
 				modifier = bleak_planet
 				days = -1
 			}
-			add_deposit = d_minerals_1
+
 		}	
 
+		flags = { junthor_planet pd_ignore }		
+
 		moon = {
-			name = "Junthor_a"
+			name = "Junthor a"
 			class = "pc_iron"
 			orbit_distance = 9
-			size = 5			
+			size = 5
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}						
 		}
 
 		moon = {
-			name = "Junthor_b"
+			name = "Junthor b"
 			class = "pc_subglacial"
 			orbit_distance = 3
-			size = 3		
+			size = 3	
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}				
 		}
 
 		moon = {
-			name = "Junthor_c"
+			name = "Junthor c"
 			class = "pc_subglacial"
 			orbit_distance = 3
 			size = 3
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}			
 		}		
     }
 
@@ -76,40 +116,60 @@ sys_gagarin_init = {
         orbit_angle = 202
         has_ring = no
 		size = 30
-		entity = "pressha_entity"
-		flags = { pressha pd_ignore }	
-		
+
+		flags = { pressha_planet pd_ignore }	
 		init_effect = {
 			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_deposit = d_helium_3_5
+			set_planet_flag = starting_deposit
 
 			add_modifier = {
 				modifier = extensive_moon_system
+					days = -1
+			}
+			add_modifier = {
+				modifier = pressha_codex
 				days = -1
 			}
-			add_deposit = d_helium_3_2
 		}
-
 		moon = {
-			name = "Pressha_a"
+			name = "Pressha a"
 			class = "pc_iron"
 			orbit_distance = 16
 			size = 7
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}			
 		}
 
 		moon = {
-			name = "Pressha_b"
+			name = "Pressha b"
 			class = "pc_frozen"
 			orbit_distance = 4
 			size = 8
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
 		}
 
 		moon = {
-			name = "Pressha_c"
+			name = "Pressha c"
 			count = 1
 			class = "pc_barren_cold"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 4
 			size = 9
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}
 		}		
     }
 
@@ -120,13 +180,24 @@ sys_gagarin_init = {
         orbit_angle = 245
         has_ring = no
 		size = 13
-		entity = "rayingri_entity"
-		flags = { rayingri pd_ignore }
+
+		flags = { rayingri_planet pd_ignore }
 
 		init_effect = {
-			add_anomaly = {
-				category = MEC_EG_ANO_RAYINGRI_1022_CAT			###Rayingri Anomaly (Collision Course)
-			}			
+			prevent_anomaly = yes					
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			add_deposit = d_minerals_3
+			add_deposit = d_platinum_1
+			add_deposit = d_palladium_1
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}
+			add_modifier = {
+				modifier = rayingri_unsurveyed_codex
+				days = -1
+			}
 			set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
@@ -140,9 +211,23 @@ sys_gagarin_init = {
 		moon = {
 			name = "Vahtz"
 			class = "pc_iron"
-			flags = { pd_ignore }		
 			orbit_distance = 5
-			size = 6			
+			size = 6	
+
+			flags = { vahtz_planet pd_ignore }	
+
+			init_effect = {
+				prevent_anomaly = yes					
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+				add_modifier = {
+					modifier = vahtz_unsurveyed_codex
+					days = -1
+				}	
+				add_anomaly = {
+					category = MEC_EG_ANO_RAYINGRI_1022_CAT			###Rayingri Anomaly (Collision Course)
+				}
+			}				
 		}
     }
 
@@ -153,12 +238,16 @@ sys_gagarin_init = {
         orbit_angle = 286
         has_ring = no
 		size = 11
-		entity = "sogelrus_entity"
-		flags = { sogelrus pd_ignore }
+
+		flags = { sogelrus_planet pd_ignore }
+
 		init_effect = {
-			set_deposit = d_cryovolcanos
-			set_deposit = d_cryovolcanos			
-			set_deposit = d_cryovolcanos			
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			add_modifier = {
+				modifier = sogelrus_codex
+			}
 		}
     }
 
@@ -169,16 +258,21 @@ sys_gagarin_init = {
         orbit_angle = 289
         has_ring = no
 		size = 23
-		entity = "antirumgon_entity"
-		flags = { antirumgon pd_ignore planetary_ruins }	
+
+		flags = { antirumgon_planet pd_ignore }	
 
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_minerals_3
+			clear_deposits = yes
+			clear_planet_modifiers = yes 			
+			add_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
-			
 			add_modifier = {
 				modifier = carbon_world
+				days = -1
+			}
+			add_modifier = {
+				modifier = antirumgon_codex
 				days = -1
 			}
 			create_pirate_country = yes
@@ -275,11 +369,8 @@ sys_grissom_init = {
     name = "Grissom"
     class = "sc_o_super"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "grissom_relay_system"
-    }
 	
-    flags = { btr_system grissom_system armstrong_nebula custom_system }
+    flags = { attican_traverse_system armstrong_nebula_system grissom_system btr_system custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -298,6 +389,26 @@ sys_grissom_init = {
 		orbit_angle = 1
 		size = 40
 		has_ring = no
+
+		flags = { grissom_star }
+
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			create_ambient_object = {
+				type = "nebula_1"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}
 	}
 
     planet = {
@@ -307,44 +418,62 @@ sys_grissom_init = {
         orbit_angle = 340
         has_ring = no
 		size = 17
-		entity = "benda_entity"		
-		flags = { benda pd_ignore }
+
+		flags = { benda_planet pd_ignore }
+
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes	
 			clear_planet_modifiers = yes 	
-
 			add_modifier = {
 				modifier = unstable_tectonics
 				days = -1
 			}
-		}				
+			add_modifier = {
+				modifier = benda_codex
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Zaherux"
-        class = "pc_barren"
+        class = "pc_sandsea"
         orbit_distance = 50
         orbit_angle = 329
         has_ring = no
 		size = 16
-		entity = "zaherux_entity"
-		flags = { zaherux pd_ignore }
+
+		flags = { zaherux_planet pd_ignore }
+
 		init_effect = {
 			prevent_anomaly = yes			
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
+			add_deposit = d_minerals_2
+			add_modifier = {
+				modifier = zaherux_unsurveyed_codex
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
 			add_anomaly = {
 				category = MEC_EG_ANO_ZAHERUX_1023_CAT			###Zaherux Anomaly (Sea of Sands)
 			}
-			add_deposit = d_minerals_2
-		}		
+		}
+
 		moon = {
-			name = "Zaherux_a"
+			name = "Zaherux a"
 			class = "pc_barren"
 			orbit_distance = 8
 			size = 5
+			init_effect = {
+				prevent_anomaly = yes			
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+			}	
 		}
 	}
 	
@@ -354,11 +483,10 @@ sys_grissom_init = {
         count = 3
         class = pc_asteroid
         orbit_distance = 0
-		orbit_angle = { min = 10 max = 190 }		
+		orbit_angle = { min = 10 max = 190 }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-	
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}		
@@ -371,22 +499,26 @@ sys_grissom_init = {
         orbit_angle = 267
         has_ring = no
 		size = 37
-		entity = "notanban_entity"
-		flags = { notanban pd_ignore }		
-		change_orbit = 10
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			clear_planet_modifiers = yes 		
+			clear_planet_modifiers = yes 	
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
 
 			add_modifier = {
 				modifier = extensive_moon_system
-				days = -1
+					days = -1
 			}
-			add_deposit = d_helium_3_2
-		}		
+			add_modifier = {
+				modifier = notanban_codex
+					days = -1
+			}
+		}
+		flags = { notanban_planet pd_ignore }		
+	
 		moon = {
-			name = "Notanban_a"
+			name = "Notanban a"
 			class = "pc_iron"
 			orbit_distance = 8			
 			size = 7
@@ -400,12 +532,16 @@ sys_grissom_init = {
 			size = 11
 			flags = { solcrum pd_ignore }
 			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes	
-				clear_planet_modifiers = yes 	
-	
+				prevent_anomaly = yes			
+				clear_deposits = yes
+				clear_planet_modifiers = yes 
+				add_deposit = d_platinum_2
 				add_modifier = {
 					modifier = tidal_locked
+					days = -1
+				}
+				add_modifier = {
+					modifier = solcrum_codex
 					days = -1
 				}
 				set_owner = event_target:geth_consensus
@@ -416,7 +552,6 @@ sys_grissom_init = {
 				}
 				generate_geth_incursion_pops = yes
 				generate_btr_geth_incursion_start_buildings = yes			
-				add_deposit = d_minerals_1
 			}				
 		}						
 
@@ -427,13 +562,12 @@ sys_grissom_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 0
 			size = 4
-			entity = "mec_barren_red_01"
-			
 			init_effect = {
-				prevent_anomaly = yes
+				prevent_anomaly = yes			
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
 			}
+
 		}
 		
 		moon = {
@@ -443,12 +577,26 @@ sys_grissom_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 5
 			size = 6
-			
 			init_effect = {
-				prevent_anomaly = yes
+				prevent_anomaly = yes			
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
 			}
+		}		
+    }
+
+	planet = {
+        count = 1
+        class = pc_asteroid
+        orbit_distance = 0
+		orbit_angle = { min = 10 max = 190 }
+		init_effect = {
+			prevent_anomaly = yes			
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_deposit = d_minerals_5
+			add_deposit = d_iridium_1
+			set_planet_flag = starting_deposit
 		}		
     }
 
@@ -466,11 +614,8 @@ sys_hong_init = {
     name = "Hong"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "hong_hyperlane"
-    }
 
-	flags = { btr_system armstrong_nebula custom_system }
+	flags = { attican_traverse_system armstrong_nebula_system hong_system btr_system custom_system }
 
 	planet = {
 		name = "Hong"
@@ -479,14 +624,23 @@ sys_hong_init = {
 		orbit_angle = 1
 		size = 25
 		has_ring = no
-
+		flags = { hong_star }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-
 			set_deposit = d_energy_2
-			set_planet_flag = starting_deposit
-		}		
+			set_planet_flag = starting_deposit	
+			create_ambient_object = {
+				type = "nebula_2"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}	
 	}
 
     planet = {
@@ -496,16 +650,21 @@ sys_hong_init = {
         orbit_angle = 150
         has_ring = no
 		size = 24
-		flags = { pomal pd_ignore }		
+		flags = { pomal_planet pd_ignore }		
+
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
+			add_modifier = {
+				modifier = pomal_unsurveyed_codex
+					days = -1
+			}
 			add_anomaly = {
 				category = MEC_EG_ANO_POMAL_1024_CAT			###Pomal Anomaly (Shallow Seas)
 			}
 		}
+
     }
 
     planet = {
@@ -515,17 +674,30 @@ sys_hong_init = {
         orbit_angle = 116
         has_ring = no
 		size = 19
-		flags = { casbin sanctuary_world pd_ignore }
-		
+		flags = { casbin_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes	
+			prevent_anomaly = yes
+			clear_deposits = yes
 			clear_planet_modifiers = yes 
-
+			add_deposit = d_minerals_4
+			add_deposit = d_iridium_3
+			set_planet_flag = starting_deposit	
+			add_modifier = {
+				modifier = casbin_unsurveyed_codex
+					days = -1
+			}
 			add_anomaly = {
 				category = MEC_EG_ANO_CASBIN_1025_CAT			###Casbin Anomaly (Pre-Garden World)
 			}
-			add_deposit = d_minerals_1
-		}
+			set_owner = event_target:geth_consensus
+			create_colony = {
+				owner = event_target:geth_consensus
+				species = event_target:gethSpecies
+				ethos = owner
+			}
+			generate_geth_incursion_pops = yes
+			generate_btr_geth_incursion_start_buildings = yes			
+		}	
     }
 
     planet = {
@@ -535,16 +707,18 @@ sys_hong_init = {
         orbit_angle = 59
         has_ring = no
 		size = 11
-		flags = { matar pd_ignore }
+		flags = { matar_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 			
+			add_deposit = d_minerals_1
+			set_planet_flag = starting_deposit	
 			add_modifier = {
-				modifier = btr_no_magnetic_field
-				days = -1
-			}			
-    	}
+				modifier = matar_codex
+					days = -1
+			}
+		}
 	}	
 
     planet = {
@@ -554,56 +728,57 @@ sys_hong_init = {
         orbit_angle = 41
         has_ring = no
 		size = 36
-		flags = { theshaca pd_ignore }
-
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			
-				add_modifier = {
-					modifier = extensive_moon_system
-					days = -1
-				}
-				add_deposit = d_helium_3_2
+		flags = { theshaca_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit	
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
 			}
-
+			add_modifier = {
+				modifier = theshaca_codex
+				days = -1
+			}
+		}	
 		moon = {
-			name = "Theshaca_a"
+			name = "Theshaca a"
 			class = "pc_iron"
 			orbit_distance = 16			
 			size = 6
-
 			init_effect = {
-				prevent_anomaly = yes
+				prevent_anomaly = yes			
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
-			}			
+			}
 		}
 
 		moon = {
-			name = "Theshaca_b"
+			name = "Theshaca b"
 			class = "pc_frozen"
 			orbit_distance = 4			
 			size = 9
-
 			init_effect = {
-				prevent_anomaly = yes
+				prevent_anomaly = yes			
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
-			}			
+			}
 		}			
 		
 		moon = {
-			name = "Theshaca_c"
+			name = "Theshaca c"
 			class = "pc_frozen"
 			orbit_distance = 4			
 			size = 4
-
 			init_effect = {
-				prevent_anomaly = yes
+				prevent_anomaly = yes			
 				clear_deposits = yes
 				clear_planet_modifiers = yes 
+				set_deposit = d_minerals_2
+				set_planet_flag = starting_deposit	
 			}			
 		}					
     }
@@ -615,16 +790,12 @@ sys_hong_init = {
         orbit_angle = 136
         has_ring = no
 		size = 3
-		flags = { treagir pd_ignore }
-
-	init_effect = {
+		flags = { treagir_planet pd_ignore }
+		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-		
-			add_deposit = d_minerals_2
 		}
-
 	}			
 
 
@@ -642,11 +813,8 @@ sys_tereshkova_init = {
     name = "Tereshkova"
     class = "sc_binary_m_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "tereshkova_relay_system"
-    }
 
-    flags = { btr_system armstrong_nebula custom_system }
+    flags = { attican_traverse_system armstrong_nebula_system tereshkova_system btr_system custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -654,12 +822,40 @@ sys_tereshkova_init = {
 	}
 
 	planet = {
-		name = "Tereshkova-A"
+		name = "Tereshkova A"
 		class = "pc_m_star"
 		orbit_distance = 25
 		orbit_angle = 90
 		size = 30
 		has_ring = no
+		flags = { tereshkovaa_star}
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			create_ambient_object = {
+				type = "nebula_1"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}
+	}
+
+	planet = {
+		name = "Tereshkova B"
+		class = "pc_m_star"
+		orbit_distance = 10
+		orbit_angle = 180
+		size = 20
+		has_ring = no
+		flags = { tereshkovab_star}
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
@@ -667,18 +863,33 @@ sys_tereshkova_init = {
 	}
 	
 	planet = {
-		name = "Tereshkova-B"
-		class = "pc_m_star"
-		orbit_distance = 10
-		orbit_angle = 180
-		size = 20
-		has_ring = no
+		count = 2
+		class = "pc_asteroid"
+		orbit_distance = 60
+		orbit_angle = { min = 10 max = 190 }
+		
+		init_effect = {
+			set_deposit = d_platinum_1
+			set_planet_flag = starting_deposit
+			prevent_anomaly = yes
+			clear_deposits = yes
+		}
+	}
+
+	planet = {
+		count = 3
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = { min = 10 max = 190 }
+		
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-		}		
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}
 	}
-	
+
     planet = {
         name = "Antibaar"
         class = "pc_methane"
@@ -686,25 +897,28 @@ sys_tereshkova_init = {
         orbit_angle = 148
         has_ring = no
 		size = 16
-		flags = { antibaar pd_ignore }
+		flags = { antibaar_planet pd_ignore }
 
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			clear_planet_modifiers = yes
-		
-			add_anomaly = {
-				category = MEC_EG_ANO_ANTIBAAR_1026_CAT			###Antibaar Anomaly (Terraforming Candidate)
-			}
+			prevent_anomaly = yes	
+			clear_planet_modifiers = yes 			
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
 			set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			add_deposit = d_minerals_1
 			generate_geth_incursion_pops = yes
-			generate_btr_geth_incursion_start_buildings = yes			
+			generate_btr_geth_incursion_start_buildings = yes		
+			add_modifier = {
+				modifier = antibaar_unsurveyed_codex
+				days = -1
+			}
+			add_anomaly = {
+				category = MEC_EG_ANO_ANTIBAAR_1026_CAT			###Antibaar Anomaly (Terraforming Candidate)
+			}	
 		}			
 	}
 
@@ -715,14 +929,19 @@ sys_tereshkova_init = {
         orbit_angle = 242
         has_ring = no
 		size = 14
-		flags = { patamalrus pd_ignore }
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				add_deposit = d_iridium_2
-			}			
+		flags = { patamalrus_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_deposit = d_iridium_3	
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = patamalrus_codex
+				days = -1
+			}
 		}
+	}		
 
     planet = {
         name = "Hunsalra"
@@ -731,14 +950,19 @@ sys_tereshkova_init = {
         orbit_angle = 202
         has_ring = no
 		size = 25
-		flags = { hunsalra pd_ignore }
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				add_deposit = d_helium_3_3
+		flags = { hunsalra_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_deposit = d_helium_3_1	
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = hunsalra_codex
+				days = -1
 			}			
-		}
+		}			
+	}
 
     planet = {
         name = "Thegeuse"
@@ -747,19 +971,19 @@ sys_tereshkova_init = {
         orbit_angle = 202
         has_ring = no
 		size = 12
-		flags = { thegeuse pd_ignore }
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes	
-				clear_planet_modifiers = yes 	
-			
-				add_modifier = {
-					modifier = tidal_locked
-					days = -1
-				}
-				add_deposit = d_minerals_2
-			}			
-		}
+		flags = { thegeuse_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_deposit = d_minerals_1	
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = thegeuse_codex
+				days = -1
+			}				
+		}			
+	}
 
     planet = {
         name = "Solmarlon"
@@ -768,14 +992,19 @@ sys_tereshkova_init = {
         orbit_angle = 94
         has_ring = no
 		size = 36
-		flags = { solmarlon pd_ignore }
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				add_deposit = d_helium_3_1
-			}				
-		}
+		flags = { solmarlon_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_deposit = d_helium_3_2	
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = solmarlon_codex
+				days = -1
+			}	
+		}				
+	}
 
     planet = {
         name = "Mawinor"
@@ -784,7 +1013,7 @@ sys_tereshkova_init = {
         orbit_angle = 326
         has_ring = no
 		size = 3
-		flags = { mawinor pd_ignore }
+		flags = { mawinor_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes	
@@ -794,8 +1023,12 @@ sys_tereshkova_init = {
 				modifier = low_gravity
 				days = -1
 			}
+			add_modifier = {
+				modifier = mawinor_codex
+				days = -1
+			}			
 		}				
-		}
+	}
 
     init_effect = { 
 		spawn_megastructure = { 
@@ -814,35 +1047,47 @@ sys_vamshi_init = {
     class = "sc_binary_a_mg"
 	max_instances = 1
 
-	flags = { btr_system armstrong_nebula custom_system }
+	flags = { attican_traverse_system armstrong_nebula_system vamshi_system btr_system custom_system }
 	
     planet = {
+		name = "Vamshi A"		
         class = "pc_a_star"
-		name = "Vamshi-A"
         size = 25
         orbit_distance = 25
-
+		flags = { vamshia_star }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			
 			set_deposit = d_energy_3
 			set_planet_flag = starting_deposit
-		}		
-        
+
+			create_ambient_object = {
+				type = "nebula_4"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}		  
     }
 	
     planet = {
+		name = "Vamshi B"
         class = "pc_m_giant_star"
-		name = "Vamshi-B"
         size = 50
         orbit_distance = 10
         orbit_angle = 180
+		flags = { vamshib_star }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-		}	
-
+		}
     }
 
     planet = {
@@ -857,6 +1102,9 @@ sys_vamshi_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+
 			set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
@@ -865,7 +1113,10 @@ sys_vamshi_init = {
 			}
 			generate_geth_incursion_pops = yes
 			generate_btr_geth_incursion_start_buildings = yes
-			add_deposit = d_minerals_2			
+			add_modifier = {
+				modifier = maji_codex
+				days = -1
+			}
 		}				
     }
 
@@ -876,13 +1127,18 @@ sys_vamshi_init = {
         orbit_angle = 202
         has_ring = no
 		size = 25
-		flags = { pregel pd_ignore }
-
+		flags = { pregel_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-		}		
+			set_deposit = d_minerals_1	
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = pregel_codex
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -892,13 +1148,17 @@ sys_vamshi_init = {
         orbit_angle = 118
         has_ring = no
 		size = 35
-		flags = { almos pd_ignore }
-
+		flags = { almos_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			add_deposit = d_minerals_1
+			set_deposit = d_helium_3_2	
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = almos_codex
+				days = -1
+			}
 		}		
     }
 }
@@ -911,10 +1171,6 @@ sys_chabtan_init = {
     class = "sc_m_super"
 	max_instances = 1
 
-    flags = { empire_home_system buluc_nebula custom_system btr_system }
-
-	usage = custom_empire
-
 	init_effect = {
 		every_neighbor_system = {
 			set_star_flag = empire_cluster
@@ -923,7 +1179,11 @@ sys_chabtan_init = {
 			}
 		}
 		generate_home_system_resources = yes
-	}
+	}	
+
+    flags = { attican_traverse_system buluc_nebula_system chabtan_system btr_system custom_system empire_home_system }
+
+	usage = custom_empire
 	
     planet = {
 		name = "Chabtan"	
@@ -931,6 +1191,7 @@ sys_chabtan_init = {
         orbit_distance = 0
         size = 45
 		has_ring = no
+		flags = { chabtan_star }
     }
 
 	planet = {
@@ -940,6 +1201,8 @@ sys_chabtan_init = {
 		orbit_angle = { min = 1 max = 360 }
 		size = 5
 		has_ring = no
+		flags = { libel_planet pd_ignore }
+		
 	}
 	
 	planet = {
@@ -949,18 +1212,21 @@ sys_chabtan_init = {
 		orbit_angle = { min = 1 max = 360 }
 		size = 7
 		has_ring = no
+		flags = { moscon_planet pd_ignore }
+
 		moon = {
 			name = "Twuiq"
 			class = "pc_molten"
 			orbit_distance = 12
 			orbit_angle = { min = 90 max = 270 }
 			size = 1
+			flags = { twuiq_planet pd_ignore }
 		}
 	}
 
     planet = {
         name = "Parnack"
-        class = "pc_continental"
+        class = "pc_badlands"
         orbit_distance = 50
         orbit_angle = 0
 		size = 16
@@ -969,7 +1235,7 @@ sys_chabtan_init = {
 		deposit_blockers = none
 		modifiers = none
 
-		flags = { parnack special_start_planet pd_ignore }
+		flags = { parnack_planet pd_ignore special_start_planet }
 
 		init_effect = {
 			prevent_anomaly = yes
@@ -996,7 +1262,7 @@ sys_chabtan_init = {
 				}
 			
 			create_country = {
-				name = "NAME_Parnack_Regime"
+				name = "Parnack Regime"
 				ship_prefix = "PRV"
 				type = primitive 
 				civics = {
@@ -1060,9 +1326,11 @@ sys_chabtan_init = {
         orbit_distance = 185
         orbit_angle = 126
         has_ring = no
+		flags = { noviz_planet pd_ignore }
 		init_effect = {
-			add_deposit = d_helium_3_3
-		}
+			set_deposit = d_helium_3_3	
+			set_planet_flag = starting_deposit
+		}		
     }
 
     init_effect = { 
@@ -1084,7 +1352,7 @@ sys_fragotz_init = {
         save_global_event_target_as = "fragotz_relay_system"
     }
 
-    flags = { fragotz_system btr_system buluc_nebula }
+    flags = { attican_traverse_system buluc_nebula_system fragotz_system btr_system custom_system }
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -1097,9 +1365,15 @@ sys_fragotz_init = {
 	}	
 
     planet = {
+		name = "Fragotz"
         class = "pc_a_star"
         orbit_distance = 0
         size = 40
+		flags = { fragotz_star }
+		init_effect = {
+			set_deposit = d_energy_4
+			set_planet_flag = starting_deposit	
+		}
     }
 
     planet = {
@@ -1108,10 +1382,9 @@ sys_fragotz_init = {
         orbit_distance = 150
 		orbit_angle = { min = 10 max = 190 }		
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_minerals_2
-		}		
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit	
+		}	
     }
 
     init_effect = { 
@@ -1134,13 +1407,15 @@ sys_ubroni_init = {
         save_global_event_target_as = "ubroni_relay_system"
     }
 
-    flags = { ubroni_system btr_system buluc_nebula }
+    flags = { attican_traverse_system buluc_nebula_system ubroni_system btr_system custom_system }
 	
     planet = {
+		name = "Ubroni"
         class = "pc_m_star"
         orbit_distance = 0
         size = 22
-    }
+		flags = { ubroni_star }
+	} 
 
     planet = {
         name = "Zankep"
@@ -1148,29 +1423,23 @@ sys_ubroni_init = {
         orbit_distance = 84
         orbit_angle = 13
         has_ring = no
-		init_effect = {
-			add_modifier = {
-				modifier = extensive_moon_system
-				days = -1
-			}
-			add_deposit = d_helium_3_3
-		}
+		flags = { zankep_planet pd_ignore }
 		moon = {
-			name = "Zankep_a"
+			name = "Zankep a"
 			class = "pc_iron"
 			orbit_angle = random
 			orbit_distance = 8
 			size = 4
 		}	
 		moon = {
-			name = "Zankep_b"
+			name = "Zankep b"
 			class = "pc_frozen"
 			orbit_angle = random
 			orbit_distance = 6
 			size = 6
 		}
 		moon = {
-			name = "Zankep_c"
+			name = "Zankep c"
 			class = "pc_iron"
 			orbit_angle = random
 			orbit_distance = 5
@@ -1184,9 +1453,7 @@ sys_ubroni_init = {
         orbit_distance = 61
         orbit_angle = 140
         has_ring = yes
-		init_effect = {
-			add_deposit = d_helium_3_1
-		}
+		flags = { unoweb_planet pd_ignore }
     }
 
     planet = {
@@ -1195,6 +1462,7 @@ sys_ubroni_init = {
         orbit_distance = 46
         orbit_angle = 130
         has_ring = no
+		flags = { hasik_planet pd_ignore }
     }
 
     init_effect = { 
@@ -1216,12 +1484,13 @@ sys_aysur_init = {
     class = "sc_g"
 	max_instances = 1
 
-    flags = { aysur_system caleston_rift btr_system }
+    flags = { attican_traverse_system caleston_rift_system aysur_system btr_system custom_system }
 	planet = {
 	    name = "Aysur"
         class = "pc_g_star"
         orbit_distance = 0
         size = 25
+		flags = { aysur_star }
     }
 	
 	asteroid_belt = {
@@ -1236,13 +1505,8 @@ sys_aysur_init = {
         orbit_angle = 316
         has_ring = no
 		size = 12
-		flags = { pd_ignore agnin }
+		flags = { agnin_planet pd_ignore }
 
-		init_effect = {
-			prevent_anomaly = yes			
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-		}
     }
 
     planet = {
@@ -1252,13 +1516,8 @@ sys_aysur_init = {
         orbit_angle = 198
         has_ring = no
 		size = 3
-		flags = { pd_ignore shasu }		
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_iridium_3
-		}
+		flags = { shasu_planet pd_ignore }		
+
     }
 
     planet = {
@@ -1268,31 +1527,16 @@ sys_aysur_init = {
         orbit_angle = 186
         has_ring = no
 		size = 37
-		flags = { pd_ignore dranen }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_modifier = {
-				modifier = extensive_moon_system
-				days = -1
-			}
-			add_deposit = d_helium_3_2
-		}
+		flags = { dranen_planet pd_ignore }
 		
 		moon = {
-			name = "Dranen_a"
+			name = "Dranen a"
 			count = 1
 			class = "pc_hydrocarbon"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 18
 			size = 5
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}
 
 		moon = {
@@ -1302,15 +1546,8 @@ sys_aysur_init = {
             orbit_angle = 169
             has_ring = no
 			size = 16
-			init_effect = {
-				prevent_anomaly = yes
-				clear_planet_modifiers = yes 
-			
-				add_modifier = {
-					modifier = dangerous_wildlife
-					days = -1
-				}
-			}
+			flags = { arvuna_planet pd_ignore }
+
 		}	
 
 		moon = {
@@ -1320,43 +1557,29 @@ sys_aysur_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 7
 			size = 8
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+			flags = { alahya_planet pd_ignore }			
+
 		}	
 		
 		
 		moon = {
-			name = "Dranen_d"
+			name = "Dranen d"
 			count = 1
 			class = "pc_barren_cold"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 0
 			size = 6
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}
 		
 		moon = {
-			name = "Dranen_e"
+			name = "Dranen e"
 			count = 1
 			class = "pc_molten"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 4
 			size = 4
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}		
 	}
 
@@ -1367,12 +1590,7 @@ sys_aysur_init = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = { min = 10 max = 190 }
-		
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			add_deposit = d_platinum_2
-		}
+
 	}
 
 	planet = {
@@ -1380,12 +1598,8 @@ sys_aysur_init = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = 40
-		
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_minerals_4
-		}
+		flags = { mahavid_planet pd_ignore }
+
 	}
 
     planet = {
@@ -1395,13 +1609,8 @@ sys_aysur_init = {
         orbit_angle = 206
         has_ring = no
 		size = 36
-		flags = { pd_ignore alformus }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_helium_3_2
-		}
+		flags = { alformus_planet pd_ignore }
+
     }
 
     planet = {
@@ -1411,13 +1620,8 @@ sys_aysur_init = {
         orbit_angle = 34
         has_ring = no
 		size = 12
-		flags = { pd_ignore shir }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			set_deposit = d_iridium_2
-		}
+		flags = { shir_planet pd_ignore }
+
     }
 
     planet = {
@@ -1427,13 +1631,8 @@ sys_aysur_init = {
         orbit_angle = 289
         has_ring = no
 		size = 8
-		flags = { pd_ignore tamgauta }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_palladium_3
-		}
+		flags = { tamgauta_planet pd_ignore }
+
     }
 
     init_effect = { 
@@ -1461,6 +1660,9 @@ sys_balor_init = {
     name = "Balor"
     class = "sc_m"
 	max_instances = 1
+
+	flags = { attican_traverse_system caleston_rift_system balor_system btr_system custom_system }
+
     planet = {
 	    name = "Balor"
         class = "pc_m_star"
@@ -1480,13 +1682,7 @@ sys_balor_init = {
         orbit_angle = 165
         has_ring = no
 		size = 32
-		flags = { cernunnos pd_ignore}
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_helium_3_4
-		}
+		flags = { cernunnos_planet pd_ignore}
 
         moon = {
             name = "Caleston"
@@ -1495,20 +1691,8 @@ sys_balor_init = {
             orbit_angle = 180
             has_ring = no
 			size = 16
-			flags = { Caleston pd_ignore}
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+			flags = { caleston_planet pd_ignore}
 
-				set_deposit = d_trade_value_3
-				add_deposit = d_element_zero_2
-				add_deposit = d_palladium_2
-				add_modifier = {
-					modifier = unstable_tectonics
-					days = -1
-				}
-			}
        }
 	} 
 
@@ -1520,16 +1704,8 @@ sys_balor_init = {
         orbit_angle = 141
         has_ring = no
 		size = 2
-		flags = { bres pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+		flags = { bres_planet pd_ignore }
 
-			add_deposit = d_iridium_2
-			add_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-		}
     }
 
     planet = {
@@ -1539,10 +1715,8 @@ sys_balor_init = {
         orbit_angle = 102
         has_ring = no
         size = 4		
-		flags = { elatha pd_ignore }
-		init_effect = {
-			add_deposit = d_iridium_1
-		}
+		flags = { elatha_planet pd_ignore }
+
     }
 
     planet = {
@@ -1552,11 +1726,8 @@ sys_balor_init = {
         orbit_angle = 154
         has_ring = no
 		size = 25
-		flags = { partholon pd_ignore }
-		init_effect = {
-			add_deposit = d_platinum_3
-			add_deposit = d_element_zero_1
-		}
+		flags = { partholon_planet pd_ignore }
+
 	}
 
     init_effect = { 
@@ -1574,21 +1745,16 @@ sys_solveig_init = {
     name = "Solveig"
     class = "sc_g"
 	max_instances = 1
+
+	flags = { attican_traverse_system caleston_rift_system solveig_system btr_system custom_system }
+
     planet = {
 	    name = "Solveig"
         class = "pc_g_star"
         orbit_distance = 0
         size = 25
-		flags = { }
-		
-		init_effect = {
-			prevent_anomaly = yes						
-			clear_deposits = yes
+		flags = { solveig_star }
 
-			add_anomaly = {
-				category = MEC_EG_ANO_SOLVEIG_1051_CAT			###Solveig Anomaly (Birth of a Red Giant)
-			}		
-    	}
 	}
 
     planet = {
@@ -1598,10 +1764,8 @@ sys_solveig_init = {
         orbit_angle = 179
         has_ring = no
 		size = 11
-		flags = { surtur pd_ignore }
-		init_effect = {
-			add_deposit = d_palladium_3
-		}
+		flags = { surtur_planet pd_ignore }
+
         moon = {
             name = "Sinmara"
             class = "pc_frozen"
@@ -1609,7 +1773,8 @@ sys_solveig_init = {
             orbit_angle = 169
             has_ring = no
 			size = 3
-			flags = { sinmara }
+			flags = { sinmara_planet }
+
         }
     }
 
@@ -1620,7 +1785,7 @@ sys_solveig_init = {
         orbit_angle = 189
         has_ring = yes
 		size = 30
-		flags = { thrivaldi pd_ignore }
+		flags = { thrivaldi_planet pd_ignore }
 
 		moon = {
 			name = "Thrivaldi a"
@@ -1629,13 +1794,7 @@ sys_solveig_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 14
 			size = 6
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				add_deposit = d_helium_3_2
-			}
+
 		}
 		
 		moon = {
@@ -1645,13 +1804,7 @@ sys_solveig_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 8
-		
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				add_deposit = d_platinum_1
-			}
+
 		}
     }
 
@@ -1670,18 +1823,15 @@ sys_talava_init = {
     name = "Talava"
     class = "sc_f"
 	max_instances = 1
+
+	flags = { attican_traverse_system caleston_rift_system talava_system btr_system custom_system }
+
     planet = {
 	    name = "Talava"
         class = "pc_f_star"
         orbit_distance = 0
         size = 20
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-
-			set_deposit = d_energy_3
-			set_planet_flag = starting_deposit
-		}		
+		flags = { talava_star }
     }
 
     planet = {
@@ -1691,25 +1841,8 @@ sys_talava_init = {
         orbit_angle = 304
         has_ring = no
 		size = 22
-		flags = { aitarus pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 		
-			add_deposit = d_iridium_2
-			add_modifier = {
-				modifier = high_gravity
-				days = -1
-			}
-			add_modifier = {
-				modifier = unstable_tectonics
-				days = -1
-			}
-			add_modifier = {
-				modifier = infinity_caldera
-				days = -1
-			}			
-    	}
+		flags = { aitarus_planet pd_ignore }
+
 	}	
 
     planet = {
@@ -1719,17 +1852,8 @@ sys_talava_init = {
         orbit_angle = 177
         has_ring = no
 		size = 15
-		flags = { kaushus pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			clear_planet_modifiers = yes 	
-			add_deposit = d_iridium_2		
-			add_modifier = {
-				modifier = unstable_tectonics
-				days = -1
-			}
-		}
+		flags = { kaushus_planet pd_ignore }
+
     }
 
     planet = {
@@ -1739,13 +1863,8 @@ sys_talava_init = {
         orbit_angle = 293
         has_ring = no
 		size = 14
-		flags = { maitrum pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_iridium_3
-		}
+		flags = { maitrum_planet pd_ignore }
+
     }
 
     planet = {
@@ -1755,14 +1874,8 @@ sys_talava_init = {
         orbit_angle = 142
         has_ring = no
 		size = 11
-		flags = { taitus pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			set_deposit = d_palladium_3
-			set_planet_flag = starting_deposit
-		}
+		flags = { taitus_planet pd_ignore }
+
     }
 
     init_effect = { 
@@ -1790,15 +1903,15 @@ sys_yakawa_init = {
     name = "Yakawa"
     class = "sc_g"
 	max_instances = 1
+
+	flags = { attican_traverse_system caleston_rift_system yakawa_system btr_system custom_system }
+
     planet = {
 	    name = "Yakawa"
         class = "pc_g_star"
         orbit_distance = 0
         size = 24
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-		}		
+		flags = { yakawa_star }
     }
 
     planet = {
@@ -1808,17 +1921,8 @@ sys_yakawa_init = {
         orbit_angle = 98
         has_ring = no
 		size = 25
-		flags = { sakata pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_modifier = {
-				modifier = strong_magnetic_field
-				days = -1
-			}
-			add_deposit = d_palladium_2
-		}
+		flags = { sakata_planet pd_ignore }
+
     }
 
     planet = {
@@ -1828,14 +1932,7 @@ sys_yakawa_init = {
         orbit_angle = 210
         has_ring = yes
 		size = 32
-		flags = { nambu pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_platinum_2
-			add_deposit = d_helium_3_2
-		}
+		flags = { nambu_planet pd_ignore }
 
 		moon = {
 			name = "Sumiko"
@@ -1843,13 +1940,7 @@ sys_yakawa_init = {
 			orbit_distance = 8
 			has_ring = no
 			size = 6
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				set_deposit = d_trade_value_2
-				set_planet_flag = starting_deposit
-			}			
+			flags = { sumiko_planet pd_ignore }
         }
 
 		moon = {
@@ -1859,12 +1950,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 4
 			size = 6
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}
 		
 		moon = {
@@ -1874,12 +1960,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 8
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}	
     }
 
@@ -1890,14 +1971,8 @@ sys_yakawa_init = {
         orbit_angle = 293
         has_ring = no
 		size = 17
-		flags = { maskawa pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			set_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
-		}
+		flags = { maskawa_planet pd_ignore }
+
     }
 
     planet = {
@@ -1907,17 +1982,8 @@ sys_yakawa_init = {
         orbit_angle = 151
         has_ring = no
 		size = 16
-		flags = { karumto pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_modifier = {
-				modifier = unstable_tectonics
-				days = -1
-			}
-			add_deposit = d_palladium_2
-		}
+		flags = { karumto_planet pd_ignore }
+
     }
 
     planet = {
@@ -1927,16 +1993,7 @@ sys_yakawa_init = {
         orbit_angle = 134
         has_ring = yes
 		size = 29
-		flags = { kobayashi pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-
-			set_deposit = d_helium_3_2
-			add_deposit = d_exotic_gases_2
-			set_planet_flag = starting_deposit
-		}
+		flags = { kobayashi_planet pd_ignore }
 		
 		moon = {
 			name = "Kobayashi a"
@@ -1945,12 +2002,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 14
 			size = 8
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}
 		
 		moon = {
@@ -1960,12 +2012,7 @@ sys_yakawa_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 4
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}		
     }
 
@@ -1987,21 +2034,18 @@ sys_amun_init = {
     name = "Amun"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "amun_relay_system"
-    }
 
-    flags = { amun_system custom_system btr_system empire_home_system }
+    flags = { attican_traverse_system eagle_nebula_system amun_system btr_system custom_system empire_home_system }
+
 	usage = custom_empire
 	
     planet = {
+		name = "Amun"
         class = "pc_g_star"
         orbit_distance = 0
         size = 28
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-		}		
+		flags = { amun_star }
+
     }
 
     planet = {
@@ -2011,12 +2055,8 @@ sys_amun_init = {
         orbit_angle = 198
         has_ring = yes
 		size = 30
-		flags = { sekhmet pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-		}
+		flags = { sekhmet_planet pd_ignore }
+
     }
 
     planet = {
@@ -2026,16 +2066,7 @@ sys_amun_init = {
         orbit_angle = 192
         has_ring = no
 		size = 35
-		flags = { sobek pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_modifier = {
-				modifier = extensive_moon_system
-				days = -1
-			}			
-		}
+		flags = { sobek_planet pd_ignore }
 		
 		moon = {
 			name = "Sobek a"
@@ -2044,12 +2075,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 17
 			size = 4
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}
 		
 		moon = {
@@ -2059,15 +2085,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 6
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
 
-				set_deposit = d_minerals_2
-				set_planet_flag = starting_deposit
-			}
 		}
         moon = {
 			name = "Heqet"
@@ -2076,6 +2094,7 @@ sys_amun_init = {
 			orbit_angle = 250
 			has_ring = no
 			size = 6
+			flags = { heqet_planet pd_ignore }
         }
 
 		moon = {
@@ -2085,12 +2104,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 0
 			size = 4
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}
 		
 		moon = {
@@ -2101,14 +2115,6 @@ sys_amun_init = {
 			orbit_distance = 6
 			size = 8
 			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-
-				set_deposit = d_minerals_2
-				set_planet_flag = starting_deposit
-			}
 		}
 		
     }
@@ -2121,17 +2127,16 @@ sys_amun_init = {
         has_ring = no
 		size = 17
 		starting_planet = yes
-		flags = { mec_eg_planet_anhur anhur pd_ignore }
+		flags = { anhur_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_anhur_start_buildings = yes			
 			random_country = {
 				limit = { has_country_flag = "united_anhur_corporations" }
 				save_event_target_as = amunOwner
 				save_global_event_target_as = united_anhur_corporations
 				species = { save_global_event_target_as = batarianSpecies }
 			}
+			generate_btr_start_deposits_and_blockers = yes
+			generate_btr_anhur_start_buildings = yes				
 			generate_anhur_colony_pops = yes
 			generate_anhur_human_pops = yes				
 			set_name = "Anhur"
@@ -2210,15 +2215,7 @@ sys_amun_init = {
         orbit_angle = 61
         has_ring = no
 		size = 17
-		flags = { neith pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-		}
+		flags = { neith_planet pd_ignore }
 		
 		moon = {
 			name = "Neith a"
@@ -2227,12 +2224,6 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 8
 			size = 3
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
 		}		
     }
 
@@ -2243,12 +2234,7 @@ sys_amun_init = {
         orbit_angle = 175
         has_ring = no
 		size = 26
-		flags = { bast pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-		}
+		flags = { bast_planet pd_ignore }
 		
 		moon = {
 			name = "Bast a"
@@ -2257,12 +2243,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 16
 			size = 6
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}
 		
 		moon = {
@@ -2272,12 +2253,7 @@ sys_amun_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 8
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}	
     }
 
@@ -2300,20 +2276,14 @@ sys_imir_init = {
     init_effect = {
         save_global_event_target_as = "imir_relay_system"
     }
-	flags = { custom_system imir_system btr_system }	
+	flags = { attican_traverse_system eagle_nebula_system imir_system btr_system custom_system }	
 
     planet = {
 		name = "Imir"
         class = "pc_g_star"
         orbit_distance = 0
         size = 29
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-
-			set_deposit = d_energy_3
-			set_planet_flag = starting_deposit
-		}		
+		flags = { imir_star }		
     }
 	
 	asteroid_belt = {
@@ -2328,12 +2298,8 @@ sys_imir_init = {
         orbit_angle = 324
         has_ring = no
 		size = 6
-		flags = { osalri pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-		}
+		flags = { osalri_planet pd_ignore }
+
     }
 
     planet = {
@@ -2343,12 +2309,9 @@ sys_imir_init = {
         orbit_angle = 217
         has_ring = no
 		size = 17
-		flags = { korlus pd_ignore mec_eg_planet_korlus }
+		flags = { korlus_planet pd_ignore }
 		
 		init_effect = {
-			prevent_anomaly = yes
-			clear_planet_modifiers = yes 
-			generate_btr_major_empire_start_buildings = yes
 			create_colony = {
 				owner = event_target:blue_suns
 				species = event_target:blue_suns
@@ -2400,6 +2363,8 @@ sys_imir_init = {
 					}
 				}									
 			}
+			clear_planet_modifiers = yes 
+			generate_btr_major_empire_start_buildings = yes
     	}
 		
 	}
@@ -2411,11 +2376,7 @@ sys_imir_init = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = { min = 10 max = 190 }
-		
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-		}
+
 	}
 
     planet = {
@@ -2425,12 +2386,8 @@ sys_imir_init = {
         orbit_angle = 203
         has_ring = no
 		size = 32
-		flags = { quodis pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-		}
+		flags = { quodis_planet pd_ignore }
+
     }
 
     planet = {
@@ -2440,12 +2397,8 @@ sys_imir_init = {
         orbit_angle = 191
         has_ring = no
 		size = 13
-		flags = { gregas pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-		}
+		flags = { gregas_planet pd_ignore }
+
     }
     init_effect = { 
 		spawn_megastructure = { 
@@ -2466,16 +2419,14 @@ sys_malgus_init = {
         save_global_event_target_as = "malgus_hyperlane"
     }
 
-	flags = { custom_system malgus_system btr_system }
+	flags = { attican_traverse_system eagle_nebula_system malgus_system btr_system custom_system }
 
     planet = {
+		name = "Malgus"
         class = "pc_k_star"
         orbit_distance = 0
         size = 25
-		init_effect = {
-			prevent_anomaly = yes						
-			clear_deposits = yes
-		}		
+		flags = { malgus_star }		
     }
 
     planet = {
@@ -2485,12 +2436,7 @@ sys_malgus_init = {
         orbit_angle = 186
         has_ring = no
 		size = 37
-		flags = { uzin_malgus pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-		}
+		flags = { uzin_malgus_planet pd_ignore }
 		
 		moon = {
 			name = "Uzin a"
@@ -2499,12 +2445,6 @@ sys_malgus_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 18
 			size = 7
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
 		}
 		
 		moon = {
@@ -2514,12 +2454,7 @@ sys_malgus_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 7
 			size = 6
-			
-			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-			}
+
 		}	
 	}
 	
@@ -2530,11 +2465,8 @@ sys_malgus_init = {
         orbit_angle = 148
         has_ring = no
 		size = 15
-		flags = { wrill pd_ignore }
+		flags = { wrill_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			create_country = {
 				name_list = btr_krogan
 				species = event_target:kroganSpecies
@@ -2572,11 +2504,6 @@ sys_malgus_init = {
 				count = 2
 				create_pop = { species = event_target:vorchaSpecies }
 			}			
-			set_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier =  gang_wars
-			}
 		}
     }
 
@@ -2587,11 +2514,8 @@ sys_malgus_init = {
         orbit_angle = 184
         has_ring = no
 		size = 14
-		flags = { flett pd_ignore }
+		flags = { flett_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			create_colony = {
 				owner = event_target:blood_pack
 				species = event_target:kroganSpecies
@@ -2606,9 +2530,6 @@ sys_malgus_init = {
 				create_pop = { species = event_target:kroganSpecies }
 			}			
 			generate_btr_start_deposits_and_blockers = yes
-			set_deposit = d_minerals_2
-			set_deposit = d_bloodpack_vorcha
-			set_planet_flag = starting_deposit
 		}
     }
 	
@@ -2640,12 +2561,14 @@ sys_relic_init = {
         save_global_event_target_as = "relic_relay_system"
     }
 
-    flags = {  relic_system btr_system custom_system }
+    flags = { attican_traverse_system eagle_nebula_system relic_system btr_system custom_system }
 	
     planet = {
+		name = "Relic"
         class = "pc_g_star"
         orbit_distance = 0
         size = 26
+		flags = { relic_star }
     }
 	
 	asteroid_belt = {
@@ -2660,19 +2583,8 @@ sys_relic_init = {
         orbit_angle = 243
         has_ring = no
 		size = 25
-		flags = { murky_water pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			
-			add_modifier = {
-				modifier = high_gravity
-				days = -1
-			}
-			add_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-		}		
+		flags = { murky_water_planet pd_ignore }
+		
     }
 
     planet = {
@@ -2682,19 +2594,8 @@ sys_relic_init = {
         orbit_angle = 284
         has_ring = no
 		size = 23
-		flags = { fitful_current }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			
-			add_modifier = {
-				modifier = high_gravity
-				days = -1
-			}
-			add_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
-   		 }		
+		flags = { fitful_current_planet pd_ignore }
+		
     }
 
     planet = {
@@ -2704,14 +2605,7 @@ sys_relic_init = {
         orbit_angle = 58
         has_ring = yes
 		size = 33
-		flags = { first_land pd_ignore }
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
-   		}		
+		flags = { first_land_planet pd_ignore }
 
 		moon = {
 			name = "Drifting Skies"
@@ -2720,7 +2614,7 @@ sys_relic_init = {
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 18
 			size = 8
-			flags = { pd_ignore }
+			flags = { drifting_skies_habitat pd_ignore }
 			init_effect = {
 				set_owner = event_target:kanalaOwner
 				create_colony = {
@@ -2736,8 +2630,6 @@ sys_relic_init = {
 					count = 6
 					create_pop = { species = event_target:drellSpecies }
 				}				
-				generate_btr_major_empire_start_buildings = yes
-				clear_deposits = yes		
 			}
 		}
     }
@@ -2749,13 +2641,9 @@ sys_relic_init = {
         orbit_angle = 86
         has_ring = no
 		size = 37
-		flags = { island_wind pd_ignore }
-		init_effect = {
-			add_modifier = {
-				modifier = extreme_storms
-			}
-		}
-    }
+		flags = { island_wind_planet pd_ignore }
+
+	}
 
     planet = {
 		name = "Rough_Tide"
@@ -2764,7 +2652,7 @@ sys_relic_init = {
         orbit_angle = 192
         has_ring = no
 		size = 5
-		flags = { rough_tide pd_ignore }
+		flags = { rough_tide_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
@@ -2835,9 +2723,6 @@ sys_relic_init = {
 				count = 2
 				create_pop = { species = event_target:drellSpecies }
 			}			
-
-			set_deposit = d_alloys_2
-			set_planet_flag = starting_deposit
 		}
     }
 
@@ -2848,20 +2733,8 @@ sys_relic_init = {
         orbit_angle = 351
         has_ring = yes
 		size = 31
-		flags = { preying_mouth mec_eg_planet_preyingmouth }
-
-		init_effect = {
-			prevent_anomaly = yes				
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-
-			add_anomaly = {
-				category = MEC_EG_ANO_PREYINGMOUTH_1061_CAT			###Preying Mouth (Lost Ships)
-			}	
-			add_deposit = d_element_zero_2
-			set_planet_flag = starting_deposit
-
-		}		
+		flags = { preying_mouth_planet pd_ignore }
+		
     }
 
     planet = {
@@ -2871,11 +2744,8 @@ sys_relic_init = {
         orbit_angle = 39
         has_ring = no
 		size = 18
-		flags = { beach_thunder pd_ignore }
+		flags = { beach_thunder_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes				
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			create_colony = { 
 				owner = last_created_country 
 				species = last_created 
@@ -2896,9 +2766,6 @@ sys_relic_init = {
 				count = 2
 				create_pop = { species = event_target:drellSpecies }
 			}	
-			add_deposit = d_alloys_2
-			set_planet_flag = starting_deposit
-
 		}		
     }
 	
@@ -2921,20 +2788,14 @@ sys_strabo_init = {
         save_global_event_target_as = "strabo_relay_system"
     }
 
-    flags = { strabo_system custom_system btr_system }
+    flags = { attican_traverse_system eagle_nebula_system strabo_system btr_system custom_system }
 	
     planet = {
+		name = "Strabo"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
-
-		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-
-			set_deposit = d_energy_4
-			set_planet_flag = starting_deposit
-		}
+		flags = { strabo_star }
     }
 	
 	asteroid_belt = {
@@ -2949,80 +2810,80 @@ sys_strabo_init = {
         orbit_angle = 174
         has_ring = yes
 		size = 27
-		flags = { antigar pd_ignore }
+		flags = { antigar_planet pd_ignore }
 
 		moon = {
-			name = "Antigar_a"
+			name = "Antigar a"
 			class = "pc_frozen"
 			size = 2
 			orbit_distance = 5
 			orbit_angle = 23
 		}
 		moon = {
-			name = "Antigar_b"
+			name = "Antigar b"
 			class = "pc_asteroid"
 			size = 1
 			orbit_distance = 5
 			orbit_angle = 230
 		}
 		moon = {
-			name = "Antigar_c"
+			name = "Antigar c"
 			class = "pc_subglacial"
 			size = 3
 			orbit_distance = 4
 			orbit_angle = 97
 		}
 		moon = {
-			name = "Antigar_d"
+			name = "Antigar d"
 			class = "pc_frozen"
 			size = 2
 			orbit_distance = 4
 			orbit_angle = 110
 		}
 		moon = {
-			name = "Antigar_e"
+			name = "Antigar e"
 			class = "pc_asteroid"
 			size = 2
 			orbit_distance = 3
 			orbit_angle = 46
 		}	
 		moon = {
-			name = "Antigar_f"
+			name = "Antigar f"
 			class = "pc_frozen"
 			size = 2
 			orbit_distance = 3
 			orbit_angle = 13
 		}
 		moon = {
-			name = "Antigar_g"
+			name = "Antigar g"
 			class = "pc_frozen"
 			size = 2
 			orbit_distance = 4
 			orbit_angle = 185
 		}	
 		moon = {
-			name = "Antigar_h"
+			name = "Antigar h"
 			class = "pc_frozen"
 			size = 1
 			orbit_distance = 3
 			orbit_angle = 214
 		}
 		moon = {
-			name = "Antigar_i"
+			name = "Antigar i"
 			class = "pc_asteroid"
 			size = 1
 			orbit_distance = 3
 			orbit_angle = 73
 		}
 		moon = {
-			name = "Antigar_j"
+			name = "Antigar j"
 			class = "pc_asteroid"
 			size = 2
 			orbit_distance = 3
 			orbit_angle = 126
 		}
 		moon = {
-			name = "Antigar_k"
+			name = "Antigar k"
 			class = "pc_ammonia"
 			size = 3
 			orbit_distance = 7
@@ -3080,24 +2941,16 @@ sys_azedes_init = {
     class = "sc_g"
 	max_instances = 1
 
-	flags = { empire_home_system custom_system btr_system azedes }	
+	flags = { attican_traverse_system hades_nexus_system azedes_system btr_system custom_system empire_home_system }	
 
 	usage = custom_empire
 
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-		generate_home_system_resources = yes
-	}
-
 	planet = {
+		name = "Azedes"
         class = "pc_g_star"
         orbit_distance = 0
         size = 33
+		flags = { azedes_star }
     }	
 	
 	planet = {
@@ -3107,12 +2960,13 @@ sys_azedes_init = {
         orbit_angle = 208
         has_ring = no		
 		size = 12
-		flags = { pd_ignore vess'kur}
+		flags = { vesskur_planet pd_ignore }
 		moon = {
 			name = "Mass'kur"
 			class = "pc_barren"
 			orbit_distance = 8
 			size = 4
+			flags = { masskur_planet pd_ignore }
 		}
 	}
 
@@ -3124,15 +2978,11 @@ sys_azedes_init = {
 		size = 15		
         has_ring = no		
 		starting_planet = yes
-
 		deposit_blockers = none
 		modifiers = none
-		flags = { turvess btr_raloi_republic_planet_turvess special_start_planet } 
+		flags = { turvess_planet special_start_planet } 
 
 		init_effect = {
-			prevent_anomaly = yes
-			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_raloi_republic_capitol_buildings = yes
 			random_country = {
 				limit = { has_country_flag = "raloi_republic" }
 				save_event_target_as = azedesOwner
@@ -3143,6 +2993,8 @@ sys_azedes_init = {
 				count = 26
 				create_pop = { species = event_target:raloiSpecies }
 			}
+			generate_btr_start_deposits_and_blockers = yes			
+			generate_btr_raloi_republic_capitol_buildings = yes
 			set_name = "Turvess"
 		}
 		
@@ -3167,21 +3019,21 @@ sys_azedes_init = {
         orbit_angle = 84
         has_ring = no		
 		size = 14
-		flags = { iku'ra }
+		flags = { ikura_planet pd_ignore }
 		moon = {
-			name = "Ikura_a"
+			name = "Iku'ra a"
 			class = "pc_frozen"
 			orbit_distance = 8
 			size = 4
 		}
 		moon = {
-			name = "Ikura_b"
+			name = "Iku'ra b"
 			class = "pc_iron"
 			orbit_distance = 7
 			size = 3
 		}
 		moon = {
-			name = "Ikura_c"
+			name = "Iku'ra c"
 			class = "pc_asteroid"
 			orbit_distance = 7
 			size = 1
@@ -3195,23 +3047,23 @@ sys_azedes_init = {
         orbit_angle = 280
         has_ring = yes		
 		size = 36
-		flags = { vaal pd_ignore }
+		flags = { vaal_planet pd_ignore }
 		moon = {
-			name = "Vaal_a"
+			name = "Vaal a"
 			class = "pc_frozen"
 			orbit_distance = 8
 			size = 3
 		}
 
 		moon = {
-			name = "Vaal_b"
+			name = "Vaal b"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 3
 		}		
 
 		moon = {
-			name = "Vaal_c"
+			name = "Vaal c"
 			class = "pc_subglacial"
 			orbit_distance = 8
 			size = 3
@@ -3225,15 +3077,15 @@ sys_azedes_init = {
         orbit_angle = 230
         has_ring = no		
 		size = 35
-		flags = { sakur pd_ignore }
+		flags = { sakur_planet pd_ignore }
 		moon = {
-			name = "Sakur_a"
+			name = "Sakur a"
 			class = "pc_frozen"
 			orbit_distance = 8
 			size = 3
 		}
 		moon = {
-			name = "Sakur_b"
+			name = "Sakur b"
 			class = "pc_iron"
 			orbit_distance = 7
 			size = 5
@@ -3247,15 +3099,15 @@ sys_azedes_init = {
         orbit_angle = 120
         has_ring = no		
 		size = 5
-		flags = { kuroi }
+		flags = { kuroi_planet pd_ignore }
 		moon = {
-			name = "Kuroi_a"
+			name = "Kuroi a"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 2
 		}
 		moon = {
-			name = "Kuroi_b"
+			name = "Kuroi b"
 			class = "pc_arctic"
 			orbit_distance = 5
 			size = 2
@@ -3278,24 +3130,16 @@ sys_hekate_init = {
     class = "sc_g"
 	max_instances = 1
 
-	flags = { empire_home_system custom_system btr_system hekate }	
+	flags = { attican_traverse_system hades_nexus_system hekate_system btr_system custom_system empire_home_system }	
 
 	usage = custom_empire
 
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-		generate_home_system_resources = yes
-	}	
-
     planet = {
+		name = "Hekate"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { hekate_star }
     }
 
     planet = {
@@ -3305,7 +3149,7 @@ sys_hekate_init = {
         orbit_angle = 306
         has_ring = no
 		size = 14
-		flags = { pd_ignore asteria}
+		flags = { asteria_planet pd_ignore }
 		init_effect = {
 			set_owner = event_target:parnithaOwner
 			create_colony = {
@@ -3322,17 +3166,7 @@ sys_hekate_init = {
 				create_pop = { species = event_target:humanSpecies }
 			}			
 			generate_btr_major_empire_start_buildings = yes
-			clear_deposits = yes
-			prevent_anomaly = yes
-			clear_planet_modifiers = yes 
-			add_modifier = {
-				modifier = mineral_poor
-				days = -1
-			}
-			add_modifier = {
-				modifier = bleak_planet
-				days = -1
-			}			
+		
    		 }
     }
 
@@ -3343,9 +3177,8 @@ sys_hekate_init = {
         orbit_angle = 296
         has_ring = no
 		size = 16
-		flags = { ker pd_ignore }
+		flags = { ker_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_major_empire_start_buildings = yes
 			create_country = {
@@ -3407,13 +3240,7 @@ sys_hekate_init = {
 				create_pop = { species = event_target:vorchaSpecies }
 			}
 			generate_btr_major_empire_start_buildings = yes
-			clear_deposits = yes
-			prevent_anomaly = yes
-			clear_planet_modifiers = yes 
-			add_modifier = {
-				modifier = mineral_poor
-				days = -1
-			}							
+					
     	}
 	}
 
@@ -3424,111 +3251,106 @@ sys_hekate_init = {
         orbit_angle = 293
         has_ring = no
 		size = 27
-		flags = { triodia pd_ignore }
-		init_effect = {
-			add_modifier = {
-				modifier = extensive_moon_system
-				days = -1
-			}			
-		}
+		flags = { triodia_planet pd_ignore }
+	
 		moon = {
 			name = "Keare"
 			class = "pc_asteroid"
 			orbit_distance = 8
 			orbit_angle = 96
 			size = 3
-			}
+		}
 		moon = {
 			name = "Alovau"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 128
 			size = 2
-			}	
+		}	
 		moon = {
 			name = "Emgao"
 			class = "pc_asteroid"
 			orbit_distance = 8
 			orbit_angle = 128
 			size = 1
-			}		
+		}		
 		moon = {
 			name = "Phearlea"
 			class = "pc_frozen"
 			orbit_distance = 1
 			orbit_angle = 3
 			size = 3
-			}
+		}
 		moon = {
 			name = "Lysrynia"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 53
 			size = 1
-			}	
+		}	
 		moon = {
 			name = "Janariya"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 128
 			size = 1
-			}
+		}
 		moon = {
 			name = "Se'no"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 256
 			size = 1
-			}
+		}
 		moon = {
 			name = "Zeucka"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 180
 			size = 1
-			}
+		}
 		moon = {
 			name = "Falelthea"
 			class = "pc_frozen"
 			orbit_distance = 3
 			orbit_angle = 10
 			size = 6
-			}
+		}
 		moon = {
 			name = "Biumha"
 			class = "pc_asteroid"
 			orbit_distance = 3
 			orbit_angle = 100
 			size = 1
-			}	
+		}	
 		moon = {
 			name = "Ushilea"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 145
 			size = 1
-			}	
+		}	
 		moon = {
 			name = "Chaessley"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 256
 			size = 1
-			}
+		}
 		moon = {
 			name = "Alaname"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 73
 			size = 1
-			}
+		}
 		moon = {
 			name = "Telestze"
 			class = "pc_asteroid"
 			orbit_distance = 1
 			orbit_angle = 22
 			size = 1
-			}			
+		}			
     }
 
     planet = {
@@ -3538,7 +3360,7 @@ sys_hekate_init = {
         orbit_angle = 194
         has_ring = no
 		size = 18
-		flags = { bothros pd_ignore }
+		flags = { bothros_planet pd_ignore }
 	}
 
     init_effect = { 
@@ -3556,12 +3378,14 @@ sys_hoplos_init = {
     class = "sc_g"
 	max_instances = 1
 
-    flags = { hoplos_system custom_system btr_system }
+    flags = { attican_traverse_system hades_nexus_system hoplos_system btr_system custom_system }
 	
     planet = {
+		name = "Hoplos"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { hoplos_star }
     }
 
     planet = {
@@ -3571,13 +3395,8 @@ sys_hoplos_init = {
         orbit_angle = 126
         has_ring = no
 		size = 8
-		flags = { talaria pd_ignore }
-		init_effect = {
-			add_modifier = {
-				modifier = tidal_locked
-				days = -1
-			}
-		}
+		flags = { talaria_planet pd_ignore }
+
     }
 
     planet = {
@@ -3587,9 +3406,9 @@ sys_hoplos_init = {
         orbit_angle = 83
         has_ring = no
 		size = 11
-		flags = { Makhaira }
+		flags = { makhaira_planet pd_ignore }
 		moon = {
-			name = "Makhaira_a"
+			name = "Makhaira a"
 			class = "pc_barren"
 			orbit_distance = 8
 			orbit_angle = 96
@@ -3603,15 +3422,11 @@ sys_hoplos_init = {
             orbit_angle = 180
             has_ring = no
 			size = 4
-			flags = { Kopis pd_ignore }
-			init_effect = {
-				add_modifier = {
-					modifier = low_gravity
-					days = -1
-				}
-			}
-        }
+			flags = { kopis_planet pd_ignore }
+
+		}
     }
+
 
     planet = {
         name = "Trident"
@@ -3620,6 +3435,7 @@ sys_hoplos_init = {
         orbit_angle = 99
         has_ring = no
 		size = 15
+		flags = { trident_planet pd_ignore systems_alliance_colony }
 		init_effect = {
 			set_owner = event_target:solOwner
 			create_colony = {
@@ -3632,16 +3448,7 @@ sys_hoplos_init = {
 				create_pop = { species = event_target:humanSpecies }
 			}
 			generate_btr_major_empire_start_buildings = yes
-			clear_deposits = yes
-			add_deposit = d_element_zero_1
-			add_modifier = {
-				modifier = mineral_rich
-				days = -1
-			}
-			add_modifier = {
-				modifier = criminal_underworld
-				days = -1
-			}			
+	
 		}
     }
 
@@ -3652,9 +3459,8 @@ sys_hoplos_init = {
         orbit_angle = 221
         has_ring = yes
 		size = 33
-        init_effect = {
-			set_planet_flag = aegis_codex
-        }
+		flags = { aegis_planet pd_ignore }
+
     }
 
     init_effect = { 
@@ -3671,18 +3477,15 @@ sys_pamyat_init = {
     name = "Pamyat"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "pamyat_relay_system"
-    }
 
-    flags = {
-        pamyat_system
-    }
+    flags = { attican_traverse_system hades_nexus_system pamyat_system btr_system custom_system }
 	
     planet = {
+		name = "Pamyat"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { pamyat_star }
     }
 	
 	asteroid_belt = {
@@ -3697,9 +3500,7 @@ sys_pamyat_init = {
         orbit_angle = 128
         has_ring = no
 		size = 17
-        init_effect = {
-			set_planet_flag = komarov_codex
-        }
+		flags = { komarov_planet pd_ignore }
     }
 
     planet = {
@@ -3709,9 +3510,7 @@ sys_pamyat_init = {
         orbit_angle = 187
         has_ring = no
 		size = 17
-        init_effect = {
-			set_planet_flag = dobrovolski_codex
-        }
+		flags = { dobrovolski_planet pd_ignore }
     }
 
     planet = {
@@ -3721,9 +3520,7 @@ sys_pamyat_init = {
         orbit_angle = 260
         has_ring = no
 		size = 15
-        init_effect = {
-			set_planet_flag = patsayev_codex
-        }
+		flags = { patsayev_planet pd_ignore }
     }
 
     planet = {
@@ -3733,15 +3530,14 @@ sys_pamyat_init = {
         orbit_angle = 195
         has_ring = no
 		size = 4
-        init_effect = {
-			set_planet_flag = volkov_codex
-        }
+		flags = { volkov_planet pd_ignore } 
 		moon = {
 			name = "Zenevieva"
 			class = "pc_frozen"
 			size = 2
 			orbit_angle = 36
 			orbit_distance = 4
+			flags = { zenevieva_planet pd_ignore }
 		}
 		
 		moon = {
@@ -3750,6 +3546,7 @@ sys_pamyat_init = {
 			size = 3
 			orbit_angle = 36
 			orbit_distance = 4
+			flags = { alena_planet pd_ignore }
 		}		
     }
 
@@ -3760,9 +3557,7 @@ sys_pamyat_init = {
         orbit_angle = 276
         has_ring = no
 		size = 4
-        init_effect = {
-			set_planet_flag = quiet_eddy_codex
-        }
+		flags = { quiet_eddy_planet pd_ignore }
     }
 
     init_effect = { 
@@ -3781,18 +3576,15 @@ sys_sheol_init = {
     name = "Sheol"
     class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "sheol_hyperlane"
-    }
 
-    flags = {
-        sheol_system
-    }
-	
+    flags = { attican_traverse_system hades_nexus_system sheol_system btr_system custom_system }
+
     planet = {
+		name = "Sheol"
         class = "pc_m_star"
         orbit_distance = 0
         size = 15
+		flags = { sheol_star }
     }
 
     planet = {
@@ -3802,9 +3594,7 @@ sys_sheol_init = {
         orbit_angle = 220
         has_ring = no
 		size = 6
-        init_effect = {
-			set_planet_flag = gei_hinnom_codex
-        }		
+		flags = { gei_hinnom_planet pd_ignore }
     }
 
     init_effect = { 
@@ -3827,18 +3617,15 @@ sys_century_init = {
     name = "Century"
     class = "sc_k"
  	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "century_relay_system"
-    }
 
-    flags = {
-        century_system
-    }
+    flags = { attican_traverse_system hawking_eta_system century_system btr_system custom_system }
    
     planet = {
+		name = "Century"
         class = "pc_k_star"
         orbit_distance = 0
         size = 26
+		flags = { century_star }
     }
 
 	asteroid_belt = {
@@ -3853,9 +3640,7 @@ sys_century_init = {
         orbit_angle = 165
         has_ring = no
 		size = 15
-        init_effect = {
-            set_planet_flag = tamahera_codex
-        }
+		flags = { tamahera_planet pd_ignore }
     }
 
     planet = {
@@ -3865,9 +3650,8 @@ sys_century_init = {
         orbit_angle = 164
         has_ring = no
 		size = 18
-        init_effect = {
-			set_planet_flag = klendagon_codex
-        }
+		flags = { klendagon_planet pd_ignore }
+
         moon = {
             name = "Presrop"
             class = "pc_frozen"
@@ -3875,9 +3659,7 @@ sys_century_init = {
             orbit_angle = 180
             has_ring = no
 			size = 10
-            init_effect = {
-                set_planet_flag = presrop_codex
-                }
+			flags = { presrop_planet pd_ignore }
         }
     }
 	
@@ -3888,6 +3670,7 @@ sys_century_init = {
 		orbit_angle = 100
 		size = 5
 		has_ring = no
+		flags = { lukap_planet pd_ignore }
 	}
 	
 	planet = {
@@ -3897,6 +3680,7 @@ sys_century_init = {
 		orbit_angle = 160
 		size = 5
 		has_ring = no
+		flags = { morule_planet pd_ignore }
 	}
 	
     planet = {
@@ -3906,9 +3690,7 @@ sys_century_init = {
         orbit_angle = 1
         has_ring = no
 		size = 13
-        init_effect = {
-			set_planet_flag = canctra_codex
-        }
+		flags = { canctra_planet pd_ignore }
     }
 
     planet = {
@@ -3918,25 +3700,24 @@ sys_century_init = {
         orbit_angle = 268
         has_ring = yes
 		size = 36
-        init_effect = {
-			set_planet_flag = tharopto_codex
-        }
+		flags = { tharopto_planet pd_ignore }
+
 		moon = {
-			name = "Tharopto_a"
+			name = "Tharopto a"
 			class = "pc_shattered"
 			orbit_angle = 46
 			orbit_distance = 5
 			size = 2
 		}
 		moon = {
-			name = "Tharopto_b"
+			name = "Tharopto b"
 			class = "pc_shattered"
 			orbit_angle = 180
 			orbit_distance = 0
 			size = 2
 		}	
 		moon = {
-			name = "Tharopto_c"
+			name = "Tharopto c"
 			class = "pc_shattered"
 			orbit_angle = 300
 			orbit_distance = 0
@@ -3959,18 +3740,15 @@ sys_chandrasekhar_init = {
     name = "Chandrasekhar"
     class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "chandrasekhar_relay_system"
-    }
 
-    flags = {
-        chandrasekhar_system
-    }
+	flags = { attican_traverse_system hawking_eta_system chandrasekhar_system btr_system custom_system }
 	
     planet = {
+		name = "Chandrasekhar"
         class = "pc_m_star"
         orbit_distance = 0
         size = 20
+		flags = { chandrasekhar_star }
     }
 
     planet = {
@@ -3980,9 +3758,7 @@ sys_chandrasekhar_init = {
         orbit_angle = 208
         has_ring = no
 		size = 35
-        init_effect = {
-			set_planet_flag = teshub_codex
-        }
+		flags = { teshub_planet pd_ignore }
     }
 
     planet = {
@@ -3992,9 +3768,7 @@ sys_chandrasekhar_init = {
         orbit_angle = 118
         has_ring = no
 		size = 30
-        init_effect = {
-			set_planet_flag = hebat_codex
-        }
+		flags = { hebat_planet pd_ignore }
     }
 
     init_effect = { 
@@ -4013,18 +3787,15 @@ sys_schwarzschild_init = {
     name = "Schwarzschild"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "schwarzschild_relay_system"
-    }
 
-    flags = {
-        schwarzschild_system
-    }
+    flags = { attican_traverse_system hawking_eta_system schwarzschild_system btr_system custom_system }
 	
     planet = {
+		name = "Schwartzschild"
         class = "pc_g_star"
         orbit_distance = 0
         size = 26
+		flags = { schwarzschild_star }
     }
 
     planet = {
@@ -4034,9 +3805,7 @@ sys_schwarzschild_init = {
         orbit_angle = 214
         has_ring = no
 		size = 13
-        init_effect = {
-			set_planet_flag = atahil_codex
-        }
+		flags = { atahil_planet pd_ignore }
     }
 
     planet = {
@@ -4046,9 +3815,7 @@ sys_schwarzschild_init = {
         orbit_angle = 115
         has_ring = no
 		size = 24
-        init_effect = {
-			set_planet_flag = etamis_codex
-        }
+		flags = { etamis_planet pd_ignore }
     }
 
     planet = {
@@ -4058,9 +3825,7 @@ sys_schwarzschild_init = {
         orbit_angle = 49
         has_ring = yes
 		size = 34
-        init_effect = {
-			set_planet_flag = linossa_codex
-        }
+		flags = { linossa_planet pd_ignore }
     }
 
     planet = {
@@ -4070,11 +3835,10 @@ sys_schwarzschild_init = {
         orbit_angle = 335
         has_ring = yes
 		size = 37
-        init_effect = {
-			set_planet_flag = rihali_codex
-        }
+		flags = { rihali_planet pd_ignore }
+
         moon = {
-            name = "Rihali_a"
+            name = "Rihali a"
             class = "pc_frozen"
             orbit_distance = 8
             orbit_angle = 325
@@ -4082,7 +3846,7 @@ sys_schwarzschild_init = {
 			size = 1
         }
         moon = {
-            name = "Rihali_b"
+            name = "Rihali b"
             class = "pc_iron"
             orbit_distance = 8
             orbit_angle = 325
@@ -4107,18 +3871,15 @@ sys_thorne_init = {
     name = "Thorne"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "thorne_relay_system"
-    }
 
-    flags = {
-        thorne_system
-    }
-	
+	flags = { attican_traverse_system hawking_eta_system thorne_system btr_system custom_system }
+
     planet = {
+		name = "Thorne"
         class = "pc_g_star"
         orbit_distance = 0
         size = 27
+		flags = { thorne_star }
     }
 
     planet = {
@@ -4128,9 +3889,8 @@ sys_thorne_init = {
         orbit_angle = 344
         has_ring = no
 		size = 37
-        init_effect = {
-			set_planet_flag = mnemosyne_codex
-        }
+		flags = { mnemosyne_planet pd_ignore }
+
         moon = {
             name = "Lethe"
             class = "pc_barren"
@@ -4138,12 +3898,10 @@ sys_thorne_init = {
             orbit_angle = 325
             has_ring = no
 			size = 14
-            init_effect = {
-                set_planet_flag = lethe_codex
-                }
+			flags = { lethe_planet pd_ignore }
         }
         moon = {
-            name = "Mnemosyne_b"
+            name = "Mnemosyne b"
             class = "pc_barren"
             orbit_distance = 8
             orbit_angle = 325
@@ -4168,18 +3926,15 @@ sys_verr_init = {
     name = "Verr"
     class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "verr_hyperlane_system"
-    }
 
-    flags = {
-        verr_system
-    }
+    flags = { attican_traverse_system hawking_eta_system verr_system btr_system custom_system }
 	
     planet = {
+		name = "Verr"
         class = "pc_m_star"
         orbit_distance = 0
         size = 20
+		flags = { verr_star }		
     }
 
     planet = {
@@ -4189,9 +3944,7 @@ sys_verr_init = {
         orbit_angle = 19
         has_ring = no
 		size = 12
-        init_effect = {
-			set_planet_flag = corang_codex
-        }
+		flags = { corang_planet pd_ignore }
     }
 
     planet = {
@@ -4201,9 +3954,7 @@ sys_verr_init = {
         orbit_angle = 102
         has_ring = no
 		size = 28
-        init_effect = {
-			set_planet_flag = allusah_codex
-        }
+		flags = { allusah_planet pd_ignore }
     }
 
     planet = {
@@ -4213,11 +3964,10 @@ sys_verr_init = {
         orbit_angle = 228
         has_ring = no
 		size = 37
-        init_effect = {
-			set_planet_flag = serao_codex
-        }
+		flags = { serao_planet pd_ignore }
+
         moon = {
-			name = "Serao_a"
+			name = "Serao a"
             class = "pc_barren"
             orbit_distance = 8
             orbit_angle = 360
@@ -4226,7 +3976,7 @@ sys_verr_init = {
 
         }
         moon = {
-			name = "Serao_b"		
+			name = "Serao b"		
             class = "pc_asteroid"
             orbit_distance = 6
             orbit_angle = 177
@@ -4235,7 +3985,7 @@ sys_verr_init = {
 
         }
         moon = {
-			name = "Serao_c"		
+			name = "Serao c"		
             class = "pc_frozen"
             orbit_distance = 9
             orbit_angle = 304
@@ -4244,7 +3994,7 @@ sys_verr_init = {
 
         }
         moon = {
-			name = "Serao_d"		
+			name = "Serao d"		
             class = "pc_frozen"
             orbit_distance = 12
             orbit_angle = 296
@@ -4272,19 +4022,16 @@ sys_aquila_init = {
     name = "Aquila"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "aquila_relay_system"
-    }
 
-    flags = {
-        aquila_system
-    }
+    flags = { attican_traverse_system ismar_frontier_system aquila_system btr_system custom_system }
 	
     planet = {
 		name = "Aquila"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { aquila_star }
+
     }
 
     planet = {
@@ -4293,19 +4040,18 @@ sys_aquila_init = {
         orbit_distance = 80
         orbit_angle = 322
         size = 34
-        init_effect = {
-			set_planet_flag = lepini_codex
-        }
+		flags = { lepini_planet pd_ignore }
+
         has_ring = no
 		moon = {
-			name = "Lepini_a"
+			name = "Lepini a"
 			class = "pc_iron"
 			orbit_angle = 175
 			orbit_distance = 8
 			size = 5
 		}	
 		moon = {
-			name = "Lepini_b"
+			name = "Lepini b"
 			class = "pc_arid"
 			orbit_angle = 164
 			orbit_distance = 8
@@ -4319,10 +4065,8 @@ sys_aquila_init = {
         orbit_distance = 40
         orbit_angle = 174
         size = 16
-        init_effect = {
-			set_planet_flag = vecchio_codex
-        }
         has_ring = no
+		flags = { vecchio_planet pd_ignore }
 
     }
 
@@ -4332,11 +4076,10 @@ sys_aquila_init = {
         orbit_distance = 70
         orbit_angle = 207
         size = 25
-        init_effect = {
-			set_planet_flag = volturno_codex
-        }
         has_ring = no
-    }
+		flags = { volturno_planet pd_ignore }
+
+	}
 
     planet = {
         name = "Metaponto"
@@ -4344,11 +4087,10 @@ sys_aquila_init = {
         orbit_distance = 50
         orbit_angle = 214
         size = 37
-        init_effect = {
-			set_planet_flag = metaponto_codex
-        }
         has_ring = no
-    }
+		flags = { metaponto_planet pd_ignore }
+
+	}
 
     planet = {
         name = "Pollino"
@@ -4356,19 +4098,18 @@ sys_aquila_init = {
         orbit_distance = 50
         orbit_angle = 332
         size = 30
-        init_effect = {
-			set_planet_flag = pollino_codex
-        }
         has_ring = no
+		flags = { pollino_planet pd_ignore }
+
 		moon = {
-			name = "Pollino_a"
+			name = "Pollino a"
 			class = "pc_ammonia"
 			orbit_angle = 275
 			orbit_distance = 8
 			size = 4
 		}	
 		moon = {
-			name = "Pollino_b"
+			name = "Pollino b"
 			class = "pc_ammonia"
 			orbit_angle = 164
 			orbit_distance = 8
@@ -4391,18 +4132,15 @@ sys_elysta_init = {
     name = "Elysta"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "elysta_relay_system"
-    }
 
-    flags = {
-        elysta_system
-    }
+    flags = { attican_traverse_system ismar_frontier_system elysta_system btr_system custom_system }
 	
     planet = {
+		name = "Elysta"
         class = "pc_k_star"
         orbit_distance = 0
         size = 26
+		flags = { elysta_star }
     }
 
     planet = {
@@ -4411,10 +4149,8 @@ sys_elysta_init = {
         orbit_distance = 30
         orbit_angle = 252
         size = 8
-        init_effect = {
-			set_planet_flag = saleas_codex
-        }
         has_ring = no
+		flags = { saleas_planet pd_ignore }
 
     }
 
@@ -4424,10 +4160,8 @@ sys_elysta_init = {
         orbit_distance = 30
         orbit_angle = 185
         size = 11
-        init_effect = {
-			set_planet_flag = zeona_codex
-        }
         has_ring = no
+		flags = { zeona_planet pd_ignore }
 
     }
 
@@ -4437,10 +4171,8 @@ sys_elysta_init = {
         orbit_distance = 50
         orbit_angle = 168
         size = 17
-        init_effect = {
-			set_planet_flag = odasst_codex
-        }
         has_ring = no
+		flags = { odasst_planet pd_ignore }
 
     }
 
@@ -4450,19 +4182,18 @@ sys_elysta_init = {
         orbit_distance = 50
         orbit_angle = 84
         size = 29
-        init_effect = {
-			set_planet_flag = hesano_codex
-        }
         has_ring = yes
+		flags = { hesano_planet pd_ignore }
+
 		moon = {
-			name = "Hesano_a"
+			name = "Hesano a"
 			class = "pc_iron"
 			orbit_angle = 120
 			orbit_distance = 8
 			size = 3
 		}	
 		moon = {
-			name = "Hesano_b"
+			name = "Hesano b"
 			class = "pc_iron"
 			orbit_angle = 265
 			orbit_distance = 8
@@ -4476,19 +4207,18 @@ sys_elysta_init = {
         orbit_distance = 55
         orbit_angle = 248
         size = 28
-        init_effect = {
-			set_planet_flag = melile_codex
-        }
         has_ring = no
+		flags = { melile_planet pd_ignore }
+
 		moon = {
-			name = "Melile_a"
+			name = "Melile a"
 			class = "pc_frozen"
 			orbit_angle = 96
 			orbit_distance = 8
 			size = 3
 		}	
 		moon = {
-			name = "Melile_b"
+			name = "Melile b"
 			class = "pc_frozen"
 			orbit_angle = 17
 			orbit_distance = 8
@@ -4522,18 +4252,15 @@ sys_faia_init = {
     name = "Faia"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "faia_relay_system"
-    }
 
-    flags = {
-        faia_system
-    }
+    flags = { attican_traverse_system ismar_frontier_system faia_system btr_system custom_system }
 	
     planet = {
+		name = "Faia"
         class = "pc_g_star"
         orbit_distance = 0
         size = 18
+		flags = { faia_star }
     }
 
     planet = {
@@ -4542,10 +4269,8 @@ sys_faia_init = {
         orbit_distance = 30
         orbit_angle = 210
         size = 5
-        init_effect = {
-			set_planet_flag = imaen_codex
-        }
         has_ring = no
+		flags = { imaen_planet pd_ignore }
 
     }
 
@@ -4555,12 +4280,8 @@ sys_faia_init = {
         orbit_distance = 50
         orbit_angle = 319
         size = 15
-        init_effect = {
-			set_planet_flag = zorya_codex
-        }
         has_ring = no
-	
-		flags = { planet_zorya }
+		flags = { zorya_planet pd_ignore }
 	
 		moon = {
 			name = "Utrenn"
@@ -4568,6 +4289,8 @@ sys_faia_init = {
 			orbit_angle = 254
 			orbit_distance = 8
 			size = 5
+			flags = { utrenn_planet pd_ignore }
+
 		}
 		moon = {
 			name = "Vechern"
@@ -4575,6 +4298,8 @@ sys_faia_init = {
 			orbit_angle = 16
 			orbit_distance = 8
 			size = 4
+			flags = { vechern_planet pd_ignore }
+
 		}		
     }
 
@@ -4584,10 +4309,9 @@ sys_faia_init = {
         orbit_distance = 60
         orbit_angle = 235
         size = 3
-        init_effect = {
-			set_planet_flag = viantel_codex
-        }
         has_ring = no
+		flags = { viantel_planet pd_ignore }
+
     }
 
     planet = {
@@ -4596,26 +4320,25 @@ sys_faia_init = {
         orbit_distance = 50
         orbit_angle = 115
         size = 27
-        init_effect = {
-			set_planet_flag = hito_codex
-        }
         has_ring = no
+		flags = { hito_planet pd_ignore }
+
 		moon = {
-			name = "Hito_a"
+			name = "Hito a"
 			class = "pc_frozen"
 			orbit_angle = 90
 			orbit_distance = 8
 			size = 7
 		}	
 		moon = {
-			name = "Hito_b"
+			name = "Hito b"
 			class = "pc_iron"
 			orbit_angle = 210
 			orbit_distance = 6
 			size = 5
 		}
 		moon = {
-			name = "Hito_c"
+			name = "Hito c"
 			class = "pc_arctic"
 			orbit_angle = 90
 			orbit_distance = 8
@@ -4642,18 +4365,15 @@ sys_herschel_init = {
     name = "Herschel"
     class = "sc_o_super"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "herschel_relay_system"
-    }
 
-    flags = {
-        herschel_system
-    }
+	flags = { attican_traverse_system kepler_verge_system herschel_system btr_system custom_system }
 
     planet = {
+		name = "Herschel"
         class = "pc_o_super_star"
         orbit_distance = 0
         size = 38
+		flags = { herschel_star}
     }
 	
 	asteroid_belt = {
@@ -4668,9 +4388,8 @@ sys_herschel_init = {
         orbit_angle = 14
         has_ring = no
 		size = 25
-        init_effect = {
-			set_planet_flag = tungel_codex
-        }
+		flags = { tungel_planet pd_ignore }
+
     }
 
     planet = {
@@ -4680,9 +4399,8 @@ sys_herschel_init = {
         orbit_angle = 265
         has_ring = no
 		size = 10
-        init_effect = {
-			set_planet_flag = matol_codex
-        }
+		flags = { matol_planet pd_ignore }
+
     }
 
     planet = {
@@ -4692,11 +4410,10 @@ sys_herschel_init = {
         orbit_angle = 234
         has_ring = no
 		size = 26
-        init_effect = {
-			set_planet_flag = clugon_codex
-        }
+		flags = { clugon_planet pd_ignore }
+
         moon = {
-			name= "Clugon_a"
+			name= "Clugon a"
             class = "pc_iron"
             orbit_distance = 8
             orbit_angle = 118
@@ -4705,7 +4422,7 @@ sys_herschel_init = {
 
         }
         moon = {
-			name= "Clugon_b"
+			name= "Clugon b"
             class = "pc_iron"
             orbit_distance = 6
             orbit_angle = 99
@@ -4714,7 +4431,7 @@ sys_herschel_init = {
 
         }
         moon = {
-			name= "Clugon_c"
+			name= "Clugon c"
             class = "pc_frozen"
             orbit_distance = 5
             orbit_angle = 116
@@ -4731,9 +4448,8 @@ sys_herschel_init = {
         orbit_angle = 186
         has_ring = yes
 		size = 20
-        init_effect = {
-			set_planet_flag = clobaka_codex
-        }
+		flags = { clobaka_planet pd_ignore }
+
     }
    
 	init_effect = { 
@@ -4751,18 +4467,15 @@ sys_newton_init = {
     name = "Newton"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "newton_hyperlane_system"
-    }
 
-    flags = {
-        newton_system
-    }
+    flags = { attican_traverse_system kepler_verge_system newton_system btr_system custom_system }
 	
     planet = {
+		name = "Newton"
         class = "pc_k_star"
         orbit_distance = 0
         size = 30
+		flags = { newton_star }
     }
 
     planet = {
@@ -4772,18 +4485,18 @@ sys_newton_init = {
         orbit_angle = 32
         has_ring = no
 		size = 16
-        init_effect = {
-			set_planet_flag = ontarom_codex
-        }
+		flags = { ontarom_planet pd_ignore }
+
 		moon = {
 			name = "Thonal"
 			class = "pc_iron"
 			orbit_angle = 86
 			orbit_distance = 5
 			size = 5
+			flags = { thonal_planet pd_ignore }
 		}
 		moon = {
-			name = "Ontarom_b"
+			name = "Ontarom b"
 			class = "pc_barren"
 			orbit_angle = 246
 			orbit_distance = 9
@@ -4798,9 +4511,7 @@ sys_newton_init = {
         orbit_angle = 292
         has_ring = no
 		size = 19
-        init_effect = {
-			set_planet_flag = klencory_codex
-        }		
+		flags = { klencory_planet pd_ignore }		
     }
 
     planet = {
@@ -4810,9 +4521,7 @@ sys_newton_init = {
         orbit_angle = 196
         has_ring = no
 		size = 36
-        init_effect = {
-			set_planet_flag = juncro_codex
-        }
+		flags = { juncro_planet pd_ignore }
     }
 
     planet = {
@@ -4822,9 +4531,7 @@ sys_newton_init = {
         orbit_angle = 211
         has_ring = yes
 		size = 7
-        init_effect = {
-			set_planet_flag = sesmose_codex
-        }
+		flags = { sesmose_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -4845,19 +4552,15 @@ sys_caspian_init = {
     name = "Caspian"
     class = "sc_o_super"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "caspian_relay_system"
-    }
 
-    flags = {
-        caspian_system
-    }
+	flags = { attican_traverse_system maroon_sea_system caspian_system btr_system custom_system }
 	
     planet = {
 		name = "Caspian"
         class = "pc_o_super_star"
         orbit_distance = 0
         size = 40
+		flags = { caspian_star }
     }
 	
 	asteroid_belt = {
@@ -4872,9 +4575,7 @@ sys_caspian_init = {
         orbit_angle = 223
         has_ring = no
 		size = 19
-        init_effect = {
-			set_planet_flag = clotanca_codex
-        }
+		flags = { clotanca_planet pd_ignore }
     }
 
     planet = {
@@ -4884,9 +4585,7 @@ sys_caspian_init = {
         orbit_angle = 326
         has_ring = no
 		size = 22
-        init_effect = {
-			set_planet_flag = farnuri_codex
-        }
+		flags = { farnuri_planet pd_ignore }
     }
 
     planet = {
@@ -4896,9 +4595,7 @@ sys_caspian_init = {
         orbit_angle = 162
         has_ring = no
 		size = 11
-        init_effect = {
-			set_planet_flag = almarcrux_codex
-			}
+		flags = { almarcrux_planet pd_ignore }
     }
 
     planet = {
@@ -4908,9 +4605,7 @@ sys_caspian_init = {
         orbit_angle = 324
         has_ring = no
 		size = 28
-        init_effect = {
-			set_planet_flag = antilda_codex
-        }
+		flags = { antida_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -4929,19 +4624,15 @@ sys_matano_init = {
     name = "Matano"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "matano_relay_system"
-    }
 
-    flags = {
-        matano_system
-    }
+	flags = { attican_traverse_system maroon_sea_system matano_system btr_system custom_system }
 	
     planet = {
 		name = "Matano"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { matano_star }
     }
 	
 	asteroid_belt = {
@@ -4962,9 +4653,7 @@ sys_matano_init = {
         orbit_angle = 16
         has_ring = no
 		size = 22
-        init_effect = {
-			set_planet_flag = inti_codex
-			}
+		flags = { inti_planet pd_ignore }
     }
 
     planet = {
@@ -4974,9 +4663,7 @@ sys_matano_init = {
         orbit_angle = 238
         has_ring = yes
 		size = 20
-        init_effect = {
-			set_planet_flag = chasca_codex
-        }
+		flags = { chasca_planet pd_ignore }
     }
 
     planet = {
@@ -4986,9 +4673,7 @@ sys_matano_init = {
         orbit_angle = 68
         has_ring = no
 		size = 17
-        init_effect = {
-			set_planet_flag = apo_codex
-        }
+		flags = { apo_planet pd_ignore }
     }
 
     planet = {
@@ -4998,12 +4683,10 @@ sys_matano_init = {
         orbit_angle = 219
         has_ring = no
 		size = 37
-        init_effect = {
-			set_planet_flag = Illapa_codex
-        }
+		flags = { illapa_planet pd_ignore }
 
         moon = {
-            name = "Illapa_a"
+            name = "Illapa a"
 			class = "pc_iron"
             orbit_distance = 8
             orbit_angle = 144
@@ -5012,7 +4695,7 @@ sys_matano_init = {
         }
 
         moon = {
-			name= "Illapa_b"
+			name= "Illapa b"
             class = "pc_frozen"
             orbit_distance = 10
             orbit_angle = 98
@@ -5027,6 +4710,7 @@ sys_matano_init = {
             orbit_angle = 174
             has_ring = no
 			size = "8"
+			flags = { corinaya_planet pd_ignore }
         }
     }
 
@@ -5037,9 +4721,7 @@ sys_matano_init = {
         orbit_angle = 213
         has_ring = no
 		size = 10
-        init_effect = {
-			set_planet_flag = supay_codex
-        }
+		flags = { supay_planet pd_ignore }
     }
 
 
@@ -5069,19 +4751,15 @@ sys_vostok_init = {
     name = "Vostok"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "vostok_relay_system"
-    }
 
-    flags = {
-        vostok_system
-    }
+	flags = { attican_traverse_system maroon_sea_system vostok_system btr_system custom_system }
 	
     planet = {
 		name = "Vostok"
         class = "pc_k_star"
         orbit_distance = 0
         size = 25
+		flags = { vostok_star }
     }
 	
 	asteroid_belt = {
@@ -5096,9 +4774,7 @@ sys_vostok_init = {
         orbit_angle = 12
         has_ring = no
 		size = 15
-        init_effect = {
-			set_planet_flag = clomarthu_codex
-        }
+		flags = { clomarthu_planet pd_ignore }
     }
 
     planet = {
@@ -5108,9 +4784,7 @@ sys_vostok_init = {
         orbit_angle = 158
         has_ring = no
 		size = 15
-        init_effect = {
-			set_planet_flag = nodacrux_codex
-        }
+		flags = { nodacrux_planet pd_ignore }
     }
 
     planet = {
@@ -5120,9 +4794,7 @@ sys_vostok_init = {
         orbit_angle = 132
         has_ring = no
 		size = 12
-        init_effect = {
-            set_planet_flag = alko_codex
-        }
+		flags = { alko_planet pd_ignore }
     }
 
     planet = {
@@ -5132,9 +4804,7 @@ sys_vostok_init = {
         orbit_angle = 313
         has_ring = no
 		size = 26
-        init_effect = {
-            set_planet_flag = pataiton_codex
-        }
+		flags = { pataiton_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -5152,29 +4822,20 @@ sys_vostok_init = {
 #####NINMAH CLUSTER#####
 
 sys_maskimxul_init = {
-    name = "Maskim_Xul"
+    name = "Maskim Xul"
     class = "sc_m"
 	max_instances = 1
 
-	flags = { empire_home_system btr_rachni_swarm_system custom_system }
+	flags = { attican_traverse_system ninmah_cluster_system maskimxul_system btr_system custom_system empire_home_system }
 
 	usage = custom_empire	
-
-	init_effect = {
-		every_neighbor_system = {
-			set_star_flag = empire_cluster
-			every_neighbor_system = {
-				set_star_flag = empire_cluster
-			}
-		}
-		generate_home_system_resources = yes
-	}    
     
     planet = {
-		name = "Maskim_Xul"
+		name = "Maskim Xul"
         class = "pc_m_star"
         orbit_distance = 0
         size = 22
+		flags = { maskimxul_star }
     }
 	
 	asteroid_belt = {
@@ -5192,10 +4853,9 @@ sys_maskimxul_init = {
 		starting_planet = yes
 		deposit_blockers = none		
 		modifiers = none
-		flags = { suen_codex btr_rachni_swarm_planet_suen special_start_planet }
+		flags = { suen_planet pd_ignore special_start_planet rachni_homeworld }
 
 		init_effect = {
-			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_rachni_swarm_capitol_buildings = yes
 			random_country = {
@@ -5208,8 +4868,6 @@ sys_maskimxul_init = {
 				count = 26
 				create_pop = { species = event_target:rachniSpecies }
 			}
-			add_deposit = d_geothermal_vent
-			add_deposit = d_rich_mountain
 			set_name = "Suen"
 		}
 
@@ -5222,9 +4880,7 @@ sys_maskimxul_init = {
         orbit_angle = 206
         has_ring = no
 		size = 3
-        init_effect = {
-			set_planet_flag = kashshaptu_codex
-        }
+		flags = { kashshaptu_planet pd_ignore }
     }
 
     planet = {
@@ -5234,9 +4890,7 @@ sys_maskimxul_init = {
         orbit_angle = 242
         has_ring = no
 		size = 28
-        init_effect = {
-            set_planet_flag = damkianna_codex
-        }
+		flags = { damkianna_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -5251,22 +4905,18 @@ sys_maskimxul_init = {
 }
 
 sys_mullaxul_init = {
-    name = "Mulla_Xul"
+    name = "Mulla Xul"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "mulla_xul_hyperlane_system"
-    }
 
-    flags = {
-        mullaxul_system
-    }
+	flags = { attican_traverse_system ninmah_cluster_system mullaxul_system btr_system custom_system }
 	
     planet = {
-		name = "Mulla_Xul"
+		name = "Mulla Xul"
         class = "pc_k_star"
         orbit_distance = 0
         size = 25
+		flags = { mullaxul_star }
     }
     
     asteroid_belt = {
@@ -5281,9 +4931,7 @@ sys_mullaxul_init = {
         orbit_angle = 202
         has_ring = no
 		size = 21
-        init_effect = {
-            set_planet_flag = maldor_codex
-        }
+		flags = { maldor_planet pd_ignore }
     }
 
     planet = {
@@ -5293,9 +4941,7 @@ sys_mullaxul_init = {
         orbit_angle = 132
         has_ring = no
         size = 17
-        init_effect = {
-            set_planet_flag = utukku_codex
-        }
+		flags = { utukku_planet pd_ignore }
     }
 	
 	planet = { 
@@ -5304,9 +4950,7 @@ sys_mullaxul_init = {
 		orbit_angle = 136
 		orbit_distance = 120
 		size = 1
-        init_effect = {
-            set_planet_flag = inakhos_codex
-        }
+		flags = { inakhos_planet pd_ignore }
 	}	
 
     planet = {
@@ -5316,9 +4960,7 @@ sys_mullaxul_init = {
         orbit_angle = 213
         has_ring = yes
 		size = 37
-        init_effect = {
-            set_planet_flag = keph_codex
-        }
+		flags = { keph_planet pd_ignore }
     }
 }
 
@@ -5329,12 +4971,8 @@ sys_dakka_init = {
     name = "Dakka"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "dakka_relay_system"
-		generate_home_system_resources = yes
-    }
 
-	flags = { mercenary_home_system btr_blood_pack_system custom_system }
+	flags = { attican_traverse_system nubian_expanse_system dakka_system btr_system custom_system mercenary_home_system }
 	
     planet = {
 		name = "Dakka"
@@ -5536,8 +5174,8 @@ sys_dakka_init = {
         orbit_angle = 22
         has_ring = no
 		size = 20
+		flags = { bannik_planet pd_ignore }
         init_effect = {
-			set_planet_flag = bannik_codex
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5588,10 +5226,9 @@ sys_dakka_init = {
         orbit_distance = 20
         orbit_angle = 156
         has_ring = no
-		flags = { btr_pragia raid_source }
+		flags = { pragia_planet pd_ignore }
 		size = 12
         init_effect = {
-			set_planet_flag = pragia_codex
 			ensure_blue_suns_exist = { homeworld = "THIS" }
 			create_fleet = {
 				effect = {
@@ -5619,8 +5256,8 @@ sys_dakka_init = {
         orbit_angle = 64
         has_ring = no
 		size = 26
+		flags = { alkonost_planet pd_ignore }
         init_effect = {
-			set_planet_flag = alkonost_codex
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5672,8 +5309,8 @@ sys_dakka_init = {
         orbit_angle = 81
         has_ring = no
 		size = 33
+		flags = { gamayaun_planet pd_ignore }		
         init_effect = {
-            set_planet_flag = gamayun_codex
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5691,35 +5328,35 @@ sys_dakka_init = {
 			}			
         }
 		moon = { 
-			name = "Gamayun_a"
+			name = "Gamayun a"
 			class = "pc_barren"
 			orbit_angle = 145
 			orbit_distance = 6
 			size = 3
 		}	
 		moon = { 
-			name = "Gamayun_b"
+			name = "Gamayun b"
 			class = "pc_frozen"
 			orbit_angle = 82
 			orbit_distance = 6
 			size = 2
 		}
 		moon = { 
-			name = "Gamayun_c"
+			name = "Gamayun c"
 			class = "pc_iron"
 			orbit_angle = 340
 			orbit_distance = 6
 			size = 2
 		}
 		moon = { 
-			name = "Gamayun_d"
+			name = "Gamayun d"
 			class = "pc_iron"
 			orbit_angle = 1
 			orbit_distance = 8
 			size = 5
 		}
 		moon = { 
-			name = "Gamayun_e"
+			name = "Gamayun e"
 			class = "pc_asteroid"
 			orbit_angle = 160
 			orbit_distance = 6
@@ -5731,6 +5368,7 @@ sys_dakka_init = {
 			orbit_angle = 16
 			orbit_distance = 8
 			size = 4
+			flags = { gigula_planet pd_ignore }
 		}		
     }
 
@@ -5741,8 +5379,8 @@ sys_dakka_init = {
         orbit_angle = 264
         has_ring = no
 		size = 6
-        init_effect = {
-            set_planet_flag = zirnitra_codex
+		flags = { zirnitra_planet pd_ignore }
+		init_effect = {
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5788,19 +5426,15 @@ sys_debod_init = {
     name = "Debod"
     class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "debod_relay_system"
-    }
 
-    flags = {
-        debod_system
-    }
+	flags = { attican_traverse_system nubian_expanse_system debod_system btr_system custom_system }
 	
     planet = {
 		name = "Debod"
         class = "pc_m_star"
         orbit_distance = 0
         size = 30
+		flags = { debod_star }
     }
 
     planet = {
@@ -5810,9 +5444,7 @@ sys_debod_init = {
         orbit_angle = 350
         has_ring = no
 		size = 10
-        init_effect = {
-			set_planet_flag = philae_codex
-			}
+		flags = { philae_planet pd_ignore }
 
     }
 
@@ -5823,7 +5455,7 @@ sys_debod_init = {
         orbit_angle = 205
         has_ring = yes
 		size = 30
-
+		flags = { agilkia_planet pd_ignore }
     }
    
 }
@@ -5832,19 +5464,15 @@ sys_kalabsha_init = {
     name = "Kalabsha"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "kalabsha_relay_system"
-    }
 
-    flags = {
-        kalabsha_system
-    }
+	flags = { attican_traverse_system nubian_expanse_system kalabsha_system btr_system custom_system }
 	
     planet = {
 		name = "Kalabsha"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { kalabsha_star }
     }
 
     planet = {
@@ -5854,9 +5482,7 @@ sys_kalabsha_init = {
         orbit_angle = 337
         has_ring = no
 		size = 16
-        init_effect = {
-			set_planet_flag = yamn_codex
-        }
+		flags = { yamm_planet pd_ignore }
     }
 
     planet = {
@@ -5866,9 +5492,7 @@ sys_kalabsha_init = {
         orbit_angle = 296
         has_ring = no
 		size = 34
-        init_effect = {
-			set_planet_flag = tefnut_codex
-        }
+		flags = { tefnut_planet pd_ignore }
     }
    
 	init_effect = { 
@@ -5894,19 +5518,15 @@ sys_qertassi_init = {
     name = "Qertassi"
     class = "sc_g_giant"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "qertassi_relay_system"
-    }
 
-    flags = {
-        qertassi_system
-    }
+	flags = { attican_traverse_system nubian_expanse_system qertassi_system btr_system custom_system }
 	
     planet = {
 		name = "Qertassi"
         class = "pc_g_giant_star"
         orbit_distance = 0
         size = 60
+		flags = { qertassi_planet pd_ignore }
     }
 
     planet = {
@@ -5916,25 +5536,23 @@ sys_qertassi_init = {
         orbit_angle = 22
         has_ring = no
 		size = 32
-        init_effect = {
-            set_planet_flag = norehsa_codex
-        }
+		flags = { norehsa_planet pd_ignore }
 		moon = {
-			name = "Norehsa_a"
+			name = "Norehsa a"
 			class = "pc_toxic"
 			orbit_angle = 76
 			orbit_distance = 6
 			size = 4
 		}
 		moon = {
-			name = "Norehsa_b"
+			name = "Norehsa b"
 			class = "pc_iron"
 			orbit_angle = 114
 			orbit_distance = 7
 			size = 3
 		}
 		moon = {
-			name = "Norehsa_c"
+			name = "Norehsa c"
 			class = "pc_iron"
 			orbit_angle = 196
 			orbit_distance = 6
@@ -5955,42 +5573,39 @@ sys_qertassi_init = {
 }
 
 sys_nx2185_init = {
-    name = "nx2185"
+    name = "NX-2185"
     class = "sc_m_super"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "nx2185_relay_system"
-    }
 
-    flags = {
-        nx2185_system
-    }
+	flags = { attican_traverse_system nubian_expanse_system nx2185_system btr_system custom_system }
 	
     planet = {
-		name = "nx2185"
+		name = "NX-2185"
         class = "pc_m_giant_star"
         orbit_distance = 0
         size = 45
+		flags = { nx2185_star }
     }
 
     planet = {
-        name = "113_Kerad"
+        name = "113 Kerad"
         class = "pc_iron"
         orbit_distance = 35
         orbit_angle = 353
         has_ring = no
 		size = 6
+		flags = { 113_kerad_planet pd_ignore }
     }
 
     planet = {
-        name = "433_Spidau"
+        name = "433 Spidau"
         class = "pc_nuked"
         orbit_distance = 20
         orbit_angle = 89
         has_ring = no
 		size = 15
 		moon = {
-			name = "433_Spidau_a"
+			name = "433 Spidau a"
 			class = "pc_iron"
 			orbit_angle = random
 			orbit_distance = 6
@@ -5999,21 +5614,22 @@ sys_nx2185_init = {
     }
 
     planet = {
-        name = "704_Jarwinar"
+        name = "704 Jarwinar"
         class = "pc_gas_giant"
         orbit_distance = 20
         orbit_angle = 33
         has_ring = no
 		size = 36
+		flags = { 704_jawinar_planet pd_ignore }
 		moon = {
-			name = "704_Jawinor_a"
+			name = "704 Jawinor a"
 			class = "pc_iron"
 			orbit_angle = random
 			orbit_distance = 6
 			size = 8
 		}
 		moon = {
-			name = "704_Jawinor_b"
+			name = "704 Jawinor b"
 			class = "pc_ammonia"
 			orbit_angle = random
 			orbit_distance = 8
@@ -6023,19 +5639,18 @@ sys_nx2185_init = {
 }
 
 sys_nx2176_init = {
-    name = "NX2176"
+    name = "NX-2176"
     class = "sc_k"
 	max_instances = 1
 
-    flags = {
-        nx2176_system
-    }
+	flags = { attican_traverse_system nubian_expanse_system nx2176_system btr_system custom_system }
 	
     planet = {
+		name = "NX-2176"
         class = "pc_k_star"
-		name = "NX2176"
         orbit_distance = 0
         size = 35
+		flags = { nx2176_star }
     }	
 
 	asteroid_belt = {
@@ -6044,57 +5659,62 @@ sys_nx2176_init = {
 	}
 	
     planet = {
-        name = "NX2176I"
+        name = "NX-2176 I"
         class = "pc_iron"
         orbit_distance = 45
         orbit_angle = 142
         has_ring = no
 		size = 13		
+		flags = { nx2176I_planet pd_ignore }		
     }
     
 	planet = {
-        name = "NX2176II"
+        name = "NX-2176 II"
         class = "pc_dextro_arid"
         orbit_distance = 35
         orbit_angle = 76
         has_ring = no
-		size = 13		
+		size = 13	
+		flags = { nx2176II_planet pd_ignore }	
     }
 	
 	planet = {
-        name = "NX2176III"
+        name = "NX-2176 III"
         class = "pc_geothermal"
         orbit_distance = 45
         orbit_angle = 280
         has_ring = no
-		size = 13		
+		size = 13
+		flags = { nx2176III_planet pd_ignore }					
     }	
 	
 	planet = {
-        name = "NX2176IV"
+        name = "NX-2176 IV"
         class = "pc_dextro_continental"
         orbit_distance = 60
         orbit_angle = 300
         has_ring = no
 		size = 17		
+		flags = { nx2176IV_planet pd_ignore }	
     }	
 	
 	planet = {
-        name = "NX2176V"
+        name = "NX-2176 V"
         class = "pc_ice_giant"
         orbit_distance = 50
         orbit_angle = 15
         has_ring = no
 		size = 30
+		flags = { nx2176V_planet pd_ignore }	
 		moon = {
-			name = "NX2176V_a"
+			name = "NX-2176 Va"
 			class = "pc_dextro_arid"
 			orbit_angle = random
 			orbit_distance = 8
 			size = 12
 		}	
 		moon = {
-			name = "NX2176V_b"
+			name = "NX-2176 Vb"
 			class = "pc_barren"
 			orbit_angle = random
 			orbit_distance = 9
@@ -6110,13 +5730,8 @@ sys_cubseh_init = {
     name = "Cubseh"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "cubseh_relay_system"
-    }
 
-    flags = {
-        cubseh_system
-    }
+	flags = { attican_traverse_system oshibka_cliff_system cubseh_system btr_system custom_system }
 
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -6128,6 +5743,7 @@ sys_cubseh_init = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { cubseh_star }
     }
 	
 	planet = {
@@ -6135,7 +5751,7 @@ sys_cubseh_init = {
 		class = "pc_molten"
 		orbit_distance = 35
 		size = 6
-		
+		flags = { qualog_planet pd_ignore }			
 	}
 	
 	planet = { 
@@ -6143,6 +5759,7 @@ sys_cubseh_init = {
 		class = "pc_hothouse"
 		orbit_distance = 45
 		size = 16
+		flags = { toaloc_planet pd_ignore }	
 	}
 
 	planet = {
@@ -6150,6 +5767,7 @@ sys_cubseh_init = {
 		class = "pc_dextro_savannah"
 		orbit_distance = 40
 		size = 17
+		flags = { phelinia_planet pd_ignore }	
 	}	
 	
 	planet = {
@@ -6158,6 +5776,7 @@ sys_cubseh_init = {
 		orbit_distance = 60
 		size = 39
 		has_ring = yes
+		flags = { jarg_planet pd_ignore }	
 	}
 
 	planet = {
@@ -6165,6 +5784,7 @@ sys_cubseh_init = {
 		class = "pc_toxic"
 		orbit_distance = 50
 		size = 13
+		flags = { senarc_planet pd_ignore }	
 	}
 
 	planet = {
@@ -6172,6 +5792,7 @@ sys_cubseh_init = {
 		class = "pc_frozen"
 		orbit_distance = 40
 		size = 8
+		flags = { asta_planet pd_ignore }	
 	}	
 
 	planet = {
@@ -6179,6 +5800,7 @@ sys_cubseh_init = {
 		class = "pc_frozen"
 		orbit_distance = 55
 		size = 4
+		flags = { tonat_planet pd_ignore }	
 	}	
 	
 	init_effect = { 
@@ -6197,19 +5819,15 @@ sys_klin_init = {
 	name = "Klin"
 	class = "sc_pulsar"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "klin_relay_system"
-    }
 
-    flags = {
-        klin_system
-    }	
+	flags = { attican_traverse_system oshibka_cliff_system klin_system btr_system custom_system }
 
     planet = {
 		name = "Klin"
         class = "pc_pulsar"
         orbit_distance = 0
         size = 15
+		flags = { klin_star }	
     }
 	
 	planet = {
@@ -6217,6 +5835,7 @@ sys_klin_init = {
 		class = "pc_barren"
 		orbit_distance = 80
 		size = 20
+		flags = { orbid_planet pd_ignore }	
 	}
     	
 	init_effect = { 
@@ -6238,33 +5857,25 @@ sys_refuge_init = {
     class = "sc_binary_g_t"
 	max_instances = 1
 
-	# flags = { empire_home_system btr_prothean_remnant_system custom_system }
-
-	# usage = custom_empire
-
-	# init_effect = {
-	# 	every_neighbor_system = {
-	# 		set_star_flag = empire_cluster
-	# 		every_neighbor_system = {
-	# 			set_star_flag = empire_cluster
-	# 		}
-	# 	}
-	# 	generate_home_system_resources = yes
-	# }	
+	flags = { attican_traverse_system pangaea_expanse_system refuge_system btr_system custom_system empire_home_system }
+	
+	usage = custom_empire
 
 	planet = {
+		name = "Refuge A"
         class = "pc_t_star"
-        name = "Refuge_A"
         size = 15
         orbit_distance = 20
+		flags = { refugea_star }
     }
 
     planet = {
+		name = "Refuge B"
         class = "pc_g_star"
-        name = "Refuge_B"
         size = 30
         orbit_distance = 25
         orbit_angle = 180
+		flags = { refugeb_star }
     }
 	
     planet = {
@@ -6274,6 +5885,7 @@ sys_refuge_init = {
         orbit_angle = 142
         has_ring = no
 		size = 15
+		flags = { agetoton_planet pd_ignore }		
         # init_effect = {
 		# 	set_planet_flag = agetoton_codex
 		# 	create_pirate_country = yes
@@ -6406,11 +6018,8 @@ sys_refuge_init = {
     	orbit_angle = 258
     	has_ring = no
     	size = 21
-		flags = { btr_prothean_remnant_planet_ilos special_start_planet }		
-        init_effect = {
-            set_planet_flag = ilos_codex
-			prevent_anomaly = yes
-		}
+		flags = { ilos_planet pd_ignore special_start_planet }		
+
    }
 
     planet = {
@@ -6420,9 +6029,7 @@ sys_refuge_init = {
         orbit_angle = 191
         has_ring = no
 		size = 29
-        init_effect = {
-			set_planet_flag = zafe_codex
-        }
+		flags = { zafe_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -6443,19 +6050,15 @@ sys_dirada_init = {
     name = "Dirada"
     class = "sc_b_super"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "dirada_relay_system"
-    }
 
-    flags = {
-        dirada_system
-    }
-
+	flags = { attican_traverse_system pylos_nebula_system dirada_system btr_system custom_system }
+	
     planet = {
 		name = "Dirada"
         class = "pc_b_super_star"
         orbit_distance = 0
         size = 45
+		flags = { dirada_star }
     }
 	
 	asteroid_belt = {
@@ -6475,9 +6078,7 @@ sys_dirada_init = {
         orbit_angle = 329
         has_ring = no
 		size = 12
-        init_effect = {
-			set_planet_flag = siano_codex
-        }
+		flags = { siano_planet pd_ignore }
     }
 
     planet = {
@@ -6487,9 +6088,7 @@ sys_dirada_init = {
         orbit_angle = 112
         has_ring = no
 		size = 9
-        init_effect = {
-			set_planet_flag = thenusi_codex
-        }
+		flags = { thenusi_planet pd_ignore }
     }
 
     planet = {
@@ -6499,9 +6098,7 @@ sys_dirada_init = {
         orbit_angle = 272
         has_ring = no
 		size = 11
-        init_effect = {
-			set_planet_flag = canalus_codex
-        }
+		flags = { canalus_planet pd_ignore }
     }
 
     planet = {
@@ -6511,9 +6108,7 @@ sys_dirada_init = {
         orbit_angle = 318
         has_ring = no
 		size = 35
-        init_effect = {
-			set_planet_flag = zeth_codex
-        }
+		flags = { zeth_planet pd_ignore }
     }
 
     planet = {
@@ -6523,25 +6118,24 @@ sys_dirada_init = {
         orbit_angle = 310
         has_ring = yes
 		size = 33
-        init_effect = {
-            set_planet_flag = sineus_codex
-        }
+		flags = { sineus_planet pd_ignore }
+
 		moon = {
-			name = "Sineus_a"
+			name = "Sineus a"
 			class = "pc_iron"
 			orbit_angle = 170
 			orbit_distance = 8
 			size = 6
 		}	
 		moon = {
-			name = "Sineus_b"
+			name = "Sineus b"
 			class = "pc_toxic"
 			orbit_angle = 240
 			orbit_distance = 8
 			size = 6
 		}
 		moon = {
-			name = "Sineus_c"
+			name = "Sineus c"
 			class = "pc_toxic"
 			orbit_angle = 35
 			orbit_distance = 8
@@ -6556,18 +6150,16 @@ sys_dirada_init = {
         orbit_angle = 295
         has_ring = no
 		size = 28
-        init_effect = {
-            set_planet_flag = vioresa_codex
-        }
+		flags = { vioressa_planet pd_ignore }
 		moon = {
-			name = "Vioresa_a"
+			name = "Vioresa a"
 			class = "pc_toxic"
 			orbit_angle = 60
 			orbit_distance = 8
 			size = 4
 		}	
 		moon = {
-			name = "Vioresa_b"
+			name = "Vioresa b"
 			class = "pc_iron"
 			orbit_angle = 260
 			orbit_distance = 8
@@ -6590,19 +6182,15 @@ sys_kriseroi_init = {
     name = "Kriseroi"
     class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "kriseroi_relay_system"
-    }
 
-    flags = {
-        kriseroi_system
-    }
+	flags = { attican_traverse_system pylos_nebula_system kriseroi_system btr_system custom_system }
 	
     planet = {
 		name = "Kriseroi"
         class = "pc_m_star"
         orbit_distance = 0
         size = 25
+		flags = { kriseroi_star }
     }
 
     planet = {
@@ -6612,9 +6200,7 @@ sys_kriseroi_init = {
         orbit_angle = 11
         has_ring = no
 		size = 12
-        init_effect = {
-			set_planet_flag = neidus_codex
-        }
+		flags = { neidus_planet pd_ignore }
     }
 
     planet = {
@@ -6624,9 +6210,7 @@ sys_kriseroi_init = {
         orbit_angle = 202
         has_ring = no
 		size = 25
-        init_effect = {
-			set_planet_flag = theonax_codex
-        }
+		flags = { theonax_planet pd_ignore }
     }
 
     planet = {
@@ -6636,15 +6220,14 @@ sys_kriseroi_init = {
         orbit_angle = 313
         has_ring = no
 		size = 29
-        init_effect = {
-            set_planet_flag = uzin_kriseroi_codex
-        }
+		flags = { uzin_kriseroi_planet pd_ignore }
 		moon = {
 			name = "Chithess"
 			class = "pc_frozen"
 			orbit_angle = 90
 			orbit_distance = 7
 			size = 9
+			flags = { chithess_planet pd_ignore }
 		}
     }
 
@@ -6655,9 +6238,7 @@ sys_kriseroi_init = {
         orbit_angle = 219
         has_ring = no
 		size = 29
-        init_effect = {
-			set_planet_flag = geus_codex
-        }
+		flags = { geus_planet pd_ignore }
     }
 
     planet = {
@@ -6667,9 +6248,7 @@ sys_kriseroi_init = {
         orbit_angle = 4
         has_ring = no
 		size = 3
-        init_effect = {
-			set_planet_flag = tenoth_codex
-        }
+		flags = { tenoth_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -6686,19 +6265,15 @@ sys_nariph_init = {
     name = "Nariph"
     class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "nariph_relay_system"
-    }
 
-    flags = {
-        nariph_system
-    }
+	flags = { attican_traverse_system pylos_nebula_system nariph_system btr_system custom_system }
 	
     planet = {
 		name = "Nariph"
         class = "pc_m_star"
         orbit_distance = 0
         size = 20
+		flags = { nariph_star }
     }
 
     planet = {
@@ -6708,9 +6283,7 @@ sys_nariph_init = {
         orbit_angle = 339
         has_ring = yes
 		size = 35
-        init_effect = {
-			set_planet_flag = isale_codex
-        }
+		flags = { isale_planet pd_ignore }
     }
 
     planet = {
@@ -6720,11 +6293,9 @@ sys_nariph_init = {
         orbit_angle = 190
         has_ring = no
 		size = 25
-        init_effect = {
-            set_planet_flag = jonus_codex
-        }
+		flags = { jonus_planet pd_ignore }
 		moon = {
-			name = "Jonus_a"
+			name = "Jonus a"
 			class = "pc_frozen"
 			orbit_angle = 100
 			orbit_distance = 8
@@ -6748,19 +6319,15 @@ sys_satent_init = {
     name = "Satent"
     class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "satent_relay_system"
-    }
 
-    flags = {
-        satent_system
-    }
+	flags = { attican_traverse_system pylos_nebula_system satent_system btr_system custom_system }
 	
     planet = {
 		name = "Satent"
         class = "pc_m_star"
         orbit_distance = 0
         size = 25
+		flags = { satent_star }
     }
 
     planet = {
@@ -6770,9 +6337,7 @@ sys_satent_init = {
         orbit_angle = 172
         has_ring = no
 		size = 36
-        init_effect = {
-			set_planet_flag = rescel_codex
-        }
+		flags = { rescel_planet pd_ignore }
     }
 
     planet = {
@@ -6782,9 +6347,7 @@ sys_satent_init = {
         orbit_angle = 231
         has_ring = no
 		size = 9
-        init_effect = {
-			set_planet_flag = raisaris_codex
-        }
+		flags = { raisaris_planet pd_ignore }
     }
 
     planet = {
@@ -6794,9 +6357,7 @@ sys_satent_init = {
         orbit_angle = 198
         has_ring = no
 		size = 7
-        init_effect = {
-            set_planet_flag = anedia_codex
-        }
+		flags = { anedia_planet pd_ignore }
     }
 
     planet = {
@@ -6806,9 +6367,7 @@ sys_satent_init = {
         orbit_angle = 148
         has_ring = no
 		size = 25
-        init_effect = {
-			set_planet_flag = boro_codex
-        }
+		flags = { boro_planet pd_ignore }
     }
 
     planet = {
@@ -6818,9 +6377,7 @@ sys_satent_init = {
         orbit_angle = 306
         has_ring = no
 		size = 26
-        init_effect = {
-			set_planet_flag = nataisa_codex
-        }
+		flags = { nataisa_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -6838,19 +6395,15 @@ sys_zaherin_init = {
     name = "Zaherin"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "zaherin_hyperlane_system"
-    }
 
-    flags = {
-        zaherin_system
-    }
+	flags = { attican_traverse_system pylos_nebula_system zaherin_system btr_system custom_system }	
 	
     planet = {
 		name = "Zaherin"
         class = "pc_k_star"
         orbit_distance = 0
         size = 30
+		flags = { zaherin_star }
     }
 
     planet = {
@@ -6860,9 +6413,7 @@ sys_zaherin_init = {
         orbit_angle = 326
         has_ring = no
 		size = 17
-        init_effect = {
-            set_planet_flag = ehstag_codex
-        }
+		flags = { ehstag_planet pd_ignore }
     }
 
     planet = {
@@ -6872,9 +6423,7 @@ sys_zaherin_init = {
         orbit_angle = 75
         has_ring = no
 		size = 25
-        init_effect = {
-            set_planet_flag = namakli_codex
-        }
+		flags = { namakli_planet pd_ignore }
     }
 
     planet = {
@@ -6884,9 +6433,7 @@ sys_zaherin_init = {
         orbit_angle = 181
         has_ring = no
 		size = 11
-        init_effect = {
-			set_planet_flag = azrahas_codex
-        }
+		flags = { azrahas_planet pd_ignore }
     }
 
     planet = {
@@ -6896,9 +6443,7 @@ sys_zaherin_init = {
         orbit_angle = 112
         has_ring = yes
 		size = 26
-        init_effect = {
-            set_planet_flag = rotesk_codex
-        }
+		flags = { rotesk_planet pd_ignore }
     }
 
     	
@@ -6920,19 +6465,15 @@ sys_hoc_init = {
     name = "Hoc"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "hoc_relay_system"
-    }
 
-    flags = {
-        hoc_system
-    }
+	flags = { attican_traverse_system sentry_omega_system hoc_system btr_system custom_system }
 	
     planet = {
 		name = "Hoc"
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { hoc_star }
 	}
 
     planet = {
@@ -6942,9 +6483,7 @@ sys_hoc_init = {
         orbit_angle = 350
         has_ring = no
 		size = 35
-        init_effect = {
-			set_planet_flag = jarfor_codex
-        }
+		flags = { jarfor_planet pd_ignore }
     }
 
     planet = {
@@ -6954,9 +6493,7 @@ sys_hoc_init = {
         orbit_angle = 302
         has_ring = no
 		size = 18
-        init_effect = {
-			set_planet_flag = nemata_codex
-        }
+		flags = { nemata_planet pd_ignore }
     }
 
     planet = {
@@ -6966,9 +6503,7 @@ sys_hoc_init = {
         orbit_angle = 296
         has_ring = no
 		size = 16
-        init_effect = {
-			set_planet_flag = virmire_codex
-        }
+		flags = { virmire_planet pd_ignore }
     }
 
     planet = {
@@ -6978,9 +6513,7 @@ sys_hoc_init = {
         orbit_angle = 148
         has_ring = no
 		size = 29
-        init_effect = {
-			set_planet_flag = cloroplon_codex
-        }
+		flags = { cloroplon_planet pd_ignore }
     }
 
     planet = {
@@ -6990,9 +6523,7 @@ sys_hoc_init = {
         orbit_angle = 142
         has_ring = no
 		size = 5
-        init_effect = {
-			set_planet_flag = prescyla_codex
-        }
+		flags = { prescyla_planet pd_ignore }
     }
 
 	init_effect = { 
@@ -7020,19 +6551,15 @@ sys_telith_init = {
 	name = "Telith"
 	class = "sc_b_super"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "telith_relay_system"
-    }
 
-    flags = {
-        telith_system
-    }
+	flags = { attican_traverse_system sentry_omega_system telith_system btr_system custom_system }
 	
 	planet = {
 		name = "Telith"
 		class = "pc_b_super_star"
 		orbit_distance = 0
 		size = 45
+		flags = { telith_star }
 	}
 	
 	planet = {
@@ -7041,6 +6568,7 @@ sys_telith_init = {
 		orbit_distance = 80
 		has_ring = no
 		size = 12
+		flags = { sapfir_planet pd_ignore }
 		
     }
 
@@ -7062,19 +6590,15 @@ sys_anauroch_init = {
     name = "Anauroch"
     class = "sc_f"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "anauroch_relay_system"
-    }
 
-    flags = {
-        anauroch_system
-    }
+	flags = { attican_traverse_system shadow_sea_system anauroch_system btr_system custom_system }
 	
     planet = {
 		name = "Anauroch"
         class = "pc_f_star"
         orbit_distance = 0
         size = 25
+		flags = { anauroch_star }
     }
 
 	planet = {
@@ -7082,22 +6606,25 @@ sys_anauroch_init = {
 		class = "pc_barren"
 		orbit_distance = 80
 		size = "15"
-	}	
-		
+		flags = { thultanthar_planet pd_ignore }	
+	}
+
 	planet = {
 		name = "Drannor"
 		class = "pc_gas_giant"
 		orbit_distance = 55
 		size = 32
+		flags = { drannor_planet pd_ignore }	
+
 		moon = {
-			name = "Drannor_a"
+			name = "Drannor a"
 			class = "pc_frozen"
 			orbit_angle = 74
 			orbit_distance = 8
 			size = 11
 		}	
 		moon = {
-			name = "Drannor_b"
+			name = "Drannor b"
 			class = "pc_frozen"
 			orbit_angle = 136
 			orbit_distance = 8
@@ -7124,26 +6651,22 @@ sys_anauroch_init = {
 			
 		} 
 	}
-	
 }
 
 sys_bahanak_init = {
     name = "Bahanak"
     class = "sc_m_super"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "bahanak_relay_system"
-    }
 
-    flags = {
-        bahanak_system
-    }
+	flags = { attican_traverse_system shadow_sea_system bahanak_system btr_system custom_system }
 	
     planet = {
 		name = "Bahanak"
         class = "pc_m_super_star"
         orbit_distance = 0
         size = 45
+		flags = { bahanak_star }	
+
     }
 	
 	planet = {
@@ -7152,6 +6675,8 @@ sys_bahanak_init = {
 		orbit_distance = 35
 		size = 35
 		has_ring = no
+		flags = { elgarnan_planet pd_ignore }	
+
 	}
 	
 	planet = {
@@ -7160,19 +6685,25 @@ sys_bahanak_init = {
 		orbit_distance = 45
 		orbit_angle = 90
 		size = 20
+		flags = { mythal_planet pd_ignore }	
+
 		moon = {
-			name = "FalonDin"
+			name = "Falon'Din"
 			class = "pc_geothermal"
 			orbit_angle = 120
 			orbit_distance = 6
 			size = 12
+			flags = { falondin_planet pd_ignore }	
+
 		}
 		moon = {
 			name = "Dirthamen"
-			class = "pc_prothean"
+			class = "pc_continental"
 			orbit_angle = 120
 			orbit_distance = 8
 			size = 6
+			flags = { dirthamen_planet pd_ignore }	
+
 		}
 		moon = {
 			name = "Andruil"
@@ -7180,6 +6711,8 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 7
 			size = 6
+			flags = { andruil_planet pd_ignore }	
+
 		}		
 		moon = {
 			name = "Sylaise"
@@ -7187,6 +6720,9 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 7
 			size = 3
+			flags = { sylaise_planet pd_ignore }	
+
+			
 		}	
 		moon = {
 			name = "June"
@@ -7194,6 +6730,8 @@ sys_bahanak_init = {
 			orbit_angle = 120
 			orbit_distance = 7
 			size = 6
+			flags = { june_planet pd_ignore }	
+
 		}
 	}			
 			
@@ -7224,19 +6762,16 @@ sys_iera_init = {
     name = "Iera"
     class = "sc_f"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "iera_relay_system"
-    }
 
-    flags = {
-        iera_system
-    }
+	flags = { attican_traverse_system shadow_sea_system iera_system btr_system custom_system }
 	
     planet = {
 		name = "Iera"
         class = "pc_f_star"
         orbit_distance = 0
         size = 23
+		flags = { iera_star }	
+
     }
 
     planet = {
@@ -7246,9 +6781,8 @@ sys_iera_init = {
         orbit_angle = 163
         has_ring = no
 		size = 25
-        init_effect = {
-            set_planet_flag = venture_codex
-        }
+		flags = { venture_planet pd_ignore }	
+
     }
 
     planet = {
@@ -7258,23 +6792,22 @@ sys_iera_init = {
         orbit_angle = 58
         has_ring = no
 		size = 32
-        init_effect = {
-            set_planet_flag = prospect_codex
-        }
+		flags = { prospect_planet pd_ignore }	
+
 		moon = {
-			name = "Prospect_a"
+			name = "Prospect a"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 7
 		}
 		moon = {
-			name = "Prospect_b"
+			name = "Prospect b"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 3
 		}		
 		moon = {
-			name = "Prospect_c"
+			name = "Prospect c"
 			class = "pc_asteroid"
 			orbit_distance = 4
 			size = 2
@@ -7288,10 +6821,8 @@ sys_iera_init = {
         orbit_angle = 164
         has_ring = no
 		size = 13
-        init_effect = {
-            set_planet_flag = horizon_codex
-        }
-		flags = { planet_horizon }
+		flags = { horizon_planet pd_ignore }	
+
     }
 
     planet = {
@@ -7301,17 +6832,16 @@ sys_iera_init = {
         orbit_angle = 154
         has_ring = no
 		size = 14
-        init_effect = {
-            set_planet_flag = watchman_codex
-        }
+		flags = { watchman_planet pd_ignore }	
+
 		moon = {
-			name = "Watchman_a"
+			name = "Watchman a"
 			class = "pc_asteroid"
 			orbit_distance = 4
 			size = 2
 		}
 		moon = {
-			name = "Watchman_b"
+			name = "Watchman b"
 			class = "pc_asteroid"
 			orbit_distance = 6
 			size = 3
@@ -7333,19 +6863,16 @@ sys_netheril_init = {
     name = "Netheril"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "netheril_relay_system"
-    }
 
-    flags = {
-        netheril_system
-    }
+	flags = { attican_traverse_system shadow_sea_system netheril_system btr_system custom_system }
 	
     planet = {
 		name = "Netheril"
         class = "pc_k_star"
         orbit_distance = 0
         size = 33
+		flags = { netheril_star }	
+
     }	
 
 	planet = {
@@ -7353,6 +6880,7 @@ sys_netheril_init = {
 		class = "pc_barren"
 		orbit_distance = 30
 		size = 16
+		flags = { netheril_planet pd_ignore }	
 	}
 
 	planet = {
@@ -7360,6 +6888,7 @@ sys_netheril_init = {
 		class = "pc_hothouse"
 		orbit_distance = 60
 		size = 14
+		flags = { oreme_planet pd_ignore }	
 	}	
 
 	init_effect = { 
@@ -7390,13 +6919,8 @@ sys_acheron_init = {
     name = "Acheron"
     class = "sc_g"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "acheron_relay_system"
-    }
 
-    flags = {
-        acheron_system
-    }
+	flags = { attican_traverse_system styx_theta_system acheron_system btr_system custom_system }
     
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -7408,6 +6932,7 @@ sys_acheron_init = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 30
+		flags = { acheron_star }	
     }
 
     planet = {
@@ -7417,9 +6942,7 @@ sys_acheron_init = {
         orbit_angle = 174
         has_ring = no
 		size = 16
-        init_effect = {
-			set_planet_flag = farthorl_codex
-        }
+		flags = { fathorl_planet pd_ignore }	
     }
 
     planet = {
@@ -7429,9 +6952,7 @@ sys_acheron_init = {
         orbit_angle = 134
         has_ring = no
 		size = 11
-        init_effect = {
-            set_planet_flag = altahe_codex
-        }
+		flags = { altahe_planet pd_ignore }	
 		moon = {
 			name = "Ontahe"
 			class = "pc_toxic"
@@ -7447,9 +6968,7 @@ sys_acheron_init = {
         orbit_angle = 27
         has_ring = no
 		size = 13
-        init_effect = {
-			set_planet_flag = grosalgen_codex
-        }
+		flags = { grosalgen_planet pd_ignore }	
     }
 
     planet = {
@@ -7459,9 +6978,7 @@ sys_acheron_init = {
         orbit_angle = 213
         has_ring = no
 		size = 25
-        init_effect = {
-			set_planet_flag = imaneya_codex
-        }
+		flags = { imaneya_planet pd_ignore }	
     }
 
 	init_effect = { 
@@ -7479,13 +6996,8 @@ sys_erebus_init = {
     name = "Erebus"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "erebus_relay_system"
-    }
 
-    flags = {
-        erebus_system
-    }
+	flags = { attican_traverse_system styx_theta_system erebus_system btr_system custom_system }
 	
     asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -7497,6 +7009,7 @@ sys_erebus_init = {
         class = "pc_k_star"
         orbit_distance = 0
         size = 35
+		flags = { erebus_star }	
     }
 
     planet = {
@@ -7506,9 +7019,7 @@ sys_erebus_init = {
         orbit_angle = 12
         has_ring = no
 		size = 19
-        init_effect = {
-            set_planet_flag = nepmos_codex
-        }
+		flags = { nepmos_planet pd_ignore }	
     }
 
     planet = {
@@ -7518,9 +7029,7 @@ sys_erebus_init = {
         orbit_angle = 143
         has_ring = no
 		size = 12
-        init_effect = {
-			set_planet_flag = quaji_codex
-        }
+		flags = { quaji_planet pd_ignore }	
     }
 
     planet = {
@@ -7530,9 +7039,7 @@ sys_erebus_init = {
         orbit_angle = 163
         has_ring = no
 		size = 37
-        init_effect = {
-			set_planet_flag = wermani_codex
-        }
+		flags = { wermani_planet pd_ignore }	
     }
 
     planet = {
@@ -7542,9 +7049,7 @@ sys_erebus_init = {
         orbit_angle = 310
         has_ring = no
 		size = 21
-        init_effect = {
-			set_planet_flag = chofen_codex
-        }
+		flags = { chofen_planet pd_ignore }	
     }
 
 	init_effect = { 
@@ -7563,6 +7068,9 @@ sys_karaht_init = {
 	name = "Karaht"
 	class = "sc_g"
 	max_instances = 1	
+
+	flags = { attican_traverse_system styx_theta_system karaht_system btr_system custom_system }
+
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 150
@@ -7572,6 +7080,7 @@ sys_karaht_init = {
 		name = "Karaht"
 		class = "pc_g_star"
 		size = 20
+		flags = { karaht_star }	
 	}	
 	
 	planet = {
@@ -7579,9 +7088,7 @@ sys_karaht_init = {
 		class = "pc_barren"
 		orbit_distance = 35
 		size = 12
-        init_effect = {
-            set_planet_flag = murch_codex
-        }
+		flags = { murch_planet pd_ignore }	
 	}
 
 	planet = {
@@ -7589,9 +7096,7 @@ sys_karaht_init = {
 		class = "pc_dextro_desert"
 		orbit_distance = 70
 		size = 14
-        init_effect = {
-            set_planet_flag = vida_codex
-        }
+		flags = { vida_planet pd_ignore }	
 	}
 
 	planet = {
@@ -7599,15 +7104,14 @@ sys_karaht_init = {
 		class = "pc_gas_giant"
 		orbit_distance = 25
 		size = 36
-        init_effect = {
-            set_planet_flag = nymbar_codex
-        }
+		flags = { nymbar_planet pd_ignore }	
 		has_ring = no
 		moon = {
 			name = "Torfan"
 			class = "pc_barren"
 			orbit_distance = 8
 			size = 6
+			flags = { torfan_planet pd_ignore }	
 		}	
 	}
 
@@ -7616,10 +7120,8 @@ sys_karaht_init = {
 		class = "pc_ice_giant"
 		orbit_distance = 60
 		size = 28
-        init_effect = {
-            set_planet_flag = flin_codex
-        }
 		has_ring = yes
+		flags = { flin_planet pd_ignore }	
 	}
 }	
 	
@@ -7627,10 +7129,14 @@ sys_phlegethon_init = {
 	name = "Phlegethon"
 	class = "sc_g"
 	max_instances = 1	
+
+	flags = { attican_traverse_system styx_theta_system phlegethon_system btr_system custom_system }
+
 	planet = {
 		name = "Phlegethon"
 		class = "pc_g_star"
 		size = 30
+		flags = { phlegethon_star }	
 	}
 
 	planet = {
@@ -7638,6 +7144,7 @@ sys_phlegethon_init = {
 		class = "pc_barren"
 		orbit_distance = 25
 		size = 8
+		flags = { alecto_planet pd_ignore }	
 	}
 
 	planet = {
@@ -7646,6 +7153,7 @@ sys_phlegethon_init = {
 		orbit_distance = 50
 		size = 30
 		has_ring = yes
+		flags = { tisiphone_planet pd_ignore }	
 	}
 }	
 	
@@ -7653,38 +7161,46 @@ sys_timshar_init = {
 	name = "Timshar"
 	class = "sc_pulsar"
 	max_instances = 1	
+
+	flags = { attican_traverse_system styx_theta_system timshar_system btr_system custom_system }
+
 	planet = {
 		name = "Timshar"
 		class = "pc_pulsar"
 		size = 15
+		flags = { timshar_star }	
 	}
 
 	planet = {
-		name = "Timshar_I"
+		name = "Timshar I"
 		class = "pc_barren"
 		orbit_distance = 30
 		size = 8
-	}	
+		flags = { timsharI_planet pd_ignore }
+	}
 
 	planet = {
-		name = "Timshar_II"
+		name = "Timshar II"
 		class = "pc_barren"
 		orbit_distance = 30
 		size = 13
+		flags = { timsharII_planet pd_ignore }
 	}
 	
 	planet = {
-		name = "Timshar_III"
+		name = "Timshar III"
 		class = "pc_barren"
 		orbit_distance = 45
 		size = 7
+		flags = { timsharIII_planet pd_ignore }
 	}	
 	
 	planet = {
-		name = "Timshar_IV"
+		name = "Timshar IV"
 		class = "pc_barren"
 		orbit_distance = 60
 		size = 16
+		flags = { timsharIV_planet pd_ignore }
 	}	
 	
 	planet = {
@@ -7692,6 +7208,7 @@ sys_timshar_init = {
 		class = "pc_gas_giant"
 		orbit_distance = 30
 		size = 34
+		flags = { adounia_planet pd_ignore }	
         satellite_naming_policy = lower_case_latin_letters		
         moon = {
             count = 7
@@ -7708,19 +7225,15 @@ sys_baldr_init = {
     name = "Baldr"
     class = "sc_y"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "baldr_relay_system"
-    }
 
-    flags = {
-        baldr_system
-    }
+	flags = { attican_traverse_system yggdrasil_nebula_system baldr_system btr_system custom_system }
 	
     planet = {
 		name = "Baldr"
         class = "pc_y_star"
         orbit_distance = 0
         size = 28
+		flags = { baldr_star }
     }
 
 	asteroid_belt = {
@@ -7738,6 +7251,7 @@ sys_baldr_init = {
 		class = "pc_barren"
 		orbit_angle = 45
 		size = 6
+		flags = { coten_planet pd_ignore }
 	}
 
 	planet = {
@@ -7745,9 +7259,8 @@ sys_baldr_init = {
 		class = "pc_continental"
 		orbit_distance = 80
 		size = 17
-        init_effect = {
-            set_planet_flag = mindoir_codex
-        }
+		flags = { mindoir_planet pd_ignore }
+
 	}	
 
 
@@ -7766,19 +7279,16 @@ sys_brekkenz_init = {
     name = "Brekkenz"
     class = "sc_d"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "brekkenz_relay_system"
-    }
 
-    flags = {
-        brekkenz_system
-    }
+	flags = { attican_traverse_system yggdrasil_nebula_system brekkenz_system btr_system custom_system }
 	
     planet = {
 		name = "Brekkenz"
         class = "pc_d_star"
         orbit_distance = 0
         size = 20
+		flags = { brekkenz_star }
+
     }	
 
 	planet = {
@@ -7787,6 +7297,8 @@ sys_brekkenz_init = {
 		orbit_angle = random
 		orbit_distance = 50
 		size = 14
+		flags = { bil_planet pd_ignore}
+
 	}
 
 	planet = {
@@ -7796,6 +7308,8 @@ sys_brekkenz_init = {
 		has_ring = yes
 		orbit_distance = 60
 		size = 16
+		flags = { yuki_planet pd_ignore }
+
 	}	
 
 	init_effect = { 
@@ -7813,19 +7327,16 @@ sys_fen_init = {
     name = "Fen"
     class = "sc_k"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "fen_hyperlane_system"
-    }
 
-    flags = {
-        fen_system
-    }
+	flags = { attican_traverse_system yggdrasil_nebula_system fen_system btr_system custom_system }
 	
     planet = {
 		name = "Fen"
         class = "pc_k_star"
         orbit_distance = 0
         size = 28
+		flags = { fen_planet pd_ignore }
+
     }
 	
 	planet = {
@@ -7833,6 +7344,8 @@ sys_fen_init = {
 		class = "pc_barren"
 		orbit_angle = random
 		orbit_distance = 40
+		flags = { vingolf_planet pd_ignore }
+
 	}	
 	
 	planet = {
@@ -7841,8 +7354,10 @@ sys_fen_init = {
 		orbit_angle = random
 		orbit_distance = 40
 		size = 13
+		flags = { amsvartnir_planet pd_ignore }
+
 		moon = 	{
-			name = "Amsvartnir_a"
+			name = "Amsvartnir a"
 			class = "pc_dextro_tundra"
 			orbit_angle = random
 			orbit_distance = 8
@@ -7856,6 +7371,8 @@ sys_fen_init = {
 		orbit_angle = random
 		orbit_distance = 15
 		size = 12
+		flags = { lyngvi_planet pd_ignore }
+
 	}	
 }
 
@@ -7863,13 +7380,8 @@ sys_hedek_init = {
 	name = "Hedek"
 	class = "sc_m"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "hedek_hyperlane_system"
-    }
 
-    flags = {
-        hedek_system
-    }	
+	flags = { attican_traverse_system yggdrasil_nebula_system hedeq_system btr_system custom_system }
 
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -7880,6 +7392,8 @@ sys_hedek_init = {
 		name = "Hedek"
 		class = "pc_m_star"
 		size = 26
+		flags = { hedek_star }
+
 	}	
 
 	planet = {
@@ -7887,6 +7401,8 @@ sys_hedek_init = {
 		class = "pc_toxic"
 		orbit_distance = 35
 		size = 16
+		flags = { nuuk_planet pd_ignore }
+
 	}
 }	
 
@@ -7894,19 +7410,16 @@ sys_qedek_init = {
     name = "Qedek"
     class = "sc_tt_red"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "qedek_hyperlane_system"
-    }
 
-    flags = {
-        qedek_system
-    }
+	flags = { attican_traverse_system yggdrasil_nebula_system qedek_system btr_system custom_system }
 	
     planet = {
 		name = "Qedek"
         class = "pc_tt_red_star"
         orbit_distance = 0
         size = 20
+		flags = { qedek_star }
+
     }
 }
 
@@ -7914,18 +7427,15 @@ sys_vali_init = {
     name = "Vali"
     class = "sc_black_hole"
 	max_instances = 1
-    init_effect = {
-        save_global_event_target_as = "vali_hyperlane_system"
-    }
 
-    flags = {
-        vali_system
-    }
+	flags = { attican_traverse_system yggdrasil_nebula_system vali_system btr_system custom_system }
 	
     planet = {
 		name = "Vali"
         class = "pc_black_hole"
         orbit_distance = 0
         size = 30
+		flags = { vali_star }
+
     }
 }

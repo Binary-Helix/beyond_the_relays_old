@@ -1,5 +1,173 @@
+############################
+##### ATTICAN TRAVERSE #####
+############################
 
-# Cronos Station - Hydroponics bays
+#Junthor
+d_aluminum_surface = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+		d_submerged_caves
+	}
+
+	potential = { always = no }
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_nickel_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+		d_submerged_caves
+	}
+
+	potential = { always = no }
+	
+	planet_modifier = { 
+		mineral_rich = 1
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_junthor_ruins = {
+	is_for_colonizable = yes
+	icon = d_ruins_large
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.25
+		planet_jobs_engineering_research_produces_mult = 0.10
+		planet_jobs_physics_research_produces_mult = 0.15
+	}
+	drop_weight = {
+		weight = 0
+	}	
+}
+
+d_junthor_ruins_elaborate_relief = {
+	is_for_colonizable = yes
+	icon = d_ruins_large
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### CRONOS STATION
 d_hydroponics_bays = {
 	is_for_colonizeable = yes
 	icon = d_hydroponics_bay
@@ -14,7 +182,6 @@ d_hydroponics_bays = {
 	}
 }
 
-# Cronos Station - Science labs
 d_cronos_science_labs = {
 	is_for_colonizeable = yes
 	icon = d_cronos_research_labs
@@ -29,7 +196,6 @@ d_cronos_science_labs = {
 	}
 }
 
-# Cronos Station - Reactor
 d_cronos_reactor = {
 	is_for_colonizeable = yes
 	icon = d_cronos_reactor
@@ -44,7 +210,7 @@ d_cronos_reactor = {
 	}
 }
 
-# Collector Base - Consumption chambers
+### COLLECTOR BASE 
 d_consumption_chambers = {
 	is_for_colonizeable = yes
 	icon = d_collector_consumption_chambers
@@ -59,7 +225,6 @@ d_consumption_chambers = {
 	}
 }
 
-# Collector Base - De-construction bays
 d_deconstruction_bays = {
 	is_for_colonizeable = yes
 	icon = d_collector_deconstruction_bays
@@ -74,7 +239,7 @@ d_deconstruction_bays = {
 	}
 }
 
-# Citadel - Wards
+### THE CITADEL
 d_wards = {
 	is_for_colonizeable = yes
 	icon = d_citadel_wards
@@ -87,7 +252,6 @@ d_wards = {
 	}
 }
 
-# Citadel - Presidium
 d_presidium = {
 	is_for_colonizeable = yes
 	icon = d_citadel_presidium
@@ -101,7 +265,6 @@ d_presidium = {
 	}
 }
 
-# Citadel - Citadel Tower
 d_citadel_tower = {
 	is_for_colonizeable = yes
 	icon = d_citadel_tower
@@ -120,7 +283,6 @@ d_citadel_tower = {
 	}
 }
 
-# Citadel - C-Sec Offices
 d_citadel_csec = {
 	is_for_colonizeable = yes
 	icon = d_citadel_csec
@@ -134,7 +296,6 @@ d_citadel_csec = {
 	}
 }
 
-# Citadel - Keeper workshops
 d_keeper_workshops = {
 	is_for_colonizeable = yes
 	icon = d_citadel_keeper_workshops
@@ -147,7 +308,6 @@ d_keeper_workshops = {
 	}
 }
 
-# Citadel - Huerta Memorial Hospital
 d_huerta_memorial_hospital = {
 	is_for_colonizeable = yes
 	icon = d_citadel_huerta
@@ -160,7 +320,6 @@ d_huerta_memorial_hospital = {
 	}
 }
 
-# Citadel - Purgatory Bar
 d_purgatory_bar = {
 	is_for_colonizeable = yes
 	icon = d_citadel_purgatory
@@ -173,7 +332,70 @@ d_purgatory_bar = {
 	}
 }
 
-# Earth - Vancouver (Alliance courts)
+### Jarrahe Station
+d_jarrahe_research = {
+	is_for_colonizeable = yes	
+	icon = d_jarrahe_research
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 1.0
+	}
+
+	drop_weight = {
+		weight = 0
+	}	
+}
+
+d_jarrahe_vi = {
+	is_for_colonizeable = yes	
+	icon = d_jarrahe_vi
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.5
+		planet_jobs_engineering_research_produces_mult = 0.5
+	}
+
+	drop_weight = {
+		weight = 0
+	}	
+}
+
+### OMEGA
+d_omega_afterlife = {
+	is_for_colonizeable = yes
+	icon = d_omega_afterlife
+	category = deposit_cat_rare
+	planet_modifier = {
+		planet_amenities_add = 10
+		planet_stability_add = -5
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_omega_element_zero_refineries = {
+	is_for_colonizeable = yes
+	icon = d_omega_element_zero_refineries
+	category = deposit_cat_rare
+	resources = {
+		category = planet_deposits
+		produces = {
+			element_zero = 1
+		}
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#######################
+##### Prescripted #####
+#######################
+
+### EARTH
 d_vancouver = {
 	is_for_colonizeable = yes
 	icon = d_earth_vancouver
@@ -186,7 +408,6 @@ d_vancouver = {
 	}
 }
 
-# Earth - São Paulo shipyards
 d_sao_paulo_shipyards = {
 	is_for_colonizeable = yes
 	icon = d_earth_sao_paulo_shipyards
@@ -199,7 +420,6 @@ d_sao_paulo_shipyards = {
 	}
 }
 
-# Earth - London
 d_london = {
 	is_for_colonizeable = yes
 	icon = d_earth_london
@@ -213,7 +433,6 @@ d_london = {
 	}
 }
 
-# Earth - Atmospheric purifiers
 d_atmospheric_purifiers = {
 	is_for_colonizeable = yes
 	icon = d_earth_atmo
@@ -227,7 +446,46 @@ d_atmospheric_purifiers = {
 	}
 }
 
-# Mars - Lowell City
+### IRUNE
+d_irune_lenos = {
+	is_for_colonizeable = yes
+	icon = d_irune_lenos
+	category = deposit_cat_rare
+	planet_modifier = {
+		trade_value_add = 15
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+### KAHJE
+d_kahje_rasiil_life_dome = {
+	is_for_colonizeable = yes
+	icon = d_kahje_rasiil_life_dome
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_environment_tolerance = 0.20
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_kahje_mount_vassla = {
+	is_for_colonizeable = yes
+	icon = d_kahje_mount_vassla
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_ethic_fanatic_spiritualist_attraction_mult = 0.20
+		pop_ethic_spiritualist_attraction_mult = 0.10
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+### MARS
 d_mars_lowell_city = {
 	is_for_colonizeable = yes
 	icon = d_mars_lowell_city
@@ -240,7 +498,6 @@ d_mars_lowell_city = {
 	}
 }
 
-# Mars - Farming Habitats
 d_mars_farming_habitats = {
 	is_for_colonizeable = yes
 	icon = d_mars_farming_habitats
@@ -253,7 +510,6 @@ d_mars_farming_habitats = {
 	}
 }
 
-# Mars - Maxwell mining base
 d_mars_maxwell_mining_base = {
 	is_for_colonizeable = yes
 	icon = d_mars_maxwell_mining_base
@@ -266,7 +522,6 @@ d_mars_maxwell_mining_base = {
 	}
 }
 
-# Mars - Olympus Mons
 d_mars_olympus_mons = {
 	is_for_colonizeable = yes
 	icon = d_mars_olympus_mons
@@ -284,7 +539,6 @@ d_mars_olympus_mons = {
 	}
 }
 
-# Mars - Tharsis solar arrays
 d_mars_tharsis_solar_arrays = {
 	is_for_colonizeable = yes
 	icon = d_mars_tharsis_solar_arrays
@@ -297,7 +551,6 @@ d_mars_tharsis_solar_arrays = {
 	}
 }
 
-# Mars - Mars Archive
 d_mars_archive = {
 	is_for_colonizeable = yes
 	icon = d_mars_archive
@@ -312,7 +565,7 @@ d_mars_archive = {
 	}
 }
 
-# Palaven - Radiation
+### PALAVEN
 d_palaven_radiation = {
 	is_for_colonizeable = yes
 	icon = d_palaven_radiation
@@ -325,7 +578,6 @@ d_palaven_radiation = {
 	}
 }
 
-# Palaven - Cipritine
 d_palaven_cipritine = {
 	is_for_colonizeable = yes
 	icon = d_palaven_cipritine
@@ -338,7 +590,6 @@ d_palaven_cipritine = {
 	}
 }
 
-# Palaven - Sercusium River
 d_sercusium_river = {
 	is_for_colonizeable = yes
 	icon = d_palaven_river
@@ -353,7 +604,7 @@ d_sercusium_river = {
 	}
 }
 
-# Surkesh - Parkan Research Institute
+### SUR'KESH
 d_surkesh_parkan_research_institute = {
 	is_for_colonizeable = yes
 	icon = d_surkesh_parkan_research_institute
@@ -368,7 +619,6 @@ d_surkesh_parkan_research_institute = {
 	}
 }
 
-# Surkesh - Wesbii Forest
 d_surkesh_wesbii_forest = {
 	is_for_colonizeable = yes
 	icon = d_surkesh_wesbii_forest
@@ -386,7 +636,7 @@ d_surkesh_wesbii_forest = {
 	}
 }
 
-# Tuchanka - Underground Tunnels
+### TUCHANKA
 d_tuchanka_underground_tunnels = {
 	is_for_colonizeable = yes
 	icon = d_tuchanka_underground_tunnels
@@ -402,7 +652,6 @@ d_tuchanka_underground_tunnels = {
 	}
 }
 
-# Tuchanka - Thresher Maw Nest
 d_tuchanka_thresher_maw_nest = {
 	is_for_colonizeable = yes
 	icon = d_tuchanka_thresher_maw_nest
@@ -422,7 +671,6 @@ d_tuchanka_thresher_maw_nest = {
 	}
 }
 
-# Tuchanka - Ruins of Nakmor
 d_tuchanka_nakmor_ruined = {
 	is_for_colonizeable = yes
 	icon = d_tuchanka_nakmor_ruined
@@ -444,7 +692,6 @@ d_tuchanka_nakmor_ruined = {
 	}
 }
 
-# Tuchanka - Rebuilt Nakmor
 d_tuchanka_nakmor_rebuilt = {
 	is_for_colonizeable = yes
 	icon = d_tuchanka_nakmor_rebuilt
@@ -462,7 +709,6 @@ d_tuchanka_nakmor_rebuilt = {
 	}
 }
 
-# Tuchanka - The Hollows
 d_tuchanka_the_hollows = {
 	is_for_colonizeable = yes
 	icon = d_tuchanka_the_hollows
@@ -477,7 +723,7 @@ d_tuchanka_the_hollows = {
 	}
 }
 
-# Khar'shan - Qnobis
+### KHAR'SHAN
 d_kharshan_qnobis = {
 	is_for_colonizeable = yes
 	icon = d_kharshan_qnobis
@@ -491,7 +737,6 @@ d_kharshan_qnobis = {
 	}
 }
 
-# Khar'shan - Dizesh Slave Market
 d_kharshan_dizesh = {
 	is_for_colonizeable = yes
 	icon = d_kharshan_dizesh
@@ -505,7 +750,7 @@ d_kharshan_dizesh = {
 	}
 }
 
-# Dekuuna - Unovasereng
+### DEKUUNA
 d_dekuuna_unovasereng = {
 	is_for_colonizeable = yes
 	icon = d_dekuuna_unovasereng
@@ -519,7 +764,6 @@ d_dekuuna_unovasereng = {
 	}
 }
 
-# Dekuuna - Forests
 d_dekuuna_forests = {
 	is_for_colonizeable = yes
 	icon = d_dekuuna_forests
@@ -533,7 +777,7 @@ d_dekuuna_forests = {
 	}
 }
 
-# Rannoch - Geth Base
+### RANNOCH
 d_rannoch_geth_base = {
 	is_for_colonizeable = yes
 	icon = d_rannoch_geth_base
@@ -547,7 +791,6 @@ d_rannoch_geth_base = {
 	}
 }
 
-# Rannoch - Quarian Ruins
 d_rannoch_quarian_ruins = {
 	is_for_colonizeable = yes
 	icon = d_rannoch_quarian_ruins
@@ -565,7 +808,6 @@ d_rannoch_quarian_ruins = {
 	}
 }
 
-# Rannoch - Consensus Core
 d_rannoch_consensus_core = {
 	is_for_colonizeable = yes
 	icon = d_rannoch_consensus_core
@@ -583,7 +825,6 @@ d_rannoch_consensus_core = {
 	}
 }
 
-# Rannoch - Geth Factory
 d_rannoch_geth_factory = {
 	is_for_colonizeable = yes
 	icon = d_rannoch_geth_factory
@@ -596,100 +837,8 @@ d_rannoch_geth_factory = {
 	}
 }
 
-# Irune - Lenos Interstellar Bank
-d_irune_lenos = {
-	is_for_colonizeable = yes
-	icon = d_irune_lenos
-	category = deposit_cat_rare
-	planet_modifier = {
-		trade_value_add = 15
-	}
-	drop_weight = {
-		weight = 0
-	}
-}
 
-# Omega - Afterlife
-d_omega_afterlife = {
-	is_for_colonizeable = yes
-	icon = d_omega_afterlife
-	category = deposit_cat_rare
-	planet_modifier = {
-		planet_amenities_add = 10
-		planet_stability_add = -5
-	}
-	drop_weight = {
-		weight = 0
-	}
-}
-
-# Omega - Element Zero Refineries
-d_omega_element_zero_refineries = {
-	is_for_colonizeable = yes
-	icon = d_omega_element_zero_refineries
-	category = deposit_cat_rare
-	resources = {
-		category = planet_deposits
-		produces = {
-			element_zero = 1
-		}
-	}
-	drop_weight = {
-		weight = 0
-	}
-}
-
-# Kahje - Rasiil Life Dome
-d_kahje_rasiil_life_dome = {
-	is_for_colonizeable = yes
-	icon = d_kahje_rasiil_life_dome
-	category = deposit_cat_rare
-	planet_modifier = {
-		pop_environment_tolerance = 0.20
-	}
-	drop_weight = {
-		weight = 0
-	}
-}
-
-# Kahje - Mount Vassla
-d_kahje_mount_vassla = {
-	is_for_colonizeable = yes
-	icon = d_kahje_mount_vassla
-	category = deposit_cat_rare
-	planet_modifier = {
-		pop_ethic_fanatic_spiritualist_attraction_mult = 0.20
-		pop_ethic_spiritualist_attraction_mult = 0.10
-	}
-	drop_weight = {
-		weight = 0
-	}
-}
-
-# Noveria - Port Hanshan
-d_noveria_port_hanshan = {
-	is_for_colonizeable = yes
-	icon = d_noveria_port_hanshan
-	category = deposit_cat_rare
-	planet_modifier = {
-		pop_environment_tolerance = 0.25
-	}
-	drop_weight = {
-		weight = 0
-	}
-}
-
-# Noveria - Peak Research Facility
-d_noveria_peak_research_facility = {
-	is_for_colonizeable = yes
-	icon = d_noveria_peak_research_facility
-	category = deposit_cat_rare
-	drop_weight = {
-		weight = 0
-	}
-}
-
-# Thessia - Armali
+###THESSIA
 d_asari_republic_armali = {
 	is_for_colonizeable = yes
 	icon = d_city
@@ -703,7 +852,6 @@ d_asari_republic_armali = {
 	}
 }
 
-# Thessia - Nosdesera
 d_asari_nosdesera = {
 	is_for_colonizeable = yes
 	icon = d_city
@@ -717,7 +865,6 @@ d_asari_nosdesera = {
 	}
 }
 
-# Thessia - Serrice University
 d_asari_serrice_university = {
 	is_for_colonizeable = yes
 	icon = d_building_complex
@@ -733,7 +880,6 @@ d_asari_serrice_university = {
 	}
 }
 
-# Thessia - Cresyl Plateau
 d_asari_cresyl_plateau = {
 	is_for_colonizeable = yes
 	icon = d_betharian_deposit
@@ -747,7 +893,6 @@ d_asari_cresyl_plateau = {
 	}
 }
 
-# Thessia - Askasian Mountains
 d_asari_askasian_mountains = {
 	is_for_colonizeable = yes
 	icon = d_mountain_range
@@ -761,7 +906,6 @@ d_asari_askasian_mountains = {
 	}
 }
 
-# Thessia - Pulian Delta
 d_asari_pulian_delta = {
 	is_for_colonizeable = yes
 	icon = d_great_river
@@ -775,7 +919,6 @@ d_asari_pulian_delta = {
 	}
 }
 
-# Thessia - Senecan Lakes
 d_asari_senecan_lakes = {
 	is_for_colonizeable = yes
 	icon = d_crystal_reef
@@ -789,7 +932,6 @@ d_asari_senecan_lakes = {
 	}
 }
 
-# Thessia - Irssal Tea
 d_asari_irssal_tea = {
 	is_for_colonizeable = yes
 	icon = d_black_soil
@@ -803,7 +945,6 @@ d_asari_irssal_tea = {
 	}
 }
 
-# Thessia - Athame Temple
 d_asari_athame_temple = {
 	is_for_colonizeable = yes
 	icon = d_monument
@@ -828,7 +969,6 @@ d_asari_athame_temple = {
 	}
 }
 
-# Thessia - Eezo Deposits
 d_asari_eezo_deposits = {
 	is_for_colonizeable = yes
 	icon = d_infestation
@@ -847,7 +987,6 @@ d_asari_eezo_deposits = {
 	}
 }
 
-# Thessia - Thessia Net
 d_asari_thessia_net = {
 	is_for_colonizeable = yes
 	icon = d_city
@@ -862,6 +1001,46 @@ d_asari_thessia_net = {
 		weight = 0
 	}
 }
+
+### NOVERIA
+d_noveria_port_hanshan = {
+	is_for_colonizeable = yes
+	icon = d_noveria_port_hanshan
+	category = deposit_cat_rare
+	planet_modifier = {
+		pop_environment_tolerance = 0.25
+	}
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_noveria_peak_research_facility = {
+	is_for_colonizeable = yes
+	icon = d_noveria_peak_research_facility
+	category = deposit_cat_rare
+	drop_weight = {
+		weight = 0
+	}
+}
+
+### FLETT
+d_bloodpack_vorcha = {
+	is_for_colonizeable = yes
+	icon = d_building
+	category = deposit_cat_rare
+
+	planet_modifier = {
+		planet_immigration_pull_mult = -0.80
+		pop_growth_speed = 0.30
+		planet_army_build_speed_mult = 0.5
+	}
+
+	drop_weight = {
+		weight = 0
+	}	
+}
+
 
 # Blockers
 d_asari_zalis_spill = {
@@ -949,54 +1128,6 @@ d_asari_yisrin_restored = {
 		weight = 0
 	}
 }
-
-d_bloodpack_vorcha = {
-	is_for_colonizeable = yes
-	icon = d_building
-	category = deposit_cat_rare
-
-	planet_modifier = {
-		planet_immigration_pull_mult = -0.80
-		pop_growth_speed = 0.30
-		planet_army_build_speed_mult = 0.5
-	}
-
-	drop_weight = {
-		weight = 0
-	}	
-}
-
-# Jarrahe Station
-d_jarrahe_research = {
-	is_for_colonizeable = yes	
-	icon = d_jarrahe_research
-	category = deposit_cat_rare
-
-	planet_modifier = {
-		planet_jobs_physics_research_produces_mult = 1.0
-	}
-
-	drop_weight = {
-		weight = 0
-	}	
-}
-
-d_jarrahe_vi = {
-	is_for_colonizeable = yes	
-	icon = d_jarrahe_vi
-	category = deposit_cat_rare
-
-	planet_modifier = {
-		planet_jobs_society_research_produces_mult = 0.5
-		planet_jobs_engineering_research_produces_mult = 0.5
-	}
-
-	drop_weight = {
-		weight = 0
-	}	
-}
-
-
 
 
 

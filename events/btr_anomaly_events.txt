@@ -1,0 +1,215 @@
+### Armstrong Nebula
+## Gagarin
+# Junthor (Ancient Obelisk)
+ship_event = {
+	id = mec_eg_anomaly.1021
+	title = "mec_eg_anomaly.1021.name"
+	desc = "mec_eg_anomaly.1021.desc"
+  	picture = GFX_evt_ancient_records
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.1021.a
+		from = {
+			add_deposit = d_engineering_2
+			add_deposit = d_society_2
+			add_deposit = d_junthor_ruins_elaborate_relief
+			remove_modifier = junthor_codex_untranslated
+		}	
+		hidden_effect = {
+			from = {
+				add_modifier = {
+					modifier = junthor_codex_translated
+					days = -1
+				}	
+			}	
+		}		
+	}
+}
+
+# Rayingri (Collision Course)
+ship_event = {
+	id = mec_eg_anomaly.1022
+	title = "mec_eg_anomaly.1022.name"
+	desc = "mec_eg_anomaly.1022.desc"
+  	picture = GFX_evt_asteroid_approaching_planet
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+		solar_system = {
+			random_system_planet = {
+				limit = {
+					has_planet_flag = rayingri_planet
+				}
+				remove_modifier = rayingri_unsurveyed_codex
+				add_modifier = {
+					modifier = rayingri_codex
+					days = -1
+				}
+			}
+		}
+	}
+
+	option = {
+		name = mec_eg_anomaly.1022.a
+		from = {
+			add_deposit = d_physics_2
+			remove_modifier = vahtz_unsurveyed_codex
+			hidden_effect = {
+				from = {
+					add_modifier = {
+						modifier = vahtz_codex
+						days = -1
+					}	
+				}	
+			}
+		}
+	}
+}	
+
+## Grissom
+# Zaherux (Sea of Sands)
+ship_event = {
+	id = mec_eg_anomaly.1023
+	title = "mec_eg_anomaly.1023.name"
+	desc = "mec_eg_anomaly.1023.desc"
+  	picture = GFX_mec_sand_dunes_01
+	show_sound = event_sensor_ping
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.1023.a
+		owner = {
+			add_resource = {
+				physics_research = 200		#NO DEPOSIT
+			}
+		}
+		from = {	
+			remove_modifier = zaherux_unsurveyed_codex
+			hidden_effect = {
+				from = {
+					add_modifier = {
+						modifier = zaherux_codex
+						days = -1
+					}	
+				}
+			}
+		}
+	}
+}
+
+## Hong
+# Pomal (Shallow Seas)
+ship_event = {
+	id = mec_eg_anomaly.1024
+	title = "mec_eg_anomaly.1024.name"
+	desc = "mec_eg_anomaly.1024.desc"
+  	picture = GFX_evt_archaeological_dig
+	show_sound = event_ship_bridge
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.1024.a
+		from = {
+			add_deposit = d_society_2
+			remove_modifier = pomal_unsurveyed_codex
+			hidden_effect = {
+				from = {
+					add_modifier = {
+						modifier = pomal_codex
+						days = -1
+					}	
+				}
+			}			
+		}
+	}
+}
+
+# Casbin (Pre-Garden World)
+ship_event = {
+	id = mec_eg_anomaly.1025
+	title = "mec_eg_anomaly.1025.name"
+	desc = "mec_eg_anomaly.1025.desc"
+  	picture = GFX_evt_drilling_for_gas
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.1025.a
+		from = {
+			add_deposit = d_society_4
+			add_modifier = {
+				modifier = terraforming_candidate
+				days = -1
+			}
+			remove_modifier = casbin_unsurveyed_codex
+			hidden_effect = {
+				from = {
+					add_modifier = {
+						modifier = casbin_precouncil_codex
+						days = -1
+					}	
+				}	
+			}
+		}
+	}	
+}
+
+## Tereshkova
+# Antibaar (Terraforming Candidate)
+ship_event = {
+	id = mec_eg_anomaly.1026
+	title = "mec_eg_anomaly.1026.name"
+	desc = "mec_eg_anomaly.1026.desc"
+  	picture = GFX_evt_drilling_for_gas
+	show_sound = event_scanner
+	location = from
+
+	is_triggered_only = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_eg_anomaly.1026.a
+		from = {
+			add_modifier = {
+				modifier = terraforming_candidate
+				days = -1
+			}
+			remove_modifier = antibaar_unsurveyed_codex
+			hidden_effect = {
+				from = {
+					add_modifier = {
+						modifier = antibaar_codex
+						days = -1
+					}	
+				}	
+			}			
+		}
+	}
+}

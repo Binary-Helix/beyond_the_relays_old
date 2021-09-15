@@ -1,0 +1,2121 @@
+#####################################
+# 			Biotic Events 			#
+#####################################
+
+namespace = mec_bio_evt
+
+### BIOTICS INTRODUCTION EVENTS
+
+#Eruption in the Ether
+planet_event = {
+	id = mec_bio_evt.001
+	title = "mec_bio_evt.001.name"
+	desc = "mec_bio_evt.001.desc"
+	picture = GFX_evt_busy_spaceport
+	show_sound = event_ship_explosion
+	location = root
+
+	pre_triggers = {
+		has_owner = yes
+		original_owner = yes
+		has_ground_combat = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOT = { 
+				has_authority = auth_machine_intelligence 
+				has_authority = auth_hive_mind
+				has_origin = mec_asari_origin_thessia
+				has_origin = mec_asari_origin_illium
+				has_country_flag = mec_bio_starship_explosion
+			}
+		}
+		num_pops > 3
+	}
+	
+	is_triggered_only = yes
+
+	immediate = {
+		owner = { set_country_flag = mec_bio_starship_explosion }
+	}
+
+	option = {
+		name = mec_bio_evt.001.a 												###Starts Power of the Gods Event Chain
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_authoritarian = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+		owner = { set_country_flag = mec_bio_country_biotics }
+	}
+
+	option = {
+		name = mec_bio_evt.001.b												###Starts Power of the Gods Event Chain
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 4
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+						is_egalitarian = yes
+					}
+				}
+			}
+		}
+		owner = { 
+			set_country_flag = mec_bio_country_biotics 
+			add_resource = {
+				influence = 50
+				energy = -500
+			}
+		}
+	}
+}
+
+####################################################################################
+
+#Industrial Ignition
+planet_event = {
+	id = mec_bio_evt.002
+	title = "mec_bio_evt.002.name"
+	desc = "mec_bio_evt.002.desc"
+	picture = GFX_evt_night_raid
+	show_sound = event_structural_collapse
+	location = root
+
+	pre_triggers = {
+		has_owner = yes
+		original_owner = yes
+		has_ground_combat = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			NOT = { 
+				has_authority = auth_machine_intelligence 
+				has_authority = auth_hive_mind
+				has_origin = mec_asari_origin_thessia
+				has_origin = mec_asari_origin_illium
+				has_country_flag = mec_bio_eezo_refinery
+			}
+		}
+		num_pops > 3
+	}
+	
+	is_triggered_only = yes
+
+	immediate = {
+		owner = { set_country_flag = mec_bio_eezo_refinery }
+	}
+
+	option = {
+		name = mec_bio_evt.002.a 												###Starts Power of the Gods Event Chain
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_authoritarian = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+		owner = { set_country_flag = mec_bio_country_biotics }
+	}
+
+	option = {
+		name = mec_bio_evt.002.b												###Starts Power of the Gods Event Chain
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 4
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+						is_egalitarian = yes
+					}
+				}
+			}
+		}
+		owner = { 
+			set_country_flag = mec_bio_country_biotics 
+			add_resource = {
+				influence = 50
+				energy = -500
+			}
+		}
+	}
+}
+
+####################################################################################
+
+#Falling Skies
+planet_event = {
+	id = mec_bio_evt.003
+	title = "mec_bio_evt.003.name"
+	desc = "mec_bio_evt.003.desc"
+	picture = GFX_evt_asteroid_approaching_planet
+	show_sound = event_air_raid_siren
+	location = root
+
+	pre_triggers = {
+		has_owner = yes
+		original_owner = yes
+		has_ground_combat = no
+		is_occupied_flag = no
+	}
+
+	trigger = {
+		owner = {
+			OR = {
+				has_modifier = asteroid_belt
+				has_modifier = asteroid_impacts
+			}
+			NOT = { 
+				has_authority = auth_machine_intelligence 
+				has_authority = auth_hive_mind
+				has_origin = mec_asari_origin_thessia
+				has_origin = mec_asari_origin_illium
+				has_country_flag = mec_bio_eezo_asteroid
+				has_modifier = "recent_comet"
+				has_modifier = "recent_impact"
+			}
+		}
+		num_pops > 3
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		owner = { set_country_flag = mec_bio_eezo_asteroid }
+	}
+
+	option = {
+		name = mec_bio_evt.003.a 												###Starts Power of the Gods Event Chain
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 3
+				owner = {
+					OR = {
+						is_authoritarian = yes
+						is_xenophobe = yes
+					}
+				}
+			}
+		}
+		owner = { 
+			set_country_flag = mec_bio_country_biotics 
+			add_resource = {
+				minerals = 300
+			}
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.003.b												###Starts Power of the Gods Event Chain
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 4
+				owner = {
+					OR = {
+						is_pacifist = yes
+						is_xenophile = yes
+						is_egalitarian = yes
+					}
+				}
+			}
+		}
+		owner = { 
+			set_country_flag = mec_bio_country_biotics 
+			add_resource = {
+				influence = 50
+				minerals = 250
+				energy = -500
+			}
+		}
+	}
+}
+
+####################################################################################
+
+##Biotic Flags
+
+#mec_bio_biotics_tales = Did not investigate, biotics basically remain unknown
+#mec_bio_biotics_investigate = Investigated and found out about biotics
+
+#mec_bio_biotics_public = Went public with info on biotics
+
+#mec_bio_biotics_secret = Maintained Secrecy about biotics
+#mec_bio_biotics_secret_large = Maintained secrecy about biotics but has large population of biotics
+
+#mec_bio_biotics_deviants = Biotics are considered deviants
+#mec_bio_biotics_execute = Killed biotics
+#mec_bio_biotics_guard = Biotics are captured to turn into special army
+
+#mec_bio_biotics_holy = Biotics were/are considered divine
+#mec_bio_biotics_heretics = Biotics are now considered heretics
+
+#mec_bio_biotics_society = Biotics now have a large presence within society (Can occur from Public, Secret and Holy Event Paths)
+
+####################################################################################
+
+#Power of the Gods
+country_event = {
+	id = mec_bio_evt.005
+	title = "mec_bio_evt.005.name"
+	desc = "mec_bio_evt.005.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_mystic_reveal
+	location = root
+
+	auto_opens = yes
+
+	trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = mec_bio_biotics_investigate
+				has_country_flag = mec_bio_biotics_tales
+			}
+			has_country_flag = mec_bio_country_biotics
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 60
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.005.a 												#Do Nothing - Ends Event Chain
+		ai_chance = {
+			factor = 2
+		}
+		owner = { set_country_flag = mec_bio_biotics_tales }
+	}
+
+	option = {
+		name = mec_bio_evt.005.b 												#Investigate Further
+		ai_chance = {
+			factor = 8
+		}
+		owner = { set_country_flag = mec_bio_biotics_investigate }
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0050 days = 360 }  				#Investigate the Rumours - 360 Days
+		}
+	}
+}
+
+##################################
+
+#Power of the Gods - Investigation
+country_event = {
+	id = mec_bio_evt.0050
+	title = "mec_bio_evt.0050.name"
+	desc = "mec_bio_evt.0050.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_mystic_reveal
+	location = from
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0050.a 
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 6
+				OR = {
+                	is_xenophile = yes
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}
+		owner = { set_country_flag = mec_bio_biotics_public }
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0051 days = 30 }  				#Go Public		
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0050.b	
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 6
+				OR = {
+					is_authoritarian = yes
+					is_xenophobe = yes
+				}
+			}
+		}	
+		owner = { set_country_flag = mec_bio_biotics_secret }
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0060 days = 30 }  				#Maintain secrecy		
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0050.c	
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				OR = {
+					is_authoritarian = yes
+					is_xenophobe = yes
+				}
+			}
+			modifier = {
+				factor = 3
+				OR = {
+                    is_spiritualist = yes
+				}
+			}
+		}
+		trigger = {
+			owner = {
+				OR = {
+                	has_ethic = ethic_authoritarian
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_xenophobe
+					has_ethic = ethic_fanatic_xenophobe
+  					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		owner = { set_country_flag = mec_bio_biotics_deviants }
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0070 days = 30 }  				#Execute Biotics - 90 Days
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0050.d 
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 5
+				OR = {
+                    is_spiritualist = yes
+				}
+			}
+		}
+		trigger = {
+			owner = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		owner = { set_country_flag = mec_bio_biotics_holy }
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0080 days = 30 }  				#Biotics are Divine
+		}
+	}
+}
+
+####################################################################################
+
+#Power of the Gods - Inform the Public
+country_event = {
+	id = mec_bio_evt.0051
+	title = "mec_bio_evt.0051.name"
+	desc = "mec_bio_evt.0051.desc"
+	picture = GFX_evt_voting
+	show_sound = event_conversation
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0051.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 2
+				OR = {
+					is_pacifist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0051.a.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0052 days = 30 }  				#Public & No Accidents
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0051.b
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0051.b.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				75 = { country_event = { id = mec_bio_evt.0053 days = 720 } } 	#Success
+				25 = { country_event = { id = mec_bio_evt.0058 days = 720 } }	#Failure
+			}
+		}
+	}
+}
+
+##################################
+
+#Power of the Gods - Public & No Accidents Authorized
+country_event = {
+	id = mec_bio_evt.0052
+	title = "mec_bio_evt.0052.name"
+	desc = "mec_bio_evt.0052.desc"
+	picture = GFX_evt_announcement
+	show_sound = event_conversation
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0052.a
+		owner = { set_country_flag = mec_bio_biotics_society }
+	}
+}
+
+##################################
+
+#Power of the Gods - Authorize Accidents [Public] - Accident 01
+country_event = {
+	id = mec_bio_evt.0053
+	title = "mec_bio_evt.0053.name"
+	desc = "mec_bio_evt.0053.desc"
+	picture = GFX_evt_emergency_workers
+	show_sound = event_life_support_fail
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0053.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 2
+				OR = {
+					is_pacifist = yes
+                    is_egalitarian = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0053.a.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0057 days = 30 }  				#End Accidents
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0053.b												#Continue Accidents	
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0053.b.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				50 = { country_event = { id = mec_bio_evt.0054 days = 1140 } } 	#Success
+				50 = { country_event = { id = mec_bio_evt.0058 days = 1140 } }	#Failure
+			}
+		}
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Public] - Accident 02
+country_event = {
+	id = mec_bio_evt.0054
+	title = "mec_bio_evt.0054.name"
+	desc = "mec_bio_evt.0054.desc"
+	picture = GFX_evt_gunrunning
+	show_sound = event_radio_chatter
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0054.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 2
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0054.a.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0057 days = 30 }  				#End Accidents
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0054.b												#Continue Accidents	
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0054.b.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				35 = { country_event = { id = mec_bio_evt.0055 days = 1800 } } 	#Success
+				65 = { country_event = { id = mec_bio_evt.0058 days = 1800 } }	#Failure
+			}
+		}
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Public] - Accident 03
+country_event = {
+	id = mec_bio_evt.0055
+	title = "mec_bio_evt.0055.name"
+	desc = "mec_bio_evt.0055.desc"
+	picture = GFX_evt_busy_spaceport
+	show_sound = event_ship_explosion
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0055.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 2
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0055.a.tooltip
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_negative_low"
+				days = 1800
+			}
+		}
+		random_owned_pop = { kill_pop = yes }									#1 Pop Die
+		random_owned_pop = { 													#3 Pops Biotics
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				40 = { country_event = { id = mec_bio_evt.0057 days = 360 } } 	#Success
+				60 = { country_event = { id = mec_bio_evt.0058 days = 360 } }	#Failure
+			}
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0055.b												#Continue Accidents	
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0055.b.tooltip
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_negative_low"
+				days = 1800
+			}
+		}
+		random_owned_pop = { kill_pop = yes }									#1 Pop Die
+			random_owned_pop = {  												#3 Pops Biotics
+				limit = {
+					owner = { has_country_flag = mec_bio_biotics_public }
+				}
+				modify_species = {
+					species = this
+					add_trait = mec_bio_trait_biotic 
+				}
+			}
+			random_owned_pop = { 
+				limit = {
+					owner = { has_country_flag = mec_bio_biotics_public }
+				}
+				modify_species = {
+					species = this
+					add_trait = mec_bio_trait_biotic 
+				}
+			}
+			random_owned_pop = { 
+				limit = {
+					owner = { has_country_flag = mec_bio_biotics_public }
+				}
+				modify_species = {
+					species = this
+					add_trait = mec_bio_trait_biotic 
+				}
+			}
+		hidden_effect = {
+			random_list = {
+				25 = { country_event = { id = mec_bio_evt.0056 days = 1800 } } 	#Success
+				75 = { country_event = { id = mec_bio_evt.0058 days = 1800 } }	#Failure
+			}
+		}
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Public] - Accident 04
+country_event = {
+	id = mec_bio_evt.0056
+	title = "mec_bio_evt.0056.name"
+	desc = "mec_bio_evt.0056.desc"
+	picture = GFX_evt_night_raid
+	show_sound = event_structural_collapse
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0056.a
+		custom_tooltip = mec_bio_evt_0056.a.tooltip
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_negative_low"
+				days = 1800
+			}
+		}
+		random_owned_pop = { kill_pop = yes }									#2 Pops Die
+		random_owned_pop = { kill_pop = yes }								
+		random_owned_pop = {  													#4 Pops Biotics
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_public }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				15 = { country_event = { id = mec_bio_evt.0056 days = 360 } } 	#Success
+				85 = { country_event = { id = mec_bio_evt.0058 days = 360 } }	#Failure
+			}
+		}
+	}
+}
+
+##################################
+
+#Power of the Gods - Authorize Accidents [Public] - Success
+country_event = {
+	id = mec_bio_evt.0057
+	title = "mec_bio_evt.0057.name"
+	desc = "mec_bio_evt.0057.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_mystic_reveal
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0057.a
+		owner = { set_country_flag = mec_bio_biotics_society }
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Public] - Failure
+country_event = {
+	id = mec_bio_evt.0058
+	title = "mec_bio_evt.0058.name"
+	desc = "mec_bio_evt.0058.desc"
+	picture = GFX_evt_dark_alley
+	show_sound = event_planetary_riot
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0058.a
+		owner = {
+			add_resource = {
+				influence = -50
+			}
+		}
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "pop_angered"
+				days = 1800
+			}
+		}
+		owner = { set_country_flag = mec_bio_biotics_society }
+	}
+}
+
+####################################################################################
+
+#Power of the Gods - Maintain Secrecy
+country_event = {
+	id = mec_bio_evt.0060
+	title = "mec_bio_evt.0060.name"
+	desc = "mec_bio_evt.0060.desc"
+	picture = GFX_evt_partition
+	show_sound = event_conversation
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0060.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 2
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0060.a.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0061 days = 30 }  				#Secret & No Accidents
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0060.b												#Secret & Authorize Accidents
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}
+		custom_tooltip = mec_bio_evt_0060.b.tooltip
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				90 = { country_event = { id = mec_bio_evt.0062 days = 720 } } 	#Success
+				10 = { country_event = { id = mec_bio_evt.0067 days = 720 } }	#Discovered
+			}
+		}
+	}
+}
+
+##################################
+
+#Power of the Gods - Secret & No Accidents Authorized
+country_event = {
+	id = mec_bio_evt.0061
+	title = "mec_bio_evt.0061.name"
+	desc = "mec_bio_evt.0061.desc"
+	picture = GFX_evt_decryption
+	show_sound = event_conversation
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0061.a
+	}
+}
+
+##################################
+
+#Power of the Gods - Authorize Accidents [Secret] - Accident 01
+country_event = {
+	id = mec_bio_evt.0062
+	title = "mec_bio_evt.0062.name"
+	desc = "mec_bio_evt.0062.desc"
+	picture = GFX_evt_emergency_workers
+	show_sound = event_life_support_fail
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0062.a												#End Accidents
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 2
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0062.a.tooltip
+		random_owned_pop = {  													#1 Pop
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0066 days = 30 }  				#End Accidents
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0062.b												#End Accidents & Go Public
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0062.b.tooltip
+		random_owned_pop = {  													#1 Pop
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0068 days = 30 }  				#End Accidents & Go Public
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0062.c												#Continue Accidents	
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0062.c.tooltip
+		random_owned_pop = {  													#2 Pops
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				75 = { country_event = { id = mec_bio_evt.0063 days = 1440 } } 	#Success
+				25 = { country_event = { id = mec_bio_evt.0067 days = 1440 } }	#Discovered
+			}
+		}
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Secret] - Accident 02
+country_event = {
+	id = mec_bio_evt.0063
+	title = "mec_bio_evt.0063.name"
+	desc = "mec_bio_evt.0063.desc"
+	picture = GFX_evt_gunrunning
+	show_sound = event_radio_chatter
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0063.a												#End Accidents
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 2
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}	
+		custom_tooltip = mec_bio_evt_0063.a.tooltip
+		random_owned_pop = {  													#3 Pops
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0066 days = 30 }  				#End Accidents
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0063.b												#End Accidents & Go Public
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 3
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}
+		custom_tooltip = mec_bio_evt_0063.b.tooltip
+		random_owned_pop = {  													#3 Pops
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0068 days = 30 }  				#End Accidents & Go Public
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0063.c												#Continue Accidents	
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}
+		custom_tooltip = mec_bio_evt_0063.c.tooltip
+		random_owned_pop = {  													#3 Pops
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				65 = { country_event = { id = mec_bio_evt.0064 days = 1800 } } 	#Success
+				35 = { country_event = { id = mec_bio_evt.0067 days = 1800 } }	#Discovered
+			}
+		}
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Secret] - Accident 03
+country_event = {
+	id = mec_bio_evt.0064
+	title = "mec_bio_evt.0064.name"
+	desc = "mec_bio_evt.0064.desc"
+	picture = GFX_evt_busy_spaceport
+	show_sound = event_ship_explosion
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0064.a
+		ai_chance = {
+			factor = 6
+			modifier = {
+				factor = 4
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}
+		custom_tooltip = mec_bio_evt_0064.a.tooltip
+		owner = { set_country_flag = mec_bio_biotics_secret_large }				#End Accidents
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_negative_low"
+				days = 1800
+			}
+		}
+		random_owned_pop = { kill_pop = yes }									#1 Pop Die
+		random_owned_pop = {  													#4 Pops Biotics
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				75 = { country_event = { id = mec_bio_evt.0066 days = 360 } }	#Success
+				25 = { country_event = { id = mec_bio_evt.0067 days = 360 } } 	#Discovered
+			}
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0064.b												#Continue Accidents	
+		ai_chance = {
+			factor = 4
+			modifier = {
+				factor = 3
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+                    is_materialist = yes
+				}
+			}
+		}
+		custom_tooltip = mec_bio_evt_0064.b.tooltip
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_negative_low"
+				days = 1800
+			}
+		}
+		random_owned_pop = { kill_pop = yes }									#1 Pop Die
+		random_owned_pop = {  													#4 Pops Biotics
+				limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				50 = { country_event = { id = mec_bio_evt.0065 days = 1800 } } 	#Success
+				50 = { country_event = { id = mec_bio_evt.0067 days = 1800 } }	#Discovered
+			}
+		}
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Secret] - Accident 04
+country_event = {
+	id = mec_bio_evt.0065
+	title = "mec_bio_evt.0065.name"
+	desc = "mec_bio_evt.0065.desc"
+	picture = GFX_evt_night_raid
+	show_sound = event_structural_collapse
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0065.a												#Operation Successful
+		custom_tooltip = mec_bio_evt_0065.a.tooltip
+		owner = { set_country_flag = mec_bio_biotics_secret_large }	
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_negative_low"
+				days = 1800
+			}
+		}
+		random_owned_pop = { kill_pop = yes }									#2 Pops Dies
+		random_owned_pop = { kill_pop = yes }
+		random_owned_pop = {  													#5 Pops Biotics
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_secret }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				25 = { country_event = { id = mec_bio_evt.0066 days = 360 } }	#Success
+				75 = { country_event = { id = mec_bio_evt.0067 days = 360 } } 	#Discovered
+			}
+		}
+	}
+}
+
+##################################
+
+#Power of the Gods - Authorize Accidents [Secret] - Success
+country_event = {
+	id = mec_bio_evt.0066
+	title = "mec_bio_evt.0066.name"
+	desc = "mec_bio_evt.0066.desc"
+	picture = GFX_evt_psionics
+	show_sound = event_mystic_reveal
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0066.a
+	}
+}
+
+#Power of the Gods - Authorize Accidents [Secret] - Failure
+country_event = {
+	id = mec_bio_evt.0067
+	title = "mec_bio_evt.0067.name"
+	desc = "mec_bio_evt.0067.desc"
+	picture = GFX_evt_dark_alley
+	show_sound = event_planetary_riot
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0067.a
+		owner = {
+			add_resource = {
+				influence = -50
+			}
+		}
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "pop_angered"
+				days = 1800
+			}
+		}
+		owner = { set_country_flag = mec_bio_biotics_society }
+	}
+}
+
+#Power of the Gods - Authorized Accidents but has gone Public 
+country_event = {
+	id = mec_bio_evt.0068
+	title = "mec_bio_evt.0068.name"
+	desc = "mec_bio_evt.0068.desc"
+	picture = GFX_evt_announcement
+	show_sound = event_conversation
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0068.a
+		owner = { set_country_flag = mec_bio_biotics_society }
+	}
+}
+
+#Power of the Gods - Public Learns of Biotics
+country_event = {
+	id = mec_bio_evt.0069
+	title = "mec_bio_evt.0069.name"
+	desc = "mec_bio_evt.0069.desc"
+	picture = GFX_evt_announcement
+	show_sound = event_conversation
+	location = fromfromfrom
+
+	auto_opens = yes
+
+	trigger = {
+		owner = {
+			NOT = {
+				has_country_flag = mec_bio_biotics_society
+			}
+			has_country_flag = mec_bio_biotics_secret_large
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 180
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0069.a 												#Do Nothing
+		owner = { set_country_flag = mec_bio_biotics_society }
+	}
+}
+
+####################################################################################
+
+#Power of the Gods - Execute the Biotics
+country_event = {
+	id = mec_bio_evt.0070
+	title = "mec_bio_evt.0070.name"
+	desc = "mec_bio_evt.0070.desc"
+	picture = GFX_evt_intelligence_report
+	show_sound = event_conversation
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0070.a												#Execute
+		ai_chance = {
+			factor = 5
+		}
+		hidden_effect = {
+			random_list = {
+				70 = { country_event = { id = mec_bio_evt.0071 days = 180 } }	#Success
+				30 = { country_event = { id = mec_bio_evt.0072 days = 180 } } 	#Discovered
+			}
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0070.b												#Capture
+		ai_chance = {
+			factor = 5
+		}
+		hidden_effect = {
+			random_list = {
+				60 = { country_event = { id = mec_bio_evt.0073 days = 180 } }	#Success
+				40 = { country_event = { id = mec_bio_evt.0074 days = 180 } } 	#Discovered
+			}
+		}
+	}
+}
+
+#Power of the Gods - Executions Successful and Secret
+country_event = {
+	id = mec_bio_evt.0071
+	title = "mec_bio_evt.0071.name"
+	desc = "mec_bio_evt.0071.desc"
+	picture = GFX_evt_interior_battle
+	show_sound = event_radio_chatter
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0071.a
+		custom_tooltip = mec_bio_evt_0071.a.tooltip
+		owner = { set_country_flag = mec_bio_biotics_execute }	
+		random_owned_pop = { kill_pop = yes }
+	}
+}
+
+#Power of the Gods - Executions Discovered
+country_event = {
+	id = mec_bio_evt.0072
+	title = "mec_bio_evt.0072.name"
+	desc = "mec_bio_evt.0072.desc"
+	picture = GFX_evt_interior_battle
+	show_sound = event_planetary_riot
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0072.a
+		custom_tooltip = mec_bio_evt_0072.a.tooltip
+		owner = { set_country_flag = mec_bio_biotics_execute }	
+		random_owned_pop = { kill_pop = yes }
+		owner = {
+			add_resource = {
+				influence = -50
+			}
+		}
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "pop_angered"
+				days = 1800
+			}
+		}	
+	}
+}
+
+#Power of the Gods - Capture Mission Successful
+country_event = {
+	id = mec_bio_evt.0073
+	title = "mec_bio_evt.0073.name"
+	desc = "mec_bio_evt.0073.desc"
+	picture = GFX_evt_surrender
+	show_sound = event_radio_chatter
+	location = root
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0073.a
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0075 days = 1800 } 				#Success
+		}
+	}
+}
+
+#Power of the Gods - Capture Mission Failure
+country_event = {
+	id = mec_bio_evt.0074
+	title = "mec_bio_evt.0074.name"
+	desc = "mec_bio_evt.0074.desc"
+	picture = GFX_evt_interior_battle
+	show_sound = event_ground_battle
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0074.a
+		custom_tooltip = mec_bio_evt_0074.a.tooltip
+		owner = { set_country_flag = mec_bio_biotics_execute }	
+		random_owned_pop = { kill_pop = yes }
+	}
+}
+
+#Power of the Gods - Indoctrinated - Following Capture Sucess
+country_event = {
+	id = mec_bio_evt.0075
+	title = "mec_bio_evt.0075.name"
+	desc = "mec_bio_evt.0075.desc"
+	picture = GFX_evt_salute
+	show_sound = event_radio_chatter
+	location = root
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0075.a
+		custom_tooltip = mec_bio_evt_0075.a.tooltip
+		owner = { set_country_flag = mec_bio_biotics_guard }
+		capital_scope = {
+			create_army = {
+				name = "Biotic Vanguard"
+				owner = root
+				species = root
+				type = "biotic_army"
+			}
+		}	
+	}
+}
+
+####################################################################################
+
+#Power of the Gods - Divine Biotics
+country_event = {
+	id = mec_bio_evt.0080
+	title = "mec_bio_evt.0080.name"
+	desc = "mec_bio_evt.0080.desc"
+	picture = GFX_evt_surreal_visions
+	show_sound = event_mystic_reveal
+	location = fromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0080.a
+		custom_tooltip = mec_bio_evt_0080.a.tooltip
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "pop_pleased"
+				days = 1800
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			random_list = {
+				50 = { country_event = { id = mec_bio_evt.0081 days = 1800 } }	#New Biotics
+				50 = { country_event = { id = mec_bio_evt.0082 days = 1800 } } 	#Mass Deaths
+			}
+		}
+	}
+}
+
+#Power of the Gods - Successful New Biotics
+country_event = {
+	id = mec_bio_evt.0081
+	title = "mec_bio_evt.0081.name"
+	desc = "mec_bio_evt.0081.desc"
+	picture = GFX_evt_psionic_battle
+	show_sound = event_mystic_reveal
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0081.a
+		custom_tooltip = mec_bio_evt_0081.a.tooltip
+		owner = { set_country_flag = mec_bio_biotics_society }	
+		random_owned_pop = {  													#5 Pops Biotics
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+	}
+}
+
+#Power of the Gods - Mass Deaths
+country_event = {
+	id = mec_bio_evt.0082
+	title = "mec_bio_evt.0082.name"
+	desc = "mec_bio_evt.0082.desc"
+	picture = GFX_evt_disease_outbreak
+	show_sound = event_life_support_fail
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0082.a
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				OR = {
+					is_authoritarian = yes
+                    is_militarist = yes
+				}
+			}
+		}
+		custom_tooltip = mec_bio_evt_0082.a.tooltip
+		random_owned_pop = { kill_pop = yes }									#3 Pops Die
+		random_owned_pop = { kill_pop = yes }
+		random_owned_pop = { kill_pop = yes }
+		random_owned_pop = {  													#2 Pops Biotics
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0083 days = 720 }					#Biotic Stimga - They are not Divine, they are Devils
+		}
+	}
+
+	option = {
+		name = mec_bio_evt.0082.b
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				OR = {
+                    is_egalitarian = yes
+					is_pacifist = yes
+				}
+			}
+		}
+		custom_tooltip = mec_bio_evt_0082.b.tooltip
+		random_owned_pop = { kill_pop = yes } 									#3 Pops Die
+		random_owned_pop = { kill_pop = yes }
+		random_owned_pop = { kill_pop = yes }
+		random_owned_pop = {  													#2 Pops Biotics
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		random_owned_pop = { 
+			limit = {
+				owner = { has_country_flag = mec_bio_biotics_holy }
+			}
+			modify_species = {
+				species = this
+				add_trait = mec_bio_trait_biotic 
+			}
+		}
+		hidden_effect = {
+			country_event = { id = mec_bio_evt.0084 days = 720 } 				#Placate the Masses
+		}
+	}
+}
+
+#Power of the Gods - Biotic Stigma
+country_event = {
+	id = mec_bio_evt.0083
+	title = "mec_bio_evt.0083.name"
+	desc = "mec_bio_evt.0083.desc"
+	picture = GFX_evt_crisis_declared
+	show_sound = event_planetary_riot
+	location = fromfromfrom
+	
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0083.a
+		owner = { set_country_flag = mec_bio_biotics_heretics }	
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_negative_low"
+				days = 1800
+			}
+		}
+	}
+}
+
+#Power of the Gods - Masses Placate
+country_event = {
+	id = mec_bio_evt.0084
+	title = "mec_bio_evt.0084.name"
+	desc = "mec_bio_evt.0084.desc"
+	picture = GFX_evt_announcement
+	show_sound = event_conversation
+	location = fromfromfrom
+
+	is_triggered_only = yes
+
+	auto_opens = yes
+
+	immediate = {
+	}
+
+	option = {
+		name = mec_bio_evt.0084.a
+		owner = { set_country_flag = mec_bio_biotics_society }	
+		every_owned_pop = {
+			add_modifier = {
+				modifier = "media_coverage_positive_low"
+				days = 1800
+			}
+		}
+	}
+}
+
+####################################################################################
