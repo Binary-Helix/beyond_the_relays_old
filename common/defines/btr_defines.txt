@@ -13,7 +13,7 @@ SCROLL_SPEED						= 0.05			# 0.035	# higher values = faster camera. NOTE that th
 
 HIDE_ORBITS_ZOOM					= 3000
 											0		1		2		3		4		5		6		7
-ZOOM_STEPS_GALAXY				= { 100		220		450		800		1400	3000 }				# Galaxy zoom steps
+ZOOM_STEPS_GALAXY				= { 100		220		450		800		1400	3000	4000 	4500	5000 }				# Galaxy zoom steps
 ZOOM_STEPS_SYSTEM_PERCENTAGES	= { 0.004	0.0072	0.0146	0.0334	0.0833	0.2234	0.6398	1.9405 }	# System zoom steps in percent relative to the system size
 
 
@@ -46,10 +46,10 @@ NGraphics = {
 	SYSTEM_INNER_BORDER_HSV	= { .567 0.926 0.911 }
 	SYSTEM_OUTER_BORDER_HSV	= { .567 0.926 0.911 }
 
-	DEFAULT_PLANET_PLANE			= -75		# -150.0
-	MOON_SCALE 						= 0.5
+	DEFAULT_PLANET_PLANE			= -330		# -150.0
+	MOON_SCALE 						= 0.6
 	PLANET_SCALE_SYSTEM				= { 0.375	1.4757	1.1130	1.0479	1.5006	1.119	0.7815	0.773 }	# Scale for each System zoom steps
-	ASTEROID_PLANE					= -75.0	# -100.0
+	ASTEROID_PLANE					= -330.0 # -100.0
 	SHIP_RANDOM_HEIGHT_OFFSET		= 40.0		# 15.0
 }
 

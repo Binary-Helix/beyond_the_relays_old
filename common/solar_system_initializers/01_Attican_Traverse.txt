@@ -689,7 +689,7 @@ sys_hong_init = {
 			add_anomaly = {
 				category = MEC_EG_ANO_CASBIN_1025_CAT			###Casbin Anomaly (Pre-Garden World)
 			}
-			set_owner = event_target:geth_consensus
+						set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
 				species = event_target:gethSpecies
@@ -818,13 +818,13 @@ sys_tereshkova_init = {
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
-		radius = 70
+		radius = 105
 	}
 
 	planet = {
 		name = "Tereshkova A"
 		class = "pc_m_star"
-		orbit_distance = 25
+		orbit_distance = 10
 		orbit_angle = 90
 		size = 30
 		has_ring = no
@@ -851,7 +851,7 @@ sys_tereshkova_init = {
 	planet = {
 		name = "Tereshkova B"
 		class = "pc_m_star"
-		orbit_distance = 10
+		orbit_distance = 25
 		orbit_angle = 180
 		size = 20
 		has_ring = no
@@ -861,11 +861,13 @@ sys_tereshkova_init = {
 			clear_deposits = yes
 		}		
 	}
+
+	change_orbit = 70
 	
 	planet = {
 		count = 2
 		class = "pc_asteroid"
-		orbit_distance = 60
+		orbit_distance = 0
 		orbit_angle = { min = 10 max = 190 }
 		
 		init_effect = {
@@ -1035,7 +1037,7 @@ sys_tereshkova_init = {
 			type = "armstrongnebula_sentryomega_massrelay" 
 			name = "Armstrong_1_Relay"
 			orbit_angle = 187 
-			orbit_distance = 375			
+			orbit_distance = 435			
 			
 		} 
 	}	
@@ -1048,22 +1050,21 @@ sys_vamshi_init = {
 	max_instances = 1
 
 	flags = { attican_traverse_system armstrong_nebula_system vamshi_system btr_system custom_system }
+
 	
     planet = {
-		name = "Vamshi A"		
-        class = "pc_a_star"
-        size = 25
-        orbit_distance = 25
-		flags = { vamshia_star }
+		name = "Vamshi B"
+        class = "pc_m_giant_star"
+        size = 60
+        orbit_distance = 10
+        orbit_angle = 180
+		flags = { vamshib_star }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			
-			set_deposit = d_energy_3
-			set_planet_flag = starting_deposit
 
 			create_ambient_object = {
-				type = "nebula_4"
+				type = "nebula_2"
 				entity_offset_height = -5
 				location = this
 			}
@@ -1073,22 +1074,25 @@ sys_vamshi_init = {
 					distance = 0
 					angle = random
 				}
-			}
-		}		  
+			}			
+		}
     }
 	
     planet = {
-		name = "Vamshi B"
-        class = "pc_m_giant_star"
-        size = 50
-        orbit_distance = 10
-        orbit_angle = 180
-		flags = { vamshib_star }
+		name = "Vamshi A"		
+        class = "pc_a_star"
+        size = 20
+        orbit_distance = 30
+		flags = { vamshia_star }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-		}
+			
+			set_deposit = d_energy_3
+			set_planet_flag = starting_deposit
+		}		  
     }
+
 
     planet = {
         name = "Maji"

@@ -119,19 +119,29 @@ gfx_settings =
 	tonemap_middlegrey = 0.1
 	tonemap_whiteluminance = 2.0
 	
-	lava_cold_stone_color = hsv { 0.99 1.0 1.0 } 
-	lava_cold_stone_intensity = 4.9 
-	lava_bright_color = hsv { 0.2 0.9 0.6 } 
-	lava_bright_intensity = 4.0
-	lava_hot_stone_color = hsv { 0.8 1.0 0.1 } 
-	lava_hot_stone_intensity = 0.0
-
+	#Vanilla
 	#lava_cold_stone_color = hsv { 0.99 1.0 1.0 } 
 	#lava_cold_stone_intensity = 4.9 
 	#lava_bright_color = hsv { 0.2 0.9 0.6 } 
 	#lava_bright_intensity = 4.0
 	#lava_hot_stone_color = hsv { 0.8 1.0 0.1 } 
 	#lava_hot_stone_intensity = 0.0
+
+	#Dark Vanilla
+	#lava_cold_stone_color = hsv { 0.99 1.0 1.0 } 
+	#lava_cold_stone_intensity = 4.9 
+	#lava_bright_color = hsv { 0.2 0.9 0.6 } 
+	#lava_bright_intensity = 4.0
+	#lava_hot_stone_color = hsv { 0.8 1.0 0.1 } 
+	#lava_hot_stone_intensity = 0.0
+	
+	#Realistic Stars
+	lava_bright_color = hsv { 0.09 0.37 0.95 } 
+	lava_bright_intensity = 3.0
+	lava_hot_stone_color = hsv { 0.09 0.52 0.90 } 
+	lava_hot_stone_intensity = 2.5
+	lava_cold_stone_color = hsv { 0.09 0.68 0.85 } 
+	lava_cold_stone_intensity = 2.0
 	
 
 	tex_lava_noise="gfx/worldgfx/lava_noise.dds" #Noise texturen som genererar lava mönstret
