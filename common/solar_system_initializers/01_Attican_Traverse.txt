@@ -1197,21 +1197,10 @@ sys_chabtan_init = {
 		has_ring = no
 		flags = { chabtan_star }
     }
-
-	planet = {
-		name = "Libel"
-		class = "pc_barren"
-		orbit_distance = 90
-		orbit_angle = { min = 1 max = 360 }
-		size = 5
-		has_ring = no
-		flags = { libel_planet pd_ignore }
-		
-	}
 	
 	planet = {
 		name = "Moscon"
-		class = "pc_barren"
+		class = "pc_iron"
 		orbit_distance = 35
 		orbit_angle = { min = 1 max = 360 }
 		size = 7
@@ -1220,7 +1209,7 @@ sys_chabtan_init = {
 
 		moon = {
 			name = "Twuiq"
-			class = "pc_molten"
+			class = "pc_frozen"
 			orbit_distance = 12
 			orbit_angle = { min = 90 max = 270 }
 			size = 1
@@ -1323,11 +1312,25 @@ sys_chabtan_init = {
 		}	
 	}			
 
+	
+	planet = {
+		name = "Libel"
+		class = "pc_carbon"
+		orbit_distance = 50
+		orbit_angle = { min = 1 max = 360 }
+		size = 5
+		has_ring = no
+		flags = { libel_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+	}
 
     planet = {
         name = "Noviz"
         class = "pc_ice_giant"
-        orbit_distance = 185
+        orbit_distance = 135
         orbit_angle = 126
         has_ring = no
 		flags = { noviz_planet pd_ignore }
@@ -1342,7 +1345,7 @@ sys_chabtan_init = {
 			type = "bulucnebula_ismarfrontier_massrelay" 
 			name = "Buluc_3_Relay"
 			random_pos = NO 
-			orbit_distance = 430
+			orbit_distance = 300
 			
 		} 
 	}	
@@ -1428,6 +1431,14 @@ sys_ubroni_init = {
         orbit_angle = 13
         has_ring = no
 		flags = { zankep_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+			add_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Zankep a"
 			class = "pc_iron"
@@ -1458,6 +1469,10 @@ sys_ubroni_init = {
         orbit_angle = 140
         has_ring = yes
 		flags = { unoweb_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1467,6 +1482,10 @@ sys_ubroni_init = {
         orbit_angle = 130
         has_ring = no
 		flags = { hasik_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_platinum_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     init_effect = { 
@@ -1510,7 +1529,10 @@ sys_aysur_init = {
         has_ring = no
 		size = 12
 		flags = { agnin_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1521,7 +1543,10 @@ sys_aysur_init = {
         has_ring = no
 		size = 3
 		flags = { shasu_planet pd_ignore }		
-
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1532,7 +1557,10 @@ sys_aysur_init = {
         has_ring = no
 		size = 37
 		flags = { dranen_planet pd_ignore }
-		
+		init_effect = {
+			add_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Dranen a"
 			count = 1
@@ -1603,7 +1631,10 @@ sys_aysur_init = {
 		orbit_distance = 0
 		orbit_angle = 40
 		flags = { mahavid_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}
 	}
 
     planet = {
@@ -1614,7 +1645,10 @@ sys_aysur_init = {
         has_ring = no
 		size = 36
 		flags = { alformus_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1625,7 +1659,10 @@ sys_aysur_init = {
         has_ring = no
 		size = 12
 		flags = { shir_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1636,7 +1673,10 @@ sys_aysur_init = {
         has_ring = no
 		size = 8
 		flags = { tamgauta_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     init_effect = { 
@@ -1687,16 +1727,23 @@ sys_balor_init = {
         has_ring = no
 		size = 32
 		flags = { cernunnos_planet pd_ignore}
-
+		init_effect = {
+			set_deposit = d_helium_3_5
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
         moon = {
             name = "Caleston"
             class = "pc_geothermal"
-            orbit_distance = 20
+            orbit_distance = 10
             orbit_angle = 180
             has_ring = no
 			size = 16
 			flags = { caleston_planet pd_ignore}
-
+			init_effect = {
+				set_deposit = d_element_zero_3
+				set_planet_flag = starting_deposit
+			}
        }
 	} 
 
@@ -1709,7 +1756,10 @@ sys_balor_init = {
         has_ring = no
 		size = 2
 		flags = { bres_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1720,7 +1770,10 @@ sys_balor_init = {
         has_ring = no
         size = 4		
 		flags = { elatha_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1731,7 +1784,10 @@ sys_balor_init = {
         has_ring = no
 		size = 25
 		flags = { partholon_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_platinum_4
+			set_planet_flag = starting_deposit
+		}
 	}
 
     init_effect = { 
@@ -1739,7 +1795,7 @@ sys_balor_init = {
 			type = "calestonrift_styxtheta_massrelay" 
 			name = "Caleston_6_Relay"
 			orbit_angle = 162 
-			orbit_distance = 200
+			orbit_distance = 220
 			
 		} 
 	}	
@@ -1769,7 +1825,10 @@ sys_solveig_init = {
         has_ring = no
 		size = 11
 		flags = { surtur_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
+		}
         moon = {
             name = "Sinmara"
             class = "pc_frozen"
@@ -1778,7 +1837,10 @@ sys_solveig_init = {
             has_ring = no
 			size = 3
 			flags = { sinmara_planet }
-
+			init_effect = {
+				set_deposit = d_minerals_3
+				set_planet_flag = starting_deposit
+			}
         }
     }
 
@@ -1846,18 +1908,28 @@ sys_talava_init = {
         has_ring = no
 		size = 22
 		flags = { aitarus_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
 	}	
 
     planet = {
         name = "Kaushus"
         class = "pc_molten"
-        orbit_distance = 15
+        orbit_distance =25
         orbit_angle = 177
         has_ring = no
 		size = 15
 		flags = { kaushus_planet pd_ignore }
-
+		init_effect = {
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1868,7 +1940,10 @@ sys_talava_init = {
         has_ring = no
 		size = 14
 		flags = { maitrum_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1879,7 +1954,10 @@ sys_talava_init = {
         has_ring = no
 		size = 11
 		flags = { taitus_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     init_effect = { 
@@ -1887,7 +1965,7 @@ sys_talava_init = {
 			type = "calestonrift_hawkingeta_massrelay" 
 			name = "Caleston_2_Relay"
 			orbit_angle = 194 
-			orbit_distance = 220
+			orbit_distance = 175
 			
 		} 
 	}	
@@ -1926,7 +2004,10 @@ sys_yakawa_init = {
         has_ring = no
 		size = 25
 		flags = { sakata_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1937,7 +2018,10 @@ sys_yakawa_init = {
         has_ring = yes
 		size = 32
 		flags = { nambu_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_platinum_1
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Sumiko"
 			class = "pc_molten"
@@ -1976,7 +2060,10 @@ sys_yakawa_init = {
         has_ring = no
 		size = 17
 		flags = { maskawa_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1987,7 +2074,10 @@ sys_yakawa_init = {
         has_ring = no
 		size = 16
 		flags = { karumto_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -1998,7 +2088,10 @@ sys_yakawa_init = {
         has_ring = yes
 		size = 29
 		flags = { kobayashi_planet pd_ignore }
-		
+		init_effect = {
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+		}		
 		moon = {
 			name = "Kobayashi a"
 			count = 1
@@ -2025,12 +2118,89 @@ sys_yakawa_init = {
 			type = "calestonrift_thephoenixmassing_massrelay" 
 			name = "Caleston_7_Relay"
 			orbit_angle = 328 
-			orbit_distance = 200
+			orbit_distance = 215
 			
 		} 
 	}		
 }
 
+sys_eilor_init = {
+	name = "Eilor"
+	class = "sc_b"
+	max_instances = 1
+
+	flags = { attican_traverse_system eagle_nebula_system eilor_system btr_system custom_system }
+
+	planet = {
+		name = "Eilor"
+        class = "pc_b_star"
+        orbit_distance = 0
+        size = 28
+		flags = { eilor_star }
+
+    }
+
+    planet = {
+        name = "Rupaico"
+        class = "pc_molten"
+        orbit_distance = 35
+        orbit_angle = 198
+        has_ring = no
+		size = 30
+		flags = { rupaico_planet pd_ignore }
+
+    }	
+
+	planet = {
+        name = "Lomanup"
+        class = "pc_gas_giant"
+        orbit_distance = 50
+        orbit_angle = 198
+        has_ring = yes
+		size = 34
+		flags = { lomanup_planet pd_ignore }
+
+		moon = {
+			name = "Lomanup a"
+			class = "pc_asteroid"
+			orbit_distance = 50
+			orbit_angle = 198
+			has_ring = no
+			size = 3
+	
+		}
+
+		moon = {
+			name = "Lomanup b"
+			class = "pc_iron"
+			orbit_distance = 50
+			orbit_angle = 198
+			has_ring = no
+			size = 6
+	
+		}
+    }
+
+	planet = {
+		name = "Haephaestus Station"
+		class = "pc_habitat"
+		orbit_distance = 50
+		orbit_angle = 198
+		has_ring = no
+		size = 12
+
+	}
+
+	planet = {
+		name = "Trewa"
+		class = "pc_frozen"
+		orbit_distance = 50
+		orbit_angle = 198
+		has_ring = no
+		size = 18
+
+	}
+}
 
 #####EAGLE NEBULA#####
 
@@ -2060,7 +2230,12 @@ sys_amun_init = {
         has_ring = yes
 		size = 30
 		flags = { sekhmet_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_2
+			add_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
 
+		}
     }
 
     planet = {
@@ -2071,7 +2246,15 @@ sys_amun_init = {
         has_ring = no
 		size = 35
 		flags = { sobek_planet pd_ignore }
-		
+		init_effect = {
+			set_deposit = d_helium_3_2
+			add_deposit = d_palladium_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}		
 		moon = {
 			name = "Sobek a"
 			count = 1
@@ -2102,7 +2285,7 @@ sys_amun_init = {
         }
 
 		moon = {
-			name = "Sobek d"
+			name = "Xarla"
 			count = 1
 			class = pc_toxic
 			orbit_angle = { min = 90 max = 270 }
@@ -2112,13 +2295,16 @@ sys_amun_init = {
 		}
 		
 		moon = {
-			name = "Sobek e"
+			name = "Turrga"
 			count = 1
 			class = pc_barren_cold
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 6
 			size = 8
-			
+			init_effect = {
+				set_deposit = d_minerals_4
+				set_planet_flag = starting_deposit
+			}			
 		}
 		
     }
@@ -2133,6 +2319,10 @@ sys_amun_init = {
 		starting_planet = yes
 		flags = { anhur_planet pd_ignore }
 		init_effect = {
+			set_deposit = d_element_zero_2
+			add_deposit = d_platinum_5
+			add_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
 			random_country = {
 				limit = { has_country_flag = "united_anhur_corporations" }
 				save_event_target_as = amunOwner
@@ -2220,11 +2410,14 @@ sys_amun_init = {
         has_ring = no
 		size = 17
 		flags = { neith_planet pd_ignore }
-		
+		init_effect = {
+			set_deposit = d_iridium_5
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Neith a"
 			count = 1
-			class = pc_frozen
+			class = "pc_frozen"
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 8
 			size = 3
@@ -2239,7 +2432,10 @@ sys_amun_init = {
         has_ring = no
 		size = 26
 		flags = { bast_planet pd_ignore }
-		
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Bast a"
 			count = 1
@@ -2303,7 +2499,10 @@ sys_imir_init = {
         has_ring = no
 		size = 6
 		flags = { osalri_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -2316,6 +2515,13 @@ sys_imir_init = {
 		flags = { korlus_planet pd_ignore }
 		
 		init_effect = {
+			set_deposit = d_iridium_1
+			add_deposit = d_platinum_1
+			add_deposit = d_palladium_1
+			add_deposit = d_element_zero_1
+			add_deposit = d_helium_3_1
+			add_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
 			create_colony = {
 				owner = event_target:blue_suns
 				species = event_target:blue_suns
@@ -2391,7 +2597,10 @@ sys_imir_init = {
         has_ring = no
 		size = 32
 		flags = { quodis_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -2402,14 +2611,16 @@ sys_imir_init = {
         has_ring = no
 		size = 13
 		flags = { gregas_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_4
+		}
     }
     init_effect = { 
 		spawn_megastructure = { 
 			type = "eaglenebula_serpentnebula_massrelay" 
 			name = "Eagle_2_Relay"
 			random_pos = NO 
-			orbit_distance = 200
+			orbit_distance = 275
 			
 		} 
 	}	    
@@ -2441,7 +2652,10 @@ sys_malgus_init = {
         has_ring = no
 		size = 37
 		flags = { uzin_malgus_planet pd_ignore }
-		
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}		
 		moon = {
 			name = "Uzin a"
 			count = 1
@@ -2471,6 +2685,8 @@ sys_malgus_init = {
 		size = 15
 		flags = { wrill_planet pd_ignore }
 		init_effect = {
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
 			create_country = {
 				name_list = btr_krogan
 				species = event_target:kroganSpecies
@@ -2520,6 +2736,8 @@ sys_malgus_init = {
 		size = 14
 		flags = { flett_planet pd_ignore }
 		init_effect = {
+			set_deposit = d_palladium_5
+			set_planet_flag = starting_deposit
 			create_colony = {
 				owner = event_target:blood_pack
 				species = event_target:kroganSpecies
@@ -2551,7 +2769,7 @@ sys_malgus_init = {
 			type = "eaglenebula_bulucnebula_massrelay" 
 			name = "Eagle_4_Relay"
 			orbit_angle = 84
-			orbit_distance = 217
+			orbit_distance = 180
 			
 		} 
 	}    		
@@ -2588,7 +2806,10 @@ sys_relic_init = {
         has_ring = no
 		size = 25
 		flags = { murky_water_planet pd_ignore }
-		
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -2599,7 +2820,14 @@ sys_relic_init = {
         has_ring = no
 		size = 23
 		flags = { fitful_current_planet pd_ignore }
-		
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			set_deposit = d_iridium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -2610,7 +2838,10 @@ sys_relic_init = {
         has_ring = yes
 		size = 33
 		flags = { first_land_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_5
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Drifting Skies"
 			count = 1
@@ -2658,6 +2889,8 @@ sys_relic_init = {
 		size = 5
 		flags = { rough_tide_planet pd_ignore }
 		init_effect = {
+			set_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
 			prevent_anomaly = yes
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_major_empire_start_buildings = yes
@@ -2750,6 +2983,8 @@ sys_relic_init = {
 		size = 18
 		flags = { beach_thunder_planet pd_ignore }
 		init_effect = {
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
 			create_colony = { 
 				owner = last_created_country 
 				species = last_created 
@@ -2778,7 +3013,7 @@ sys_relic_init = {
 			type = "eaglenebula_oshibkacliff_massrelay" 
 			name = "Eagle_5_Relay"
 			random_pos = NO 
-			orbit_distance = 250
+			orbit_distance = 500
 			
 		} 
 	}    
@@ -2815,7 +3050,10 @@ sys_strabo_init = {
         has_ring = yes
 		size = 27
 		flags = { antigar_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Antigar a"
 			class = "pc_frozen"
@@ -2829,6 +3067,10 @@ sys_strabo_init = {
 			size = 1
 			orbit_distance = 5
 			orbit_angle = 230
+			init_effect = {
+				set_deposit = d_minerals_1
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
 			name = "Antigar c"
@@ -2903,13 +3145,16 @@ sys_strabo_init = {
 			size = 4
 			flags = { jarrahe_station pd_ignore }
 			init_effect = {
+				set_deposit = rs_d_engineering_2
+				add_deposit = d_physics_2
+				set_planet_flag = starting_deposit
 				set_owner = event_target:pranasOwner
 				create_colony = {
 					owner = event_target:pranasOwner
 					species = event_target:salarianSpecies
 					ethos = owner
 				}
-				ignore_initial_colony_error = yes				
+				#ignore_initial_colony_error = yes				
 				while = {
 					count = 2
 					create_pop = { species = event_target:salarianSpecies }
@@ -2965,6 +3210,10 @@ sys_azedes_init = {
         has_ring = no		
 		size = 12
 		flags = { vesskur_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Mass'kur"
 			class = "pc_barren"
@@ -3007,12 +3256,21 @@ sys_azedes_init = {
 			class = "pc_subglacial"
 			orbit_distance = 8
 			size = 4
+			init_effect = {
+				set_deposit = d_minerals_3
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
 			name = "Opi"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 5
+			init_effect = {
+				set_deposit = d_iridium_3
+				add_deposit = d_palladium_3
+				set_planet_flag = starting_deposit
+			}
 		}		
 	}
 
@@ -3024,6 +3282,10 @@ sys_azedes_init = {
         has_ring = no		
 		size = 14
 		flags = { ikura_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Iku'ra a"
 			class = "pc_frozen"
@@ -3052,18 +3314,30 @@ sys_azedes_init = {
         has_ring = yes		
 		size = 36
 		flags = { vaal_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
-			name = "Vaal a"
+			name = "Lolp"
 			class = "pc_frozen"
 			orbit_distance = 8
 			size = 3
+			init_effect = {
+				set_deposit = d_platinum_3
+				set_planet_flag = starting_deposit
+			}
 		}
 
 		moon = {
-			name = "Vaal b"
+			name = "Rarkas"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 3
+			init_effect = {
+				set_deposit = d_minerals_3
+				set_planet_flag = starting_deposit
+			}
 		}		
 
 		moon = {
@@ -3082,6 +3356,10 @@ sys_azedes_init = {
         has_ring = no		
 		size = 35
 		flags = { sakur_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Sakur a"
 			class = "pc_frozen"
@@ -3104,6 +3382,10 @@ sys_azedes_init = {
         has_ring = no		
 		size = 5
 		flags = { kuroi_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Kuroi a"
 			class = "pc_iron"
@@ -3183,6 +3465,8 @@ sys_hekate_init = {
 		size = 16
 		flags = { ker_planet pd_ignore }
 		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_major_empire_start_buildings = yes
 			create_country = {
@@ -3256,7 +3540,15 @@ sys_hekate_init = {
         has_ring = no
 		size = 27
 		flags = { triodia_planet pd_ignore }
-	
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+
 		moon = {
 			name = "Keare"
 			class = "pc_asteroid"
@@ -3270,6 +3562,10 @@ sys_hekate_init = {
 			orbit_distance = 1
 			orbit_angle = 128
 			size = 2
+			init_effect = {
+				set_deposit = d_platinum_2
+				set_planet_flag = starting_deposit
+			}
 		}	
 		moon = {
 			name = "Emgao"
@@ -3305,6 +3601,10 @@ sys_hekate_init = {
 			orbit_distance = 1
 			orbit_angle = 256
 			size = 1
+			init_effect = {
+				set_deposit = d_minerals_1
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
 			name = "Zeucka"
@@ -3333,6 +3633,10 @@ sys_hekate_init = {
 			orbit_distance = 1
 			orbit_angle = 145
 			size = 1
+			init_effect = {
+				set_deposit = d_platinum_1
+				set_planet_flag = starting_deposit
+			}
 		}	
 		moon = {
 			name = "Chaessley"
@@ -3354,6 +3658,10 @@ sys_hekate_init = {
 			orbit_distance = 1
 			orbit_angle = 22
 			size = 1
+			init_effect = {
+				set_deposit = d_palladium_1
+				set_planet_flag = starting_deposit
+			}
 		}			
     }
 
@@ -3365,6 +3673,11 @@ sys_hekate_init = {
         has_ring = no
 		size = 18
 		flags = { bothros_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_1
+			add_deposit = d_platinum_4
+			set_planet_flag = starting_deposit
+		}
 	}
 
     init_effect = { 
@@ -3400,7 +3713,10 @@ sys_hoplos_init = {
         has_ring = no
 		size = 8
 		flags = { talaria_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3411,6 +3727,10 @@ sys_hoplos_init = {
         has_ring = no
 		size = 11
 		flags = { makhaira_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Makhaira a"
 			class = "pc_barren"
@@ -3427,7 +3747,11 @@ sys_hoplos_init = {
             has_ring = no
 			size = 4
 			flags = { kopis_planet pd_ignore }
-
+			init_effect = {
+				set_deposit = d_platinum_2
+				add_deposit = d_iridium_2
+				set_planet_flag = starting_deposit
+			}
 		}
     }
 
@@ -3441,6 +3765,14 @@ sys_hoplos_init = {
 		size = 15
 		flags = { trident_planet pd_ignore systems_alliance_colony }
 		init_effect = {
+			set_deposit = d_element_zero_1
+			add_deposit = d_platinum_4
+			add_deposit = d_minerals_2			
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
 			set_owner = event_target:solOwner
 			create_colony = {
 				owner = event_target:solOwner
@@ -3464,7 +3796,10 @@ sys_hoplos_init = {
         has_ring = yes
 		size = 33
 		flags = { aegis_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     init_effect = { 
@@ -3472,7 +3807,7 @@ sys_hoplos_init = {
 			type = "hadesnexus_farrim_massrelay" 
 			name = "Hades_Nexus_3_Relay"
 			random_pos = NO 
-			orbit_distance = 275			
+			orbit_distance = 235			
 		} 
     }     
 }
@@ -3505,6 +3840,10 @@ sys_pamyat_init = {
         has_ring = no
 		size = 17
 		flags = { komarov_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3515,6 +3854,14 @@ sys_pamyat_init = {
         has_ring = no
 		size = 17
 		flags = { dobrovolski_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_5
+			add_deposit = d_platinum_4
+			add_deposit = d_palladium_2
+			add_deposit = d_element_zero_3
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3525,6 +3872,10 @@ sys_pamyat_init = {
         has_ring = no
 		size = 15
 		flags = { patsayev_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3599,6 +3950,11 @@ sys_sheol_init = {
         has_ring = no
 		size = 6
 		flags = { gei_hinnom_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_palladium_3
+			set_deposit = d_element_zero_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     init_effect = { 
@@ -3645,6 +4001,10 @@ sys_century_init = {
         has_ring = no
 		size = 15
 		flags = { tamahera_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3655,7 +4015,11 @@ sys_century_init = {
         has_ring = no
 		size = 18
 		flags = { klendagon_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_2
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
         moon = {
             name = "Presrop"
             class = "pc_frozen"
@@ -3675,6 +4039,10 @@ sys_century_init = {
 		size = 5
 		has_ring = no
 		flags = { lukap_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
 	}
 	
 	planet = {
@@ -3685,6 +4053,10 @@ sys_century_init = {
 		size = 5
 		has_ring = no
 		flags = { morule_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_1
+			set_planet_flag = starting_deposit
+		}
 	}
 	
     planet = {
@@ -3705,7 +4077,10 @@ sys_century_init = {
         has_ring = yes
 		size = 36
 		flags = { tharopto_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Tharopto a"
 			class = "pc_shattered"
@@ -3734,7 +4109,7 @@ sys_century_init = {
 			type = "hawkingeta_pangaeaexpanse_massrelay" 
 			name = "Hawking_Eta_1_Relay"
 			random_pos = NO 
-			orbit_distance = 300
+			orbit_distance = 350
 			
 		} 
 	}	
@@ -3763,6 +4138,10 @@ sys_chandrasekhar_init = {
         has_ring = no
 		size = 35
 		flags = { teshub_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3773,6 +4152,10 @@ sys_chandrasekhar_init = {
         has_ring = no
 		size = 30
 		flags = { hebat_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     init_effect = { 
@@ -3810,6 +4193,10 @@ sys_schwarzschild_init = {
         has_ring = no
 		size = 13
 		flags = { atahil_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3820,6 +4207,10 @@ sys_schwarzschild_init = {
         has_ring = no
 		size = 24
 		flags = { etamis_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3830,6 +4221,10 @@ sys_schwarzschild_init = {
         has_ring = yes
 		size = 34
 		flags = { linossa_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3840,7 +4235,10 @@ sys_schwarzschild_init = {
         has_ring = yes
 		size = 37
 		flags = { rihali_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
         moon = {
             name = "Rihali a"
             class = "pc_frozen"
@@ -3894,7 +4292,10 @@ sys_thorne_init = {
         has_ring = no
 		size = 37
 		flags = { mnemosyne_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
         moon = {
             name = "Lethe"
             class = "pc_barren"
@@ -3903,6 +4304,10 @@ sys_thorne_init = {
             has_ring = no
 			size = 14
 			flags = { lethe_planet pd_ignore }
+			init_effect = {
+				set_deposit = d_palladium_3
+				set_planet_flag = starting_deposit
+			}
         }
         moon = {
             name = "Mnemosyne b"
@@ -3949,6 +4354,10 @@ sys_verr_init = {
         has_ring = no
 		size = 12
 		flags = { corang_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3959,6 +4368,10 @@ sys_verr_init = {
         has_ring = no
 		size = 28
 		flags = { allusah_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -3969,7 +4382,14 @@ sys_verr_init = {
         has_ring = no
 		size = 37
 		flags = { serao_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
         moon = {
 			name = "Serao a"
             class = "pc_barren"
@@ -4045,8 +4465,11 @@ sys_aquila_init = {
         orbit_angle = 322
         size = 34
 		flags = { lepini_planet pd_ignore }
-
         has_ring = no
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Lepini a"
 			class = "pc_iron"
@@ -4065,24 +4488,34 @@ sys_aquila_init = {
 
     planet = {
         name = "Vecchio"
-        class = "pc_toxic"
+        class = "pc_mephitic"
         orbit_distance = 40
         orbit_angle = 174
         size = 16
         has_ring = no
 		flags = { vecchio_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Volturno"
-        class = "pc_toxic"
+        class = "pc_mephitic"
         orbit_distance = 70
         orbit_angle = 207
         size = 25
         has_ring = no
 		flags = { volturno_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}	
+		}
 	}
 
     planet = {
@@ -4093,7 +4526,10 @@ sys_aquila_init = {
         size = 37
         has_ring = no
 		flags = { metaponto_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 	}
 
     planet = {
@@ -4104,7 +4540,10 @@ sys_aquila_init = {
         size = 30
         has_ring = no
 		flags = { pollino_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Pollino a"
 			class = "pc_ammonia"
@@ -4149,13 +4588,16 @@ sys_elysta_init = {
 
     planet = {
         name = "Saleas"
-        class = "pc_barren"
+        class = "pc_iron"
         orbit_distance = 30
         orbit_angle = 252
         size = 8
         has_ring = no
 		flags = { saleas_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -4166,7 +4608,10 @@ sys_elysta_init = {
         size = 11
         has_ring = no
 		flags = { zeona_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -4177,7 +4622,10 @@ sys_elysta_init = {
         size = 17
         has_ring = no
 		flags = { odasst_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_platinum_4
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -4188,7 +4636,10 @@ sys_elysta_init = {
         size = 29
         has_ring = yes
 		flags = { hesano_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Hesano a"
 			class = "pc_iron"
@@ -4213,17 +4664,28 @@ sys_elysta_init = {
         size = 28
         has_ring = no
 		flags = { melile_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
 		moon = {
 			name = "Melile a"
-			class = "pc_frozen"
+			class = "pc_basalt"
 			orbit_angle = 96
 			orbit_distance = 8
 			size = 3
+			init_effect = {
+				set_deposit = d_minerals_2
+				set_planet_flag = starting_deposit
+			}
 		}	
 		moon = {
 			name = "Melile b"
-			class = "pc_frozen"
+			class = "pc_subglacial"
 			orbit_angle = 17
 			orbit_distance = 8
 			size = 3
@@ -4245,7 +4707,7 @@ sys_elysta_init = {
 			type = "ismarfrontier_crescentnebula_massrelay" 
 			name = "Ismar_Frontier_3_Relay"
 			orbit_angle = 12
-			orbit_distance = 250
+			orbit_distance = 265
 			
 		} 
 	}		
@@ -4275,21 +4737,28 @@ sys_faia_init = {
         size = 5
         has_ring = no
 		flags = { imaen_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_4
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Zorya"
-        class = "pc_tropical"
+        class = "pc_cenote"
         orbit_distance = 50
         orbit_angle = 319
         size = 15
         has_ring = no
 		flags = { zorya_planet pd_ignore }
-	
+		init_effect = {
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Utrenn"
-			class = "pc_toxic"
+			class = "pc_hydrocarbon"
 			orbit_angle = 254
 			orbit_distance = 8
 			size = 5
@@ -4315,7 +4784,11 @@ sys_faia_init = {
         size = 3
         has_ring = no
 		flags = { viantel_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_platinum_3
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -4326,7 +4799,10 @@ sys_faia_init = {
         size = 27
         has_ring = no
 		flags = { hito_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Hito a"
 			class = "pc_frozen"
@@ -4343,7 +4819,7 @@ sys_faia_init = {
 		}
 		moon = {
 			name = "Hito c"
-			class = "pc_arctic"
+			class = "pc_subglacial"
 			orbit_angle = 90
 			orbit_distance = 8
 			size = 6
@@ -4355,7 +4831,7 @@ sys_faia_init = {
 			type = "ismarfrontier_theshrikeabyssal_massrelay" 
 			name = "Ismar_Frontier_4_Relay"
 			orbit_angle = 54
-			orbit_distance = 200
+			orbit_distance = 220
 			
 		} 
 	}	
@@ -4387,13 +4863,26 @@ sys_herschel_init = {
 
     planet = {
         name = "Tungel"
-        class = "pc_barren"
+        class = "pc_chthonian"
         orbit_distance = 65
         orbit_angle = 14
         has_ring = no
 		size = 25
 		flags = { tungel_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_minerals_2
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -4415,7 +4904,10 @@ sys_herschel_init = {
         has_ring = no
 		size = 26
 		flags = { clugon_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
         moon = {
 			name= "Clugon a"
             class = "pc_iron"
@@ -4436,7 +4928,7 @@ sys_herschel_init = {
         }
         moon = {
 			name= "Clugon c"
-            class = "pc_frozen"
+            class = "pc_subglacial"
             orbit_distance = 5
             orbit_angle = 116
             has_ring = no
@@ -4447,7 +4939,7 @@ sys_herschel_init = {
 
     planet = {
         name = "Clobaka"
-        class = "pc_toxic"
+        class = "pc_hydrocarbon"
         orbit_distance = 60
         orbit_angle = 186
         has_ring = yes
@@ -4461,7 +4953,7 @@ sys_herschel_init = {
 			type = "keplerverge_atticanbeta_massrelay" 
 			name = "Kepler_Verge_1_Relay"
 			orbit_angle = 180
-			orbit_distance = 215
+			orbit_distance = 235
 			
 		} 
 	}		
@@ -4490,7 +4982,10 @@ sys_newton_init = {
         has_ring = no
 		size = 16
 		flags = { ontarom_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_4
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Thonal"
 			class = "pc_iron"
@@ -4501,7 +4996,7 @@ sys_newton_init = {
 		}
 		moon = {
 			name = "Ontarom b"
-			class = "pc_barren"
+			class = "pc_carbon"
 			orbit_angle = 246
 			orbit_distance = 9
 			size = 4
@@ -4510,12 +5005,16 @@ sys_newton_init = {
 
     planet = {
         name = "Klencory"
-        class = "pc_frozen"
+        class = "pc_chlorine"
         orbit_distance = 50
         orbit_angle = 292
         has_ring = no
 		size = 19
 		flags = { klencory_planet pd_ignore }		
+		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -4526,11 +5025,15 @@ sys_newton_init = {
         has_ring = no
 		size = 36
 		flags = { juncro_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Sesmose"
-        class = "pc_iron"
+        class = "pc_chthonian"
         orbit_distance = 50
         orbit_angle = 211
         has_ring = yes
@@ -4543,7 +5046,7 @@ sys_newton_init = {
 			type = "keplerverge_shadowsea_massrelay" 
 			name = "Kepler_Verge_2_Relay"
 			orbit_angle = 45
-			orbit_distance = 220
+			orbit_distance = 200
 			
 		} 
 	}    
@@ -4574,32 +5077,48 @@ sys_caspian_init = {
 
     planet = {
         name = "Clotanca"
-        class = "pc_barren"
+        class = "pc_mephitic"
         orbit_distance = 75
         orbit_angle = 223
         has_ring = no
 		size = 19
 		flags = { clotanca_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_5
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Farnuri"
-        class = "pc_frozen"
+        class = "pc_iron"
         orbit_distance = 40
         orbit_angle = 326
         has_ring = no
 		size = 22
 		flags = { farnuri_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_energy_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Almarcrux"
-        class = "pc_barren" #Primordial?
+        class = "pc_methane" 
         orbit_distance = 45
         orbit_angle = 162
         has_ring = no
 		size = 11
 		flags = { almarcrux_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}		
     }
 
     planet = {
@@ -4610,6 +5129,10 @@ sys_caspian_init = {
         has_ring = no
 		size = 28
 		flags = { antida_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
 	init_effect = { 
@@ -4652,27 +5175,41 @@ sys_matano_init = {
 
     planet = {
         name = "Inti"
-        class = "pc_barren"
+        class = "pc_ammonia"
         orbit_distance = 60
         orbit_angle = 16
         has_ring = no
 		size = 22
 		flags = { inti_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Chasca"
-        class = "pc_savannah"
+        class = "pc_tidallylocked"
         orbit_distance = 25
         orbit_angle = 238
         has_ring = yes
 		size = 20
 		flags = { chasca_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_palladium_4
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Apo"
-        class = "pc_geothermal"
+        class = "pc_volcanic"
         orbit_distance = 70
         orbit_angle = 68
         has_ring = no
@@ -4688,7 +5225,14 @@ sys_matano_init = {
         has_ring = no
 		size = 37
 		flags = { illapa_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
         moon = {
             name = "Illapa a"
 			class = "pc_iron"
@@ -4700,7 +5244,7 @@ sys_matano_init = {
 
         moon = {
 			name= "Illapa b"
-            class = "pc_frozen"
+            class = "pc_ethane_ocean"
             orbit_distance = 10
             orbit_angle = 98
             has_ring = no
@@ -4709,7 +5253,7 @@ sys_matano_init = {
 
         moon = {
 			name = "Corinaya"
-            class = "pc_frozen"
+            class = "pc_subglacial"
             orbit_distance = 12
             orbit_angle = 174
             has_ring = no
@@ -4720,12 +5264,16 @@ sys_matano_init = {
 
     planet = {
         name = "Supay"
-        class = "pc_frozen"
+        class = "pc_subglacial"
         orbit_distance = 50
         orbit_angle = 213
         has_ring = no
 		size = 10
 		flags = { supay_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
 
@@ -4773,32 +5321,48 @@ sys_vostok_init = {
 
     planet = {
         name = "Clomarthu"
-        class = "pc_barren"
+        class = "pc_methane"
         orbit_distance = 80
         orbit_angle = 12
         has_ring = no
 		size = 15
 		flags = { clomarthu_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Nodacrux"
-        class = "pc_toxic"
+        class = "pc_forest"
         orbit_distance = 45
         orbit_angle = 158
         has_ring = no
 		size = 15
 		flags = { nodacrux_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = btr_toxic_pollen
+				days = -1
+			}
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Alko"
-        class = "pc_frozen"
+        class = "pc_frozen_desert"
         orbit_distance = 60
         orbit_angle = 132
         has_ring = no
 		size = 12
 		flags = { alko_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -4809,6 +5373,10 @@ sys_vostok_init = {
         has_ring = no
 		size = 26
 		flags = { pataiton_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
     }
 
 	init_effect = { 
@@ -4849,7 +5417,7 @@ sys_maskimxul_init = {
 
     planet = {
         name = "Suen"
-        class = "pc_arid"
+        class = "pc_tidallylocked"
         orbit_distance = 50
         orbit_angle = 39
         size = 7
@@ -4858,7 +5426,6 @@ sys_maskimxul_init = {
 		deposit_blockers = none		
 		modifiers = none
 		flags = { suen_planet pd_ignore special_start_planet rachni_homeworld }
-
 		init_effect = {
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_rachni_swarm_capitol_buildings = yes
@@ -4872,6 +5439,10 @@ sys_maskimxul_init = {
 				count = 26
 				create_pop = { species = event_target:rachniSpecies }
 			}
+			add_modifier = {
+				modifier = btr_underground_civilization
+				days = -1
+			}
 			set_name = "Suen"
 		}
 
@@ -4879,12 +5450,17 @@ sys_maskimxul_init = {
 
     planet = {
         name = "Kashshaptu"
-        class = "pc_barren"
+        class = "pc_mephitic"
         orbit_distance = 40
         orbit_angle = 206
         has_ring = no
 		size = 3
 		flags = { kashshaptu_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_1
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -4895,6 +5471,10 @@ sys_maskimxul_init = {
         has_ring = no
 		size = 28
 		flags = { damkianna_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}		
     }
 
 	init_effect = { 
@@ -4930,17 +5510,22 @@ sys_mullaxul_init = {
 
     planet = {
         name = "Maldor"
-        class = "pc_hothouse"
+        class = "pc_acid"
         orbit_distance = 65
         orbit_angle = 202
         has_ring = no
 		size = 21
 		flags = { maldor_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_5
+			set_planet_flag = starting_deposit
+		}			
+
     }
 
     planet = {
         name = "Utukku"
-        class = "pc_desert"
+        class = "pc_badlands"
         orbit_distance = 30
         orbit_angle = 132
         has_ring = no
@@ -4955,6 +5540,10 @@ sys_mullaxul_init = {
 		orbit_distance = 120
 		size = 1
 		flags = { inakhos_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_5
+			set_planet_flag = starting_deposit
+		}
 	}	
 
     planet = {
@@ -4965,6 +5554,10 @@ sys_mullaxul_init = {
         has_ring = yes
 		size = 37
 		flags = { keph_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 }
 
@@ -5180,6 +5773,18 @@ sys_dakka_init = {
 		size = 20
 		flags = { bannik_planet pd_ignore }
         init_effect = {
+			set_deposit = d_palladium_4
+			add_deposit = d_platinum_2
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = mineral_rich
+				days = -1
+			}
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5262,6 +5867,8 @@ sys_dakka_init = {
 		size = 26
 		flags = { alkonost_planet pd_ignore }
         init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit			
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5315,6 +5922,12 @@ sys_dakka_init = {
 		size = 33
 		flags = { gamayaun_planet pd_ignore }		
         init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit	
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5378,13 +5991,15 @@ sys_dakka_init = {
 
     planet = {
         name = "Zirnitra"
-        class = "pc_iron"
+        class = "pc_frozen_desert"
         orbit_distance = 55
         orbit_angle = 264
         has_ring = no
 		size = 6
 		flags = { zirnitra_planet pd_ignore }
 		init_effect = {
+			set_deposit = d_platinum_4
+			set_planet_flag = starting_deposit	
 			create_fleet = {
 				effect = {
 					set_owner = event_target:blood_pack
@@ -5443,7 +6058,7 @@ sys_debod_init = {
 
     planet = {
         name = "Philae"
-        class = "pc_barren"
+        class = "pc_barren_cold"
         orbit_distance = 50
         orbit_angle = 350
         has_ring = no
@@ -5460,6 +6075,10 @@ sys_debod_init = {
         has_ring = yes
 		size = 30
 		flags = { agilkia_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}		
     }
    
 }
@@ -5481,12 +6100,17 @@ sys_kalabsha_init = {
 
     planet = {
         name = "Yamm"
-        class = "pc_ocean"
+        class = "pc_storm"
         orbit_distance = 50
         orbit_angle = 337
         has_ring = no
 		size = 16
 		flags = { yamm_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_1
+			add_deposit = d_palladium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -5497,6 +6121,10 @@ sys_kalabsha_init = {
         has_ring = no
 		size = 34
 		flags = { tefnut_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+		}
     }
    
 	init_effect = { 
@@ -5512,8 +6140,8 @@ sys_kalabsha_init = {
 		spawn_megastructure = { 
 			type = "nubianexpanse_hadesnexus_massrelay" 
 			name = "Nubian_Expanse_4_Relay"
-			orbit_angle = 125
-			orbit_distance = 115
+			orbit_angle = random
+			orbit_distance = 145
 		} 
 	}    
 }
@@ -5536,17 +6164,25 @@ sys_qertassi_init = {
     planet = {
         name = "Norehsa"
         class = "pc_ice_giant"
-        orbit_distance = 150
+        orbit_distance = 80
         orbit_angle = 22
         has_ring = no
 		size = 32
 		flags = { norehsa_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Norehsa a"
-			class = "pc_toxic"
+			class = "pc_frozen_desert"
 			orbit_angle = 76
 			orbit_distance = 6
 			size = 4
+			init_effect = {
+				set_deposit = d_minerals_2
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
 			name = "Norehsa b"
@@ -5557,7 +6193,7 @@ sys_qertassi_init = {
 		}
 		moon = {
 			name = "Norehsa c"
-			class = "pc_iron"
+			class = "pc_subglacial"
 			orbit_angle = 196
 			orbit_distance = 6
 			size = 4
@@ -5599,6 +6235,7 @@ sys_nx2185_init = {
         has_ring = no
 		size = 6
 		flags = { 113_kerad_planet pd_ignore }
+
     }
 
     planet = {
@@ -5608,6 +6245,10 @@ sys_nx2185_init = {
         orbit_angle = 89
         has_ring = no
 		size = 15
+		init_effect = {
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}		
 		moon = {
 			name = "433 Spidau a"
 			class = "pc_iron"
@@ -5625,6 +6266,10 @@ sys_nx2185_init = {
         has_ring = no
 		size = 36
 		flags = { 704_jawinar_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "704 Jawinor a"
 			class = "pc_iron"
@@ -5638,6 +6283,10 @@ sys_nx2185_init = {
 			orbit_angle = random
 			orbit_distance = 8
 			size = 4
+			init_effect = {
+				set_deposit = d_iridium_2
+				set_planet_flag = starting_deposit
+			}
 		}			
     }
 }
@@ -5669,7 +6318,11 @@ sys_nx2176_init = {
         orbit_angle = 142
         has_ring = no
 		size = 13		
-		flags = { nx2176I_planet pd_ignore }		
+		flags = { nx2176I_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}		
     }
     
 	planet = {
@@ -5680,6 +6333,10 @@ sys_nx2176_init = {
         has_ring = no
 		size = 13	
 		flags = { nx2176II_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
     }
 	
 	planet = {
@@ -5689,7 +6346,11 @@ sys_nx2176_init = {
         orbit_angle = 280
         has_ring = no
 		size = 13
-		flags = { nx2176III_planet pd_ignore }					
+		flags = { nx2176III_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}					
     }	
 	
 	planet = {
@@ -5709,7 +6370,11 @@ sys_nx2176_init = {
         orbit_angle = 15
         has_ring = no
 		size = 30
-		flags = { nx2176V_planet pd_ignore }	
+		flags = { nx2176V_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}	
 		moon = {
 			name = "NX-2176 Va"
 			class = "pc_dextro_arid"
@@ -5890,6 +6555,11 @@ sys_refuge_init = {
         has_ring = no
 		size = 15
 		flags = { agetoton_planet pd_ignore }		
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+
         # init_effect = {
 		# 	set_planet_flag = agetoton_codex
 		# 	create_pirate_country = yes
@@ -6034,6 +6704,10 @@ sys_refuge_init = {
         has_ring = no
 		size = 29
 		flags = { zafe_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
     }
 
 	init_effect = { 
@@ -6083,26 +6757,47 @@ sys_dirada_init = {
         has_ring = no
 		size = 12
 		flags = { siano_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_1
+			add_deposit = d_iridium_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Thenusi"
-        class = "pc_frozen"
+        class = "pc_frozen_desert"
         orbit_distance = 40
         orbit_angle = 112
         has_ring = no
 		size = 9
 		flags = { thenusi_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Canalus"
-        class = "pc_geothermal"
+        class = "pc_volcanic"
         orbit_distance = 25
         orbit_angle = 272
         has_ring = no
 		size = 11
 		flags = { canalus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_palladium_3
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -6113,6 +6808,10 @@ sys_dirada_init = {
         has_ring = no
 		size = 35
 		flags = { zeth_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -6123,6 +6822,14 @@ sys_dirada_init = {
         has_ring = yes
 		size = 33
 		flags = { sineus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
 
 		moon = {
 			name = "Sineus a"
@@ -6133,14 +6840,14 @@ sys_dirada_init = {
 		}	
 		moon = {
 			name = "Sineus b"
-			class = "pc_toxic"
+			class = "pc_mephitic"
 			orbit_angle = 240
 			orbit_distance = 8
 			size = 6
 		}
 		moon = {
 			name = "Sineus c"
-			class = "pc_toxic"
+			class = "pc_carbon"
 			orbit_angle = 35
 			orbit_distance = 8
 			size = 8
@@ -6155,9 +6862,13 @@ sys_dirada_init = {
         has_ring = no
 		size = 28
 		flags = { vioressa_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Vioresa a"
-			class = "pc_toxic"
+			class = "pc_subglacial"
 			orbit_angle = 60
 			orbit_distance = 8
 			size = 4
@@ -6199,39 +6910,60 @@ sys_kriseroi_init = {
 
     planet = {
         name = "Neidus"
-        class = "pc_tundra"
+        class = "pc_geothermal"
         orbit_distance = 25
         orbit_angle = 11
         has_ring = no
 		size = 12
 		flags = { neidus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Theonax"
-        class = "pc_ammonia"
+        class = "pc_cryovolcanic"
         orbit_distance = 35
         orbit_angle = 202
         has_ring = no
 		size = 25
 		flags = { theonax_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+		}		
     }
 
     planet = {
-        name = "Uzin_Kriseroi"
+        name = "Uzin"
         class = "pc_ice_giant"
         orbit_distance = 30
         orbit_angle = 313
         has_ring = no
 		size = 29
 		flags = { uzin_kriseroi_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
 		moon = {
 			name = "Chithess"
-			class = "pc_frozen"
+			class = "pc_subglacial"
 			orbit_angle = 90
 			orbit_distance = 7
 			size = 9
 			flags = { chithess_planet pd_ignore }
+
 		}
     }
 
@@ -6243,16 +6975,24 @@ sys_kriseroi_init = {
         has_ring = no
 		size = 29
 		flags = { geus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+		}	
     }
 
     planet = {
         name = "Tenoth"
         class = "pc_iron"
-        orbit_distance =120
+        orbit_distance =50
         orbit_angle = 4
         has_ring = no
 		size = 3
 		flags = { tenoth_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}	
     }
 
 	init_effect = { 
@@ -6288,6 +7028,10 @@ sys_nariph_init = {
         has_ring = yes
 		size = 35
 		flags = { isale_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_5
+			set_planet_flag = starting_deposit
+		}	
     }
 
     planet = {
@@ -6298,8 +7042,12 @@ sys_nariph_init = {
         has_ring = no
 		size = 25
 		flags = { jonus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}	
 		moon = {
-			name = "Jonus a"
+			name = "Fargone"
 			class = "pc_frozen"
 			orbit_angle = 100
 			orbit_distance = 8
@@ -6342,6 +7090,10 @@ sys_satent_init = {
         has_ring = no
 		size = 36
 		flags = { rescel_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_1
+			set_planet_flag = starting_deposit
+		}	
     }
 
     planet = {
@@ -6352,6 +7104,13 @@ sys_satent_init = {
         has_ring = no
 		size = 9
 		flags = { raisaris_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_2
+			add_deposit = d_iridium_3
+			add_deposit = d_platinum_1
+			add_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}	
     }
 
     planet = {
@@ -6362,6 +7121,11 @@ sys_satent_init = {
         has_ring = no
 		size = 7
 		flags = { anedia_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_1
+			add_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+		}	
     }
 
     planet = {
@@ -6372,6 +7136,24 @@ sys_satent_init = {
         has_ring = no
 		size = 25
 		flags = { boro_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_3
+			add_deposit = d_element_zero_2
+			set_planet_flag = starting_deposit
+			set_owner = event_target:vol_protectorate
+			create_colony = {
+				owner = event_target:vol_protectorate
+				species = event_target:volSpecies
+				ethos = owner
+			}
+			while = {
+				count = 6
+				create_pop = {
+					species = event_target:volSpecies
+				}
+			}
+			generate_btr_major_empire_start_buildings = yes
+		}
     }
 
     planet = {
@@ -6382,6 +7164,10 @@ sys_satent_init = {
         has_ring = no
 		size = 26
 		flags = { nataisa_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
 	init_effect = { 
@@ -6412,22 +7198,89 @@ sys_zaherin_init = {
 
     planet = {
         name = "Ehstag"
-        class = "pc_barren"
+        class = "pc_mephitic"
         orbit_distance = 35
         orbit_angle = 326
         has_ring = no
 		size = 17
 		flags = { ehstag_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
+		
     }
 
     planet = {
         name = "Namakli"
-        class = "pc_toxic"
+        class = "pc_steppe"
         orbit_distance = 30
         orbit_angle = 75
         has_ring = no
 		size = 25
 		flags = { namakli_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			set_global_flag = vorcha_tribals
+			create_species = {
+				name = "Vorcha"
+				class = VOR
+				homeworld = THIS
+				namelist = btr_vorcha
+				traits = {		
+					trait="trait_repugnant"
+					trait="trait_extremely_adaptive"
+					trait="trait_quarrelsome"
+					trait="trait_fleeting"
+					trait="trait_resilient"
+				}
+			}
+			create_country = {
+				name = "Vorcha Tribals"
+				ship_prefix = ""
+				type = primitive 
+				civics = {
+						civic = civic_warrior_culture
+						civic = civic_barbaric_despoilers
+				}
+				authority = auth_dictatorial
+				name_list = btr_vorcha
+				ethos = { 
+					ethic = "ethic_authoritarian"
+					ethic = "ethic_fanatic_militarist"
+				}
+
+				species = event_target:vorchaSpecies
+				flag = {
+					icon = { 
+						category = "masseffectblack"
+						file = "Vorcha.dds"
+					}	
+						background = {
+							category = "backgrounds"
+							file = "00_solid.dds"
+						}
+						colors = { "red" "red" "null" "null"}
+					}
+			}	
+			last_created_country = {
+				set_graphical_culture = reptilian_01
+				set_country_flag = vorcha_tribals
+				set_country_flag = minor_faction
+				save_global_event_target_as = vorcha_tribals
+			}
+			create_colony = { 
+				owner = last_created_country 
+				species = owner_main_species 
+			}
+			create_pop = { species = owner_main_species }
+			create_pop = { species = owner_main_species }
+			create_pop = { species = owner_main_species }								
+			add_building = building_primitive_capital
+			last_created_species = { save_global_event_target_as = vorchaSpecies }			
+		}			
     }
 
     planet = {
@@ -6448,6 +7301,10 @@ sys_zaherin_init = {
         has_ring = yes
 		size = 26
 		flags = { rotesk_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
     }
 
     	
@@ -6488,6 +7345,14 @@ sys_hoc_init = {
         has_ring = no
 		size = 35
 		flags = { jarfor_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -6498,7 +7363,18 @@ sys_hoc_init = {
         has_ring = no
 		size = 18
 		flags = { nemata_planet pd_ignore }
-    }
+		init_effect = {
+			set_deposit = d_minerals_3
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_1
+			add_deposit = d_iridium_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+    	}
+	}	
 
     planet = {
         name = "Virmire"
@@ -6518,16 +7394,24 @@ sys_hoc_init = {
         has_ring = no
 		size = 29
 		flags = { cloroplon_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Prescyla"
-        class = "pc_iron"
+        class = "pc_subglacial"
         orbit_distance = 30
         orbit_angle = 142
         has_ring = no
 		size = 5
 		flags = { prescyla_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
 	init_effect = { 
@@ -6545,7 +7429,7 @@ sys_hoc_init = {
 			type = "sentryomega_hadesnexus_massrelay" 
 			name = "Sentry_2_Relay"
 			orbit_angle = 43
-			orbit_distance = 125
+			orbit_distance = 225
 			
 		} 
 	}			
@@ -6573,7 +7457,10 @@ sys_telith_init = {
 		has_ring = no
 		size = 12
 		flags = { sapfir_planet pd_ignore }
-		
+		init_effect = {
+			set_deposit = d_element_zero_2
+			set_planet_flag = starting_deposit
+		}
     }
 
 	init_effect = { 
@@ -6607,10 +7494,14 @@ sys_anauroch_init = {
 
 	planet = {
 		name = "Thultanthar"
-		class = "pc_barren"
+		class = "pc_carbon"
 		orbit_distance = 80
 		size = "15"
 		flags = { thultanthar_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_iridium_3
+			set_planet_flag = starting_deposit
+		}
 	}
 
 	planet = {
@@ -6619,7 +7510,10 @@ sys_anauroch_init = {
 		orbit_distance = 55
 		size = 32
 		flags = { drannor_planet pd_ignore }	
-
+		init_effect = {
+			set_deposit = d_element_zero_3
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Drannor a"
 			class = "pc_frozen"
@@ -6629,7 +7523,7 @@ sys_anauroch_init = {
 		}	
 		moon = {
 			name = "Drannor b"
-			class = "pc_frozen"
+			class = "pc_frozen_desert"
 			orbit_angle = 136
 			orbit_distance = 8
 			size = 4
@@ -6685,12 +7579,19 @@ sys_bahanak_init = {
 	
 	planet = {
 		name = "Mythal"
-		class = "pc_toxic"
+		class = "pc_ice_giant"
 		orbit_distance = 45
 		orbit_angle = 90
-		size = 20
+		size = 26
 		flags = { mythal_planet pd_ignore }	
-
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
 		moon = {
 			name = "Falon'Din"
 			class = "pc_geothermal"
@@ -6698,7 +7599,10 @@ sys_bahanak_init = {
 			orbit_distance = 6
 			size = 12
 			flags = { falondin_planet pd_ignore }	
-
+			init_effect = {
+				set_deposit = d_platinum_2
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
 			name = "Dirthamen"
@@ -6707,7 +7611,10 @@ sys_bahanak_init = {
 			orbit_distance = 8
 			size = 6
 			flags = { dirthamen_planet pd_ignore }	
-
+			init_effect = {
+				set_deposit = d_palladium_4
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
 			name = "Andruil"
@@ -6716,7 +7623,10 @@ sys_bahanak_init = {
 			orbit_distance = 7
 			size = 6
 			flags = { andruil_planet pd_ignore }	
-
+			init_effect = {
+				set_deposit = d_minerals_4
+				set_planet_flag = starting_deposit
+			}
 		}		
 		moon = {
 			name = "Sylaise"
@@ -6725,8 +7635,10 @@ sys_bahanak_init = {
 			orbit_distance = 7
 			size = 3
 			flags = { sylaise_planet pd_ignore }	
-
-			
+			init_effect = {
+				set_deposit = d_element_zero_2
+				set_planet_flag = starting_deposit
+			}		
 		}	
 		moon = {
 			name = "June"
@@ -6735,7 +7647,10 @@ sys_bahanak_init = {
 			orbit_distance = 7
 			size = 6
 			flags = { june_planet pd_ignore }	
-
+			init_effect = {
+				set_deposit = d_minerals_1
+				set_planet_flag = starting_deposit
+			}
 		}
 	}			
 			
@@ -6755,7 +7670,7 @@ sys_bahanak_init = {
 			type = "shadowsea_nubianexpanse_massrelay" 
 			name = "Shadow_4_Relay"
 			orbit_angle = 135 
-			orbit_distance = 135
+			orbit_distance = 160
 			
 		} 
 	}	
@@ -6786,7 +7701,11 @@ sys_iera_init = {
         has_ring = no
 		size = 25
 		flags = { venture_planet pd_ignore }	
-
+		init_effect = {
+			set_deposit = d_palladium_4
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -6797,30 +7716,49 @@ sys_iera_init = {
         has_ring = no
 		size = 32
 		flags = { prospect_planet pd_ignore }	
-
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
 		moon = {
 			name = "Prospect a"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 7
+			init_effect = {
+				set_deposit = d_element_zero_1
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
 			name = "Prospect b"
 			class = "pc_iron"
 			orbit_distance = 8
 			size = 3
+			init_effect = {
+				set_deposit = d_platinum_3
+				set_planet_flag = starting_deposit
+			}
 		}		
 		moon = {
 			name = "Prospect c"
 			class = "pc_asteroid"
 			orbit_distance = 4
 			size = 2
+			init_effect = {
+				set_deposit = d_iridium_2
+				set_planet_flag = starting_deposit
+			}
 		}		
     }
 
     planet = {
         name = "Horizon"
-        class = "pc_continental"
+        class = "pc_prairie"
         orbit_distance = 50
         orbit_angle = 164
         has_ring = no
@@ -6837,7 +7775,14 @@ sys_iera_init = {
         has_ring = no
 		size = 14
 		flags = { watchman_planet pd_ignore }	
-
+		init_effect = {
+			set_deposit = d_iridium_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = mineral_poor
+				days = -1
+			}
+		}
 		moon = {
 			name = "Watchman a"
 			class = "pc_asteroid"
@@ -6857,7 +7802,7 @@ sys_iera_init = {
 			type = "shadowsea_horseheadnebula_massrelay" 
 			name = "Shadow_Sea_5_Relay"
 			random_pos = NO 
-			orbit_distance = 225
+			orbit_distance = 230
 			
 		} 
 	}
@@ -6881,10 +7826,14 @@ sys_netheril_init = {
 
 	planet = {
 		name = "Landeth"
-		class = "pc_barren"
+		class = "pc_carbon"
 		orbit_distance = 30
 		size = 16
 		flags = { netheril_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_palladium_3
+			set_planet_flag = starting_deposit
+		}
 	}
 
 	planet = {
@@ -6910,7 +7859,7 @@ sys_netheril_init = {
 			type = "shadowsea_styxtheta_massrelay" 
 			name = "Shadow_Sea_7_Relay"
 			orbit_angle = 180
-			orbit_distance = 135
+			orbit_distance = 150
 			
 		} 
 	}	
@@ -6921,7 +7870,7 @@ sys_netheril_init = {
 
 sys_acheron_init = {
     name = "Acheron"
-    class = "sc_g"
+    class = "sc_k"
 	max_instances = 1
 
 	flags = { attican_traverse_system styx_theta_system acheron_system btr_system custom_system }
@@ -6933,7 +7882,7 @@ sys_acheron_init = {
 
     planet = {
 		name = "Acheron"
-        class = "pc_g_star"
+        class = "pc_k_star"
         orbit_distance = 0
         size = 30
 		flags = { acheron_star }	
@@ -6941,27 +7890,44 @@ sys_acheron_init = {
 
     planet = {
         name = "Farthorl"
-        class = "pc_barren"
+        class = "pc_chlorine"
         orbit_distance = 30
         orbit_angle = 174
         has_ring = no
 		size = 16
 		flags = { fathorl_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}
+		}
     }
 
     planet = {
         name = "Altahe"
-        class = "pc_toxic"
+        class = "pc_mephitic"
         orbit_distance = 40
         orbit_angle = 134
         has_ring = no
 		size = 11
 		flags = { altahe_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Ontahe"
-			class = "pc_toxic"
+			class = "pc_mephitic"
 			orbit_distance = 2
 			size = 10
+			flags = { ontahe_planet pd_ignore }				
+			init_effect = {
+				set_deposit = d_minerals_1
+				set_planet_flag = starting_deposit
+			}
 		}	
     }
 
@@ -6973,11 +7939,15 @@ sys_acheron_init = {
         has_ring = no
 		size = 13
 		flags = { grosalgen_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}		
     }
 
     planet = {
         name = "Imaneya"
-        class = "pc_frozen"
+        class = "pc_frozen_desert"
         orbit_distance = 45
         orbit_angle = 213
         has_ring = no
@@ -7018,22 +7988,31 @@ sys_erebus_init = {
 
     planet = {
         name = "Nepmos"
-        class = "pc_barren"
+        class = "pc_volcanic"
         orbit_distance = 60
         orbit_angle = 12
         has_ring = no
 		size = 19
 		flags = { nepmos_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_palladium_3
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
         name = "Quaji"
-        class = "pc_toxic"
+        class = "pc_methane"
         orbit_distance = 50
         orbit_angle = 143
         has_ring = no
 		size = 12
 		flags = { quaji_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -7044,6 +8023,10 @@ sys_erebus_init = {
         has_ring = no
 		size = 37
 		flags = { wermani_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
     }
 
     planet = {
@@ -7054,6 +8037,10 @@ sys_erebus_init = {
         has_ring = no
 		size = 21
 		flags = { chofen_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
     }
 
 	init_effect = { 
@@ -7089,10 +8076,15 @@ sys_karaht_init = {
 	
 	planet = {
 		name = "Murch"
-		class = "pc_barren"
+		class = "pc_iron"
 		orbit_distance = 35
 		size = 12
 		flags = { murch_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_iridium_3
+			add_deposit = d_element_zero_1
+			set_planet_flag = starting_deposit
+		}
 	}
 
 	planet = {
@@ -7101,6 +8093,10 @@ sys_karaht_init = {
 		orbit_distance = 70
 		size = 14
 		flags = { vida_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
 	}
 
 	planet = {
@@ -7110,22 +8106,34 @@ sys_karaht_init = {
 		size = 36
 		flags = { nymbar_planet pd_ignore }	
 		has_ring = no
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
 		moon = {
 			name = "Torfan"
-			class = "pc_barren"
+			class = "pc_arid"
 			orbit_distance = 8
 			size = 6
 			flags = { torfan_planet pd_ignore }	
+			init_effect = {
+				set_deposit = d_minerals_2
+				set_planet_flag = starting_deposit
+			}
 		}	
 	}
 
 	planet = {
-		name = "Flin"
+		name = "Donmazi"
 		class = "pc_ice_giant"
 		orbit_distance = 60
 		size = 28
 		has_ring = yes
 		flags = { flin_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 	}
 }	
 	
@@ -7149,6 +8157,10 @@ sys_phlegethon_init = {
 		orbit_distance = 25
 		size = 8
 		flags = { alecto_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}		
 	}
 
 	planet = {
@@ -7158,6 +8170,10 @@ sys_phlegethon_init = {
 		size = 30
 		has_ring = yes
 		flags = { tisiphone_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
 	}
 }	
 	
@@ -7185,7 +8201,7 @@ sys_timshar_init = {
 
 	planet = {
 		name = "Timshar II"
-		class = "pc_barren"
+		class = "pc_carbon"
 		orbit_distance = 30
 		size = 13
 		flags = { timsharII_planet pd_ignore }
@@ -7201,7 +8217,7 @@ sys_timshar_init = {
 	
 	planet = {
 		name = "Timshar IV"
-		class = "pc_barren"
+		class = "pc_iron"
 		orbit_distance = 60
 		size = 16
 		flags = { timsharIV_planet pd_ignore }
@@ -7210,7 +8226,7 @@ sys_timshar_init = {
 	planet = {
 		name = "Adounia"
 		class = "pc_gas_giant"
-		orbit_distance = 30
+		orbit_distance = 130
 		size = 34
 		flags = { adounia_planet pd_ignore }	
         satellite_naming_policy = lower_case_latin_letters		
@@ -7234,7 +8250,7 @@ sys_baldr_init = {
 	
     planet = {
 		name = "Baldr"
-        class = "pc_y_star"
+        class = "pc_m_star"
         orbit_distance = 0
         size = 28
 		flags = { baldr_star }
@@ -7251,22 +8267,40 @@ sys_baldr_init = {
 	}	
 
 	planet = {
-		name = "Coten"
-		class = "pc_barren"
-		orbit_angle = 45
-		size = 6
-		flags = { coten_planet pd_ignore }
+		name = "Mindoir"
+		class = "pc_boreal"
+		orbit_distance = 40
+		size = 17
+		flags = { mindoir_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			while = {
+				count = 7
+				create_pop = {
+					species = owner_main_species
+				}
+			}			
+		}
 	}
 
 	planet = {
-		name = "Mindoir"
-		class = "pc_continental"
-		orbit_distance = 80
-		size = 17
-		flags = { mindoir_planet pd_ignore }
-
+		name = "Coten"
+		class = "pc_iron"
+		orbit_angle = 45
+		size = 6
+		flags = { coten_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
 	}	
-
 
 	init_effect = { 
 		spawn_megastructure = { 
@@ -7297,12 +8331,15 @@ sys_brekkenz_init = {
 
 	planet = {
 		name = "Bil"
-		class = "pc_barren"
+		class = "pc_carbon"
 		orbit_angle = random
 		orbit_distance = 50
 		size = 14
 		flags = { bil_planet pd_ignore}
-
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
 	}
 
 	planet = {
@@ -7313,7 +8350,10 @@ sys_brekkenz_init = {
 		orbit_distance = 60
 		size = 16
 		flags = { yuki_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_element_zero_2
+			set_planet_flag = starting_deposit
+		}
 	}	
 
 	init_effect = { 
@@ -7345,11 +8385,14 @@ sys_fen_init = {
 	
 	planet = {
 		name = "Vingolf"
-		class = "pc_barren"
+		class = "pc_molten"
 		orbit_angle = random
 		orbit_distance = 40
 		flags = { vingolf_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_2
+			set_planet_flag = starting_deposit
+		}
 	}	
 	
 	planet = {
@@ -7376,7 +8419,11 @@ sys_fen_init = {
 		orbit_distance = 15
 		size = 12
 		flags = { lyngvi_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_palladium_2
+			add_deposit = d_platinum_2
+			set_planet_flag = starting_deposit
+		}
 	}	
 }
 
@@ -7401,13 +8448,29 @@ sys_hedek_init = {
 	}	
 
 	planet = {
-		name = "Nuuk"
-		class = "pc_toxic"
+		name = "Nu'uk"
+		class = "pc_subglacial"
 		orbit_distance = 35
 		size = 16
 		flags = { nuuk_planet pd_ignore }
-
+		init_effect = {
+			set_deposit = d_iridium_3
+			set_planet_flag = starting_deposit
+		}
 	}
+
+	planet = {
+		name = "Dahar"
+		class = "pc_ice_giant"
+		orbit_distance = 35
+		size = 16
+		flags = { nuuk_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
+	}
+
 }	
 
 sys_qedek_init = {

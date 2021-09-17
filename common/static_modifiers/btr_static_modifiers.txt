@@ -71,7 +71,7 @@ btr_independent_colony = {
 }
 
 btr_scorching_surface = {
-	pop_habitability = 0.0
+	pop_environment_tolerance = -0.8
 }
 
 btr_unwise_mining_venture = {
@@ -87,4 +87,12 @@ btr_scorching_surface = {
 	planet_immigration_pull_mult = -0.5
 	planet_emigration_push_add = 100
 	planet_structures_energy_upkeep_mult = 1.0
+}
+
+btr_toxic_pollen = {
+	pop_environment_tolerance = -0.65
+}
+
+btr_underground_civilization = {
+	empire_size_districts_mult = 0.5
 }
