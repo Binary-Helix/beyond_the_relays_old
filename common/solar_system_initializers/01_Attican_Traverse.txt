@@ -56,9 +56,9 @@ sys_gagarin_init = {
 			add_deposit = d_nickel_deposits
 			add_deposit = d_junthor_ruins
 
-			add_anomaly = {
-				category = MEC_EG_ANO_JUNTHOR_1021_CAT			###Junthor Anomaly (Ancient Obelisk)
-			}			
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_JUNTHOR_1021_CAT			###Junthor Anomaly (Ancient Obelisk)
+			# }			
 			add_modifier = {
 				modifier = junthor_codex_untranslated
 				days = -1
@@ -98,7 +98,7 @@ sys_gagarin_init = {
 
 		moon = {
 			name = "Junthor c"
-			class = "pc_subglacial"
+			class = "pc_barren"
 			orbit_distance = 3
 			size = 3
 			init_effect = {
@@ -224,9 +224,9 @@ sys_gagarin_init = {
 					modifier = vahtz_unsurveyed_codex
 					days = -1
 				}	
-				add_anomaly = {
-					category = MEC_EG_ANO_RAYINGRI_1022_CAT			###Rayingri Anomaly (Collision Course)
-				}
+				# add_anomaly = {
+				# 	category = MEC_EG_ANO_RAYINGRI_1022_CAT			###Rayingri Anomaly (Collision Course)
+				# }
 			}				
 		}
     }
@@ -459,9 +459,9 @@ sys_grissom_init = {
 				modifier = btr_scorching_surface
 				days = -1
 			}
-			add_anomaly = {
-				category = MEC_EG_ANO_ZAHERUX_1023_CAT			###Zaherux Anomaly (Sea of Sands)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_ZAHERUX_1023_CAT			###Zaherux Anomaly (Sea of Sands)
+			# }
 		}
 
 		moon = {
@@ -660,9 +660,9 @@ sys_hong_init = {
 				modifier = pomal_unsurveyed_codex
 					days = -1
 			}
-			add_anomaly = {
-				category = MEC_EG_ANO_POMAL_1024_CAT			###Pomal Anomaly (Shallow Seas)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_POMAL_1024_CAT			###Pomal Anomaly (Shallow Seas)
+			# }
 		}
 
     }
@@ -686,9 +686,9 @@ sys_hong_init = {
 				modifier = casbin_unsurveyed_codex
 					days = -1
 			}
-			add_anomaly = {
-				category = MEC_EG_ANO_CASBIN_1025_CAT			###Casbin Anomaly (Pre-Garden World)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_CASBIN_1025_CAT			###Casbin Anomaly (Pre-Garden World)
+			# }
 						set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
@@ -918,9 +918,9 @@ sys_tereshkova_init = {
 				modifier = antibaar_unsurveyed_codex
 				days = -1
 			}
-			add_anomaly = {
-				category = MEC_EG_ANO_ANTIBAAR_1026_CAT			###Antibaar Anomaly (Terraforming Candidate)
-			}	
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_ANTIBAAR_1026_CAT			###Antibaar Anomaly (Terraforming Candidate)
+			# }	
 		}			
 	}
 
@@ -1879,9 +1879,9 @@ sys_solveig_init = {
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
 
-			add_anomaly = {
-				category = MEC_EG_ANO_SOLVEIG_1051_CAT			###Solveig Anomaly (Birth of a Red Giant)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_SOLVEIG_1051_CAT			###Solveig Anomaly (Birth of a Red Giant)
+			# }
 		}
 	}	
 
@@ -3257,9 +3257,9 @@ sys_relic_init = {
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
 
-			add_anomaly = {
-				category = MEC_EG_ANO_PREYINGMOUTH_1061_CAT			###Preying Mouth (Lost Ships)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_PREYINGMOUTH_1061_CAT			###Preying Mouth (Lost Ships)
+			# }
 		}		
     }
 
@@ -4058,9 +4058,9 @@ sys_hekate_init = {
 			set_deposit = d_element_zero_1
 			add_deposit = d_platinum_4
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_BOTHROS_1091_CAT			###Bothros Anomaly (Mass Extinction)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_BOTHROS_1091_CAT			###Bothros Anomaly (Mass Extinction)
+			# }
 			add_modifier = {
 				modifier = asteroid_impacts
 				days = -1
@@ -4213,9 +4213,9 @@ sys_hoplos_init = {
 			clear_planet_modifiers = yes 
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_AEGIS_1092_CAT			###Aegis Anomaly (Rings of Aegis)	
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_AEGIS_1092_CAT			###Aegis Anomaly (Rings of Aegis)	
+			# }
 		}
     }
 
@@ -4404,9 +4404,9 @@ sys_sheol_init = {
 				modifier = low_gravity
 				days = -1
 			}
-			add_anomaly = {
-				category = MEC_EG_ANO_GEIHINNOM_2090_CAT					###Gei Hinnom Anomaly & Archaeological Site (Prothean Burial Ground)	
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_GEIHINNOM_2090_CAT					###Gei Hinnom Anomaly & Archaeological Site (Prothean Burial Ground)	
+			# }
 		}
     }
 
@@ -4706,9 +4706,9 @@ sys_schwarzschild_init = {
 			clear_planet_modifiers = yes 
 			set_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_ETAMIS_1101_CAT			###Etamis Anomaly (Mass Extinction)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_ETAMIS_1101_CAT			###Etamis Anomaly (Mass Extinction)
+			# }
 		}
     }
 
@@ -5071,9 +5071,9 @@ sys_aquila_init = {
 			clear_planet_modifiers = yes 
 			set_deposit = d_iridium_4
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_VECCHIO_1131_CAT			###Vecchio Anomaly (Alien Gravesite)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_VECCHIO_1131_CAT			###Vecchio Anomaly (Alien Gravesite)
+			# }
 		}
     }
 
@@ -5254,9 +5254,9 @@ sys_elysta_init = {
 			clear_planet_modifiers = yes 
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_HESANO_1132_CAT			#### Hesano Anomaly (Prothean Ship)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_HESANO_1132_CAT			#### Hesano Anomaly (Prothean Ship)
+			# }
 		}
 		moon = {
 			name = "Hesano a"
@@ -5667,9 +5667,9 @@ sys_newton_init = {
 			clear_planet_modifiers = yes 
 			set_deposit = d_palladium_4
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_ONTAROM_1141_CAT			###Ontarom Anomaly (Collision Course)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_ONTAROM_1141_CAT			###Ontarom Anomaly (Collision Course)
+			# }
 		}
 		moon = {
 			name = "Thonal"
@@ -5935,9 +5935,9 @@ sys_matano_init = {
 			clear_planet_modifiers = yes 
 			set_deposit = d_palladium_4
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_CHASCA_1151_CAT			###Chasca Anomaly (Synthetic Rings)	
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_CHASCA_1151_CAT			###Chasca Anomaly (Synthetic Rings)	
+			# }
 			add_modifier = {
 				modifier = tidal_locked
 				days = -1
@@ -6815,9 +6815,9 @@ sys_dakka_init = {
 				clear_deposits = yes
 				clear_planet_modifiers = yes
 
-				add_anomaly = {
-					category = MEC_EG_ANO_GIGULA_1171_CAT			###Gigula Anomaly (Ancient Starship)
-				}
+				# add_anomaly = {
+				# 	category = MEC_EG_ANO_GIGULA_1171_CAT			###Gigula Anomaly (Ancient Starship)
+				# }
 			}
 		}		
     }
@@ -9103,9 +9103,9 @@ sys_acheron_init = {
 			clear_planet_modifiers = yes 
 			set_deposit = d_minerals_1
 			set_planet_flag = starting_deposit
-			add_anomaly = {
-				category = MEC_EG_ANO_ALTAHE_1261_CAT			###Altahe Anomaly (Shared Atmosphere)
-			}
+			# add_anomaly = {
+			# 	category = MEC_EG_ANO_ALTAHE_1261_CAT			###Altahe Anomaly (Shared Atmosphere)
+			# }
 			
 			add_modifier = {
 				modifier = wild_storms

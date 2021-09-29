@@ -17,8 +17,10 @@ sys_arcturus_init = {
         orbit_distance = 0
         size = 30
 		flags = { arcturus_star }
-		prevent_anomaly = yes
-		clear_deposits = yes
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+		}	
     }
 	
 	asteroid_belt = {
@@ -549,18 +551,17 @@ sys_42518p_init = {
 				days = -1
 			}
 		}
-      orbit_angle = 1
-		satellite_naming_policy = upper_case_roman_numerals	
-		        planet = {
-           count = { min = 1 max = 3 }
-          orbit_distance = 30
-           orbit_angle = { min = 90 max = 270 }
-           satellite_naming_policy = lower_case_latin_letters
-           change_orbit = @base_moon_distance
-           moon = {
-               count = { min = 0 max = 1 }
-               orbit_distance = 8
-               orbit_angle = { min = 90 max = 270 }
+
+	planet = {
+        count = { min = 1 max = 3 }
+        orbit_distance = 30
+        orbit_angle = { min = 90 max = 270 }
+        satellite_naming_policy = lower_case_latin_letters
+        change_orbit = @base_moon_distance
+        moon = {
+            count = { min = 0 max = 1 }
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
            }		
 		}	
 	}	
@@ -573,24 +574,32 @@ sys_gorgon_init = {
     name = "Gorgon"
     class = "sc_b_super"
 	max_instances = 1
+
+	flags = { alliance_space_system argos_rho_system gorgon_system btr_system custom_system }	
+
     planet = {
+		name = "Gorgon"
         class = "pc_b_super_star"
         orbit_distance = 0
         size = 20
+		flags = { gorgon_star }
     }
 
     planet = {
         name = "Wuo"
-        class = "pc_barren"
+        class = "pc_hothouse"
         orbit_distance = 120
         orbit_angle = 23
         has_ring = no
 		size = 17
+		flags = { wuo_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = wuo_codex
-			}
-
-    }
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit		
+	    }
+	}	
 
     planet = {
         name = "Vectra"
@@ -599,49 +608,61 @@ sys_gorgon_init = {
         orbit_angle = 132
         has_ring = no
 		size = 36
+		flags = { vectra_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = vectra_codex
-			}
-		
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit		
+	    }		
     }
 
     planet = {
         name = "Camaron"
-        class = "pc_barren"
+        class = "pc_iron"
         orbit_distance = 40
         orbit_angle = 149
         has_ring = no
 		size = 15
+		flags = { camaron_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = camaron_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit		
+	    }
     }
 
     planet = {
         name = "Sharblu"
-        class = "pc_barren"
+        class = "pc_ice_giant"
         orbit_distance = 50
         orbit_angle = 311
         has_ring = no
 		size = 25
+		flags = { sharblu_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = sharblu_codex
-			}
-		
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit		
+	    }
     }
 
     planet = {
         name = "Slekon"
-        class = "pc_gas_giant"
+        class = "pc_ice_giant"
         orbit_distance = 30
         orbit_angle = 115
         has_ring = yes
 		size = 38
+		flags = { skelon_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = slekon_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit		
+	    }
     }
 
 	init_effect = { 
@@ -668,37 +689,55 @@ sys_hydra_init = {
     name = "Hydra"
     class = "sc_g"
 	max_instances = 1
+
+	flags = { alliance_space_system argos_rho_system hydra_system btr_system custom_system }	
+
     planet = {
+		name = "Hydra"
         class = "pc_g_star"
         orbit_distance = 0
         size = 15
+		flags = { hydra_star }
     }
 
     planet = {
         name = "Varmalus"
-        class = "pc_barren"
+        class = "pc_volcanic"
         orbit_distance = 50
         orbit_angle = 344
         has_ring = no
 		size = 24
+		flags = { varmalus_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = varmalus_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit		
+	    }
     }
 
     planet = {
         name = "Metgos"
-        class = "pc_geothermal"
+        class = "pc_ash"
         orbit_distance = 40
         orbit_angle = 307
         has_ring = no
 		size = 18
+		flags = { metgos_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = metgos_codex
-			}
-
-    }
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_3
+			add_deposit = d_iridium_2
+			add_deposit = d_palladium_2
+			add_deposit = d_platinum_2
+			set_planet_flag = starting_deposit	
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}	
+	    }
+	}
 
     planet = {
         name = "Theyar"
@@ -707,23 +746,29 @@ sys_hydra_init = {
         orbit_angle = 247
         has_ring = no
 		size = 35
+		flags = { theyar_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = theyar_codex
-			}
-
-    }
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit		
+	    }
+	}
 
     planet = {
         name = "Canrum"
-        class = "pc_toxic"
+        class = "pc_barren"
         orbit_distance = 30
         orbit_angle = 127
         has_ring = no
 		size = 13
+		flags = { canrum_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = canrum_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit		
+	    }
     }
 
     planet = {
@@ -733,10 +778,13 @@ sys_hydra_init = {
         orbit_angle = 66
         has_ring = no
 		size = 32
+		flags = { syba_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = syba_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit		
+	    }
     }
 
     init_effect = { 
@@ -764,14 +812,18 @@ sys_phoenix_init = {
     name = "Phoenix"
     class = "sc_f"
 	max_instances = 1  
+
+	flags = { alliance_space_system argos_rho_system phoenix_system btr_system custom_system }	
+
+
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 60
 	}
 	
 	asteroid_belt = {
-		type = icy_asteroid_belt
-		radius = 175
+		type = rocky_asteroid_belt
+		radius = 225
 	}
 	
 
@@ -779,19 +831,27 @@ sys_phoenix_init = {
         class = "pc_f_star"
         orbit_distance = 0
         size = 30
+		flags = { phoenix_star }
     }
 
     planet = {
         name = "Patashi"
-        class = "pc_barren"
+        class = "pc_molten"
         orbit_distance = 40
         orbit_angle = 319
         has_ring = no
 		size = 17
+		flags = { patashi_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = patashi_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit	
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}	
+	    }
     }
 
     planet = {
@@ -801,57 +861,77 @@ sys_phoenix_init = {
         orbit_angle = 258
         has_ring = no
 		size = 34
+		flags = { sylsalto_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = sylsalto_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit	
+	    }
     }
 
     planet = {
         name = "Intai'sei"
-        class = "pc_desert"
+        class = "pc_sandsea"
         orbit_distance = 30
         orbit_angle = 68
         has_ring = no
 		size = 14
+		flags = { intaisei_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = intai'sei_codex
-			}
+			prevent_anomaly = yes
+			clear_deposits = yes		
+	    }
     }
 
     planet = {
         name = "Tuntau"
-        class = "pc_toxic"
+        class = "pc_mephitic"
         orbit_distance = 40
         orbit_angle = 148
         has_ring = no
 		size = 25
+		flags = { tuntau_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = tuntau_codex
-			}
-
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_iridium_1
+			add_deposit = d_platinum_1
+			add_deposit = d_palladium_1
+			add_deposit = d_minerals_1
+			set_planet_flag = starting_deposit	
+	    }
     }
 
     planet = {
         name = "Vebinok"
-        class = "pc_frozen"
+        class = "pc_barren_cold"
         orbit_distance = 50
         orbit_angle = 227
         has_ring = yes
 		size = 8
+		flags = { vebinok_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = vebinok_codex
-			}
-		moon = {
-			name = "Pinnacle_Station"
-			class = "pc_asteroid"
-			orbit_distance = 5
-			size = 1
-			init_effect = {
-				set_planet_flag = pinnacle_station_codex
-				}
-		}	
-    }
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit	
+	    }
+	}	
+
+	planet = {
+		name = "Pinnacle Station"
+		class = "pc_pinnacle_station"
+		orbit_distance = 20
+		size = 2
+		flags = { vebinok_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit	
+	    }
+	}	
 
     init_effect = { 
 		spawn_megastructure = { 
@@ -871,10 +951,14 @@ sys_athens_init = {
     name = "Athens"
     class = "sc_g"
 	max_instances = 1
+
+	flags = { alliance_space_system artemis_tau_system athens_system btr_system custom_system }	
+
     planet = {
         class = "pc_g_star"
         orbit_distance = 0
         size = 25
+		flags = { athens_star }
     }
 	
 	asteroid_belt = {

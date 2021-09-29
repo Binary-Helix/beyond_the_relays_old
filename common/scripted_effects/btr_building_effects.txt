@@ -250,9 +250,11 @@ generate_btr_cronos_buildings = {
 	while = { count = 3 add_district = district_hab_commercial }
 	while = { count = 3 add_district = district_hab_cultural }
 	while = { count = 2 add_building = building_factory_1 }
-	add_building = building_hab_major_capital
-	add_building = building_foundry_1
-	add_building = building_bureaucratic_1
+	capital_scope = {
+		add_building = building_hab_major_capital
+		add_building = building_foundry_1
+		add_building = building_bureaucratic_1
+	}	
 }
 
 generate_btr_citadel_districts = {
@@ -260,6 +262,13 @@ generate_btr_citadel_districts = {
 	add_district_and_planet_size_if_needed_effect = { district =  district_hab_energy }
 	add_district_and_planet_size_if_needed_effect = { district =  district_hab_cultural }
 	add_district_and_planet_size_if_needed_effect = { district =  district_hab_commercial }
+	add_building = building_system_capital
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_factory_1
+	add_building = building_commercial_zone
+	add_building = building_embassy	
+	add_building = building_stronghold
 }
 
 generate_btr_omega_districts = {

@@ -9,7 +9,9 @@ MEC_EG_ANO_JUNTHOR_1021_CAT = {
 	
 	spawn_chance = {
 		modifier = {
-			add = 0 #Handled in SysInit
+			#add = 0 #Handled in SysInit
+			has_planet_flag = junthor_planet
+			add = .25
 		}
 	}
 	

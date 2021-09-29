@@ -1489,21 +1489,84 @@ sys_widow_init = {
 		class = pc_citadel
 		orbit_distance = 100
 		orbit_angle = 215
-		size = 12
+		size = 20
 		starting_planet = yes
 		has_ring = no
-		deposit_blockers = none
-		modifiers = none
 		flags = { btr_citadel special_planet }
 		init_effect = {
 			prevent_anomaly = yes
 			set_planet_entity = {
 				entity = "btr_citadel_entity"
 			}
-			add_modifier = {
-				modifier = "unexplored_citadel" # change to partially terraformed
-				days = -1
+			prevent_anomaly = yes
+			clear_deposits = yes
+			clear_planet_modifiers = yes 
+			set_planet_flag = starting_deposit
+			create_country = {
+				name_list = mec_asari_names
+				species = event_target:asariSpecies
+				type = btr_citadel_govt
+				civics = { 
+					civic = civic_diplomatic_corps
+					civic = civic_idealistic_foundation
+				}
+				origin = "origin_default"
+				flag = {
+					icon={
+						category="masseffectsilver"
+						file="Citadel Council.dds"
+					}
+					background={
+						category="backgrounds"
+						file="00_solid.dds"
+					}
+					colors={
+						"blue"
+						"grey"
+						"null"
+						"null"
+					}
+				}
+				ethos = {
+					ethic = ethic_egalitarian
+					ethic = ethic_xenophile
+					ethic = ethic_pacifist
+				}
+				ignore_initial_colony_error = yes
+				name = "The Citadel"
 			}
+			while = {
+				count = 7
+				create_pop = { species = event_target:asariSpecies }
+			}
+			while = {
+				count = 7
+				create_pop = { species = event_target:salarianSpecies }
+			}		
+			while = {
+				count = 7
+				create_pop = { species = event_target:turianSpecies }
+			}
+			while = {
+				count = 4
+				create_pop = { species = event_target:elcorSpecies }
+			}			
+			while = {
+				count = 4
+				create_pop = { species = event_target:volusSpecies }
+			}
+			while = {
+				count = 3
+				create_pop = { species = event_target:hanarSpecies }
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:kroganSpecies }
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:humanSpecies }
+			}				
 			generate_btr_citadel_districts = yes
 			set_planet_flag = megastructure
 			set_planet_flag = habitat
