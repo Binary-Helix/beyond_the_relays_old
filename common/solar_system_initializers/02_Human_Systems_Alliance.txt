@@ -5,14 +5,20 @@
 #####ARCTURUS STREAM#####
 
 sys_arcturus_init = {
-
     name = "Arcturus"
     class = "sc_k"
 	max_instances = 1
-    planet = {
-        class = "pc_k_star"
+
+	flags = { alliance_space_system arcturus_stream_system arcturus_system btr_system custom_system }	
+
+	planet = {
+        name = "Arcturus"
+		class = "pc_k_star"
         orbit_distance = 0
         size = 30
+		flags = { arcturus_star }
+		prevent_anomaly = yes
+		clear_deposits = yes
     }
 	
 	asteroid_belt = {
@@ -26,11 +32,42 @@ sys_arcturus_init = {
         orbit_distance = 45
         orbit_angle = 151
 		size = 2
+		has_ring = no
+		flags = { alcyoneus_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = alcyoneus_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = alcyoneus_codex
+				days = -1
 			}
-        has_ring = no
+		}
+	}
 
+	planet = {
+		name = "Arcturus Station"
+		class = "pc_arcturus_station"
+		orbit_distance = 30
+		size = 12
+		entity = "btr_arcturus_station_entity"
+		flags = { arcturus_station pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_arcturus_pops = yes
+			add_modifier = {
+				modifier = arcturus_station_codex
+				days = -1
+			}
+		}
 	}
 	
 	planet = {
@@ -39,11 +76,12 @@ sys_arcturus_init = {
         orbit_distance = 45
         orbit_angle = 210
 		size = 2
-		init_effect = {
-			set_planet_flag = souq_codex
-			}
         has_ring = no
-
+		flags = { souq_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+		}
     }
 
     planet = {
@@ -52,11 +90,18 @@ sys_arcturus_init = {
         orbit_distance = 60
         orbit_angle = 75
 		size = 34
-		init_effect = {
-			set_planet_flag = themis_codex
-			}
         has_ring = no
-
+		flags = { themis_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = themis_codex
+				days = -1
+			}
+		}
     }
 
     planet = {
@@ -65,12 +110,19 @@ sys_arcturus_init = {
         orbit_distance = 30
         orbit_angle = 182
 		size = 31
-		init_effect = {
-			set_planet_flag = eurene_codex
-			}
         has_ring = yes
-
-    }
+		flags = { eirene_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = eirene_codex
+				days = -1
+			}
+   		}
+	}	   
 
     planet = {
         name = "Eunomia"
@@ -78,12 +130,17 @@ sys_arcturus_init = {
         orbit_distance = 30
         orbit_angle = 289
 		size = 11
-		init_effect = {
-			set_planet_flag = eunomia_codex
-			}
         has_ring = no
-
-    }
+		flags = { eunomia_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			add_modifier = {
+				modifier = eunomia_codex
+				days = -1
+			}
+    	}
+	}	
 
     init_effect = { 
 		spawn_megastructure = { 
@@ -100,7 +157,11 @@ sys_euler_init = {
     name = "Euler"
     class = "sc_g"
 	max_instances = 1
+
+	flags = { alliance_space_system arcturus_stream_system euler_system btr_system custom_system }	
+
     planet = {
+		name = "Euler"
         class = "pc_g_star"
         orbit_distance = 0
         size = 20
@@ -112,11 +173,18 @@ sys_euler_init = {
         orbit_distance = 35
         orbit_angle = 14
         size = 10
+		has_ring = no
+		flags = { fermi_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = fermi_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = fermi_codex
+				days = -1
 			}
-        has_ring = no
-
+		}
     }
 
     planet = {
@@ -125,12 +193,17 @@ sys_euler_init = {
         orbit_distance = 25
         orbit_angle = 199
         size = 23
-		init_effect = {
-			set_planet_flag = benning_codex
-			}
         has_ring = no
-
-    }
+		flags = { benning_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			add_modifier = {
+				modifier = benning_codex
+				days = -1
+			}		
+ 	    }
+	}
 
     planet = {
         name = "Yukawa"
@@ -138,11 +211,16 @@ sys_euler_init = {
         orbit_distance = 40
         orbit_angle = 109
         size = 7
-		init_effect = {
-			set_planet_flag = yukawa_codex
-			}
         has_ring = no
-
+		flags = { yukawa_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			add_modifier = {
+				modifier = yukawa_codex
+				days = -1
+			}
+		}		
     }
 
     planet = {
@@ -151,15 +229,27 @@ sys_euler_init = {
         orbit_distance = 30
         orbit_angle = 197
         size = 15
-		init_effect = {
-			set_planet_flag = silva_codex
-			}
         has_ring = no
+		flags = { silva_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = silva_codex
+				days = -1
+			}
+		}
 		moon = {
 			name = "Olveira"
 			class = "pc_arid"
 			orbit_distance = 8
 			size = 11
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+			}
 		}	
     }
 
@@ -176,191 +266,305 @@ sys_euler_init = {
 }
 
 sys_rua_init = {
-    name = "SM_2183_Rua"
+    name = "SM-2183 Rua"
     class = "sc_m_hyper"
 	max_instances = 1
+
+	flags = { alliance_space_system arcturus_stream_system sm2183_rua_system btr_system custom_system }	
+
 	asteroid_belt = {
 		type = rocky_asteroid_belt
 		radius = 75
 	}	
 
     planet = {
-		name = "SM_2183_Rua"
+		name = "SM-2183 Rua"
         class = "pc_m_hyper_star"
         orbit_distance = 0
         size = 30
+		flags = { sm2183_star }
     }
 	
 	planet = {
-		name = "DH1993"
+		name = "DH-1993"
 		class = "pc_barren"
 		orbit_distance = 30
 		size = 12
+		flags = { dh1993_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = dh1993_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = dh1993_codex
+				days = -1	
 			}
+		}
 	}
 
 	planet = {
-		name = "DC1939"
+		name = "DC-1939"
 		class = "pc_shattered"
 		orbit_distance = 45
 		size = 18
+		flags = { dh1939_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = dc1939_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_iridium_2
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_2
+			add_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = dh1939_codex
+				days = -1	
 			}
+		}	
 	}
 
 	planet = {
-		name = "L2183"
+		name = "L/2183"
 		class = "pc_iron"
 		orbit_distance = 45
 		size = 9
+		flags = { l2183_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = l2183_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = l2183_codex
+				days = -1	
 			}
+		}
 	}	
 
 	planet = {
-		name = "MV1963"
+		name = "MV-1963"
 		class = "pc_gas_giant"
 		orbit_distance = 65
 		size = 37
+		flags = { mv1963_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = mv1963_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_5
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = mv1963_codex
+				days = -1	
 			}
+		}
 	}		
 }	
 	
 sys_42518p_init = {
-    name = "42518P"
+    name = "42518-P"
     class = "sc_o_super"
 	max_instances = 1	
+
+	flags = { alliance_space_system arcturus_stream_system 42518p_system btr_system custom_system }	
+
     planet = {
-		name = "42518P"
+		name = "42518-P"
         class = "pc_o_super_star"
         orbit_distance = 0
         size = 20
-		init_effect = {
-			set_planet_flag = 42518p_codex
-			}
+		flags = { 42518p_star }
 		}
 	
 	planet = {
-		name = "42518PI"
+		name = "42518-P I"
 		class = "pc_molten"
 		orbit_distance = 70
 		size = 25
+		flags = { 42518pi_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = 42518pi_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_5
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = 42518pi_codex
+				days = -1	
 			}
+		}
 	}
 
 	planet = {
-		name = "42518PII"
+		name = "42518-P II"
 		class = "pc_ice_giant"
 		orbit_distance = 70
 		size = 28
+		flags = { 42518pii_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = 42518pii_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = 42518pii_codex
+				days = -1	
 			}
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
 		moon = {
-			name = "42518PII_a"
+			name = "42518-P II a"
 			class = "pc_frozen"
 			orbit_distance = 8
 			size = 13
 		}
 		moon = {
-			name = "42518PII_b"
+			name = "42518-P II b"
 			class = "pc_asteroid"
 			orbit_distance = 5
 			size = 3
 		}		
 		moon = {
-			name = "42518PII_c"
+			name = "42518-P II c"
 			class = "pc_iron"
 			orbit_distance = 5
 			size = 2
+			flags = { 42518pii_planet pd_ignore }
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+				set_deposit = d_minerals_2
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
-			name = "42518PII_d"
+			name = "42518-P II d"
 			class = "pc_ammonia"
 			orbit_distance = 5
 			size = 9
 		}
 		moon = {
-			name = "42518PII_e"
+			name = "42518-P II e"
 			class = "pc_iron"
 			orbit_distance = 5
 			size = 2
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+				set_deposit = d_iridium_3
+				add_deposit = d_platinum_2
+				set_planet_flag = starting_deposit
+			}
 		}	
 		moon = {
-			name = "42518PII_f"
+			name = "42518-P II f"
 			class = "pc_iron"
 			orbit_distance = 5
 			size = 2
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+				set_deposit = d_palladium_1
+				set_planet_flag = starting_deposit
+			}
 		}		
 	}
 		
 	planet = {
-		name = "42518PIII"
+		name = "42518-P III"
 		class = "pc_frozen"
 		orbit_distance = 60
 		size = 14
+		flags = { 42518piii_planet pd_ignore }
 		init_effect = {
-			set_planet_flag = 42518piii_codex
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_platinum_3
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = 42518piii_codex
+				days = -1	
 			}
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
 		moon = {
-			name = "42518PIII_a"
+			name = "42518-P III a"
 			class = "pc_ammonia"
 			orbit_distance = 8
 			size = 13
 		}
 		moon = {
-			name = "42518PIII_b"
+			name = "42518-P III b"
 			class = "pc_iron"
 			orbit_distance = 5
 			size = 3
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+				set_deposit = d_iridium_1
+				add_deposit = d_palladium_2
+				set_planet_flag = starting_deposit
+			}
 		}		
 		moon = {
-			name = "42518PIII_c"
+			name = "42518-P III c"
 			class = "pc_frozen"
 			orbit_distance = 5
 			size = 2
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+				set_deposit = d_element_zero_1
+				set_planet_flag = starting_deposit
+			}
 		}
 		moon = {
-			name = "42518PIII_d"
+			name = "42518-P III d"
 			class = "pc_iron"
 			orbit_distance = 5
 			size = 9
 		}			
 	}
-}
 
-#	planet = {
-#		name = "42518PIV"
-#		class = "pc_t_star"
-#		orbit_distance = 240
-#		size = 40
-#		init_effect = {
-#			set_planet_flag = 42518piv_codex
-#			}
-#       orbit_angle = 1
-#		satellite_naming_policy = upper_case_roman_numerals	
-#		        planet = {
-#            count = { min = 3 max = 4 }
-#           orbit_distance = 30
-#            orbit_angle = { min = 90 max = 270 }
-#            satellite_naming_policy = lower_case_latin_letters
-#            change_orbit = @base_moon_distance
-#            moon = {
-#                count = { min = 0 max = 1 }
-#                orbit_distance = 8
-#                orbit_angle = { min = 90 max = 270 }
-#            }		
-#		}	
-#	}	
-#}	
+	planet = {
+		name = "42518-P IV"
+		class = "pc_t_star"
+		orbit_distance = 300
+		size = 40
+		flags = { 42518piv_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_energy_3
+			add_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = 42518piv_codex
+				days = -1
+			}
+		}
+      orbit_angle = 1
+		satellite_naming_policy = upper_case_roman_numerals	
+		        planet = {
+           count = { min = 1 max = 3 }
+          orbit_distance = 30
+           orbit_angle = { min = 90 max = 270 }
+           satellite_naming_policy = lower_case_latin_letters
+           change_orbit = @base_moon_distance
+           moon = {
+               count = { min = 0 max = 1 }
+               orbit_distance = 8
+               orbit_angle = { min = 90 max = 270 }
+           }		
+		}	
+	}	
+}	
 
 	
 #####ARGOS RHO#####

@@ -30,7 +30,7 @@ pc_chlorine = {
 pc_cryovolcanic = {
 	entity = "subglacial_planet"
 	entity_scale = @planet_standard_scale
-	icon_frame = 13
+	icon = GFX_planet_type_frozen
 	#appearance
 	picture = pc_subglacial
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
@@ -47,7 +47,7 @@ pc_cryovolcanic = {
 pc_polluted = {
 	entity = "nuked_planet"
 	entity_scale = @planet_standard_scale
-	icon_frame = 17
+	icon = GFX_planet_type_nuked
 	picture = "pc_polluted"
 	atmosphere_color 		= hsv { 0.6 0.4 0.5 }
 	atmosphere_intensity 	= 1.0

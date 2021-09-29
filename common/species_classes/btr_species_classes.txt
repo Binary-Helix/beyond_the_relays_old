@@ -64,9 +64,19 @@ SAL = {
 	uplifted_portraits = { "salarian" } 
 }
 
+LYS = { 
+	archetype = BIOLOGICAL 
+	portraits = { "salarian" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "LYS" 
+	uplifted_portraits = { "salarian" } 
+}
+
 TUR = { 
 	archetype = BIOLOGICAL 
-	portraits = { "turian" } graphical_culture = mammalian_01 
+	portraits = { "turian" } 
+	graphical_culture = mammalian_01 
 	move_pop_sound_effect = "moving_pop_confirmation" 
 	uplifted_into = "TUR" 
 	uplifted_portraits = { "turian" } 
@@ -181,33 +191,6 @@ HSK = {
 	uplifted_portraits = { "husk" } 
 }
 
-BLU = { 
-	archetype = BIOLOGICAL 
-	portraits = { "blue_suns" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "BLU" 
-	uplifted_portraits = { "blue_suns" } 
-} 
-
-CAT = { 
-	archetype = BIOLOGICAL 
-	portraits = { "cat6" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "CAT" 
-	uplifted_portraits = { "cat6" } 
-} 
-
-ECL = { 
-	archetype = BIOLOGICAL 
-	portraits = { "eclipse" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "ECL" 
-	uplifted_portraits = { "eclipse" } 
-} 
-
 RAC = { 
 	archetype = BIOLOGICAL 
 	portraits = { "rachni" } 
@@ -216,3 +199,30 @@ RAC = {
 	uplifted_into = "RAC" 
 	uplifted_portraits = { "rachni" } 
 }
+
+# BLU = { 
+# 	archetype = BIOLOGICAL 
+# 	portraits = { "blue_suns" } 
+# 	graphical_culture = mammalian_01 
+# 	move_pop_sound_effect = "moving_pop_confirmation" 
+# 	uplifted_into = "BLU" 
+# 	uplifted_portraits = { "blue_suns" } 
+# } 
+
+# CAT = { 
+# 	archetype = BIOLOGICAL 
+# 	portraits = { "cat6" } 
+# 	graphical_culture = mammalian_01 
+# 	move_pop_sound_effect = "moving_pop_confirmation" 
+# 	uplifted_into = "CAT" 
+# 	uplifted_portraits = { "cat6" } 
+# } 
+
+# ECL = { 
+# 	archetype = BIOLOGICAL 
+# 	portraits = { "eclipse" } 
+# 	graphical_culture = mammalian_01 
+# 	move_pop_sound_effect = "moving_pop_confirmation" 
+# 	uplifted_into = "ECL" 
+# 	uplifted_portraits = { "eclipse" } 
+# } 

@@ -1189,6 +1189,75 @@ drell_compact={
 	ignore_portrait_duplication=no
 }
 
+# Lystheni Order
+lystheni_order={
+    name="Lystheni Order"
+    name_list="btr_salarian"
+	portrait="salarian"
+    adjective="PRESCRIPTED_adjective_lystheni_order"
+    ship_prefix="PRESCRIPTED_ship_prefix_lystheni_order"
+    species_name = "PRESCRIPTED_species_name_lystheni_order"
+    species_plural = "PRESCRIPTED_species_plural_lystheni_order"	
+	species_class = "LYS"
+    species_adjective = "PRESCRIPTED_species_adjective_lystheni_order"
+    #species_bio="PRESCRIPTED_species_bio_lystheni_order"	
+
+	authority="auth_corporate"
+	government="gov_subversive_cult"
+	civics={ "civic_gospel_of_the_masses" "civic_criminal_heritage" }
+
+	flags={ custom_start_screen lystheni_order btr_empire genophage_empire }
+
+	ethic="ethic_egalitarian"
+	ethic="ethic_xenophile"
+	ethic="ethic_spiritualist"
+
+	trait="btr_salarian_shortlived"
+	trait="btr_salarian_genius"
+	trait="trait_rapid_breeders"
+	trait="trait_weak"
+	
+	origin="origin_lystheni_order"	
+
+	planet_name="Sepkai"
+	planet_class="pc_tropical"
+	city_graphical_culture="mammalian_01"	
+	system_name="Taesin"
+	initializer="sys_taesin_init"
+	graphical_culture="humanoid_01"
+	advisor_voice_type = "salarian_union"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Salarian Union.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"teal"
+			"teal"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_salarian_union"
+		portrait="salarian_2"
+		texture=2
+		hair=0
+		clothes=14
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="salarian_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
 # Parnack Regime
 parnack_regime={
     name="Parnack Regime"
@@ -1424,7 +1493,7 @@ united_anhur_corporations={
 	trait="trait_industrious"
 	trait="trait_deviants"
 	
-	origin="origin_default"	
+	origin="origin_united_anhur_corporations"	
 
 	planet_name="Anhur"
 	planet_class="pc_forest"

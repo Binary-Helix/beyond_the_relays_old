@@ -505,3 +505,10 @@ generate_anhur_human_pops = {
 		last_created_pop = { set_pop_flag = "init_spawn" }
 	}
 }
+
+generate_arcturus_pops = {
+	while = {
+		count = 8
+		generate_owner_main_pop = yes
+	 }
+}
