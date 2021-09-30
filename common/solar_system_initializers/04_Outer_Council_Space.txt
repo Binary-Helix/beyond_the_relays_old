@@ -1494,7 +1494,6 @@ sys_widow_init = {
 		has_ring = no
 		flags = { btr_citadel special_planet }
 		init_effect = {
-			prevent_anomaly = yes
 			set_planet_entity = {
 				entity = "btr_citadel_entity"
 			}
@@ -1534,6 +1533,15 @@ sys_widow_init = {
 				}
 				ignore_initial_colony_error = yes
 				name = "The Citadel"
+			}
+			last_created_country = {
+				set_graphical_culture = mammalian_01
+				set_country_flag = citadel_council
+				save_global_event_target_as = citadel_council
+			}
+			create_colony = { 
+				owner = last_created_country 
+				species = last_created 
 			}
 			while = {
 				count = 7

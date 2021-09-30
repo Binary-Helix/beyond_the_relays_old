@@ -85,6 +85,11 @@ sys_taesin_init = {
     name = "Taesin"
     class = "sc_g"
 	max_instances = 1
+
+	flags = { terminus_system byenzine_cloud_system taesin_system btr_system custom_system }	
+
+	usage = custom_empire
+
     planet = {
 	    name = "Taesin"
         class = "pc_g_star"
@@ -107,6 +112,23 @@ sys_taesin_init = {
         orbit_distance = 58
         orbit_angle = 62
         has_ring = no
+		flags = { sepkai_planet special_start_planet }
+		init_effect = {
+			prevent_anomaly = yes
+			generate_btr_start_deposits_and_blockers = yes
+			generate_btr_major_empire_start_buildings = yes
+			random_country = {
+				limit = { has_country_flag = "lystheni_order" }
+				save_event_target_as = taesinOwner
+				save_global_event_target_as = lystheni_order
+				species = { save_global_event_target_as = lystheniSpecies }
+			}
+			while = {
+				count = 26
+				create_pop = { species = event_target:lystheniSpecies }
+			}
+		}
+
 		moon = {
 			name = "Nonau"
 			class = "pc_arid"

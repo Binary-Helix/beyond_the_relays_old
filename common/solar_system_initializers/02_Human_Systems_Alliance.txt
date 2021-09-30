@@ -922,15 +922,26 @@ sys_phoenix_init = {
 	planet = {
 		name = "Pinnacle Station"
 		class = "pc_pinnacle_station"
-		orbit_distance = 20
+		orbit_distance = 15
 		size = 2
-		flags = { vebinok_planet pd_ignore }
+		flags = { pinnacle_station pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes		
-			set_deposit = d_minerals_1
-			set_planet_flag = starting_deposit	
-	    }
+			create_colony = {
+				owner = event_target:citadel_council
+				species = event_target:turianSpecies
+				ethos = owner
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:turianSpecies }
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:salarianSpecies }
+			}
+		}	
 	}	
 
     init_effect = { 
