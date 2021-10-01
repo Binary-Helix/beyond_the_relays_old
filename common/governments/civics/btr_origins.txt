@@ -41,6 +41,13 @@ origin_krogan_chiefdom = {
 	random_weight = { 
 		base = 0 
 	} 
+
+	starting_colony = pc_nuked
+
+	playable = {
+		host_has_dlc = "Apocalypse"
+	}
+
 }
 
 origin_illuminated_primacy = { 
@@ -189,17 +196,6 @@ mec_asari_origin_thessia = {
 	max_once_global = yes
 	preferred_planet_class_neighbor = no
 
-	possible = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		species = { NOT = { value = LITHOID } }
-		civics = {
-			OR = {
-				value = mec_asari_civic_thessia
-				value = mec_asari_civic_ascendancy
-			}
-		}
-	}
-
 	description = "mec_origin_tooltip_mec_asari_thessia_effects"
 	#Disable various first time events, they're not new to Thessia
 	flags = { mec_asari_asr custom_start_screen first_contact_event first_alien_life first_colony Story5 }
@@ -220,12 +216,6 @@ mec_asari_origin_illium = {
 	initializers = { sys_tasale_init }
 	max_once_global = yes
 	preferred_planet_class_neighbor = no
-
-	possible = {
-		ethics = { NOT = { value = ethic_gestalt_consciousness } }
-		species = { NOT = { value = LITHOID } }
-		civics = { value = mec_asari_civic_illium }
-	}
 
 	description = "mec_origin_tooltip_mec_asari_illium_effects"
 	#Disable various first time events, they're not new to Illium

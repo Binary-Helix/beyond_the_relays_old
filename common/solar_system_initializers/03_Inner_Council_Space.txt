@@ -1267,7 +1267,7 @@ sys_elunia_init = {
 			create_species = {
 				name = "Cat6 Merc"
 				plural = "Cat6 Mercs"
-				class = "CAT"
+				class = "HUM"
 				portrait = cat6
 				namelist = btr_merc
 				traits = {
@@ -1280,8 +1280,8 @@ sys_elunia_init = {
 				
 			}
 			create_country = {
-				namelist = btr_merc
-				species = last_created
+				name_list = btr_merc
+				species = event_target:humanSpecies
 				type = mercenary
 				civics = { civic = civic_anarcho_tribalism }
 				origin = "origin_default"

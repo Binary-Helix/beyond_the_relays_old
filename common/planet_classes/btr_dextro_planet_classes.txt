@@ -5,7 +5,6 @@ pc_dextro_desert = {
 	entity = "desert_planet"
 	icon = GFX_planet_type_desert
 	picture = pc_desert
-	tile_set = pc_desert
 	climate = "dry"
 	initial = yes
 
@@ -43,7 +42,6 @@ pc_dextro_arid = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arid
 	picture = pc_arid
-	tile_set = pc_arid
 	climate = "dry"
 	initial = yes
 
@@ -77,7 +75,6 @@ pc_dextro_savannah = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_savannah
 	picture = pc_savannah
-	tile_set = pc_savannah
 	climate = "dry"
 	initial = yes
 
@@ -112,7 +109,6 @@ pc_dextro_tropical = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tropical
 	picture = pc_tropical
-	tile_set = pc_tropical
 	climate = "wet"
 	initial = yes
 
@@ -146,7 +142,6 @@ pc_dextro_continental = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_continental
 	picture = pc_continental
-	tile_set = pc_continental
 	climate = "wet"
 	initial = yes
 
@@ -181,7 +176,6 @@ pc_dextro_ocean = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
 	picture = pc_ocean
-	tile_set = pc_ocean
 	climate = "wet"
 	initial = yes
 
@@ -216,7 +210,6 @@ pc_dextro_tundra = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tundra
 	picture = pc_tundra
-	tile_set = pc_tundra
 	climate = "cold"
 	initial = yes
 
@@ -250,7 +243,6 @@ pc_dextro_arctic = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arctic
 	picture = pc_arctic
-	tile_set = pc_arctic
 	climate = "cold"
 	initial = yes
 
@@ -284,7 +276,6 @@ pc_dextro_alpine = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_alpine
 	picture = pc_alpine
-	tile_set = pc_alpine
 	climate = "cold"
 	initial = yes
 
@@ -318,7 +309,6 @@ pc_dextro_nuked = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_nuked
 	picture = pc_nuked
-	tile_set = pc_nuked
 	atmosphere_color 		= hsv { 0.6 0.4 0.5 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.85
@@ -348,7 +338,6 @@ pc_dextro_nuked = {
 pc_dextro_hive = {
 	entity = "infested_planet"
 	picture = pc_infested
-	tile_set = pc_infested
 	entity_scale = @planet_standard_scale
 
 	icon = GFX_planet_type_hive
@@ -392,7 +381,6 @@ pc_dextro_ringworld_habitable = {
 	entity = "ringworld_habitable_entity"
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ringworld
-	tile_set = pc_gaia
 	icon = GFX_planet_type_ringworld
 	entity_scale = 1.0
 	enable_tilt = no
@@ -434,7 +422,6 @@ pc_dextro_duneforest = {
 	icon = GFX_planet_type_duneforest
 	#appearance
 	picture = pc_duneforest  
-	tile_set = pc_duneforest 	
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -458,7 +445,6 @@ pc_dextro_aeolian = {
 	icon = GFX_planet_type_aeolin
 	#appearance
 	picture = pc_aeolian  
-	tile_set = pc_aeolian 	
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -481,7 +467,6 @@ pc_dextro_tepid = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tepid
 	picture = pc_tepid
-	tile_set = pc_tepid
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -505,7 +490,6 @@ pc_dextro_prairie = {
 	icon = GFX_planet_type_prarie
 	#appearance
 	picture = pc_prairie
-	tile_set = pc_prairie	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -529,7 +513,6 @@ pc_dextro_antarctic = {
 	icon = GFX_planet_type_antarctic
 	#appearance
 	picture = pc_antarctic  
-	tile_set = pc_antarctic 	
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -553,7 +536,6 @@ pc_dextro_snow = {
 	icon = GFX_planet_type_snow
 	#appearance
 	picture = pc_snow  
-	tile_set = pc_snow 	
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -576,7 +558,6 @@ pc_dextro_glacial = {
 	icon = GFX_planet_type_glacial
 	#appearance
 	picture = pc_glacial  
-	tile_set = pc_glacial 	
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -601,7 +582,6 @@ pc_dextro_frozen_desert = {
 	icon = GFX_planet_type_frigid
 	#appearance
 	picture = pc_frozen_desert  
-	tile_set = pc_frozen_desert	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -624,7 +604,6 @@ pc_dextro_steppe = {
 	icon = GFX_planet_type_steppe
 	#appearance
 	picture = pc_steppe  
-	tile_set = pc_steppe	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -648,7 +627,6 @@ pc_dextro_veld = {
 	icon = GFX_planet_type_veld
 	#appearance
 	picture = pc_veld  
-	tile_set = pc_veld	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -672,7 +650,6 @@ pc_dextro_semiarid = {
 	icon = GFX_planet_type_semiarid
 	#appearance
 	picture = pc_semiarid  
-	tile_set = pc_semiarid	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -696,7 +673,6 @@ pc_dextro_hadesert = {
 	icon = GFX_planet_type_atacama
 	#appearance
 	picture = pc_hadesert  
-	tile_set = pc_hadesert	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -720,7 +696,6 @@ pc_dextro_boreal = {
 	icon = GFX_planet_type_boreal
 	#appearance
 	picture = pc_boreal 
-	tile_set = pc_boreal	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -744,7 +719,6 @@ pc_dextro_highland = {
 	icon = GFX_planet_type_highland
 	#appearance
 	picture = pc_highland 
-	tile_set = pc_highland	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -768,7 +742,6 @@ pc_dextro_sandsea = {
 	icon = GFX_planet_type_dune
 	#appearance
 	picture = pc_sandsea
-	tile_set = pc_sandsea		
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -792,7 +765,6 @@ pc_dextro_subarctic = {
 	icon = GFX_planet_type_crag
 	#appearance
 	picture = pc_subarctic
-	tile_set = pc_subarctic	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -815,7 +787,6 @@ pc_dextro_cascadian = {
 	icon = GFX_planet_type_cascadian
 	#appearance
 	picture = pc_cascadian
-	tile_set = pc_cascadian	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -839,7 +810,6 @@ pc_dextro_mud = {
 	icon = GFX_planet_type_mud
 	#appearance
 	picture = pc_mud
-	tile_set = pc_mud	
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -862,7 +832,6 @@ pc_dextro_swamp = {
 	icon = GFX_planet_type_bog
 	#appearance
 	picture = pc_swamp
-	tile_set = pc_swamp	
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -885,7 +854,6 @@ pc_dextro_mangrove = {
 	icon = GFX_planet_type_mangrove
 	#appearance
 	picture = pc_mangrove
-	tile_set = pc_mangrove	
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -909,7 +877,6 @@ pc_dextro_wetswamp = {
 	icon = GFX_planet_type_wetswamp 
 	#appearance
 	picture = pc_wetswamp
-	tile_set = pc_wetswamp	
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -933,7 +900,6 @@ pc_dextro_desertislands = {
 	icon = GFX_planet_type_atoll
 	#appearance
 	picture = pc_desertislands
-	tile_set = pc_desertislands
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -957,7 +923,6 @@ pc_dextro_mesa = {
 	icon = GFX_planet_type_mesa
 	#appearance
 	picture = pc_mesa
-	tile_set = pc_mesa	
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -981,7 +946,6 @@ pc_dextro_outback = {
 	icon = GFX_planet_type_outback
 	#appearance
 	picture = pc_outback
-	tile_set = pc_outback	
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1005,7 +969,6 @@ pc_dextro_oasis = {
 	icon = GFX_planet_type_oasis
 	#appearance
 	picture = pc_oasis
-	tile_set = pc_oasis	
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1028,7 +991,6 @@ pc_dextro_hajungle = {
 	icon = GFX_planet_type_tepui
 	#appearance
 	picture = pc_hajungle
-	tile_set = pc_hajungle	
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1051,7 +1013,6 @@ pc_dextro_retinal = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_retinal
 	picture = pc_retinal
-	tile_set = pc_retinal
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1072,7 +1033,6 @@ pc_dextro_forest = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_forest
 	picture = pc_forest
-	tile_set = pc_forest
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1094,7 +1054,6 @@ pc_dextro_lake = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_lake
 	picture = pc_lake
-	tile_set = pc_lake
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1117,7 +1076,6 @@ pc_dextro_med = {
 	icon = GFX_planet_type_med
 	#appearance
 	picture = pc_med
-	tile_set = pc_med
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1141,7 +1099,6 @@ pc_dextro_aquatic = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
 	picture = pc_aquatic
-	tile_set = pc_aquatic
 	climate = "wet"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1174,7 +1131,6 @@ pc_dextro_aquatichot = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
 	picture = pc_aquatichot
-	tile_set = pc_aquatichot
 	climate = "wet"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1207,7 +1163,6 @@ pc_dextro_aquaticcold = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
 	picture = pc_aquaticcold
-	tile_set = pc_aquaticcold
 	climate = "wet"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1240,7 +1195,6 @@ pc_dextro_aquaticcity = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
 	picture = pc_aquaticcity
-	tile_set = pc_aquaticcity
 	climate = "wet"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1278,7 +1232,6 @@ pc_dextro_acid = {
 	icon = GFX_planet_type_acid
 	#appearance
 	picture = pc_acid
-	tile_set = pc_acid
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1301,7 +1254,6 @@ pc_dextro_methane = {
 	icon = GFX_planet_type_methane
 	#appearance
 	picture = pc_methane
-	tile_set = pc_methane	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1324,7 +1276,6 @@ pc_dextro_ammonia = {
 	icon = GFX_planet_type_ammonia
 	#appearance
 	picture = pc_ammonia
-	tile_set = pc_ammonia	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1347,7 +1298,6 @@ pc_dextro_sulfur = {
 	icon = GFX_planet_type_sulfur
 	#appearance
 	picture = pc_sulfur
-	tile_set = pc_sulfur	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1370,7 +1320,6 @@ pc_dextro_ash = {
 	icon = GFX_planet_type_ash
 	#appearance
 	picture = pc_ash
-	tile_set = pc_ash
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1394,7 +1343,6 @@ pc_dextro_irradiated = {
 	climate = "exotic"
 	#appearance
 	picture = pc_irradiated
-	tile_set = pc_irradiated
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1415,7 +1363,6 @@ pc_dextro_ammoniacity = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
 	picture = pc_ammoniacity
-	tile_set = pc_ammoniacity
 	climate = "exotic"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1450,7 +1397,6 @@ pc_dextro_sulfurcity = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
 	picture = pc_sulfurcity
-	tile_set = pc_sulfurcity
 	climate = "exotic"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1485,7 +1431,6 @@ pc_dextro_ammoniaring = {
 	entity = "ammoniaring_habitable_entity"
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ammoniaring
-	tile_set = pc_ammonia
 	icon = GFX_planet_type_city
 	entity_scale = 1.0
 	enable_tilt = no
@@ -1520,7 +1465,6 @@ pc_dextro_sulfurring = {
 	entity = "ammoniaring_habitable_entity"
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_sulfurring
-	tile_set = pc_sulfur
 	icon = GFX_planet_type_ringworld
 	entity_scale = 1.0
 	enable_tilt = no
@@ -1555,7 +1499,6 @@ pc_dextro_methanecity = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
 	picture = pc_methanecity
-	tile_set = pc_methanecity
 	climate = "exotic"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1590,7 +1533,6 @@ pc_dextro_methanering = {
 	entity = "methanering_habitable_entity"
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_methanering
-	tile_set = pc_methane
 	icon = GFX_planet_type_ringworld
 	entity_scale = 1.0
 	enable_tilt = no
@@ -1625,7 +1567,6 @@ pc_dextro_ashcity = {
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_city
 	picture = pc_ashcity
-	tile_set = pc_ashcity
 	climate = "exotic"
 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }		#DONE
@@ -1660,7 +1601,6 @@ pc_dextro_ashring = {
 	entity = "ashring_habitable_entity"
 	preview_entity = "ringworld_01_damaged_full_entity"
 	picture = pc_ashring
-	tile_set = pc_ash
 	icon = GFX_planet_type_ringworld
 	entity_scale = 1.0
 	enable_tilt = no
@@ -1693,7 +1633,6 @@ pc_dextro_ashring = {
 pc_dextro_pdhive1 = {
 	entity = "pdhive1_planet"
 	picture = pc_infested
-	tile_set = pc_infested
 	entity_scale = @planet_standard_scale
 	
 	icon = GFX_planet_type_hive
@@ -1728,7 +1667,6 @@ pc_dextro_pdhive1 = {
 pc_dextro_pdhive2 = {
 	entity = "pdhive2_planet"
 	picture = pc_infested
-	tile_set = pc_infested
 	entity_scale = @planet_standard_scale
 	
 	icon = GFX_planet_type_hive
@@ -1773,7 +1711,6 @@ pc_dextro_lichen = {
 	climate = "cold"
 	#appearance
 	picture = pc_lichen
-	tile_set = pc_lichen
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1795,7 +1732,6 @@ pc_dextro_aquifer = {
 	climate = "dry"
 	#appearance
 	picture = pc_aquifer
-	tile_set = pc_aquifer
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1817,7 +1753,6 @@ pc_dextro_lanthanide = {
 	climate = "cold"
 	#appearance
 	picture = pc_lanthanide
-	tile_set = pc_lanthanide 
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1841,7 +1776,6 @@ pc_dextro_supercon = {
 	climate = "dry"
 	#appearance
 	picture = pc_supercon
-	tile_set = pc_supercon 
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1864,7 +1798,6 @@ pc_dextro_glacio = {
 	climate = "cold"
 	#appearance
 	picture = pc_glacio
-	tile_set = pc_glacio
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1886,7 +1819,6 @@ pc_dextro_eyeball = {
 	climate = "cold"
 	#appearance
 	picture = pc_eyeball
-	tile_set = pc_eyeball 
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1910,7 +1842,6 @@ pc_dextro_rogue = {
 	climate = "cold"
 	#appearance
 	picture = pc_rogue
-	tile_set = pc_rogue
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1933,7 +1864,6 @@ pc_dextro_coral = {
 	climate = "dry"
 	#appearance
 	picture = pc_coral
-	tile_set = pc_coral
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1955,7 +1885,6 @@ pc_dextro_storm = {
 	climate = "cold"
 	#appearance
 	picture = pc_storm
-	tile_set = pc_storm
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1976,7 +1905,6 @@ pc_dextro_primal = {
 	climate = "dry"
 	#appearance
 	picture = pc_primal
-	tile_set = pc_primal
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1998,7 +1926,6 @@ pc_dextro_karst = {
 	climate = "wet"
 	#appearance
 	picture = pc_karst
-	tile_set = pc_karst
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -2020,7 +1947,6 @@ pc_dextro_superhabitable = {
 	climate = "wet"
 	#appearance
 	picture = pc_superhabitable
-	tile_set = pc_superhabitable
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -2044,7 +1970,6 @@ pc_dextro_tidallylocked = {
 	climate = "dry"
 	#appearance
 	picture = pc_tidallylocked  
-	tile_set = pc_tidallylocked 
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -2068,7 +1993,6 @@ pc_dextro_geothermal = {
 	climate = "wet"
 	#appearance
 	picture = pc_geothermal
-	tile_set = pc_geothermal
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -2090,7 +2014,6 @@ pc_dextro_biolumen = {
 	icon = GFX_planet_type_biolumen
 	climate = "wet"
 	picture = pc_biolumen
-	tile_set = pc_biolumen
 	entity_scale = @planet_standard_scale
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
@@ -2111,7 +2034,6 @@ pc_dextro_chlorine = {
 	icon = GFX_planet_type_ammonia
 	#appearance
 	picture = pc_ammonia
-	tile_set = pc_ammonia	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5

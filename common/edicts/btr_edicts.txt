@@ -5,13 +5,13 @@
 
 @EdictDuration = 3600
 
-@Biotics1Cost = 500
-@Biotics2Cost = 1000
-@Biotics3Cost = 1500
-@Biotics4Cost = 2000
-@Biotics5Cost = 2500
+# @Biotics1Cost = 500
+# @Biotics2Cost = 1000
+# @Biotics3Cost = 1500
+# @Biotics4Cost = 2000
+# @Biotics5Cost = 2500
 
-@BioticsDuration = 3600
+# @BioticsDuration = 3600
 
 # Sets the cost for all campaigns with this variable
 @campaignCost = 1000
@@ -52,162 +52,162 @@ btr_element_zero_edict_ftl = {
 	}
 }
 
-#################
-# Biotics
-#################
+# #################
+# # Biotics
+# #################
 
-btr_biotics_edict_armies = {
-	length = @BioticsDuration
-	resources = {
-		category = edicts
-		cost = {
-			btr_biotics = @Biotics2Cost
-		}
-	}
+# btr_biotics_edict_armies = {
+# 	length = @BioticsDuration
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			btr_biotics = @Biotics2Cost
+# 		}
+# 	}
 
-	modifier = {
-		army_damage_mult = 0.20
-		army_collateral_damage_mult = 0.20
-		planet_orbital_bombardment_damage = -0.20
-	}
+# 	modifier = {
+# 		army_damage_mult = 0.20
+# 		army_collateral_damage_mult = 0.20
+# 		planet_orbital_bombardment_damage = -0.20
+# 	}
 
-	potential = {
-		any_owned_pop = {
-			OR = {
-				has_trait = btr_asari_trait_biotic
-				is_species_class = PRO
-			}
-		}
-	}
+# 	potential = {
+# 		any_owned_pop = {
+# 			OR = {
+# 				has_trait = btr_asari_trait_biotic
+# 				is_species_class = PRO
+# 			}
+# 		}
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 10
-			is_at_war = yes
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = 10
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
 
-btr_biotics_edict_research = {
-	length = @BioticsDuration
-	resources = {
-		category = edicts
-		cost = {
-			btr_biotics = @Biotics3Cost
-		}
-	}
+# btr_biotics_edict_research = {
+# 	length = @BioticsDuration
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			btr_biotics = @Biotics3Cost
+# 		}
+# 	}
 
-	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.30
-	}
+# 	modifier = {
+# 		planet_jobs_physics_research_produces_mult = 0.30
+# 	}
 
-	potential = {
-		any_owned_pop = {
-			OR = {
-				has_trait = btr_asari_trait_biotic
-				is_species_class = PRO
-			}
-		}
-	}
+# 	potential = {
+# 		any_owned_pop = {
+# 			OR = {
+# 				has_trait = btr_asari_trait_biotic
+# 				is_species_class = PRO
+# 			}
+# 		}
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 10
-			is_at_war = no
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = 10
+# 			is_at_war = no
+# 		}
+# 	}
+# }
 
-btr_biotics_edict_upkeep = {
-	length = @BioticsDuration
-	resources = {
-		category = edicts
-		cost = {
-			btr_biotics = @Biotics4Cost
-		}
-	}
+# btr_biotics_edict_upkeep = {
+# 	length = @BioticsDuration
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			btr_biotics = @Biotics4Cost
+# 		}
+# 	}
 
-	modifier = {
-		#planet_jobs_energy_upkeep_mult = -0.20
-		#planet_jobs_minerals_upkeep_mult = -0.20
-		#planet_jobs_alloys_upkeep_mult = -0.10
-		#planet_jobs_consumer_goods_upkeep_mult = -0.10
-		planet_jobs_upkeep_mult = -0.10
-	}
+# 	modifier = {
+# 		#planet_jobs_energy_upkeep_mult = -0.20
+# 		#planet_jobs_minerals_upkeep_mult = -0.20
+# 		#planet_jobs_alloys_upkeep_mult = -0.10
+# 		#planet_jobs_consumer_goods_upkeep_mult = -0.10
+# 		planet_jobs_upkeep_mult = -0.10
+# 	}
 
-	potential = {
-		any_owned_pop = {
-			OR = {
-				has_trait = btr_asari_trait_biotic
-				is_species_class = PRO
-			}
-		}
-	}
+# 	potential = {
+# 		any_owned_pop = {
+# 			OR = {
+# 				has_trait = btr_asari_trait_biotic
+# 				is_species_class = PRO
+# 			}
+# 		}
+# 	}
 
-	ai_weight = {
-		weight = 10
-		modifier = {
-			OR = {
-				has_monthly_income = { resource = energy value < 0 }
-				has_monthly_income = { resource = minerals value < 0 }
-				has_monthly_income = { resource = alloys value < 0 }
-				has_monthly_income = { resource = consumer_goods value < 0 }
-			}
-			weight = 10
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 10
+# 		modifier = {
+# 			OR = {
+# 				has_monthly_income = { resource = energy value < 0 }
+# 				has_monthly_income = { resource = minerals value < 0 }
+# 				has_monthly_income = { resource = alloys value < 0 }
+# 				has_monthly_income = { resource = consumer_goods value < 0 }
+# 			}
+# 			weight = 10
+# 		}
+# 	}
+# }
 
-#Sell surplus if no other option available
-btr_biotics_edict_sell = {
-	length = 0
-	resources = {
-		category = edicts
-		cost = {
-			btr_biotics = @Biotics1Cost
-		}
-	}
+# #Sell surplus if no other option available
+# btr_biotics_edict_sell = {
+# 	length = 0
+# 	resources = {
+# 		category = edicts
+# 		cost = {
+# 			btr_biotics = @Biotics1Cost
+# 		}
+# 	}
 
-	modifier = {
-	}
+# 	modifier = {
+# 	}
 
-	effect = {
-		add_resource = {
-			energy = 1000
-		}
-	}
+# 	effect = {
+# 		add_resource = {
+# 			energy = 1000
+# 		}
+# 	}
 
-	potential = {
-		any_owned_pop = {
-			OR = {
-				has_trait = btr_asari_trait_biotic
-				is_species_class = PRO
-			}
-		}
-	}
+# 	potential = {
+# 		any_owned_pop = {
+# 			OR = {
+# 				has_trait = btr_asari_trait_biotic
+# 				is_species_class = PRO
+# 			}
+# 		}
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = 10
-			resource_stockpile_compare = {
-				resource = btr_biotics
-				value > 3500
-			}
-		}
-		modifier = {
-			weight = 5
-			resource_stockpile_compare = {
-				resource = btr_biotics
-				value > 1000
-			}
-			has_edict = btr_biotics_edict_upkeep
-			OR = {
-			has_edict = btr_biotics_edict_research
-			has_edict = btr_biotics_edict_armies
-			}
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = 10
+# 			resource_stockpile_compare = {
+# 				resource = btr_biotics
+# 				value > 3500
+# 			}
+# 		}
+# 		modifier = {
+# 			weight = 5
+# 			resource_stockpile_compare = {
+# 				resource = btr_biotics
+# 				value > 1000
+# 			}
+# 			has_edict = btr_biotics_edict_upkeep
+# 			OR = {
+# 			has_edict = btr_biotics_edict_research
+# 			has_edict = btr_biotics_edict_armies
+# 			}
+# 		}
+# 	}
+# }
