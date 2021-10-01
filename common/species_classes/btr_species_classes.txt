@@ -35,6 +35,7 @@ MECASA = {
 	resources = {}
 	
 	trait = "mec_asari_trait_core"
+	gender = no
 }
 
 HUM = { 
@@ -134,15 +135,17 @@ GTH = {
 	move_pop_sound_effect = "moving_pop_confirmation" 
 	uplifted_into = "GTH" 
 	uplifted_portraits = { "geth" } 
+	gender = no
 }
 
 COL = { 
-	archetype = BIOLOGICAL 
+	archetype = SYNTHETIC 
 	portraits = { "collector" } 
 	graphical_culture = collector_01 
 	move_pop_sound_effect = "moving_pop_confirmation" 
 	uplifted_into = "COL" 
 	uplifted_portraits = { "collector" } 
+	gender = no
 }
 
 VOR = { 
@@ -182,13 +185,14 @@ YAH = {
 }
 
 HSK = { 
-	archetype = BIOLOGICAL 
+	archetype = SYNTHETIC 
 	playable = { always = no } 
 	portraits = { "husk" } 
 	graphical_culture = mammalian_01 
 	move_pop_sound_effect = "moving_pop_confirmation" 
 	uplifted_into = "HSK" 
 	uplifted_portraits = { "husk" } 
+	gender = no
 }
 
 RAC = { 
