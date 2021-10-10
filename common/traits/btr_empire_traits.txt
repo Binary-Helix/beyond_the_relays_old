@@ -450,12 +450,48 @@ btr_geth_trait_2 = {
 # RACHNI TRAITS #
 #################
 
-btr_rachni_trait_1 = {
+btr_rachni_melodic = {
+	cost = 0
+	opposites = {
+		"trait_docile"
+		"trait_communal"
+	}
 
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.15
+		species_leader_exp_gain = 0.15
+	}
 }
 
-btr_rachni_trait_2 = {
+btr_rachni_harsh_enviroment_adaptability = {
+	cost = 0
+	opposites = {
+		"trait_adaptive"
+		"trait_extremely_adaptive"
+		"trait_nonadaptive"
+	}
 
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+
+	modifier = {
+		# These habitality stats are bound to be changed
+		pc_nuked_habitability = 0.6 
+		pc_acid_habitability = 0.6
+		pc_barren_habitability = 0.6
+		pc_volcanic_habitability = 0.6
+	}
 }
 
 #################
