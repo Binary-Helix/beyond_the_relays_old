@@ -437,11 +437,40 @@ btr_quarian_adept_engineers = {
 # GETH TRAITS #
 ###############
 
-btr_geth_trait_1 = {
+btr_geth_neural_network = {
+	cost = 0
+	opposites = {
+		"trait_robot_learning_algorithms"
+		"trait_robot_propaganda_machines"
+	}
 
+	initial = yes
+	randomized = no
+	modification = no
+
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.20
+		species_leader_exp_gain = 0.3
+	}
 }
 
-btr_geth_trait_2 = {
+btr_geth_mobile_platforms = {
+	cost = 0
+	opposites = {
+		"trait_robot_double_jointed"
+		"trait_robot_bulky"
+		"trait_robot_mass_produced"
+	}
+
+	initial = yes
+	randomized = no
+	modification = no
+
+	modifier = {
+		army_damage_mult = 0.2
+		pop_housing_usage_mult = -0.2
+		pop_assembly_speed = 0.2
+	}
 
 }
 
@@ -671,5 +700,17 @@ btr_lystheni_1 = {
 }
 
 btr_lystheni_2 = {
+
+}
+
+#################
+# DRELL  TRAITS #
+#################
+
+btr_drell_1 = {
+
+}
+
+btr_drell_2 = {
 
 }
