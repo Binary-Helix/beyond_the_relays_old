@@ -53,6 +53,13 @@ btr_minor_empire = {
 	planet_colony_development_speed_mult = -0.50
 }
 
+btr_independent_colony = {
+	science_ship_survey_speed = -1.50
+	starbase_outpost_cost_mult = 3.00
+	shipsize_starbase_outpost_build_speed_mult = -1.0
+	planet_colony_development_speed_mult = -0.75
+}
+
 btr_dextro_planet = {
 	icon = "gfx/interface/icons/planet_modifiers/dextro_planet.dds"
 	icon_frame = 1
@@ -64,10 +71,6 @@ btr_no_magnetic_field = {
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_weak_magnetic_field.dds"
 	icon_frame = 3
-}
-
-btr_independent_colony = {
-	planet_colony_development_speed_mult = -0.5
 }
 
 btr_scorching_surface = {

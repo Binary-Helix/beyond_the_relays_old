@@ -1,0 +1,219 @@
+############################
+##### TURIAN HIERARCHY #####
+############################
+
+##### APIEN CREST #####
+
+sys_trebia_init = {
+    name = "Trebia"
+    class = "sc_g"
+	flags = { outer_council_system apien_crest_system trebia_system btr_system custom_system empire_home_system }
+	
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = turian_hierarchy } 
+			save_global_event_target_as = turian_hierarchy
+		}	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1	
+
+    planet = {
+		name = "Trebia"
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 25
+		flags = { trebia_star}
+    }
+
+    planet = {
+        name = "Aventen"
+        class = "pc_hothouse"
+        orbit_distance = 30
+        orbit_angle = 11
+        has_ring = no
+        size = 13
+		flags = { aventen_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Caelax"
+        class = "pc_barren"
+        orbit_distance = 20
+        orbit_angle = 350
+        has_ring = no
+        size = 15
+		flags = { aventen_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Palaven"
+        class = "pc_dextro_arid"
+        orbit_distance = 20
+        orbit_angle = 156
+        size = 22
+		has_ring = no		
+		starting_planet = yes
+		flags = { palaven_planet pd_ignore }
+
+		deposit_blockers = none		
+		modifiers = none
+		init_effect = {
+			random_country = {
+				limit = { has_country_flag = turian_hierarchy }
+				save_global_event_target_as = turian_hierarchy
+			}
+			prevent_anomaly = yes
+			set_global_flag = turian_homeworld_spawned
+
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = turian_hierarchy } } }
+				create_species = { 
+				    name = "Turian" 
+				    class = TUR
+				    portrait = turian 
+				    homeworld = THIS 
+				    traits = { 
+						trait="btr_turian_patriotic"
+						trait="btr_turian_militaristic"
+						trait="trait_conformists"
+						trait="trait_nonadaptive"
+						trait="trait_talented"
+					} 
+				}
+				last_created_species = { save_global_event_target_as = turianSpecies }
+				create_country = {
+					name = "NAME_turian_hierarchy"
+					ship_prefix = "PRESCRIPTED_ship_prefix_turian_hierarchy"
+					type = default
+					origin = "origin_turian_hierarchy"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_distinguished_admiralty" civic = "civic_citizen_service" }
+					authority = auth_oligarchic
+					name_list = "btr_turian"
+					ethos = { ethic = "ethic_egalitarian" ethic = "ethic_militarist" ethic = "ethic_xenophile" }
+					species = event_target:turianSpecies
+					flag = {
+						icon={
+							category="masseffect"
+							file="Turian Hierarchy 2.dds"
+						}
+						background={
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors={
+							"dark_blue"
+							"grey"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = reptilian_01
+						set_country_flag = turian_hierarchy
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = turian_hierarchy
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = turian_hierarchy }
+				save_global_event_target_as = turian_hierarchy
+				species = { save_global_event_target_as = turianSpecies }
+			}
+			set_owner = event_target:turian_hierarchy
+			generate_btr_start_deposits_and_blockers = yes			
+			generate_btr_turian_hierarchy_capitol_buildings = yes
+			generate_palaven_pops = yes
+			add_deposit = d_palaven_radiation
+			add_deposit = d_palaven_cipritine
+			add_deposit = d_sercusium_river
+			set_name = "Palaven"
+		}		     
+
+        moon = {
+            name = "Menae"
+            class = "pc_dextro_arid"
+            orbit_distance = 10
+            orbit_angle = 336
+            has_ring = no
+            size = 8
+            init_effect = {
+                set_planet_flag = menae_codex
+                }
+        }
+        moon = {
+            name = "Nanus"
+            class = "pc_dextro_desert"
+            orbit_distance = 6
+            orbit_angle = 336
+            has_ring = no
+            size = 5
+            init_effect = {
+                set_planet_flag = nanus_codex
+                }
+        }		
+    }
+
+    planet = {
+        name = "Impera"
+        class = "pc_hothouse"
+        orbit_distance = 20
+        orbit_angle = 208
+        has_ring = no
+        size = 4
+        init_effect = {
+            set_planet_flag = impera_codex
+            }
+    }
+
+    planet = {
+        name = "Essenus"
+        class = "pc_gas_giant"
+        orbit_distance = 20
+        orbit_angle = 272
+        has_ring = no
+        size = 37
+        init_effect = {
+            set_planet_flag = essenus_codex
+            }
+    }
+
+    planet = {
+        name = "Datriux"
+        class = "pc_frozen"
+        orbit_distance = 20
+        orbit_angle = 209
+        has_ring = no
+        size = 18
+        init_effect = {
+            set_planet_flag = datriux_codex
+            }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "apiencrest_serpentnebula_massrelay" 
+			name = "Apien_3_Relay"
+			orbit_angle = 168 
+			orbit_distance = 200
+			
+		} 
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "apiencrest_xingyuncluster_massrelay" 
+			name = "Apien_2_Relay"
+			orbit_angle = 8 
+			orbit_distance = 240
+			
+		} 
+	}    	
+}

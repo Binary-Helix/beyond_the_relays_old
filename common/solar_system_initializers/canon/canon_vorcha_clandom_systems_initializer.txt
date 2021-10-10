@@ -1,0 +1,166 @@
+############################
+##### VORCHA CLANDOM #####
+############################
+
+##### THE SHRIKE ABYSSAL #####
+
+sys_kyzil_init = {
+    name = "Kyzil"
+    class = "sc_k"
+	flags = { terminus_system shrike_abyssal_system kyzil_system btr_system custom_system empire_home_system }
+
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = vorcha_clandom } 
+			save_global_event_target_as = vorcha_clandom
+		}	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1	
+
+    planet = {
+	    name = "Kyzil"
+        class = "pc_k_star"
+        orbit_distance = 0
+        size = 15
+		flags = { kyzil_star }
+    }
+
+    planet = {
+        name = "Naskral"
+        class = "pc_barren"
+        orbit_distance = 40
+        orbit_angle = 331
+        has_ring = no
+		size = 4
+		flags = { naskral_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Heshtok"
+        class = "pc_arid"
+        orbit_distance = 20
+        orbit_angle = 251
+        size = 9
+        has_ring = no
+		starting_planet = yes
+		modifiers = none				
+		flags = { heshtok_planet pd_ignore }
+
+		init_effect = {
+			random_country = {
+				limit = { has_country_flag = vorcha_clandom }
+				save_global_event_target_as = vorcha_clandom
+			}
+			prevent_anomaly = yes
+			set_global_flag = vorcha_homeworld_spawned
+
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = vorcha_clandom } } }
+				create_species = { 
+				    name = "Vorcha" 
+				    class = VOR
+				    portrait = vorcha 
+				    homeworld = THIS 
+				    traits = { 
+						trait="trait_repugnant"
+						trait="trait_extremely_adaptive"
+						trait="trait_quarrelsome"
+						trait="trait_fleeting"
+						trait="trait_resilient"
+					} 
+				}
+				last_created_species = { save_global_event_target_as = vorchaSpecies }
+				create_country = {
+					name = "NAME_vorcha_clandom"
+					ship_prefix = "PRESCRIPTED_ship_prefix_vorcha_clandom"
+					type = minor_empire
+					origin = "origin_vorcha_clandom"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_barbaric_despoilers" civic = "civic_warrior_culture" }
+					authority = auth_dictatorial
+					name_list = "btr_vorcha"
+					ethos = { ethic = "ethic_authoritarian" ethic = "ethic_fanatic_militarist" }
+					species = event_target:vorchaSpecies
+					flag = {
+						icon={
+							category="masseffect"
+							file="Vorcha.dds"
+						}
+						background={
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors={
+							"brown"
+							"yellow"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = reptilian_01
+						set_country_flag = vorcha_clandom
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = vorcha_clandom
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = vorcha_clandom }
+				save_global_event_target_as = vorcha_clandom
+				species = { save_global_event_target_as = vorchaSpecies }
+			}
+			set_owner = event_target:vorcha_clandom
+			generate_btr_start_deposits_and_blockers = yes			
+			generate_btr_vorcha_clandom_capitol_buildings = yes
+			generate_heshtok_pops = yes
+			set_name = "Heshtok"
+		}	
+    }
+
+    planet = {
+        name = "Parasc"
+        class = "pc_frozen"
+        orbit_distance = 20
+        orbit_angle = 165
+        has_ring = no
+		size = 5
+
+    }
+
+    planet = {
+        name = "Lihrat"
+        class = "pc_gas_giant"
+        orbit_distance = 20
+        orbit_angle = 101
+        has_ring = no
+		size = 37
+
+    }
+
+    planet = {
+        name = "Rustaka"
+        class = "pc_ice_giant"
+        orbit_distance = 20
+        orbit_angle = 113
+        has_ring = no
+		size = 29
+
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "homunculuscluster_theshrikeabyssal_massrelay" 
+			name = "Shrike_1_Relay"
+			orbit_angle = 19 
+			orbit_distance = 200
+			
+		} 
+	}	
+}

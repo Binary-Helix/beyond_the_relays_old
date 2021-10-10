@@ -167,6 +167,7 @@ origin_drell_compact = {
 	random_weight = { 
 		base = 0 
 	} 
+	starting_colony = pc_polluted
 }
 
 origin_lystheni_order = { 
@@ -179,6 +180,43 @@ origin_lystheni_order = {
 }
 
 origin_united_anhur_corporations = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+origin_wrill_mining_consortium = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+origin_relic_mineral_works = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+	starting_colony = pc_mephitic
+}
+
+origin_noveria_development_corporation = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+origin_asteria_agriculture = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
@@ -212,7 +250,6 @@ mec_asari_origin_illium = {
 	icon = "gfx/interface/icons/origins/mec_asari_origin_illium_icon.dds"
 	picture = GFX_mec_asari_origin_illium
 
-	starting_colony = pc_mec_illium
 	initializers = { sys_tasale_init }
 	max_once_global = yes
 	preferred_planet_class_neighbor = no

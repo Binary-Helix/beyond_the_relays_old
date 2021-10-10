@@ -1,0 +1,209 @@
+###############################
+##### ILLUMINATED PRIMACY #####
+###############################
+
+##### OLYN PROTECTORATE #####
+
+sys_kanala_init = {
+    name = "Kanala"
+    class = "sc_a"
+	flags = { outer_council_system olyn_protectorate_system kanala_system btr_system custom_system empire_home_system }
+
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = illuminated_primacy } 
+			save_global_event_target_as = illuminated_primacy
+		}	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1	
+
+    asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 40
+	}	
+
+    planet = {
+	    name = "Kanala"
+        class = "pc_a_star"
+        orbit_distance = 0
+        size = 20
+		flags = { kanala_star }
+    }
+
+    planet = {
+        name = "Jenakala"
+        class = "pc_barren"
+        orbit_distance = 15
+        orbit_angle = 334
+        has_ring = no
+        size = 12
+    }
+
+    planet = {
+        name = "Kahje"
+        class = "pc_ocean"
+        orbit_distance = 32
+        orbit_angle = 169
+        has_ring = no
+        size = 20
+		starting_planet = yes
+
+		deposit_blockers = none
+		modifiers = none
+		flags = { kahje_planet pd_ignore }
+
+		init_effect = {
+			random_country = {
+				limit = { has_country_flag = illuminated_primacy }
+				save_global_event_target_as = illuminated_primacy
+			}
+			prevent_anomaly = yes
+			set_global_flag = hanar_homeworld_spawned
+
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = illuminated_primacy } } }
+				create_species = { 
+				    name = "Hanar" 
+				    class = HAN
+				    portrait = hanar 
+				    homeworld = THIS 
+				    traits = { 
+						trait="trait_weak"
+						trait="trait_traditional"
+						trait="trait_communal"
+						trait="btr_hanar_bureaucratic"
+						trait="btr_hanar_spiritual"
+					} 
+				}
+				last_created_species = { save_global_event_target_as = hanarSpecies }
+				create_country = {
+					name = "NAME_illuminated_primacy"
+					ship_prefix = "PRESCRIPTED_ship_prefix_illuminated_primacy"
+					type = default
+					origin = "origin_illuminated_primacy"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_environmentalist" civic = "civic_functional_architecture" }
+					authority = auth_oligarchic
+					name_list = "btr_hanar"
+					ethos = { ethic = "ethic_pacifist" ethic = "ethic_fanatic_spiritualist" }
+					species = event_target:hanarSpecies
+					flag = {
+						icon={
+							category="masseffect"
+							file="Hanar.dds"
+						}
+						background={
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors={
+							"pink"
+							"turquoise"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = avian_01
+						set_country_flag = illuminated_primacy
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = illuminated_primacy
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = illuminated_primacy }
+				save_global_event_target_as = illuminated_primacy
+				species = { save_global_event_target_as = hanarSpecies }
+			}
+			set_owner = event_target:illuminated_primacy
+			generate_btr_start_deposits_and_blockers = yes			
+			generate_btr_illuminated_primacy_capitol_buildings = yes
+			generate_kahje_pops = yes
+			add_deposit = d_kahje_rasiil_life_dome
+			add_deposit = d_kahje_mount_vassla
+			set_name = "Kahje"
+		}			
+
+        moon = {
+            name = "Libin"
+            class = "pc_barren"
+            orbit_distance = 11
+            orbit_angle = 134
+            has_ring = no
+            size = 5
+            init_effect = {
+                set_planet_flag = libin_codex
+                }
+        }
+        moon = {
+            name = "Nalynder"
+            class = "pc_iron"
+            orbit_distance = 9
+            orbit_angle = 81
+            has_ring = no
+            size = 7
+            init_effect = {
+                set_planet_flag = nalynder_codex
+                }
+        }
+        moon = {
+            name = "Iyuhum"
+            class = "pc_iron"
+            orbit_distance = 12
+            orbit_angle = 200
+            has_ring = no
+            size = 4
+            init_effect = {
+                set_planet_flag = iyuhum_codex
+                }
+        }
+    }
+
+    planet = {
+        name = "Hohnle"
+        class = "pc_iron"
+        orbit_distance = 50
+        orbit_angle = 80
+        has_ring = no
+        size = 8
+        init_effect = {
+            set_planet_flag = hohnle_codex
+            }
+    }
+
+    planet = {
+        name = "Pohdenar"
+        class = "pc_ice_giant"
+        orbit_distance = 74
+        orbit_angle = 257
+        has_ring = no
+        size = 27
+        init_effect = {
+            set_planet_flag = pohdenar_codex
+            }
+        satellite_naming_policy = lower_case_latin_letters
+        moon = {
+            count = { min = 7 max = 9 }
+            class = random #non habitable, I dont know how to tho
+            orbit_distance = 10
+            orbit_angle = { min = 30 max = 270 }
+        }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "olinprotectorate_serpentnebula_massrelay" 
+			name = "Olin_1_Relay"
+			orbit_angle = 72 
+			orbit_distance = 200
+			
+		} 
+	}	
+}

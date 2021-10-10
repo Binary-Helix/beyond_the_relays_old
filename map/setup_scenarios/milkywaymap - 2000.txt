@@ -506,7 +506,6 @@ static_galaxy_scenario = {
             y = -203.1049
         }
         initializer = sys_refuge_init
-    prevent_hyperlane = { from = "51" to = "any" }		
     }
 
     system = {
@@ -1552,6 +1551,13 @@ static_galaxy_scenario = {
             y = 196.8419
         }
         initializer = sys_pax_init
+        spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = noveria_development_corporation
+                } 
+        } 
     }
 
     system = {
@@ -1950,6 +1956,13 @@ static_galaxy_scenario = {
             y = -38.35464
         }
         initializer = sys_relic_init
+        spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = relic_mineral_works
+                } 
+        } 
     }
 
     system = {
@@ -1975,6 +1988,13 @@ static_galaxy_scenario = {
             y = -36.16162
         }
         initializer = sys_malgus_init
+        spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = wrill_mining_consortium
+                } 
+        } 
     }
 
     system = {

@@ -1,0 +1,210 @@
+#############################
+##### BATARIAN HEGEMONY #####
+#############################
+
+##### KITE'S NEST #####
+
+sys_harsa_init = {
+    name = "Harsa"
+    class = "sc_g"
+	flags = { empire_home_system btr_batarian_hegemony_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = batarian_hegemony } 
+			save_global_event_target_as = batarian_hegemony
+		}	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 80
+	}	
+
+    planet = {
+		name = "Harsa"
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 15
+		flags = { harsa_star }
+    }
+
+    planet = {
+        name = "Dezda"
+        class = "pc_barren"
+        orbit_distance = 40
+        orbit_angle = 219
+        size = 3
+        has_ring = no
+		flags = { dezda_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Khar'shan"
+        class = "pc_continental"
+        orbit_distance = 20
+        orbit_angle = 130
+        size = 13
+        has_ring = no			
+		starting_planet = yes
+
+		deposit_blockers = none
+		modifiers = none
+		flags = { kharshan_planet pd_ignore }
+
+		init_effect = {
+			random_country = {
+				limit = { has_country_flag = batarian_hegemony }
+				save_global_event_target_as = batarian_hegemony
+			}
+			prevent_anomaly = yes
+			set_global_flag = batarian_homeworld_spawned
+
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = batarian_hegemony } } }
+				create_species = { 
+				    name = "Batarian" 
+				    class = BAT
+				    portrait = batarian 
+				    homeworld = THIS 
+				    traits = { 
+						trait="trait_decadent"
+						trait="trait_repugnant"
+						trait="trait_thrifty"
+						trait="trait_industrious"
+						trait="trait_deviants"
+					} 
+				}
+				last_created_species = { save_global_event_target_as = batarianSpecies }
+				create_country = {
+					name = "NAME_batarian_hegemony"
+					ship_prefix = "PRESCRIPTED_ship_prefix_batarian_hegemony"
+					type = default
+					origin = "origin_batarian_hegemony"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_mining_guilds" civic = "civic_slaver_guilds" }
+					authority = auth_dictatorial
+					name_list = "btr_batarian"
+					ethos = { ethic = "ethic_fanatic_authoritarian" ethic = "ethic_xenophobe" }
+					species = event_target:batarianSpecies
+					flag = {
+						icon={
+							category="masseffect"
+							file="Batarian Hegemony.dds"
+						}
+						background={
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors={
+							"dark_brown"
+							"grey"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = reptilian_01
+						set_country_flag = batarian_hegemony
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = batarian_hegemony
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = batarian_hegemony }
+				save_global_event_target_as = batarian_hegemony
+				species = { save_global_event_target_as = batarianSpecies }
+			}
+			set_owner = event_target:batarian_hegemony
+			generate_btr_start_deposits_and_blockers = yes			
+			generate_btr_batarian_hegemony_capitol_buildings = yes
+			generate_kharshan_pops = yes
+			add_deposit = d_kharshan_qnobis
+			add_deposit = d_kharshan_dizesh
+			set_name = "Khar'shan"
+		}		
+    }
+
+    planet = {
+        name = "Verush"
+        class = "pc_gas_giant"
+        orbit_distance = 50
+        orbit_angle = 223
+        has_ring = yes
+		size = 33
+		init_effect = {
+			set_planet_flag = verush_codex
+			}
+
+		moon = {
+			name = "Verush_a"
+			class = "pc_iron"
+			orbit_distance = 10
+			size = 8
+		}
+		moon = {
+			name = "Verush_b"
+			class = "pc_iron"
+			orbit_distance = 10
+			size = 4
+		}
+		moon = {
+			name = "Bira"
+			class = "pc_frozen"
+			orbit_distance = 10
+			size = 10
+			init_effect = {
+				set_planet_flag = bira_codex
+				}
+	
+		}				
+
+    }
+
+    planet = {
+        name = "Ilem"
+        class = "pc_frozen"
+        orbit_distance = 30
+        orbit_angle = 157
+        size = 5
+		init_effect = {
+			set_planet_flag = ilem_codex
+			}
+
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Spekilas"
+        class = "pc_iron"
+        orbit_distance = 30
+        orbit_angle = 97
+        size = 19
+		init_effect = {
+			set_planet_flag = spekilas_codex
+			}
+
+        has_ring = no
+
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "kitesnest_llewynnebula_massrelay" 
+			name = "Kites_Nest_1_Relay"
+			orbit_angle = 14 
+			orbit_distance = 200
+			
+		} 
+	}
+
+}
+

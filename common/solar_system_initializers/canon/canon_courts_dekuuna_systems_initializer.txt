@@ -1,0 +1,156 @@
+#############################
+##### COURTS OF DEKUUNA #####
+#############################
+
+#####SILEAN NEBULA#####
+
+
+sys_phontes_init = {
+    name = "Phontes"
+    class = "sc_g"
+	flags = { outer_council_system silean_nebula_system phontes_system btr_system custom_system empire_home_system }
+	
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = courts_of_dekuuna } 
+			save_global_event_target_as = courts_of_dekuuna
+		}	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1	
+
+    planet = {
+	    name = "Phontes"
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 20
+		flags = { phontes_star }
+    }
+	
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 105
+	}
+
+    planet = {
+        name = "Lenuamund"
+        class = "pc_barren"
+        orbit_distance = 30
+        orbit_angle = 26
+        has_ring = no
+		size = 25
+		flags = { lenuamund_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Dekuuna"
+        class = "pc_cascadian"
+        orbit_distance = 30
+        orbit_angle = 256
+        size = 25
+		has_ring = no
+		starting_planet = yes
+
+		modifiers = none
+		deposit_blockers = none		
+		flags = { dekuuna_planet pd_ignore }
+
+		init_effect = {
+			random_country = {
+				limit = { has_country_flag = courts_of_dekuuna }
+				save_global_event_target_as = courts_of_dekuuna
+			}
+			prevent_anomaly = yes
+			set_global_flag = elcor_homeworld_spawned
+
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = courts_of_dekuuna } } }
+				create_species = { 
+				    name = "Elcor" 
+				    class = ELC
+				    portrait = elcor 
+				    homeworld = THIS 
+				    traits = { 
+						trait="trait_very_strong"
+						trait="trait_nomadic"
+						trait="trait_slow_breeders"
+						trait="trait_nonadaptive"
+						trait="trait_traditional"
+					} 
+				}
+				last_created_species = { save_global_event_target_as = elcorSpecies }
+				create_country = {
+					name = "NAME_courts_of_dekuuna"
+					ship_prefix = "PRESCRIPTED_ship_prefix_courts_of_dekuuna"
+					type = default
+					origin = "origin_courts_of_dekuuna"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_environmentalist" civic = "civic_agrarian_idyll" }
+					authority = auth_oligarchic
+					name_list = "btr_elcor"
+					ethos = { ethic = "ethic_xenophile" ethic = "ethic_fanatic_pacifist" }
+					species = event_target:elcorSpecies
+					flag = {
+						icon={
+							category="masseffect"
+							file="Courts of Dekuuna.dds"
+						}
+						background={
+							category="backgrounds"
+							file="rounded_middle.dds"
+						}
+						colors={
+							"dark_teal"
+							"grey"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = avian_01
+						set_country_flag = courts_of_dekuuna
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = courts_of_dekuuna
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = courts_of_dekuuna }
+				save_global_event_target_as = courts_of_dekuuna
+				species = { save_global_event_target_as = elcorSpecies }
+			}
+			set_owner = event_target:courts_of_dekuuna
+			generate_btr_start_deposits_and_blockers = yes			
+			generate_btr_courts_of_dekuuna_capitol_buildings = yes
+			generate_dekuuna_pops = yes
+			add_deposit = d_dekuuna_unovasereng
+			add_deposit = d_dekuuna_forests
+			set_name = "Dekuuna"
+		}			
+	}
+
+    planet = {
+        name = "Telluune"
+        class = "pc_hothouse"
+        orbit_distance = 30
+        orbit_angle = 300
+        has_ring = no
+		size = 25
+
+    }
+
+    planet = {
+        name = "Sangel"
+        class = "pc_gas_giant"
+        orbit_distance = 40
+        orbit_angle = 111
+        has_ring = no
+		size = 38
+
+    }	
+}

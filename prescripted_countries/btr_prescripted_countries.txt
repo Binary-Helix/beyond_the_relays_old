@@ -4,8 +4,7 @@
 
 # Asari Republics
 mec_asarirepublics_civ={
-	playable = mec_asari_req_asr
-    name="Asari Republics"
+    name="NAME_Asari_Republics"
     name_list="mec_asari_names"
 	portrait="mec_asari"
     adjective="PRESCRIPTED_adjective_mec_asarirepublics_civ"
@@ -74,7 +73,7 @@ mec_asarirepublics_civ={
 
 # Salarian Union 
 salarian_union={
-    name="Salarian Union"
+    name="NAME_Salarian_Union"
     name_list="btr_salarian"
 	portrait="salarian"
     adjective="PRESCRIPTED_adjective_salarian_union"
@@ -142,7 +141,7 @@ salarian_union={
 
 # Turian Hierarchy
 turian_hierarchy={
-    name="Turian Hierarchy"
+    name="NAME_Turian_Hierarchy"
     name_list="btr_turian"
 	portrait="turian"
     adjective="PRESCRIPTED_adjective_turian_hierarchy"
@@ -155,12 +154,13 @@ turian_hierarchy={
 
 	authority="auth_oligarchic"
 	government="gov_citizen_stratocracy"
-	civics={ "civic_distinguished_admiralty" "civic_citizen_service" }
+	civics={ "civic_meritocracy" "civic_citizen_service" }
 
 	flags={ custom_start_screen turian_hierarchy btr_empire genophage_empire council_race }
 
-	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_egalitarian"
 	ethic="ethic_militarist"
+	ethic="ethic_xenophile"
 
 	trait="btr_turian_patriotic"
 	trait="btr_turian_militaristic"
@@ -216,7 +216,7 @@ turian_hierarchy={
 
 # Courts of Dekuuna
 courts_of_dekuuna={
-    name="Courts of Dekuuna"
+    name="NAME_Courts_of_Dekuuna"
     name_list="btr_elcor"
 	portrait="elcor"
     adjective="PRESCRIPTED_adjective_courts_of_dekuuna"
@@ -286,7 +286,7 @@ courts_of_dekuuna={
 
 # Illuminated Primacy
 illuminated_primacy={
-    name="Illuminated Primacy"
+    name="NAME_Illuminated_Primacy"
     name_list="btr_hanar"
 	portrait="hanar"
     adjective="PRESCRIPTED_adjective_illuminated_primacy"
@@ -354,7 +354,7 @@ illuminated_primacy={
 
 # Systems Alliance
 systems_alliance={
-    name="Systems Alliance"
+    name="NAME_Systems_Alliance"
     name_list="btr_systems_alliance"
 	portrait="human"
     adjective="PRESCRIPTED_adjective_systems_alliance"
@@ -424,7 +424,7 @@ systems_alliance={
 # Vol Protectorate - With Megacorp
 vol_protectorate={
 	playable = has_megacorp	
-    name="Vol Protectorate"
+    name="NAME_Vol_Protectorate"
     name_list="btr_volus"
 	portrait="volus"
     adjective="PRESCRIPTED_adjective_vol_protectorate"
@@ -493,7 +493,7 @@ vol_protectorate={
 # Vol Protectorate - no megacorp
 vol_protectorate_b={
 	playable = has_not_megacorp	
-    name="Vol Protectorate"
+    name="NAME_Vol_Protectorate"
     name_list="btr_volus"
 	portrait="volus"
     adjective="PRESCRIPTED_adjective_vol_protectorate"
@@ -566,7 +566,7 @@ vol_protectorate_b={
 
 # Batarian Hegemony
 batarian_hegemony={
-    name="Batarian Hegemony"
+    name="NAME_Batarian_Hegemony"
     name_list="btr_batarian"
 	portrait="batarian"
     adjective="PRESCRIPTED_adjective_batarian_hegemony"
@@ -636,7 +636,7 @@ batarian_hegemony={
 
 ## Cerberus
 cerberus={
-    name="Cerberus"
+    name="NAME_Cerberus"
     name_list="btr_cerberus"
 	portrait="human"
     adjective="PRESCRIPTED_adjective_cerberus"
@@ -706,7 +706,7 @@ cerberus={
 
 # Drell Compact
 drell_compact={
-    name="Drell Compact"
+    name="NAME_Drell_Compact"
     name_list="btr_drell"
 	portrait="drell"
     adjective="PRESCRIPTED_adjective_drell_compact"
@@ -717,14 +717,15 @@ drell_compact={
     species_adjective = "PRESCRIPTED_species_adjective_drell_compact"
     #species_bio="PRESCRIPTED_species_bio_drell_compact"	
 
-	authority="auth_democratic"
-	government="gov_theocratic_republic"
-	civics={ "civic_free_haven" "civic_efficient_bureaucracy" }
+	authority="auth_oligarchic"
+	government="gov_theocratic_oligarchy"
+	civics={ "civic_memorialist" "civic_diplomatic_corps" }
 
 	flags={ custom_start_screen drell_compact btr_empire btr_minor }
 
-	ethic="ethic_xenophile"
-	ethic="ethic_fanatic_spiritualist"
+	ethic="ethic_spiritualist"
+	ethic="ethic_egalitarian"
+	ethic="ethic_militarist"
 
 	trait="trait_nonadaptive"
 	trait="trait_strong"
@@ -774,7 +775,7 @@ drell_compact={
 
 # Krogan Chiefdom
 krogan_chiefdom={
-    name="Krogan Chiefdom"
+    name="NAME_Krogan_Chiefdom"
     name_list="btr_krogan"
 	portrait="krogan"
     adjective="PRESCRIPTED_adjective_krogan_chiefdom"
@@ -843,7 +844,7 @@ krogan_chiefdom={
 
 # Lystheni Order
 lystheni_order={
-    name="Lystheni Order"
+    name="NAME_Lystheni_Order"
     name_list="btr_salarian"
 	portrait="salarian"
     adjective="PRESCRIPTED_adjective_lystheni_order"
@@ -913,7 +914,7 @@ lystheni_order={
 ## Omega - with Megacorp
 omega={
 	playable = has_megacorp
-    name="Omega"
+    name="NAME_Omega"
     name_list="mec_asari_names"
 	portrait="mec_asari"
     adjective="PRESCRIPTED_adjective_omega"
@@ -983,7 +984,7 @@ omega={
 ## Omega - No Megacorp
 omega_b={
 	playable = has_not_megacorp
-    name="Omega"
+    name="NAME_Omega"
     name_list="mec_asari_names"
 	portrait="mec_asari"
     adjective="PRESCRIPTED_adjective_omega"
@@ -1052,7 +1053,7 @@ omega_b={
 
 # Quarian Conclave
 quarian_conclave={
-    name="Quarian Conclave"
+    name="NAME_Quarian_Conclave"
     name_list="btr_quarian"
 	portrait="quarian"
     adjective="PRESCRIPTED_adjective_quarian_conclave"
@@ -1126,7 +1127,7 @@ quarian_conclave={
 
 # Parnack Regime
 parnack_regime={
-    name="Parnack Regime"
+    name="NAME_Parnack_Regime"
     name_list="btr_yahg"
 	portrait="yahg"
     adjective="PRESCRIPTED_adjective_parnack_regime"
@@ -1141,7 +1142,7 @@ parnack_regime={
 	government="gov_military_dictatorship"
 	civics={ "civic_warrior_culture" "civic_barbaric_despoilers" }
 
-	flags={ custom_start_screen parnack_regime btr_empire btr_minor }
+	flags={ custom_start_screen parnack_regime btr_empire btr_minor parnack_regime_player }
 
 	ethic = "ethic_fanatic_xenophobe"
 	ethic = "ethic_militarist"
@@ -1194,7 +1195,7 @@ parnack_regime={
 
 ## Raloi Republic
 raloi_republic={
-    name="Raloi Republic"
+    name="NAME_Raloi_Republic"
     name_list="AVI4"
 	portrait="avi11"
     adjective="PRESCRIPTED_adjective_raloi_republic"
@@ -1245,7 +1246,7 @@ raloi_republic={
 	ruler={
 		gender=male
 		name="PRESCRIPTED_ruler_name_raloi_republic"
-		portrait="avi10"
+		portrait="avi11"
 		texture=4
 		hair=0
 		clothes=0
@@ -1259,7 +1260,7 @@ raloi_republic={
 
 # Vorcha Clandom
 vorcha_clandom={
-    name="Vorcha Clandom"
+    name="NAME_Vorcha_Clandom"
     name_list="btr_vorcha"
 	portrait="vorcha"
     adjective="PRESCRIPTED_adjective_vorcha_clandom"
@@ -1270,7 +1271,7 @@ vorcha_clandom={
     species_adjective = "PRESCRIPTED_species_adjective_vorcha_clandom"
     #species_bio="PRESCRIPTED_species_bio_vorcha_clandom"	
 
-	authority="auth_democratic"
+	authority="auth_dictatorial"
 	government="gov_theocratic_republic"
 	civics={ "civic_barbaric_despoilers" "civic_warrior_culture" }
 
@@ -1331,8 +1332,7 @@ vorcha_clandom={
 
 # Asari Corporate Interests
 mec_asariillium_civ={
-	playable = mec_asari_req_asi
-    name="Asari Corporate Interests"
+    name="NAME_Asari_Corporate_Interests"
     name_list="mec_asari_names"
 	portrait="mec_asari"
     adjective="PRESCRIPTED_adjective_mec_asariillium_civ"
@@ -1400,35 +1400,174 @@ mec_asariillium_civ={
 	ignore_portrait_duplication=no
 }
 
+# Noveria Development Corporation
+noveria_development_corporation={
+    name="NAME_Noveria_Development_Corporation"
+    name_list="btr_salarian"
+	portrait="salarian"
+    adjective="PRESCRIPTED_adjective_noveria_development_corporation"
+    ship_prefix="PRESCRIPTED_ship_prefix_noveria_development_corporation"
+    species_name = "PRESCRIPTED_species_name_noveria_development_corporation"
+    species_plural = "PRESCRIPTED_species_plural_noveria_development_corporation"	
+	species_class = "SAL"
+    species_adjective = "PRESCRIPTED_species_adjective_noveria_development_corporation"
+    #species_bio="PRESCRIPTED_species_bio_noveria_development_corporation"	
+
+	authority="auth_corporate"
+	government="gov_megacorporation"
+	civics={ "civic_ruthless_competition" "civic_corporate_crafters" }
+	
+	flags={ custom_start_screen noveria_development_corporation btr_empire independent_colony }
+
+	ethic = "ethic_fanatic_materialist"
+	ethic = "ethic_authoritarian"
+
+	trait="btr_salarian_shortlived"
+	trait="btr_salarian_genius"
+	trait="trait_rapid_breeders"
+	trait="trait_weak"
+	
+	origin="origin_noveria_development_corporation"	
+
+	planet_name="Noveria"
+	planet_class="pc_arctic"
+	city_graphical_culture="mammalian_01"	
+	system_name="Pax"
+	initializer="sys_pax_init"
+	graphical_culture="industrial_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="noveria.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"red"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_noveria_development_corporation"
+		portrait="salarian"
+		texture=4
+		hair=0
+		clothes=5
+		ruler_title="Administrator"
+		ruler_title_female="Administrator"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="noveria_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Relic Mineral Works
+relic_mineral_works={
+    name="NAME_Relic_Mineral_Works"
+    name_list="btr_hanar"
+	portrait="hanar"
+    adjective="PRESCRIPTED_adjective_relic_mineral_works"
+    ship_prefix="PRESCRIPTED_ship_prefix_relic_mineral_works"
+    species_name = "PRESCRIPTED_species_name_relic_mineral_works"
+    species_plural = "PRESCRIPTED_species_plural_relic_mineral_works"	
+	species_class = "HAN"
+    species_adjective = "PRESCRIPTED_species_adjective_relic_mineral_works"
+    #species_bio="PRESCRIPTED_species_bio_relic_mineral_works"	
+
+	authority="auth_corporate"
+	government="gov_megacorporation"
+	civics={ "civic_private_prospectors" "civic_public_relations_specialists" }
+
+	
+	flags={ custom_start_screen relic_mineral_works btr_empire independent_colony }
+
+	ethic = "ethic_pacifist"
+	ethic = "ethic_spiritualist"
+	ethic = "ethic_xenophile"
+
+	trait="trait_weak"
+	trait="trait_traditional"
+	trait="trait_communal"
+	trait="btr_hanar_bureaucratic"
+	trait="btr_hanar_spiritual"
+	
+	origin="origin_relic_mineral_works"	
+
+	planet_name="Rough Tide"
+	planet_class="pc_mephitic"
+	city_graphical_culture="mammalian_01"	
+	system_name="Relic"
+	initializer="sys_relic_init"
+	graphical_culture="industrial_01"
+
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_9.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"purple"
+			"red"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_relic_mineral_works"
+		portrait="hanar"
+		texture=4
+		hair=0
+		clothes=5
+		ruler_title="Chief Executive Officer"
+		ruler_title_female="Chief Executive Officer"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="hanar_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
 # United Anhur Corporations
 united_anhur_corporations={
-    name="United Anhur Corporations"
-    name_list="btr_batarian"
-	portrait="batarian"
+    name="NAME_United_Anhur_Corporations"
+    name_list="btr_systems_alliance"
+	portrait="human"
     adjective="PRESCRIPTED_adjective_united_anhur_corporations"
     ship_prefix="PRESCRIPTED_ship_prefix_united_anhur_corporations"
     species_name = "PRESCRIPTED_species_name_united_anhur_corporations"
     species_plural = "PRESCRIPTED_species_plural_united_anhur_corporations"	
-	species_class = "BAT"
+	species_class = "HUM"
     species_adjective = "PRESCRIPTED_species_adjective_united_anhur_corporations"
     #species_bio="PRESCRIPTED_species_bio_united_anhur_corporations"	
 
 	authority="auth_corporate"
 	government="gov_megacorporation"
 	civics={ "civic_indentured_assets" "civic_ruthless_competition" }
-
 	
-	flags={ custom_start_screen united_anhur_corporations btr_empire independent_colony united_anhur }
+	flags={ custom_start_screen united_anhur_corporations btr_empire independent_colony }
 
-	ethic = "ethic_authoritarian"
 	ethic = "ethic_militarist"
 	ethic = "ethic_materialist"
+	ethic = "ethic_authoritarian"
 
-	trait="trait_decadent"
-	trait="trait_repugnant"
-	trait="trait_thrifty"
-	trait="trait_industrious"
-	trait="trait_deviants"
+	trait="btr_human_flexible"
+	trait="btr_human_multicultural"
+	trait="trait_wasteful"
+	trait="trait_quick_learners"
 	
 	origin="origin_united_anhur_corporations"	
 
@@ -1458,7 +1597,7 @@ united_anhur_corporations={
 	ruler={
 		gender=male
 		name="PRESCRIPTED_ruler_name_united_anhur_corporations"
-		portrait="batarian"
+		portrait="human"
 		texture=4
 		hair=0
 		clothes=5
@@ -1472,13 +1611,85 @@ united_anhur_corporations={
 	ignore_portrait_duplication=no
 }
 
+# Wrill Mining Consortium
+wrill_mining_consortium={
+    name="NAME_Wrill_Mining_Consortium"
+    name_list="btr_krogan"
+	portrait="krogan"
+    adjective="PRESCRIPTED_adjective_wrill_mining_consortium"
+    ship_prefix="PRESCRIPTED_ship_prefix_wrill_mining_consortium"
+    species_name = "PRESCRIPTED_species_name_wrill_mining_consortium"
+    species_plural = "PRESCRIPTED_species_plural_wrill_mining_consortium"	
+	species_class = "KRO"
+    species_adjective = "PRESCRIPTED_species_adjective_wrill_mining_consortium"
+    #species_bio="PRESCRIPTED_species_bio_wrill_mining_consortium"	
+
+	authority="auth_corporate"
+	government="gov_megacorporation"
+	civics={ "civic_private_military_companies" "civic_criminal_heritage" }
+
+	flags={ custom_start_screen wrill_mining_consortium btr_empire independent_colony }
+
+	ethic = "ethic_xenophobe"
+	ethic = "ethic_materialist"
+	ethic = "ethic_militarist"
+
+	trait="btr_krogan_genophage"		
+	trait="btr_krogan_trait_core"
+	trait="trait_quarrelsome"
+	trait="trait_very_strong"
+	trait="trait_slow_learners"
+	
+	origin="origin_wrill_mining_consortium"	
+
+	planet_name="Wrill"
+	planet_class="pc_methane"
+	city_graphical_culture="mammalian_01"	
+	system_name="Malgus"
+	initializer="sys_malgus_init"
+	graphical_culture="industrial_01"
+
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_9.dds"
+		}
+		background={
+			category="backgrounds"
+			file="circle.dds"
+		}
+		colors={
+			"red"
+			"light_orange"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_wrill_mining_consortium"
+		portrait="krogan"
+		texture=4
+		hair=0
+		clothes=5
+		ruler_title="Chief Executive Officer"
+		ruler_title_female="Chief Executive Officer"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="krogan_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+
 #########################
 #### Hostile Empires ####
 #########################
 
 ## Collectors
 collectors={
-    name="The Collectors"
+    name="NAME_The_Collectors"
     name_list="btr_collectors"
 	portrait="collector"
     adjective="PRESCRIPTED_adjective_collectors"
@@ -1548,7 +1759,7 @@ collectors={
 
 # Geth Consensus
 geth_consensus={
-    name="Geth Consensus"
+    name="NAME_Geth_Consensus"
     name_list="btr_geth"
 	portrait="geth"
     adjective="PRESCRIPTED_adjective_geth_consensus"
@@ -1616,7 +1827,7 @@ geth_consensus={
 
 ## Rachni swarm
 rachni_swarm={
-    name="Rachni Swarm"
+    name="NAME_Rachni_Swarm"
     name_list="btr_collectors"
 	portrait="rachni"
     adjective="PRESCRIPTED_adjective_rachni_swarm"

@@ -1,0 +1,149 @@
+###########################
+##### CITADEL COUNCIL #####
+###########################
+
+##### SERPENT NEBULA #####
+
+sys_widow_init = {
+    name = "Widow"
+    class = "sc_b_super"
+	max_instances = 1
+	flags = { outer_council_system serpent_nebula_system widow_system btr_system custom_system empire_home_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = citadel_council } 
+			save_global_event_target_as = citadel_council
+		}
+		generate_home_system_resources = yes
+	}	
+
+	usage = custom_empire
+	max_instances = 1	
+
+    planet = {
+	    name = "Widow"
+        class = "pc_b_star"
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 1
+		flags = { widow_star }
+    }
+
+	planet = {
+		name = "The Citadel"
+		class = pc_citadel
+		orbit_distance = 100
+		orbit_angle = 215
+		size = 20
+		starting_planet = yes
+		has_ring = no
+		flags = { citadel_station special_planet }
+		init_effect = {
+			random_country = {
+				limit = { has_country_flag = citadel_council }
+				save_global_event_target_as = citadel_council
+			}			
+			prevent_anomaly = yes
+			set_global_flag = citadel_spawned
+
+			if = {
+				limit = {
+					NOT = {
+						any_country = { 
+							has_country_flag = citadel_council }
+					}
+				}
+				create_species = {
+					name = "Asari"
+					class = MECASA
+					portrait = mec_asari
+					homeworld = THIS
+					name_list = mec_asari_names
+					traits = {		
+						trait = "mec_asari_trait_core"
+						trait = "mec_asari_trait_biotic"
+						trait = "trait_charismatic"
+						trait = "mec_asari_trait_sophisticated"
+					}
+				}
+				last_created_species = { save_global_event_target_as = asariSpecies }	
+				create_country = {
+					name = "NAME_The_Citadel"
+					ship_prefix = "CSV"
+					type = btr_citadel_govt 
+					origin = origin_default
+					civics = { civic = "civic_diplomatic_corps" civic = "civic_idealistic_foundation" }
+					authority = auth_oligarchic
+					name_list = mec_asari_names
+					ethos = { ethic = "ethic_egalitarian" ethic = "ethic_xenophile" ethic = "ethic_pacifist" }
+					species = event_target:asariSpecies
+					flag = {
+						icon={
+							category="masseffectsilver"
+							file="Citadel Council.dds"
+						}
+						background={
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors={
+							"blue"
+							"grey"
+							"null"
+							"null"
+						}
+						}
+					effect = {
+						set_graphical_culture = mammalian_01
+						set_country_flag = citadel_council
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = citadel_council
+					}						
+				}
+			}
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = citadel_council }
+				save_global_event_target_as = citadel_council
+				species = { save_global_event_target_as = asariSpecies }
+			}
+			set_owner = event_target:citadel_council
+			generate_btr_start_deposits_and_blockers = yes
+			generate_btr_citadel_districts = yes
+			generate_citadel_pops = yes
+			set_planet_flag = megastructure
+			set_planet_flag = habitat
+			clear_deposits = yes
+			add_deposit = d_citadel_tower
+			add_deposit = d_presidium
+			add_deposit = d_wards
+			add_deposit = d_citadel_csec
+			add_deposit = d_keeper_workshops
+			add_deposit = d_huerta_memorial_hospital
+			add_deposit = d_purgatory_bar
+			set_name = "The Citadel"
+		}			
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "annosbasin_serpentnebula_massrelay" 
+			name = "Serpent_2_Relay"
+			orbit_angle = 6 
+			orbit_distance = 200
+			
+		} 
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "athenanebula_serpentnebula_massrelay" 
+			name = "Serpent_1_Relay"
+			orbit_angle = 48 
+			orbit_distance = 180
+			
+		} 
+	}		
+}
