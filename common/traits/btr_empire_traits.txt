@@ -354,10 +354,10 @@ btr_hanar_bureaucratic = {
 # BATARIAN TRAITS #
 ###################
 
-btr_batarian_1 = { # Social Caste System
+btr_batarian_shrewd_business = { 
 	cost = 0
 	opposites = {
-		"trait_deviants"
+		"trait_thrifty"
 	}
 
 	initial = yes
@@ -366,12 +366,27 @@ btr_batarian_1 = { # Social Caste System
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		
+		trade_value_mult = 0.15
 	}
 }
 
-btr_batarian_2 = {
-
+btr_batarian_slaving = {
+	cost = 0
+	opposites = {
+		"trait_decadent"
+	}
+	
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+	
+	modifier = {
+		pop_cat_worker_happiness = -0.1
+		pop_cat_slave_happiness = -0.15
+	}
 }
 
 ##################
