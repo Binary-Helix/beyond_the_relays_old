@@ -354,8 +354,20 @@ btr_hanar_bureaucratic = {
 # BATARIAN TRAITS #
 ###################
 
-btr_batarian_1 = {
+btr_batarian_1 = { # Social Caste System
+	cost = 0
+	opposites = {
+		"trait_deviants"
+	}
 
+	initial = yes
+	randomized = no
+	modification = yes
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		
+	}
 }
 
 btr_batarian_2 = {
@@ -435,12 +447,55 @@ btr_rachni_trait_2 = {
 # VORCHA TRAITS #
 #################
 
-btr_vorcha_1 = {
+btr_vorcha_biology = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = {
+		"trait_venerable"
+		"trait_adaptive"
+		"trait_enduring"
+		"trait_fleeting"
+		"trait_nonadaptive"
+	}
+	
+	leader_age_min = 5
+	leader_age_max = 20
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+	modifier = {
+		pop_environment_tolerance = 0.5 # maybe 0.75 depends on playtesting
+		pop_growth_speed = 0.25
+	}
 
 }
 
-btr_vorcha_2 = {
-
+btr_vorcha_warring_society = {
+	cost = 0
+	potential_crossbreeding_chance = 0.0
+	opposites = {
+		"trait_docile"
+		"trait_strong"
+		"trait_very_strong"
+		"trait_weak"
+		"trait_resilient"
+		"trait_communal"
+		"trait_solitary"
+	}
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+	modifier = {
+		army_damage_mult = 0.2
+		planet_jobs_worker_produces_mult = 0.035
+		# Not final at all
+	}
 }
 
 #################
@@ -525,5 +580,17 @@ btr_raloi_1 = {
 }
 
 btr_raloi_2 = {
+
+}
+
+####################
+# LYSTHENI  TRAITS #
+####################
+
+btr_lystheni_1 = {
+
+}
+
+btr_lystheni_2 = {
 
 }
