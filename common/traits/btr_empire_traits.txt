@@ -682,27 +682,32 @@ btr_yahg_physique = {
 	initial = yes
 	randomized = no
 	modification = no
-	
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+
 	modifier = {
 		army_damage_mult = 0.2
 		army_attack_health_mult = 0.15
 		army_defense_health_mult = 0.15
 	}
-
 }
 
 btr_yahg_keen_mind = {
 	cost = 0
 	opposites = {
 		"trait_intelligent"
+		"trait_natural_physicists"
 		"trait_natural_engineers"
-		"trait_natural_physicists
 		"trait_natural_sociologists"
 	}
 
 	initial = yes
-	randomized = yes
+	randomized = no
 	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
 
 	modifier = {
 		species_leader_exp_gain = 0.25
@@ -712,7 +717,6 @@ btr_yahg_keen_mind = {
 		intel_decryption_mult = 0.2
 		intel_encryption_mult = 0.2
 	}
-
 }
 
 #################
@@ -749,4 +753,16 @@ btr_drell_1 = {
 
 btr_drell_2 = {
 
+}
+
+#####################
+# COLLECTOR  TRAITS #
+#####################
+
+btr_collector_1 = {
+
+}
+
+btr_collector_2 = {
+	
 }
