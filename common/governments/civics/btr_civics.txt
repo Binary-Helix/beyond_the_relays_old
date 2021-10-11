@@ -1,0 +1,105 @@
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 5 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#												# Note: formula is "base + factor (default 1) * (result of modifiers)"
+#												# So to make it not spawn, set base and factor to 0
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_ship = yes / no				# default: no
+#	traits = { trait = ... }					# default: empty; trait set to enforce on the primary species. They cannot be removed, but more can be added if points/picks permit
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#	is_origin = yes / no						# default: no, set to yes if civic should be treated as an Origin
+#
+#	swap_type = {								# triggered name/desc/custom desc based on species class, no scope
+#		name = ...
+#		description = ...
+#		trigger = {
+#			local_human_species_class = ..
+#		}
+#	}
+#	ai_playable = {}							# Similar to "playable", for AI
+#}
+
+civic_btr_batarian_slaving_guilds = {
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritorian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_pleasure_seekers
+			}
+		}
+	}
+	
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		planet_jobs_slave_produces_mult = 0.2
+		country_pop_enslaved_mult = 0.3
+	}
+}
+
+civic_btr_batarian_hegenomy = {
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritorian
+				value = ethic_authoritarian
+				value = ethic_fanatic_authoritarian
+			}
+		}
+		civics = {
+			NOT = {
+				value = civic_pleasure_seekers
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		intel_encryption_add = 2
+		intel_encryption_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.15
+	}
+}
