@@ -736,24 +736,72 @@ btr_raloi_2 = {
 # LYSTHENI  TRAITS #
 ####################
 
-btr_lystheni_1 = {
-
+btr_lystheni_biotic_inclination = {
+	cost = 0
+	potential_crossbreeding_chance = 0.75
+	#opposites = { }
+	allowed_archetypes = { BIOLOGICAL }
+	initial = yes
+	modification = no
+	randomized = no
+	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_biotic.dds"
+	
+	modifier = {
+	}
+	custom_tooltip = mec_asari_trait_BIOTIC_EFFECT
+	
+	slave_cost = {
+		energy = 500
+	}
 }
 
-btr_lystheni_2 = {
+btr_lystheni_united_vision = {
+	cost = 0
+	opposites = {
+		trait_communal
+	}
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+	modification = no
+	randomized = no
+	initial = yes
 
+	modifier = {
+		planet_jobs_unity_produces_mult = 0.2
+	}
 }
 
 #################
 # DRELL  TRAITS #
 #################
 
-btr_drell_1 = {
+btr_drell_eidetic_memory = {
+	cost = 0
+	initial = yes
+	modification = no
+	randomized = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
 
+	modifier = {
+		species_leader_exp_gain = 0.25
+	}
 }
 
-btr_drell_2 = {
+btr_drell_kepral_syndrome = {
+	cost = 0
+	initial = yes
+	modification = no
+	randomized = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
 
+	modifier = {
+		#WIP	
+	}
 }
 
 #####################
