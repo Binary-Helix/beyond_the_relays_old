@@ -46,15 +46,15 @@ sys_gagarin_init = {
         has_ring = no
 		size = 25 
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			add_deposit = d_aluminum_surface
 			add_deposit = d_aluminum_surface
 			add_deposit = d_aluminum_surface
 			add_deposit = d_nickel_deposits
 			add_deposit = d_nickel_deposits
+			add_deposit = d_average_mineral_deposits
 			add_deposit = d_junthor_ruins
+			set_planet_flag = starting_deposit
 
 			# add_anomaly = {
 			# 	category = MEC_EG_ANO_JUNTHOR_1021_CAT			###Junthor Anomaly (Ancient Obelisk)
@@ -79,8 +79,6 @@ sys_gagarin_init = {
 			size = 5
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
 			}						
 		}
 
@@ -91,8 +89,8 @@ sys_gagarin_init = {
 			size = 3	
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+				add_deposit = d_average_iridium_deposits
+				add_deposit = d_average_palladium_deposits
 			}				
 		}
 
@@ -103,8 +101,7 @@ sys_gagarin_init = {
 			size = 3
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+				add_deposit = d_rich_platinum_deposits
 			}			
 		}		
     }
@@ -120,9 +117,8 @@ sys_gagarin_init = {
 		flags = { pressha_planet pd_ignore }	
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_helium_3_5
+			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 
 			add_modifier = {
@@ -141,8 +137,7 @@ sys_gagarin_init = {
 			size = 7
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 			}			
 		}
 
@@ -153,8 +148,8 @@ sys_gagarin_init = {
 			size = 8
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+				add_deposit = d_poor_palladium_deposits
+				add_deposit = d_poor_mineral_deposits
 			}
 		}
 
@@ -167,15 +162,14 @@ sys_gagarin_init = {
 			size = 9
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+				add_deposit = d_poor_iridium_deposits
 			}
 		}		
     }
 
     planet = {
         name = "Rayingri"
-        class = "pc_hadesert"
+        class = "pc_mephitic"
         orbit_distance = 40
         orbit_angle = 245
         has_ring = no
@@ -185,11 +179,12 @@ sys_gagarin_init = {
 
 		init_effect = {
 			prevent_anomaly = yes					
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_minerals_3
-			add_deposit = d_platinum_1
-			add_deposit = d_palladium_1
+
+			add_deposit = d_average_mineral_deposits
+			add_deposit = d_average_platinum_deposits
+			add_deposit = d_average_palladium_deposits
+			add_deposit = d_rich_iridium_deposits
+			add_deposit = d_trade_value_2
 			add_modifier = {
 				modifier = btr_unwise_mining_venture
 				days = -1
@@ -210,8 +205,7 @@ sys_gagarin_init = {
 
 			init_effect = {
 				prevent_anomaly = yes					
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				add_modifier = {
 					modifier = vahtz_unsurveyed_codex
 					days = -1
@@ -225,7 +219,7 @@ sys_gagarin_init = {
 
     planet = {
         name = "Sogelrus"
-        class = "pc_glacial"
+        class = "pc_cryovolcanic"
         orbit_distance = 50
         orbit_angle = 286
         has_ring = no
@@ -234,9 +228,7 @@ sys_gagarin_init = {
 		flags = { sogelrus_planet pd_ignore }
 
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			add_modifier = {
 				modifier = sogelrus_codex
 			}
@@ -254,10 +246,9 @@ sys_gagarin_init = {
 		flags = { antirumgon_planet pd_ignore }	
 
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 			
-			add_deposit = d_minerals_2
+			
+			add_deposit = d_poor_mineral_deposits
+			add_deposit = d_trade_value_1
 			set_planet_flag = starting_deposit
 			add_modifier = {
 				modifier = carbon_world
@@ -345,16 +336,6 @@ sys_gagarin_init = {
 			}			
 		}			
     }
-
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "armstrongnebula_atticanbeta_massrelay" 
-			name = "Armstrong_4_Relay"			
-			orbit_angle = 197 
-			orbit_distance = 275		
-			
-		} 
-	}	    
 }
 
 sys_grissom_init = {
@@ -414,9 +395,7 @@ sys_grissom_init = {
 		flags = { benda_planet pd_ignore }
 
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			clear_planet_modifiers = yes 	
+			add_deposit = d_rich_iridium_deposits
 			add_modifier = {
 				modifier = unstable_tectonics
 				days = -1
@@ -440,9 +419,8 @@ sys_grissom_init = {
 
 		init_effect = {
 			prevent_anomaly = yes			
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_minerals_2
+
+			add_deposit = d_average_mineral_deposits
 			add_modifier = {
 				modifier = zaherux_unsurveyed_codex
 				days = -1
@@ -458,13 +436,12 @@ sys_grissom_init = {
 
 		moon = {
 			name = "Zaherux a"
-			class = "pc_barren"
+			class = "pc_iron"
 			orbit_distance = 8
 			size = 5
 			init_effect = {
 				prevent_anomaly = yes			
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 			}	
 		}
 	}
@@ -472,17 +449,52 @@ sys_grissom_init = {
 	change_orbit = 50
 	
     planet = {
-        count = 3
         class = pc_asteroid
         orbit_distance = 0
-		orbit_angle = { min = 10 max = 190 }
+		orbit_angle = 45
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_iridium_2
+			set_planet_flag = starting_deposit
+		}		
+    }	
+
+	planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+		orbit_angle = 110
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_platinum_1
+			set_planet_flag = starting_deposit
+		}		
+    }
+
+	planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+		orbit_angle = 160
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}		
+    }
+
+	planet = {
+        class = pc_asteroid
+        orbit_distance = 0
+		orbit_angle = 160
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}		
-    }	
+    }
 	
     planet = {
         name = "Notanban"
@@ -491,10 +503,9 @@ sys_grissom_init = {
         orbit_angle = 267
         has_ring = no
 		size = 37
+		flags = { notanban_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 	
+	
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 
@@ -507,7 +518,6 @@ sys_grissom_init = {
 					days = -1
 			}
 		}
-		flags = { notanban_planet pd_ignore }		
 	
 		moon = {
 			name = "Notanban a"
@@ -518,15 +528,13 @@ sys_grissom_init = {
 
 		moon = {
 			name = "Solcrum"
-			class = "pc_salt"
+			class = "pc_iron"
 			orbit_distance = 8
-			entity = "solcrum_entity"
 			size = 11
 			flags = { solcrum pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes			
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				add_deposit = d_platinum_2
 				add_modifier = {
 					modifier = tidal_locked
@@ -548,8 +556,7 @@ sys_grissom_init = {
 			size = 4
 			init_effect = {
 				prevent_anomaly = yes			
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 			}
 
 		}
@@ -563,8 +570,7 @@ sys_grissom_init = {
 			size = 6
 			init_effect = {
 				prevent_anomaly = yes			
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 			}
 		}		
     }
@@ -576,8 +582,7 @@ sys_grissom_init = {
 		orbit_angle = { min = 10 max = 190 }
 		init_effect = {
 			prevent_anomaly = yes			
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_5
 			add_deposit = d_iridium_1
 			set_planet_flag = starting_deposit
@@ -637,9 +642,7 @@ sys_hong_init = {
 		flags = { pomal_planet pd_ignore }		
 
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			add_modifier = {
 				modifier = pomal_unsurveyed_codex
 					days = -1
@@ -660,11 +663,8 @@ sys_hong_init = {
 		size = 19
 		flags = { casbin_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			add_deposit = d_minerals_4
-			add_deposit = d_iridium_3
+
+			add_deposit = d_rich_mineral_deposits
 			set_planet_flag = starting_deposit	
 			add_modifier = {
 				modifier = casbin_unsurveyed_codex
@@ -678,16 +678,14 @@ sys_hong_init = {
 
     planet = {
         name = "Matar"
-        class = "pc_subglacial"
+        class = "pc_barren_cold"
         orbit_distance = 30
         orbit_angle = 59
         has_ring = no
 		size = 11
 		flags = { matar_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 			
+			
 			add_deposit = d_minerals_1
 			set_planet_flag = starting_deposit	
 			add_modifier = {
@@ -699,16 +697,14 @@ sys_hong_init = {
 
     planet = {
         name = "Theshaca"
-        class = "pc_gas_giant"
+        class = "pc_cloudless_gas_giant"
         orbit_distance = 30
         orbit_angle = 41
         has_ring = no
 		size = 36
 		flags = { theshaca_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit	
 			add_modifier = {
@@ -726,21 +722,22 @@ sys_hong_init = {
 			orbit_distance = 16			
 			size = 6
 			init_effect = {
-				prevent_anomaly = yes			
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+				prevent_anomaly = yes		
+				add_deposit = d_average_mineral_deposits	
+
 			}
 		}
 
 		moon = {
 			name = "Theshaca b"
-			class = "pc_frozen"
+			class = "pc_subglacial"
 			orbit_distance = 4			
 			size = 9
 			init_effect = {
 				prevent_anomaly = yes			
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+				add_deposit = d_poor_iridium_deposits
+				add_deposit = d_rich_platinum_deposits
+				add_deposit = d_poor_palladium_deposits
 			}
 		}			
 		
@@ -749,35 +746,30 @@ sys_hong_init = {
 			class = "pc_frozen"
 			orbit_distance = 4			
 			size = 4
-			init_effect = {
-				prevent_anomaly = yes			
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				set_deposit = d_minerals_2
-				set_planet_flag = starting_deposit	
-			}			
+		
 		}					
     }
 
     planet = {
         name = "Treagir"
-        class = "pc_subglacial"
+        class = "pc_cryovolcanic"
         orbit_distance = 30
         orbit_angle = 136
         has_ring = no
 		size = 3
 		flags = { treagir_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+			add_modifier = {
+				modifier = treagir_codex
+				days = -1
+			}
 		}
 	}			
 
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "armstrongnebula_nubianexpanse_massrelay" 
+			type = "armstrongnebula_yggdrasilnebula_massrelay" 
 			name = "Armstrong_3_Relay"
 			random_pos = NO 
 			orbit_distance = 320			
@@ -855,7 +847,6 @@ sys_tereshkova_init = {
 	}
 
 	planet = {
-		count = 3
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = { min = 10 max = 190 }
@@ -863,7 +854,8 @@ sys_tereshkova_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			set_deposit = d_minerals_3
+			set_deposit = d_palladium_3
+			add_deposit = d_platinum_1
 			set_planet_flag = starting_deposit
 		}
 	}
@@ -880,7 +872,7 @@ sys_tereshkova_init = {
 		init_effect = {
 			prevent_anomaly = yes	
 			clear_planet_modifiers = yes 			
-			add_deposit = d_minerals_3
+			add_deposit = d_average_mineral_deposits
 			set_planet_flag = starting_deposit	
 			add_modifier = {
 				modifier = antibaar_unsurveyed_codex
@@ -901,10 +893,8 @@ sys_tereshkova_init = {
 		size = 14
 		flags = { patamalrus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			set_deposit = d_iridium_3	
+
+			set_deposit = d_rich_iridium_deposits	
 			set_planet_flag = starting_deposit
 			add_modifier = {
 				modifier = patamalrus_codex
@@ -922,10 +912,9 @@ sys_tereshkova_init = {
 		size = 25
 		flags = { hunsalra_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1	
+			add_deposit = d_trade_value_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
 				modifier = hunsalra_codex
@@ -936,16 +925,14 @@ sys_tereshkova_init = {
 
     planet = {
         name = "Thegeuse"
-        class = "pc_hydrocarbon"
+        class = "pc_chlorine"
         orbit_distance = 45
         orbit_angle = 202
         has_ring = no
 		size = 12
 		flags = { thegeuse_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_1	
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -964,9 +951,7 @@ sys_tereshkova_init = {
 		size = 36
 		flags = { solmarlon_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2	
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -985,9 +970,7 @@ sys_tereshkova_init = {
 		size = 3
 		flags = { mawinor_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			clear_planet_modifiers = yes 	
+	
 		
 			add_modifier = {
 				modifier = low_gravity
@@ -999,17 +982,6 @@ sys_tereshkova_init = {
 			}			
 		}				
 	}
-
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "armstrongnebula_sentryomega_massrelay" 
-			name = "Armstrong_1_Relay"
-			orbit_angle = 187 
-			orbit_distance = 435			
-			
-		} 
-	}	
-	
 }
 
 sys_vamshi_init = {
@@ -1071,10 +1043,7 @@ sys_vamshi_init = {
 		size = 14
 		flags = { maji pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			set_deposit = d_minerals_3
+			set_deposit = d_rich_mineral_deposits
 			set_planet_flag = starting_deposit
 			add_modifier = {
 				modifier = maji_codex
@@ -1085,16 +1054,13 @@ sys_vamshi_init = {
 
     planet = {
         name = "Pregel"
-        class = "pc_hydrocarbon"
+        class = "pc_ethane_ocean"
         orbit_distance = 30
         orbit_angle = 202
         has_ring = no
 		size = 25
 		flags = { pregel_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_minerals_1	
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -1113,9 +1079,7 @@ sys_vamshi_init = {
 		size = 35
 		flags = { almos_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2	
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -1317,9 +1281,7 @@ sys_aysur_init = {
 		size = 12
 		flags = { agnin_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 			
+			
 			set_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
 		}
@@ -1335,8 +1297,7 @@ sys_aysur_init = {
 		flags = { shasu_planet pd_ignore }		
 		init_effect = {
 							prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -1351,9 +1312,7 @@ sys_aysur_init = {
 		size = 37
 		flags = { dranen_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			add_deposit = d_helium_3_4
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -1381,8 +1340,7 @@ sys_aysur_init = {
 			flags = { arvuna_planet pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				add_modifier = {
 					modifier = dangerous_wildlife
 					days = -1
@@ -1440,9 +1398,7 @@ sys_aysur_init = {
 		orbit_angle = 40
 		flags = { mahavid_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_3
 			set_planet_flag = starting_deposit
 		}
@@ -1457,9 +1413,7 @@ sys_aysur_init = {
 		size = 36
 		flags = { alformus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_2
 			set_planet_flag = starting_deposit
 		}
@@ -1474,9 +1428,7 @@ sys_aysur_init = {
 		size = 12
 		flags = { shir_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_2
 			set_planet_flag = starting_deposit
 		}
@@ -1491,9 +1443,7 @@ sys_aysur_init = {
 		size = 8
 		flags = { tamgauta_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_4
 			set_planet_flag = starting_deposit
 		}
@@ -1548,9 +1498,7 @@ sys_balor_init = {
 		size = 32
 		flags = { cernunnos_planet pd_ignore}
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_5
 			add_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
@@ -1565,8 +1513,7 @@ sys_balor_init = {
 			flags = { caleston_planet pd_ignore}
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_element_zero_3
 				add_deposit = d_trade_value_3
 				set_planet_flag = starting_deposit
@@ -1588,9 +1535,7 @@ sys_balor_init = {
 		size = 2
 		flags = { bres_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_4
 			set_planet_flag = starting_deposit
 		}
@@ -1605,9 +1550,7 @@ sys_balor_init = {
         size = 4		
 		flags = { elatha_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			set_planet_flag = starting_deposit
 		}
@@ -1622,9 +1565,7 @@ sys_balor_init = {
 		size = 25
 		flags = { partholon_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_4
 			set_planet_flag = starting_deposit
 		}
@@ -1655,9 +1596,7 @@ sys_solveig_init = {
         size = 25
 		flags = { solveig_star }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 
 			# add_anomaly = {
 			# 	category = MEC_EG_ANO_SOLVEIG_1051_CAT			###Solveig Anomaly (Birth of a Red Giant)
@@ -1674,9 +1613,7 @@ sys_solveig_init = {
 		size = 11
 		flags = { surtur_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_3
 			set_planet_flag = starting_deposit
 		}
@@ -1690,8 +1627,7 @@ sys_solveig_init = {
 			flags = { sinmara_planet }
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_minerals_3
 				set_planet_flag = starting_deposit
 			}
@@ -1753,9 +1689,7 @@ sys_talava_init = {
         size = 20
 		flags = { talava_star }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 
 			set_deposit = d_energy_3
 			set_planet_flag = starting_deposit
@@ -1771,9 +1705,7 @@ sys_talava_init = {
 		size = 22
 		flags = { aitarus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -1796,9 +1728,7 @@ sys_talava_init = {
 		size = 15
 		flags = { kaushus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			add_modifier = {
 				modifier = btr_unwise_mining_venture
 				days = -1
@@ -1821,9 +1751,7 @@ sys_talava_init = {
 		size = 14
 		flags = { maitrum_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_1
 			set_planet_flag = starting_deposit
 		}
@@ -1838,9 +1766,7 @@ sys_talava_init = {
 		size = 11
 		flags = { taitus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_4
 			set_planet_flag = starting_deposit
 		}
@@ -1891,9 +1817,7 @@ sys_yakawa_init = {
 		size = 25
 		flags = { sakata_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_3
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -1912,9 +1836,7 @@ sys_yakawa_init = {
 		size = 32
 		flags = { nambu_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_1
 			set_planet_flag = starting_deposit
 		}
@@ -1927,8 +1849,7 @@ sys_yakawa_init = {
 			flags = { sumiko_planet pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 
 				set_deposit = d_trade_value_2
 				set_planet_flag = starting_deposit
@@ -1965,9 +1886,7 @@ sys_yakawa_init = {
 		size = 17
 		flags = { maskawa_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_4
 			set_planet_flag = starting_deposit
 		}
@@ -1982,9 +1901,7 @@ sys_yakawa_init = {
 		size = 16
 		flags = { karumto_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_3
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -2003,9 +1920,7 @@ sys_yakawa_init = {
 		size = 29
 		flags = { kobayashi_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_4
 			add_deposit = d_exotic_gases_1
 			set_planet_flag = starting_deposit
@@ -2171,9 +2086,7 @@ sys_hoplos_init = {
 		size = 8
 		flags = { talaria_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
 		}
@@ -2188,9 +2101,7 @@ sys_hoplos_init = {
 		size = 11
 		flags = { makhaira_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_3
 			set_planet_flag = starting_deposit
 		}
@@ -2212,8 +2123,7 @@ sys_hoplos_init = {
 			flags = { kopis_planet pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_platinum_2
 				add_deposit = d_iridium_2
 				set_planet_flag = starting_deposit
@@ -2231,9 +2141,7 @@ sys_hoplos_init = {
 		size = 15
 		flags = { trident_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_element_zero_1
 			add_deposit = d_platinum_4
 			add_deposit = d_minerals_2			
@@ -2258,9 +2166,7 @@ sys_hoplos_init = {
 		size = 33
 		flags = { aegis_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 			# add_anomaly = {
@@ -2308,9 +2214,7 @@ sys_pamyat_init = {
 		size = 17
 		flags = { komarov_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_4
 			set_planet_flag = starting_deposit
 		}
@@ -2325,9 +2229,7 @@ sys_pamyat_init = {
 		size = 17
 		flags = { dobrovolski_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_5
 			add_deposit = d_platinum_4
 			add_deposit = d_palladium_2
@@ -2347,9 +2249,7 @@ sys_pamyat_init = {
 		size = 15
 		flags = { patsayev_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_2
 			add_deposit = d_alloys_2
 			set_planet_flag = starting_deposit
@@ -2365,9 +2265,7 @@ sys_pamyat_init = {
 		size = 4
 		flags = { volkov_planet pd_ignore } 
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
 		}
@@ -2444,9 +2342,7 @@ sys_sheol_init = {
 		size = 6
 		flags = { gei_hinnom_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_3
 			set_deposit = d_element_zero_1
 			set_planet_flag = starting_deposit
@@ -2512,9 +2408,7 @@ sys_century_init = {
 		size = 15
 		flags = { tamahera_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			set_planet_flag = starting_deposit
 		}
@@ -2529,9 +2423,7 @@ sys_century_init = {
 		size = 18
 		flags = { klendagon_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			add_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
@@ -2547,8 +2439,7 @@ sys_century_init = {
 			flags = { presrop_planet pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 
 				set_deposit = d_minerals_4
 				set_planet_flag = starting_deposit			
@@ -2570,9 +2461,7 @@ sys_century_init = {
 		has_ring = no
 		flags = { lukap_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			set_planet_flag = starting_deposit
 		}
@@ -2587,9 +2476,7 @@ sys_century_init = {
 		has_ring = no
 		flags = { morule_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_1
 			set_planet_flag = starting_deposit
 		}
@@ -2614,9 +2501,7 @@ sys_century_init = {
 		size = 36
 		flags = { tharopto_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -2682,9 +2567,7 @@ sys_chandrasekhar_init = {
 		size = 35
 		flags = { teshub_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -2699,9 +2582,7 @@ sys_chandrasekhar_init = {
 		size = 30
 		flags = { hebat_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			add_deposit = d_exotic_gases_1
 			set_planet_flag = starting_deposit
@@ -2751,9 +2632,7 @@ sys_schwarzschild_init = {
 		size = 13
 		flags = { atahil_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
 			# add_anomaly = {
@@ -2771,9 +2650,7 @@ sys_schwarzschild_init = {
 		size = 24
 		flags = { etamis_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_3
 			set_planet_flag = starting_deposit
 		}
@@ -2788,9 +2665,7 @@ sys_schwarzschild_init = {
 		size = 34
 		flags = { linossa_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			add_deposit = d_exotic_gases_1
 			set_planet_flag = starting_deposit
@@ -2806,9 +2681,7 @@ sys_schwarzschild_init = {
 		size = 37
 		flags = { rihali_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}
@@ -2873,9 +2746,7 @@ sys_thorne_init = {
 		size = 37
 		flags = { mnemosyne_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			add_deposit = d_engineering_4
 			set_planet_flag = starting_deposit
@@ -2890,8 +2761,7 @@ sys_thorne_init = {
 			flags = { lethe_planet pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_palladium_3
 				set_planet_flag = starting_deposit
 			}
@@ -2949,9 +2819,7 @@ sys_verr_init = {
 		size = 12
 		flags = { corang_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_4
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -2974,9 +2842,7 @@ sys_verr_init = {
 		size = 28
 		flags = { allusah_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -2991,9 +2857,7 @@ sys_verr_init = {
 		size = 37
 		flags = { serao_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3085,9 +2949,7 @@ sys_aquila_init = {
 		flags = { lepini_planet pd_ignore }
         has_ring = no
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}
@@ -3116,9 +2978,7 @@ sys_aquila_init = {
         has_ring = no
 		flags = { vecchio_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_4
 			set_planet_flag = starting_deposit
 			# add_anomaly = {
@@ -3136,9 +2996,7 @@ sys_aquila_init = {
         has_ring = no
 		flags = { volturno_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_3
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3161,9 +3019,7 @@ sys_aquila_init = {
         has_ring = no
 		flags = { metaponto_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			add_deposit = d_exotic_gases_2
 			set_planet_flag = starting_deposit
@@ -3179,9 +3035,7 @@ sys_aquila_init = {
         has_ring = no
 		flags = { pollino_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}
@@ -3236,9 +3090,7 @@ sys_elysta_init = {
         has_ring = no
 		flags = { saleas_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3257,9 +3109,7 @@ sys_elysta_init = {
         has_ring = no
 		flags = { zeona_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3282,9 +3132,7 @@ sys_elysta_init = {
         has_ring = no
 		flags = { odasst_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_4
 			set_planet_flag = starting_deposit
 		}
@@ -3299,9 +3147,7 @@ sys_elysta_init = {
         has_ring = yes
 		flags = { hesano_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 			# add_anomaly = {
@@ -3333,9 +3179,7 @@ sys_elysta_init = {
         has_ring = no
 		flags = { melile_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3351,8 +3195,7 @@ sys_elysta_init = {
 			size = 3
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_minerals_2
 				set_planet_flag = starting_deposit
 			}
@@ -3412,9 +3255,7 @@ sys_faia_init = {
         has_ring = no
 		flags = { imaen_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_4
 			add_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
@@ -3430,9 +3271,7 @@ sys_faia_init = {
         has_ring = no
 		flags = { zorya_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_4
 			set_planet_flag = starting_deposit
 		}
@@ -3465,9 +3304,7 @@ sys_faia_init = {
         has_ring = no
 		flags = { viantel_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_3
 			add_deposit = d_minerals_3
 			set_planet_flag = starting_deposit
@@ -3483,9 +3320,7 @@ sys_faia_init = {
         has_ring = no
 		flags = { hito_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_4
 			add_deposit = d_exotic_gases_1
 			set_planet_flag = starting_deposit
@@ -3565,9 +3400,7 @@ sys_herschel_init = {
 		size = 25
 		flags = { tungel_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			add_deposit = d_platinum_2
 			add_deposit = d_palladium_2
@@ -3592,9 +3425,7 @@ sys_herschel_init = {
 		size = 10
 		flags = { matol_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			
 			add_modifier = {
 				modifier = terraforming_candidate
@@ -3620,9 +3451,7 @@ sys_herschel_init = {
 		size = 26
 		flags = { clugon_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3712,9 +3541,7 @@ sys_newton_init = {
 		size = 16
 		flags = { ontarom_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_4
 			set_planet_flag = starting_deposit
 			# add_anomaly = {
@@ -3747,9 +3574,7 @@ sys_newton_init = {
 		size = 19
 		flags = { klencory_planet pd_ignore }		
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_1
 			set_planet_flag = starting_deposit
 		}
@@ -3764,9 +3589,7 @@ sys_newton_init = {
 		size = 36
 		flags = { juncro_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}
@@ -3781,9 +3604,7 @@ sys_newton_init = {
 		size = 7
 		flags = { sesmose_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 
 			set_deposit = d_trade_value_4
 			set_planet_flag = starting_deposit
@@ -3840,9 +3661,7 @@ sys_caspian_init = {
 		size = 19
 		flags = { clotanca_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_5
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3861,9 +3680,7 @@ sys_caspian_init = {
 		size = 22
 		flags = { farnuri_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_energy_1
 			set_planet_flag = starting_deposit
 		}
@@ -3878,9 +3695,7 @@ sys_caspian_init = {
 		size = 11
 		flags = { almarcrux_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_4
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -3899,9 +3714,7 @@ sys_caspian_init = {
 		size = 28
 		flags = { antida_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -3961,9 +3774,7 @@ sys_matano_init = {
 		size = 22
 		flags = { inti_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			add_modifier = {
 				modifier = tidal_locked
 				days = -1
@@ -3980,9 +3791,7 @@ sys_matano_init = {
 		size = 20
 		flags = { chasca_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_4
 			set_planet_flag = starting_deposit
 			# add_anomaly = {
@@ -4024,9 +3833,7 @@ sys_matano_init = {
 		size = 37
 		flags = { illapa_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			add_deposit = d_exotic_gases_1
 			set_planet_flag = starting_deposit
@@ -4081,9 +3888,7 @@ sys_matano_init = {
 		size = 10
 		flags = { supay_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -4148,9 +3953,7 @@ sys_vostok_init = {
 		size = 15
 		flags = { clomarthu_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -4165,9 +3968,7 @@ sys_vostok_init = {
 		size = 15
 		flags = { nodacrux_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -4194,9 +3995,7 @@ sys_vostok_init = {
 		size = 12
 		flags = { alko_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -4211,9 +4010,7 @@ sys_vostok_init = {
 		size = 26
 		flags = { pataiton_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}
@@ -4264,9 +4061,7 @@ sys_mullaxul_init = {
 		size = 21
 		flags = { maldor_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_5
 			set_planet_flag = starting_deposit
 		}			
@@ -4291,9 +4086,7 @@ sys_mullaxul_init = {
 		size = 1
 		flags = { inakhos_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_5
 			set_planet_flag = starting_deposit
 		}
@@ -4308,9 +4101,7 @@ sys_mullaxul_init = {
 		size = 37
 		flags = { keph_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -4357,9 +4148,7 @@ sys_debod_init = {
 		size = 30
 		flags = { agilkia_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}		
@@ -4391,9 +4180,7 @@ sys_kalabsha_init = {
 		size = 16
 		flags = { yamm_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_element_zero_1
 			add_deposit = d_palladium_3
 			set_planet_flag = starting_deposit
@@ -4417,9 +4204,7 @@ sys_kalabsha_init = {
 		size = 34
 		flags = { tefnut_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_4
 			add_deposit = d_exotic_gases_2
 			set_planet_flag = starting_deposit
@@ -4476,9 +4261,7 @@ sys_qertassi_init = {
 		size = 32
 		flags = { norehsa_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -4490,8 +4273,7 @@ sys_qertassi_init = {
 			size = 4
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_minerals_2
 				set_planet_flag = starting_deposit
 			}
@@ -4558,9 +4340,7 @@ sys_nx2185_init = {
         has_ring = no
 		size = 15
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_3
 			set_planet_flag = starting_deposit
 		}		
@@ -4582,9 +4362,7 @@ sys_nx2185_init = {
 		size = 36
 		flags = { 704_jawinar_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -4603,8 +4381,7 @@ sys_nx2185_init = {
 			size = 4
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_iridium_2
 				set_planet_flag = starting_deposit
 			}
@@ -4641,9 +4418,7 @@ sys_nx2176_init = {
 		size = 13		
 		flags = { nx2176I_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_4
 			set_planet_flag = starting_deposit
 		}		
@@ -4658,9 +4433,7 @@ sys_nx2176_init = {
 		size = 13	
 		flags = { nx2176II_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			set_planet_flag = starting_deposit
 		}
@@ -4675,9 +4448,7 @@ sys_nx2176_init = {
 		size = 13
 		flags = { nx2176III_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}					
@@ -4702,9 +4473,7 @@ sys_nx2176_init = {
 		size = 30
 		flags = { nx2176V_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}	
@@ -4755,9 +4524,7 @@ sys_cubseh_init = {
 		size = 6
 		flags = { qualog_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_1
 			add_deposit = d_minerals_3
 			set_planet_flag = starting_deposit
@@ -4788,9 +4555,7 @@ sys_cubseh_init = {
 		has_ring = yes
 		flags = { jarg_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}
@@ -4811,9 +4576,7 @@ sys_cubseh_init = {
 		size = 8
 		flags = { asta_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_2
 			add_deposit = d_palladium_1
 			set_planet_flag = starting_deposit
@@ -4862,9 +4625,7 @@ sys_klin_init = {
 		size = 20
 		flags = { orbid_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_3
 			add_deposit = d_platinum_2
 			add_deposit = d_palladium_3
@@ -4926,9 +4687,7 @@ sys_refuge_init = {
 		size = 15
 		flags = { agetoton_planet pd_ignore }		
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -5078,9 +4837,7 @@ sys_refuge_init = {
 		size = 29
 		flags = { zafe_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}
@@ -5151,9 +4908,7 @@ sys_dirada_init = {
 		size = 12
 		flags = { siano_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_element_zero_1
 			add_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
@@ -5173,9 +4928,7 @@ sys_dirada_init = {
 		size = 9
 		flags = { thenusi_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -5194,9 +4947,7 @@ sys_dirada_init = {
 		size = 11
 		flags = { canalus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_3
 			set_planet_flag = starting_deposit
 		}
@@ -5211,9 +4962,7 @@ sys_dirada_init = {
 		size = 35
 		flags = { zeth_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}
@@ -5228,9 +4977,7 @@ sys_dirada_init = {
 		size = 33
 		flags = { sineus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -5271,9 +5018,7 @@ sys_dirada_init = {
 		size = 28
 		flags = { vioressa_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -5328,9 +5073,7 @@ sys_kriseroi_init = {
 		size = 12
 		flags = { neidus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -5353,9 +5096,7 @@ sys_kriseroi_init = {
 		size = 25
 		flags = { theonax_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_2
 			set_planet_flag = starting_deposit
 		}		
@@ -5370,9 +5111,7 @@ sys_kriseroi_init = {
 		size = 29
 		flags = { uzin_kriseroi_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -5400,9 +5139,7 @@ sys_kriseroi_init = {
 		size = 29
 		flags = { geus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_2
 			set_planet_flag = starting_deposit
 		}	
@@ -5417,9 +5154,7 @@ sys_kriseroi_init = {
 		size = 3
 		flags = { tenoth_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			set_planet_flag = starting_deposit
 		}	
@@ -5479,9 +5214,7 @@ sys_nariph_init = {
 		size = 35
 		flags = { isale_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_5
 			set_planet_flag = starting_deposit
 		}	
@@ -5496,9 +5229,7 @@ sys_nariph_init = {
 		size = 25
 		flags = { jonus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			add_deposit = d_exotic_gases_1
 			set_planet_flag = starting_deposit
@@ -5566,9 +5297,7 @@ sys_satent_init = {
 		size = 36
 		flags = { rescel_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_1
 			set_planet_flag = starting_deposit
 		}	
@@ -5583,9 +5312,7 @@ sys_satent_init = {
 		size = 9
 		flags = { raisaris_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_element_zero_2
 			add_deposit = d_iridium_3
 			add_deposit = d_platinum_1
@@ -5604,9 +5331,7 @@ sys_satent_init = {
 		size = 7
 		flags = { anedia_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_1
 			add_deposit = d_platinum_2
 			add_deposit = d_alloys_1
@@ -5623,9 +5348,7 @@ sys_satent_init = {
 		size = 25
 		flags = { boro_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_3
 			add_deposit = d_element_zero_2
 			set_planet_flag = starting_deposit
@@ -5654,9 +5377,7 @@ sys_satent_init = {
 		size = 26
 		flags = { nataisa_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -5717,9 +5438,7 @@ sys_zaherin_init = {
 		size = 17
 		flags = { ehstag_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			add_modifier = {
 				modifier = btr_scorching_surface
 				days = -1
@@ -5737,9 +5456,7 @@ sys_zaherin_init = {
 		size = 25
 		flags = { namakli_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			prevent_anomaly = yes
 			add_modifier = {
 				modifier = bleak_planet
@@ -5824,9 +5541,7 @@ sys_zaherin_init = {
 		size = 26
 		flags = { rotesk_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}
@@ -5878,9 +5593,7 @@ sys_hoc_init = {
 		size = 35
 		flags = { jarfor_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -5899,9 +5612,7 @@ sys_hoc_init = {
 		size = 18
 		flags = { nemata_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_3
 			add_deposit = d_platinum_2
 			add_deposit = d_palladium_1
@@ -5950,9 +5661,7 @@ sys_hoc_init = {
 		size = 29
 		flags = { cloroplon_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -5967,9 +5676,7 @@ sys_hoc_init = {
 		size = 5
 		flags = { prescyla_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -6019,9 +5726,7 @@ sys_telith_init = {
 		size = 12
 		flags = { sapfir_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_element_zero_2
 			set_planet_flag = starting_deposit
 		}
@@ -6063,9 +5768,7 @@ sys_anauroch_init = {
 		size = "15"
 		flags = { thultanthar_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
 		}
@@ -6078,9 +5781,7 @@ sys_anauroch_init = {
 		size = 32
 		flags = { drannor_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_element_zero_3
 			set_planet_flag = starting_deposit
 		}
@@ -6155,9 +5856,7 @@ sys_bahanak_init = {
 		size = 26
 		flags = { mythal_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -6174,8 +5873,7 @@ sys_bahanak_init = {
 			flags = { falondin_planet pd_ignore }	
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_platinum_2
 				set_planet_flag = starting_deposit
 			}
@@ -6189,8 +5887,7 @@ sys_bahanak_init = {
 			flags = { dirthamen_planet pd_ignore }	
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_palladium_4
 				set_planet_flag = starting_deposit
 			}
@@ -6204,8 +5901,7 @@ sys_bahanak_init = {
 			flags = { andruil_planet pd_ignore }	
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_minerals_4
 				set_planet_flag = starting_deposit
 			}
@@ -6219,8 +5915,7 @@ sys_bahanak_init = {
 			flags = { sylaise_planet pd_ignore }	
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_element_zero_2
 				set_planet_flag = starting_deposit
 			}		
@@ -6234,8 +5929,7 @@ sys_bahanak_init = {
 			flags = { june_planet pd_ignore }	
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_minerals_1
 				set_planet_flag = starting_deposit
 			}
@@ -6290,9 +5984,7 @@ sys_iera_init = {
 		size = 25
 		flags = { venture_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_4
 			add_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
@@ -6308,9 +6000,7 @@ sys_iera_init = {
 		size = 32
 		flags = { prospect_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -6325,8 +6015,7 @@ sys_iera_init = {
 			size = 7
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_element_zero_1
 				set_planet_flag = starting_deposit
 			}
@@ -6338,8 +6027,7 @@ sys_iera_init = {
 			size = 3
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_platinum_3
 				set_planet_flag = starting_deposit
 			}
@@ -6351,8 +6039,7 @@ sys_iera_init = {
 			size = 2
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_iridium_2
 				set_planet_flag = starting_deposit
 			}
@@ -6388,9 +6075,7 @@ sys_iera_init = {
 		size = 14
 		flags = { watchman_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_1
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -6446,9 +6131,7 @@ sys_netheril_init = {
 		size = 16
 		flags = { netheril_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_3
 			set_planet_flag = starting_deposit
 		}
@@ -6522,9 +6205,7 @@ sys_acheron_init = {
 		size = 16
 		flags = { fathorl_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -6543,9 +6224,7 @@ sys_acheron_init = {
 		size = 11
 		flags = { altahe_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_1
 			set_planet_flag = starting_deposit
 			# add_anomaly = {
@@ -6565,8 +6244,7 @@ sys_acheron_init = {
 			flags = { ontahe_planet pd_ignore }				
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_minerals_1
 				set_planet_flag = starting_deposit
 			}
@@ -6582,9 +6260,7 @@ sys_acheron_init = {
 		size = 13
 		flags = { grosalgen_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_1
 			set_planet_flag = starting_deposit
 		}		
@@ -6640,9 +6316,7 @@ sys_erebus_init = {
 		size = 19
 		flags = { nepmos_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_3
 			add_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
@@ -6666,9 +6340,7 @@ sys_erebus_init = {
 		size = 12
 		flags = { quaji_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_platinum_2
 			set_planet_flag = starting_deposit
 		}
@@ -6683,9 +6355,7 @@ sys_erebus_init = {
 		size = 37
 		flags = { wermani_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -6700,9 +6370,7 @@ sys_erebus_init = {
 		size = 21
 		flags = { chofen_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}
@@ -6746,9 +6414,7 @@ sys_karaht_init = {
 		size = 12
 		flags = { murch_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_3
 			add_deposit = d_element_zero_1
 			set_planet_flag = starting_deposit
@@ -6762,9 +6428,7 @@ sys_karaht_init = {
 		size = 14
 		flags = { vida_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			set_planet_flag = starting_deposit
 		}
@@ -6778,9 +6442,7 @@ sys_karaht_init = {
 		flags = { nymbar_planet pd_ignore }	
 		has_ring = no
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}
@@ -6792,8 +6454,7 @@ sys_karaht_init = {
 			flags = { torfan_planet pd_ignore }	
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
+
 				set_deposit = d_minerals_2
 				set_planet_flag = starting_deposit
 			}
@@ -6808,9 +6469,7 @@ sys_karaht_init = {
 		has_ring = yes
 		flags = { flin_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -6838,9 +6497,7 @@ sys_phlegethon_init = {
 		size = 8
 		flags = { alecto_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}		
@@ -6854,9 +6511,7 @@ sys_phlegethon_init = {
 		has_ring = yes
 		flags = { tisiphone_planet pd_ignore }	
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 		}
@@ -6959,9 +6614,7 @@ sys_baldr_init = {
 		size = 17
 		flags = { mindoir_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 			set_owner = event_target:systems_alliance
@@ -6986,9 +6639,7 @@ sys_baldr_init = {
 		size = 6
 		flags = { coten_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -7029,9 +6680,7 @@ sys_brekkenz_init = {
 		size = 14
 		flags = { bil_planet pd_ignore}
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_minerals_2
 			set_planet_flag = starting_deposit
 		}
@@ -7046,9 +6695,7 @@ sys_brekkenz_init = {
 		size = 16
 		flags = { yuki_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_element_zero_2
 			set_planet_flag = starting_deposit
 		}
@@ -7088,9 +6735,7 @@ sys_fen_init = {
 		orbit_distance = 40
 		flags = { vingolf_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_2
 			set_planet_flag = starting_deposit
 		}
@@ -7121,9 +6766,7 @@ sys_fen_init = {
 		size = 12
 		flags = { lyngvi_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_palladium_2
 			add_deposit = d_platinum_2
 			set_planet_flag = starting_deposit
@@ -7158,9 +6801,7 @@ sys_hedek_init = {
 		size = 16
 		flags = { nuuk_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_iridium_3
 			set_planet_flag = starting_deposit
 		}
@@ -7173,9 +6814,7 @@ sys_hedek_init = {
 		size = 16
 		flags = { nuuk_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
+
 			set_deposit = d_helium_3_3
 			set_planet_flag = starting_deposit
 		}

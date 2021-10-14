@@ -13,14 +13,20 @@ d_aluminum_surface = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_ore_rich_caverns
-		d_submerged_caves
 	}
 
 	potential = { always = no }
 	
 	planet_modifier = { 
 		district_mining_max = 3
-	}	
+	}
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 1
+		}
+	}
 	
 	drop_weight = {
 		weight = 0
@@ -37,13 +43,15 @@ d_nickel_deposits = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_ore_rich_caverns
-		d_submerged_caves
 	}
 
 	potential = { always = no }
 	
-	planet_modifier = { 
-		mineral_rich = 1
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 1
+		}
 	}	
 	
 	drop_weight = {
@@ -83,89 +91,398 @@ d_junthor_ruins_elaborate_relief = {
 	}	
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+d_poor_mineral_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+		
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 1
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_average_mineral_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 2
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_rich_mineral_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 3
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_poor_palladium_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			palladium = 1
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_average_palladium_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			palladium = 2
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_rich_palladium_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			palladium = 3
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_poor_platinum_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+		
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			platinum = 1
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_average_platinum_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			platinum = 2
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_rich_platinum_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			platinum = 3
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_poor_iridium_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			iridium = 1
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_average_iridium_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			iridium = 2
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_rich_iridium_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			iridium = 3
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_poor_eezo_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			element_zero = 1
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_average_eezo_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			element_zero = 2
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_rich_eezo_deposits = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_minerals
+	
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_ore_rich_caverns
+	}
+
+	potential = { always = no }
+	
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			element_zero = 3
+		}
+	}	
+	
+	drop_weight = {
+		weight = 0
+	}
+}
 
 ### CRONOS STATION
 d_hydroponics_bays = {

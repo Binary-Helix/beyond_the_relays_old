@@ -1121,6 +1121,75 @@ quarian_conclave={
 	ignore_portrait_duplication=no
 }
 
+#Regdikan Collective
+regdikan_collective={
+    name="NAME_Regdikan_Collective"
+    name_list="ART3"
+	portrait="art3"
+    adjective="PRESCRIPTED_adjective_regdikan_collective"
+    ship_prefix="PRESCRIPTED_ship_prefix_regdikan_collective"
+    species_name = "PRESCRIPTED_species_name_regdikan_collective"
+    species_plural = "PRESCRIPTED_species_plural_regdikan_collective"	
+	species_class = "ART"
+    species_adjective = "PRESCRIPTED_species_adjective_regdikan_collective"
+    #species_bio="PRESCRIPTED_species_bio_quarian_conclave"	
+
+	authority = "auth_oligarchic"
+	government = "gov_holy_tribunal"
+	civics={ "civic_exalted_priesthood" "civic_slaver_guilds" }
+
+	flags={ custom_start_screen regdikan_collective btr_empire }
+
+	ethic="ethic_xenophobe"
+	ethic="ethic_authoritarian"
+	ethic="ethic_spiritualist"
+
+	trait="trait_adaptive"
+
+	
+	origin="origin_regdikan_collective"	
+
+	planet_name="Regdika"
+	planet_class="pc_dextro_desert"
+	city_graphical_culture="molluscoid_01"	
+	system_name="Raheel-Leyya"
+	initializer="sys_nosikae_init"
+	graphical_culture="humanoid_01"
+	advisor_voice_type="l_hivemind"	
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Migrant Fleet.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_regdikan_collective"
+		portrait = "art3"
+		texture = 0
+		hair = 0
+		clothes = 0
+		ruler_title="First Admiral"
+		ruler_title_female="First Admiral"
+		leader_class = "ruler"
+	}
+	spawn_enabled=always
+	room="quarian_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
 ###########################
 #### Fledgling Empires ####
 ###########################
