@@ -217,3 +217,112 @@ sys_trebia_init = {
 		} 
 	}    	
 }
+
+##### CALESTON RIFT ######
+sys_talava_init = {
+    name = "Talava"
+    class = "sc_f"
+	max_instances = 1
+
+	flags = { attican_traverse_system caleston_rift_system talava_system btr_system custom_system }
+
+    planet = {
+	    name = "Talava"
+        class = "pc_f_star"
+        orbit_distance = 0
+        size = 20
+		flags = { talava_star }
+		init_effect = {
+			set_deposit = d_energy_3
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Aitarus"
+        class = "pc_barren"
+        orbit_distance = 30
+        orbit_angle = 304
+        has_ring = no
+		size = 22
+		flags = { aitarus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
+	}	
+
+    planet = {
+        name = "Kaushus"
+        class = "pc_volcanic"
+        orbit_distance =25
+        orbit_angle = 177
+        has_ring = no
+		size = 15
+		flags = { kaushus_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Maitrum"
+        class = "pc_pd_barren_hab"
+        orbit_distance = 35
+        orbit_angle = 293
+        has_ring = no
+		size = 14
+		flags = { maitrum_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_poor_mineral_deposits
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Taitus"
+        class = "pc_mephitic"
+        orbit_distance = 30
+        orbit_angle = 142
+        has_ring = no
+		size = 11
+		flags = { taitus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_average_iridium_deposits
+			add_deposit = d_average_platinum_deposits
+			add_deposit = d_rich_platinum_deposits
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "calestonrift_hawkingeta_massrelay" 
+			name = "Caleston_5_Relay"
+			orbit_angle = 194 
+			orbit_distance = 175
+			
+		} 
+	}		
+}

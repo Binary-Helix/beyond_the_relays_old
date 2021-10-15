@@ -2,6 +2,139 @@
 ##### BLUE SUNS #####
 #####################
 
+##### ISMAR FRONTIER #####
+
+sys_faia_init = {
+    name = "Faia"
+    class = "sc_g"
+	max_instances = 1
+
+    flags = { attican_traverse_system ismar_frontier_system faia_system btr_system custom_system }
+	
+    planet = {
+		name = "Faia"
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 18
+		flags = { faia_star }
+    }
+
+    planet = {
+        name = "Imaen"
+        class = "pc_barren"
+        orbit_distance = 30
+        orbit_angle = 210
+        size = 5
+        has_ring = no
+		flags = { imaen_planet pd_ignore }
+		init_effect = {
+
+			set_deposit = d_iridium_4
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Zorya"
+        class = "pc_cenote"
+        orbit_distance = 50
+        orbit_angle = 319
+        size = 15
+        has_ring = no
+		flags = { zorya_planet pd_ignore }
+		init_effect = {
+
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Utrenn"
+			class = "pc_hydrocarbon"
+			orbit_angle = 254
+			orbit_distance = 8
+			size = 5
+			flags = { utrenn_planet pd_ignore }
+
+		}
+		moon = {
+			name = "Vechern"
+			class = "pc_iron"
+			orbit_angle = 16
+			orbit_distance = 8
+			size = 4
+			flags = { vechern_planet pd_ignore }
+
+		}		
+    }
+
+    planet = {
+        name = "Viantel"
+        class = "pc_frozen"
+        orbit_distance = 60
+        orbit_angle = 235
+        size = 3
+        has_ring = no
+		flags = { viantel_planet pd_ignore }
+		init_effect = {
+
+			set_deposit = d_platinum_3
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Hito"
+        class = "pc_gas_giant"
+        orbit_distance = 50
+        orbit_angle = 115
+        size = 27
+        has_ring = no
+		flags = { hito_planet pd_ignore }
+		init_effect = {
+
+			set_deposit = d_helium_3_4
+			add_deposit = d_exotic_gases_1
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Hito a"
+			class = "pc_frozen"
+			orbit_angle = 90
+			orbit_distance = 8
+			size = 7
+		}	
+		moon = {
+			name = "Hito b"
+			class = "pc_iron"
+			orbit_angle = 210
+			orbit_distance = 6
+			size = 5
+		}
+		moon = {
+			name = "Hito c"
+			class = "pc_subglacial"
+			orbit_angle = 90
+			orbit_distance = 8
+			size = 6
+		}		
+	}
+    
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "ismarfrontier_theshrikeabyssal_massrelay" 
+			name = "Ismar_Frontier_4_Relay"
+			orbit_angle = 54
+			orbit_distance = 220
+			
+		} 
+	}	
+	
+}
+
+
+
 #####EAGLE NEBULA#####
 
 sys_imir_init = {
