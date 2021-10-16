@@ -3166,7 +3166,7 @@ sys_belas_init = {
 
 sys_osari_init = {
     name = "Osari"
-    class = "sc_b_star"
+    class = "sc_b"
 	max_instances = 1
 
     flags = { attican_traverse_system hindara_globular_system osari_system btr_system custom_system }
@@ -3239,7 +3239,7 @@ sys_osari_init = {
 
 sys_plenesh_init = {
     name = "Plenesh"
-    class = "sc_a_star"
+    class = "sc_a"
 	max_instances = 1
 
     flags = { attican_traverse_system hindara_globular_system plenesh_system btr_system custom_system }
@@ -3292,7 +3292,7 @@ sys_plenesh_init = {
 
 sys_ranbaas_init = {
     name = "Ran'baas"
-    class = "sc_m_star"
+    class = "sc_m"
 	max_instances = 1
 
     flags = { attican_traverse_system hindara_globular_system ranbaas_system btr_system custom_system }
@@ -12782,6 +12782,91 @@ sys_gemmae_init = {
 }
 
 #Trebia is in Turian Hierarchy Initializer
+
+
+#####JORMUN'S AEGIR#####
+
+sys_horu_init = {
+    name = "Horu"
+    class = "sc_g"
+
+    planet = {
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 20
+    }
+
+    planet = {
+        name = "Sintor"
+        class = "pc_barren"
+        orbit_distance = 47
+        orbit_angle = 337
+		size = 10
+		has_ring = no
+
+    }
+
+    planet = {
+        name = "Tactack"
+        class = "pc_barren"
+        orbit_distance = 24
+        orbit_angle = 132
+		size = 7
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Vern"
+        class = "pc_acid"
+        orbit_distance = 17
+        orbit_angle = 155
+		size = 14
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Bumar"
+        class = "pc_carbon"
+        orbit_distance = 18
+        orbit_angle = 282
+		size = 9
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Drodtar"
+        class = "pc_gas_giant"
+        orbit_distance = 22
+        orbit_angle = 213
+		size = 36
+        has_ring = no
+
+    }
+
+    planet = {
+        name = "Wuska"
+        class = "pc_ice_giant"
+        orbit_distance = 18
+        orbit_angle = 326
+		size = 28
+        has_ring = yes
+
+    }
+
+    planet = {
+        name = "Piyax"
+        class = "pc_gas_giant"
+        orbit_distance = 30
+        orbit_angle = 147
+		size = 34
+        has_ring = yes
+
+    }
+}
+
 
 
 #####KROGAN DMZ#####
