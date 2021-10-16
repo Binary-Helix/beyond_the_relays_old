@@ -336,8 +336,8 @@ sys_relic_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_platinum_3
-			add_deposit = d_alloys_1
+			set_deposit = d_average_platinum_deposits
+			add_deposit = d_trade_value_2
 			set_planet_flag = starting_deposit
 			prevent_anomaly = yes
 			create_country = {
@@ -404,9 +404,9 @@ sys_relic_init = {
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
 
-			# add_anomaly = {
-			# 	category = MEC_EG_ANO_PREYINGMOUTH_1061_CAT			###Preying Mouth (Lost Ships)
-			# }
+			add_anomaly = {
+				category = MEC_EG_ANO_PREYINGMOUTH_1061_CAT			###Preying Mouth (Lost Ships)
+			}
 		}		
     }
 
@@ -437,8 +437,8 @@ sys_relic_init = {
 	
     init_effect = { 
 		spawn_megastructure = { 
-			type = "eaglenebula_oshibkacliff_massrelay" 
-			name = "Eagle_5_Relay"
+			type = "eaglenebula_atticanalpha_massrelay" 
+			name = "Eagle 1 Relay"
 			random_pos = NO 
 			orbit_distance = 500
 			
@@ -567,9 +567,7 @@ sys_hekate_init = {
 		flags = { ker_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			set_deposit = d_minerals_1
+			set_deposit = d_poor_mineral_deposits
 			set_planet_flag = starting_deposit
     	}
 	}
@@ -609,8 +607,6 @@ sys_hekate_init = {
 			size = 2
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
 				set_deposit = d_platinum_2
 				set_planet_flag = starting_deposit
 			}
@@ -651,8 +647,6 @@ sys_hekate_init = {
 			size = 1
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
 				set_deposit = d_minerals_1
 				set_planet_flag = starting_deposit
 			}
@@ -686,8 +680,6 @@ sys_hekate_init = {
 			size = 1
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
 				set_deposit = d_platinum_1
 				set_planet_flag = starting_deposit
 			}
@@ -714,8 +706,6 @@ sys_hekate_init = {
 			size = 1
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
 				set_deposit = d_palladium_1
 				set_planet_flag = starting_deposit
 			}
@@ -732,8 +722,6 @@ sys_hekate_init = {
 		flags = { bothros_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_element_zero_1
 			add_deposit = d_platinum_4
 			set_planet_flag = starting_deposit
@@ -813,8 +801,6 @@ sys_amun_init = {
 		flags = { sekhmet_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_element_zero_2
 			add_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
@@ -832,8 +818,6 @@ sys_amun_init = {
 		flags = { sobek_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_helium_3_2
 			add_deposit = d_palladium_1
 			set_planet_flag = starting_deposit
@@ -861,9 +845,6 @@ sys_amun_init = {
 			size = 6
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-
 				set_deposit = d_minerals_2
 				set_planet_flag = starting_deposit
 			}
@@ -887,9 +868,6 @@ sys_amun_init = {
 			size = 4
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-
 				set_deposit = d_minerals_2
 				set_planet_flag = starting_deposit
 			}
@@ -904,8 +882,6 @@ sys_amun_init = {
 			size = 8
 			init_effect = {
 				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
 				set_deposit = d_minerals_4
 				set_planet_flag = starting_deposit
 			}			
@@ -997,9 +973,9 @@ sys_amun_init = {
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_anhur_start_buildings = yes
 			generate_anhur_pops = yes
-			set_deposit = d_element_zero_3
-			add_deposit = d_platinum_5
-			add_deposit = d_minerals_4
+			set_deposit = d_rich_eezo_deposits
+			add_deposit = d_rich_platinum_deposits
+			add_deposit = d_rich_mineral_deposits
 			set_planet_flag = starting_deposit
 			set_name = "Anhur"
 		}
@@ -1015,9 +991,8 @@ sys_amun_init = {
 		flags = { neith_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_iridium_5
+			add_deposit = d_trade_value_1
 			set_planet_flag = starting_deposit
 		}
 		moon = {
@@ -1040,8 +1015,6 @@ sys_amun_init = {
 		flags = { bast_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}
@@ -1068,8 +1041,8 @@ sys_amun_init = {
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "eaglenebula_nemeanalpha_massrelay" 
-			name = "Eagle_1_Relay"
+			type = "eaglenebula_crescentnebula_massrelay" 
+			name = "Eagle 5 Relay"
 			random_pos = NO 
 			orbit_distance = 275
 			
@@ -1131,8 +1104,6 @@ sys_malgus_init = {
 		flags = { uzin_malgus_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_helium_3_1
 			set_planet_flag = starting_deposit
 		}		
@@ -1240,7 +1211,7 @@ sys_malgus_init = {
 			set_owner = event_target:wrill_mining_consortium
 			generate_btr_start_deposits_and_blockers = yes
 			generate_wrill_pops = yes
-			set_deposit = d_minerals_4
+			set_deposit = d_rich_mineral_deposits
 			set_planet_flag = starting_deposit
 			set_name = "Wrill"
     	}
@@ -1256,31 +1227,20 @@ sys_malgus_init = {
 		flags = { flett_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
-			set_deposit = d_palladium_5
+			set_deposit = d_rich_palladium_deposits
 			set_planet_flag = starting_deposit
 		}
     }
 	
     init_effect = { 
 		spawn_megastructure = { 
-			type = "eaglenebula_crescentnebula_massrelay" 
-			name = "Eagle_3_Relay"
+			type = "eaglenebula_bulucnebula_massrelay" 
+			name = "Eagle 4 Relay"
 			random_pos = NO 
 			orbit_distance = 145
 			
 		} 
     }	
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "eaglenebula_bulucnebula_massrelay" 
-			name = "Eagle_4_Relay"
-			orbit_angle = 84
-			orbit_distance = 180
-			
-		} 
-	}    		
 }
 
 ###################################
@@ -1390,6 +1350,7 @@ sys_hoplos_init = {
 			set_deposit = d_poor_eezo_deposits
 			add_deposit = d_poor_iridium_deposits
 			add_deposit = d_poor_mineral_deposits
+			add_deposit = d_trade_value_5
 			set_planet_flag = starting_deposit
 			add_modifier = {
 				modifier = hazardous_weather
@@ -1500,6 +1461,7 @@ sys_pamyat_init = {
 		flags = { volkov_planet pd_ignore } 
 		init_effect = {
 			set_deposit = d_rich_iridium_deposits
+			add_deposit = d_trade_value_3
 			set_planet_flag = starting_deposit
 		}
 		moon = {

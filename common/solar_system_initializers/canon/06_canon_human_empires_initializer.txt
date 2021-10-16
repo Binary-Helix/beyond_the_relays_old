@@ -351,17 +351,77 @@ sys_sol_init = {
 	}
 }
 
+sys_baldr_init = {
+    name = "Baldr"
+    class = "sc_y"
+	max_instances = 1
 
+	flags = { attican_traverse_system yggdrasil_nebula_system baldr_system btr_system custom_system }
+	
+    planet = {
+		name = "Baldr"
+        class = "pc_m_star"
+        orbit_distance = 0
+        size = 28
+		flags = { baldr_star }
+    }
 
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 70
+	}
 
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 140
+	}	
 
+	planet = {
+		name = "Mindoir"
+		class = "pc_boreal"
+		orbit_distance = 40
+		size = 17
+		flags = { mindoir_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_average_mineral_deposits
+			set_planet_flag = starting_deposit
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			while = {
+				count = 7
+				create_pop = {
+					species = owner_main_species
+				}
+			}			
+		}
+	}
 
+	planet = {
+		name = "Coten"
+		class = "pc_iron"
+		orbit_angle = 45
+		size = 6
+		flags = { coten_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+	}	
 
-
-
-
-
-
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "yggdrasilnebula_atticanbeta_massrelay" 
+			name = "Yggdrasil 1 Relay"
+			random_pos = NO 
+			orbit_distance = 180
+			
+		} 
+	}	
+}
 
 ####################
 ##### CERBERUS #####
@@ -650,9 +710,9 @@ sys_dakka_init = {
 				clear_deposits = yes
 				clear_planet_modifiers = yes
 
-				# add_anomaly = {
-				# 	category = MEC_EG_ANO_GIGULA_1171_CAT			###Gigula Anomaly (Ancient Starship)
-				# }
+				add_anomaly = {
+					category = MEC_EG_ANO_GIGULA_1171_CAT			###Gigula Anomaly (Ancient Starship)
+				}
 			}
 		}		
     }

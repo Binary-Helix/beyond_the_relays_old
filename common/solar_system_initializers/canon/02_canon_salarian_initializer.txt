@@ -251,8 +251,6 @@ sys_strabo_init = {
 		flags = { antigar_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			clear_planet_modifiers = yes 
 			set_deposit = d_helium_3_2
 			set_planet_flag = starting_deposit
 			add_modifier = {
@@ -385,7 +383,7 @@ sys_strabo_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "eaglenebula_minoswasteland_massrelay" 
-			name = "Eagle_6_Relay"
+			name = "Eagle 3 Relay"
 			random_pos = NO 
 			orbit_distance = 250
 			

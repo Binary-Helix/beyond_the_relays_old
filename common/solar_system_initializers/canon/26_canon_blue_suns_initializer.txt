@@ -44,8 +44,8 @@ sys_faia_init = {
         has_ring = no
 		flags = { zorya_planet pd_ignore }
 		init_effect = {
-
-			set_deposit = d_minerals_4
+			set_deposit = d_rich_mineral_deposits
+			add_deposit = d_trade_value_1
 			set_planet_flag = starting_deposit
 		}
 		moon = {
@@ -77,9 +77,9 @@ sys_faia_init = {
         has_ring = no
 		flags = { viantel_planet pd_ignore }
 		init_effect = {
-
 			set_deposit = d_platinum_3
 			add_deposit = d_minerals_3
+			add_deposit = d_trade_value_3
 			set_planet_flag = starting_deposit
 		}
     }
@@ -208,12 +208,13 @@ sys_imir_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_iridium_1
-			add_deposit = d_platinum_1
-			add_deposit = d_palladium_1
-			add_deposit = d_element_zero_1
+			set_deposit = d_poor_iridium_deposits
+			add_deposit = d_poor_platinum_deposits
+			add_deposit = d_poor_palladium_deposits
+			add_deposit = d_poor_eezo_deposits
 			add_deposit = d_helium_3_1
-			add_deposit = d_minerals_1
+			add_deposit = d_poor_mineral_deposits
+			add_deposit = d_trade_value_2
 			set_planet_flag = starting_deposit
     	}
 	}
@@ -263,11 +264,10 @@ sys_imir_init = {
     }
     init_effect = { 
 		spawn_megastructure = { 
-			type = "eaglenebula_serpentnebula_massrelay" 
-			name = "Eagle_2_Relay"
+			type = "eaglenebula_vesuviusnebula_massrelay" 
+			name = "Eagle 2 Relay"
 			random_pos = NO 
 			orbit_distance = 275
-			
 		} 
 	}	    
 }
