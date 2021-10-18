@@ -2068,6 +2068,29 @@ mkalipool_horseheadnebula_massrelay = {
 	bypass_type = massrelay_horseheadnebula_mkalipool
 }
 
+#massrelay_horseheadnebula_vasdirigap
+horseheadnebula_vasdirigap_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_horseheadnebula_vasdirigap
+}
+
+vasdirigap_horseheadnebula_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_horseheadnebula_vasdirigap
+}
+
 #massrelay_hourglassnebula_omeganebula
 hourglassnebula_omeganebula_massrelay = {
 	entity = "MEC_mass_relay_gateway_01_entity"

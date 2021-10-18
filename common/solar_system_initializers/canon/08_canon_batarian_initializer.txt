@@ -198,8 +198,8 @@ sys_harsa_init = {
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "kitesnest_llewynnebula_massrelay" 
-			name = "Kites_Nest_1_Relay"
+			type = "kitesnest_lobartercluster_massrelay" 
+			name = "Kite's Nest 1 Relay"
 			orbit_angle = 14 
 			orbit_distance = 200
 			
@@ -208,3 +208,189 @@ sys_harsa_init = {
 
 }
 
+sys_indris_init = {
+    name = "Indris"
+    class = "sc_k"
+	max_instances = 1
+
+	flags = { alliance_space_system kites_nest_system indris_system btr_system custom_system }
+
+    planet = {
+		name = "Indris"
+        class = "pc_k_star"
+        orbit_distance = 0
+        size = 20
+		flags = { indris_star }
+    }
+
+    planet = {
+        name = "Cholis"
+        class = "pc_hothouse"
+        orbit_distance = 42
+        orbit_angle = 323
+        size = 24
+		has_ring = no
+		flags = { cholis_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Camala"
+        class = "pc_oasis"
+        orbit_distance = 25
+        orbit_angle = 71
+        size = 12
+		has_ring = no
+		flags = { camala_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_rich_eezo_deposits
+			add_deposit = d_rich_eezo_deposits
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Ramlat"
+        class = "pc_iron"
+        orbit_distance = 30
+        orbit_angle = 98
+        size = 11
+		has_ring = no
+		flags = { ramlat_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Hiba"
+        class = "pc_gas_giant"
+        orbit_distance = 33
+        orbit_angle = 186
+        size = 34
+		has_ring = yes
+		flags = { hiba_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
+    }
+
+	planet = {
+        name = "Kaver Station"
+        class = "pc_habitat"
+        orbit_distance = 33
+        orbit_angle = 186
+        size = 5
+		has_ring = no
+		flags = { kaver_station pd_ignore }
+    }
+
+    planet = {
+        name = "Maklan"
+        class = "pc_methane"
+        orbit_distance = 63
+        orbit_angle = 138
+        size = 9
+		has_ring = no
+		flags = { maklan_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_average_iridium_deposits
+			add_deposit = d_average_palladium_deposits
+			set_planet_flag = starting_deposit
+		}
+    }
+}
+
+sys_koshlanhk_init = {
+    name = "Koshlanhk"
+    class = "sc_m"
+	max_instances = 1
+
+	flags = { alliance_space_system kites_nest_system koshlanhk_system btr_system custom_system }
+
+    planet = {
+    name = "Koshlanhk"
+        class = "pc_m_star"
+        orbit_distance = 0
+        size = 20
+		flags = { koshlankh_star }
+    }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 225
+		}
+		
+	planet = {
+		name = "Naribnost"
+		class = "pc_diamond"
+		orbit_distance = 35
+		size = 6
+		has_ring = no
+		flags = { naribnost_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_2
+			add_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
+		}
+	}
+
+	planet = {
+		name = "Larklesh"
+		class = "pc_ammonia"
+		orbit_distance = 100
+		size = 18
+		has_ring = yes
+		flags = { larklesh_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}		
+	}
+
+	planet = {
+		name = "Khuramna"
+		class = "pc_ice_giant"
+		orbit_distance = 135
+		size = 31
+		has_ring = no
+		flags = { khuramna_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}			
+		moon = {  
+			name = "Khuramna a"
+			class = "pc_asteroid"
+			orbit_distance = 6
+			size = 2
+		}	
+		moon = {
+			name = "Khuramna b"
+			class = "pc_asteroid"
+			orbit_distance = 3
+			size = 2
+		}	
+		moon = {
+			name = "Khuramna Station"
+			class = "pc_habitat"
+			orbit_distance = 4
+			size = 2
+			init_effect = {
+				set_deposit = d_trade_value_4
+				set_planet_flag = starting_deposit
+			}
+		}	
+	}
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "kitesnest_petranebula_massrelay" 
+			name = "Kite's Nest 2 Relay"
+			orbit_angle = 56 
+			orbit_distance = 200
+			
+		} 
+	}		
+}
