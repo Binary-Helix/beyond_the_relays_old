@@ -147,3 +147,153 @@ sys_widow_init = {
 		} 
 	}		
 }
+
+#####ARGOS RHO#####
+
+sys_phoenix_init = {
+    name = "Phoenix"
+    class = "sc_f"
+	max_instances = 1  
+
+	flags = { alliance_space_system argos_rho_system phoenix_system btr_system custom_system }	
+
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 60
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 225
+	}
+	
+
+    planet = {
+        class = "pc_f_star"
+        orbit_distance = 0
+        size = 30
+		flags = { phoenix_star }
+    }
+
+    planet = {
+        name = "Patashi"
+        class = "pc_molten"
+        orbit_distance = 40
+        orbit_angle = 319
+        has_ring = no
+		size = 17
+		flags = { patashi_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit	
+			add_modifier = {
+				modifier = tidal_locked
+				days = -1
+			}	
+	    }
+    }
+
+    planet = {
+        name = "Sylsalto"
+        class = "pc_ice_giant"
+        orbit_distance = 40
+        orbit_angle = 258
+        has_ring = no
+		size = 34
+		flags = { sylsalto_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit	
+	    }
+    }
+
+    planet = {
+        name = "Intai'sei"
+        class = "pc_sandsea"
+        orbit_distance = 30
+        orbit_angle = 68
+        has_ring = no
+		size = 14
+		flags = { intaisei_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes		
+	    }
+    }
+
+    planet = {
+        name = "Tuntau"
+        class = "pc_mephitic"
+        orbit_distance = 40
+        orbit_angle = 148
+        has_ring = no
+		size = 25
+		flags = { tuntau_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_iridium_1
+			add_deposit = d_platinum_1
+			add_deposit = d_palladium_1
+			add_deposit = d_minerals_1
+			set_planet_flag = starting_deposit	
+	    }
+    }
+
+    planet = {
+        name = "Vebinok"
+        class = "pc_barren_cold"
+        orbit_distance = 50
+        orbit_angle = 227
+        has_ring = yes
+		size = 8
+		flags = { vebinok_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit	
+	    }
+	}	
+
+	planet = {
+		name = "Pinnacle Station"
+		class = "pc_pinnacle_station"
+		orbit_distance = 15
+		size = 2
+		flags = { pinnacle_station pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes		
+			create_colony = {
+				owner = event_target:citadel_council
+				species = event_target:turianSpecies
+				ethos = owner
+			}
+			while = {
+				count = 2
+				create_pop = { species = event_target:turianSpecies }
+			}
+			while = {
+				count = 1
+				create_pop = { species = event_target:salarianSpecies }
+			}
+			set_owner = event_target:citadel_council
+		}	
+	}	
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "argosrho_horseheadnebula_massrelay" 
+			name = "Argos 3 Relay"
+			orbit_angle = 192 
+			orbit_distance = 200
+			
+		} 
+	}	
+}

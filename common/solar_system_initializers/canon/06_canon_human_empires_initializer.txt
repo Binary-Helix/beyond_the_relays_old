@@ -351,6 +351,274 @@ sys_sol_init = {
 	}
 }
 
+#####ARCTURUS STREAM#####
+
+sys_arcturus_init = {
+    name = "Arcturus"
+    class = "sc_k"
+	max_instances = 1
+
+	flags = { alliance_space_system arcturus_stream_system arcturus_system btr_system custom_system }	
+
+	planet = {
+        name = "Arcturus"
+		class = "pc_k_star"
+        orbit_distance = 0
+        size = 30
+		flags = { arcturus_star }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+		}	
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 50
+	}
+
+    planet = {
+        name = "Alcyoneus"
+        class = "pc_asteroid"
+        orbit_distance = 45
+        orbit_angle = 151
+		size = 2
+		has_ring = no
+		flags = { alcyoneus_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = alcyoneus_codex
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Arcturus Station"
+		class = "pc_arcturus_station"
+		orbit_distance = 30
+		size = 12
+		entity = "btr_arcturus_station_entity"
+		flags = { arcturus_station pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_arcturus_pops = yes
+			add_modifier = {
+				modifier = arcturus_station_codex
+				days = -1
+			}
+		}
+	}
+	
+	planet = {
+        name = "Souq"
+        class = "pc_asteroid"
+        orbit_distance = 45
+        orbit_angle = 210
+		size = 2
+        has_ring = no
+		flags = { souq_planet pd_ignore }
+		init_effect = {
+			clear_deposits = yes	
+		}
+    }
+
+    planet = {
+        name = "Themis"
+        class = "pc_gas_giant"
+        orbit_distance = 60
+        orbit_angle = 75
+		size = 34
+        has_ring = no
+		flags = { themis_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = themis_codex
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Eirene"
+        class = "pc_gas_giant"
+        orbit_distance = 30
+        orbit_angle = 182
+		size = 31
+        has_ring = yes
+		flags = { eirene_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = eirene_codex
+				days = -1
+			}
+   		}
+	}	   
+
+    planet = {
+        name = "Eunomia"
+        class = "pc_frozen"
+        orbit_distance = 30
+        orbit_angle = 289
+		size = 11
+        has_ring = no
+		flags = { eunomia_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			add_modifier = {
+				modifier = eunomia_codex
+				days = -1
+			}
+    	}
+	}	
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "arcturusstream_localcluster_massrelay" 
+			name = "Arcturus 1 Relay"
+			orbit_angle = 180 
+			orbit_distance = 200
+			
+		} 
+	}	
+}
+
+sys_euler_init = {
+    name = "Euler"
+    class = "sc_g"
+	max_instances = 1
+
+	flags = { alliance_space_system arcturus_stream_system euler_system btr_system custom_system }	
+
+    planet = {
+		name = "Euler"
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 20
+    }
+
+    planet = {
+        name = "Fermi"
+        class = "pc_carbon"
+        orbit_distance = 35
+        orbit_angle = 14
+        size = 10
+		has_ring = no
+		flags = { fermi_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = fermi_codex
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Benning"
+        class = "pc_tepid"
+        orbit_distance = 25
+        orbit_angle = 199
+        size = 23
+        has_ring = no
+		flags = { benning_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_trade_value_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = benning_codex
+				days = -1
+			}		
+ 	    }
+	}
+
+    planet = {
+        name = "Yukawa"
+        class = "pc_iron"
+        orbit_distance = 40
+        orbit_angle = 109
+        size = 7
+        has_ring = no
+		flags = { yukawa_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+			set_deposit = d_minerals_3	
+			add_modifier = {
+				modifier = yukawa_codex
+				days = -1
+			}
+		}		
+    }
+
+    planet = {
+        name = "Silva"
+        class = "pc_ice_giant"
+        orbit_distance = 30
+        orbit_angle = 197
+        size = 15
+        has_ring = no
+		flags = { silva_planet pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes	
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = silva_codex
+				days = -1
+			}
+		}
+		moon = {
+			name = "Oliveira"
+			class = "pc_barren"
+			orbit_distance = 8
+			size = 11
+			init_effect = {
+				prevent_anomaly = yes
+				clear_deposits = yes	
+			}
+		}	
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "arcturusstream_exoduscluster_massrelay" 
+			name = "Arcturus 2 Relay"
+			orbit_angle = 46 
+			orbit_distance = 180
+			
+		} 
+	}		
+	
+}
+
+
+#####YGGDRASIL NEBULA#####
+
 sys_baldr_init = {
     name = "Baldr"
     class = "sc_y"
