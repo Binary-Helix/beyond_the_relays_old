@@ -394,3 +394,120 @@ sys_koshlanhk_init = {
 		} 
 	}		
 }
+
+#####VIPER NEBULA#####
+
+sys_bahak_init = {
+    name = "Bahak"
+    class = sc_g
+	max_instances = 1
+
+	flags = { alliance_space_system viper_nebula_system bahak_system btr_system custom_system }
+
+    planet = {
+		name = "Bahak"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
+
+    planet = {
+        name = "Clogon"
+        class = pc_hothouse
+        orbit_distance = 35
+        orbit_angle = 353
+        has_ring = no
+		size = 6
+		flags = { clogon_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_1
+			add_deposit = d_platinum_1
+			add_deposit = d_palladium_1
+			add_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Aratoht"
+        class = pc_alpine
+        orbit_distance = 20
+        orbit_angle = 221
+        has_ring = no
+		size = 11
+		flags = { aratoht_planet pd_ignore }
+		moon = {
+			name = "Hotar"
+			class = pc_geothermal
+			orbit_distance = 5
+			size = 4
+		}	
+    }
+
+    planet = {
+        name = "Yunaca"
+        class = pc_iron
+        orbit_distance = 20
+        orbit_angle = 168
+        has_ring = no
+		size = 4
+		flags = { yunaca_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_4
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_4
+			add_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}		
+    }
+
+    planet = {
+        name = "Urmola"
+        class = pc_gas_giant
+        orbit_distance = 30
+        orbit_angle = 323
+        has_ring = no
+		size = 37
+		flags = { urmola_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Bastzuda"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 274
+        has_ring = no
+		size = 36
+		flags = { bastzuda_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
+    }
+
+	planet = {
+		name = "157-Golgotha"
+		class = pc_asteroid
+        orbit_distance = 15
+		size = 3
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "vipernebula_kitesnest_massrelay" 
+			name = "Viper 1 Relay"
+			orbit_angle = 7 
+			orbit_distance = 220
+
+		} 
+	}
+}

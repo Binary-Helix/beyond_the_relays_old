@@ -2804,6 +2804,29 @@ sigurdscradle_omeganebula_massrelay = {
 	bypass_type = massrelay_omeganebula_sigurdscradle
 }
 
+#massrelay_onofspot_zhuquesnest
+onofspot_zhuquesnest_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_onofspot_zhuquesnest
+}
+
+zhuquesnest_onofspot_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_onofspot_zhuquesnest
+}
+
 #massrelay_petranebula_zhuquesnest
 petranebula_zhuquesnest_massrelay = {
 	entity = "MEC_mass_relay_gateway_01_entity"
@@ -3138,7 +3161,7 @@ voyagercluster_yggdrasilnebula_massrelay = {
 	bypass_type = massrelay_voyagercluster_yggdrasilnebula
 }
 
-voyagercluster_yggdrasilnebula_xmassrelay = {
+voyagercluster_yggdrasilnebula_massrelay = {
 	entity = "MEC_mass_relay_gateway_01_entity"
 	portrait = "GFX_megastructure_mass_relay"
 	build_outside_gravity_well = yes						
