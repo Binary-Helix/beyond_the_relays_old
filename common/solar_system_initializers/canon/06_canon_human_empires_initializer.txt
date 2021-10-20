@@ -691,6 +691,57 @@ sys_baldr_init = {
 	}	
 }
 
+#####XINGYUN CLUSTER#####
+
+sys_iotapersei_init = {
+    name = "Iota Persei"
+    class = sc_g
+	max_instances = 1
+
+	flags = { inner_council_system xingyun_system iota_persei_system btr_system custom_system }
+
+    planet = {
+	    name = "Iota Persei"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+		flags = { iotapersei_star }
+    }
+
+    planet = {
+		name = "Hebei"
+        class = pc_barren
+        orbit_distance = 107
+        orbit_angle = 351
+        has_ring = no
+        size = 12
+		flags = { hebei_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}	
+    }
+
+    planet = {
+        name = "Shanxi"
+        class = pc_mesa
+        orbit_distance = 123
+        orbit_angle = 93
+        has_ring = no
+        size = 17
+		flags = { shanxi_planet pd_ignore }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "xingyuncluster_localcluster_massrelay" 
+			name = "Xingyun 1 Relay"
+			orbit_angle = 20 
+			orbit_distance = 200
+		} 
+	}	
+}
+
 ####################
 ##### CERBERUS #####
 ####################
