@@ -369,3 +369,131 @@ country_event = {
 		}
 	}
 }
+# This sets the names for megacorp empires because buggy and this temp fixes it
+# Code is self explanatory I think if country has that flag change name to name set
+country_event = {
+	id = btr_setup.10
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = asari_corporate_interests
+				}
+				set_name = "Asari Corporate Interest"
+			}
+		}
+	}
+}
+country_event = {
+	id = btr_setup.101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = noveria_development_corporation
+				}
+				set_name = "Noveria Development Corporation"
+			}
+		}
+	}
+}
+country_event = {
+	id = btr_setup.102
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = relic_mineral_works
+				}
+				set_name = "Relic Mineral Works"
+			}
+		}
+	}
+}
+country_event = {
+	id = btr_setup.103
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = united_anhur_corporations
+			}
+			set_name = "United Anhur Corporations"
+		}
+	}
+}
+}
+country_event = {
+	id = btr_setup.104
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = wrill_mining_consortium
+				}
+				set_name = "Wrill Mining Consortium"
+			}
+		}
+	}
+}
+country_event = {
+	id = btr_setup.105
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = regdikan_collective
+				}
+				set_name = "Regdikan Collective"
+			}
+		}
+	}
+}
+country_event = {
+	id = btr_setup.106
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = lystheni_order
+				}
+				set_name = "Lystheni Order"
+			}
+		}
+	}
+}
