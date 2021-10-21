@@ -18543,6 +18543,10 @@ sys_jornous_init = {
         orbit_distance = 40
 		size = 12
 		flags = { ynnel_planet pd_ignore }
+		init_effect = {
+			set_deposit= d_iridium_5
+			add_deposit= d_minerals_3
+		}
 	}
 
 	planet = {	
@@ -18560,11 +18564,18 @@ sys_jornous_init = {
 		size = 17
 		flags = { seachel_planet pd_ignore }
 		moon = {
-			name = "Reid"
+			name = "Dasrau"
 			class = pc_frozen
 			orbit_distance = 7
 			size = 11
 			flags = { reid_planet pd_ignore }
+			init_effect = {
+				add_deposit= d_minerals_4
+			}
+		}
+		init_effect = {
+			set_deposit= d_platinum_5
+			add_deposit= d_minerals_5
 		}
 	}
 	
@@ -18574,6 +18585,10 @@ sys_jornous_init = {
         orbit_distance = 45
 		size = 20
 		flags = { ekim_planet pd_ignore }
+		init_effect = {
+			set_deposit= d_platinum_3
+			add_deposit= d_minerals_5
+		}
 	}
 
 	init_effect = { 
@@ -18705,7 +18720,7 @@ sys_lusarn_init = {
 		has_ring = no
 		flags = { jontan_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_trade_value_3
+			set_deposit= d_helium_3_3
 		}		
 	}
 	
@@ -18718,7 +18733,11 @@ sys_lusarn_init = {
 		has_ring = no
 		flags = { euntanta_planet pd_ignore }		
 		init_effect = {
+			set_deposit = d_iridium_3
+			set_deposit = d_platinum_3
+			set_deposit = d_palladium_3
 			set_deposit = d_minerals_4
+			set_deposit = d_trade_value_3
 		}		
 	}
 	
@@ -18746,6 +18765,9 @@ sys_lusarn_init = {
 		flags = { doriae_planet pd_ignore }
 		init_effect = {
 			set_deposit = d_mec_asari_doriae_bacteria
+			set_deposit = d_iridium_3
+			set_deposit = d_platinum_3
+			set_deposit = d_palladium_3
 		}		
 	}
 
@@ -18757,6 +18779,12 @@ sys_lusarn_init = {
 		size = 14
 		has_ring = no
 		flags = { tarith_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_rich_iridium_deposits
+			set_deposit = d_average_platinum_deposits
+			set_deposit = d_average_palladium_deposits
+			set_deposit = d_average_eezo_deposits
+		}
 		
 	
 	}
@@ -18825,7 +18853,7 @@ sys_ondeste_init = {
 		has_ring = no
 		flags = { zesmeni_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_4
+			add_deposit = d_rich_mineral_deposits
 		}		
 	}
 	
@@ -18838,7 +18866,9 @@ sys_ondeste_init = {
 		has_ring = no
 		flags = { acaeria_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_3
+			set_deposit = d_iridium_3
+			add_deposit = d_platinum_4
+			add_deposit = d_palladium_3
 		}		
 		moon = {
 			name = "Acaeria a"
@@ -18847,7 +18877,7 @@ sys_ondeste_init = {
 			orbit_distance = 15
 			size = 10
 			init_effect = {
-				set_deposit = d_minerals_2
+				set_deposit = d_minerals_5
 			}			
 		}
 	}
@@ -18908,6 +18938,9 @@ sys_zelene_init = {
 		flags = { nepyma_planet pd_ignore }
 		init_effect = {
 			set_deposit = d_society_3
+			add_deposit = d_rich_iridium_deposits
+			add_deposit = d_rich_platinum_deposits
+			add_deposit = d_average_palladium_deposits
 		}		
 	}
 	
@@ -18919,6 +18952,12 @@ sys_zelene_init = {
 		size = 13
 		has_ring = no
 		flags = { helyme_planet pd_ignore }	
+		init_effect = {
+			add_deposit = d_average_iridium_deposits
+			add_deposit = d_average_platinum_deposits
+			add_deposit = d_average_palladium_deposits
+			add_deposit = d_rich_eezo_deposits
+		}
 	}
 	
 	planet = {
@@ -18929,6 +18968,12 @@ sys_zelene_init = {
 		size = 20
 		has_ring = no
 		flags = { epho_planet pd_ignore }
+		init_effect = {
+			set_deposit= d_iridium_3
+			add_deposit= d_platinum_5
+			add_deposit= d_palladium_4
+			add_deposit= d_minerals_5
+		}
 	}
 	
 	planet = {
@@ -18941,6 +18986,7 @@ sys_zelene_init = {
 		flags = { gaelon_planet pd_ignore }
 		init_effect = {
 			set_deposit = d_engineering_3
+			add_deposit = d_helium_3_5
 		}		
 	}
 
@@ -18996,6 +19042,12 @@ sys_dholen_init = {
         has_ring = no
 		size = 2
 		flags = { gotha_planet pd_ignore }		
+		init_effect = {
+			set_deposit = d_iridium_3
+			add_deposit = d_platinum_5
+			add_deposit = d_palladium_4
+			add_deposit = d_element_zero_3
+		}
     }
 
     planet = {
@@ -19008,10 +19060,16 @@ sys_dholen_init = {
 		flags = { charoum_planet pd_ignore }
         satellite_naming_policy = lower_case_latin_letters
         moon = {
-            count = { min = 2 max = 5 }
-			class = random
+			name = "Charoum a"
+			class = pc_frozen
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
+			init_effect = {
+				set_deposit = d_iridium_5
+				add_deposit = d_platinum_5
+				add_deposit = d_palladium_5
+				add_deposit = d_minerals_5
+			}
         }	
     }
 
@@ -19023,6 +19081,9 @@ sys_dholen_init = {
         has_ring = no
 		size = 16
 		flags = { haestrom_planet pd_ignore }
+		init_effect = {
+			set_deposit= d_minerals_5
+		}
     }
 
     init_effect = { 
@@ -19056,7 +19117,10 @@ sys_disul_init = {
         orbit_angle = 239
         has_ring = no
 		size = 8
-		flags = { gotha_planet pd_ignore }		
+		flags = { gotha_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_4
+		}
     }
 
     planet = {
@@ -19067,6 +19131,10 @@ sys_disul_init = {
         has_ring = no
 		size = 10
 		flags = { charoum_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_3
+			add_deposit = d_platinum_3
+		}
     }
 
     planet = {
@@ -19077,6 +19145,9 @@ sys_disul_init = {
         has_ring = no
 		size = 12
 		flags = { haestrom_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_2
+		}
     }	
 }	
 
@@ -19103,11 +19174,59 @@ sys_maat_init = {
 		size = 41
         satellite_naming_policy = lower_case_latin_letters
         moon = {
-            count = { min = 2 max = 5 }
-			class = random
+			name = "Ammut a"
+			class = pc_molten
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
-        }	
+			init_effect = {
+				set_deposit= d_iridium_5
+				add_deposit= d_platinum_5
+				add_deposit= d_palladium_3
+			}
+        }
+		moon = {
+			name = "Ammut b"
+			class = pc_barren
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+			init_effect = {
+				set_deposit= d_platinum_3
+				add_deposit= d_minerals_3
+			}
+        }
+		moon = {
+			name = "Ammut c"
+			class = pc_barren_cold
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+			init_effect = {
+				set_deposit= d_element_zero_3
+			}
+        }
+		moon = {
+			name = "Ammut d"
+			class = pc_frozen
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+			init_effect = {
+				set_deposit= d_iridium_5
+				add_deposit= d_platinum_3
+				add_deposit= d_palladium_3
+				add_deposit= d_minerals_3
+			}
+        }
+		moon = {
+			name = "Ammut e"
+			class = pc_asteroid
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+			init_effect = {
+				set_deposit= d_iridium_4
+			}
+        }
+		init_effect = {
+			set_deposit = d_helium_3_3
+		}
     }
 
     init_effect = { 
@@ -19185,6 +19304,10 @@ sys_carina_init = {
 		class = pc_diamond
         orbit_distance = 240
 		size = 6
+		init_effect = {
+			set_deposit = d_helium_3_5
+			add_deposit = d_minerals_3
+		}
 	}
 	
 
@@ -19222,22 +19345,46 @@ sys_fehl_init = {
 		class = pc_aeolian
         orbit_distance = 60
 		size = 16
-        satellite_naming_policy = lower_case_latin_letters		
-        moon = {
-            count = { min = 1 max = 3 }
-			class = random
-            orbit_distance = 8
+        satellite_naming_policy = lower_case_latin_letters	
+		moon = {
+			name = "Fehl a"
+			class = pc_iron
+			orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
-        }			
+			init_effect = {
+				set_deposit = d_iridium_5
+				add_deposit = d_minerals_7
+			}
+		}	
 	}
 
+	asteroid_belt = {
+		type = crystal_asteroid_belt
+		radius = 250
+	}
+	planet = {
+		name = "Asteroid Belt"
+		class = pc_ice_asteroid
+		orbit_distance = 250
+		orbit_angle = 80
+		init_effect = {
+			set_deposit = d_iridium_4
+			add_deposit = d_platinum_3
+			add_deposit = d_palladium_4
+		}
+	}
 	planet = {
 		name = "Etwa"
 		class = pc_cryovolcanic
         orbit_distance = 30
 		size = 2
+		init_effect = {
+			set_deposit = d_element_zero_3
+			add_deposit = d_minerals_3
+		}
 	}
 
+	# <!>
 	planet = {
 		name = "Raurief"
 		class = pc_ice_giant
@@ -19250,6 +19397,9 @@ sys_fehl_init = {
             orbit_distance = 6
             orbit_angle = { min = 90 max = 270 }
         }
+		init_effect = {
+			set_deposit = d_helium_3_3
+		}
 	}	
 
     init_effect = { 
