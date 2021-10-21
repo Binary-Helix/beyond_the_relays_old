@@ -390,3 +390,55 @@ sys_strabo_init = {
 		} 
 	}	
 }
+
+
+#####BASILLAE FLARE#####
+
+sys_adiratna_init = {
+	name = "Adiratna"
+	class = sc_g
+	max_instances = 1
+
+	flags = { terminus_system basillae_flare_system adiratna_system btr_system custom_system }
+	
+	planet = {
+		name = "Adiratna"
+		class = pc_k_star
+		size = 25
+		flags = { adiratna_star }
+	}
+
+	planet = {
+		name = "Undira"
+		class = pc_barren
+        orbit_distance = 45
+		size = 5
+		flags = { undira_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Monrini"
+		class = pc_mud
+        orbit_distance = 65
+		size = 18
+		flags = { monrini_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Safas"
+		class = pc_gas_giant
+        orbit_distance = 50
+		size = 35
+		has_ring = yes
+		flags = { safas_planet pd_ignore }
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "basillaeflare_theshrikeabyssal_massrelay" 
+			name = "Basillae 1 Relay"
+			orbit_angle = 222 
+			orbit_distance = 200
+		} 
+	}
+}

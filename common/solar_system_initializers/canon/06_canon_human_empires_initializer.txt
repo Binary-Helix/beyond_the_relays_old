@@ -873,7 +873,20 @@ sys_anadius_init = {
 	}	
 }
 
-#sys_lazarus_init
+sys_lazarus_init = {
+	name = "Lazarus"
+	class = sc_none
+	max_instances = 1
+
+	flags = { attican_traverse_system _system _system btr_system custom_system }
+	
+	planet = {
+		name = "Lazarus_Station"
+		class = pc_lazarus_station
+		size = 6
+		orbit_distance = 0
+	}
+}
 
 #412-75 L
 

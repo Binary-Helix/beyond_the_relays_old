@@ -1282,6 +1282,33 @@ pc_fu_star = {
 	colonizable = no
 }
 
+pc_o_star = {
+	entity = "o_star_class_star_entity"
+	entity_scale = 0.0
+	picture = "pc_o_star"
+	icon = GFX_planet_type_a_b_star
+
+	atmosphere_color 		= hsv { 0.74 0.6 0.7 }
+	atmosphere_intensity 	= 0.8
+	atmosphere_width 		= 1.4	
+
+
+	star = yes
+	
+	min_distance_from_sun = 0
+	max_distance_from_sun = 0
+	spawn_odds = 0
+	
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	chance_of_ring = 0
+	
+	planet_size = { min = 450 max = 620 }
+	
+	colonizable = no
+}
+
 # ###########
 # Random Lists Stars
 # ###########

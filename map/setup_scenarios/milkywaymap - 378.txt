@@ -2503,7 +2503,7 @@ static_galaxy_scenario = {
             x = 65.186
             y = -183.8671
         }
-        initializer = sys_qorda_init
+        initializer = sys_dee_init
     }
 
     system = {
@@ -3434,7 +3434,7 @@ static_galaxy_scenario = {
             x = 55.74992
             y = -203.3189
         }
-        initializer = sys_venoss_init
+        initializer = sys_eureka_init
     }
 
     system = {
@@ -3461,7 +3461,7 @@ static_galaxy_scenario = {
             x = 48.66447
             y = -188.4396
         }
-        initializer = sys_maxiponia
+        initializer = sys_maxiponia_init
     }
 
     system = {
@@ -3470,7 +3470,7 @@ static_galaxy_scenario = {
             x = 157.4297
             y = 245.3613
         }
-        initializer = sys_365_init
+        initializer = sys_gerklok_init
     }
 
     system = {
@@ -3490,7 +3490,7 @@ static_galaxy_scenario = {
             x = 141.4875
             y = 233.9027
         }
-        initializer = sys_367_init
+        initializer = sys_cardack_init
     }
 
     system = {
@@ -3610,6 +3610,24 @@ static_galaxy_scenario = {
             y = -248.6986
         }
         initializer = sys_keelulon_init
+    }
+
+    system = {
+        id = "381"
+        position = {
+            x = 262.2098
+            y = 219.527
+        }
+        initializer = sys_nasdora_init
+    }
+
+    system = {
+        id = "382"
+        position = {
+            x = -371.1887
+            y = -270.9445
+        }
+        initializer = sys_disul_init
     }
 
     nebula = {
@@ -5111,4 +5129,9 @@ static_galaxy_scenario = {
     add_hyperlane = { from = "201" to = "203" }
     add_hyperlane = { from = "200" to = "203" }
     add_hyperlane = { from = "7" to = "9" }
+    add_hyperlane = { from = "381" to = "280" }
+    add_hyperlane = { from = "381" to = "279" }
+    add_hyperlane = { from = "381" to = "281" }
+    add_hyperlane = { from = "382" to = "73" }    
+    add_hyperlane = { from = "382" to = "74" }
 }
