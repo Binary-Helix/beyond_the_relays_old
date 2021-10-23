@@ -679,6 +679,29 @@ generate_rachniPop = { # Rachni pops
   }
 }
 
+
+generate_gothonesPop = { # Turian pops
+  if = {
+    limit = { NOT = { exists = event_target:gothonesSpecies } }
+    create_species = { 
+      name = "Gothones"
+      class = GOT
+      portrait = turian
+      homeworld = THIS 
+      traits = { 
+        trait="btr_gothones_physical_enhancements"
+        trait="btr_gothones_genetic_engineering"
+        ideal_planet_class = "pc_dextro_arid"
+      }
+    }
+    last_created_species = { save_global_event_target_as = gothonesSpecies }
+  }
+  create_pop = {
+    species = event_target:gothonesSpecies
+    ethos = owner
+  }
+}
+
 # generate_leviathanPop = { # Leviathan pops
 #   if = {
 #     limit = { NOT = { exists = event_target:leviathanSpecies } }

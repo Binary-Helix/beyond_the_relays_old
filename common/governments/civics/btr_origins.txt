@@ -273,3 +273,19 @@ origin_regdikan_collective = {
 		base = 0 
 	} 
 }
+
+origin_gothones_remnant = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+
+	starting_colony = pc_nuked
+
+	playable = {
+		host_has_dlc = "Apocalypse"
+	}
+
+}

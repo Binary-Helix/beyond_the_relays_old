@@ -1121,6 +1121,73 @@ quarian_conclave={
 	ignore_portrait_duplication=no
 }
 
+# Gothones Remnant
+gothones_remnant={
+    name="NAME_Gothones_Remnant"
+    name_list="btr_turian"
+	portrait="turian"
+    adjective="PRESCRIPTED_adjective_turian_hierarchy"
+    ship_prefix="PRESCRIPTED_ship_prefix_turian_hierarchy"
+    species_name = "PRESCRIPTED_species_name_turian_hierarchy"
+    species_plural = "PRESCRIPTED_species_plural_turian_hierarchy"	
+	species_class = "GOT"
+    species_adjective = "PRESCRIPTED_species_adjective_turian_hierarchy"
+    #species_bio="PRESCRIPTED_species_bio_turian_hierarchy"	
+
+	authority="auth_democratic"
+	government="gov_communal_parity"
+	civics={ "civic_shared_burden" "civic_warrior_culture" }
+
+	flags={ custom_start_screen gothones_remnant btr_empire council_race }
+
+	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_militarist"
+
+	trait="btr_gothones_physical_enhancements"
+	trait="btr_gothones_genetic_engineering"
+	
+	origin="origin_gothones_remnant"	
+
+	planet_name="Vindicta"
+	planet_class="pc_dextro_arid"
+	city_graphical_culture="mammalian_01"	
+	system_name="Ultio"
+	initializer="sys_ultio_init"
+	graphical_culture="reptilian_01"
+	advisor_voice_type = "l_militarist"
+	empire_flag={
+		icon={
+			category="beyondtherelays"
+			file="gothones_remnant.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_blue"
+			"grey"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_turian_hierarchy"
+		portrait="turian_3"
+		texture=0
+		hair=0
+		clothes=5
+		ruler_title="High Anarch"
+		ruler_title_female="High Anarch"
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="turian_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
 #Regdikan Collective
 regdikan_collective={
     name="NAME_Regdikan_Collective"

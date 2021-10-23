@@ -3630,6 +3630,22 @@ static_galaxy_scenario = {
         initializer = sys_disul_init
     }
 
+    system = {
+        id = "383"
+        position = {
+            x = -275.7967
+            y = 161.6447
+        }
+        initializer = sys_ultio_init
+        spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+					has_country_flag = gothones_remnant
+				}
+		}
+    }
+
     nebula = {
         name = "Ismar Frontier"
         position = {
@@ -5134,4 +5150,7 @@ static_galaxy_scenario = {
     add_hyperlane = { from = "381" to = "281" }
     add_hyperlane = { from = "382" to = "73" }    
     add_hyperlane = { from = "382" to = "74" }
+    add_hyperlane = { from = "383" to = "112" }
+    add_hyperlane = { from = "383" to = "111" }
+    add_hyperlane = { from = "383" to = "110" }
 }

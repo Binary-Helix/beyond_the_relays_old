@@ -497,3 +497,90 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = btr_setup.107
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		#Colony
+		if = {
+			limit = {
+				has_country_flag = quarian_conclave
+			}
+			create_fleet = {
+				effect = {
+					set_owner = event_target:quarian_conclave
+
+					create_ship = {
+						name = Rayya
+						random_existing_design = colonizer
+					}
+
+					set_fleet_stance = evasive
+					#set_location = prev.capital_star
+					set_location = prev.capital_scope.star
+				}	
+			}
+
+			#constructor
+			create_fleet = {
+				effect = {
+					set_owner = prev
+
+					create_ship = {
+						name = random
+						random_existing_design = constructor
+					}
+
+					set_fleet_stance = evasive
+					set_location = prev.capital_star
+				}
+			}
+
+			#military
+			create_fleet = {
+				set_take_point = yes
+				effect = {
+					set_owner = prev
+
+					while = {
+						count = 10
+						create_ship = {
+							name = random
+							random_existing_design = corvette
+						}
+					}
+
+					while = {
+						count = 5
+						create_ship = {
+							name = random
+							random_existing_design = destroyer
+						}
+					}
+
+					while = {
+						count = 3
+						create_ship = {
+							name = random
+							random_existing_design = cruiser
+						}
+					}
+
+					while = {
+						count = 2
+						create_ship = {
+							name = random
+							random_existing_design = battleship
+						}
+					}
+
+					set_location = prev.capital_star
+				}
+			}
+		}
+	}	
+}
+
