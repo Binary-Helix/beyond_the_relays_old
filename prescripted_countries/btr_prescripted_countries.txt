@@ -1959,7 +1959,73 @@ geth_consensus={
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
+## Geth Heretics
 
+geth_heretics={
+	name="Name_Geth_Heretics"
+	name_list="btr_geth"
+	portrait = "geth"
+	adjective = "PRESCRIPTED_adjective_geth_heretics"
+	ship_prefix = "PRESCRIPTED_ship_prefix_name_geth_heretics"
+	species_name = "PRESCRIPTED_species_name_geth_heretics"
+	species_plural = "PRESCRIPTED_species_plural_geth_heretics"
+	species_class = "GHC" 
+	species_adjective = "PRESCRIPTED_species_adjective_geth_heretics"
+
+	authority = "auth_machine_intelligence"
+	government = "gov_machine_empire"
+	civics={ "civic_machine_warbots" "civic_machine_terminator" }
+	flags = { custom_start_screen geth_heretics btr_empire}
+
+	ethic = "ethic_gestalt_consciousness"
+
+	trait = "trait_machine_unit"
+	trait = "btr_geth_neural_network"
+	trait ="btr_geth_mobile_platforms"
+	trait ="trait_robot_uncanny"
+	trait ="trait_robot_high_bandwidth"
+	trait ="trait_robot_durable"
+
+	origin="origin_geth_consensus"	
+
+	planet_name="" # WIP
+	planet_class="pc_dextro_arid" # WIP
+	city_graphical_culture="mammalian_01"	
+	system_name=""
+	initializer=""
+	graphical_culture="geth_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Geth Armory.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_grey"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender = male
+		name="PRESCRIPTED_ruler_name_geth_consensus"
+		portrait="geth"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="geth_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+
+}
 ## Rachni swarm
 rachni_swarm={
     name="NAME_Rachni_Swarm"
@@ -2029,7 +2095,6 @@ rachni_swarm={
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
-
 ########################
 #### NOT IMPLEMENTED ###
 ########################
