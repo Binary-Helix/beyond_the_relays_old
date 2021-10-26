@@ -19,21 +19,6 @@ sys_elunia_init = {
         orbit_distance = 0
         size = 25
 		init_effect = {
-			create_species = {
-				name = "Cat6 Merc"
-				plural = "Cat6 Mercs"
-				class = HUM
-				portrait = cat6
-				namelist = btr_merc
-				traits = {
-					trait="trait_talented"
-		            trait="trait_deviants"
-		            trait="trait_adaptive"
-		            trait="trait_quarrelsome"
-		            trait="trait_quick_learners"
-				}
-				
-			}
 			create_country = {
 				name_list = btr_merc
 				species = event_target:humanSpecies

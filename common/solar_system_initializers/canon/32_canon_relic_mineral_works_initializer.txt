@@ -123,23 +123,9 @@ sys_relic_init = {
 
 				if = {
 					limit = { NOT = { any_country = { has_country_flag = relic_mineral_works } } }
-					create_species = { 
-						name = "Hanar" 
-						class = HAN
-						portrait = hanar 
-						homeworld = THIS 
-						traits = { 
-							trait="trait_weak"
-							trait="trait_traditional"
-							trait="trait_communal"
-							trait="btr_hanar_bureaucratic"
-							trait="btr_hanar_spiritual"
-						} 
-					}
-					last_created_species = { save_global_event_target_as = hanarSpecies }
 					create_colony = { 
-						owner = last_created_country 
-						species = last_created 
+						owner = event_target:relic_mineral_works 
+						species = event_target:hanarSpecies 
 					}	
 				set_owner = event_target:relic_mineral_works
 				generate_btr_start_deposits_and_blockers = yes

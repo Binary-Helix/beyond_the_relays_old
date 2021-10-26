@@ -15,20 +15,6 @@ sys_faryar_init = {
         orbit_distance = 0
         size = 20
 		init_effect = {
-			create_species = {
-				name = "Eclipse Merc"
-				plural = "Eclipse Mercs"
-				class = MECASA
-				portrait = mec_asari
-				name_list = btr_merc
-				traits = {
-					trait="trait_talented"
-		            trait="trait_deviants"
-		            trait="trait_adaptive"
-		            trait="trait_quarrelsome"
-		            trait="trait_quick_learners"
-				}
-			}
 			create_country = {
 				name_list = btr_merc
 				species = last_created

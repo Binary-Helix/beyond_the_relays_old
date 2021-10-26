@@ -70,19 +70,6 @@ sys_sahrabarik_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = omega_empire } } }
-				create_species = { 
-				    name = "Asari" 
-				    class = MECASA
-				    portrait = mec_asari 
-				    homeworld = THIS 
-				    traits = { 
-						trait = "mec_asari_trait_core"
-						trait = "mec_asari_trait_biotic"
-						trait = "trait_charismatic"
-						trait = "mec_asari_trait_sophisticated"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = asariSpecies }
 				create_country = {
 					name = "NAME_omega"
 					ship_prefix = "PRESCRIPTED_ship_prefix_illuminated_primacy"

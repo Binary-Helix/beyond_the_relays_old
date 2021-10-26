@@ -55,20 +55,6 @@ sys_maskimxul_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = rachni_swarm } } }
-				create_species = { 
-				    name = "Rachni" 
-				    class = RAC
-				    portrait = rachni 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_hive_mind"
-						trait="trait_rapid_breeders"
-						trait="trait_repugnant"
-						trait="trait_strong"
-						trait="trait_traditional"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = rachniSpecies }
 				create_country = {
 					name = "NAME_rachni_swarm"
 					ship_prefix = "PRESCRIPTED_ship_prefix_rachni_swarm"

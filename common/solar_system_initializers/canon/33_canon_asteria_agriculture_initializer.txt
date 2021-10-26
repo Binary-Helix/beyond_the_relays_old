@@ -45,21 +45,8 @@ sys_hekate_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = asteria_agriculture } } }
-				create_species = { 
-				    name = "Asari" 
-				    class = MECASA
-				    portrait = mec_asari 
-				    homeworld = THIS 
-				    traits = { 
-						trait = "mec_asari_trait_core"
-						trait = "mec_asari_trait_biotic"
-						trait = "trait_charismatic"
-						trait = "mec_asari_trait_sophisticated"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = asariSpecies }
 				create_country = {
-					name = "NAME_asteria_agriculture"
+					name = "Asteria Agriculture"
 					ship_prefix = ""
 					type = independent_colony
 					origin = "origin_asteria_agriculture"

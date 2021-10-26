@@ -44,20 +44,6 @@ sys_pompeii_init = {
 			set_global_flag = drell_homeworld_spawned
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = drell_compact } } }
-				create_species = { 
-				    name = "Drell" 
-				    class = DRE
-				    portrait = drell 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_nonadaptive"
-						trait="trait_strong"
-						trait="trait_quick_learners"
-						trait="trait_resilient"
-						trait="trait_nomadic"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = drellSpecies }
 				create_country = {
 					name = "NAME_drell_compact"
 					ship_prefix = "PRESCRIPTED_ship_prefix_drell_compact"

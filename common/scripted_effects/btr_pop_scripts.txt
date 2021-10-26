@@ -1,34 +1,545 @@
-generate_thessia_pops = {
-	while = {
-	   count = 25
-	   generate_asari_main_pop = yes
-	}
-	while = {
-	   count = 5
-	   generate_misc_council_race_pop = yes
-	}
-	every_owned_pop = { set_pop_flag = init_spawn }
- }
 
-generate_surkesh_pops = {
+
+#####ASARI REPUBLICS#####
+
+generate_asr_thessia_deposits = {
+	clear_deposits = yes
+	clear_blockers = yes
+	
+	add_deposit = d_mec_asari_republic_armali	
+	add_deposit = d_mec_asari_nosdesera
+	add_deposit = d_mec_asari_serrice_university
+	add_deposit = d_mec_asari_cresyl_plateau
+	add_deposit = d_mec_asari_askasian_mountains	
+	add_deposit = d_mec_asari_pulian_delta
+	add_deposit = d_mec_asari_senecan_lakes
+	add_deposit = d_mec_asari_irssal_tea
+	#add_deposit = d_mec_asari_athame_temple
+	add_deposit = d_mec_asari_eezo_deposits
+	add_deposit = d_mec_asari_thessia_net
+	add_deposit = d_mec_asari_zalis_spill
+	add_deposit = d_mec_asari_yisrin_devastated	
+}
+
+generate_asr_thessia_capitol_buildings = { 
+	while = { count = 6 add_district = { district_type = district_city ignore_cap = yes }}
+	while = { count = 4	add_district = { district_type = district_industrial ignore_cap = yes }}
+	while = { count = 6	add_district = { district_type = district_farming ignore_cap = yes }}
+	while = { count = 4	add_district = { district_type = district_mining ignore_cap = yes }}
+	while = { count = 6	add_district = { district_type = district_generator ignore_cap = yes }}
+	add_building = building_system_capital
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_factory_1
+    add_building = building_commercial_zone
+	add_building = building_embassy	
+	add_building = building_bureaucratic_1
+	add_building = building_stronghold	
+}
+
+generate_asr_major_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_bureaucratic_1
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_factory_1
+    add_building = building_commercial_zone
+}
+
+generate_asr_minor_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_factory_1	
+	add_building = building_commercial_zone
+}
+
+generate_asr_thessia_pops = {
 	while = {
-	   count = 30
-	   generate_salarian_main_pop = yes
-	}
-	while = {
-	   count = 2
-	   generate_misc_council_race_pop = yes
+	   count = 29
+	   generate_asari_main_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
-generate_palaven_pops = {
+generate_asr_lusia_pops = {
 	while = {
-	   count = 30
+		count = 26
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_sanves_pops = {
+	while = {
+		count = 18
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_nevos_pops = {
+	while = {
+		count = 17
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_cyone_pops = {
+	while = {
+		count = 15
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_malkos_pops = {
+	while = {
+		count = 13
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_hyetania_pops = {
+	while = {
+		count = 13
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_diras_pops = {
+	while = {
+		count = 11
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_charias_pops = {
+	while = {
+		count = 9
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_trategos_pops = {
+	while = {
+		count = 8
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_niacal_pops = {
+	while = {
+		count = 6
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_agessua_pops = {
+	while = {
+		count = 1
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_lessus_pops = {
+	while = {
+		count = 1
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_asr_espota_pops = {
+	while = {
+		count = 1
+		generate_asari_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+
+
+
+#####SALARIAN UNION#####
+
+
+# generate_sal_surkesh_deposits = {
+# 	clear_deposits = yes
+# 	clear_blockers = yes
+	
+
+# }
+
+generate_sal_surkesh_capitol_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_major_capital
+	add_building = building_research_lab_2
+	add_building = building_foundry_1
+	add_building = building_factory_1
+    add_building = building_commercial_zone
+	add_building = building_embassy	
+	add_building = building_institute	
+	add_building = building_stronghold
+	add_building = building_bureaucratic_1
+}
+
+generate_sal_major_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_bureaucratic_1	
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_factory_1
+    add_building = building_commercial_zone
+}
+
+generate_sal_minor_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_factory_1	
+	add_building = building_research_lab_1
+}
+
+generate_sal_surkesh_pops = {
+	while = {
+	   count = 24
+	   generate_salarian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_mannovai_pops = {
+	while = {
+		count = 22
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_nasurn_pops = {
+	while = {
+		count = 21
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_jaeto_pops = {
+	while = {
+		count = 20
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_gataly_pops = {
+	while = {
+		count = 14
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_senoquol_pops = {
+	while = {
+		count = 12
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_saetabelo_pops = {
+	while = {
+		count = 11
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_voya_pops = {
+	while = {
+		count = 10
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_gorot_pops = {
+	while = {
+		count = 9
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_olor_pops = {
+	while = {
+		count = 8
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_rannandril_pops = {
+	while = {
+		count = 7
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_dagnes_pops = {
+	while = {
+		count = 1
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_halegeuse_pops = {
+	while = {
+		count = 1
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_sal_jarrahe_pops = {
+	while = {
+		count = 1
+		generate_salarian_main_pop = yes
+	 }
+	 every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+
+
+#####Turian Hierarchy######
+
+
+generate_tur_palaven_capitol_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_major_capital
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_factory_1
+    add_building = building_commercial_zone
+	add_building = building_embassy	
+	add_building = building_military_academy
+	add_building = building_stronghold
+	add_building = building_bureaucratic_1
+}
+
+generate_tur_major_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_bureaucratic_1	
+	add_building = building_military_academy
+	add_building = building_foundry_1
+	add_building = building_factory_1
+    add_building = building_commercial_zone
+	
+}
+
+generate_sal_minor_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_factory_1	
+	add_building = building_military_academy
+}
+
+generate_tur_palaven_pops = {
+	while = {
+	   count = 23
 	   generate_turian_main_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
+
+generate_tur_chatti_pops = {
+	while = {
+	   count = 19
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_aephus_pops = {
+	while = {
+	   count = 18
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_invictus_pops = {
+	while = {
+	   count = 17
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_omaker_pops = {
+	while = {
+	   count = 15
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_taetrus_pops = {
+	while = {
+	   count = 14
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_magna_pops = {
+	while = {
+	   count = 11
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_epyrus_pops = {
+	while = {
+	   count = 9
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_edessan_pops = {
+	while = {
+	   count = 6
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_tracmusduxes_pops = {
+	while = {
+	   count = 5
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_nimines_pops = {
+	while = {
+	   count = 4
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_parthia_pops = {
+	while = {
+	   count = 17
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_digeris_pops = {
+	while = {
+	   count = 3
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_maitrum_pops = {
+	while = {
+	   count = 1
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_menae_pops = {
+	while = {
+	   count = 11
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_nanus_pops = {
+	while = {
+	   count = 7
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_pheiros_pops = {
+	while = {
+	   count = 1
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_tur_gellix_pops = {
+	while = {
+	   count = 1
+	   generate_turian_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 generate_dekuuna_pops = {
 	while = {

@@ -61,19 +61,6 @@ sys_raheelleyya_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = quarian_conclave } } }
-				create_species = { 
-				    name = "Quarian" 
-				    class = QUA
-				    portrait = quarian 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_communal"
-						trait="trait_traditional"
-						trait="btr_quarian_weak_immune_system"
-						trait="btr_quarian_adept_engineers"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = quarianSpecies }
 				create_country = {
 					name = "NAME_quarian_conclave"
 					ship_prefix = "origin_quarian_conclave"

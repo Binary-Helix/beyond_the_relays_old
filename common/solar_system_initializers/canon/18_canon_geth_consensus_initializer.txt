@@ -55,21 +55,6 @@ sys_tikkun_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = geth_consensus } } }
-				create_species = { 
-				    name = "Geth" 
-				    class = GTH
-				    portrait = geth 
-				    homeworld = THIS 
-				    traits = { 
-						trait = "trait_machine_unit"
-						trait = "trait_robot_uncanny"
-						trait = "trait_robot_high_bandwidth"
-						trait = "trait_robot_mass_produced"
-						trait = "trait_robot_durable"
-						trait = "trait_robot_logic_engines"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = gethSpecies }
 				create_country = {
 					name = "NAME_geth_consensus"
 					ship_prefix = "PRESCRIPTED_ship_prefix_geth_consensus"

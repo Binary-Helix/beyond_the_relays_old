@@ -1800,8 +1800,8 @@ static_galaxy_scenario = {
     system = {
         id = "186"
         position = {
-            x = 218.4128
-            y = 156.5171
+            x = 190.8759
+            y = 132.9015
         }
         initializer = sys_sovak_init
     }
@@ -1809,8 +1809,8 @@ static_galaxy_scenario = {
     system = {
         id = "187"
         position = {
-            x = 196.3501
-            y = 140.6989
+            x = 201.7397
+            y = 151.8776
         }
         initializer = sys_boltzmann_init
     }
@@ -1818,8 +1818,8 @@ static_galaxy_scenario = {
     system = {
         id = "188"
         position = {
-            x = 200.3856
-            y = 122.6113
+            x = 212.4592
+            y = 134.3501
         }
         initializer = sys_widow_init
     }
@@ -1836,8 +1836,8 @@ static_galaxy_scenario = {
     system = {
         id = "190"
         position = {
-            x = 214.5562
-            y = 130.4054
+            x = 202.1747
+            y = 119.2849
         }
         initializer = sys_terevan_init
     }
@@ -2128,8 +2128,8 @@ static_galaxy_scenario = {
     system = {
         id = "217"
         position = {
-            x = 346.6233
-            y = 219.7899
+            x = 334.511
+            y = 225.8274
         }
         initializer = sys_loropi_init
     }
@@ -2137,8 +2137,8 @@ static_galaxy_scenario = {
     system = {
         id = "218"
         position = {
-            x = 344.1261
-            y = 203.9717
+            x = 351.1101
+            y = 207.7194
         }
         initializer = sys_nahuala_init
     }
@@ -2146,8 +2146,8 @@ static_galaxy_scenario = {
     system = {
         id = "219"
         position = {
-            x = 332.4698
-            y = 200.6415
+            x = 316.4036
+            y = 213.0007
         }
         initializer = sys_phontes_init
 		spawn_weight = { 
@@ -2171,8 +2171,8 @@ static_galaxy_scenario = {
     system = {
         id = "221"
         position = {
-            x = 329.5561
-            y = 218.9574
+            x = 341.3013
+            y = 191.4979
         }
         initializer = sys_kypladon_init
     }
@@ -2625,6 +2625,7 @@ static_galaxy_scenario = {
             y = 66.95742
         }
         initializer = sys_fotia_init
+        flags = { test_system_init }
     }
 
     system = {
@@ -5153,4 +5154,5 @@ static_galaxy_scenario = {
     add_hyperlane = { from = "383" to = "112" }
     add_hyperlane = { from = "383" to = "111" }
     add_hyperlane = { from = "383" to = "110" }
+    add_hyperlane = { from = "217" to = "220" }   
 }

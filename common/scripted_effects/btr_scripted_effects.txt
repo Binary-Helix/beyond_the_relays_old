@@ -1,4 +1,94 @@
 
+set_homeworld = {
+	if = {
+	  limit = {
+		any_galaxy_planet = {
+		  has_planet_flag = $planet_flag$
+		}
+	  }
+	  random_galaxy_planet = {
+		limit = {
+		  has_planet_flag = $planet_flag$
+		}
+		prev = {
+		  set_species_homeworld = prev
+		}
+	  }
+	}
+	else = {
+	  random_galaxy_planet = {
+		limit = {
+		  is_$planet_type$_planet = yes
+		}
+		prev = {
+		  set_species_homeworld = prev
+		}
+	  }
+	}
+  }
+
+btr_asr_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:asari_republics
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:asari_republics
+		}
+	}
+}
+
+btr_sal_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:salarian_union
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:salarian_union
+		}
+	}
+}
+
+btr_sal_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:turian_hierarchy
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:turian_hierarchy
+		}
+	}
+}
 
 generate_turian_start_deposits_and_blockers = {
 	if = {
@@ -38,30 +128,6 @@ generate_turian_start_deposits_and_blockers = {
 			else = {
 				add_deposit = d_tropical_island
 			}
-		}
-	}
-}
-
-
-# Root = Country
-# This = Planet
-generate_btr_stations = {
-	every_system_planet = {
-		limit = {
-			has_deposit_for = shipclass_mining_station
-			has_mining_station = no
-		}
-		create_mining_station = {
-			owner = root
-		}
-	}
-	every_system_planet = {
-		limit = {
-			has_deposit_for = shipclass_research_station
-			has_research_station = no
-		}
-		create_research_station = {
-			owner = root
 		}
 	}
 }

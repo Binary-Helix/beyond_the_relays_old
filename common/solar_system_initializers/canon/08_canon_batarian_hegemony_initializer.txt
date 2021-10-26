@@ -65,20 +65,6 @@ sys_harsa_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = batarian_hegemony } } }
-				create_species = { 
-				    name = "Batarian" 
-				    class = BAT
-				    portrait = batarian 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_decadent"
-						trait="trait_repugnant"
-						trait="trait_thrifty"
-						trait="trait_industrious"
-						trait="trait_deviants"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = batarianSpecies }
 				create_country = {
 					name = "NAME_batarian_hegemony"
 					ship_prefix = "PRESCRIPTED_ship_prefix_batarian_hegemony"

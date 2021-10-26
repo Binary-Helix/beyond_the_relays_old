@@ -59,19 +59,6 @@ sys_pax_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = noveria_development_corporation } } }
-				create_species = { 
-				    name = "Salarian" 
-				    class = SAL
-				    portrait = salarian 
-				    homeworld = THIS 
-				    traits = { 
-						trait="btr_salarian_shortlived"
-						trait="btr_salarian_genius"
-						trait="trait_rapid_breeders"
-						trait="trait_weak"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = salarianSpecies }
 				create_country = {
 					name = "NAME_Noveria_Development_Corporation"
 					ship_prefix = "PRESCRIPTED_ship_prefix_noveria_development_corporation"

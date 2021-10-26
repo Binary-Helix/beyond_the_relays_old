@@ -134,21 +134,6 @@ sys_tartarusdebrisfield_init = {
 							has_country_flag = the_collectors }
 					}
 				}
-				create_species = {
-					name = "Collector"
-					class = COL
-					portrait = collector
-					homeworld = THIS
-					traits = {		
-						trait="trait_hive_mind"
-						trait="trait_repugnant"
-						trait="trait_nomadic"
-						trait="trait_traditional"
-						trait="trait_resilient"
-						trait="trait_strong"
-					}
-				}
-				last_created_species = { save_global_event_target_as = collectorSpecies }	
 				create_country = {
 					name = "NAME_The_Collectors"
 					ship_prefix = "PRESCRIPTED_ship_prefix_collectors"

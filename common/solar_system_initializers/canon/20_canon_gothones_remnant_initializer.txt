@@ -74,17 +74,6 @@ sys_ultio_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = gothones_remnant } } }
-				create_species = { 
-				    name = "Gothones" 
-				    class = GOT
-				    portrait = "turian"
-				    homeworld = THIS 
-				    traits = { 
-						trait = "btr_gothones_physical_enhancements"
-						trait = "btr_gothones_genetic_engineering"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = gothonesSpecies }
 				create_country = {
 					name = "Gothones Remnant"
 					ship_prefix = "GRV"

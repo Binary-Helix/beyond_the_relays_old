@@ -65,20 +65,6 @@ sys_aru_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = vol_protectorate } } }
-				create_species = { 
-				    name = "Volus" 
-				    class = VOL
-				    portrait = volus 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_nonadaptive"
-						trait="trait_weak"
-						trait="btr_volus_tradesmen"
-						trait="trait_sedentary"
-						trait="btr_volus_trait_core"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = volusSpecies }
 				create_country = {
 					name = "NAME_vol_protectorate"
 					ship_prefix = "PRESCRIPTED_ship_prefix_vol_protectorate"

@@ -73,17 +73,6 @@ sys_azedes_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = raloi_republic } } }
-				create_species = { 
-				    name = "Raloi" 
-				    class = AVI
-				    portrait = AVI4 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_talented"
-						trait="trait_conservational"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = raloiSpecies }
 				create_country = {
 					name = "NAME_raloi_republic"
 					ship_prefix = "PRESCRIPTED_ship_prefix_geth_consensus"

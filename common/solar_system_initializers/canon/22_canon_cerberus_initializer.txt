@@ -55,19 +55,6 @@ sys_anadius_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = cerberus } } }
-				create_species = { 
-				    name = "Human" 
-				    class = HUM
-				    portrait = human 
-				    homeworld = THIS 
-				    traits = { 
-						trait="btr_human_flexible"
-						trait="btr_human_multicultural"
-						trait="trait_wasteful"
-						trait="trait_quick_learners"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = humanSpecies }
 				create_country = {
 					name = "NAME_Cerberus"
 					ship_prefix = "PRESCRIPTED_ship_prefix_cerberus"

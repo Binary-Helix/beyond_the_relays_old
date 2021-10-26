@@ -65,20 +65,6 @@ sys_kanala_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = illuminated_primacy } } }
-				create_species = { 
-				    name = "Hanar" 
-				    class = HAN
-				    portrait = hanar 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_weak"
-						trait="trait_traditional"
-						trait="trait_communal"
-						trait="btr_hanar_bureaucratic"
-						trait="btr_hanar_spiritual"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = hanarSpecies }
 				create_country = {
 					name = "NAME_illuminated_primacy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_illuminated_primacy"

@@ -59,20 +59,6 @@ sys_kyzil_init = {
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = vorcha_clandom } } }
-				create_species = { 
-				    name = "Vorcha" 
-				    class = VOR
-				    portrait = vorcha 
-				    homeworld = THIS 
-				    traits = { 
-						trait="trait_repugnant"
-						trait="trait_extremely_adaptive"
-						trait="trait_quarrelsome"
-						trait="trait_fleeting"
-						trait="trait_resilient"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = vorchaSpecies }
 				create_country = {
 					name = "NAME_vorcha_clandom"
 					ship_prefix = "PRESCRIPTED_ship_prefix_vorcha_clandom"

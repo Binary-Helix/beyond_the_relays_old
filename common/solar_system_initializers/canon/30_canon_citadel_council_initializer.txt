@@ -53,20 +53,6 @@ sys_widow_init = {
 							has_country_flag = citadel_council }
 					}
 				}
-				create_species = {
-					name = "Asari"
-					class = MECASA
-					portrait = mec_asari
-					homeworld = THIS
-					name_list = mec_asari_names
-					traits = {		
-						trait = "mec_asari_trait_core"
-						trait = "mec_asari_trait_biotic"
-						trait = "trait_charismatic"
-						trait = "mec_asari_trait_sophisticated"
-					}
-				}
-				last_created_species = { save_global_event_target_as = asariSpecies }	
 				create_country = {
 					name = "NAME_The_Citadel"
 					ship_prefix = "CSV"
@@ -107,7 +93,6 @@ sys_widow_init = {
 			random_country = {
 				limit = { has_country_flag = citadel_council }
 				save_global_event_target_as = citadel_council
-				species = { save_global_event_target_as = asariSpecies }
 			}
 			set_owner = event_target:citadel_council
 			generate_btr_start_deposits_and_blockers = yes
