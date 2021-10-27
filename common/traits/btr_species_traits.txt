@@ -429,7 +429,7 @@ btr_quarian_adept_engineers = {
 
 	modifier = {
 		country_engineering_research_produces_mult = 0.15
-
+		ships_upkeep_mult = -0.33
 	}
 }
 
@@ -867,7 +867,7 @@ btr_gothones_genetic_engineering = {
 ####################
 # FORAYANS  TRAITS #
 ####################
-btr_forayans_1 = {
+btr_forayans_collective_will = {
 	cost = 0
 	initial = yes
 	allowed_archetypes = {
@@ -878,11 +878,12 @@ btr_forayans_1 = {
 	randomized = no
 
 	modifier = {
-
+		pop_government_ethic_attraction = 0.3
+		planet_jobs_worker_produces_mult = 0.035
 	}
 }
 
-btr_forayans_2 = {
+btr_forayans_caste_system = {
 	cost = 0
 	initial = yes
 	allowed_archetypes = {
@@ -893,7 +894,8 @@ btr_forayans_2 = {
 	randomized = no
 
 	modifier = {
-		
+		planet_pops_consumer_goods_upkeep_mult = -0.1
+		pop_housing_usage_mult = -0.1
 	}
 }
 
