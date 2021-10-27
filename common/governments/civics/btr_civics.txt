@@ -27,6 +27,10 @@
 #	ai_playable = {}							# Similar to "playable", for AI
 #}
 
+###################
+# BATARIAN CIVICS #
+###################
+
 civic_btr_batarian_slaving_guilds = {
 	modification = no
 	potential = {
@@ -103,5 +107,1613 @@ civic_btr_batarian_hegenomy = {
 		intel_encryption_add = 2
 		intel_encryption_mult = 0.2
 		planet_jobs_unity_produces_mult = 0.15
+	}
+}
+####################
+# ASARI REP CIVICS #
+####################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_2 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+##########################
+# SYSTEM ALLIANCE CIVICS #
+##########################
+civic_btr_sysalliance_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_sysalliance_2 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+###################
+# SALARIAN CIVICS #
+###################
+civic_btr_salarian_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+civic_btr_salarian_2 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+#################
+# TURIAN CIVICS #
+#################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+################
+# VOLUS CIVICS #
+################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+#################
+# KROGAN CIVICS #
+#################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+#################
+# VORCHA CIVICS #
+#################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+##################
+# FORAYAN CIVICS #
+##################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+##################
+# NOVERIA CIVICS #
+##################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+################
+# ANHUR CIVICS #
+################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+##################
+# QUARIAN CIVICS #
+##################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+###################
+# CERBERUS CIVICS #
+###################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+################
+# OMEGA CIVICS #
+################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+###############
+# GETH CIVICS #
+###############
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+#################
+# RACHNI CIVICS #
+#################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+################
+# ELCOR CIVICS #
+################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+##################
+# PARNACK CIVICS #
+##################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+################
+# RALOI CIVICS #
+################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+###################
+# GOTHONES CIVICS #
+###################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+################
+# DRELL CIVICS #
+################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+####################
+# COLLECTOR CIVICS #
+####################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+#################
+# ILLIUM CIVICS #
+#################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+################
+# HANAR CIVICS #
+################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
 	}
 }
