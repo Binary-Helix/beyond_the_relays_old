@@ -68,7 +68,7 @@ sys_phontes_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = courts_of_dekuuna } } }
 				create_country = {
-					name = "NAME_courts_of_dekuuna"
+					name = "Courts of Dekuuna"
 					ship_prefix = "PRESCRIPTED_ship_prefix_courts_of_dekuuna"
 					type = default
 					origin = "origin_courts_of_dekuuna"
@@ -112,12 +112,32 @@ sys_phontes_init = {
 			}
 			set_owner = event_target:courts_of_dekuuna
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_courts_of_dekuuna_capitol_buildings = yes
-			generate_dekuuna_pops = yes
+			generate_elc_dekuuna_capitol_buildings = yes
+			generate_elc_dekuuna_pops = yes
 			add_deposit = d_dekuuna_unovasereng
 			add_deposit = d_dekuuna_forests
 			set_name = "Dekuuna"
-		}			
+		}	
+		moon = {
+			name = "Oltan"
+			class = "pc_savannah"
+			orbit_distance = 30
+			orbit_angle = 300
+			has_ring = no
+			size = 16
+			init_effect = {
+				set_owner = event_target:courts_of_dekuuna
+				create_colony = {
+					owner = event_target:courts_of_dekuuna
+					species = event_target:elcorSpecies
+					ethos = owner
+				}
+				generate_elc_oltan_pops = yes
+				generate_elc_minor_colony_buildings = yes	
+
+				set_name = "Oltan"
+			}
+		}		
 	}
 
     planet = {
@@ -139,4 +159,312 @@ sys_phontes_init = {
 		size = 38
 
     }	
+}
+
+
+#####DURWUULA STREAM#####
+
+sys_bisalas_init = {
+	name = "Bisalas"
+	class = sc_g
+	max_instances = 1
+
+	flags = { outer_council_system durwuula_stream_system bisalas_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_elc_generate_stations = yes	
+	}
+
+	planet = {
+	    name = "Bisalas"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+		flags = { bisalas_star }
+    }
+
+	planet = {
+        name = "Tuee"
+        class = pc_diamond
+        orbit_distance = 35
+        orbit_angle = 177
+        size = 9
+        has_ring = no
+		flags = { tuee_planet pd_ignore }
+    }
+
+	planet = {
+        name = "Urdaum"
+        class = pc_gas_giant
+        orbit_distance = 55
+        orbit_angle = 177
+        size = 32
+        has_ring = no
+		flags = { urdaum_planet pd_ignore }
+		moon = {
+			name = "Yapolam"
+			class = pc_cascadian
+			orbit_distance = 13
+			orbit_angle = 177
+			size = 25	
+			init_effect = {
+				add_modifier = {
+					modifier = high_gravity
+					days = -1
+				}
+				set_owner = event_target:courts_of_dekuuna
+				create_colony = {
+					owner = event_target:courts_of_dekuuna
+					species = event_target:elcorSpecies
+					ethos = owner
+				}
+				generate_elc_yapolam_pops = yes
+				generate_elc_major_colony_buildings = yes	
+				
+				set_name = "Yapolam"
+			}						
+		}
+    }
+
+	planet = {
+        name = "Gendul"
+        class = pc_acid
+        orbit_distance = 35
+        orbit_angle = 177
+        size = 24
+        has_ring = no
+		flags = { gendul_planet pd_ignore }
+    }
+
+	planet = {
+        name = "Funtuus"
+        class = pc_frozen
+        orbit_distance = 40
+        orbit_angle = 177
+        size = 9
+        has_ring = no
+		flags = { funtuus_planet pd_ignore }
+    }
+
+	planet = {
+        name = "Isdame"
+        class = pc_subglacial
+        orbit_distance = 20
+        orbit_angle = 177
+        size = 9
+        has_ring = no
+		flags = { isdame_planet pd_ignore }
+    }
+}
+
+
+sys_resyadum_init = {
+	name = "Resyadum"
+	class = sc_k
+	max_instances = 1
+
+	flags = { outer_council_system durwuula_stream_system resyadum_system btr_system custom_system }
+
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_elc_generate_stations = yes	
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 60
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	planet = {
+	    name = "Resyadum"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+		flags = { resyadum_star }
+    }
+
+	planet = {
+        name = "Ordas"
+        class = pc_diamond
+        orbit_distance = 35
+        orbit_angle = 177
+        size = 9
+        has_ring = no
+		flags = { ordas_planet pd_ignore }
+    }
+
+	planet = {
+        name = "Sargen"
+        class = pc_gas_giant
+        orbit_distance = 55
+        orbit_angle = 177
+        size = 32
+        has_ring = no
+		flags = { sargen_planet pd_ignore }
+    }
+
+	planet = {
+        name = "Jurdal"
+        class = pc_forest
+        orbit_distance = 35
+        orbit_angle = 177
+        size = 24
+        has_ring = no
+		flags = { jurdal_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			set_owner = event_target:courts_of_dekuuna
+			create_colony = {
+				owner = event_target:courts_of_dekuuna
+				species = event_target:elcorSpecies
+				ethos = owner
+			}
+			generate_elc_jurdal_pops = yes
+			generate_elc_major_colony_buildings = yes	
+			
+			set_name = "Jurdal"
+		}						
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "durwuulastream_krogandmz_massrelay" 
+			name = "Durwuula 2 Relay"
+			orbit_angle = 270 
+			orbit_distance = 200
+			
+		} 
+	}
+}
+
+#####THE PHOENIX MASSING####
+sys_salahiel_init = {
+    name = "Salahiel"
+    class = sc_k
+	max_instances = 1
+
+	flags = { terminus_system phoenix_massing_system salahiel_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_elc_generate_stations = yes	
+	}
+
+    planet = {
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+    }
+
+    planet = {
+        name = "Ekuuna"
+        class = pc_veld
+        orbit_distance = 60
+        orbit_angle = 24
+        has_ring = no
+		size = 25
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			set_owner = event_target:courts_of_dekuuna
+			create_colony = {
+				owner = event_target:courts_of_dekuuna
+				species = event_target:elcorSpecies
+				ethos = owner
+			}
+			generate_elc_ekuuna_pops = yes
+			generate_elc_major_colony_buildings = yes	
+			
+			set_name = "Ekuuna"
+		}
+	}		
+}
+
+sys_batalla_init = {
+    name = "Batalla"
+    class = sc_k
+	max_instances = 1
+
+	flags = { terminus_system omega_nebula_system batalla_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_elc_generate_stations = yes	
+	}
+
+    planet = {
+		name = "Batalla"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+    }
+
+    planet = {
+        name = "Logasiri"
+        class = pc_mephitic
+        orbit_distance = 40
+        orbit_angle = 143
+        has_ring = no
+		size = 12
+
+    }
+
+    planet = {
+        name = "Thunawanuro"
+        class = pc_forest
+        orbit_distance = 30
+        orbit_angle = 305
+        has_ring = no
+		size = 25
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			set_owner = event_target:courts_of_dekuuna
+			create_colony = {
+				owner = event_target:courts_of_dekuuna
+				species = event_target:elcorSpecies
+				ethos = owner
+			}
+			generate_elc_thunawanuro_pops = yes
+			generate_elc_major_colony_buildings = yes	
+			
+			set_name = "Thunawanuro"
+		}
+    }
+
+    planet = {
+        name = "Nearog"
+        class = pc_gas_giant
+        orbit_distance = 60
+        orbit_angle = 65
+        has_ring = no
+		size = 26
+		satellite_naming_policy = lower_case_latin_letters
+        moon = {
+            count = { min = 3 max = 5 }
+			class = random
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+        }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "omeganebula_motancluster_massrelay" 
+			name = "Omega 5 Relay"
+			orbit_angle = 63 
+			orbit_distance = 200
+			
+		} 
+	}	
 }

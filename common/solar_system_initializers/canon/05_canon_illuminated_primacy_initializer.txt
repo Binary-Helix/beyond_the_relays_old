@@ -66,7 +66,7 @@ sys_kanala_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = illuminated_primacy } } }
 				create_country = {
-					name = "NAME_illuminated_primacy"
+					name = "Illuminated Primacy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_illuminated_primacy"
 					type = default
 					origin = "origin_illuminated_primacy"
@@ -110,8 +110,8 @@ sys_kanala_init = {
 			}
 			set_owner = event_target:illuminated_primacy
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_illuminated_primacy_capitol_buildings = yes
-			generate_kahje_pops = yes
+			generate_han_kahje_capitol_buildings = yes
+			generate_han_kahje_pops = yes
 			add_deposit = d_kahje_rasiil_life_dome
 			add_deposit = d_kahje_mount_vassla
 			set_name = "Kahje"
@@ -185,11 +185,204 @@ sys_kanala_init = {
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "olinprotectorate_serpentnebula_massrelay" 
-			name = "Olin_1_Relay"
+			type = "olynprotectorate_serpentnebula_massrelay" 
+			name = "Olyn 1 Relay"
 			orbit_angle = 72 
 			orbit_distance = 200
 			
+		} 
+	}	
+}
+
+sys_obek_init = {
+    name = "Obek"
+    class = sc_m
+	max_instances = 1
+
+	flags = { inner_council_system olynprotectorate_system obek_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_han_generate_stations = yes	
+	}
+
+    planet = {
+		name = "Obek"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+		flags = { obek_star }
+    }
+
+    planet = {
+        name = "Acodu"
+        class = pc_dextro_desertislands
+        orbit_distance = 82
+        orbit_angle = 333
+        has_ring = no
+        size = 10
+		flags = { acodu_planet pd_ignore }
+        init_effect = {
+            set_owner = event_target:illuminated_primacy
+            create_colony = {
+                owner = event_target:courts_of_dekuuna
+                species = event_target:elcorSpecies
+                ethos = owner
+            }
+            generate_han_acodu_pops = yes
+            generate_han_major_colony_buildings = yes	
+
+            set_name = "Acodu"
+        }
+        moon = {
+			name = "Uwanba"
+			class = pc_iron
+			orbit_distance = 8
+			orbit_angle = { min = 90 max = 270 }
+			size = 6
+        }		
+    }
+
+    planet = {
+        name = "Volar"
+        class = pc_ice_giant
+        orbit_distance = 66
+        orbit_angle = 67
+        size = 30
+        has_ring = no
+		flags = { volar_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
+        moon = {
+			name = "Bedil"
+			class = pc_barren
+			orbit_distance = 8
+			orbit_angle = { min = 90 max = 270 }
+			size = 6
+        }	
+    }
+
+    planet = {
+        name = "Mdu"
+        class = pc_gas_giant
+        orbit_distance = 83
+        orbit_angle = 182
+        has_ring = no
+        size = 35
+		flags = { mdu_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+		satellite_naming_policy = lower_case_latin_letters
+        moon = {
+            count = { min = 3 max = 7 }
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+        }
+    }
+    
+    planet = {
+        name = "Zahni"
+        class = pc_pd_hothouse_hab
+        orbit_distance = 66
+        orbit_angle = 67
+        size = 17
+        has_ring = no
+		flags = { volar_planet pd_ignore }
+		init_effect = {
+            set_owner = event_target:illuminated_primacy
+            create_colony = {
+                owner = event_target:illuminated_primacy
+                species = event_target:hanarSpecies
+                ethos = owner
+            }
+            generate_han_zahni_pops = yes
+            generate_han_major_colony_buildings = yes	
+
+            set_name = "Zahni"
+		}
+        moon = {
+			name = "Lirian"
+			class = pc_frozen
+			orbit_distance = 8
+			orbit_angle = { min = 90 max = 270 }
+			size = 6
+        }	
+    }
+}
+
+######VESUVIUS NEBULA#####
+
+sys_stabiae_init = {
+    name = "Stabiae"
+    class = sc_g
+	max_instances = 1
+
+	flags = { outer_council_system vesuvius_nebula_system stabiae_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_han_generate_stations = yes	
+	}
+
+    planet = {
+	    name = "Stabiae"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+		flags = { stabiae_star }
+    }
+
+    planet = {
+        name = "Belan"
+        class = pc_coastal
+        orbit_distance = 108
+        orbit_angle = 329
+        has_ring = no
+		size = 20
+		flags = { belan_planet pd_ignore  }
+        init_effect = {
+            set_owner = event_target:illuminated_primacy
+            create_colony = {
+                owner = event_target:courts_of_dekuuna
+                species = event_target:elcorSpecies
+                ethos = owner
+            }
+            generate_han_acodu_pops = yes
+            generate_han_minor_colony_buildings = yes	
+
+            set_name = "Belan"
+        }
+		moon = {
+			name = "Sepontu"
+			class = pc_carbon
+			orbit_distance = 8
+			size = 12
+			flags = { sepontu_planet pd_ignore  }
+		}	
+    }
+
+    planet = {
+        name = "Uaeton"
+        class = pc_gas_giant
+        orbit_distance = 91
+        orbit_angle = 155
+        has_ring = no
+		size = 38
+		flags = { uaeton_planet pd_ignore  }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "vesuviusnebula_eaglenebula_massrelay" 
+			name = "Vesuvius 3 Relay"
+			orbit_angle = 187 
+			orbit_distance = 200
 		} 
 	}	
 }

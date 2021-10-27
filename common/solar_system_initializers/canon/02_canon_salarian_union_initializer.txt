@@ -121,7 +121,7 @@ sys_pranas_init = {
 			}
 			set_owner = event_target:salarian_union
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_salarian_union_capitol_buildings = yes
+			generate_sal_surkesh_capitol_buildings = yes
 			generate_sal_surkesh_pops = yes
 			add_deposit = d_surkesh_parkan_research_institute
 			add_deposit = d_surkesh_wesbii_forest
@@ -147,7 +147,7 @@ sys_pranas_init = {
 
     planet = {
         name = "Halegeuse"
-        class = "pc_gas_giant"
+        class = "pc_pd_gas_giant_hab"
         orbit_distance = 20
         orbit_angle = 202
         size = 33
@@ -157,6 +157,16 @@ sys_pranas_init = {
 		init_effect = {
 			set_deposit = d_helium_3_4
 			set_planet_flag = starting_deposit
+			set_owner = event_target:salarian_union
+			create_colony = {
+				owner = event_target:salarian_union
+				species = event_target:salarianSpecies
+				ethos = owner
+			}
+			generate_sal_halegeuse_pops = yes
+			generate_sal_major_colony_buildings = yes	
+			
+			set_name = "Halegeuse"
 		}
         moon = {
             count = { min = 3 max = 6 }
@@ -650,15 +660,7 @@ sys_sovak_init = {
 
 	}	
 
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "serpentnebula_apiencrest_massrelay" 
-			name = "Serpent 2 Relay"
-			orbit_angle = 130 
-			orbit_distance = 200
-			
-		} 
-	}	
+	
 }
 
 #####VAS'DIRI GAP#####

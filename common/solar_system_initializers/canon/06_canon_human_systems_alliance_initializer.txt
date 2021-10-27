@@ -84,7 +84,7 @@ sys_sol_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = systems_alliance } } }
 				create_country = {
-					name = "NAME_systems_alliance"
+					name = "Systems Alliance"
 					ship_prefix = "PRESCRIPTED_ship_prefix_systems_alliance"
 					type = default
 					origin = "origin_systems_alliance"
@@ -129,8 +129,8 @@ sys_sol_init = {
 			}
 			set_owner = event_target:systems_alliance
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_systems_alliance_capitol_buildings = yes
-			generate_earth_pops = yes
+			generate_hum_earth_capitol_buildings = yes
+			generate_hum_earth_pops = yes
 			add_deposit = d_vancouver
 			add_deposit = d_london
 			add_deposit = d_sao_paulo_shipyards
@@ -146,6 +146,18 @@ sys_sol_init = {
 			size = 5
 			entity = "cold_barren_planet_luna_entity"
 			flags = { luna_planet pd_ignore }
+			init_effect = {
+				set_owner = event_target:systems_alliance
+				create_colony = {
+					owner = event_target:systems_alliance
+					species = event_target:humanSpecies
+					ethos = owner
+				}
+				generate_hum_luna_pops = yes
+				generate_hum_minor_colony_buildings = yes	
+	
+				set_name = "Luna"		
+			}
 		}
 	}
 	
@@ -157,7 +169,19 @@ sys_sol_init = {
 		size = 13
 		has_ring = no
 		entity = "barren_planet_mars_entity"
-		flags = { mars_planet pd_ignore}		
+		flags = { mars_planet pd_ignore}	
+		init_effect = {
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_hum_mars_pops = yes
+			generate_hum_minor_colony_buildings = yes	
+
+			set_name = "Mars"		
+		}	
 	}
 	
 	planet = {
@@ -302,7 +326,7 @@ sys_sol_init = {
 	init_effect = { 
 		spawn_megastructure = { 
 			type = "localcluster_arcturusstream_massrelay" 
-			name = "Orion_4_Relay"
+			name = "Orion 4 Relay"
 			orbit_angle = 0 
 			orbit_distance = 295
 		} 
@@ -338,6 +362,222 @@ sys_sol_init = {
 	}
 }
 
+sys_sirius_system = {
+	name = "Sirius"
+	class = sc_binary_a_d
+	max_instances = 1
+
+	flags = { alliance_space_system local_cluster_system sirius_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
+	planet = {
+		name = "Sirius A"
+		class = pc_a_star
+		orbit_distance = 30
+		orbit_angle = 1
+		size = 35
+		has_ring = no
+	}
+
+	planet = {
+		name = "Sirius B"
+		class = pc_d_star
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 25
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Demeter"
+		class = pc_med
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 40
+		size = 18
+		flags = { demeter_planet pd_ignore }
+		init_effect = {
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_hum_demeter_pops = yes
+			generate_hum_minor_colony_buildings = yes	
+
+			set_name = "Demeter"		
+		}
+	}
+	
+	planet = {
+		name = "Persephone"
+		class = pc_barren
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 30
+		size = 12
+		flags = { persephone_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_1
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_1
+			set_planet_flag = starting_deposit
+		}
+	}
+	
+	planet = {
+		name = "Dionysus"
+		class = pc_iron
+		orbit_angle = { min = 90 max = 270 }
+		orbit_distance = 30
+		size = 10
+		flags = { dionysus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}
+	}
+
+ init_effect = { 
+		spawn_megastructure = { 
+			type = "localcluster_xingyuncluster_massrelay" 
+			name = "Orion 1 Relay"
+			orbit_angle = 136 
+			orbit_distance = 200
+		} 
+	}		
+}
+
+sys_61ursaemajoris_init = {
+    name = "Ursae Majoris"
+    class = sc_g
+	max_instances = 1
+
+	flags = { alliance_space_system local_cluster_system 61ursaemajoris_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
+    planet = {
+    name = "Ursae Majoris"	
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 125
+	}	
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 235
+	}
+	
+	planet = {
+		name = "Intarabus"
+		class = pc_volcanic
+        orbit_distance = 35
+		size = 6
+		flags = { intarabus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_4
+			set_planet_flag = starting_deposit
+		}
+	}
+
+	planet = {
+		name = "Sirona"
+		class = pc_boreal
+        orbit_distance = 40
+		size = 20
+		flags = { sirona_planet pd_ignore }
+		init_effect = {
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_hum_sirona_pops = yes
+			generate_hum_minor_colony_buildings = yes	
+
+			set_name = "Sirona"		
+		}
+		moon = {
+			name = "Sirona a"
+			class = pc_iron
+			orbit_distance = 8
+			size = 4
+		}	
+	}		
+	
+	planet = {
+		name = "Lenus"
+		class = pc_gas_giant
+        orbit_distance = 110
+		size = 34
+		flags = { lenus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Ancamna"
+			class = pc_iron
+			orbit_angle = 6
+			size = 8
+		}	
+		moon = {
+			name = "Inciona"
+			class = pc_subglacial
+			orbit_angle = 6
+			size = 6
+		}		
+		moon = {
+			name = "Xulsigiae"
+			class = pc_iron
+			orbit_angle = 6
+			size = 4
+		}		
+	}
+	
+	planet = {
+		name = "Iovantucarus"
+		class = pc_ice_giant
+        orbit_distance = 250
+		has_ring = yes
+		size = 37
+		flags = { iovantucarus_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Iovantucarus a"
+			class = pc_carbon
+			orbit_distance = 4
+			size = 6
+		}	
+		moon = {
+			name = "Iovantucarus b"
+			class = pc_hydrocarbon
+			orbit_distance = 3
+			size = 10
+		}
+		moon = {
+			name = "Iovantucarus c"
+			class = pc_ethane_ocean
+			orbit_distance = 2
+			size = 8
+		}	
+	}	
+}
+
 #####ARCTURUS STREAM#####
 
 sys_arcturus_init = {
@@ -346,6 +586,10 @@ sys_arcturus_init = {
 	max_instances = 1
 
 	flags = { alliance_space_system arcturus_stream_system arcturus_system btr_system custom_system }	
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
 
 	planet = {
         name = "Arcturus"
@@ -400,7 +644,7 @@ sys_arcturus_init = {
 				species = event_target:humanSpecies
 				ethos = owner
 			}
-			generate_arcturus_pops = yes
+			generate_hum_arcturus_pops = yes
 			add_modifier = {
 				modifier = arcturus_station_codex
 				days = -1
@@ -494,6 +738,10 @@ sys_euler_init = {
 	max_instances = 1
 
 	flags = { alliance_space_system arcturus_stream_system euler_system btr_system custom_system }	
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
 
     planet = {
 		name = "Euler"
@@ -539,7 +787,17 @@ sys_euler_init = {
 				modifier = benning_codex
 				days = -1
 			}		
- 	    }
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_hum_benning_pops = yes
+			generate_hum_minor_colony_buildings = yes	
+
+			set_name = "Benning"		
+		}
 	}
 
     planet = {
@@ -603,6 +861,239 @@ sys_euler_init = {
 	
 }
 
+#####EXODUS CLUSTER#####
+
+sys_asgard_init = {
+    name = "Asgard"
+    class = sc_g
+	max_instances = 1
+
+	flags = { alliance_space_system exodus_cluster_system asgard_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
+    planet = {
+		name = "Asgard"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+		flags = { asgard_star }
+    }
+
+    planet = {
+        name = "Terra Nova"
+        class = pc_arid
+        orbit_distance = 55
+        orbit_angle = 2
+		size = 13
+        has_ring = no
+		entity = prairie_planet
+		flags = { terranova_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_rich_platinum_deposits
+			set_planet_flag = starting_deposit
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_hum_terranova_pops = yes
+			generate_hum_minor_colony_buildings = yes	
+
+			set_name = "Terra Nova"		
+		}
+    }
+
+    planet = {
+        name = "Borr"
+        class = pc_t_star
+        orbit_distance = 40
+        orbit_angle = 283
+		size = 34
+        has_ring = no
+		flags = { borr_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_4
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Borr a"
+			class = pc_iron
+			orbit_distance = 8
+			size = 4
+		}	
+		moon = {
+			name = "Borr b"
+			class = pc_barren
+			orbit_distance = 8
+			size = 7
+		}		
+		moon = {
+            name = "Asteroid X57"
+            class = pc_asteroid
+            orbit_distance = 13
+            orbit_angle = 189
+            has_ring = no
+			size = 3
+        }
+    }
+
+    planet = {
+        name = "Tyr"
+        class = pc_mephitic
+        orbit_distance = 40
+        orbit_angle = 102
+		size = 15
+        has_ring = no
+		flags = { tyr_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_poor_platinum_deposits
+			set_planet_flag = starting_deposit
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_hum_tyr_pops = yes
+			generate_hum_minor_colony_buildings = yes	
+
+			set_name = "Tyr"		
+		}
+    }
+
+    planet = {
+        name = "Loki"
+        class = pc_frozen
+        orbit_distance = 55
+        orbit_angle = 109
+		size = 9
+        has_ring = no
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "exoduscluster_mkalipool_massrelay" 
+			name = "Exodus 1 Relay"
+			orbit_angle = 71 
+			orbit_distance = 210
+			
+		} 
+	}
+}
+
+sys_utopia_init = {
+    name = "Utopia"
+    class = sc_g
+	max_instances = 1
+
+	flags = { alliance_space_system exodus_cluster_system utopia_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
+    planet = {
+		name = "Utopia"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+		flags = { utopia_star }
+    }
+
+    planet = {
+        name = "Arcadia"
+        class = pc_hothouse
+        orbit_distance = 40
+        orbit_angle = 295
+		size = 25
+        has_ring = no
+		flags = { arcadia_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Eden Prime"
+        class = pc_superhabitable
+        orbit_distance = 15
+        orbit_angle = 41
+		size = 17
+        has_ring = no
+		flags = { edenprime_planet pd_ignore }
+		init_effect = {
+			set_owner = event_target:systems_alliance
+			create_colony = {
+				owner = event_target:systems_alliance
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_hum_edenprime_pops = yes
+			generate_hum_minor_colony_buildings = yes	
+
+			set_name = "Eden Prime"		
+		}
+    }
+
+    planet = {
+        name = "Zion"
+        class = pc_gas_giant
+        orbit_distance = 28
+        orbit_angle = 29
+		size = 37
+        has_ring = no
+		flags = { zion_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Asphodel"
+			class = pc_carbon
+			orbit_distance = 8
+			size = 13
+		}	
+    }
+
+    planet = {
+        name = "Nirvana"
+        class = pc_cryovolcanic
+        orbit_distance = 40
+        orbit_angle = 231
+		size = 8
+        has_ring = no
+		flags = { nirvana_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_1
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Xanadu"
+        class = pc_barren
+        orbit_distance = 15
+        orbit_angle = 329
+		size = 9
+        has_ring = no
+		flags = { xanadu_planet pd_ignore }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "exoduscluster_arcturusstream_massrelay" 
+			name = "Exodus 4 Relay"
+			orbit_angle = 33 
+			orbit_distance = 200
+			
+		} 
+	}	
+}
 
 #####YGGDRASIL NEBULA#####
 
@@ -612,7 +1103,11 @@ sys_baldr_init = {
 	max_instances = 1
 
 	flags = { attican_traverse_system yggdrasil_nebula_system baldr_system btr_system custom_system }
-	
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
     planet = {
 		name = "Baldr"
         class = "pc_m_star"
@@ -640,18 +1135,15 @@ sys_baldr_init = {
 		init_effect = {
 			set_deposit = d_average_mineral_deposits
 			set_planet_flag = starting_deposit
-			set_owner = event_target:systems_alliance
-			create_colony = {
-				owner = event_target:systems_alliance
-				species = event_target:humanSpecies
-				ethos = owner
-			}
-			while = {
-				count = 7
-				create_pop = {
-					species = owner_main_species
-				}
-			}			
+            create_colony = {
+                owner = event_target:systems_alliance
+                species = event_target:humanSpecies
+                ethos = owner
+            }
+            generate_hum_mindoir_pops = yes
+            generate_hum_minor_colony_buildings = yes	
+
+            set_name = "Mindoir"		
 		}
 	}
 
@@ -686,6 +1178,10 @@ sys_iotapersei_init = {
 	max_instances = 1
 
 	flags = { inner_council_system xingyun_system iota_persei_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
 
     planet = {
 	    name = "Iota Persei"
@@ -717,6 +1213,18 @@ sys_iotapersei_init = {
         has_ring = no
         size = 17
 		flags = { shanxi_planet pd_ignore }
+		init_effect = {
+            set_owner = event_target:systems_alliance
+            create_colony = {
+                owner = event_target:systems_alliance
+                species = event_target:humanSpecies
+                ethos = owner
+            }
+            generate_hum_shanxi_pops = yes
+            generate_hum_minor_colony_buildings = yes	
+
+            set_name = "Shanxi"
+		}
     }
 
     init_effect = { 
@@ -729,3 +1237,310 @@ sys_iotapersei_init = {
 	}	
 }
 
+#####PETRA NEBULA#####
+sys_vetus_init = {
+    name = "Vetus" #Grissom Academy?
+    class = sc_m
+	max_instances = 1
+
+	flags = { alliance_space_system petra_nebula_system vetus_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
+    planet = {
+	    name = "Vetus"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 160
+	}
+
+    planet = {
+        name = "Tyre"
+        class = pc_volcanic
+        orbit_distance = 40
+        orbit_angle = 222
+		size = 14
+        has_ring = no
+		flags = { tyre_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Elysium"
+        class = pc_cascadian
+        orbit_distance = 30
+        orbit_angle = 267
+		size = 14
+        has_ring = no
+		flags = { elysium_planet pd_ignore }
+		init_effect = {
+            set_owner = event_target:systems_alliance
+            create_colony = {
+                owner = event_target:systems_alliance
+                species = event_target:humanSpecies
+                ethos = owner
+            }
+            generate_hum_elysium_pops = yes
+            generate_hum_minor_colony_buildings = yes	
+
+            set_name = "Elysium"
+		}
+    }
+
+    planet = {
+        name = "Sidon"
+        class = pc_frozen
+        orbit_distance = 20
+        orbit_angle = 172
+		size = 19
+        has_ring = no
+		flags = { sidon_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Joppa"
+        class = pc_gas_giant
+        orbit_distance = 30
+        orbit_angle = 84
+		size = 34
+        has_ring = yes
+		flags = { joppa_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Gilead"
+        class = pc_frozen
+        orbit_distance = 40
+        orbit_angle = 117
+		size = 5
+        has_ring = no
+		flags = { gilead_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}
+    }
+
+ init_effect = { 
+		spawn_megastructure = { 
+			type = "petranebula_exoduscluster_massrelay" 
+			name = "Petra 4 Relay"
+			orbit_angle = 1 
+			orbit_distance = 200
+			
+		} 
+	}	
+}
+
+sys_selvandia_init = {
+	name = "Selvandia"
+	class = "sc_m"
+	max_instances = 1
+
+	flags = { alliance_space_system petra_nebula_system selvandia_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
+    planet = {
+	    name = "Selvandia"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 30
+    }
+
+    planet = {
+        name = "Sinaloa"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 222
+		size = 7
+        has_ring = no
+		flags = { sinaloa_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_3
+			add_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Manoa"
+        class = pc_hothouse
+        orbit_distance = 30
+        orbit_angle = 267
+		size = 15
+        has_ring = no
+		flags = { manoa_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Yandoa"
+        class = pc_veld
+        orbit_distance = 20
+        orbit_angle = 172
+		size = 18
+        has_ring = no
+		init_effect = {
+            set_owner = event_target:systems_alliance
+            create_colony = {
+                owner = event_target:systems_alliance
+                species = event_target:humanSpecies
+                ethos = owner
+            }
+            generate_hum_yandoa_pops = yes
+            generate_hum_minor_colony_buildings = yes	
+
+            set_name = "Yandoa"
+		}
+    }
+
+	planet = {
+        name = "Urksone"
+        class = pc_barren_cold
+        orbit_distance = 30
+        orbit_angle = 267
+		size = 10
+        has_ring = no
+		flags = { urksone_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Turiel"
+        class = pc_frozen
+        orbit_distance = 20
+        orbit_angle = 172
+		size = 18
+        has_ring = no
+		flags = { Turiel_planet pd_ignore }
+    }
+
+ init_effect = { 
+		spawn_megastructure = { 
+			type = "petranebula_zhuquesnest_massrelay" 
+			name = "Petra 2 Relay"
+			orbit_angle = 1 
+			orbit_distance = 200
+			
+		} 
+	}	
+}
+
+#####SERPENT NEBULA######
+
+sys_boltzmann_init = {
+    name = "Boltzmann"
+    class = sc_g
+	max_instances = 1
+
+	flags = { outer_council_system nimbus_cluster_system boltzmann_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_hum_generate_stations = yes	
+	}
+
+    planet = {
+	    name = "Boltzmann"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 20
+		flags = { boltzmann_star }
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 65
+	}
+
+    planet = {
+        name = "Wheeler"
+        class = pc_barren
+        orbit_distance = 25
+        orbit_angle = 228
+        size = 19
+        has_ring = no
+		flags = { wheeler_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_iridium_3
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_2
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Bekenstein"
+        class = pc_tropical
+		entity = aquaticcold_planet
+        orbit_distance = 15
+        orbit_angle = 205
+        has_ring = no
+		flags = { bekenstein_planet pd_ignore }
+		init_effect = {
+            set_owner = event_target:systems_alliance
+            create_colony = {
+                owner = event_target:systems_alliance
+                species = event_target:humanSpecies
+                ethos = owner
+            }
+            generate_hum_bekenstein_pops = yes
+            generate_hum_minor_colony_buildings = yes	
+
+            set_name = "Bekenstein"
+		}
+    }
+
+    planet = {
+        name = "Thooft"
+        class = pc_barren_cold
+        orbit_distance = 25
+        orbit_angle = 90
+        size = 8
+        has_ring = no
+		flags = { thooft_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Veltman"
+        class = pc_gas_giant
+        orbit_distance = 15
+        orbit_angle = 303
+        size = 35
+        has_ring = no
+		flags = { veltman_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Feynman"
+        class = pc_gas_giant
+        orbit_distance = 40
+        orbit_angle = 200
+        size = 31
+        has_ring = no
+		flags = { feynman_planet pd_ignore }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_andurasector_massrelay" 
+			name = "Serpent 1 Relay"
+			orbit_angle = 260 
+			orbit_distance = 200
+		} 
+	}
+}

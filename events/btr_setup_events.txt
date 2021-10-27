@@ -81,6 +81,24 @@ event = {
 						planet_type = "normal"
 					}			
 				}
+				ELC = {
+					set_homeworld = {
+						planet_flag = "dekuuna_planet"
+						planet_type = "normal"
+					}			
+				}
+				HAN = {
+					set_homeworld = {
+						planet_flag = "kahje_planet"
+						planet_type = "normal"
+					}			
+				}
+				HUM = {
+					set_homeworld = {
+						planet_flag = "earth_planet"
+						planet_type = "normal"
+					}			
+				}
 			}
 		}
 	}
@@ -202,6 +220,15 @@ event = {
 			random_system = {
 				limit = {
 					has_star_flag = pelion_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = mesana_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -483,6 +510,273 @@ country_event = {
 				create_starbase = {
 					size = starbase_outpost
 					owner = event_target:salarian_union
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.1023
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_courts_of_dekuuna
+				any_system_within_border = {
+					has_star_flag = phontes_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = bisalas_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = resyadum_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = salahiel_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = batalla_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = loropi_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = wadoa_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = nasdora_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.1024
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_illuminated_primacy
+				any_system_within_border = {
+					has_star_flag = kanala_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = obek_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:illuminated_primacy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = stabiae_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:illuminated_primacy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = dark_current_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:illuminated_primacy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = thundering_trench_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:illuminated_primacy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = warmest_shoal_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:illuminated_primacy
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.1025
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_systems_alliance
+				any_system_within_border = {
+					has_star_flag = sol_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = sirius_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = 61ursaemajoris_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = arcturus_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = euler_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = asgard_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = utopia_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = baldr_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = iota_persei_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = vetus_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = selvandia_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = boltzmann_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = mesana_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
 				}
 			}
 		}

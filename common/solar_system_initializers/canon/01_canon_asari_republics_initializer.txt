@@ -758,6 +758,84 @@ sys_vernio_init = {
 
 #####SILEAN NEBULA#####
 
+sys_loropi_init = {
+    name = "Loropi"
+    class = sc_a
+	max_instances = 1
+
+	flags = { outer_council_system silean_nebula_system loropi_system btr_system custom_system }
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 120
+	}
+
+    planet = {
+	    name = "Loropi"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 27
+		flags = { loropi_star }
+    }
+
+	planet = {
+        name = "Espota Station"
+        class = pc_habitat
+        orbit_distance = 45
+        orbit_angle = 117
+        size = 3
+        has_ring = no
+		flags = { espota_station pd_ignore }
+		init_effect = {
+			add_deposit = d_energy_8
+			set_planet_flag = starting_deposit
+			set_owner = event_target:asari_republics
+			create_colony = {
+				owner = event_target:asari_republics
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+			generate_asr_espota_pops = yes
+			generate_asr_minor_colony_buildings = yes	
+			
+			set_name = "Espota Station"
+		}
+	}
+
+    planet = {
+        name = "Paphos"
+        class = pc_gas_giant
+        orbit_distance = 85
+        orbit_angle = 21
+        size = 37
+        has_ring = yes
+		flags = { paphos_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Yasilium"
+        class = pc_iron
+        orbit_distance = 45
+        orbit_angle = 117
+        size = 6
+        has_ring = no
+
+	}
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sileannebula_nimbuscluster_massrelay" 
+			name = "Silean 1 Relay"
+			orbit_angle = 89 
+			orbit_distance = 200
+		} 
+	}	
+}
+
 sys_teyolia_init = {
     name = "Teyolia"
     class = sc_m
@@ -1013,6 +1091,16 @@ sys_nahuala_init = {
 			add_deposit = d_palladium_5
 			add_deposit = d_minerals_5
 			set_planet_flag = starting_deposit
+			set_owner = event_target:asari_republics
+			create_colony = {
+				owner = event_target:asari_republics
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+			generate_asr_agessia_pops = yes
+			generate_asr_minor_colony_buildings = yes	
+			
+			set_name = "Agessia"
 		}
     }
 
@@ -1295,8 +1383,6 @@ sys_pelion_init = {
 	init_effect = {
 		generate_home_system_resources = yes
 		btr_asr_generate_stations = yes
-
-	
 	}
 	
     planet = {
@@ -1376,4 +1462,98 @@ sys_pelion_init = {
 			
 		} 
 	}
+}
+
+sys_mesana_init = {
+    name = "Mesana"
+    class = sc_m
+	max_instances = 1
+
+	flags = { outer_council_system nimbus_cluster_system mesana_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_asr_generate_stations = yes
+	}
+
+    planet = {
+	    name = "Mesana"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+		flags = { mesana_star }
+    }
+
+    planet = {
+        name = "Lesuss"
+        class = pc_steppe
+        orbit_distance = 38
+        orbit_angle = 35
+        size = 15
+        has_ring = no
+		flags = { lesuss_planet pd_ignore }
+		init_effect = {
+			set_owner = event_target:asari_republics
+			create_colony = {
+				owner = event_target:asari_republics
+				species = event_target:asariSpecies
+				ethos = owner
+			}
+			generate_asr_lesuss_pops = yes
+			generate_asr_minor_colony_buildings = yes	
+			
+			set_name = "Lesuss"
+		}
+    }
+
+    planet = {
+        name = "Lymetis"
+        class = pc_volcanic
+        orbit_distance = 22
+        orbit_angle = 107
+        size = 10
+        has_ring = no
+		flags = { lymetis_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Medokos"
+        class = pc_gas_giant
+        orbit_distance = 20
+        orbit_angle = 129
+        size = 35
+        has_ring = no
+		flags = { medokos_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}		
+    }
+
+    planet = {
+        name = "Shastessia"
+        class = pc_gas_giant
+        orbit_distance = 20
+        orbit_angle = 68
+        size = 34
+        has_ring = no
+		flags = { shastessia_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Vylius"
+        class = pc_ice_giant
+        orbit_distance = 20
+        orbit_angle = 200
+        size = 27
+        has_ring = yes
+		flags = { vylius_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_3
+			set_planet_flag = starting_deposit
+		}
+    }	
 }

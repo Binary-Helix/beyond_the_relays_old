@@ -71,7 +71,7 @@ sys_trebia_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = turian_hierarchy } } }
 				create_country = {
-					name = "NAME_turian_hierarchy"
+					name = "Turian Hierarchy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_turian_hierarchy"
 					type = default
 					origin = "origin_turian_hierarchy"
@@ -1414,12 +1414,14 @@ sys_sabulum_init = {
 	}
 }
 
+#####SERPENT NEBULA######
+
 sys_terevan_init = {
     name = "Terevan"
     class = sc_a
 	max_instances = 1
 
-	flags = { outer_council_system nimbus_cluster_system terevan_system btr_system custom_system }
+	flags = { outer_council_system serpent_nebula_system terevan_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 		btr_tur_generate_stations = yes
@@ -1471,6 +1473,15 @@ sys_terevan_init = {
 			size = 8
 		}
 	}	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_apiencrest_massrelay" 
+			name = "Serpent 2 Relay"
+			orbit_angle = 130 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 #####HORSE HEAD NEBULA#####

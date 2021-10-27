@@ -28,37 +28,6 @@ generate_btr_systems_alliance_capitol_buildings = {
 	add_building = building_stronghold	
 }
 
-generate_btr_turian_hierarchy_capitol_buildings = {
-	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
-	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
-	add_building = building_major_capital
-	add_building = building_research_lab_1
-	add_building = building_foundry_1
-	add_building = building_factory_1
-    add_building = building_commercial_zone
-	add_building = building_embassy	
-	add_building = building_military_academy
-	add_building = building_stronghold	
-}
-
-generate_btr_courts_of_dekuuna_capitol_buildings = {
-	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
-	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
-	add_building = building_major_capital
-	add_building = building_research_lab_1
-	add_building = building_foundry_1
-	add_building = building_factory_1
-    add_building = building_commercial_zone
-	add_building = building_embassy	
-	add_building = building_temple	
-	add_building = building_stronghold	
-}
-
-
 
 generate_btr_vol_protectorate_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
