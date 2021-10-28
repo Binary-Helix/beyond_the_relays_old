@@ -99,6 +99,24 @@ event = {
 						planet_type = "normal"
 					}			
 				}
+				VOL = {
+					set_homeworld = {
+						planet_flag = "irune_planet"
+						planet_type = "normal"
+					}			
+				}
+				BAT = {
+					set_homeworld = {
+						planet_flag = "kharshan_planet"
+						planet_type = "normal"
+					}			
+				}
+				DRE = {
+					set_homeworld = {
+						planet_flag = "rakhana_planet"
+						planet_type = "normal"
+					}			
+				}
 			}
 		}
 	}
@@ -229,6 +247,60 @@ event = {
 			random_system = {
 				limit = {
 					has_star_flag = mesana_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = agaiou_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = kallini_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = aspoda_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = vrastir_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = myrtil_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = statheta_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -387,6 +459,87 @@ country_event = {
 					owner = event_target:turian_hierarchy
 				}
 			}
+			random_system = {
+				limit = {
+					has_star_flag = cersea_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = kasatum_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = elunia_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = cete_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = cameram_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = spinam_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = gramen_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ursantra_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = pistrix_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
 		}
 	}
 }
@@ -506,6 +659,87 @@ country_event = {
 			random_system = {
 				limit = {
 					has_star_flag = strabo_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = bowani_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ardot_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ilhani_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = aezeni_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = endera_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = reslom_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = turix_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = judor_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ostelo_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -654,6 +888,15 @@ country_event = {
 					owner = event_target:illuminated_primacy
 				}
 			}
+			random_system = {
+				limit = {
+					has_star_flag = herculaneum_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:illuminated_primacy
+				}
+			}
 		}
 	}
 }
@@ -772,7 +1015,70 @@ country_event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = mesana_system
+					has_star_flag = yuan_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = carrini_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = petralia_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = 42518p_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = sm2183_rua_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = svarga_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = asramas_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:systems_alliance
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = alpha_centauri_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -782,6 +1088,445 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = btr_setup.1026
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_vol_protectorate
+				any_system_within_border = {
+					has_star_flag = aru_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = menarel_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = yakawa_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = cobines_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = omaverizh_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = uba_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = esori_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = satuaard_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = lebnatch_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = lobu_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = burun_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = unok_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = veskyur_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = sanu_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:vol_protectorate
+				}
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = btr_setup.1027
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_batarian_hegemony
+				any_system_within_border = {
+					has_star_flag = harsa_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = indris_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = koshlanhk_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = vular_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = untrel_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = gravnez_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = shuoma_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = foillavas_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ruotht_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = fathar_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = urdupos_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = bahak_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = chelae_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = kesd_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = hadassah_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = elam_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = drakhar_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = urdupos_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = urk_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.1028
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_krogan_chiefdom
+				any_system_within_border = {
+					has_star_flag = aralakh_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = dranek_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:krogan_chiefdom
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = nith_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:krogan_chiefdom
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.1029
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_regdikan_collective
+				any_system_within_border = {
+					has_star_flag = nosikae_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = brizhiine_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = onricidae_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = sedricina_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = tiikren_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = cedinae_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = lisiine_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = okred_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = suryan_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:regdikan_collective
+				}
+			}
+		}
+	}
+}
+
 
 # country_event = {
 #     id = btr_setup.2
@@ -1254,6 +1999,25 @@ country_event = {
 
 country_event = {
 	id = btr_setup.107
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = gothones_remnant
+				}
+				set_name = "Gothones Remnant"
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.108
 	hide_window = yes
 	is_triggered_only = yes
 

@@ -153,47 +153,127 @@ btr_hum_generate_stations = {
 	}
 }
 
-generate_turian_start_deposits_and_blockers = {
-	if = {
+btr_vol_generate_stations = {
+	every_system_planet = {
 		limit = {
-			is_planet_class = pc_dextro_arid
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
 		}
-
-		# 3 + 3 energy
-		add_deposit = d_arid_highlands
-		add_deposit = d_searing_desert
-		add_deposit = d_geothermal_vent
-		if = {
-			limit = { owner = { is_machine_empire = yes } }
-			add_deposit = d_searing_desert
+		create_mining_station = {
+			owner = event_target:vol_protectorate
 		}
-		if = {
-			limit = { owner = { has_valid_civic = civic_machine_servitor } }
-			add_deposit = d_arid_highlands
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
 		}
-
-		# 3 + 3 mining
-		add_deposit = d_veiny_cliffs
-		add_deposit = d_ore_rich_caverns
-		add_deposit = d_rich_mountain
-
-		# 4 + 3 farming (lithoids swap 3 for minerals)
-		add_deposit = d_bountiful_plains
-		add_deposit = d_great_river
-		if = {
-			limit = { owner = { is_machine_empire = no } }
-			add_deposit = d_bountiful_plains
-
-			if = {
-				limit = { owner = { is_lithoid_empire = yes } }
-				add_deposit = d_rich_mountain
-			}
-			else = {
-				add_deposit = d_tropical_island
-			}
+		create_research_station = {
+			owner = event_target:vol_protectorate
 		}
 	}
 }
+
+btr_bat_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:batarian_hegemony
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:batarian_hegemony
+		}
+	}
+}
+
+btr_dre_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:drell_compact
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:drell_compact
+		}
+	}
+}
+
+btr_kro_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:krogan_chiefdom
+		}
+	}
+}
+
+btr_lys_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:lystheni_order
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:lystheni_order
+		}
+}
+
+btr_for_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:lystheni_order
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:lystheni_order
+		}
+}
+
+
+
+
+
+
+
 
 
 # This is called after game start

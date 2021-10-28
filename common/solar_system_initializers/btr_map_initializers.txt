@@ -5334,7 +5334,122 @@ sys_nariph_init = {
 
 }
 
-#Satent is in Vol Protectorate Initializer
+sys_satent_init = {
+    name = "Satent"
+    class = "sc_m"
+	max_instances = 1
+
+	flags = { attican_traverse_system pylos_nebula_system satent_system btr_system custom_system }
+
+    planet = {
+		name = "Satent"
+        class = "pc_m_star"
+        orbit_distance = 0
+        size = 25
+		flags = { satent_star }
+		init_effect = {
+			prevent_anomaly = yes
+			clear_deposits = yes
+
+			create_ambient_object = {
+				type = "nebula_2"
+				entity_offset_height = -5
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
+		}
+    }
+
+    planet = {
+        name = "Rescel"
+        class = "pc_hot_jupiter"
+        orbit_distance = 30
+        orbit_angle = 172
+        has_ring = no
+		size = 36
+		flags = { rescel_planet pd_ignore }
+		init_effect = {
+			clear_deposits = yes
+		}	
+    }
+
+    planet = {
+        name = "Raisaris"
+        class = "pc_iron"
+        orbit_distance = 40
+        orbit_angle = 231
+        has_ring = no
+		size = 9
+		flags = { raisaris_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_element_zero_2
+			add_deposit = d_trade_value_4
+			add_deposit = d_minerals_3
+			set_planet_flag = starting_deposit
+		}	
+    }
+
+    planet = {
+        name = "Anedia"
+        class = "pc_frozen"
+        orbit_distance = 45
+        orbit_angle = 198
+        has_ring = no
+		size = 7
+		flags = { anedia_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_1
+			add_deposit = d_platinum_2
+			add_deposit = d_alloys_1
+			set_planet_flag = starting_deposit
+		}	
+    }
+
+    planet = {
+        name = "Boro"
+        class = "pc_ammonia"
+        orbit_distance = 40
+        orbit_angle = 148
+        has_ring = no
+		size = 25
+		flags = { boro_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_platinum_3
+			add_deposit = d_element_zero_2
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    planet = {
+        name = "Nataisa"
+        class = "pc_ice_giant"
+        orbit_distance = 45
+        orbit_angle = 306
+        has_ring = no
+		size = 26
+		flags = { nataisa_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "pylosnebula_eyesofmizhuna_massrelay" 
+			name = "Pylos 4 Relay"
+			orbit_angle = 270
+			orbit_distance = 285
+			
+		} 
+	}    
+}
 
 #Zaherin is in Vorcha Initializer
 
@@ -6348,13 +6463,14 @@ sys_brekkenz_init = {
 	}		
 }
 
+
 sys_fen_init = {
     name = "Fen"
     class = sc_k
 	max_instances = 1
 
 	flags = { attican_traverse_system yggdrasil_nebula_system fen_system btr_system custom_system }
-	
+
     planet = {
 		name = "Fen"
         class = pc_k_star
@@ -6380,7 +6496,7 @@ sys_fen_init = {
 	
 	planet = {
 		name = "Amsvartnir"
-		class = pc_dextro_ocean
+		class = pc_cryovolcanic
 		orbit_angle = random
 		orbit_distance = 40
 		size = 13
@@ -6422,6 +6538,7 @@ sys_fen_init = {
 		} 
 	}	
 }
+
 
 sys_hedek_init = {
 	name = "Hedek"
@@ -7053,6 +7170,7 @@ sys_athens_init = {
 	flags = { alliance_space_system artemis_tau_system athens_system btr_system custom_system }	
 
     planet = {
+		name = "Athens"
         class = pc_g_star
         orbit_distance = 0
         size = 25
@@ -7860,158 +7978,7 @@ sys_theseus_init = {
 
 #####DABO'S KNOT#####
 
-sys_cobines_init = {
-	name = "Cobi_Nes"
-	class = sc_k_giant
-	max_instances = 1
-
-	flags = { alliance_space_system dabos_knot_system cobines_system btr_system custom_system }
-
-	planet = {
-		name = "Cobi Nes"
-		class = pc_k_giant_star
-        orbit_distance = 0
-		size = 29
-		flags = { cobines_star }
-	}
-
-    planet = {
-        name = "Salau"
-        class = pc_ammonia
-        orbit_distance = 35
-        orbit_angle = 15
-        has_ring = no
-		size = 20
-		flags = { salau_planet pd_ignore }
-		moon = {
-			name = "Reval"
-			class = pc_subglacial
-			orbit_distance = 8
-			size = 7
-		}	
-    }
-
-    planet = {
-        name = "Quon Fuz"
-        class = pc_chlorine
-        orbit_distance = 45
-        orbit_angle = 181
-        has_ring = no
-		size = 16
-		flags = { quonfuz_planet pd_ignore }
-    }
-
-    planet = {
-        name = "Lahman"
-        class = pc_ice_giant
-        orbit_distance = 50
-        orbit_angle = 80
-        has_ring = no
-		size = 27
-		flags = { lahman_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
-		}
-    }
-}
-
-sys_gravnaz_init = {
-	name = "Grav'naz"
-	class = sc_a
-	max_instances = 1
-
-	flags = { alliance_space_system dabos_knot_system gravnez_system btr_system custom_system }
-
-	planet = {
-		name = "Grav'naz"
-		class = pc_a_star
-        orbit_distance = 0
-		size = 30
-		flags = { gravnaz_star }
-	}
-
-    planet = {
-        name = "Molga"
-        class = pc_molten
-        orbit_distance = 35
-        orbit_angle = 15
-        has_ring = no
-		size = 10
-		flags = { molga_planet pd_ignore }
-    }
-
-    planet = {
-        name = "Rekk'ud"
-        class = pc_volcanic
-        orbit_distance = 25
-        orbit_angle = 181
-        has_ring = no
-		size = 14
-		flags = { rekkud_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_palladium_2
-			set_planet_flag = starting_deposit
-		}
-    }
-
-    planet = {
-        name = "Fragga"
-        class = pc_cloudless_gas_giant
-        orbit_distance = 60
-        orbit_angle = 80
-        has_ring = no
-		size = 31
-		flags = { fragga_planet pd_ignore }
-		moon = {
-			name = "Mught"
-			class = pc_highland
-			orbit_distance = 8
-			has_ring = no
-			size = 7
-			flags = { mught_planet pd_ignore }
-		}
-		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-    }	
-
-	planet = {
-		name = "Ygdra"
-		class = pc_ice_giant
-        orbit_distance = 45
-		has_ring = yes
-		size = 30
-		flags = { ygdra_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	planet = {
-		name = "Jorastan"
-		class = pc_ice_giant
-        orbit_distance = 30
-		has_ring = no
-		size = 28
-		flags = { jorastan_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "dabosknot_merariring_massrelay" 
-			name = "Dabo's 1 Relay"
-			orbit_angle = 186 
-			orbit_distance = 245	
-		} 
-	}
-}
+#Grav'naz is in Batarian Hegemony Initializer
 
 sys_kesd_init = {
 	name = "Kesd"
@@ -8071,96 +8038,7 @@ sys_kesd_init = {
 	}
 }
 
-sys_omaverizh_init = {
-	name = "Oma Verizh"
-	class = sc_m_giant
-	max_instances = 1
-
-	flags = { alliance_space_system dabos_knot_system omaverizh_system btr_system custom_system }
-
-	asteroid_belt = {
-		type = icy_asteroid_belt
-		radius = 60	
-	}
-
-	planet = {
-		name = "Oma Verizh"
-		class = pc_m_giant_star
-        orbit_distance = 0
-		size = 30
-		flags = { omaverizh_star }
-	}
-
-	planet = {
-        name = "Ida Ro"
-        class = pc_hothouse
-        orbit_distance = 35
-        orbit_angle = 15
-        has_ring = no
-		size = 9
-		flags = { idaro_planet pd_ignore }
-    }
-
-	planet = {
-        class = pc_ice_asteroid
-        orbit_distance = 25
-        orbit_angle = 181
-        has_ring = no
-		size = 2
-		init_effect = {
-			set_deposit = d_iridium_1
-			set_planet_flag = starting_deposit
-		}
-    }
-
-	planet = {
-        class = pc_ice_asteroid
-        orbit_distance = 25
-        orbit_angle = 45
-        has_ring = no
-		size = 2
-		init_effect = {
-			add_deposit = d_platinum_2
-			set_planet_flag = starting_deposit
-		}
-    }
-
-	planet = {
-        class = pc_ice_asteroid
-        orbit_distance = 25
-        orbit_angle = 45
-        has_ring = no
-		size = 3
-		init_effect = {
-			add_deposit = d_palladium_3
-			set_planet_flag = starting_deposit
-		}
-    }
-	
-	planet = {
-		name = "Walden"
-        class = pc_ammonia
-        orbit_distance = 25
-        orbit_angle = 45
-        has_ring = no
-		size = 22
-		flags = { walden_planet pd_ignore }
-    }
-
-	planet = {
-		name = "Furwond"
-        class = pc_gas_giant
-        orbit_distance = 25
-        orbit_angle = 45
-        has_ring = yes
-		size = 22
-		flags = { furwond_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
-		}
-    }
-}
+#Oma Verizh is in Vol Protectorate Initializer
 
 sys_sanu_init = {
 	name = "Sanu"
@@ -8226,144 +8104,8 @@ sys_sanu_init = {
     }
 }
 
-sys_shuoma_init = {
-	name = "Shuoma"
-	class = sc_m
-	max_instances = 1
 
-	flags = { alliance_space_system dabos_knot_system shuoma_system btr_system custom_system }
-
-	planet = {
-		name = "Shuoma"
-		class = pc_m_star
-        orbit_distance = 0
-		size = 20
-		flags = { shuoma_star }
-	}
-
-	planet = {
-       	name = "Bumi"
-       	class = pc_ammonia
-       	orbit_distance = 10
-       	orbit_angle = 2
-		size = 17
-	   	has_ring = no
-		flags = { bumi_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_average_iridium_deposits
-			add_deposit = d_rich_mineral_deposits
-			set_planet_flag = starting_deposit
-		}
-	}
-	
-	planet = {
-	    name = "Sec Tur"
-	    class = pc_barren
-	    orbit_distance = 14
-	    orbit_angle = 87
-		size = 21
-	    has_ring = no   
-		flags = { sectur_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_poor_palladium_deposits
-			add_deposit = d_average_mineral_deposits
-			set_planet_flag = starting_deposit
-		}
-	}
-	
-	planet = {
-        name = "Nukvarn"
-        class = pc_cloudless_gas_giant
-        orbit_distance = 23
-        orbit_angle = 207
-		size = 35
-		has_ring = yes
-		flags = { nukvarn_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_4
-			set_planet_flag = starting_deposit
-		}
-		moon = {
-            name = "Makrag"
-            class = pc_iron
-            orbit_distance = 8
-            orbit_angle = 200
-            has_ring = no
-            size = 3
-			flags = { makrag_planet pd_ignore }
-			init_effect = {
-				set_deposit = d_iridium_3
-				add_deposit = d_platinum_1
-				add_deposit = d_palladium_2
-				set_planet_flag = starting_deposit
-			}
-		}
-		moon = {
-            name = "Gorbak'pa"
-            class = pc_subglacial
-            orbit_distance = 12
-            orbit_angle = 359
-            has_ring = no
-            size = 5
-			flags = { gorbakpa_planet pd_ignore }
-			init_effect = {
-				set_deposit = d_platinum_2
-				add_deposit = d_minerals_3
-				set_planet_flag = starting_deposit
-			}
-        }
-	}
-	
-	planet = {
-        name = "Ghra'da"
-        class = pc_gas_giant
-        orbit_distance = 54
-        orbit_angle = 2
-		size = 35
-		has_ring = no
-		flags = { ghrada_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-		moon = {
-            name = "Orn'Tvarn"
-            class = pc_ethane_ocean
-            orbit_distance = 13
-            orbit_angle = 189
-            has_ring = no
-			size = 4
-			flags = { orntvarn_planet pd_ignore }
-			init_effect = {
-				set_deposit = d_element_zero_3
-				set_planet_flag = starting_deposit
-			}
-        }
-	}
-	
-	planet = {
-        name = "Qdurn"
-        class = pc_gas_giant
-        orbit_distance = 103
-        orbit_angle = 84
-		size = 30
-        has_ring = no
-		flags = { qdurn_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_element_zero_2
-			add_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
-		}
-		moon = {
-            name = "Nefari"
-            class = pc_iron
-            orbit_distance = 13
-            orbit_angle = 90
-            has_ring = no
-			size = 10
-		}
-    }
-}
+#Shuoma is in Batarian Hegemony Initializer
 
 
 #####EXODUS CLUSTER#####
@@ -9321,6 +9063,15 @@ sys_plutus_init = {
 			set_planet_flag = starting_deposit
 		}
     }		
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "hadesgamma_artemistau_massrelay" 
+			name = "Gamma 4 Relay"
+			orbit_angle = 75 
+			orbit_distance = 210
+		} 
+	}
 }
 
 
@@ -9516,180 +9267,14 @@ sys_strenuus_init = {
 
 #Harsa is in Batarian Hegemony Initializer
 
-#Indris is in Batarian Initializer
+#Indris is in Batarian Hegemony Initializer
 
-#Koshlankh is in Batarian Initializer	
+#Koshlankh is in Batarian Hegemony Initializer	
 	
-sys_untrel_init = {
-    name = "Untrel"
-    class = sc_f
-	max_instances = 1
+#Untrel is in Batarian Hegemony Initializer
 
-	flags = { alliance_space_system kites_nest_system untrel_system btr_system custom_system }
 
-    planet = {
-		name = "Untrel"
-        class = pc_f_star
-        orbit_distance = 0
-        size = 20
-		flags = { untrel_star}
-    }
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 140
-	}
-
-    planet = {
-        name = "Ezka"
-        class = pc_hothouse
-        orbit_distance = 53
-        orbit_angle = 44
-		size = 16
-		has_ring = no
-		flags = { ezka_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
-		}
-    }
-
-    planet = {
-        name = "Klos"
-        class = pc_barren
-        orbit_distance = 32
-        orbit_angle = 315
-		size = 25
-		has_ring = no
-		flags = { klos_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_iridium_1
-			add_deposit = d_platinum_4
-			add_deposit = d_palladium_2
-			add_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
-		}
-	}
-
-    planet = {
-        name = "Adek"
-        class = pc_savannah
-        orbit_distance = 31
-        orbit_angle = 270
-        has_ring = no
-		size = 12
-		init_effect = {
-			set_planet_flag = adek_codex
-			}
-    }
-
-    planet = {
-        name = "Uza"
-        class = pc_ice_giant
-        orbit_distance = 53
-        orbit_angle = 256
-		size = 30
-		has_ring = no
-		flags = { uza_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-    }
-
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "kitesnest_artemistau_massrelay" 
-			name = "Kite's Nest 3 Relay"
-			orbit_angle = 112 
-			orbit_distance = 200
-			
-		} 
-	}	
-}
-
-sys_vular_init = {
-    name = "Vular"
-    class = sc_g
-	max_instances = 1
-
-	flags = { alliance_space_system kites_nest_system vular_system btr_system custom_system }
-
-    planet = {
-		name = "Vular"
-        class = pc_g_star
-        orbit_distance = 0
-        size = 20
-		flags = { vular_star }
-    }
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 70
-	}
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 115
-	}	
-	
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 180
-	}	
-
-    planet = {
-        name = "Erszbat"
-        class = pc_tepid
-        orbit_distance = 50
-        orbit_angle = 5
-		size = 10
-		has_ring = no
-		flags = { uza_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_element_zero_1
-			set_planet_flag = starting_deposit
-		}
-    }
-
-    planet = {
-        name = "Azimir"
-        class = pc_gas_giant
-        orbit_distance = 45
-        orbit_angle = 147
-		size = 33
-		has_ring = yes
-		flags = { azimir_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-    }
-
-    planet = {
-        name = "Vana"
-        class = pc_frozen
-        orbit_distance = 50
-        orbit_angle = 71
-		size = 25
-		has_ring = no
-		flags = { vana_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-		}
-    }
-
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "kitesnest_vipernebula_massrelay" 
-			name = "Kite's Nest 4 Relay"
-			orbit_angle = 224 
-			orbit_distance = 200
-			
-		} 
-	}		
-}
+#Vular is in Batarian Hegemony Initializer
 
 
 #####LLEWYN NEBULA#####
@@ -10071,37 +9656,7 @@ sys_alpha_centauri_system = {
 
 #####LOBAR'TER CLUSTER#####
 
-sys_foillavas_init = {
-    name = "Foilla'vas"
-    class = sc_g
-	max_instances = 1
-
-	flags = { alliance_space_system lobarter_cluster_system foillavas_system btr_system custom_system }
-
-    planet = {
-    name = "Foilla'vas"	
-        class = pc_g_star
-        orbit_distance = 0
-        size = 20
-    }
-	
-	planet = {
-		name = "Dukraar"
-		class = pc_swamp
-        orbit_distance = 35
-		size = 18
-		flags = { dukraar_planet pd_ignore }
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "lobartercluster_hadesgamma_massrelay" 
-			name = "Lobar'ter 1 Relay"
-			orbit_angle = 136 
-			orbit_distance = 200
-		} 
-	}	
-}
+#Foilla'vas is in Batarian Hegemony Cluster
 
 sys_kentin_init = {
     name = "Kentin"
@@ -10358,61 +9913,16 @@ sys_lugorisi_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "lobartercluster_kitesnest_massrelay" 
-			name = "Lobar'ter 4 Relay"
-			orbit_angle = 136 
-			orbit_distance = 260
-		} 
-	}	
-}
-
-sys_ruotht_init = {
-    name = "Ruotht"
-    class = sc_g
-	max_instances = 1
-
-	flags = { alliance_space_system lobarter_cluster_system ruotht_system btr_system custom_system }
-
-    planet = {
-    name = "Ruotht"	
-        class = pc_g_star
-        orbit_distance = 0
-        size = 20
-    }
-	
-	planet = {
-		name = "Tikk'ud"
-		class = pc_geothermal
-        orbit_distance = 35
-		size = 10
-		flags = { tikkud_planet pd_ignore }
-	}
-
-	planet = {
-		name = "Qetta"
-		class = pc_gas_giant
-        orbit_distance = 35
-		size = 17
-		flags = { qetta_planet pd_ignore }
-	}
-
-	planet = {
-		name = "Fhargon"
-		class = pc_chlorine
-        orbit_distance = 35
-		size = 35
-		flags = { fhargon_planet pd_ignore }
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
 			type = "lobartercluster_artemistau_massrelay" 
 			name = "Lobar'ter 5 Relay"
 			orbit_angle = 136 
 			orbit_distance = 200
 		} 
-	}	
+	}
 }
+
+#Ruotht is in Batarian Hegemony Initializer
+
 
 
 #####MERARI RING#####
@@ -10468,6 +9978,15 @@ sys_elam_init = {
 			set_planet_flag = starting_deposit
 		}
 	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "merariring_vipernebula_massrelay" 
+			name = "Mkali 1 Relay"
+			orbit_angle = 16 
+			orbit_distance = 175
+		} 
+	}
 }
 
 sys_hadassah_init = {
@@ -10519,6 +10038,15 @@ sys_hadassah_init = {
 			set_planet_flag = starting_deposit
 		}
 	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "merariring_dabosknot_massrelay" 
+			name = "Mkali 2 Relay"
+			orbit_angle = 16 
+			orbit_distance = 175
+		} 
+	}
 }
 
 
@@ -10985,65 +10513,8 @@ sys_drakhar_init = {
 }
 
 
+#Urdu'pos is in Batarian Hegemony Initializer
 
-sys_urdupos_init = {
-    name = "Urdu'pos" 
-    class = sc_k
-	max_instances = 1
-
-	flags = { alliance_space_system petra_nebula_system vetus_system btr_system custom_system }
-	
-    planet = {
-	    name = "Urdu'pos"
-        class = pc_k_star
-        orbit_distance = 0
-        size = 30
-    }
-
-    planet = {
-        name = "Porlon"
-        class = pc_molten
-        orbit_distance = 40
-        orbit_angle = 222
-		size = 12
-        has_ring = no
-		flags = { porlon_planet pd_ignore }
-    }
-
-    planet = {
-        name = "Juxhi"
-        class = pc_cascadian
-        orbit_distance = 30
-        orbit_angle = 267
-		size = 14
-        has_ring = no
-		flags = { juxhi_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_element_zero_2
-			set_planet_flag = starting_deposit
-		}
-    }
-
-    planet = {
-        name = "Qonfod"
-        class = pc_frozen
-        orbit_distance = 20
-        orbit_angle = 172
-		size = 19
-        has_ring = no
-		flags = { qonfod_planet pd_ignore }
-    }
-
- init_effect = { 
-		spawn_megastructure = { 
-			type = "petranebula_kitesnest_massrelay" 
-			name = "Petra 3 Relay"
-			orbit_angle = 1 
-			orbit_distance = 200
-			
-		} 
-	}	
-}
 
 #Vetus is in Systems Alliance Initializer
 
@@ -11052,74 +10523,7 @@ sys_urdupos_init = {
 
 #Bahak is in Batarian Initializer
 
-sys_chelae_init = {
-    name = "Chelae"
-    class = sc_g
-	max_instances = 1
-
-	flags = { alliance_space_system viper_nebula_system chelae_system btr_system custom_system }
-
-    planet = {
-		name = "Chelae"
-        class = pc_g_star
-        orbit_distance = 0
-        size = 20
-		flags = { chelae_star }
-    }
-
-	planet = {
-		name = "Ophapra"
-		class = pc_molten
-        orbit_distance = 25
-		size = 16
-		flags = { ophapra_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	planet = {
-		name = "Uverth"
-		class = pc_methane
-        orbit_distance = 30
-		size = 12
-		flags = { uverth_planet pd_ignore }
-	}
-
-	planet = {
-		name = "Viwei"
-		class = pc_continental
-        orbit_distance = 35
-		size = 14
-		flags = { viwei_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_poor_mineral_deposits
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	planet = {
-		name = "Traanides"
-		class = pc_dextro_glacio
-        orbit_distance = 35
-		size = 20
-		flags = { traanides_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_element_zero_2
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "vipernebula_merariring_massrelay" 
-			name = "Viper 2 Relay"
-			orbit_angle = 7 
-			orbit_distance = 220
-		} 
-	}		
-}	
+#Chelae is in Batarian Hegemony Initializer
 
 
 sys_urk_init = {
@@ -12399,56 +11803,7 @@ sys_satuarrd_init = {
 	
 }
 
-sys_menarel_init = {
-	name = "Mena Rel"
-	class = "sc_k_giant"
-	max_instances = 1
-
-	flags = { inner_council_system aethon_cluster_system menarel_system btr_system custom_system }
-
-	planet = {
-		name = "Mena Rel"
-        class = pc_k_giant_star
-        orbit_distance = 0
-        size = 20
-		flags = { menarel_star }
-	}
-
-	planet = {
-		name = "Tau Tram"
-		class = pc_hothouse
-        orbit_distance = 35
-        size = 14
-		flags = { tautram_planet pd_ignore }
-		init_effect = {
-			add_deposit = d_iridium_2
-			add_deposit = d_palladium_2
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	planet = {
-		name = "Yimunwol"
-		class = pc_ocean
-        orbit_distance = 30
-        size = 29
-		has_ring = yes
-		flags = { yimunwol_planet pd_ignore }
-		init_effect = {
-			add_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "aethoncluster_onofspot_massrelay" 
-			name = "Aethon 1 Relay"
-			orbit_angle = 56 
-			orbit_distance = 175
-		}
-	}
-}
+#Menarel is in Vol Protectorate Initializer
 
 
 #####ANDURA SECTOR#####
@@ -12638,7 +11993,7 @@ sys_aezeni_init = {
     class = sc_b_super
 	max_instances = 1
 
-	flags = { inner_council_system aethon_cluster_system menarel_system btr_system custom_system }
+	flags = { inner_council_system aethon_cluster_system aezeni_system btr_system custom_system }
 	
 	planet = {
 	    name = "Aezeni"
@@ -12691,7 +12046,7 @@ sys_endera_init = {
 	class = "sc_m_super"
 	max_instances = 1
 
-	flags = { inner_council_system aethon_cluster_system menarel_system btr_system custom_system }
+	flags = { inner_council_system aethon_cluster_system endera_system btr_system custom_system }
 
 	planet = {
 		name = "Endera"
@@ -13248,14 +12603,6 @@ sys_dranek_init = {
 			set_planet_flag = starting_deposit
 		}
     }
-	init_effect = {
-		spawn_megastructure = {
-			type = "krogandmz_andurasector_massrelay"
-			name = "Jormun 1 Relay"
-			orbit_angle = 56 
-			orbit_distance = 200			
-		}
-	}
 }
 
 sys_nith_init = {
@@ -13320,6 +12667,67 @@ sys_nith_init = {
 		}			
     }	
 }
+
+
+sys_tomdak_init = {
+    name = "Tomdak"
+    class = sc_k
+	max_instances = 1
+
+	flags = { inner_council_system krogan_dmz_system tomdak_system btr_system custom_system }
+
+    planet = {
+		name = "Tomdak"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 50
+		flags = { tomdak_star }
+    }
+
+	
+	planet = {
+		name = "Erz"
+		class = pc_hot_jupiter
+        orbit_distance = 35
+        size = 33
+		flags = { erz_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Densaak"
+		class = pc_nuked
+        orbit_distance = 40
+        size = 18
+		flags = { densaak_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Gurka"
+		class = pc_carbon
+        orbit_distance = 55
+        size = 8
+		has_ring = no
+		flags = { gurka_planet pd_ignore }
+	}
+
+	init_effect = {
+		spawn_megastructure = {
+			type = "krogandmz_andurasector_massrelay"
+			name = "Tomdak 1 Relay"
+			orbit_angle = 56 
+			orbit_distance = 200			
+		}
+	}
+	
+	init_effect = {
+		spawn_megastructure = {
+			type = "krogandmz_durwuulastream_massrelay"
+			name = "Tomdak 2 Relay"
+			orbit_angle = 56 
+			orbit_distance = 240			
+		}
+	}
+}	
 
 
 
@@ -14947,64 +14355,7 @@ sys_fortis_init = {
     }	
 }
 
-sys_uba_init = {
-    name = "Uba"
-    class = sc_m
-	max_instances = 1
-
-	flags = { outer_council_system minos_wasteland_system uba_system btr_system custom_system }
-
-    planet = {
-	    name = "Uba"
-        class = pc_m_star
-        orbit_distance = 0
-        size = 23
-		flags = { uba_star }
-    }
-
-	planet = {
-		name = "Daleon"
-		class = pc_ammonia
-        orbit_distance = 25
-		size = 17
-		flags = { daleon_planet pd_ignore }
-		moon = {
-			name = "Asok"
-			class = pc_barren
-			orbit_distance = 9
-			size = 6
-		}
-		moon = {
-			name = "Tenli"
-			class = pc_cryovolcanic
-			orbit_distance = 8
-			size = 8
-		}
-		moon = {
-			name = "Torol"
-			class = pc_iron
-			orbit_distance = 6
-			size = 5
-		}	
-	}
-	
-	planet = {
-		name = "Mosha"
-		class = pc_carbon
-        orbit_distance = 35
-		size = 14
-	}		
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "minoswasteland_eaglenebula_massrelay" 
-			name = "Minos 2 Relay"
-			orbit_angle = 300 
-			orbit_distance = 200
-			
-		} 
-	}
-}
+#Uba is in Vol Protectorate Initializer
 
 
 #####NIMBUS CLUSTER#####
@@ -15221,16 +14572,6 @@ sys_totau_init = {
 			set_planet_flag = starting_deposit
 		}
 	}			
-	
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "serpentnebula_athenanebula_massrelay" 
-			name = "Serpent 3 Relay"
-			orbit_angle = 240 
-			orbit_distance = 180
-			
-		} 
-	}
 }	
 
 #Widow is in the Citadel Council Systems Initializer
@@ -17284,65 +16625,8 @@ sys_arinlarkan_init = {
 
 #Batalla is in Courts of Dekuuna Initializer
 
-sys_fathar_init = {
-    name = "Fathar"
-    class = sc_m
-	max_instances = 1
+#Fathar is in Batarian Hegemony Initializer
 
-	flags = { terminus_system omega_nebula_system fathar_system btr_system custom_system }
-
-    planet = {
-		name = "Fathar"
-        class = pc_m_star
-        orbit_distance = 0
-        size = 23
-    }
-
-    planet = {
-        name = "Lorek"
-        class = pc_ocean
-        orbit_distance = 40
-        orbit_angle = 327
-        has_ring = no
-		size = 16
-		init_effect = {
-			add_modifier = {
-				modifier = tidal_locked
-				days = -1
-			}
-		}
-    }
-
-    planet = {
-        name = "Korar"
-        class = pc_barren_cold
-        orbit_distance = 20
-        orbit_angle = 257
-        has_ring = no
-		size = 4
-
-    }
-
-    planet = {
-        name = "Dorgal"
-        class = pc_ethane_ocean
-        orbit_distance = 50
-        orbit_angle = 262
-        has_ring = no
-		size = 9
-
-    }
-
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "omeganebula_byenzinecloud_massrelay" 
-			name = "Omega 6 Relay"
-			orbit_angle = 76 
-			orbit_distance = 200
-			
-		} 
-	}	
-}
 
 sys_kairavamori_init = {
     name = "Kairavamori"

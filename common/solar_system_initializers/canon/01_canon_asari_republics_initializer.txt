@@ -94,7 +94,7 @@ sys_parnitha_init = {
 				}
 				last_created_species = { save_global_event_target_as = asariSpecies }
 				create_country = {
-					name = "Asari Republics"
+					name = "NAME_asari_republics"
 					ship_prefix = "PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"
 					type = default
 					origin = "mec_asari_origin_thessia"
@@ -1369,6 +1369,16 @@ sys_elensia_init = {
 		size = 36
 		flags = { tracla_planet pd_ignore }
 	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_athenanebula_massrelay" 
+			name = "Serpent 3 Relay"
+			orbit_angle = 240 
+			orbit_distance = 180
+			
+		} 
+	}
 }
 
 #####NIMBUS CLUSTER#####

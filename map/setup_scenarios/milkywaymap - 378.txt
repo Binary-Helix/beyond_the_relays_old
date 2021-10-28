@@ -1674,14 +1674,7 @@ static_galaxy_scenario = {
             x = 134.315
             y = 346.2097
         }
-        initializer = sys_aru_init
-		spawn_weight = { 
-			base = 0
-                modifier = { 
-                        add = 100000 
-                        has_country_flag = vol_protectorate
-                } 
-        }
+        initializer = sys_nura_init 
     }
 
     system = {
@@ -1690,7 +1683,14 @@ static_galaxy_scenario = {
             x = 122.4572
             y = 353.0048
         }
-        initializer = sys_nura_init
+        initializer = sys_aru_init
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = vol_protectorate
+                } 
+        }
     }
 
     system = {
@@ -1800,8 +1800,8 @@ static_galaxy_scenario = {
     system = {
         id = "186"
         position = {
-            x = 190.8759
-            y = 132.9015
+            x = 197.8292
+            y = 123.7293
         }
         initializer = sys_sovak_init
     }
@@ -1809,8 +1809,8 @@ static_galaxy_scenario = {
     system = {
         id = "187"
         position = {
-            x = 201.7397
-            y = 151.8776
+            x = 193.25
+            y = 144.1274
         }
         initializer = sys_boltzmann_init
     }
@@ -1827,8 +1827,8 @@ static_galaxy_scenario = {
     system = {
         id = "189"
         position = {
-            x = 222.1597
-            y = 115.7228
+            x = 213.2321
+            y = 114.1542
         }
         initializer = sys_totau_init
     }
@@ -1836,8 +1836,8 @@ static_galaxy_scenario = {
     system = {
         id = "190"
         position = {
-            x = 202.1747
-            y = 119.2849
+            x = 230.7162
+            y = 144.5437
         }
         initializer = sys_terevan_init
     }
@@ -1918,14 +1918,7 @@ static_galaxy_scenario = {
             x = 186.6757
             y = 73.65825
         }
-        initializer = sys_pompeii_init
-		spawn_weight = { 
-			base = 0
-                modifier = { 
-                        add = 100000 
-                        has_country_flag = drell_compact
-                } 
-        } 
+        initializer = sys_stabiae_init 
     }
 
     system = {
@@ -1934,7 +1927,14 @@ static_galaxy_scenario = {
             x = 192.2985
             y = 44.41987
         }
-        initializer = sys_stabiae_init
+        initializer = sys_pompeii_init 
+		spawn_weight = { 
+			base = 0
+                modifier = { 
+                        add = 100000 
+                        has_country_flag = drell_compact
+                } 
+        } 
     }
 
     system = {
@@ -2459,6 +2459,13 @@ static_galaxy_scenario = {
             y = -307.8622
         }
         initializer = sys_nosikae_init
+        spawn_weight = { 
+			base = 0 
+				modifier = { 
+					add = 100000 
+					has_country_flag = regdikan_collective
+				}
+		}
     }
 
     system = {
@@ -2877,16 +2884,16 @@ static_galaxy_scenario = {
             x = -233.8194
             y = 237.008
         }
-        initializer = sys_foillavas_init
+        initializer = sys_kentin_init
     }
 
     system = {
         id = "298"
         position = {
-            x = -217.5229
-            y = 255.4301
+            x = -212.9146
+            y = 264.1697
         }
-        initializer = sys_kentin_init
+        initializer = sys_foillavas_init
     }
 
     system = {
@@ -2895,7 +2902,7 @@ static_galaxy_scenario = {
             x = -227.4425
             y = 268.1839
         }
-        initializer = sys_lugorisi_init
+        initializer = sys_ruotht_init
     }
 
     system = {
@@ -2904,7 +2911,7 @@ static_galaxy_scenario = {
             x = -248.6988
             y = 246.219
         }
-        initializer = sys_ruotht_init
+        initializer = sys_lugorisi_init
     }
 
     system = {
@@ -3048,7 +3055,7 @@ static_galaxy_scenario = {
             x = 26.52798
             y = 410.5663
         }
-        initializer = sys_kesd_init
+        initializer = sys_cobines_init
     }
 
     system = {
@@ -3093,7 +3100,7 @@ static_galaxy_scenario = {
             x = -8.163246
             y = 429.1813
         }
-        initializer = sys_cobines_init
+        initializer = sys_kesd_init
     }
 
     system = {
@@ -3342,8 +3349,8 @@ static_galaxy_scenario = {
     system = {
         id = "349"
         position = {
-            x = 232.2702
-            y = 136.0736
+            x = 232.3812
+            y = 122.48
         }
         initializer = sys_elensia_init
     }
@@ -3634,8 +3641,8 @@ static_galaxy_scenario = {
     system = {
         id = "383"
         position = {
-            x = -275.7967
-            y = 161.6447
+            x = -369.081
+            y = 208.1442
         }
         initializer = sys_ultio_init
         spawn_weight = { 
@@ -5151,8 +5158,11 @@ static_galaxy_scenario = {
     add_hyperlane = { from = "381" to = "281" }
     add_hyperlane = { from = "382" to = "73" }    
     add_hyperlane = { from = "382" to = "74" }
-    add_hyperlane = { from = "383" to = "112" }
-    add_hyperlane = { from = "383" to = "111" }
-    add_hyperlane = { from = "383" to = "110" }
+    add_hyperlane = { from = "383" to = "123" }
+    add_hyperlane = { from = "383" to = "124" }
+    add_hyperlane = { from = "383" to = "336" }
+    add_hyperlane = { from = "383" to = "125" }
     add_hyperlane = { from = "217" to = "220" }   
+    add_hyperlane = { from = "316" to = "318" }   
+
 }

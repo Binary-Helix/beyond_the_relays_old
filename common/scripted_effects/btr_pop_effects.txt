@@ -466,6 +466,28 @@ create_pop = {
 }
 }
 
+generate_forayanPop = { # Forayan pops
+if = {
+  limit = { NOT = { exists = event_target:forayanSpecies } }
+  create_species = { 
+    name = "Forayan"
+    class = ART
+    portrait = art3
+    homeworld = THIS 
+    traits = { 
+      trait="btr_forayans_collective_will"
+      trait="btr_forayans_caste_system"
+      ideal_planet_class = "pc_dextro_arid"
+    }
+  }
+  last_created_species = { save_global_event_target_as = forayanSpecies }
+}
+create_pop = {
+  species = event_target:forayanSpecies
+  ethos = owner
+}
+}
+
 # generate_leviathanPop = { # Leviathan pops
 #   if = {
 #     limit = { NOT = { exists = event_target:leviathanSpecies } }
@@ -645,6 +667,13 @@ generate_yahg_main_pop = {
 generate_gothones_main_pop = {
   create_pop = {
       species = event_target:gothonesSpecies
+      ethos = owner 
+  }   
+}
+
+generate_forayan_main_pop = {
+  create_pop = {
+      species = event_target:forayanSpecies
       ethos = owner 
   }   
 }

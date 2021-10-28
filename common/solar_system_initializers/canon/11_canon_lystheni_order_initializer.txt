@@ -104,8 +104,8 @@ sys_taesin_init = {
 			}
 			set_owner = event_target:lystheni_order
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_lystheni_order_capitol_buildings = yes
-			generate_sepkai_pops = yes
+			generate_lys_sepkai_capitol_buildings = yes
+			generate_lys_sepkai_pops = yes
 			set_name = "Sepkai"
 		}			
 		moon = {
@@ -140,7 +140,7 @@ sys_taesin_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "byenzinecloud_omeganebula_massrelay" 
-			name = "Byenzine_1_Relay"
+			name = "Byenzine 1 Relay"
 			orbit_angle = 1 
 			orbit_distance = 200
 			

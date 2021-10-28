@@ -71,7 +71,7 @@ sys_trebia_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = turian_hierarchy } } }
 				create_country = {
-					name = "Turian Hierarchy"
+					name = "NAME_turian_hierarchy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_turian_hierarchy"
 					type = default
 					origin = "origin_turian_hierarchy"
@@ -115,7 +115,7 @@ sys_trebia_init = {
 			}
 			set_owner = event_target:turian_hierarchy
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_turian_hierarchy_capitol_buildings = yes
+			generate_tur_palaven_capitol_buildings = yes
 			generate_tur_palaven_pops = yes
 			add_deposit = d_palaven_radiation
 			add_deposit = d_palaven_cipritine
@@ -883,6 +883,16 @@ sys_nura_init = {
 			set_planet_flag = starting_deposit
 		}
     }
+	
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "aethoncluster_meadecluster_massrelay" 
+			name = "Aethon 1 Relay"
+			orbit_angle = 60 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 
