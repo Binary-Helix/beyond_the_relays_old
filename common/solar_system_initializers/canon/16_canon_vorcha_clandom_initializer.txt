@@ -30,12 +30,24 @@ sys_kyzil_init = {
 
     planet = {
         name = "Naskral"
-        class = "pc_barren"
+        class = "pc_pd_barren_hab"
         orbit_distance = 40
         orbit_angle = 331
         has_ring = no
 		size = 4
 		flags = { naskral_planet pd_ignore }
+		init_effect = {
+			set_owner = event_target:vorcha_clandom
+			create_colony = {
+				owner = event_target:vorcha_clandom
+				species = event_target:vorchaSpecies
+				ethos = owner
+			}
+			generate_vor_naskral_pops = yes
+			generate_vorcha_buildings = yes	
+			
+			set_name = "Naskral"
+		}
     }
 
     planet = {
@@ -104,19 +116,31 @@ sys_kyzil_init = {
 			}
 			set_owner = event_target:vorcha_clandom
 			generate_btr_start_deposits_and_blockers = yes			
-			generate_btr_vorcha_clandom_capitol_buildings = yes
-			generate_heshtok_pops = yes
+			generate_vorcha_buildings = yes
+			generate_vor_heshtok_pops = yes
 			set_name = "Heshtok"
 		}	
     }
 
     planet = {
         name = "Parasc"
-        class = "pc_frozen"
+        class = "pc_pd_frozen_hab"
         orbit_distance = 20
         orbit_angle = 165
         has_ring = no
 		size = 5
+		init_effect = {
+			set_owner = event_target:vorcha_clandom
+			create_colony = {
+				owner = event_target:vorcha_clandom
+				species = event_target:vorchaSpecies
+				ethos = owner
+			}
+			generate_vor_parasc_pops = yes
+			generate_vorcha_buildings = yes	
+			
+			set_name = "Parasc"
+		}
 
     }
 
@@ -142,8 +166,8 @@ sys_kyzil_init = {
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "homunculuscluster_theshrikeabyssal_massrelay" 
-			name = "Shrike_1_Relay"
+			type = "theshrikeabyssal_crescentnebula_massrelay" 
+			name = "Shrike 1 Relay"
 			orbit_angle = 19 
 			orbit_distance = 200
 			
@@ -159,7 +183,11 @@ sys_aquila_init = {
 	max_instances = 1
 
     flags = { attican_traverse_system ismar_frontier_system aquila_system btr_system custom_system }
-	
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_han_generate_stations = yes	
+	}
+
     planet = {
 		name = "Aquila"
         class = "pc_g_star"
@@ -307,6 +335,10 @@ sys_zaherin_init = {
 	max_instances = 1
 
 	flags = { attican_traverse_system pylos_nebula_system zaherin_system btr_system custom_system }	
+		init_effect = {
+		generate_home_system_resources = yes
+		btr_han_generate_stations = yes	
+	}
 	
     planet = {
 		name = "Zaherin"

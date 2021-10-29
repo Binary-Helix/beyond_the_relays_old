@@ -58,13 +58,9 @@ sys_chabtan_init = {
 		deposit_blockers = none
 		modifiers = none
 
-		flags = { parnack_planet pd_ignore special_start_planet }
+		flags = { parnack_planet pd_ignore }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = parnack_regime }
-				save_global_event_target_as = parnack_regime
-			}			
 			prevent_anomaly = yes
 			set_global_flag = yahg_homeworld_spawned
 
@@ -75,22 +71,8 @@ sys_chabtan_init = {
 							has_country_flag = parnack_regime_player }
 					}
 				}
-				create_species = {
-					name = "Yahg"
-					class = YAH
-					portrait = yahg
-					homeworld = THIS
-					traits = {		
-						trait = "trait_very_strong"
-						trait = "trait_deviants"
-						trait = "trait_quarrelsome"
-						trait = "trait_intelligent"
-						trait = "trait_repugnant"
-					}
-				}
-				last_created_species = { save_global_event_target_as = yahgSpecies }	
 				create_country = {
-					name = "NAME_Parnack_Regime"
+					name = "NAME_parnack_regime"
 					ship_prefix = "PRV"
 					type = primitive 
 					civics = { civic = "civic_warrior_culture" civic = "civic_barbaric_despoilers" }
@@ -130,58 +112,6 @@ sys_chabtan_init = {
 					set_location = PREV
 				}
 			}
-			if = {
-				limit = {
-					NOT = {
-						any_country = { 
-							has_country_flag = parnack_regime_primitive }
-					}
-				}
-				create_species = {
-					name = "Yahg"
-					class = YAH
-					portrait = yahg
-					homeworld = THIS
-					traits = {		
-						trait = "trait_very_strong"
-						trait = "trait_deviants"
-						trait = "trait_quarrelsome"
-						trait = "trait_intelligent"
-						trait = "trait_repugnant"
-					}
-				}
-				last_created_species = { save_global_event_target_as = yahgSpecies }	
-				create_country = {
-					name = "NAME_Parnack_Regime"
-					ship_prefix = "PRV"
-					type = minor_empire 
-					civics = { civic = "civic_warrior_culture" civic = "civic_barbaric_despoilers" }
-					authority = auth_dictatorial
-					name_list = btr_yahg
-					ethos = { ethic = "ethic_fanatic_xenophobe" ethic = "ethic_militarist" }
-					species = event_target:yahgSpecies
-					flag = {
-						icon = { 
-							category = "masseffectblack"
-							file = "Parnack Regime.dds"
-						}	
-							background = {
-								category = "backgrounds"
-								file = "00_solid.dds"
-							}
-							colors = { "red" "red" "null" "null"}
-						}
-					effect = {
-						set_graphical_culture = industrial_01
-						set_country_flag = parnack_regime
-						set_country_flag = init_spawned
-						set_country_flag = custom_start_screen
-						set_country_flag = canon_map
-						save_global_event_target_as = parnack_regime
-					}						
-				}
-			}			
-			set_capital = yes
 			random_country = {
 				limit = { has_country_flag = parnack_regime }
 				save_global_event_target_as = parnack_regime
@@ -189,8 +119,10 @@ sys_chabtan_init = {
 			}
 			set_owner = event_target:parnack_regime
 			add_building = building_primitive_capital
-			generate_btr_start_deposits_and_blockers = yes
-			generate_parnack_pops = yes
+			generate_start_deposits_and_blockers = yes
+			generate_yah_parnack_capitol_buildings = yes
+			generate_yah_parnack_pops = yes
+
 			set_name = "Parnack"
 		}	
 	}			
@@ -225,7 +157,7 @@ sys_chabtan_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "bulucnebula_ismarfrontier_massrelay" 
-			name = "Buluc_3_Relay"
+			name = "Buluc 3 Relay"
 			random_pos = NO 
 			orbit_distance = 300
 			

@@ -1471,7 +1471,7 @@ country_event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = sedricina_system
+					has_star_flag = serdicina_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -1521,6 +1521,68 @@ country_event = {
 				create_starbase = {
 					size = starbase_outpost
 					owner = event_target:regdikan_collective
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.10291
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_geth_consensus
+				any_system_within_border = {
+					has_star_flag = tikkun_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = kholas_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = caarehyosal_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = dholen_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = maat_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = disul_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
 				}
 			}
 		}

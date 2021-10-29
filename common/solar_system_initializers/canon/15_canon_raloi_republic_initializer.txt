@@ -10,8 +10,8 @@ sys_azedes_init = {
 	flags = { attican_traverse_system hades_nexus_system azedes_system btr_system custom_system empire_home_system }	
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = geth_consensus } 
-			save_global_event_target_as = geth_consensus
+			limit = { has_country_flag = raloi_republic } 
+			save_global_event_target_as = raloi_republic
 		}	
 	generate_home_system_resources = yes
 	}
@@ -118,8 +118,8 @@ sys_azedes_init = {
 			}
 			set_owner = event_target:raloi_republic
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_raloi_republic_capitol_buildings = yes
-			generate_turvess_pops = yes
+			generate_btr_ral_turvess_capitol_buildings = yes
+			generate_ral_turvess_pops = yes
 			set_name = "Turvess"
 		}
 		

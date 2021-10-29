@@ -114,6 +114,46 @@ sys_relic_init = {
 			size = 8
 			flags = { drifting_skies_habitat pd_ignore }
 			init_effect = {
+				if = {
+					limit = { NOT = { any_country = { has_country_flag = relic_mineral_works } } }
+					create_country = {
+						name = "NAME_relic_mineral_works"
+						ship_prefix = "PRESCRIPTED_ship_prefix_relic_mineral_works"
+						type = default
+						origin = "origin_relic_mineral_works"
+						ignore_initial_colony_error = yes
+						civics = { civic = "civic_private_prospectors" civic = "civic_public_relations_specialists" }
+						authority = auth_corporate
+						name_list = "btr_hanar"
+						ethos = { ethic = "ethic_pacifist" ethic = "ethic_spiritualist" 	ethic = "ethic_xenophile" }
+						species = event_target:hanarSpecies
+						flag = {
+							icon={
+								category="domination"
+								file="domination_9.dds"
+							}
+							background={
+								category="backgrounds"
+								file="circle.dds"
+							}
+							colors={
+								"purple"
+								"red"
+								"null"
+								"null"
+							}
+						}
+						effect = {
+							set_graphical_culture = industrial_01
+							set_country_flag = relic_mineral_works
+							set_country_flag = init_spawned
+							set_country_flag = custom_start_screen
+							set_country_flag = canon_map
+							save_global_event_target_as = relic_mineral_works
+						}
+					}
+				}	
+				set_capital = yes
 				random_country = {
 					limit = { has_country_flag = relic_mineral_works }
 					save_global_event_target_as = relic_mineral_works

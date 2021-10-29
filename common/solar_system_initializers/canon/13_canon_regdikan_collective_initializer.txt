@@ -4,7 +4,6 @@
 
 ##### EYES OF MIZHUNA #####
 
-
 sys_nosikae_init = {
     name = "Nosikae"
     class = sc_k_giant
@@ -398,16 +397,6 @@ sys_tiikren_init = {
 		size = 18
 		has_ring = no
 		flags = { eztrakiik_planet pd_ignore}
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "eyesofmizhuna_savianabyssal_massrelay" 
-			name = "Mizhuna 3 Relay"
-			orbit_angle = 21 
-			orbit_distance = 200
-			
-		} 
 	}
 }
 

@@ -14,19 +14,7 @@ generate_btr_asari_corporate_interests_capitol_buildings = {
 	add_building = building_embassy			
 }
 
-generate_btr_geth_consensus_capitol_buildings = {
-	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
-	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
-	add_building = building_machine_major_capital
-	add_building = building_research_lab_1
-	add_building = building_foundry_1
-	add_building = building_drone_storage
-    add_building = building_machine_assembly_plant
-	add_building = building_stronghold
-	add_building = building_drone_storage	
-}
+
 
 generate_btr_rachni_swarm_capitol_buildings = {
 	while = { count = 3 add_district = district_city }
@@ -56,31 +44,8 @@ generate_btr_collectors_capitol_buildings = {
 	add_building = building_sentinel_posts
 }
 
-generate_btr_vorcha_clandom_capitol_buildings = {
-	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
-	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
-	add_building = building_primitive_capital
-	add_building = building_primitive_farm
-	add_building = building_primitive_mine
-	add_building = building_primitive_factory
-    add_building = building_primitive_power_plant
-	add_building = building_urban_dwellings		
-}
 
-generate_btr_parnack_regime_capitol_buildings = {
-	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
-	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
-	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
-	add_building = building_capital
-	add_building = building_stronghold
-	add_building = building_research_lab_1
-	add_building = building_foundry_1
-    add_building = building_factory_1
-	add_building = building_commercial_zone		
-}
+
 
 generate_btr_raloi_republic_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }

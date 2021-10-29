@@ -255,7 +255,7 @@ btr_for_generate_stations = {
 			has_mining_station = no
 		}
 		create_mining_station = {
-			owner = event_target:lystheni_order
+			owner = event_target:regdikan_collective
 		}
 	}
 	every_system_planet = {
@@ -264,9 +264,30 @@ btr_for_generate_stations = {
 			has_research_station = no
 		}
 		create_research_station = {
-			owner = event_target:lystheni_order
+			owner = event_target:regdikan_collective
 		}
 }
+
+btr_get_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:geth_consensus
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:geth_consensus
+		}
+}
+
 
 
 
