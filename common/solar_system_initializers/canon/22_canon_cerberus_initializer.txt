@@ -34,13 +34,13 @@ sys_anadius_init = {
 
 	planet = {
 		name = "Cronos Station"
-		class = "pc_cronos_station"
+		class = pc_habitat
 		orbit_distance = 122
 		orbit_angle = 215
 		size = 12
 		has_ring = no
+		entity = cerberus_cronos_01_game_entity
 		starting_planet = yes
-
 		deposit_blockers = none
 		modifiers = none
 		flags = { cronos_station pd_ignore } 
@@ -56,7 +56,7 @@ sys_anadius_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = cerberus } } }
 				create_country = {
-					name = "NAME_Cerberus"
+					name = "NAME_cerberus"
 					ship_prefix = "PRESCRIPTED_ship_prefix_cerberus"
 					type = default
 					origin = "origin_cerberus"
@@ -106,8 +106,8 @@ sys_anadius_init = {
 			set_planet_flag = habitat
 			set_owner = event_target:cerberus
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_cronos_buildings = yes
-			generate_cronos_pops = yes
+			generate_cerberus_cronos_buildings_and_districts = yes
+			generate_cerb_cronos_pops = yes
 			add_deposit = d_hydroponics_bays
 			add_deposit = d_cronos_science_labs
 			add_deposit = d_cronos_reactor
@@ -118,22 +118,160 @@ sys_anadius_init = {
 
 sys_lazarus_init = {
 	name = "Lazarus"
-	class = sc_none
+	class = sc_deep_space
 	max_instances = 1
 
-	flags = { attican_traverse_system _system _system btr_system custom_system }
-	
+	flags = { attican_traverse_system horse_head_nebula_system lazarus_system btr_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = cerberus } 
+			save_global_event_target_as = cerberus
+		}	
+	generate_home_system_resources = yes
+	}
+
 	planet = {
-		name = "Lazarus_Station"
-		class = pc_lazarus_station
-		size = 6
+		class = pc_invisible_star
+		size = 0
 		orbit_distance = 0
+	}	
+
+	planet = {
+		name = "Lazarus Station"
+		class = pc_lazarus_station
+		size = 3
+		orbit_distance = 0
+		flags = { lazarus_station pd_ignore }
+		init_effect = {
+			set_owner = event_target:cerberus
+			create_colony = {
+				owner = event_target:cerberus
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_cerb_lazarus_pops = yes
+			generate_cerberus_lazarus_buildings_and_districts = yes	
+
+			set_name = "Lazarus Station"		
+		}
 	}
 }
 
 #412-75 L
+sys_41275l_init = {
+	name = "412-75 L"
+	class = sc_m_hyper
+	max_instances = 1
 
-#LV426
+	flags = { attican_traverse_system horse_head_nebula_system 41275l_system btr_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = cerberus } 
+			save_global_event_target_as = cerberus
+		}	
+	generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "412-75 L"
+		class = pc_m_hyper_star
+		size = 40
+		orbit_distance = 0
+	}	
+
+	planet = {
+		name = "Minuteman Station"
+		class = pc_minuteman_station
+		size = 6
+		orbit_distance = 100
+		flags = { minuteman_station pd_ignore }
+		init_effect = {
+			set_owner = event_target:cerberus
+			create_colony = {
+				owner = event_target:cerberus
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_cerb_minuteman_pops = yes
+			generate_cerberus_minuteman_buildings_and_districts = yes	
+
+			set_name = "Minuteman Station"		
+		}
+	}
+
+	planet = {
+        name = "412-75 L-I"
+        class = "pc_gas_giant"
+        orbit_distance = 150
+        orbit_angle = 64
+        has_ring = no
+		size = 26
+		flags = { 41275li_planet pd_ignore }
+    }
+}
+
+sys_lv426_init = {
+	name = "LV-426"
+	class = sc_k_giant
+	max_instances = 1
+
+	flags = { attican_traverse_system horse_head_nebula_system 41275l_system btr_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = cerberus } 
+			save_global_event_target_as = cerberus
+		}	
+	generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "LV-426"
+		class = pc_k_giant_star
+		size = 40
+		orbit_distance = 0
+	}	
+
+	planet = {
+        name = "LV-426 I"
+        class = pc_hadesert
+        orbit_distance = 75
+        orbit_angle = 64
+        has_ring = no
+		size = 17
+		flags = { lv426i_planet pd_ignore }
+    }
+
+	planet = {
+		name = "The Barn"
+		class = pc_the_barn_station
+		size = 6
+		orbit_distance = 30
+		flags = { thebarn_station pd_ignore }
+		#entity = 
+		init_effect = {
+			set_owner = event_target:cerberus
+			create_colony = {
+				owner = event_target:cerberus
+				species = event_target:humanSpecies
+				ethos = owner
+			}
+			generate_cerb_barn_pops = yes
+			generate_cerberus_barn_buildings_and_districts = yes	
+
+			set_name = "The Barn"		
+		}
+	}
+
+	planet = {
+        name = "LV-426 II"
+        class = pc_barren
+        orbit_distance = 65
+        orbit_angle = 64
+        has_ring = no
+		size = 4
+		flags = { lv426ii_planet pd_ignore }
+    }
+}
 
 
 ##### NUBIAN EXPANSE #####
@@ -187,31 +325,15 @@ sys_dakka_init = {
 			}
 			prevent_anomaly = yes
 			set_global_flag = pragia_colony_spawned
-
-			if = {
-				limit = { NOT = { any_country = { has_country_flag = cerberus } } }
-				create_species = { 
-				    name = "Human" 
-				    class = HUM
-				    portrait = human 
-				    homeworld = THIS 
-				    traits = { 
-						trait="btr_human_flexible"
-						trait="btr_human_multicultural"
-						trait="trait_wasteful"
-						trait="trait_quick_learners"
-					} 
-				}
-				last_created_species = { save_global_event_target_as = humanSpecies }
-				create_colony = {
-					owner = event_target:cerberus
-					species = event_target:humanSpecies
-					ethos = owner
-				}	
-			}	
+			create_colony = {
+				owner = event_target:cerberus
+				species = event_target:humanSpecies
+				ethos = owner
+			}		
 			set_owner = event_target:cerberus
 			generate_btr_start_deposits_and_blockers = yes
-			generate_human_colony_pops = yes
+			generate_cerb_pragia_colony_buildings = yes
+			generate_cerb_pragia_pops = yes
 			set_name = "Pragia"				
 		}
     }
@@ -309,4 +431,288 @@ sys_dakka_init = {
 		} 
 	}
 
+}
+
+##### VOYAGER CLUSTER #####
+
+
+sys_patella_init = {
+	name = "Patella"
+	class = sc_a
+	max_instances = 1
+
+	flags = { alliance_space_system voyager_cluster_system patella_system btr_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = cerberus } 
+			save_global_event_target_as = cerberus
+		}	
+	generate_home_system_resources = yes
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+	planet = {
+		name = "Patella"
+		class = pc_a_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 33
+		has_ring = no
+		flags = { patella_star }
+	}
+
+	planet = {
+		name = "Yavo"
+		class = pc_molten
+        orbit_distance = 90
+		orbit_angle = { min = 1 max = 360 }
+		size = 14
+		has_ring = no
+		flags = { yavo_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_iridium_4
+			add_deposit = d_palladium_4
+			set_planet_flag = starting_deposit
+		}
+	}
+
+	planet = {
+		name = "Eperuis"
+		class = pc_barren
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 15
+		has_ring = no
+		flags = { eperius_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Qiop"
+			class = pc_frozen
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+		}
+	}
+
+	planet = {
+		name = "Xra"
+		class = pc_tundra
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 19
+		has_ring = no
+		flags = { xra_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_2
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "Tryon"
+			class = pc_iron
+			orbit_distance = 12
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "Pryon"
+			class = pc_barren_cold
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+	}
+
+	planet = {
+		name = "Grand Luxon"
+		class = pc_gas_giant
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 37
+		change_orbit = 8
+		has_ring = yes
+		flags = { grandluxon_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
+	}
+
+	planet = {
+		name = "Vulcan Station"
+		class = pc_vulcan_station
+        orbit_distance = 40
+		orbit_angle = { min = 1 max = 360 }
+		size = 4
+		has_ring = no
+		flags = { vulcan_station pd_ignore }
+		init_effect = {
+			create_colony = {
+				owner = event_target:cerberus
+				species = event_target:humanSpecies
+				ethos = owner
+			}		
+			set_owner = event_target:cerberus
+			generate_cerberus_vulcan_buildings_and_districts = yes
+			generate_cerb_vulcan_pops = yes
+			set_name = "Vulcan Station"				
+		}
+	}
+
+	planet = {
+		name = "Second Luxon"
+		class = pc_ice_giant
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 27
+		change_orbit = 5
+		has_ring = no
+		flags = { secondluxon_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_1
+			set_planet_flag = starting_deposit
+		}
+		moon = {
+			name = "SL-1"
+			class = pc_frozen
+			orbit_distance = 12
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-2"
+			class = pc_frozen
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 1
+		}
+		moon = {
+			name = "SL-3"
+			class = pc_barren_cold
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+		moon = {
+			name = "SL-4"
+			class = pc_iron
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-5"
+			class = pc_cryovolcanic
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+		moon = {
+			name = "SL-6"
+			class = pc_hydrocarbon
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-7"
+			class = pc_frozen
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-8"
+			class = pc_ice_asteroid
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+	}
+}
+
+#####SHADOW SEA#####
+
+
+sys_netheril_init = {
+    name = "Netheril"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse_system shadow_sea_system netheril_system btr_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = cerberus } 
+			save_global_event_target_as = cerberus
+		}	
+	generate_home_system_resources = yes
+	}
+		
+    planet = {
+		name = "Netheril"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 33
+		flags = { netheril_star }	
+
+    }	
+
+	planet = {
+		name = "Landeth"
+		class = pc_volcanic
+        orbit_distance = 30
+		size = 16
+		flags = { netheril_planet pd_ignore }	
+		init_effect = {
+			set_deposit = d_iridium_1
+			add_deposit = d_palladium_1
+			add_deposit = d_platinum_3
+			set_planet_flag = starting_deposit
+		}
+	}
+
+	planet = {
+		name = "Thermoples Station"
+		class = pc_thermoples_station
+        orbit_distance = 70
+		orbit_angle = { min = 1 max = 360 }
+		size = 4
+		has_ring = no
+		flags = { thermoples_station pd_ignore }
+		init_effect = {
+			create_colony = {
+				owner = event_target:cerberus
+				species = event_target:humanSpecies
+				ethos = owner
+			}		
+			set_owner = event_target:cerberus
+			generate_cerberus_therm_buildings_and_districts = yes
+			generate_cerb_therm_pops = yes
+			set_name = "Thermoples Station"				
+		}
+	}
+
+	planet = {
+		name = "Oreme"
+		class = pc_hothouse
+        orbit_distance = 60
+		size = 14
+		flags = { oreme_planet pd_ignore }	
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "shadowsea_nubianexpanse_massrelay" 
+			name = "Shadow Sea 4 Relay"
+			orbit_angle = 90
+			orbit_distance = 125
+			
+		} 
+	}	
 }

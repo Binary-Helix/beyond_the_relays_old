@@ -82,17 +82,6 @@ generate_btr_mars_start_buildings = {
 	add_building = building_research_lab_1
 }
 
-generate_btr_cronos_buildings = {
-	while = { count = 3 add_district = district_hab_housing }
-	while = { count = 3 add_district = district_hab_commercial }
-	while = { count = 3 add_district = district_hab_cultural }
-	while = { count = 2 add_building = building_factory_1 }
-	capital_scope = {
-		add_building = building_hab_major_capital
-		add_building = building_foundry_1
-		add_building = building_bureaucratic_1
-	}	
-}
 
 generate_btr_citadel_districts = {
 	add_district_and_planet_size_if_needed_effect = { district =  district_hab_housing }

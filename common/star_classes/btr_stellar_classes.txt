@@ -178,29 +178,12 @@ sc_trinary_o_y_l = {
     pc_savannah		= { spawn_odds = 0.6 }
 }
 
-sc_none = {
-    class             = none_star
-    icon              = b_star
-    icon_scale		  = 0.0
-    planet            = {
-                        key = pc_none_star
-                        class = none_star
-                    }
-
-    spawn_odds         = 0
-    num_planets     = { min = 0 max = 0 }
-    
-    pc_continental 	= { spawn_odds = 0. }
-    pc_desert		= { spawn_odds = 0.0 }
-    pc_tropical		= { spawn_odds = 0.0 }
-    pc_arid 		= { spawn_odds = 0.0 }
-    pc_ocean		= { spawn_odds = 0.0 }
-    pc_tundra		= { spawn_odds = 0.0 }
-    pc_arctic		= { spawn_odds = 0.0 }
-    pc_alpine		= { spawn_odds = 0.0 }
-    pc_savannah		= { spawn_odds = 0.0 }
+sc_deep_space = {
+	class = p_green_star
+	planet = { key = pc_invisible_star }
+	icon = a_deep_space
+	spawn_odds = 0
 }
-
 
 
 random_list = {

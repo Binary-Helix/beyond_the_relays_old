@@ -4245,90 +4245,7 @@ sys_vostok_init = {
 
 #Maskim Xul is in Rachni Swarm Initializer
 
-sys_mullaxul_init = {
-    name = "Mulla Xul"
-    class = sc_k
-	max_instances = 1
-
-	flags = { attican_traverse_system ninmah_cluster_system mullaxul_system btr_system custom_system }
-	
-    planet = {
-		name = "Mulla Xul"
-        class = pc_k_star
-        orbit_distance = 0
-        size = 25
-		flags = { mullaxul_star }
-    }
-    
-    asteroid_belt = {
-        type = rocky_asteroid_belt
-        radius = 120
-    }
-
-    planet = {
-        name = "Maldor"
-        class = pc_acid
-        orbit_distance = 65
-        orbit_angle = 202
-        has_ring = no
-		size = 21
-		flags = { maldor_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_poor_iridium_deposits
-			add_deposit = d_poor_platinum_deposits
-			add_deposit = d_poor_palladium_deposits
-			add_deposit = d_poor_mineral_deposits
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier = btr_scorching_surface
-				days = -1
-			}
-		}			
-
-    }
-
-    planet = {
-        name = "Utukku"
-        class = pc_aeolian
-        orbit_distance = 30
-        orbit_angle = 132
-        has_ring = no
-        size = 17
-		flags = { utukku_planet pd_ignore }
-		init_effect = {
-			add_deposit = d_rich_mineral_deposits
-			set_planet_flag = starting_deposit
-		}
-    }
-	
-	planet = { 
-		name = "Inakhos"
-		class = pc_asteroid
-		orbit_angle = 136
-		orbit_distance = 120
-		size = 1
-		flags = { inakhos_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_minerals_5
-			add_deposit = d_trade_value_2
-			set_planet_flag = starting_deposit
-		}
-	}	
-
-    planet = {
-        name = "Keph"
-        class = pc_gas_giant
-        orbit_distance = 70
-        orbit_angle = 213
-        has_ring = yes
-		size = 37
-		flags = { keph_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-    }
-}
+#Mulla Xul is in Rachni Swarm Initializer
 
 
 #####NUBIAN EXPANSE#####
@@ -5950,56 +5867,9 @@ sys_iera_init = {
 		} 
 	}
 }
+
+#Netheril is in Cerberus Initializer
 	
-sys_netheril_init = {
-    name = "Netheril"
-    class = sc_k
-	max_instances = 1
-
-	flags = { attican_traverse_system shadow_sea_system netheril_system btr_system custom_system }
-	
-    planet = {
-		name = "Netheril"
-        class = pc_k_star
-        orbit_distance = 0
-        size = 33
-		flags = { netheril_star }	
-
-    }	
-
-	planet = {
-		name = "Landeth"
-		class = pc_volcanic
-        orbit_distance = 30
-		size = 16
-		flags = { netheril_planet pd_ignore }	
-		init_effect = {
-			set_deposit = d_iridium_1
-			add_deposit = d_palladium_1
-			add_deposit = d_platinum_3
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	planet = {
-		name = "Oreme"
-		class = pc_hothouse
-        orbit_distance = 60
-		size = 14
-		flags = { oreme_planet pd_ignore }	
-	}	
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "shadowsea_nubianexpanse_massrelay" 
-			name = "Shadow_Sea_6_Relay"
-			orbit_angle = 90
-			orbit_distance = 125
-			
-		} 
-	}	
-}
-
 
 #####STYX THETA#####
 
@@ -9174,9 +9044,9 @@ sys_fortuna_init = {
 	}	
 }
 
+#Nedlus is in Turian Hierarchy Initializer
 
-
-#Pax is in Independent Colony Initializer
+#Pax is in Noveria Development Corporation Initializer
 
 sys_strenuus_init = {
     name = "Strenuus"
@@ -9260,6 +9130,16 @@ sys_strenuus_init = {
 			set_planet_flag = starting_deposit
 		}
     }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "horseheadnebula_argosrho_massrelay" 
+			name = "Horse Head 2 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 
@@ -10924,179 +10804,7 @@ sys_yangtze_init = {
     }
 }
 
-sys_patella_init = {
-	name = "Patella"
-	class = sc_a
-	max_instances = 1
-
-	flags = { alliance_space_system voyager_cluster_system patella_system btr_system custom_system }
-
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 250
-	}
-
-	planet = {
-		name = "Patella"
-		class = pc_a_star
-        orbit_distance = 0
-		orbit_angle = 1
-		size = 33
-		has_ring = no
-		flags = { patella_star }
-	}
-
-	planet = {
-		name = "Yavo"
-		class = pc_molten
-        orbit_distance = 90
-		orbit_angle = { min = 1 max = 360 }
-		size = 14
-		has_ring = no
-		flags = { yavo_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_iridium_4
-			add_deposit = d_palladium_4
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	planet = {
-		name = "Eperuis"
-		class = pc_barren
-        orbit_distance = 35
-		orbit_angle = { min = 1 max = 360 }
-		size = 15
-		has_ring = no
-		flags = { eperius_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-		}
-		moon = {
-			name = "Qiop"
-			class = pc_frozen
-			orbit_distance = 12
-			orbit_angle = { min = 90 max = 270 }
-			size = 2
-		}
-	}
-
-	planet = {
-		name = "Xra"
-		class = pc_tundra
-        orbit_distance = 35
-		orbit_angle = { min = 1 max = 360 }
-		size = 19
-		has_ring = no
-		flags = { xra_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-		}
-		moon = {
-			name = "Tryon"
-			class = pc_iron
-			orbit_distance = 12
-			orbit_angle = { min = 1 max = 360 }
-			size = 2
-		}
-		moon = {
-			name = "Pryon"
-			class = pc_barren_cold
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 2
-		}
-	}
-
-	planet = {
-		name = "Grand Luxon"
-		class = pc_gas_giant
-        orbit_distance = 35
-		orbit_angle = { min = 1 max = 360 }
-		size = 37
-		change_orbit = 8
-		has_ring = yes
-		flags = { grandluxon_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-		}
-	}
-
-	planet = {
-		name = "Second Luxon"
-		class = pc_ice_giant
-        orbit_distance = 35
-		orbit_angle = { min = 1 max = 360 }
-		size = 27
-		change_orbit = 5
-		has_ring = no
-		flags = { secondluxon_planet pd_ignore }
-		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
-		}
-		moon = {
-			name = "SL-1"
-			class = pc_frozen
-			orbit_distance = 12
-			orbit_angle = { min = 1 max = 360 }
-			size = 2
-		}
-		moon = {
-			name = "SL-2"
-			class = pc_frozen
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 1
-		}
-		moon = {
-			name = "SL-3"
-			class = pc_barren_cold
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 3
-		}
-		moon = {
-			name = "SL-4"
-			class = pc_iron
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 2
-		}
-		moon = {
-			name = "SL-5"
-			class = pc_cryovolcanic
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 3
-		}
-		moon = {
-			name = "SL-6"
-			class = pc_hydrocarbon
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 2
-		}
-		moon = {
-			name = "SL-7"
-			class = pc_frozen
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 2
-		}
-		moon = {
-			name = "SL-8"
-			class = pc_ice_asteroid
-			orbit_distance = 6
-			orbit_angle = { min = 1 max = 360 }
-			size = 3
-		}
-	}
-}
-
+#Patella is in Cerberus Initializer
 
 ####Zhūquè's Nest#####
 
@@ -17745,6 +17453,7 @@ sys_xecha_init = {
 
 #####SIGURD'S CRADLE#####
 
+#Decoris is in Cerberus Initializer
 sys_decoris_init = {
     name = "Decoris"
     class = sc_g

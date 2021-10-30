@@ -1999,6 +1999,23 @@ entity = {
 	cull_radius = @large_cull_radius
 }
 
+
+entity = {
+	name = "none_01_entity"
+	pdxmesh = "none_mesh"
+
+	scale = 1.0
+	
+	default_state = "habitat_idle"
+	state = { name = "habitat_idle" looping = yes }
+	state = { name = "construction" looping = yes }
+	
+	game_data = {
+	    shader_type = ship
+		emissive_recolor_crunch = 0.0
+	}
+}
+
 #entity = { 
 #	name = "black_hole_entity"
 #	pdxmesh = "black_hole_mesh"

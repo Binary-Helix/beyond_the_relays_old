@@ -5660,6 +5660,21 @@ sc_paired_g_k_k_t = { # Paired System
     num_planets     = { min = 4 max = 10 }
 }
 
+sc_none = { # no star
+    class             = none_star
+    icon              = pc_no_star
+	icon_scale		  = 1.1
+    planet            = {
+                        key = pc_none_star
+                        class = none_star
+                    }
+    spawn_odds         = 4
+    num_planets     = { min = 0 max = 1 }
+
+	pc_rogue = {
+		spawn_odds = { spawn_odds = 0.01 }
+}
+
 random_list = {
     name = "rl_binary_stars"
     stars = {

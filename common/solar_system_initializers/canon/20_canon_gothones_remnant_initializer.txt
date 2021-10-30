@@ -60,7 +60,6 @@ sys_ultio_init = {
         has_ring = no
 		size = 22
 		starting_planet = yes
-
 		deposit_blockers = none
 		modifiers = none
 		flags = { vindicta_planet pd_ignore }
@@ -119,8 +118,8 @@ sys_ultio_init = {
 			}
 			set_owner = event_target:gothones_remnant
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_asari_republics_capitol_buildings = yes
-			generate_vindicta_pops = yes
+			generate_got_major_colony_buildings = yes
+			generate_gothones_vindicta_pops = yes
 			set_name = "Vindicta"
 		}
     }

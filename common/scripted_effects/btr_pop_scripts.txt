@@ -1399,20 +1399,204 @@ generate_get_habitat_pops = {
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
+#####CERBERUS#####
 
 
+generate_cerberus_cronos_buildings_and_districts = {
+	while = { count = 3 add_district = district_hab_housing }
+	while = { count = 3 add_district = district_hab_commercial }
+	while = { count = 3 add_district = district_hab_cultural }
+	while = { count = 2 add_building = building_factory_1 }
+	capital_scope = {
+		add_building = building_hab_major_capital
+		add_building = building_foundry_1
+		add_building = building_bureaucratic_1
+		add_building = building_hydroponics_farm
+	}	
+}
+
+generate_cerberus_lazarus_buildings_and_districts = {
+	while = { count = 3 add_district = district_hab_housing }
+	while = { count = 3 add_district = district_hab_cultural }
+	while = { count = 2 add_building = building_factory_1 }
+	capital_scope = {
+		add_building = building_hab_capital
+		add_building = building_bureaucratic_1
+		add_building = building_hydroponics_farm
+		add_building = building_research_lab_2
+	}	
+}
+
+generate_cerberus_barn_buildings_and_districts = {
+	while = { count = 3 add_district = district_hab_housing }
+	while = { count = 3 add_district = district_hab_cultural }
+	while = { count = 2 add_building = building_factory_1 }
+	capital_scope = {
+		add_building = building_hab_capital
+		add_building = building_bureaucratic_1
+		add_building = building_hydroponics_farm
+	}	
+}
+
+generate_cerberus_vulcan_buildings_and_districts = {
+	while = { count = 3 add_district = district_hab_housing }
+	while = { count = 3 add_district = district_hab_cultural }
+	while = { count = 2 add_building = building_factory_1 }
+	capital_scope = {
+		add_building = building_hab_capital
+		add_building = building_bureaucratic_1
+		add_building = building_hydroponics_farm
+		add_building = building_research_lab_1
+	}	
+}
+
+generate_cerberus_therm_buildings_and_districts = {
+	while = { count = 3 add_district = district_hab_housing }
+	while = { count = 3 add_district = district_hab_energy }
+	while = { count = 2 add_building = building_factory_1 }
+	capital_scope = {
+		add_building = building_hab_capital
+		add_building = building_bureaucratic_1
+		add_building = building_hydroponics_farm
+		add_building = building_research_lab_1
+	}	
+}
+
+generate_cerb_pragia_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_illicit_research_labs	
+}
 
 
-
-
-
-generate_cronos_pops = {
+generate_cerb_cronos_pops = {
 	while = {
-	   count = 14
-	   generate_human_main_pop = yes
+		count = 20
+		generate_human_main_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
+
+generate_cerb_lazarus_pops = {
+	while = {
+		count = 5
+		generate_human_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_cerb_minuteman_pops = {
+	while = {
+		count = 8
+		generate_human_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_cerb_barn_pops = {
+	while = {
+		count = 10
+		generate_human_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_cerb_pragia_pops = {
+	while = {
+		count = 3
+		generate_human_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_cerb_vulcan_pops = {
+	while = {
+		count = 3
+		generate_human_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_cerb_therm_pops = {
+	while = {
+		count = 10
+		generate_human_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+######GOTHONES REMNANT#####
+generate_got_major_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_bureaucratic_1	
+	add_building = building_heritage_site
+	add_building = building_foundry_1
+	add_building = building_factory_1
+    add_building = building_commercial_zone
+}
+
+generate_gothones_vindicta_pops = {
+	while = {
+	   count = 26
+	   generate_gothones_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+#####RACHNI SWARM######
+
+
+generate_rac_suen_start_buildings = {
+	while = { count = 3 add_district = district_city }
+	while = { count = 2 add_district = district_mining }
+	while = { count = 2 add_district = district_farming }
+	while = { count = 3 add_district = district_generator }
+	add_building = building_hive_capital
+	add_building = building_hive_node
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_factory_1
+	add_building = building_hive_warren
+}
+
+generate_rac_suen_pops = {
+	while = {
+		count = 30
+		generate_rachni_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+generate_rac_utukka_start_buildings = {
+	while = { count = 3 add_district = district_city }
+	while = { count = 2 add_district = district_mining }
+	while = { count = 2 add_district = district_farming }
+	while = { count = 3 add_district = district_generator }
+	add_building = building_hive_capital
+	add_building = building_research_lab_1
+	add_building = building_foundry_1
+	add_building = building_hive_warren
+}
+
+generate_rac_utukku_pops = {
+	while = {
+		count = 15
+		generate_rachni_main_pop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+
+
+
+
 
 generate_sepkai_pops = {
 	while = {
@@ -1454,13 +1638,9 @@ generate_illium_pops = {
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
-generate_vindicta_pops = {
-	while = {
-	   count = 30
-	   generate_gothones_main_pop = yes
-	}
-	every_owned_pop = { set_pop_flag = init_spawn }
-}
+
+
+
 
 generate_anhur_pops = {
 	while = {
@@ -1576,14 +1756,6 @@ generate_collector_base_pops = {
 }
 
 
-
-generate_suen_pops = {
-	while = {
-		count = 30
-		generate_rachni_main_pop = yes
-	}
-	every_owned_pop = { set_pop_flag = init_spawn }
-}
 
 generate_citadel_pops = {
 	while = {

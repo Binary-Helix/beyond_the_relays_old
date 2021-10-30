@@ -117,6 +117,42 @@ event = {
 						planet_type = "normal"
 					}			
 				}
+				KRO = {
+					set_homeworld = {
+						planet_flag = "tuchanka_planet"
+						planet_type = "normal"
+					}			
+				}
+				FOR = {
+					set_homeworld = {
+						planet_flag = "regdika_planet"
+						planet_type = "normal"
+					}			
+				}
+				YAH = {
+					set_homeworld = {
+						planet_flag = "parnack_planet"
+						planet_type = "normal"
+					}			
+				}
+				VOR = {
+					set_homeworld = {
+						planet_flag = "heshtok_planet"
+						planet_type = "normal"
+					}			
+				}
+				GET = {
+					set_homeworld = {
+						planet_flag = "rannoch_planet"
+						planet_type = "normal"
+					}			
+				}
+				GOT = {
+					set_homeworld = {
+						planet_flag = "vindicta_planet"
+						planet_type = "normal"
+					}			
+				}
 			}
 		}
 	}
@@ -1583,6 +1619,50 @@ country_event = {
 				create_starbase = {
 					size = starbase_outpost
 					owner = event_target:geth_consensus
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.10292
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = origin_gothones_remnant
+				any_system_within_border = {
+					has_star_flag = ultio_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = columbia_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:gothones_remnant
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = yangtze_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:gothones_remnant
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = amazon_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:gothones_remnant
 				}
 			}
 		}

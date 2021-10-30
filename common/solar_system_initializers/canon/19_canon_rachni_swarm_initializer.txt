@@ -100,8 +100,8 @@ sys_maskimxul_init = {
 			}
 			set_owner = event_target:rachni_swarm
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_rachni_swarm_capitol_buildings = yes
-			generate_suen_pops = yes
+			generate_rac_suen_start_buildings = yes
+			generate_rac_suen_pops = yes
 			add_modifier = {
 				modifier = btr_underground_civilization
 				days = -1
@@ -158,4 +158,105 @@ sys_maskimxul_init = {
 			
 		} 
 	}
+}
+
+sys_mullaxul_init = {
+    name = "Mulla Xul"
+    class = sc_k
+	max_instances = 1
+
+	flags = { attican_traverse_system ninmah_cluster_system mullaxul_system btr_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = rachni_swarm } 
+			save_global_event_target_as = rachni_swarm
+		}	
+	generate_home_system_resources = yes
+	}	
+    planet = {
+		name = "Mulla Xul"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+		flags = { mullaxul_star }
+    }
+    
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 120
+    }
+
+    planet = {
+        name = "Maldor"
+        class = pc_acid
+        orbit_distance = 65
+        orbit_angle = 202
+        has_ring = no
+		size = 21
+		flags = { maldor_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_poor_iridium_deposits
+			add_deposit = d_poor_platinum_deposits
+			add_deposit = d_poor_palladium_deposits
+			add_deposit = d_poor_mineral_deposits
+			set_planet_flag = starting_deposit
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}			
+
+    }
+
+    planet = {
+        name = "Utukku"
+        class = pc_aeolian
+        orbit_distance = 30
+        orbit_angle = 132
+        has_ring = no
+        size = 17
+		flags = { utukku_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_rich_mineral_deposits
+			set_planet_flag = starting_deposit
+			set_owner = event_target:rachni_swarm
+			create_colony = {
+				owner = event_target:rachni_swarm
+				species = event_target:rachniSpecies
+				ethos = owner
+			}
+			generate_rac_utukka_start_buildings = yes
+			generate_rac_utukku_pops = yes	
+			
+			set_name = "Utukku"
+		}	
+    }
+	
+	planet = { 
+		name = "Inakhos"
+		class = pc_asteroid
+		orbit_angle = 136
+		orbit_distance = 120
+		size = 1
+		flags = { inakhos_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_minerals_5
+			add_deposit = d_trade_value_2
+			set_planet_flag = starting_deposit
+		}
+	}	
+
+    planet = {
+        name = "Keph"
+        class = pc_gas_giant
+        orbit_distance = 70
+        orbit_angle = 213
+        has_ring = yes
+		size = 37
+		flags = { keph_planet pd_ignore }
+		init_effect = {
+			set_deposit = d_helium_3_2
+			set_planet_flag = starting_deposit
+		}
+    }
 }
