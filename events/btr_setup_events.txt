@@ -1669,6 +1669,94 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = btr_setup.10293
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_origin = mec_asari_origin_illium
+				any_system_within_border = {
+					has_star_flag = tasale_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = zelene_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_corporate_interests
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = lusarn_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_corporate_interests
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ondeste_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:asari_corporate_interests
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.10294
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = citadel_council
+				any_system_within_border = {
+					has_star_flag = widow_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = phoenix_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:citadel_council
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = tomdak_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:citadel_council
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = totau_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:citadel_council
+				}
+			}
+		}
+	}
+}
+
 
 # country_event = {
 #     id = btr_setup.2

@@ -7,7 +7,7 @@
 sys_tasale_init = {
     name = "Tasale"
 	class = "sc_g"
-	flags = { empire_home_system btr_asari_tasale_system custom_system }
+	flags = { terminus_system crescent_nebula_system tasale_system empire_home_system custom_system }
 	
 	init_effect = { 
 		random_country = { 
@@ -125,10 +125,10 @@ sys_tasale_init = {
 				species = { save_global_event_target_as = asariSpecies }
 			}
 			set_owner = event_target:asari_corporate_interests
-			generate_btr_asari_corporate_interests_capitol_buildings = yes
 			generate_btr_start_deposits_and_blockers = yes
+			generate_asi_illium_capitol_buildings = yes
 			btr_asari_generate_illium_deposits = yes
-			generate_illium_pops = yes
+			generate_asi_illium_pops = yes
 			set_name = "Illium"
 		}			
 	}
@@ -223,7 +223,7 @@ sys_tasale_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "eaglenebula_crescentnebula_massrelay" 
-			name = "Crescent_4_Relay"
+			name = "Crescent 4 Relay"
 			orbit_angle = 37 
 			orbit_distance = 190
 			
@@ -233,7 +233,7 @@ sys_tasale_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "crescentnebula_nemeanalpha_massrelay" 
-			name = "Crescent_5_Relay"
+			name = "Crescent 5 Relay"
 			orbit_angle = 26 
 			orbit_distance = 240
 			

@@ -54,7 +54,7 @@ sys_widow_init = {
 					}
 				}
 				create_country = {
-					name = "NAME_The_Citadel"
+					name = "NAME_citadel_security"
 					ship_prefix = "CSV"
 					type = btr_citadel_govt 
 					origin = origin_default
@@ -80,7 +80,7 @@ sys_widow_init = {
 						}
 						}
 					effect = {
-						set_graphical_culture = mammalian_01
+						set_graphical_culture = asari_01
 						set_country_flag = citadel_council
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
@@ -96,8 +96,8 @@ sys_widow_init = {
 			}
 			set_owner = event_target:citadel_council
 			generate_btr_start_deposits_and_blockers = yes
-			generate_btr_citadel_districts = yes
-			generate_citadel_pops = yes
+			generate_csec_citadel_districts = yes
+			generate_csec_citadel_pops = yes
 			set_planet_flag = megastructure
 			set_planet_flag = habitat
 			clear_deposits = yes
@@ -110,27 +110,7 @@ sys_widow_init = {
 			add_deposit = d_purgatory_bar
 			set_name = "The Citadel"
 		}			
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "annosbasin_serpentnebula_massrelay" 
-			name = "Serpent_2_Relay"
-			orbit_angle = 6 
-			orbit_distance = 200
-			
-		} 
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "athenanebula_serpentnebula_massrelay" 
-			name = "Serpent_1_Relay"
-			orbit_angle = 48 
-			orbit_distance = 180
-			
-		} 
-	}		
+	}	
 }
 
 #####ARGOS RHO#####
@@ -139,6 +119,13 @@ sys_phoenix_init = {
     name = "Phoenix"
     class = "sc_f"
 	max_instances = 1  
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = citadel_council } 
+			save_global_event_target_as = citadel_council
+		}
+		generate_home_system_resources = yes
+	}	
 
 	flags = { alliance_space_system argos_rho_system phoenix_system btr_system custom_system }	
 
@@ -155,6 +142,7 @@ sys_phoenix_init = {
 	
 
     planet = {
+		name = "Phoenix"
         class = "pc_f_star"
         orbit_distance = 0
         size = 30
@@ -253,22 +241,16 @@ sys_phoenix_init = {
 		size = 2
 		flags = { pinnacle_station pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes		
+			set_owner = event_target:citadel_council
 			create_colony = {
 				owner = event_target:citadel_council
-				species = event_target:turianSpecies
+				species = event_target:asariSpecies
 				ethos = owner
 			}
-			while = {
-				count = 2
-				create_pop = { species = event_target:turianSpecies }
-			}
-			while = {
-				count = 1
-				create_pop = { species = event_target:salarianSpecies }
-			}
-			set_owner = event_target:citadel_council
+			generate_csec_pinnacle_pops = yes
+			generate_csec_pinnacle_buildings = yes	
+			
+			set_name = "Pinnacle Station"
 		}	
 	}	
 

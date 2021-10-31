@@ -319,7 +319,7 @@ sys_aquila_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "ismarfrontier_minoswasteland_massrelay" 
-			name = "Ismar Frontier 1 Relay"
+			name = "Ismar 1 Relay"
 			random_pos = NO 
 			orbit_distance = 315
 			
@@ -400,19 +400,6 @@ sys_zaherin_init = {
 				days = -1
 			}
 			set_global_flag = vorcha_tribals
-			create_species = {
-				name = "Vorcha"
-				class = VOR
-				homeworld = THIS
-				namelist = btr_vorcha
-				traits = {		
-					trait="trait_repugnant"
-					trait="trait_extremely_adaptive"
-					trait="trait_quarrelsome"
-					trait="trait_fleeting"
-					trait="trait_resilient"
-				}
-			}
 			create_country = {
 				name = "Vorcha Tribals"
 				ship_prefix = ""
@@ -451,9 +438,7 @@ sys_zaherin_init = {
 				owner = last_created_country 
 				species = owner_main_species 
 			}
-			create_pop = { species = owner_main_species }
-			create_pop = { species = owner_main_species }
-			create_pop = { species = owner_main_species }								
+			generate_namakli_pops = yes 							
 			add_building = building_primitive_capital
 			last_created_species = { save_global_event_target_as = vorchaSpecies }			
 		}			

@@ -710,6 +710,23 @@ generate_misc_council_race_pop = {
 	}
 }
 
+generate_pinnacle_council_race_pop = {
+	random_list = {
+		5 = {
+			generate_asariPop = yes
+		}
+		45 = {
+			generate_salarianPop = yes
+		}		
+		45 = {
+			generate_turianPop = yes
+		}
+		5 = {
+			generate_humanPop = yes
+		}
+	}
+}
+
 generate_misc_terminus_pop = {
 	random_list = {
 		5 = {

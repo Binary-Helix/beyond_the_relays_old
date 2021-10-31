@@ -308,6 +308,26 @@ btr_cerb_generate_stations = {
 		}
 }
 
+btr_asi_generate_stations = {
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_mining_station
+			has_mining_station = no
+		}
+		create_mining_station = {
+			owner = event_target:asari_corporate_interests1
+		}
+	}
+	every_system_planet = {
+		limit = {
+			has_deposit_for = shipclass_research_station
+			has_research_station = no
+		}
+		create_research_station = {
+			owner = event_target:asari_corporate_interests1
+		}
+}
+
 
 
 
