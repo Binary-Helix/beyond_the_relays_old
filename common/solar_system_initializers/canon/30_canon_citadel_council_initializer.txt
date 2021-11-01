@@ -54,7 +54,7 @@ sys_widow_init = {
 					}
 				}
 				create_country = {
-					name = "NAME_citadel_security"
+					name = "Citadel Security"
 					ship_prefix = "CSV"
 					type = btr_citadel_govt 
 					origin = origin_default
@@ -111,6 +111,16 @@ sys_widow_init = {
 			set_name = "The Citadel"
 		}			
 	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_sileannebula_massrelay" 
+			name = "Serpent 6 Relay"
+			orbit_angle = 192 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 #####ARGOS RHO#####

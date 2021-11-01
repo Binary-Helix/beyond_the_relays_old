@@ -7,7 +7,7 @@
 sys_anadius_init = {
     name = "Anadius"
     class = "sc_m_giant"
-	flags = { empire_home_system btr_cerberus_system custom_system }
+	flags = { attican_traverse_system horse_head_nebula_system anadius_system empire_home_system btr_cerberus_system custom_system }
 
 	init_effect = { 
 		random_country = { 
@@ -56,7 +56,7 @@ sys_anadius_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = cerberus } } }
 				create_country = {
-					name = "NAME_cerberus"
+					name = "Cerberus"
 					ship_prefix = "PRESCRIPTED_ship_prefix_cerberus"
 					type = default
 					origin = "origin_cerberus"
@@ -135,6 +135,8 @@ sys_lazarus_init = {
 		size = 0
 		orbit_distance = 0
 	}	
+
+	change_orbit = 75
 
 	planet = {
 		name = "Lazarus Station"
@@ -271,6 +273,16 @@ sys_lv426_init = {
 		size = 4
 		flags = { lv426ii_planet pd_ignore }
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "horseheadnebula_argosrho_massrelay" 
+			name = "Horse Head 2 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 
@@ -634,6 +646,16 @@ sys_patella_init = {
 			orbit_angle = { min = 1 max = 360 }
 			size = 3
 		}
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "voyagercluster_armstrongnebula_massrelay" 
+			name = "Voyager 3 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
 	}
 }
 

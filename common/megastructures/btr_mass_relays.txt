@@ -145,7 +145,7 @@ andurasector_serpentnebula_massrelay = {
 	construction_blocks_others = no
 	construction_blocked_by_others = no
 	potential = { always = no }
-	bypass_type = massrelay_andurasector_krogandmz
+	bypass_type = massrelay_andurasector_serpentnebula
 }
 
 serpentnebula_andurasector_massrelay = {
@@ -156,7 +156,7 @@ serpentnebula_andurasector_massrelay = {
 	construction_blocks_others = no
 	construction_blocked_by_others = no
 	potential = { always = no }
-	bypass_type = massrelay_andurasector_krogandmz
+	bypass_type = massrelay_andurasector_serpentnebula
 }
 
 #massrelay_annosbasin_vasdirigap
@@ -927,7 +927,7 @@ byenzinecloud_valhallanthreshold_massrelay = {
 	construction_blocks_others = no
 	construction_blocked_by_others = no
 	potential = { always = no }
-	bypass_type = massrelay_byenzinecloud_omeganebula
+	bypass_type = massrelay_byenzinecloud_valhallanthreshold
 }
 
 valhallanthreshold_byenzinecloud_massrelay = {
@@ -938,8 +938,8 @@ valhallanthreshold_byenzinecloud_massrelay = {
 	construction_blocks_others = no
 	construction_blocked_by_others = no
 	potential = { always = no }
-	bypass_type = massrelay_byenzinecloud_omeganebula
-}
+	bypass_type = massrelay_byenzinecloud_valhallanthreshold
+}	
 
 #massrelay_calestonrift_hadesnexus
 calestonrift_hadesnexus_massrelay = {
@@ -973,7 +973,7 @@ calestonrift_hawkingeta_massrelay = {
 	construction_blocks_others = no
 	construction_blocked_by_others = no
 	potential = { always = no }
-	bypass_type = massrelay_calestonrift_hadesnexus
+	bypass_type = massrelay_calestonrift_hawkingeta
 }
 
 hawkingeta_calestonrift_massrelay = {
@@ -984,7 +984,7 @@ hawkingeta_calestonrift_massrelay = {
 	construction_blocks_others = no
 	construction_blocked_by_others = no
 	potential = { always = no }
-	bypass_type = massrelay_calestonrift_hadesnexus
+	bypass_type = massrelay_calestonrift_hawkingeta
 }
 
 #massrelay_calestonrift_hindaraglobular
@@ -1169,6 +1169,29 @@ xosarverge_cassiopeiacluster_massrelay = {
 	construction_blocked_by_others = no
 	potential = { always = no }
 	bypass_type = massrelay_cassiopeiacluster_xosarverge
+}
+
+#massrelay_cassiopeiacluster_farrim
+cassiopeiacluster_farrim_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_cassiopeiacluster_farrim
+}
+
+farrim_cassiopeiacluster_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_cassiopeiacluster_farrim
 }
 
 #massrelay_crescentnebula_eaglenebula
@@ -1629,29 +1652,6 @@ perseusveil_farrim_massrelay = {
 	construction_blocked_by_others = no
 	potential = { always = no }
 	bypass_type = massrelay_farrim_perseusveil
-}
-
-#massrelay_farrim_xosarverge
-farrim_xosarverge_massrelay = {
-	entity = "MEC_mass_relay_gateway_01_entity"
-	portrait = "GFX_megastructure_mass_relay"
-	build_outside_gravity_well = yes						
-	show_galactic_map_icon = no
-	construction_blocks_others = no
-	construction_blocked_by_others = no
-	potential = { always = no }
-	bypass_type = massrelay_farrim_xosarverge
-}
-
-xosarverge_farrim_massrelay = {
-	entity = "MEC_mass_relay_gateway_01_entity"
-	portrait = "GFX_megastructure_mass_relay"
-	build_outside_gravity_well = yes						
-	show_galactic_map_icon = no
-	construction_blocks_others = no
-	construction_blocked_by_others = no
-	potential = { always = no }
-	bypass_type = massrelay_farrim_xosarverge
 }
 
 #massrelay_galacticcore_omega4relay
@@ -3161,7 +3161,7 @@ voyagercluster_yggdrasilnebula_massrelay = {
 	bypass_type = massrelay_voyagercluster_yggdrasilnebula
 }
 
-voyagercluster_yggdrasilnebula_massrelay = {
+yggdrasilnebula_voyagercluster_massrelay = {
 	entity = "MEC_mass_relay_gateway_01_entity"
 	portrait = "GFX_megastructure_mass_relay"
 	build_outside_gravity_well = yes						
@@ -3170,4 +3170,27 @@ voyagercluster_yggdrasilnebula_massrelay = {
 	construction_blocked_by_others = no
 	potential = { always = no }
 	bypass_type = massrelay_voyagercluster_yggdrasilnebula
+}
+
+#massrelay_serpentnebula_xingyuncluster
+serpentnebula_xingyuncluster_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_serpentnebula_xingyuncluster
+}
+
+xingyuncluster_serpentnebula_massrelay = {
+	entity = "MEC_mass_relay_gateway_01_entity"
+	portrait = "GFX_megastructure_mass_relay"
+	build_outside_gravity_well = yes						
+	show_galactic_map_icon = no
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+	potential = { always = no }
+	bypass_type = massrelay_serpentnebula_xingyuncluster
 }

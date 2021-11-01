@@ -66,7 +66,7 @@ sys_aru_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = vol_protectorate } } }
 				create_country = {
-					name = "NAME_vol_protectorate"
+					name = "Vol Protectorate"
 					ship_prefix = "PRESCRIPTED_ship_prefix_vol_protectorate"
 					type = default
 					origin = "origin_vol_protectorate"
@@ -504,6 +504,16 @@ sys_cobines_init = {
 			set_planet_flag = starting_deposit
 		}
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "dabosknot_onofspot_massrelay" 
+			name = "Dabo's 2 Relay"
+			orbit_angle = 300 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 sys_omaverizh_init = {

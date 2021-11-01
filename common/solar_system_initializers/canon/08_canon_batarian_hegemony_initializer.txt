@@ -66,7 +66,7 @@ sys_harsa_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = batarian_hegemony } } }
 				create_country = {
-					name = "NAME_batarian_hegemony"
+					name = "Batarian Hegemony"
 					ship_prefix = "PRESCRIPTED_ship_prefix_batarian_hegemony"
 					type = default
 					origin = "origin_batarian_hegemony"
@@ -910,16 +910,16 @@ sys_foillavas_init = {
 
 			set_name = "Dukraar"		
 		}
-	}
+	}	
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "lobartercluster_hadesgamma_massrelay" 
-			name = "Lobar'ter 1 Relay"
+			type = "lobartercluster_mkalipool_massrelay" 
+			name = "Lobar'ter 5 Relay"
 			orbit_angle = 136 
 			orbit_distance = 200
 		} 
-	}	
+	}
 }
 
 sys_ruotht_init = {

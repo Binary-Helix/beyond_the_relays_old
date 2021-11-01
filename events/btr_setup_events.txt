@@ -344,15 +344,6 @@ event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1021
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_turian_hierarchy
@@ -515,15 +506,6 @@ country_event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = elunia_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:turian_hierarchy
-				}
-			}
-			random_system = {
-				limit = {
 					has_star_flag = cete_system
 				}
 				create_starbase = {
@@ -577,20 +559,20 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1022
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_salarian_union
 				any_system_within_border = {
 					has_star_flag = pranas_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = fortuna_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
 				}
 			}
 			random_system = {
@@ -782,16 +764,16 @@ country_event = {
 					owner = event_target:salarian_union
 				}
 			}
+			random_system = {
+				limit = {
+					has_star_flag = totau_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:salarian_union
+				}
+			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1023
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_courts_of_dekuuna
@@ -863,15 +845,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1024
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_illuminated_primacy
@@ -934,15 +907,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1025
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_systems_alliance
@@ -1122,15 +1086,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1026
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_vol_protectorate
@@ -1256,16 +1211,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-
-country_event = {
-	id = btr_setup.1027
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_batarian_hegemony
@@ -1436,15 +1381,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1028
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_krogan_chiefdom
@@ -1471,15 +1407,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.1029
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_regdikan_collective
@@ -1560,15 +1487,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.10291
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_geth_consensus
@@ -1622,15 +1540,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.10292
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = origin_gothones_remnant
@@ -1640,7 +1549,7 @@ country_event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = columbia_system
+					has_star_flag = han_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -1649,7 +1558,7 @@ country_event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = yangtze_system
+					has_star_flag = ming_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -1658,7 +1567,7 @@ country_event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = amazon_system
+					has_star_flag = wigat_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -1666,15 +1575,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.10293
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_origin = mec_asari_origin_illium
@@ -1710,15 +1610,6 @@ country_event = {
 				}
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.10294
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
 		if = {
 			limit = {
 				has_country_flag = citadel_council
@@ -1744,13 +1635,172 @@ country_event = {
 					owner = event_target:citadel_council
 				}
 			}
+		}
+		if = {
+			limit = {
+				has_country_flag = cerberus
+				any_system_within_border = {
+					has_star_flag = anadius_system
+				}
+			}
 			random_system = {
 				limit = {
-					has_star_flag = totau_system
+					has_star_flag = strenuus_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:citadel_council
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = columbia_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = yangtze_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = amazon_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:cerberus
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = heretic_geth
+				any_system_within_border = {
+					has_star_flag = theseaofstorms_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = yeelixeeme_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = yassu_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = seefisgaca_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = haelazi_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = xelazi_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = sesost_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = jaavo_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = keelulon_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = raadarum_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = gaalozozh_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ruvum_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:heretic_geth
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = cat6
+				any_system_within_border = {
+					has_star_flag = elunia_system
+				}
+			}	
+			random_system = {
+				limit = {
+					has_star_flag = elunia_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:cat6
 				}
 			}
 		}
@@ -2111,108 +2161,121 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = asari_corporate_interests
+					has_country_flag = asari_republics
 				}
-				set_name = "Asari Corporate Interest"
+				set_name = "Asari Republics"
 			}
 		}
-	}
-}
-country_event = {
-	id = btr_setup.101
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
 		if = {
 			limit = {
 				is_ai = no
 			}
 			every_country = {
 				limit = {
-					has_country_flag = noveria_development_corporation
+					has_country_flag = salarian_union
 				}
-				set_name = "Noveria Development Corporation"
+				set_name = "Salarian Union"
 			}
 		}
-	}
-}
-country_event = {
-	id = btr_setup.102
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
 		if = {
 			limit = {
 				is_ai = no
 			}
 			every_country = {
 				limit = {
-					has_country_flag = relic_mineral_works
+					has_country_flag = turian_hierarchy
 				}
-				set_name = "Relic Mineral Works"
+				set_name = "Turian Hierarchy"
 			}
 		}
-	}
-}
-country_event = {
-	id = btr_setup.103
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
 		if = {
 			limit = {
 				is_ai = no
 			}
 			every_country = {
 				limit = {
-					has_country_flag = united_anhur_corporations
+					has_country_flag = courts_of_dekuuna
+				}
+				set_name = "Courts of Dekuuna"
 			}
-			set_name = "United Anhur Corporations"
 		}
-	}
-}
-}
-country_event = {
-	id = btr_setup.104
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
 		if = {
 			limit = {
 				is_ai = no
 			}
 			every_country = {
 				limit = {
-					has_country_flag = wrill_mining_consortium
+					has_country_flag = illuminated_primacy
 				}
-				set_name = "Wrill Mining Consortium"
+				set_name = "Illuminated Primacy"
 			}
 		}
-	}
-}
-country_event = {
-	id = btr_setup.105
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
 		if = {
 			limit = {
 				is_ai = no
 			}
 			every_country = {
 				limit = {
-					has_country_flag = regdikan_collective
+					has_country_flag = systems_alliance
 				}
-				set_name = "Regdikan Collective"
+				set_name = "Systems Alliance"
 			}
 		}
-	}
-}
-country_event = {
-	id = btr_setup.106
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = vol_protectorate
+				}
+				set_name = "Vol Protectorate"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = batarian_hegemony
+				}
+				set_name = "Batarian Hegemony"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = cerberus
+				}
+				set_name = "Cerberus"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = remnants_of_rakhana
+				}
+				set_name = "Remnants of Rakhana"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = krogan_chiefdom
+				}
+				set_name = "Krogan Chiefdom"
+			}
+		}
 		if = {
 			limit = {
 				is_ai = no
@@ -2224,14 +2287,28 @@ country_event = {
 				set_name = "Lystheni Order"
 			}
 		}
-	}
-}
-
-country_event = {
-	id = btr_setup.107
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = omega_empire
+				}
+				set_name = "Omega"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = quarian_conclave
+				}
+				set_name = "Quarian Conclave"
+			}
+		}
 		if = {
 			limit = {
 				is_ai = no
@@ -2243,11 +2320,176 @@ country_event = {
 				set_name = "Gothones Remnant"
 			}
 		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = regdikan_collective
+				}
+				set_name = "Regdikan Collective"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = parnack_regime_primitive
+				}
+				set_name = "Parnack Regime"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = parnack_regime_player
+				}
+				set_name = "Parnack Regime"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = raloi_republic
+				}
+				set_name = "Raloi Republic"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = vorcha_clandom
+				}
+				set_name = "Vorcha Clandom"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = asari_corporate_interests
+				}
+				set_name = "Asari Corporate Interests"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = noveria_development_corporation
+				}
+				set_name = "Noveria Development Corporation"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = relic_mineral_works
+				}
+				set_name = "Relic Mineral Works"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = united_anhur_corporations
+				}
+				set_name = "United Anhur Corporations"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = wrill_mining_consortium
+				}
+				set_name = "Wrill Mining Consortium"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = asteria_agriculture
+				}
+				set_name = "Asteria Agriculture"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = collectors
+				}
+				set_name = "The Collectors"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = geth_consensus
+				}
+				set_name = "Geth Consensus"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = heretic_geth
+				}
+				set_name = "Heretic Geth"
+			}
+		}
+		if = {
+			limit = {
+				is_ai = no
+			}
+			every_country = {
+				limit = {
+					has_country_flag = rachni_swarm
+				}
+				set_name = "Rachni Swarm"
+			}
+		}
 	}
 }
 
 country_event = {
-	id = btr_setup.108
+	id = btr_setup.102
 	hide_window = yes
 	is_triggered_only = yes
 

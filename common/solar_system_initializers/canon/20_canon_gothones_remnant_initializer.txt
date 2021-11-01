@@ -7,7 +7,7 @@ sys_ultio_init = {
     class = sc_o_super
 	max_instances = 1
 
-	flags = { alliance_space_system attican_beta_system ultio_system empire_home_system btr_system custom_system }	
+	flags = { alliance_space_system gemini_sigma_system ultio_system empire_home_system btr_system custom_system }	
 	init_effect = { 
 		random_country = { 
 			limit = { has_country_flag = gothones_remnant } 
@@ -143,4 +143,14 @@ sys_ultio_init = {
 		size = 30
 		flags = { absolutus_planet pd_ignore }
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "geminisigma_lobartercluster_massrelay" 
+			name = "Gemini 2 Relay"
+			orbit_angle = 120 
+			orbit_distance = 300
+			
+		} 
+	}
 }

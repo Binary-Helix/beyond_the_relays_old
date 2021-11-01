@@ -705,24 +705,24 @@ cerberus={
 	ignore_portrait_duplication=no
 }
 
-# Drell Compact
-drell_compact={
-    name="NAME_drell_compact"
+# Remnants of Rakhana
+remnants_of_rakhana={
+    name="NAME_remnants_of_rakhana"
     name_list="btr_drell"
 	portrait="drell"
-    adjective="PRESCRIPTED_adjective_drell_compact"
-    ship_prefix="PRESCRIPTED_ship_prefix_drell_compact"
-    species_name = "PRESCRIPTED_species_name_drell_compact"
-    species_plural = "PRESCRIPTED_species_plural_drell_compact"	
+    adjective="PRESCRIPTED_adjective_remnants_of_rakhana"
+    ship_prefix="PRESCRIPTED_ship_prefix_remnants_of_rakhana"
+    species_name = "PRESCRIPTED_species_name_remnants_of_rakhana"
+    species_plural = "PRESCRIPTED_species_plural_remnants_of_rakhana"	
 	species_class = "DRE"
-    species_adjective = "PRESCRIPTED_species_adjective_drell_compact"
-    #species_bio="PRESCRIPTED_species_bio_drell_compact"	
+    species_adjective = "PRESCRIPTED_species_adjective_remnants_of_rakhana"
+    #species_bio="PRESCRIPTED_species_bio_remnants_of_rakhana"	
 
 	authority="auth_oligarchic"
 	government="gov_theocratic_oligarchy"
 	civics={ "civic_memorialist" "civic_diplomatic_corps" }
 
-	flags={ custom_start_screen drell_compact btr_empire btr_minor }
+	flags={ custom_start_screen remnants_of_rakhana btr_empire btr_minor }
 
 	ethic="ethic_spiritualist"
 	ethic="ethic_egalitarian"
@@ -734,7 +734,7 @@ drell_compact={
 	trait="trait_resilient"
 	trait="trait_nomadic"
 	
-	origin="origin_drell_compact"	
+	origin="origin_remnants_of_rakhana"	
 
 	planet_name="Rakhana"
 	planet_class="pc_desert"
@@ -761,14 +761,14 @@ drell_compact={
 	}
 	ruler={
 		gender=male
-		name="PRESCRIPTED_ruler_name_drell_compact"
+		name="PRESCRIPTED_ruler_name_remnants_of_rakhana"
 		portrait="drell_male"
 		texture=3
 		hair=0
 		clothes=4
 		leader_class="ruler"
 	}
-	spawn_enabled=always
+	spawn_enabled=no
 	room="drell_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
@@ -1324,7 +1324,7 @@ parnack_regime={
 		clothes=0
 		leader_class="ruler"
 	}
-	spawn_enabled=always
+	spawn_enabled=no
 	room="yahg_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
@@ -1536,287 +1536,287 @@ mec_asariillium_civ={
 	ignore_portrait_duplication=no
 }
 
-# Noveria Development Corporation
-noveria_development_corporation={
-    name="NAME_noveria_development_corporation"
-    name_list="btr_salarian"
-	portrait="salarian"
-    adjective="PRESCRIPTED_adjective_noveria_development_corporation"
-    ship_prefix="PRESCRIPTED_ship_prefix_noveria_development_corporation"
-    species_name = "PRESCRIPTED_species_name_noveria_development_corporation"
-    species_plural = "PRESCRIPTED_species_plural_noveria_development_corporation"	
-	species_class = "SAL"
-    species_adjective = "PRESCRIPTED_species_adjective_noveria_development_corporation"
-    #species_bio="PRESCRIPTED_species_bio_noveria_development_corporation"	
+# # Noveria Development Corporation
+# noveria_development_corporation={
+#     name="NAME_noveria_development_corporation"
+#     name_list="btr_salarian"
+# 	portrait="salarian"
+#     adjective="PRESCRIPTED_adjective_noveria_development_corporation"
+#     ship_prefix="PRESCRIPTED_ship_prefix_noveria_development_corporation"
+#     species_name = "PRESCRIPTED_species_name_noveria_development_corporation"
+#     species_plural = "PRESCRIPTED_species_plural_noveria_development_corporation"	
+# 	species_class = "SAL"
+#     species_adjective = "PRESCRIPTED_species_adjective_noveria_development_corporation"
+#     #species_bio="PRESCRIPTED_species_bio_noveria_development_corporation"	
 
-	authority="auth_corporate"
-	government="gov_megacorporation"
-	civics={ "civic_ruthless_competition" "civic_corporate_crafters" }
+# 	authority="auth_corporate"
+# 	government="gov_megacorporation"
+# 	civics={ "civic_ruthless_competition" "civic_corporate_crafters" }
 	
-	flags={ custom_start_screen noveria_development_corporation btr_empire independent_colony }
+# 	flags={ custom_start_screen noveria_development_corporation btr_empire independent_colony }
 
-	ethic = "ethic_fanatic_materialist"
-	ethic = "ethic_authoritarian"
+# 	ethic = "ethic_fanatic_materialist"
+# 	ethic = "ethic_authoritarian"
 
-	trait="btr_salarian_shortlived"
-	trait="btr_salarian_genius"
-	trait="trait_rapid_breeders"
-	trait="trait_weak"
+# 	trait="btr_salarian_shortlived"
+# 	trait="btr_salarian_genius"
+# 	trait="trait_rapid_breeders"
+# 	trait="trait_weak"
 	
-	origin="origin_noveria_development_corporation"	
+# 	origin="origin_noveria_development_corporation"	
 
-	planet_name="Noveria"
-	planet_class="pc_arctic"
-	city_graphical_culture="mammalian_01"	
-	system_name="Pax"
-	initializer="sys_pax_init"
-	graphical_culture="industrial_01"
+# 	planet_name="Noveria"
+# 	planet_class="pc_arctic"
+# 	city_graphical_culture="mammalian_01"	
+# 	system_name="Pax"
+# 	initializer="sys_pax_init"
+# 	graphical_culture="industrial_01"
 
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="noveria.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"red"
-			"black"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_noveria_development_corporation"
-		portrait="salarian"
-		texture=4
-		hair=0
-		clothes=5
-		ruler_title="Administrator"
-		ruler_title_female="Administrator"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="noveria_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
+# 	empire_flag={
+# 		icon={
+# 			category="masseffect"
+# 			file="noveria.dds"
+# 		}
+# 		background={
+# 			category="backgrounds"
+# 			file="00_solid.dds"
+# 		}
+# 		colors={
+# 			"red"
+# 			"black"
+# 			"null"
+# 			"null"
+# 		}
+# 	}
+# 	ruler={
+# 		gender=male
+# 		name="PRESCRIPTED_ruler_name_noveria_development_corporation"
+# 		portrait="salarian"
+# 		texture=4
+# 		hair=0
+# 		clothes=5
+# 		ruler_title="Administrator"
+# 		ruler_title_female="Administrator"
+# 		leader_class="ruler"
+# 	}
+# 	spawn_enabled=always
+# 	room="noveria_room"		
+# 	spawn_as_fallen=no
+# 	ignore_portrait_duplication=no
+# }
 
-# Relic Mineral Works
-relic_mineral_works={
-    name="NAME_relic_mineral_works"
-    name_list="btr_hanar"
-	portrait="hanar"
-    adjective="PRESCRIPTED_adjective_relic_mineral_works"
-    ship_prefix="PRESCRIPTED_ship_prefix_relic_mineral_works"
-    species_name = "PRESCRIPTED_species_name_relic_mineral_works"
-    species_plural = "PRESCRIPTED_species_plural_relic_mineral_works"	
-	species_class = "HAN"
-    species_adjective = "PRESCRIPTED_species_adjective_relic_mineral_works"
-    #species_bio="PRESCRIPTED_species_bio_relic_mineral_works"	
+# # Relic Mineral Works
+# relic_mineral_works={
+#     name="NAME_relic_mineral_works"
+#     name_list="btr_hanar"
+# 	portrait="hanar"
+#     adjective="PRESCRIPTED_adjective_relic_mineral_works"
+#     ship_prefix="PRESCRIPTED_ship_prefix_relic_mineral_works"
+#     species_name = "PRESCRIPTED_species_name_relic_mineral_works"
+#     species_plural = "PRESCRIPTED_species_plural_relic_mineral_works"	
+# 	species_class = "HAN"
+#     species_adjective = "PRESCRIPTED_species_adjective_relic_mineral_works"
+#     #species_bio="PRESCRIPTED_species_bio_relic_mineral_works"	
 
-	authority="auth_corporate"
-	government="gov_megacorporation"
-	civics={ "civic_private_prospectors" "civic_public_relations_specialists" }
+# 	authority="auth_corporate"
+# 	government="gov_megacorporation"
+# 	civics={ "civic_private_prospectors" "civic_public_relations_specialists" }
 
 	
-	flags={ custom_start_screen relic_mineral_works btr_empire independent_colony }
+# 	flags={ custom_start_screen relic_mineral_works btr_empire independent_colony }
 
-	ethic = "ethic_pacifist"
-	ethic = "ethic_spiritualist"
-	ethic = "ethic_xenophile"
+# 	ethic = "ethic_pacifist"
+# 	ethic = "ethic_spiritualist"
+# 	ethic = "ethic_xenophile"
 
-	trait="trait_weak"
-	trait="trait_traditional"
-	trait="trait_communal"
-	trait="btr_hanar_bureaucratic"
-	trait="btr_hanar_spiritual"
+# 	trait="trait_weak"
+# 	trait="trait_traditional"
+# 	trait="trait_communal"
+# 	trait="btr_hanar_bureaucratic"
+# 	trait="btr_hanar_spiritual"
 	
-	origin="origin_relic_mineral_works"	
+# 	origin="origin_relic_mineral_works"	
 
-	planet_name="Rough Tide"
-	planet_class="pc_mephitic"
-	city_graphical_culture="mammalian_01"	
-	system_name="Relic"
-	initializer="sys_relic_init"
-	graphical_culture="industrial_01"
+# 	planet_name="Rough Tide"
+# 	planet_class="pc_mephitic"
+# 	city_graphical_culture="mammalian_01"	
+# 	system_name="Relic"
+# 	initializer="sys_relic_init"
+# 	graphical_culture="industrial_01"
 
-	empire_flag={
-		icon={
-			category="domination"
-			file="domination_9.dds"
-		}
-		background={
-			category="backgrounds"
-			file="circle.dds"
-		}
-		colors={
-			"purple"
-			"red"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_relic_mineral_works"
-		portrait="hanar"
-		texture=4
-		hair=0
-		clothes=5
-		ruler_title="Chief Executive Officer"
-		ruler_title_female="Chief Executive Officer"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="hanar_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
+# 	empire_flag={
+# 		icon={
+# 			category="domination"
+# 			file="domination_9.dds"
+# 		}
+# 		background={
+# 			category="backgrounds"
+# 			file="circle.dds"
+# 		}
+# 		colors={
+# 			"purple"
+# 			"red"
+# 			"null"
+# 			"null"
+# 		}
+# 	}
+# 	ruler={
+# 		gender=male
+# 		name="PRESCRIPTED_ruler_name_relic_mineral_works"
+# 		portrait="hanar"
+# 		texture=4
+# 		hair=0
+# 		clothes=5
+# 		ruler_title="Chief Executive Officer"
+# 		ruler_title_female="Chief Executive Officer"
+# 		leader_class="ruler"
+# 	}
+# 	spawn_enabled=always
+# 	room="hanar_room"		
+# 	spawn_as_fallen=no
+# 	ignore_portrait_duplication=no
+# }
 
-# United Anhur Corporations
-united_anhur_corporations={
-    name="NAME_united_anhur_corporations"
-    name_list="btr_systems_alliance"
-	portrait="human"
-    adjective="PRESCRIPTED_adjective_united_anhur_corporations"
-    ship_prefix="PRESCRIPTED_ship_prefix_united_anhur_corporations"
-    species_name = "PRESCRIPTED_species_name_united_anhur_corporations"
-    species_plural = "PRESCRIPTED_species_plural_united_anhur_corporations"	
-	species_class = "HUM"
-    species_adjective = "PRESCRIPTED_species_adjective_united_anhur_corporations"
-    #species_bio="PRESCRIPTED_species_bio_united_anhur_corporations"	
+# # United Anhur Corporations
+# united_anhur_corporations={
+#     name="NAME_united_anhur_corporations"
+#     name_list="btr_systems_alliance"
+# 	portrait="human"
+#     adjective="PRESCRIPTED_adjective_united_anhur_corporations"
+#     ship_prefix="PRESCRIPTED_ship_prefix_united_anhur_corporations"
+#     species_name = "PRESCRIPTED_species_name_united_anhur_corporations"
+#     species_plural = "PRESCRIPTED_species_plural_united_anhur_corporations"	
+# 	species_class = "HUM"
+#     species_adjective = "PRESCRIPTED_species_adjective_united_anhur_corporations"
+#     #species_bio="PRESCRIPTED_species_bio_united_anhur_corporations"	
 
-	authority="auth_corporate"
-	government="gov_megacorporation"
-	civics={ "civic_indentured_assets" "civic_ruthless_competition" }
+# 	authority="auth_corporate"
+# 	government="gov_megacorporation"
+# 	civics={ "civic_indentured_assets" "civic_ruthless_competition" }
 	
-	flags={ custom_start_screen united_anhur_corporations btr_empire independent_colony }
+# 	flags={ custom_start_screen united_anhur_corporations btr_empire independent_colony }
 
-	ethic = "ethic_militarist"
-	ethic = "ethic_materialist"
-	ethic = "ethic_authoritarian"
+# 	ethic = "ethic_militarist"
+# 	ethic = "ethic_materialist"
+# 	ethic = "ethic_authoritarian"
 
-	trait="btr_human_flexible"
-	trait="btr_human_multicultural"
-	trait="trait_wasteful"
-	trait="trait_quick_learners"
+# 	trait="btr_human_flexible"
+# 	trait="btr_human_multicultural"
+# 	trait="trait_wasteful"
+# 	trait="trait_quick_learners"
 	
-	origin="origin_united_anhur_corporations"	
+# 	origin="origin_united_anhur_corporations"	
 
-	planet_name="Anhur"
-	planet_class="pc_forest"
-	city_graphical_culture="mammalian_01"	
-	system_name="Amun"
-	initializer="sys_amun_init"
-	graphical_culture="industrial_01"
+# 	planet_name="Anhur"
+# 	planet_class="pc_forest"
+# 	city_graphical_culture="mammalian_01"	
+# 	system_name="Amun"
+# 	initializer="sys_amun_init"
+# 	graphical_culture="industrial_01"
 
-	empire_flag={
-		icon={
-			category="domination"
-			file="domination_9.dds"
-		}
-		background={
-			category="backgrounds"
-			file="circle.dds"
-		}
-		colors={
-			"brown"
-			"light_orange"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_united_anhur_corporations"
-		portrait="human"
-		texture=4
-		hair=0
-		clothes=5
-		ruler_title="Chief Executive Officer"
-		ruler_title_female="Chief Executive Officer"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="batarian_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
+# 	empire_flag={
+# 		icon={
+# 			category="domination"
+# 			file="domination_9.dds"
+# 		}
+# 		background={
+# 			category="backgrounds"
+# 			file="circle.dds"
+# 		}
+# 		colors={
+# 			"brown"
+# 			"light_orange"
+# 			"null"
+# 			"null"
+# 		}
+# 	}
+# 	ruler={
+# 		gender=male
+# 		name="PRESCRIPTED_ruler_name_united_anhur_corporations"
+# 		portrait="human"
+# 		texture=4
+# 		hair=0
+# 		clothes=5
+# 		ruler_title="Chief Executive Officer"
+# 		ruler_title_female="Chief Executive Officer"
+# 		leader_class="ruler"
+# 	}
+# 	spawn_enabled=always
+# 	room="batarian_room"		
+# 	spawn_as_fallen=no
+# 	ignore_portrait_duplication=no
+# }
 
-# Wrill Mining Consortium
-wrill_mining_consortium={
-    name="NAME_wrill_mining_consortium"
-    name_list="btr_krogan"
-	portrait="krogan"
-    adjective="PRESCRIPTED_adjective_wrill_mining_consortium"
-    ship_prefix="PRESCRIPTED_ship_prefix_wrill_mining_consortium"
-    species_name = "PRESCRIPTED_species_name_wrill_mining_consortium"
-    species_plural = "PRESCRIPTED_species_plural_wrill_mining_consortium"	
-	species_class = "KRO"
-    species_adjective = "PRESCRIPTED_species_adjective_wrill_mining_consortium"
-    #species_bio="PRESCRIPTED_species_bio_wrill_mining_consortium"	
+# # Wrill Mining Consortium
+# wrill_mining_consortium={
+#     name="NAME_wrill_mining_consortium"
+#     name_list="btr_krogan"
+# 	portrait="krogan"
+#     adjective="PRESCRIPTED_adjective_wrill_mining_consortium"
+#     ship_prefix="PRESCRIPTED_ship_prefix_wrill_mining_consortium"
+#     species_name = "PRESCRIPTED_species_name_wrill_mining_consortium"
+#     species_plural = "PRESCRIPTED_species_plural_wrill_mining_consortium"	
+# 	species_class = "KRO"
+#     species_adjective = "PRESCRIPTED_species_adjective_wrill_mining_consortium"
+#     #species_bio="PRESCRIPTED_species_bio_wrill_mining_consortium"	
 
-	authority="auth_corporate"
-	government="gov_megacorporation"
-	civics={ "civic_private_military_companies" "civic_criminal_heritage" }
+# 	authority="auth_corporate"
+# 	government="gov_megacorporation"
+# 	civics={ "civic_private_military_companies" "civic_criminal_heritage" }
 
-	flags={ custom_start_screen wrill_mining_consortium btr_empire independent_colony }
+# 	flags={ custom_start_screen wrill_mining_consortium btr_empire independent_colony }
 
-	ethic = "ethic_xenophobe"
-	ethic = "ethic_materialist"
-	ethic = "ethic_militarist"
+# 	ethic = "ethic_xenophobe"
+# 	ethic = "ethic_materialist"
+# 	ethic = "ethic_militarist"
 
-	trait="btr_krogan_genophage"		
-	trait="btr_krogan_trait_core"
-	trait="trait_quarrelsome"
-	trait="trait_very_strong"
-	trait="trait_slow_learners"
+# 	trait="btr_krogan_genophage"		
+# 	trait="btr_krogan_trait_core"
+# 	trait="trait_quarrelsome"
+# 	trait="trait_very_strong"
+# 	trait="trait_slow_learners"
 	
-	origin="origin_wrill_mining_consortium"	
+# 	origin="origin_wrill_mining_consortium"	
 
-	planet_name="Wrill"
-	planet_class="pc_methane"
-	city_graphical_culture="mammalian_01"	
-	system_name="Malgus"
-	initializer="sys_malgus_init"
-	graphical_culture="industrial_01"
+# 	planet_name="Wrill"
+# 	planet_class="pc_methane"
+# 	city_graphical_culture="mammalian_01"	
+# 	system_name="Malgus"
+# 	initializer="sys_malgus_init"
+# 	graphical_culture="industrial_01"
 
-	empire_flag={
-		icon={
-			category="domination"
-			file="domination_9.dds"
-		}
-		background={
-			category="backgrounds"
-			file="circle.dds"
-		}
-		colors={
-			"red"
-			"light_orange"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_wrill_mining_consortium"
-		portrait="krogan"
-		texture=4
-		hair=0
-		clothes=5
-		ruler_title="Chief Executive Officer"
-		ruler_title_female="Chief Executive Officer"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="krogan_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
+# 	empire_flag={
+# 		icon={
+# 			category="domination"
+# 			file="domination_9.dds"
+# 		}
+# 		background={
+# 			category="backgrounds"
+# 			file="circle.dds"
+# 		}
+# 		colors={
+# 			"red"
+# 			"light_orange"
+# 			"null"
+# 			"null"
+# 		}
+# 	}
+# 	ruler={
+# 		gender=male
+# 		name="PRESCRIPTED_ruler_name_wrill_mining_consortium"
+# 		portrait="krogan"
+# 		texture=4
+# 		hair=0
+# 		clothes=5
+# 		ruler_title="Chief Executive Officer"
+# 		ruler_title_female="Chief Executive Officer"
+# 		leader_class="ruler"
+# 	}
+# 	spawn_enabled=always
+# 	room="krogan_room"		
+# 	spawn_as_fallen=no
+# 	ignore_portrait_duplication=no
+# }
 
 
 #########################
@@ -1962,21 +1962,21 @@ geth_consensus={
 }
 ## Geth Heretics
 
-geth_heretics={
+heretic_geth={
 	name="Name_geth_heretics"
 	name_list="btr_geth"
 	portrait = "geth"
-	adjective = "PRESCRIPTED_adjective_geth_heretics"
-	ship_prefix = "PRESCRIPTED_ship_prefix_name_geth_heretics"
-	species_name = "PRESCRIPTED_species_name_geth_heretics"
-	species_plural = "PRESCRIPTED_species_plural_geth_heretics"
-	species_class = "GHC" 
-	species_adjective = "PRESCRIPTED_species_adjective_geth_heretics"
+	adjective = "PRESCRIPTED_adjective_heretic_geth"
+	ship_prefix = "PRESCRIPTED_ship_prefix_name_heretic_geth"
+	species_name = "PRESCRIPTED_species_name_heretic_geth"
+	species_plural = "PRESCRIPTED_species_plural_heretic_geth"
+	species_class = "GTH" 
+	species_adjective = "PRESCRIPTED_species_adjective_heretic_geth"
 
 	authority = "auth_machine_intelligence"
 	government = "gov_machine_empire"
 	civics={ "civic_machine_warbots" "civic_machine_terminator" }
-	flags = { custom_start_screen geth_heretics btr_empire}
+	flags = { custom_start_screen heretic_geth btr_empire}
 
 	ethic = "ethic_gestalt_consciousness"
 
@@ -1987,13 +1987,13 @@ geth_heretics={
 	trait ="trait_robot_high_bandwidth"
 	trait ="trait_robot_durable"
 
-	origin="origin_geth_consensus"	
+	origin="origin_heretic_geth"	
 
-	planet_name="" # WIP
-	planet_class="pc_dextro_arid" # WIP
+	planet_name="Heretic Station"
+	planet_class="pc_heretic_station"
 	city_graphical_culture="mammalian_01"	
-	system_name=""
-	initializer=""
+	system_name="The Sea of Storms"
+	initializer="sys_theseaofstorms_init"
 	graphical_culture="geth_01"
 
 	empire_flag={
@@ -2014,7 +2014,7 @@ geth_heretics={
 	}
 	ruler={
 		gender = male
-		name="PRESCRIPTED_ruler_name_geth_consensus"
+		name="PRESCRIPTED_ruler_name_heretic_geth"
 		portrait="geth"
 		texture=0
 		hair=0
@@ -2027,6 +2027,7 @@ geth_heretics={
 	ignore_portrait_duplication=no
 
 }
+
 ## Rachni swarm
 rachni_swarm={
     name="NAME_rachni_swarm"
@@ -2167,8 +2168,3 @@ rachni_swarm={
 #	}
 #	origin="origin_default"
 #}
-
-########################
-### TEMPORARY SPAWNS ###
-########################
-

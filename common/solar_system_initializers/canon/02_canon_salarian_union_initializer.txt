@@ -76,7 +76,7 @@ sys_pranas_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = salarian_union } } }
 				create_country = {
-					name = "NAME_salarian_union"
+					name = "Salarian Union"
 					ship_prefix = "PRESCRIPTED_ship_prefix_salarian_union"
 					type = default
 					origin = "origin_salarian_union"
@@ -660,10 +660,17 @@ sys_sovak_init = {
 
 	}	
 
-	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_andurasector_massrelay" 
+			name = "Serpent 1 Relay"
+			orbit_angle = 260 
+			orbit_distance = 200
+		} 
+	}
 }
 
-#####VAS'DIRI GAP#####
+#####ANDURA SECTOR#####
 
 sys_limron_init = {
 	name = "Limron"
@@ -742,6 +749,16 @@ sys_limron_init = {
         size = 14
 		has_ring = no
 		flags = { lidarause_planet pd_ignore }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "andurasector_krogandmz_massrelay" 
+			name = "Andura 3 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
 	}
 }
 
@@ -836,6 +853,16 @@ sys_antillin_init = {
         size = 12
 		has_ring = no
 		flags = { dendari_planet pd_ignore }
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "andurasector_serpentnebula_massrelay" 
+			name = "Andura 1 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
 	}
 }
 
@@ -896,6 +923,8 @@ sys_vildisa_init = {
 	}
 }
 
+
+##### VAS'DIRI GAP ######
 sys_anunulibse_init = {
 	name = "Anuni'Lib'Se"
 	class = sc_binary_mg_g

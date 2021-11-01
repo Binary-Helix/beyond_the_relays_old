@@ -77,6 +77,17 @@ origin_geth_consensus = {
 	} 
 }
 
+origin_heretic_geth = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+	habitability_preference = pc_habitat
+	starting_colony = pc_heretic_station
+}
+
 origin_rachni_swarm = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
@@ -160,7 +171,7 @@ origin_quarian_conclave = {
 	}
 }
 
-origin_drell_compact = { 
+origin_remnants_of_rakhana = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 

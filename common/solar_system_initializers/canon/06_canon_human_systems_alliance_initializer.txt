@@ -84,7 +84,7 @@ sys_sol_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = systems_alliance } } }
 				create_country = {
-					name = "Name_systems_alliance"
+					name = "Systems Alliance"
 					ship_prefix = "PRESCRIPTED_ship_prefix_systems_alliance"
 					type = default
 					origin = "origin_systems_alliance"
@@ -1537,10 +1537,10 @@ sys_boltzmann_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "serpentnebula_andurasector_massrelay" 
-			name = "Serpent 1 Relay"
-			orbit_angle = 260 
+			type = "serpentnebula_xingyuncluster_massrelay" 
+			name = "Serpent 5 Relay"
+			orbit_angle = 1 
 			orbit_distance = 200
 		} 
-	}
+	}		
 }

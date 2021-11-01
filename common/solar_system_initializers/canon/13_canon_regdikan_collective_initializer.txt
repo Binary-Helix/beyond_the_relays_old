@@ -46,7 +46,7 @@ sys_nosikae_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = regdikan_collective } } }
 				create_country = {
-					name = "NAME_regdikan_collective"
+					name = "Regdikan Collective"
 					ship_prefix = "PRESCRIPTED_ship_prefix_regdikan_collective"
 					type = default
 					origin = "origin_regdikan_collective"
@@ -226,7 +226,7 @@ sys_onricidae_init = {
 		radius = 120
 	}
     planet = {
-		name = "Nosikae"
+		name = "Onri'cidae"
         class = pc_pulsar
         orbit_distance = 0
         size = 35
@@ -627,16 +627,6 @@ sys_okred_init = {
 		size = 3
 		has_ring = no
 		flags = { nimuas_planet pd_ignore}
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "eyesofmizhuna_pylosnebula_massrelay" 
-			name = "Mizhuna 4 Relay"
-			orbit_angle = 21 
-			orbit_distance = 200
-			
-		} 
 	}
 }	
 

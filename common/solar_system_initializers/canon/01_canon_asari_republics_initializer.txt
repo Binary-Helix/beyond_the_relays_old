@@ -94,7 +94,7 @@ sys_parnitha_init = {
 				}
 				last_created_species = { save_global_event_target_as = asariSpecies }
 				create_country = {
-					name = "NAME_asari_republics"
+					name = "Asari Republics"
 					ship_prefix = "PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"
 					type = default
 					origin = "mec_asari_origin_thessia"
@@ -269,16 +269,6 @@ sys_parnitha_init = {
 			}
 		}
     }
-    
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "athenanebula_serpentnebula_massrelay" 
-			name = "Athena 1 Relay"
-			orbit_angle = 180
-			orbit_distance = 200
-			
-		} 
-	}
 }
 
 sys_tomaros_init = {
@@ -754,6 +744,16 @@ sys_vernio_init = {
 			size = 3
 		}
 	}
+    
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "athenanebula_serpentnebula_massrelay" 
+			name = "Athena 1 Relay"
+			orbit_angle = 180
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 #####SILEAN NEBULA#####
@@ -1052,6 +1052,16 @@ sys_kypladon_init = {
 			set_planet_flag = starting_deposit
 		}
     }	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "sileannebula_durwuulastream_massrelay" 
+			name = "Silean 4 Relay"
+			orbit_angle = 270 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 sys_nahuala_init = {
@@ -1281,6 +1291,16 @@ sys_mitrios_init = {
         orbit_distance = 45
         size = 36
 		flags = { trintayllo_planet pd_ignore }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "andaniansea_athenanebula_massrelay" 
+			name = "Andania 2 Relay"
+			orbit_angle = 270 
+			orbit_distance = 200
+			
+		} 
 	}
 }
 

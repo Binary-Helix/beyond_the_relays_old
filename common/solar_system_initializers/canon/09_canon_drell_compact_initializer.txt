@@ -37,18 +37,18 @@ sys_pompeii_init = {
 		flags = { rakhana_planet pd_ignore }
 		init_effect = {
 			random_country = {
-				limit = { has_country_flag = drell_compact }
-				save_global_event_target_as = drell_compact
+				limit = { has_country_flag = remnants_of_rakhana }
+				save_global_event_target_as = remnants_of_rakhana
 			}
 			prevent_anomaly = yes
 			set_global_flag = drell_homeworld_spawned
 			if = {
-				limit = { NOT = { any_country = { has_country_flag = drell_compact } } }
+				limit = { NOT = { any_country = { has_country_flag = remnants_of_rakhana } } }
 				create_country = {
-					name = "NAME_drell_compact"
-					ship_prefix = "PRESCRIPTED_ship_prefix_drell_compact"
-					type = minor_empire
-					origin = "origin_drell_compact"
+					name = "Remnants of Rakhana"
+					ship_prefix = "PRESCRIPTED_ship_prefix_remnants_of_rakhana"
+					type = primitive
+					origin = "origin_remnants_of_rakhana"
 					ignore_initial_colony_error = yes
 					civics = { civic = "civic_memorialist" civic = "civic_diplomatic_corps" }
 					authority = auth_oligarchic
@@ -73,21 +73,21 @@ sys_pompeii_init = {
 					}
 					effect = {
 						set_graphical_culture = molluscoid_01
-						set_country_flag = drell_compact
+						set_country_flag = remnants_of_rakhana
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
 						set_country_flag = canon_map
-						save_global_event_target_as = drell_compact
+						save_global_event_target_as = remnants_of_rakhana
 					}
 				}
 			}	
 			set_capital = yes
 			random_country = {
-				limit = { has_country_flag = drell_compact }
-				save_global_event_target_as = drell_compact
+				limit = { has_country_flag = remnants_of_rakhana }
+				save_global_event_target_as = remnants_of_rakhana
 				species = { save_global_event_target_as = drellSpecies }
 			}
-			set_owner = event_target:drell_compact
+			set_owner = event_target:remnants_of_rakhana
 			generate_btr_start_deposits_and_blockers = yes			
 			generate_dre_rahkana_capitol_buildings = yes
 			generate_dre_rakhana_pops = yes
@@ -109,11 +109,11 @@ sys_pompeii_init = {
 		size = 34
 	}
 
-    init_effect = { 
+	init_effect = { 
 		spawn_megastructure = { 
-			type = "vesuviusnebula_olynprotectorate_massrelay" 
-			name = "Vesuvius 1 Relay"
-			orbit_angle = 220 
+			type = "vesuviusnebula_eaglenebula_massrelay" 
+			name = "Vesuvius 3 Relay"
+			orbit_angle = 187 
 			orbit_distance = 200
 		} 
 	}	

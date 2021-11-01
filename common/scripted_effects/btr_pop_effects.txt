@@ -272,51 +272,51 @@ create_pop = {
 
 generate_quarianPop = { # Lystheni pops
 if = {
-  limit = { NOT = { exists = event_target:quarianSpecies } }
-  create_species = { 
-    name = "Quarian"
-    class = QUA
-    portrait = quarian
-    homeworld = THIS 
-    traits = { 
-  trait="btr_salarian_shortlived"
-  trait="btr_salarian_genius"
-  trait="trait_rapid_breeders"
-  trait="trait_weak"
-      ideal_planet_class = "pc_dextro_savannah"
+    limit = { NOT = { exists = event_target:quarianSpecies } }
+    create_species = { 
+      name = "Quarian"
+      class = QUA
+      portrait = quarian
+      homeworld = THIS 
+      traits = { 
+    trait="btr_salarian_shortlived"
+    trait="btr_salarian_genius"
+    trait="trait_rapid_breeders"
+    trait="trait_weak"
+        ideal_planet_class = "pc_dextro_savannah"
+      }
     }
+    last_created_species = { save_global_event_target_as = quarianSpecies }
   }
-  last_created_species = { save_global_event_target_as = quarianSpecies }
-}
-create_pop = {
-  species = event_target:quarianSpecies
-  ethos = owner
-}
+  create_pop = {
+    species = event_target:quarianSpecies
+    ethos = owner
+  }
 }
 
 generate_yahgPop = { # Yahg pops
 if = {
-  limit = { NOT = { exists = event_target:yahgSpecies } }
-  create_species = { 
-    name = "Yahg"
-    class = YAH
-    portrait = yahg
-    homeworld = THIS 
-    traits = { 
-  trait="trait_very_strong"
-  trait="trait_deviants"
-  trait="trait_quarrelsome"
-  trait="trait_intelligent"
-  trait="trait_repugnant"
-      ideal_planet_class = "pc_badlands"
+    limit = { NOT = { exists = event_target:yahgSpecies } }
+    create_species = { 
+      name = "Yahg"
+      class = YAH
+      portrait = yahg
+      homeworld = THIS 
+      traits = { 
+    trait="trait_very_strong"
+    trait="trait_deviants"
+    trait="trait_quarrelsome"
+    trait="trait_intelligent"
+    trait="trait_repugnant"
+        ideal_planet_class = "pc_badlands"
+      }
     }
+    last_created_species = { save_global_event_target_as = yahgSpecies }
   }
-  last_created_species = { save_global_event_target_as = yahgSpecies }
-}
-create_pop = {
-  species = event_target:yahgSpecies
-  ethos = owner
-}
+  create_pop = {
+    species = event_target:yahgSpecies
+    ethos = owner
+  }
 }
 
 generate_raloiPop = { # Raloi pops
@@ -710,7 +710,7 @@ generate_misc_council_race_pop = {
 	}
 }
 
-generate_pinnacle_council_race_pop = {
+generate_csec_pinnacle_pop = {
 	random_list = {
 		5 = {
 			generate_asariPop = yes

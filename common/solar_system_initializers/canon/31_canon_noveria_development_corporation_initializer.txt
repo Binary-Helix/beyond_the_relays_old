@@ -60,7 +60,7 @@ sys_pax_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = noveria_development_corporation } } }
 				create_country = {
-					name = "NAME_noveria_development_corporation"
+					name = "Noveria Development Corporation"
 					ship_prefix = "PRESCRIPTED_ship_prefix_noveria_development_corporation"
 					type = independent_colony
 					origin = "origin_noveria_development_corporation"
@@ -141,10 +141,9 @@ sys_pax_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "horseheadnebula_exoduscluster_massrelay" 
-			name = "Horse Head 3 Relay"
+			name = "Horse Head 1 Relay"
 			orbit_angle = 237 
-			orbit_distance = 200
-			
+			orbit_distance = 200			
 		} 
 	}	
 }

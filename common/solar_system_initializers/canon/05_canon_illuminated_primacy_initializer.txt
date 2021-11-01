@@ -66,7 +66,7 @@ sys_kanala_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = illuminated_primacy } } }
 				create_country = {
-					name = "NAME_illuminated_primacy"
+					name = "Illuminated Primacy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_illuminated_primacy"
 					type = default
 					origin = "origin_illuminated_primacy"
@@ -182,16 +182,6 @@ sys_kanala_init = {
             orbit_angle = { min = 30 max = 270 }
         }
     }
-
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "olynprotectorate_serpentnebula_massrelay" 
-			name = "Olyn 1 Relay"
-			orbit_angle = 72 
-			orbit_distance = 200
-			
-		} 
-	}	
 }
 
 sys_obek_init = {
@@ -379,9 +369,9 @@ sys_stabiae_init = {
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "vesuviusnebula_eaglenebula_massrelay" 
-			name = "Vesuvius 3 Relay"
-			orbit_angle = 187 
+			type = "vesuviusnebula_olynprotectorate_massrelay" 
+			name = "Vesuvius 1 Relay"
+			orbit_angle = 220 
 			orbit_distance = 200
 		} 
 	}	

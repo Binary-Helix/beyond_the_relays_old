@@ -20,8 +20,6 @@ sys_gagarin_init = {
 		has_ring = no
 		flags = { gagarin_star }	
 		init_effect = {
-
-
 			create_ambient_object = {
 				type = "nebula_1"
 				entity_offset_height = -5
@@ -580,7 +578,7 @@ sys_grissom_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "armstrongnebula_voyagercluster_massrelay" 
-			name = "Armstrong 2 Relay"
+			name = "Armstrong 1 Relay"
 			random_pos = NO 
 			orbit_distance = 320			
 		} 
@@ -757,7 +755,7 @@ sys_hong_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "armstrongnebula_yggdrasilnebula_massrelay" 
-			name = "Armstrong 3 Relay"
+			name = "Armstrong 2 Relay"
 			random_pos = NO 
 			orbit_distance = 320			
 		} 
@@ -1063,6 +1061,15 @@ sys_vamshi_init = {
 			}
 		}		
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "armstrongnebula_nubianexpanse_massrelay" 
+			name = "Armstrong 3 Relay"
+			random_pos = NO 
+			orbit_distance = 320			
+		} 
+	}  
 }
 
 #####ATTICAN ALPHA#####
@@ -2678,6 +2685,16 @@ sys_century_init = {
 			size = 2
 		}		
 	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "hawkingeta_pangaeaexpanse_massrelay" 
+			name = "Mu Relay"
+			random_pos = NO 
+			orbit_distance = 205
+			
+		} 
+	}
 }
 
 sys_chandrasekhar_init = {
@@ -3034,6 +3051,34 @@ sys_verr_init = {
 		spawn_megastructure = { 
 			type = "hawkingeta_calestonrift_massrelay" 
 			name = "Hawking Eta 4 Relay"
+			random_pos = NO 
+			orbit_distance = 125
+			
+		} 
+	}    
+}
+
+sys_mu_init = {
+    name = "Mu"
+    class = sc_deep_space
+	max_instances = 1
+
+    flags = { attican_traverse_system hawking_eta_system mu_system btr_system custom_system }
+	
+    planet = {
+        class = pc_invisible_star
+        orbit_distance = 0
+        size = 20
+		flags = { mu_star }		
+		init_effect = {
+			set_planet_flag = starting_deposit
+		}
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "hawkingeta_pangaeaexpanse_massrelay" 
+			name = "Mu Relay"
 			random_pos = NO 
 			orbit_distance = 125
 			
@@ -3754,7 +3799,7 @@ sys_herschel_init = {
 	init_effect = { 
 		spawn_megastructure = { 
 			type = "keplerverge_styxtheta_massrelay" 
-			name = "Kepler Verge 1 Relay"
+			name = "Kepler 1 Relay"
 			orbit_angle = 180
 			orbit_distance = 235
 			
@@ -3862,7 +3907,7 @@ sys_newton_init = {
 	init_effect = { 
 		spawn_megastructure = { 
 			type = "keplerverge_sentryomega_massrelay" 
-			name = "Kepler Verge 2 Relay"
+			name = "Kepler 2 Relay"
 			orbit_angle = 45
 			orbit_distance = 200
 			
@@ -4439,7 +4484,6 @@ sys_qertassi_init = {
 			
 		} 
 	}
-	
 }
 
 sys_nx2185_init = {
@@ -6400,7 +6444,7 @@ sys_fen_init = {
 	
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "yggdrasilnebula_atticanbeta_massrelay" 
+			type = "yggdrasilnebula_voyagercluster_massrelay" 
 			name = "Yggdrasil 2 Relay"
 			random_pos = NO 
 			orbit_distance = 180
@@ -7897,15 +7941,6 @@ sys_kesd_init = {
 			set_planet_flag = starting_deposit
 		}
     }
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "dabosknot_onofspot_massrelay" 
-			name = "Dabo's 2 Relay"
-			orbit_angle = 186 
-			orbit_distance = 245	
-		} 
-	}
 }
 
 #Oma Verizh is in Vol Protectorate Initializer
@@ -8280,16 +8315,6 @@ sys_han_init = {
 			name = "Gemini 1 Relay"
 			orbit_angle = 120 
 			orbit_distance = 275
-			
-		} 
-	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "geminisigma_lobartercluster_massrelay" 
-			name = "Gemini 2 Relay"
-			orbit_angle = 120 
-			orbit_distance = 300
 			
 		} 
 	}
@@ -8947,7 +8972,7 @@ sys_plutus_init = {
 
 #####HORSE HEAD NEBULA#####
 
-#Anadius is in the Human Initializer
+#Anadius is in the Cerberus Initializer
 
 sys_fortuna_init = {
     name = "Fortuna"
@@ -9036,15 +9061,13 @@ sys_fortuna_init = {
     init_effect = { 
 		spawn_megastructure = { 
 			type = "horseheadnebula_vasdirigap_massrelay" 
-			name = "Horse Head 1 Relay"
+			name = "Horse Head 3 Relay"
 			orbit_angle = 274 
 			orbit_distance = 200
 			
 		} 
 	}	
 }
-
-#Nedlus is in Turian Hierarchy Initializer
 
 #Pax is in Noveria Development Corporation Initializer
 
@@ -9133,9 +9156,9 @@ sys_strenuus_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "horseheadnebula_argosrho_massrelay" 
-			name = "Horse Head 2 Relay"
-			orbit_angle = 45
+			type = "horseheadnebula_mkalipool_massrelay" 
+			name = "Horse Head 4 Relay"
+			orbit_angle = 274 
 			orbit_distance = 200
 			
 		} 
@@ -9616,7 +9639,7 @@ sys_kentin_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "lobartercluster_mkalipool_massrelay" 
+			type = "lobartercluster_hadesgamma_massrelay" 
 			name = "Lobar'ter 2 Relay"
 			orbit_angle = 136 
 			orbit_distance = 200
@@ -9791,10 +9814,12 @@ sys_lugorisi_init = {
 		}
 	}
 
+	
+
 	init_effect = { 
 		spawn_megastructure = { 
 			type = "lobartercluster_artemistau_massrelay" 
-			name = "Lobar'ter 5 Relay"
+			name = "Lobar'ter 1 Relay"
 			orbit_angle = 136 
 			orbit_distance = 200
 		} 
@@ -10808,7 +10833,7 @@ sys_yangtze_init = {
 
 ####Zhūquè's Nest#####
 
-sys_348_monak_init = {
+sys_348monak_init = {
 	name = "348 Monak"
 	class = sc_d
 	max_instances = 1
@@ -11180,7 +11205,7 @@ sys_551opeidum_init = {
 	}
 }
 
-sys_734_kyrix_init = {
+sys_734kyrix_init = {
 	name = "734 Kyrix"
 	class = sc_m
 	max_instances = 1
@@ -11686,6 +11711,16 @@ sys_reslom_init = {
         size = 28
 		has_ring = no
 		flags = { kladirish_planet pd_ignore }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "andurasector_annosbasin_massrelay" 
+			name = "Andura 2 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
 	}
 }
 
@@ -12431,7 +12466,7 @@ sys_tomdak_init = {
 		spawn_megastructure = {
 			type = "krogandmz_durwuulastream_massrelay"
 			name = "Tomdak 2 Relay"
-			orbit_angle = 56 
+			orbit_angle = 156 
 			orbit_distance = 240			
 		}
 	}
@@ -12623,12 +12658,14 @@ sys_kasatum_init = {
 
 #Mactare is in Turian Hierarchy Initializer
 
+#Nedlus is in Turian Hierarchy Initializer
+
 #Nimines is in Turian Hierarchy Initializer
 
 
 #####OLYN PROTECTORATE#####
 
-		
+#Bedi is in Salarian Union Initializer		
 
 #Kanala is in Illuminated Primacy Initializer
 
@@ -13321,8 +13358,8 @@ sys_ursantra_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "proditoresscar_apiencrest_massrelay" 
-			name = "Xingyun 2 Relay"
+			type = "proditoresscar_durwuulastream_massrelay" 
+			name = "Proditore's 2 Relay"
 			orbit_angle = 17 
 			orbit_distance = 200
 		} 
@@ -13419,6 +13456,16 @@ sys_ardot_init = {
         size = 26
 		flags = { desosh_planet pd_ignore }
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "vasdirigap_annosbasin_massrelay" 
+			name = "Vas'Diri 1 Relay"
+			orbit_angle = 274 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 sys_bowani_init = {
@@ -13465,6 +13512,16 @@ sys_bowani_init = {
         size = 11
 		flags = { boldile_planet pd_ignore }
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "vasdirigap_horseheadnebula_massrelay" 
+			name = "Vas'Diri 2 Relay"
+			orbit_angle = 274 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 
@@ -13505,6 +13562,16 @@ sys_ostelo_init = {
         size = 19
 		flags = { cabason_planet pd_ignore }
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "vasdirigap_xingyuncluster_massrelay" 
+			name = "Vas'Diri 3 Relay"
+			orbit_angle = 274 
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 
@@ -13548,12 +13615,12 @@ sys_carrini_init = {
         size = 19
 		flags = { peras_planet pd_ignore }
 	}
-	
-    init_effect = { 
+
+	init_effect = { 
 		spawn_megastructure = { 
-			type = "xingyuncluster_meadecluster_massrelay" 
-			name = "Xingyun 2 Relay"
-			orbit_angle = 17 
+			type = "xingyuncluster_serpentnebula_massrelay" 
+			name = "Xingyun 4 Relay"
+			orbit_angle = 8 
 			orbit_distance = 200
 		} 
 	}
@@ -13605,6 +13672,15 @@ sys_petralia_init = {
         orbit_distance = 45
         size = 20
 		flags = { oipol_planet pd_ignore }
+	}	
+	
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "xingyuncluster_meadecluster_massrelay" 
+			name = "Xingyun 2 Relay"
+			orbit_angle = 17 
+			orbit_distance = 200
+		} 
 	}
 }
 
@@ -13720,6 +13796,16 @@ sys_myrtil_init = {
         orbit_distance = 45
         size = 13
 		flags = { sarla_planet pd_ignore }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "andaniansea_vesuviusnebula_massrelay" 
+			name = "Andania 1 Relay"
+			orbit_angle = 270 
+			orbit_distance = 200
+			
+		} 
 	}
 }
 
@@ -13882,17 +13968,7 @@ sys_nasdora_init = {
         size = 28
         has_ring = no
 		flags = { phinda_planet pd_ignore }
-    }
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "durwuulastream_proditoresscar_massrelay" 
-			name = "Durwuula 1 Relay"
-			orbit_angle = 270 
-			orbit_distance = 200
-			
-		} 
-	}	
+    }	
 }
 
 #Resyadum is Courts of Dekuuna Initializer
@@ -14002,6 +14078,16 @@ sys_buitre_init = {
         has_ring = no
 		flags = { cuervo_planet pd_ignore }
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "minoswasteland_ismarfrontier_massrelay" 
+			name = "Ismar 3 Relay"
+			random_pos = NO 
+			orbit_distance = 315
+			
+		} 
+	}
 }
 
 #Caestus is in Turian Hierarchy Initializer
@@ -14280,7 +14366,17 @@ sys_totau_init = {
 			add_deposit = d_minerals_1
 			set_planet_flag = starting_deposit
 		}
-	}			
+	}	
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_olynprotectorate_massrelay" 
+			name = "Serpent 5 Relay"
+			orbit_angle = 168 
+			orbit_distance = 200
+			
+		} 
+	}
 }	
 
 #Widow is in the Citadel Council Systems Initializer
@@ -14364,7 +14460,7 @@ sys_herculaneum_init = {
 
 #Stabiae is in Illuminated Primacy Initializer
 
-#Pompeii is in Drell Compact Initializer
+#Pompeii is in Remnants of Rakhana Initializer
 
 
 ##############################
@@ -15163,7 +15259,7 @@ sys_osun_init = {
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "hourglassnebula_omeganebula_massrelay" 
+			type = "hourglassnebula_basillaeflare_massrelay" 
 			name = "Hourglass 2 Relay"
 			orbit_angle = 62 
 			orbit_distance = 200
@@ -16291,36 +16387,11 @@ sys_ekarii_init = {
 		size = 34
 		has_ring = yes
 	}
-	
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "thephoenixmassing_xosarverge_massrelay" 
-			name = "Phoenix 2 Relay"
-			orbit_angle = 27 
-			orbit_distance = 200
-			
-		} 
-	}
 }	
 	
 #Salahiel is in Courts of Dekuuna Initializer
 
-sys_theseaofstorms_init = {
-    name = "theseaofstorms"
-    class = sc_none
-	max_instances = 1
-
-	flags = { terminus_system phoenix_massing_system theseaofstorms_system btr_system custom_system }
-
-    planet = {
-        name = "Heretic_Station"
-        class = pc_habitat
-        orbit_distance = 0
-        orbit_angle = 144
-        size = 8
-        has_ring = no       
-    }		
-}
+#The Sea of Storms is in Heretic Geth Initializer
 
 sys_tassrah_init = {
     name = "Tassrah"
@@ -17143,6 +17214,15 @@ sys_deslora_init = {
 		size = 30
 	}
 
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "savianabyssal_eyesofmizhuna_massrelay" 
+			name = "Savian 2 Relay"
+			orbit_angle = 36 
+			orbit_distance = 236
+			
+		} 
+	}
 }	
 
 sys_tydeous_init = {
@@ -17835,6 +17915,31 @@ sys_skepsis_init = {
 }
 
 
+sys_floritana_init = {
+    name = "Floritana"
+    class = sc_o_hyper
+	max_instances = 1
+
+	flags = { terminus_system sigurds_cradle_system skepsis_system btr_system custom_system }
+
+    planet = {
+		name = "Floritana"
+        class = pc_o_hyper_star
+        orbit_distance = 0
+        size = 30
+    }
+
+    planet = {
+        name = "Optitius"
+        class = pc_dextro_lake
+        orbit_distance = 150
+        orbit_angle = 26
+        has_ring = no
+		size = 25
+    }
+}
+
+
 #####SIN'KELAR CLUSTER#####
 
 sys_grebosht_init = {
@@ -18044,6 +18149,7 @@ sys_brikhaun_init = {
 		name = "Brikhaun"
 		class = pc_f_star
 		size = 30
+		orbit_distance = 0
 	}	
 	
 	planet = {
@@ -18054,14 +18160,14 @@ sys_brikhaun_init = {
 	}	
 	
 	planet = {
-		name = "Cyrene"
+		name = "Idmon"
 		class = pc_gas_giant
         orbit_distance = 50
 		size = 36
 		moon = {
-			name = "Idmon"
+			name = "Cyrene"
 			class = pc_dextro_savannah
-			orbit_distance = 10
+			orbit_distance = 15
 			size = 7
 		}
 	}		

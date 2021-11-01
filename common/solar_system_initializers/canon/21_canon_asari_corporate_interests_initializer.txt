@@ -82,7 +82,7 @@ sys_tasale_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = asari_corporate_interests } } }
 				create_country = {
-					name = "NAME_asari_republics"
+					name = "Asari Corporate Interests"
 					ship_prefix = "PRESCRIPTED_ship_prefix_mec_asariillium_civ"
 					type = default
 					origin = "mec_asari_origin_illium"
@@ -222,7 +222,7 @@ sys_tasale_init = {
 
     init_effect = { 
 		spawn_megastructure = { 
-			type = "eaglenebula_crescentnebula_massrelay" 
+			type = "basillaeflare_crescentnebula_massrelay" 
 			name = "Crescent 4 Relay"
 			orbit_angle = 37 
 			orbit_distance = 190

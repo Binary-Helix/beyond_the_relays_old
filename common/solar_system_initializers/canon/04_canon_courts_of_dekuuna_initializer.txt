@@ -68,7 +68,7 @@ sys_phontes_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = courts_of_dekuuna } } }
 				create_country = {
-					name = "NAME_courts_of_dekuuna"
+					name = "Courts of Dekuuna"
 					ship_prefix = "PRESCRIPTED_ship_prefix_courts_of_dekuuna"
 					type = default
 					origin = "origin_courts_of_dekuuna"
@@ -255,6 +255,16 @@ sys_bisalas_init = {
         has_ring = no
 		flags = { isdame_planet pd_ignore }
     }
+    
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "durwuulastream_proditoresscar_massrelay" 
+			name = "Durwuula 2 Relay"
+			orbit_angle = 180
+			orbit_distance = 200
+			
+		} 
+	}
 }
 
 

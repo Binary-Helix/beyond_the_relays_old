@@ -71,7 +71,7 @@ sys_trebia_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = turian_hierarchy } } }
 				create_country = {
-					name = "NAME_turian_hierarchy"
+					name = "Turian Hierarchy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_turian_hierarchy"
 					type = default
 					origin = "origin_turian_hierarchy"
@@ -201,17 +201,7 @@ sys_trebia_init = {
         init_effect = {
             set_planet_flag = datriux_codex
             }
-    }
-
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "apiencrest_serpentnebula_massrelay" 
-			name = "Apien_3_Relay"
-			orbit_angle = 168 
-			orbit_distance = 200
-			
-		} 
-    }    	
+    }   	
 }
 
 sys_orachorum_init = {
@@ -281,7 +271,17 @@ sys_orachorum_init = {
 			
 			set_name = "Chatti"
 		}
-    }
+    }	
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "apiencrest_meadecluster_massrelay" 
+			name = "Apien 1 Relay"
+			orbit_angle = 168 
+			orbit_distance = 200
+			
+		} 
+    } 
 }
 
 sys_navale_init = {
@@ -381,7 +381,7 @@ sys_navale_init = {
 	init_effect = { 
 		spawn_megastructure = { 
 			type = "apiencrest_serpentnebula_massrelay" 
-			name = "Apien 3 Relay"
+			name = "Apien 2 Relay"
 			orbit_angle = 8 
 			orbit_distance = 240			
 		} 
@@ -514,8 +514,8 @@ sys_castellus_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "apiencrest_prodicatoresscar_massrelay" 
-			name = "Apien 2 Relay"
+			type = "apiencrest_proditoresscar_massrelay" 
+			name = "Apien 3 Relay"
 			orbit_angle = 8 
 			orbit_distance = 240
 			
@@ -1228,6 +1228,98 @@ sys_narbo_init = {
 	}	
 }
 
+
+sys_nedlus_init = {
+    name = "Nedlus"
+    class = sc_f
+	max_instances = 1
+
+	flags = { inner_council_system meade_cluster_system nedlus_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+		btr_tur_generate_stations = yes
+	}
+
+    planet = {
+		name = "Nedlus"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 30
+		flags = { nedlus_star }
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 120
+	}
+	
+	planet = {
+		name = "Arsacid"
+		class = pc_hot_jupiter
+        orbit_distance = 35
+		size = 36
+		flags = { arsacid_planet pd_ignore }
+	}	
+
+	planet = {
+		name = "Parthia"
+		class = pc_dextro_lanthanide
+        orbit_distance = 60
+		size = 20
+		has_ring = no
+		flags = { parthia_planet pd_ignore }
+		init_effect = {
+			set_owner = event_target:turian_hierarchy
+			create_colony = {
+				owner = event_target:turian_hierarchy
+				species = event_target:turianSpecies
+				ethos = owner
+			}
+			generate_tur_parthia_pops = yes
+			generate_tur_major_colony_buildings = yes	
+			
+			set_name = "Parthia"
+		}
+	}
+	
+	planet = {
+		name = "Ctesiphon"
+		class = pc_ammonia
+        orbit_distance = 55
+		size = 21
+		has_ring = no
+		flags = { ctesiphon_planet pd_ignore }
+		moon = {
+			name = "Ctesiphon a"
+			class = pc_iron
+			orbit_distance = 12
+			size = 4
+		}	
+		moon = {
+			name = "Ecbatana"
+			class = pc_ammonia
+			orbit_distance = 8
+			size = 7
+		}
+	}
+	
+	planet = {
+		name = "Hesterax"
+		class = pc_ice_giant
+        orbit_distance = 45
+		has_ring = yes
+		size = 39
+		flags = { hesterax_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Susa"
+		class = pc_iron
+        orbit_distance = 50
+		size = 4
+	}	
+}	
+
 #####PRODICATORE'S SCAR#####
 
 sys_laudate_init = {
@@ -1416,8 +1508,8 @@ sys_sabulum_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "proditoresscar_durwuulastream_massrelay" 
-			name = "Xingyun 1 Relay"
+			type = "proditoresscar_apiencrest_massrelay" 
+			name = "Proditore's 1 Relay"
 			orbit_angle = 17 
 			orbit_distance = 200
 		} 
@@ -1492,107 +1584,9 @@ sys_terevan_init = {
 			
 		} 
 	}
+
+	
 }
 
 #####HORSE HEAD NEBULA#####
 
-sys_nedlus_init = {
-    name = "Nedlus"
-    class = sc_f
-	max_instances = 1
-
-	flags = { alliance_space_system horse_head_nebula_system nedlus_system btr_system custom_system }
-	init_effect = {
-		generate_home_system_resources = yes
-		btr_tur_generate_stations = yes
-	}
-
-    planet = {
-		name = "Nedlus"
-        class = pc_f_star
-        orbit_distance = 0
-        size = 30
-		flags = { nedlus_star }
-    }
-
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 120
-	}
-	
-	planet = {
-		name = "Arsacid"
-		class = pc_hot_jupiter
-        orbit_distance = 35
-		size = 36
-		flags = { arsacid_planet pd_ignore }
-	}	
-
-	planet = {
-		name = "Parthia"
-		class = pc_dextro_lanthanide
-        orbit_distance = 60
-		size = 20
-		has_ring = no
-		flags = { parthia_planet pd_ignore }
-		init_effect = {
-			set_owner = event_target:turian_hierarchy
-			create_colony = {
-				owner = event_target:turian_hierarchy
-				species = event_target:turianSpecies
-				ethos = owner
-			}
-			generate_tur_parthia_pops = yes
-			generate_tur_major_colony_buildings = yes	
-			
-			set_name = "Parthia"
-		}
-	}
-	
-	planet = {
-		name = "Ctesiphon"
-		class = pc_ammonia
-        orbit_distance = 55
-		size = 21
-		has_ring = no
-		flags = { ctesiphon_planet pd_ignore }
-		moon = {
-			name = "Ctesiphon a"
-			class = pc_iron
-			orbit_distance = 12
-			size = 4
-		}	
-		moon = {
-			name = "Ecbatana"
-			class = pc_ammonia
-			orbit_distance = 8
-			size = 7
-		}
-	}
-	
-	planet = {
-		name = "Hesterax"
-		class = pc_ice_giant
-        orbit_distance = 45
-		has_ring = yes
-		size = 39
-		flags = { hesterax_planet pd_ignore }
-	}
-
-	planet = {
-		name = "Susa"
-		class = pc_iron
-        orbit_distance = 50
-		size = 4
-	}
-	
-    init_effect = { 
-		spawn_megastructure = { 
-			type = "horseheadnebula_exoduscluster_massrelay" 
-			name = "Horse Head 4 Relay"
-			orbit_angle = 323 
-			orbit_distance = 200
-			
-		} 
-	}		
-}	

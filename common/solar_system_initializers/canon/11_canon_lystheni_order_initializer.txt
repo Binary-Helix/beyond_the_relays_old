@@ -60,7 +60,7 @@ sys_taesin_init = {
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = lystheni_order } } }
 				create_country = {
-					name = "NAME_lystheni_order"
+					name = "Lystheni Order"
 					ship_prefix = "PRESCRIPTED_ship_prefix_lystheni_order"
 					type = default
 					origin = "origin_lystheni_order"
@@ -136,14 +136,14 @@ sys_taesin_init = {
         has_ring = yes
 		flags = { jorio_planet pd_ignore }
     }
-
-    init_effect = { 
+	
+	init_effect = { 
 		spawn_megastructure = { 
 			type = "byenzinecloud_omeganebula_massrelay" 
 			name = "Byenzine 1 Relay"
-			orbit_angle = 1 
-			orbit_distance = 200
+			orbit_angle = 296 
+			orbit_distance = 220
 			
 		} 
-	}	
+	}
 }

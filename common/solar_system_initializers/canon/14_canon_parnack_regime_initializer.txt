@@ -72,7 +72,7 @@ sys_chabtan_init = {
 					}
 				}
 				create_country = {
-					name = "NAME_parnack_regime"
+					name = "Parnack Regime"
 					ship_prefix = "PRV"
 					type = primitive 
 					civics = { civic = "civic_warrior_culture" civic = "civic_barbaric_despoilers" }
@@ -113,11 +113,11 @@ sys_chabtan_init = {
 				}
 			}
 			random_country = {
-				limit = { has_country_flag = parnack_regime }
-				save_global_event_target_as = parnack_regime
+				limit = { has_country_flag = parnack_regime_primitive }
+				save_global_event_target_as = parnack_regime_primitive
 				species = { save_global_event_target_as = yahgSpecies }
 			}
-			set_owner = event_target:parnack_regime
+			set_owner = event_target:parnack_regime_primitive
 			add_building = building_primitive_capital
 			generate_start_deposits_and_blockers = yes
 			generate_yah_parnack_capitol_buildings = yes
