@@ -1,0 +1,248 @@
+###
+
+#A building construction has been completed.
+# This = Planet
+on_building_complete = {
+	events = {
+		pdstorm.01
+	}
+}
+
+on_planet_zero_pops = {
+	events = {
+		pdengine.14
+	}
+}
+
+on_terraforming_complete = {
+	events = {
+		pdengine.13
+		pdengine.14
+		pdengine.44
+		pdengine.48
+	}
+}
+
+on_entering_system = {
+	events = {
+		pdfloating.10
+		pdcrystal.10
+		pdcity.10
+		pdcity.110
+		pdgraveyard.10
+		pdarchive.10
+		pdcrucible.10
+		pdtechnoorganic.10
+	}
+}
+
+on_entering_system_first_time = {	
+	events = {
+		pd_retroactive.001
+	}
+}
+
+on_survey = {	
+	events = {
+		pdfloating.20
+		pdcrystal.20
+		pdcity.20
+		pdcity.120
+		pdgraveyard.20
+		pdarchive.20
+		pdcrucible.20
+		pdtechnoorganic.20
+	}
+}
+
+on_colonization_started = {
+	events = {
+		pdengine.16
+	}
+}
+
+on_colonized = {
+	events = {
+		pdengine.29
+		pdengine.35
+		pdengine.39
+	}
+}
+
+on_colony_1_year_old = {
+	events = {
+		pdcity.30
+	}
+}
+
+on_colony_3_years_old = {
+	events = {
+		pdgraveyard.30
+	}
+}
+
+on_colony_4_years_old = {
+	events = {
+	}
+}
+
+on_colony_5_years_old = {
+	random_events = {
+		150 = 0
+		5 = pdbiolumen.30
+	}
+	events = {
+		pdmushroom.30
+		pdanomaly.20
+	}
+}
+
+on_colony_10_years_old = {
+	events ={
+		pdfloating.30
+		pdtechnoorganic.30
+		pddune.10
+		pdcoral.01
+	}
+}
+
+on_game_start = {
+	events = { 
+		pdengine.00
+		moonbase.01
+		pdunqiue.00
+		pdexotic.00
+		pdarcs.00
+		pdshroud.01
+	}
+}
+
+empire_init_capital_planet = {
+	events = {
+		pdengine.25
+		pdengine.26
+		pdengine.42	
+		pdengine.43
+		pdengine.55
+	}
+}
+
+on_press_begin = { 
+	events = { 
+		pdengine.01
+		pdengine.02
+		pdengine.04
+		pdengine.05
+		pdengine.06
+		pdengine.07
+		pdengine.08
+		pdstartgame.01
+		pdstartgame.02
+		pdstartgame.03
+		pdengine.12
+		pdengine.15
+		pdengine.20
+		pdengine.21
+		pdengine.27
+		pdengine.45
+		pdengine.46
+		pdengine.52
+		pdengine.53
+		pdengine.56
+		pdengine.57
+		pdengine.58
+		pdengine.59
+		pdengine.62
+		pdengine.66
+		pdengine.67
+		pdengine.68
+	}
+}
+
+empire_init_capital_planet = {
+	events = {
+		pdengine.19
+	}
+}
+
+on_game_start_country = {
+	events = {
+		pdengine.03
+		pdengine.51
+		pdengine.65
+	}
+}
+
+on_planet_defenders_win = {
+	events = {
+		pdcity.36
+		pdmushroom.45
+	}
+}
+
+on_planet_defenders_lose = {
+	events = {
+		pdmushroom.46
+	}
+}
+
+on_planet_attackers_win = {
+	events = {
+		pdmushroom.47
+	}
+}
+
+on_building_complete = {
+	events = {
+		pddune.15
+		pdexotic.06
+	}
+}
+
+on_building_upgraded = {
+	events = {
+		pdexotic.06
+	}
+}
+
+on_pop_added = {
+	events = {
+		#pdengine.28
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+	}
+}
+
+on_planet_transfer = {
+	events = {
+		pdengine.32
+		pdengine.33
+		pdengine.36
+		pdengine.38
+		pdengine.29
+	}
+}
+
+on_colony_destroyed = {
+	events = {
+		pdengine.32
+		pdengine.36
+		pdengine.14
+	}
+}
+
+on_planet_bombarded = {
+	events = {
+		pdengine.37
+		pdengine.60
+	}
+}
+
+on_pop_purged = {
+	events = {
+		pdengine.60
+	}
+}

@@ -1,0 +1,96 @@
+ship_behavior = {
+	name = "swarm"
+	preferred_attack_range = 3.3
+	formation_distance = 3.3
+	return_to_formation_distance = 10
+	source_target_anchor_factor = 1.0
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_strafe = 1.0	
+	collision_radius = 1.0
+	attack_move_pattern = orbit
+	passive_move_pattern = charge
+
+	desc = "SWARM_BEHAVIOR_DESC"
+}
+ship_behavior = {
+	name = "picket"
+	
+	preferred_attack_range = 8
+	formation_distance = 8
+	return_to_formation_distance = 8
+	
+	collision_awareness = 0.6		
+	collision_strafe = 2.0			
+	collision_radius = 1.5
+	
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = charge
+	
+	desc = "PICKET_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "line"
+	preferred_attack_range = 14
+	
+	formation_distance = 14
+	return_to_formation_distance = 14
+	
+	collision_awareness = 0.3
+	collision_radius = 4.0
+	collision_strafe = 0.7		
+	
+	attack_move_pattern = stay_at_range     
+	passive_move_pattern = charge
+	
+	desc = "LINE_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "artillery"
+	preferred_attack_range = 16
+	formation_distance = 16
+	return_to_formation_distance = 16
+
+	collision_awareness = 0.1
+	collision_radius = 1.0							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 4.0				
+	attack_move_pattern = stay_at_range 
+	passive_move_pattern = charge
+	
+	desc = "ARTILLERY_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "carrier"
+	preferred_attack_range = 28
+	formation_distance = 28
+	return_to_formation_distance = 28
+
+	combat_target_anchor = root
+
+	collision_awareness = 0.2
+	collision_radius = 1.0							#collision_radius is a multiplier on the radius specified in the ship size
+	collision_strafe = 4.0						#collision_strafe allows the ship to move in any direction while colliding with another
+	attack_move_pattern = stay_at_range
+	passive_move_pattern = stay_at_range
+
+	desc = "CARRIER_BEHAVIOR_DESC"
+}
+
+ship_behavior = {
+	name = "platform"
+	preferred_attack_range = max
+	formation_distance = 6.6
+	return_to_formation_distance = 3.3
+	collision_awareness = 0.1
+	collision_radius = 1.0					
+	collision_strafe = 2.5					
+	
+	attack_move_pattern = none
+	passive_move_pattern = none
+	
+	desc = "PLATFORM_BEHAVIOR_DESC"
+}

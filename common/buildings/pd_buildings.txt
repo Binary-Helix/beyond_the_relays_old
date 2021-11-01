@@ -1,0 +1,3398 @@
+#############
+# Habitat buildings
+#############
+
+building_nature_preserve = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		#building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = research
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_biolumen
+	}
+	
+	#prerequisites = {
+	#	tech_society_1
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_unity_produces_mult = 0.10
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_jungle_ranger_add = 2
+			job_jungle_ranger_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+		unity = 20
+	}
+}
+
+building_nightside_mining = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		#building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_tidallylocked
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_rare_crystals"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	#planet_modifier = {
+	#	planet_jobs_physics_research_produces_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_nightside_miner_add = 2
+			job_nightside_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2 
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		minerals = 3
+		trigger = {
+			always = yes
+		}
+	}
+	ai_resource_production = {
+		minerals = 3
+		trigger = {
+			planet_resource_compare = {
+				resource = minerals
+				value >= 20
+				type = produces
+			}
+		}
+	}
+	ai_resource_production = {
+		minerals = 3
+		trigger = {
+			planet_resource_compare = {
+				resource = minerals
+				value >= 40
+				type = produces
+			}
+		}
+	} 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		minerals = 20
+	}
+}
+
+building_supercon_lab = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		#building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_supercon
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_rare_crystals"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	#planet_modifier = {
+	#	planet_housing_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_supercon_tech_add = 2
+			job_supercon_tech_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2 
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+		physics_research = 30
+	} 
+}
+
+building_volatiles_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+
+	category = resource
+	
+	convert_to = {
+		#building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_superhabitable
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_volatile_motes"
+	#}
+
+	#planet_modifier = {
+	#	pop_environment_tolerance = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_volatile_miner_add = 2
+			job_volatile_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+		physics_research = 30
+	} 
+}
+
+building_geothermal_slurry_site = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+
+	category = resource
+	
+	convert_to = {
+		building_volatiles_mine
+		#building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_geothermal
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_exotic_gases"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_alloys_produces_mult = 0.10
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_slurry_distillers_add = 2
+			job_slurry_distillers_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+			job_alloy_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_fabricator_add = 2
+			job_fabricator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		engineering_research = 30
+		alloys = 10
+	} 
+}
+
+#Methane
+building_frozen_gas_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		#building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge
+		building_lanthanide_mine 
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_methane
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_exotic_gases"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_methane_miner_add = 2
+			job_methane_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		minerals = 20
+	} 
+}
+
+building_sulfur_lab = { #TODO
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+
+	category = resource
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		#building_sulpher_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_sulfur
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_volatile_motes"
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_sulfur_tech_add = 2 
+			job_sulfur_tech_per_pop = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+		minerals = 20
+	}	 
+}
+
+building_ammonia_electrodeposition = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+
+	category = resource
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		#building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_ammonia
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_volatile_motes"
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_electrodepositionist_add = 2
+			job_electrodepositionist_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+			job_alloy_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_fabricator_add = 2
+			job_fabricator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		alloys = 10
+		minerals = 20
+	}	 
+}
+
+building_pdzro_harvester = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_pdzro_harvester_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_zro_hive_add = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_zro_robot_add = 1
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		sr_zro = 1
+	}	 
+}
+
+building_karst_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_reef_lab
+		#building_karst_mine
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_karst
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_rare_crystals"
+	#}
+
+	#planet_modifier = {
+	#	planet_housing_mult = 0.10
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_cave_eng_add = 2
+			job_cave_eng_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+			planet_housing_mult = 0.15
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+			planet_housing_mult = 0.15
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		engineering_research = 30
+	}	
+}
+
+building_reef_lab = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		#building_reef_lab
+		building_karst_mine
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_reef
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_rare_crystals"
+	#}
+
+	#planet_modifier = {
+	#	planet_housing_mult = 0.10
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_reef_researcher_add = 2
+			job_reef_researcher_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+	}	 
+}
+
+building_lava_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		#building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		OR = {
+		is_planet_class = pc_primal
+		is_planet_class = pc_ash
+		}
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_volatile_motes"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_alloys_produces_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_lava_miner_add = 2
+			job_lava_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+			job_alloy_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_fabricator_add = 2
+			job_fabricator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		engineering_research = 30
+		alloys = 10
+	}	
+}
+
+building_salt_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		#building_salt_mine
+		building_aquifer_lab
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_salt
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_rare_crystals"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_amenities_mult = 0.2
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_salt_miner_add = 2
+			job_salt_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		minerals = 20
+	}	
+}
+
+building_aquifer_lab = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		#building_aquifer_lab
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_aquifer
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_rare_crystals"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_amenities_mult = 0.2 #TODO
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_aquifer_tech_add = 2
+			job_aquifer_tech_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+		engineering_research = 20
+	}	 
+}
+
+building_coral_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_storm_lab
+		#building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_coral
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_rare_crystals"
+	#}
+
+	#planet_modifier = {
+	#	planet_amenities_mult = 0.2
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_coral_miner_add = 2
+			job_coral_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		consumer_goods = 15
+	}	 
+}
+
+building_megaflora_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		#building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		OR = {
+		is_planet_class = pc_megaflora
+		is_planet_class = pc_megafloratol
+		is_planet_class = pc_megaflorahive
+		}
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_volatile_motes"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+	
+	#planet_modifier = {
+	#	planet_housing_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_mega_eng_add = 2
+			job_mega_eng_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_mega_eng_hive_add = 2
+			job_mega_eng_hive_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+			planet_housing_mult = 0.15
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		engineering_research = 30
+	}	 
+}
+
+building_undersea_gasmine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		#building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge
+		building_lanthanide_mine
+		building_supercon_lab
+		
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_aquatic
+	}
+	
+	#prerequisites = {
+	#	"tech_mine_exotic_gases"
+	#}
+	
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_physics_research_produces_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_underwater_venter_add = 2
+			job_underwater_venter_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		energy = 20
+	}	  
+}
+
+building_storm_lab = {
+	base_buildtime = 360
+	#base_cap_amount = 1
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		#building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_storm
+	}
+	
+	#prerequisites = {
+	#	"tech_housing_1"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_engineering_research_produces_mult = 0.05
+	#	planet_jobs_physics_research_produces_mult = 0.05
+	#	planet_housing_mult = 0.10
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_storm_researcher_add = 2
+			job_storm_researcher_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+			planet_housing_mult = 0.15
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+			planet_housing_mult = 0.15
+		}
+	}
+
+	show_tech_unlock_if = {
+		owner = { any_owned_planet = { is_planet_class = pc_storm } }
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		engineering_research = 30
+	}
+}
+
+building_eyeball_lab = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		#building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_eyeball
+	}
+	
+	#prerequisites = {
+	#	"tech_housing_1"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_housing_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_eyeball_tech_add = 2
+			job_eyeball_tech_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		engineering_research = 30
+		society_research = 30
+	}
+}
+
+building_glacio_forge = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		#building_glacio_forge 
+		building_supercon_lab
+		building_lanthanide_mine
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_glacio
+	}
+	
+	#prerequisites = {
+	#	"tech_housing_1"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_glacio_metal_add = 2
+			job_glacio_metal_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+			job_alloy_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_alloy_drone_add = 2
+			job_alloy_drone_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		engineering_research = 30
+		alloys = 10
+	}
+}
+
+building_lanthanide_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_supercon_lab
+		#building_lanthanide_mine
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_lanthanide
+	}
+	
+	#prerequisites = {
+	#	"tech_housing_1"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_physics_research_produces_mult = 0.1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_lanthanide_miner_add = 2
+			job_lanthanide_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		minerals = 20
+	}
+}
+
+building_rogue_mine = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		#building_rogue_mine
+		building_lanthanide_mine
+		building_lichen_farm
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_rogue
+	}
+	
+	#prerequisites = {
+	#	"tech_housing_1"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_physics_research_produces_mult = 0.10
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_rogue_miner_add = 2
+			job_rogue_miner_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		physics_research = 30
+		minerals = 20
+	} 
+}
+
+building_lichen_farm = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lanthanide_mine
+		#building_lichen_farm
+	}
+
+	category = resource
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_lichen
+	}
+	
+	#prerequisites = {
+	#	"tech_housing_1"
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_physics_research_produces_mult = 0.10
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_lichen_farmer_add = 2
+			job_lichen_farmer_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	 
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+		food = 30
+	}
+}
+
+building_imperial_palace = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+		planet = { is_capital = yes }
+	}
+	#Destroy_trigger = {
+	#	exists = owner
+	#	planet = { is_capital = no }
+	#}
+
+	allow = {
+		planet = { is_capital = yes }
+	}
+
+	destroy_trigger = {
+		planet = { is_capital = no}
+	}
+
+	prerequisites = {
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		planet_housing_add = 18
+		planet_amenities_add = 18
+		planet_stability_add = 10
+		pop_government_ethic_attraction = 1
+	}
+
+	country_modifier = {
+		country_admin_cap_mult = 0.1
+		planet_stability_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	#Regular, Non-Warrior Culture
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_pdinquisition } }
+			NOT = { owner = { has_civic = civic_aristocratic_elite } }
+			NOT = { owner = { has_civic = civic_exalted_priesthood } }
+			NOT = { owner = { has_civic = civic_technocracy } }
+			NOT = { owner = { has_civic = civic_merchant_guilds } }
+			NOT = { owner = { has_civic = civic_warrior_culture } }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_administrator_add = 6
+			job_entertainer_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#Regular, Warrior Culture
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_pdinquisition } }
+			NOT = { owner = { has_civic = civic_aristocratic_elite } }
+			NOT = { owner = { has_civic = civic_exalted_priesthood } }
+			NOT = { owner = { has_civic = civic_technocracy } }
+			NOT = { owner = { has_civic = civic_merchant_guilds } }
+			owner = { has_civic = civic_warrior_culture }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_administrator_add = 6
+			job_duelist_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#Imperial Cult
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_pdinquisition }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_high_inquisitor_add = 6
+			job_inquisitor_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#Arisotcratic Elite, Not Warrior Culture
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_pdinquisition } }
+			owner = { has_civic = civic_aristocratic_elite }
+			NOT = { owner = { has_civic = civic_warrior_culture } }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_noble_add = 6
+			job_entertainer_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#Arisotcratic Elite, Warrior Culture
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_pdinquisition } }
+			owner = { has_civic = civic_aristocratic_elite }
+			owner = { has_civic = civic_warrior_culture }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_noble_add = 6
+			job_duelist_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#Technocracy
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_pdinquisition } }
+			owner = { has_civic = civic_technocracy }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_head_researcher_add = 6
+			job_researcher_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#Merchant Guild
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_pdinquisition } }
+			owner = { has_civic = civic_merchant_guilds }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_merchant_add = 6
+			job_culture_worker_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#Exalted Priesthood
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_authority = auth_dictatorial }
+				owner = { has_authority = auth_imperial	}
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_high_priest_add = 6
+			job_priest_add = 6
+			job_palace_guard_add = 6
+		}
+	}
+
+	#IS NOT THE CAPITAL
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		modifier = {	
+			job_soldier_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		text = palacearcnotcapital_desc
+	}
+
+	#IS DEM/CORP/OLI
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+					has_authority = auth_corporate
+				}
+			}
+		}
+		modifier = {	
+			job_soldier_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_democratic
+					has_authority = auth_oligarchic
+					has_authority = auth_corporate
+				}
+			}
+		}
+		text = capitalarcnotwrongauth_desc
+	}
+
+	#IS GESAULT
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {	
+			job_warrior_drone_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = capitalarcges_desc
+	} 
+}
+
+building_senate_building = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+		planet = { is_capital = yes }
+		NOT = { owner = { has_authority = auth_corporate } }
+	}
+
+	convert_to = {
+		building_grand_boardroom
+	}
+
+	destroy_trigger = {
+		planet = { is_capital = no}
+	}
+
+
+	#Destroy_trigger = {
+	#	exists = owner
+	#	planet = { is_capital = no }
+	#}
+
+	allow = {
+		planet = { is_capital = yes }
+	}
+
+	prerequisites = {
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		planet_housing_add = 18
+		planet_amenities_add = 18
+		planet_stability_add = 10
+		pop_government_ethic_attraction = 1
+	}
+
+	country_modifier = {
+		country_admin_cap_mult = 0.1
+		planet_stability_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	#Regular
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_civic = civic_aristocratic_elite } }
+			NOT = { owner = { has_civic = civic_exalted_priesthood } }
+			NOT = { owner = { has_civic = civic_technocracy } }
+			NOT = { owner = { has_civic = civic_merchant_guilds } }
+			OR = {
+				owner = { has_authority = auth_democratic }
+				owner = { has_authority = auth_oligarchic }
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_administrator_add = 6
+			job_culture_worker_add = 6
+			job_capital_security_add = 6
+		}
+	}
+
+	#Arisotcratic Elite, Not Warrior Culture
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_aristocratic_elite }
+			NOT = { owner = { has_civic = civic_warrior_culture } }
+			OR = {
+				owner = { has_authority = auth_democratic }
+				owner = { has_authority = auth_oligarchic }
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_noble_add = 6
+			job_entertainer_add = 6
+			job_capital_security_add = 6
+		}
+	}
+
+	#Arisotcratic Elite, Warrior Culture
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_aristocratic_elite }
+			owner = { has_civic = civic_warrior_culture }
+			OR = {
+				owner = { has_authority = auth_democratic }
+				owner = { has_authority = auth_oligarchic }
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_noble_add = 6
+			job_duelist_add = 6
+			job_capital_security_add = 6
+		}
+	}
+
+	#Technocracy
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_technocracy }
+			OR = {
+				owner = { has_authority = auth_democratic }
+				owner = { has_authority = auth_oligarchic }
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_head_researcher_add = 6
+			job_researcher_add = 6
+			job_capital_security_add = 6
+		}
+	}
+
+	#Merchant Guild
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+			OR = {
+				owner = { has_authority = auth_democratic }
+				owner = { has_authority = auth_oligarchic }
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_merchant_add = 6
+			job_culture_worker_add = 6
+			job_capital_security_add = 6
+		}
+	}
+
+	#Exalted Priesthood
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_authority = auth_democratic }
+				owner = { has_authority = auth_oligarchic }
+			}
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_high_priest_add = 6
+			job_priest_add = 6
+			job_capital_security_add = 6
+		}
+	}
+
+	#IS NOT THE CAPITAL
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		modifier = {	
+			job_soldier_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		text = palacearcnotcapital_desc
+	}
+
+	#IS AUT/DIC
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_dictatorial
+					has_authority = auth_imperial
+				}
+			}
+		}
+		modifier = {	
+			job_soldier_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_dictatorial
+					has_authority = auth_imperial
+				}
+			}
+		}
+		text = capitalarcnotwrongauth_desc
+	}
+
+	#IS GESAULT
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {	
+			job_warrior_drone_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = capitalarcges_desc
+	} 
+}
+
+building_grand_boardroom = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+		planet = { is_capital = yes }
+		owner = { has_authority = auth_corporate }
+	}
+
+	convert_to = {
+		building_senate_building
+	}
+
+	destroy_trigger = {
+		planet = { is_capital = no}
+	}
+
+
+	#Destroy_trigger = {
+	#	exists = owner
+	#	planet = { is_capital = no }
+	#}
+
+	allow = {
+		planet = { is_capital = yes }
+	}
+
+	prerequisites = {
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		planet_housing_add = 18
+		planet_amenities_add = 18
+		planet_stability_add = 10
+		trade_value_mult = 0.10
+	}
+
+	country_modifier = {
+		country_admin_cap_mult = 0.1
+		planet_stability_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	#Megacorp
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_authority = auth_corporate }
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_executive_add = 6
+			job_manager_add = 6
+			job_capital_security_add = 6
+		}
+	}
+
+	#IS NOT THE CAPITAL
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		modifier = {	
+			job_soldier_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		text = palacearcnotcapital_desc
+	}
+
+	#IS AUT/DIC
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_dictatorial
+					has_authority = auth_imperial
+				}
+			}
+		}
+		modifier = {	
+			job_soldier_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				OR = {
+					has_authority = auth_dictatorial
+					has_authority = auth_imperial
+				}
+			}
+		}
+		text = capitalarcnotwrongauth_desc
+	}
+
+	#IS GESAULT
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		modifier = {	
+			job_warrior_drone_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		text = capitalarcges_desc
+	} 
+}
+
+building_grand_processing_nexus = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+		}
+		planet = { is_capital = yes }
+	}
+
+	Destroy_trigger = {
+		exists = owner
+		NOT = { planet = { is_planet_class = pc_machine_capital } }
+	}
+
+	allow = {
+		planet = { is_capital = yes }
+	}
+
+	prerequisites = {
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		planet_housing_add = 18
+		planet_amenities_add = 18
+		planet_stability_add = 10
+		planet_crime_add = -20
+	}
+
+	country_modifier = {
+		country_admin_cap_mult = 0.1
+		planet_stability_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	#Machine
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_coordinator_add = 6
+			job_evaluator_add = 6
+			job_patrol_drone_add = 6
+		}
+	}
+
+	#IS NOT THE CAPITAL
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			planet = { is_capital = no }
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_warrior_drone_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		text = robonotcapital_desc
+	} 
+}
+
+building_prime_synaptic_warren = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		planet = { is_capital = yes }
+	}
+
+	Destroy_trigger = {
+		exists = owner
+		NOT = { planet = { OR = { is_planet_class = pc_biocapital } } }
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		planet_housing_add = 18
+		planet_amenities_add = 18
+		planet_stability_add = 10
+		planet_crime_no_happiness_add = -20
+	}
+
+	country_modifier = {
+		country_admin_cap_mult = 0.1
+		planet_stability_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	#Machine
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_synapse_drone_add = 6
+			job_brain_drone_add = 6
+			job_patrol_drone_add = 6
+		}
+	}
+
+	#IS NOT THE CAPITAL
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			planet = { is_capital = no }
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {	
+			job_warrior_drone_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		text = hivenocapital_desc
+	} 
+}
+
+building_megaflora_synaptic_warren = {
+	can_build = no
+	can_demolish = no
+	can_be_ruined = no
+	can_be_disabled = no
+	position_priority = 1
+
+	category = government
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		planet = { is_capital = yes }
+	}
+
+	Destroy_trigger = {
+		exists = owner
+		NOT = { planet = { OR = { is_planet_class = pc_megafloracapital } } }
+	}
+
+	resources = {
+		category = planet_buildings
+		upkeep = {
+			energy = @b4_upkeep
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		planet_housing_add = 18
+		planet_amenities_add = 18
+		planet_stability_add = 10
+		planet_crime_no_happiness_add = -20
+	}
+
+	country_modifier = {
+		country_admin_cap_mult = 0.1
+		planet_stability_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	#Machine
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+			planet = { is_capital = yes }
+		}
+		modifier = {	
+			job_synapse_drone_add = 6
+			job_brain_drone_add = 6
+			job_patrol_drone_add = 6
+		}
+	}
+
+	#IS NOT THE CAPITAL
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			planet = { is_capital = no }
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {	
+			job_warrior_drone_add = 6
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			planet = { is_capital = no }
+		}
+		text = hivenocapital_desc
+	} 
+}
+
+building_inquisition_hall = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = government
+
+	potential = {
+		owner = { has_civic = civic_pdinquisition }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		NOT = {	owner = { has_civic = civic_pdinquisition }	}
+	}
+
+	planet_modifier = {
+		job_inquisitor_add = 2
+		planet_stability_add = 5
+		pop_cat_worker_happiness = -0.05
+		pop_cat_worker_political_power = -0.10
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+
+	#prerequisites = {
+	#	"tech_planetary_government"
+	#}
+
+	triggered_desc = {
+		text = job_inquisitor_effect_desc
+	}
+
+	show_tech_unlock_if = {
+		is_regular_empire = yes
+	}
+
+	upgrades = {
+		building_inquisition_fortress
+	} 
+}
+
+building_inquisition_fortress = {
+	base_buildtime = @b2_time
+	can_build = no
+
+	category = government
+
+	potential = {
+		owner = { has_civic = civic_pdinquisition }
+		NOT = { has_modifier = slave_colony }
+	}
+
+	allow = {
+		has_upgraded_capital = yes
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			buildings_no_motes = yes
+			NOT = {	owner = { has_civic = civic_pdinquisition }	}
+		}
+	}
+
+	planet_modifier = {
+		job_high_inquisitor_add = 1
+		job_inquisitor_add = 3
+		planet_stability_add = 10
+		pop_cat_worker_happiness = -0.10
+		pop_cat_worker_political_power = -0.20
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
+		}
+		upkeep = {
+			energy = @b1_upkeep
+			volatile_motes = @b2_rare_upkeep
+		}
+	}
+
+	prerequisites = {
+		"tech_colonial_centralization"
+	}
+
+	show_tech_unlock_if = {
+		owner = { has_civic = civic_pdinquisition }
+	}
+
+	triggered_desc = {
+		text = job_inquisitor_effect_desc
+	} 
+}

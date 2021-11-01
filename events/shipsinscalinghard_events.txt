@@ -1,0 +1,147 @@
+namespace = shipsinscalinghard
+
+#Special thanks to Chickenhunt for this decision.
+
+event = {
+	id = shipsinscalinghard.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = has_shipsinscaling_hard
+	}
+}
+
+#Combat slowdown
+ship_event = {
+	id = shipsinscalinghard.2
+	hide_window = yes
+
+	trigger = {
+		is_in_combat = yes
+		has_ship_flag = slowdown_incombat
+	}
+	
+	immediate = {
+		remove_ship_flag = slowdown_incombat
+		if = {
+			limit = { has_modifier = speed_change_x1 }
+			remove_modifier = speed_change_x1
+		}
+		if = {
+			limit = { has_modifier = speed_change_x2 }
+			remove_modifier = speed_change_x2
+		}
+		if = {
+			limit = { has_modifier = speed_change_x3 }
+			remove_modifier = speed_change_x3
+		}
+		if = {
+			limit = { has_modifier = speed_change_x4 }
+			remove_modifier = speed_change_x4
+		}
+	}
+}
+
+#Ion Engine Acceleration
+ship_event = {
+	id = shipsinscalinghard.3
+	hide_window = yes
+
+	trigger = {
+		is_in_combat = no
+		NOT = { has_ship_flag = slowdown_incombat }
+		OR = {
+			has_component = SHIP_THRUSTER_2
+			has_component = DESTROYER_SHIP_THRUSTER_2
+			has_component = CRUISER_SHIP_THRUSTER_2
+			has_component = BATTLESHIP_SHIP_THRUSTER_2
+			has_component = TITAN_SHIP_THRUSTER_2
+			has_component = COLOSSUS_SHIP_THRUSTER_2
+			is_crystal_ship = yes
+			is_space_cloud_ship = yes
+			is_space_whale_ship = yes
+		}
+	}
+	
+	immediate = {
+		set_ship_flag = slowdown_incombat
+		add_modifier = { modifier = speed_change_x1 }
+	}
+}
+
+#Plasma Engine Acceleration
+ship_event = {
+	id = shipsinscalinghard.4
+	hide_window = yes
+
+	trigger = {
+		is_in_combat = no
+		NOT = { has_ship_flag = slowdown_incombat }
+		OR = {
+			has_component = SHIP_THRUSTER_3
+			has_component = DESTROYER_SHIP_THRUSTER_3
+			has_component = CRUISER_SHIP_THRUSTER_3
+			has_component = BATTLESHIP_SHIP_THRUSTER_3
+			has_component = TITAN_SHIP_THRUSTER_3
+			has_component = COLOSSUS_SHIP_THRUSTER_3
+			has_component = GUARDIAN_PROPULSION
+			is_space_amoeba_ship = yes
+		}
+	}
+	
+	immediate = {
+		set_ship_flag = slowdown_incombat
+		add_modifier = { modifier = speed_change_x2 }
+	}
+}
+
+#Impulse Engine Acceleration
+ship_event = {
+	id = shipsinscalinghard.5
+	hide_window = yes
+
+	trigger = {
+		is_in_combat = no
+		NOT = { has_ship_flag = slowdown_incombat }
+		OR = {
+			has_component = SHIP_THRUSTER_4
+			has_component = DESTROYER_SHIP_THRUSTER_4
+			has_component = CRUISER_SHIP_THRUSTER_4
+			has_component = BATTLESHIP_SHIP_THRUSTER_4
+			has_component = TITAN_SHIP_THRUSTER_4
+			has_component = COLOSSUS_SHIP_THRUSTER_4
+			is_swarm_ship = yes
+		}
+	}
+	
+	immediate = {
+		set_ship_flag = slowdown_incombat
+		add_modifier = { modifier = speed_change_x3 }
+	}
+}
+
+#Dark Matter Engine Acceleration
+ship_event = {
+	id = shipsinscalinghard.6
+	hide_window = yes
+
+	trigger = {
+		is_in_combat = no
+		NOT = { has_ship_flag = slowdown_incombat }
+		OR = {
+			has_component = SHIP_THRUSTER_5
+			has_component = DESTROYER_SHIP_THRUSTER_5
+			has_component = CRUISER_SHIP_THRUSTER_5
+			has_component = BATTLESHIP_SHIP_THRUSTER_5
+			has_component = TITAN_SHIP_THRUSTER_5
+			has_component = COLOSSUS_SHIP_THRUSTER_5
+			is_ed_ship = yes
+		}
+	}
+	
+	immediate = {
+		set_ship_flag = slowdown_incombat
+		add_modifier = { modifier = speed_change_x4 }
+	}
+}

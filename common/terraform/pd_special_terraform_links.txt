@@ -1,0 +1,293 @@
+@terraforming_cost_level_1 = 2000 #<-- same category terraforming
+@terraforming_cost_level_2 = 5000 #<-- different category terraforming
+@terraforming_cost_level_3 = 10000 #<-- Hive and machine
+@terraforming_cost_level_4 = 15000 #<-- climate restoration
+@terraforming_cost_gaia = 7500
+@terraforming_duration_level_1 = 1800 #<-- same category terraforming
+@terraforming_duration_level_2 = 3600 #<-- different category terraforming
+@terraforming_duration_level_3 = 5400 #<-- opposite category terraforming and uninhabitable to inhabitable terraforming
+@terraforming_duration_level_4 = 7200 #<-- special terraforming, e.g. to gaia, machine world etc.
+@terraforming_duration_gaia = 3600
+@machineCost = 10000
+@machineTime = 7200
+
+#Gaia to Machine
+terraform_link = {
+	to = "pc_machine"
+	from = "pc_gaia"
+	energy = @machineCost
+	duration = @machineTime
+	potential = { has_ascension_perk = ap_machine_worlds }
+	#condition = { from = { OR = { is_owned_by = root NOT = { has_modifier = "holy_planet" } } } }
+	ai_weight = { weight = 10 modifier = { factor = 0 from = { any_owned_pop = { NOR = { has_trait = trait_machine_unit	has_trait = trait_mechanical } } } }
+		modifier = { factor = 0	from = { is_colony = no } } }
+}
+
+#Nuked to Gaia
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_gaia"
+	energy = 12500
+	duration = 9000
+	potential = { has_ascension_perk = "ap_world_shaper" }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = terraforming_candidate } }
+	ai_weight = { weight = 1 modifier = { factor = 0 resource_stockpile_compare = { resource = energy value < 40000 } }
+		modifier = { factor = 0 OR = { is_mechanical_empire = yes is_cyborg_empire = yes has_authority = auth_machine_intelligence } }
+	}
+}
+
+#Proxima Centuri
+terraform_link = { #only available in certain circumstances
+	from = "pc_frozen"
+	to = "pc_ocean"
+	energy = 15000
+	duration = 7200
+	potential = { from = { has_modifier = terraforming_candidate } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = terraforming_candidate } }
+	ai_weight = { weight = 5 }
+}
+terraform_link = { #only available in certain circumstances
+	from = "pc_frozen"
+	to = "pc_cascadian"
+	energy = 15000
+	duration = 7200
+	potential = { from = { has_modifier = terraforming_candidate } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = terraforming_candidate } }
+	ai_weight = { weight = 5 }
+}
+terraform_link = { #only available in certain circumstances
+	from = "pc_frozen"
+	to = "pc_subarctic"
+	energy = 15000
+	duration = 7200
+	potential = { from = { has_modifier = terraforming_candidate } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = terraforming_candidate } }
+	ai_weight = { weight = 5 }
+}
+terraform_link = { #only available in certain circumstances
+	from = "pc_frozen"
+	to = "pc_wetswamp"
+	energy = 15000
+	duration = 7200
+	potential = { from = { has_modifier = terraforming_candidate } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = terraforming_candidate } }
+	ai_weight = { weight = 5 }
+}
+terraform_link = { #only available in certain circumstances
+	from = "pc_frozen"
+	to = "pc_fog"
+	energy = 15000
+	duration = 7200
+	potential = { from = { has_modifier = terraforming_candidate } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = terraforming_candidate } }
+	ai_weight = { weight = 5 }
+}
+
+#Rare Terraforming
+#From Unihabitable Worlds
+#Eyeball
+terraform_link = {
+	from = pc_tidallylocked_barren
+	to = pc_eyeball
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_tidallocked } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_tidallocked remove_deposit = d_physics_5 add_modifier = { modifier = pdeyeball days = -1 } add_deposit = d_eyeball_site } }
+	ai_weight = { weight = 1 }
+}
+#Tidally-Locked
+terraform_link = {
+	from = pc_tidallylocked_barren
+	to = pc_tidallylocked
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_tidallocked } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_tidallocked remove_deposit = d_physics_5 add_modifier = { modifier = tidal_locked2 days = -1 } add_deposit = d_nightside_mining_operations } }
+	ai_weight = { weight = 1 }
+}
+#Lanthanide
+terraform_link = {
+	from = pc_barren_cold
+	to = pc_lanthanide
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_lanthanide } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_lanthanide remove_deposit = d_minerals_5 reroll_deposits = yes add_modifier = { modifier = pdlanthanide days = -1 } add_deposit = d_lanthanide_deposit } }
+	ai_weight = { weight = 1 }
+}
+#Rogue
+terraform_link = {
+	from = pc_rogue_barren
+	to = pc_rogue
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_rogue } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_rogue remove_deposit = d_physics_5 reroll_deposits = yes add_modifier = { modifier = pdrogue days = -1 } add_deposit = d_rogue_geo } }
+	ai_weight = { weight = 1 }
+}
+#Karst
+terraform_link = {
+	from = pc_barren_cold
+	to = pc_karst
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_karst } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_karst remove_deposit = d_minerals_5 reroll_deposits = yes add_modifier = { modifier = karst days = -1 } add_deposit = d_karst_cave } }
+	ai_weight = { weight = 1 }
+}
+#Geothermal
+terraform_link = {
+	from = pc_frozen
+	to = pc_geothermal
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_geothermal } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_geothermal remove_deposit = d_alloys_5 reroll_deposits = yes add_modifier = { modifier = geothermal days = -1 } add_deposit = d_geothermal_pools_deposit } }
+	ai_weight = { weight = 1 }
+}
+#Superhabitable
+terraform_link = {
+	from = pc_barren
+	to = pc_superhabitable
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_superhabitable } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_superhabitable remove_deposit = d_minerals_5 reroll_deposits = yes add_modifier = { modifier = superhabitable days = -1 } add_deposit = d_ancient_motes } }
+	ai_weight = { weight = 1 }
+}
+#Salt
+terraform_link = {
+	from = pc_barren
+	to = pc_salt
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_salt } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_salt remove_deposit = d_minerals_5 reroll_deposits = yes add_modifier = { modifier = pdsalt days = -1 } add_deposit = d_salt_caves } }
+	ai_weight = { weight = 1 }
+}
+#Primal
+terraform_link = {
+	from = pc_molten
+	to = pc_primal
+	energy = @terraforming_cost_level_4
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_primal } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_primal remove_deposit = d_alloys_5 reroll_deposits = yes add_modifier = { modifier = primal days = -1 } add_deposit = d_lava_lakes } }
+	ai_weight = { weight = 1 }
+}
+
+#From Regular Planets
+#Storm World
+terraform_link = {
+	from = pc_glacial
+	to = pc_storm
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_storm } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_storm add_modifier = { modifier = pdstorm days = -1 }	add_deposit = d_storm_corridor } }
+	ai_weight = { weight = 1 }
+}
+#Glacio World
+terraform_link = {
+	from = pc_alpine
+	to = pc_glacio
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_glacio } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_glacio add_modifier = { modifier = pdglacio days = -1 } add_deposit = d_glacio_lake } }
+	ai_weight = { weight = 1 }
+}
+#Lichen
+terraform_link = {
+	from = pc_tundra
+	to = pc_lichen
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_lichen } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_lichen add_modifier = { modifier = pdlichen days = -1 } add_deposit = d_lichen_forest } }
+	ai_weight = { weight = 1 }
+}
+#Megaflora
+terraform_link = {
+	from = pc_forest
+	to = pc_megaflora
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_megaflora } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_megaflora add_modifier = { modifier = pdmegaflora days = -1 } add_deposit = d_megaflora_deposit } }
+	ai_weight = { weight = 1 }
+}
+#Biolumen
+terraform_link = {
+	from = pc_tropical
+	to = pc_biolumen
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_biolumen } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_biolumen add_modifier = { modifier = biolumen days = -1 } add_deposit = d_biolumen_nature_preserve } }
+	ai_weight = { weight = 1 }
+}
+#Reef
+terraform_link = {
+	from = pc_ocean
+	to = pc_reef
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_reef } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_reef add_modifier = { modifier = pdreef days = -1 } add_deposit = d_great_reef } }
+	ai_weight = { weight = 1 }
+}
+#Aquifer
+terraform_link = {
+	from = pc_sandsea
+	to = pc_aquifer
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_aquifer } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_aquifer add_modifier = { modifier = pdaquifer days = -1 } add_deposit = d_aquifer_cave } }
+	ai_weight = { weight = 1 }
+}
+#Coral
+terraform_link = {
+	from = pc_arid
+	to = pc_coral
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_coral } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_coral add_modifier = { modifier = pdcoral days = -1 } add_deposit = d_coral_fields } }
+	ai_weight = { weight = 1 }
+}
+#Supercon
+terraform_link = {
+	from = pc_savannah
+	to = pc_supercon
+	energy = @terraforming_cost_level_3
+	duration = @terraforming_duration_level_3
+	potential = { from = { has_modifier = pdterra_supercon } }
+	condition = { has_technology = "tech_climate_restoration" }
+	effect = { from = { remove_modifier = pdterra_supercon add_modifier = { modifier = supercon days = -1 } add_deposit = d_supercon_site } }
+	ai_weight = { weight = 1 }
+}

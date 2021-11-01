@@ -13,7 +13,7 @@ uninhabitable_regular_planet = {
 	}
 }
 
-colonizeable_planet = {
+colonizable_planet = {
 	OR = {
 		is_planet_class = pc_pdshroud
 		is_planet_class = pc_city
@@ -21,16 +21,14 @@ colonizeable_planet = {
 		is_planet_class = pc_nuked
 		is_planet_class = pc_hive
 		is_planet_class = pc_machine
-		habitable_structure = yes
+		is_artificial = yes
 		habitable_planet = yes
 		is_planet_class = pc_irradiated
-
-
 		is_planet_class = pc_dextro_nuked
 		is_planet_class = pc_dextro_hive
 		habitable_structure = yes
 		habitable_planet = yes
-		is_planet_class = pc_dextro_irradiated		
+		is_planet_class = pc_dextro_irradiated								   
 	}
 }
 
@@ -54,15 +52,20 @@ habitable_planet = {
 		is_planet_class = pc_subarctic
 		is_planet_class = pc_mangrove
 		is_planet_class = pc_wetswamp
+		is_planet_class = pc_fog
 		is_planet_class = pc_hajungle
+		is_planet_class = pc_cenote
 		is_planet_class = pc_biolumen
 		is_planet_class = pc_steppe
 		is_planet_class = pc_sandsea
 		is_planet_class = pc_oasis
 		is_planet_class = pc_mesa
+		is_planet_class = pc_badlands
 		is_planet_class = pc_outback
+		is_planet_class = pc_coastal
 		is_planet_class = pc_swamp
 		is_planet_class = pc_mud
+		is_planet_class = pc_basalt
 		is_planet_class = pc_frozen_desert
 		is_planet_class = pc_glacial
 		is_planet_class = pc_hadesert
@@ -81,6 +84,9 @@ habitable_planet = {
 		is_planet_class = pc_tidallylocked
 		is_planet_class = pc_supercon
 		is_planet_class = pc_floating
+		is_planet_class = pc_crucible
+		is_planet_class = pc_shroud_crucible
+		is_planet_class = pc_clean_crucible
 		is_planet_class = pc_crystal
 		is_planet_class = pc_technoorganic
 		is_planet_class = pc_graveyard
@@ -95,6 +101,7 @@ habitable_planet = {
 		is_planet_class = pc_tepid
 		is_planet_class = pc_irradiated
 		is_planet_class = pc_karst
+		is_planet_class = pc_reef
 		is_planet_class = pc_ash
 		is_planet_class = pc_primal
 		is_planet_class = pc_aquatic
@@ -116,7 +123,6 @@ habitable_planet = {
 		is_planet_class = pc_biocapital
 		is_planet_class = pc_biofort
 		is_planet_class = pc_hive
-
 		is_planet_class = pc_dextro_desert
 		is_planet_class = pc_dextro_tropical
 		is_planet_class = pc_dextro_arid
@@ -180,7 +186,7 @@ habitable_planet = {
 		is_planet_class = pc_dextro_lanthanide
 		is_planet_class = pc_dextro_pdhive1
 		is_planet_class = pc_dextro_pdhive2
-		is_planet_class = pc_dextro_hive		
+		is_planet_class = pc_dextro_hive
 	}
 }
 
@@ -203,15 +209,20 @@ can_have_habitable_deposits = {
 		is_planet_class = pc_subarctic
 		is_planet_class = pc_mangrove
 		is_planet_class = pc_wetswamp
+		is_planet_class = pc_fog
 		is_planet_class = pc_hajungle
+		is_planet_class = pc_cenote
 		is_planet_class = pc_biolumen
 		is_planet_class = pc_steppe
 		is_planet_class = pc_sandsea
 		is_planet_class = pc_oasis
 		is_planet_class = pc_mesa
+		is_planet_class = pc_badlands
 		is_planet_class = pc_outback
+		is_planet_class = pc_coastal
 		is_planet_class = pc_swamp
 		is_planet_class = pc_mud
+		is_planet_class = pc_basalt
 		is_planet_class = pc_frozen_desert
 		is_planet_class = pc_glacial
 		is_planet_class = pc_hadesert
@@ -231,6 +242,9 @@ can_have_habitable_deposits = {
 		is_planet_class = pc_tidallylocked
 		is_planet_class = pc_supercon
 		is_planet_class = pc_floating
+		is_planet_class = pc_crucible
+		is_planet_class = pc_shroud_crucible
+		is_planet_class = pc_clean_crucible
 		is_planet_class = pc_crystal
 		is_planet_class = pc_technoorganic
 		is_planet_class = pc_graveyard
@@ -245,6 +259,7 @@ can_have_habitable_deposits = {
 		is_planet_class = pc_tepid
 		is_planet_class = pc_irradiated
 		is_planet_class = pc_karst
+		is_planet_class = pc_reef
 		is_planet_class = pc_ash
 		is_planet_class = pc_primal
 		is_planet_class = pc_salt
@@ -261,7 +276,6 @@ can_have_habitable_deposits = {
 		is_planet_class = pc_megafloratol
 		is_planet_class = pc_aquatic
 		is_planet_class = pc_shrouded
-
 		is_planet_class = pc_dextro_nuked
 		is_planet_class = pc_dextro_desert
 		is_planet_class = pc_dextro_tropical
@@ -328,23 +342,6 @@ can_have_habitable_deposits = {
 	}
 }
 
-habitable_structure = {
-	OR = {
-		is_artificial = yes
-		is_planet_class = pc_ringworld_habitable
-		is_planet_class = pc_habitat
-		is_planet_class = pc_archive
-		is_planet_class = pc_pd_gas_giant_hab
-		is_planet_class = pc_pd_barren_hab
-		is_planet_class = pc_pd_barren_cold_hab
-		is_planet_class = pc_pd_frozen_hab
-		is_planet_class = pc_pd_molten_hab
-		is_planet_class = pc_pd_toxic_hab
-		is_planet_class = pc_pd_hothouse_hab
-		is_planet_class = pc_pd_asteroid_hab
-	}
-}
-
 is_wet = {
 	OR = {
 		is_planet_class = pc_ocean
@@ -355,7 +352,9 @@ is_wet = {
 		is_planet_class = pc_subarctic
 		is_planet_class = pc_mangrove
 		is_planet_class = pc_wetswamp
+		is_planet_class = pc_fog
 		is_planet_class = pc_hajungle
+		is_planet_class = pc_cenote
 		is_planet_class = pc_biolumen
 		is_planet_class = pc_retinal
 		is_planet_class = pc_forest
@@ -364,12 +363,12 @@ is_wet = {
 		is_planet_class = pc_superhabitable
 		is_planet_class = pc_geothermal
 		is_planet_class = pc_karst
+		is_planet_class = pc_reef
 		is_planet_class = pc_megaflora
 		is_planet_class = pc_megaflorahive
 		is_planet_class = pc_megafloratol
 		is_planet_class = pc_aquatic
 		is_planet_class = pc_biolumen
-
 		is_planet_class = pc_dextro_ocean
 		is_planet_class = pc_dextro_continental
 		is_planet_class = pc_dextro_tropical
@@ -388,7 +387,7 @@ is_wet = {
 		is_planet_class = pc_dextro_geothermal
 		is_planet_class = pc_dextro_karst
 		is_planet_class = pc_dextro_aquatic
-		is_planet_class = pc_dextro_biolumen		
+		is_planet_class = pc_dextro_biolumen
 	}
 }
 
@@ -401,7 +400,9 @@ is_dry = {
 		is_planet_class = pc_sandsea
 		is_planet_class = pc_oasis
 		is_planet_class = pc_mesa
+		is_planet_class = pc_badlands
 		is_planet_class = pc_outback
+		is_planet_class = pc_coastal
 		is_planet_class = pc_hadesert
 		is_planet_class = pc_prairie
 		is_planet_class = pc_veld
@@ -413,7 +414,6 @@ is_dry = {
 		is_planet_class = pc_primal
 		is_planet_class = pc_tidallylocked
 		is_planet_class = pc_supercon
-
 		is_planet_class = pc_dextro_arid
 		is_planet_class = pc_dextro_desert
 		is_planet_class = pc_dextro_savannah
@@ -442,6 +442,7 @@ is_cold = {
 		is_planet_class = pc_alpine
 		is_planet_class = pc_swamp
 		is_planet_class = pc_mud
+		is_planet_class = pc_basalt
 		is_planet_class = pc_frozen_desert
 		is_planet_class = pc_glacial
 		is_planet_class = pc_boreal
@@ -457,7 +458,6 @@ is_cold = {
 		is_planet_class = pc_eyeball
 		is_planet_class = pc_glacio
 		is_planet_class = pc_lanthanide
-
 		is_planet_class = pc_dextro_arctic
 		is_planet_class = pc_dextro_tundra
 		is_planet_class = pc_dextro_alpine
@@ -476,7 +476,7 @@ is_cold = {
 		is_planet_class = pc_dextro_lichen
 		is_planet_class = pc_dextro_eyeball
 		is_planet_class = pc_dextro_glacio
-		is_planet_class = pc_dextro_lanthanide		
+		is_planet_class = pc_dextro_lanthanide	
 	}
 }
 
@@ -486,6 +486,9 @@ is_pd_unique = {
 		is_planet_class = pc_graveyard
 		is_planet_class = pc_technoorganic
 		is_planet_class = pc_crystal
+		is_planet_class = pc_crucible
+		is_planet_class = pc_shroud_crucible
+		is_planet_class = pc_clean_crucible
 	}
 }
 
@@ -509,6 +512,7 @@ is_pd_rare = {
 		is_planet_class = pc_tidallylocked
 		is_planet_class = pc_supercon
 		is_planet_class = pc_karst
+		is_planet_class = pc_reef
 		is_planet_class = pc_salt
 		is_planet_class = pc_aquifer
 		is_planet_class = pc_coral
@@ -525,6 +529,43 @@ is_pd_rare = {
 	}
 }
 
+is_pd_arcology = {
+	OR = {
+		is_planet_class = pc_city
+		is_planet_class = pc_ecocity
+		is_planet_class = pc_palacearc
+		is_planet_class = pc_capitalarc
+		is_planet_class = pc_milarc
+		is_planet_class = pc_necropolis
+		is_planet_class = pc_corpoarc
+		is_planet_class = pc_shroudcity
+		is_planet_class = pc_shroudecocity
+		is_planet_class = pc_shroudcorpoarc
+		is_planet_class = pc_shroudmilarc
+		is_planet_class = pc_shroudpalacearc
+		is_planet_class = pc_shroudcapitalarc
+	}
+}
+
+is_pd_hive_arcology = {
+	OR = {
+		is_planet_class = pc_bioforge
+		is_planet_class = pc_biocapital
+		is_planet_class = pc_biofort
+		is_planet_class = pc_megafloracapital
+		is_planet_class = pc_megafloraforge
+		is_planet_class = pc_megaflorafort
+	}
+}
+
+is_pd_robot_arcology = {
+	OR = {
+		is_planet_class = pc_machine_factory
+		is_planet_class = pc_machine_fort
+		is_planet_class = pc_machine_capital
+	}
+}
+
 is_pd_exotic = {
 	OR = {
 		is_planet_class = pc_irradiated
@@ -534,7 +575,6 @@ is_pd_exotic = {
 		is_planet_class = pc_methane
 		is_planet_class = pc_ash
 		is_planet_class = pc_chlorine
-
 		is_planet_class = pc_dextro_irradiated
 		is_planet_class = pc_dextro_ammonia
 		is_planet_class = pc_dextro_sulfur
@@ -621,7 +661,7 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 				OR = {
 					habitable_planet = yes
 					uninhabitable_regular_planet = yes
-					habitable_structure = yes
+					is_artificial = yes
 					is_pd_exotic = yes
 					is_pd_unique = yes
 					is_planet_class = pc_diamond
@@ -635,4 +675,15 @@ can_destroy_planet_with_PLANET_KILLER_CRACKER = {
 			}
 		}
 	#}
+}
+
+has_phototrophic_energy_upkeep = {
+	OR = {
+		has_trait = trait_plantoid_phototrophic
+		AND = {
+			has_trait = trait_plantoid_radiotrophic
+			NOT = { planet = { is_planet_class = pc_nuked } }
+			NOT = { planet = { is_planet_class = pc_irradiated } }
+		}
+	}
 }

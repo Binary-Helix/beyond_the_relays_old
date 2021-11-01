@@ -12,6 +12,13 @@ MOUSE_MOVEMENT_TO_START_ROTATION_SQ	= 9				# 16	# how far (squared) you need to 
 SCROLL_SPEED						= 0.05			# 0.035	# higher values = faster camera. NOTE that this is tweakables from settings as well!
 
 HIDE_ORBITS_ZOOM					= 3000
+BORDER_NAMES_FADEOUT_ZOOM	= 1400
+BORDER_NAMES_FADEOUT_SPEED	= 1.5
+BORDER_FLAG_FADEOUT_ZOOM	= 1400
+BORDER_FLAG_FADEOUT_SPEED	= 1.5
+NEBULA_NAMES_FADEOUT_ZOOM	= 250
+NEBULA_NAMES_FADEOUT_SPEED	= 1.5
+
 											0		1		2		3		4		5		6		7
 ZOOM_STEPS_GALAXY				= { 100		220		450		800		1400	3000	4000 	4500	5000 }				# Galaxy zoom steps
 ZOOM_STEPS_SYSTEM_PERCENTAGES	= { 0.004	0.0072	0.0146	0.0334	0.0833	0.2234	0.6398	1.9405 }	# System zoom steps in percent relative to the system size
@@ -37,18 +44,14 @@ FOCUS_START_ZOOM_STEP			= 3 	# 4		# which zoom step will be used when focusing o
 
 SYSTEM_HOVER_RANGE				= 0.009	# 0.005
 
-BORDER_NAMES_FADEOUT_ZOOM	= 1400
-BORDER_NAMES_FADEOUT_SPEED	= 1.5
-BORDER_FLAG_FADEOUT_ZOOM	= 1400
-BORDER_FLAG_FADEOUT_SPEED	= 1.5
-NEBULA_NAMES_FADEOUT_ZOOM	= 250
-NEBULA_NAMES_FADEOUT_SPEED	= 1.5
+
 
 SYSTEM_SLIDE_RADIUS_FACTOR		= 0.25	# 4.0
 }
 
 NGraphics = { 
 
+	CELESTIAL_WARNING_COORDINATE_VALUE = 900
 	ORBIT_HSV = { .567 0.926 0.911 } 
 	SYSTEM_INNER_BORDER_HSV	= { .567 0.926 0.911 }
 	SYSTEM_OUTER_BORDER_HSV	= { .567 0.926 0.911 }
@@ -62,23 +65,51 @@ NGraphics = {
 	BORDER_SYSTEM_RADIUS = 40.0
 	BORDER_OWNERLESS_SYSTEM_RADIUS = 10.0
 	BORDER_VISIBILITY_THRESHOLD = 0.25
+
+	#SHIP_RANDOM_HEIGHT_OFFSET 						= 100.0 #100 - SYSTEM SCALE - SHIPS IN SCALING VALUE
+		
+	STRIKE_CRAFT_HEIGHT_OFFSET						= 40.0  # 50
+	STRIKE_CRAFT_HEIGHT_RANDOM						= 60.0   # 60
+
+	SHIELD_DISTANCE_FROM_SHIP = { 2.0 1.0 5.0 } 
+	SHIELD_DISTANCE_FROM_SHIP_MULT = { 1.15 1.15 1.15 }
+
+
+	TRAILS_ALPHA_FADE					= 1.5 # 0.5 # Controls of quick we alpha fade-out
+	TRAILS_MISSILE_ALPHA_FADE			= 18 #6 # Controls of quick we alpha fade-out missile trails
+	TRAILS_BASE_WIDTH					= 0.35 #1.0 # Trails width
+	TRAILS_MISSILE_BASE_WIDTH			= 1.0 #3.0 # Missile trails width
+	TRAILS_LOCATOR_NAME					= "exhaust"
+	STRIKE_CRAFT_TRAIL_FADE_RATE		= 1.5 #1.0
+	STRIKE_CRAFT_HEIGHT_OFFSET			= 30.0
+	STRIKE_CRAFT_HEIGHT_RANDOM			= 5.0
+	
+	SHIELD_DISTANCE_FROM_SHIP = { 1.0 0.0 2.5 } #{ 2.0 0.0 5.0 } # how far "out" from the ships shields will extend. left-right upd-down front-back
+	SHIELD_DISTANCE_FROM_SHIP_MULT = { 0.7 0.7 0.7 } #{ 1.15 1.15 1.15 } # how far "out" from the ships shields will extend. based on ship's size. left-right upd-down front-back
 }
 
 NGameplay = {
 	
 	PLANET_SHIP_ORBIT_DISTANCE 			= 4.0	#2.0	# how far from the planet ships will orbit
 	PLANET_STATION_ORBIT_DISTANCE		= 3.5	#6.0	# how far from the planet orbital stations will be
-	STARBASE_ORBIT_DISTANCE				= 20.0	#15.0
+	STARBASE_ORBIT_DISTANCE				= 10.0	#15.0
 	START_YEAR = 2165
 		}
 
 NCombat = {
 
-	COMBAT_DETECT_RANGE_MULT			= 0.70	# 1.05	# Range to engage in combat with other ships is <fleets max attack range> * COMBAT_DETECT_RANGE_MULT
-	COMBAT_AREA_MIN_ATTACK_RADIUS		= 0.07	# 0.2
+	COMBAT_BACK_OFF_RATE							= 0.24
+	SHIP_SMOOTH_ROTATION_THRESHOLD					= 7.141
+	COMBAT_DETECT_RANGE_MULT			= 0.18	# 1.05	# Range to engage in combat with other ships is <fleets max attack range> * COMBAT_DETECT_RANGE_MULT
+	COMBAT_DETECT_RANGE_MIN					= 50 #1.6 #4 #10
+	COMBAT_AREA_MIN_ATTACK_RADIUS			= 0.004 #0.08 #0.2
 }	
 
-NShip = { 
-	FLEET_BASE_FORMATION_SCALE			= 0.6	# 2.0
+NShip = {
+	SHIP_SPEED_SCALE					= 0.0075	#0.045	# Setting this to 1 makes the scripted speed value correspond to units/day
+	
+	FLEET_MOVE_MAX_DIST_SHIPS			= 30.0 #50.0		# Fix for swarm ships pulling in artillery ships.
+	FLEET_BASE_FORMATION_SCALE						= 0.6 #1 #6
+	FLEET_BASE_FORMATION_DIV						= 3.5	#3
 }
 

@@ -38,7 +38,7 @@ sys_gagarin_init = {
     planet = {
         name = "Junthor"
         class = pc_chlorine
-        orbit_distance = 65
+        orbit_distance = 150
         orbit_angle = 165
         has_ring = no
 		size = 25 
@@ -72,7 +72,7 @@ sys_gagarin_init = {
 		moon = {
 			name = "Junthor a"
 			class = pc_iron
-			orbit_distance = 9
+			orbit_distance = 15
 			size = 5
 			init_effect = {
 				prevent_anomaly = yes
@@ -106,7 +106,7 @@ sys_gagarin_init = {
     planet = {
         name = "Pressha"
         class = pc_ice_giant
-        orbit_distance = 45
+        orbit_distance = 100
         orbit_angle = 202
         has_ring = no
 		size = 30
@@ -130,7 +130,7 @@ sys_gagarin_init = {
 		moon = {
 			name = "Pressha a"
 			class = pc_iron
-			orbit_distance = 16
+			orbit_distance = 22
 			size = 7
 			init_effect = {
 				prevent_anomaly = yes
@@ -167,7 +167,7 @@ sys_gagarin_init = {
     planet = {
         name = "Rayingri"
         class = pc_mephitic
-        orbit_distance = 40
+        orbit_distance = 100
         orbit_angle = 245
         has_ring = no
 		size = 13
@@ -217,7 +217,7 @@ sys_gagarin_init = {
     planet = {
         name = "Sogelrus"
         class = pc_cryovolcanic
-        orbit_distance = 50
+        orbit_distance = 85
         orbit_angle = 286
         has_ring = no
 		size = 11
@@ -235,7 +235,7 @@ sys_gagarin_init = {
     planet = {
         name = "Antirumgon"
         class = pc_hydrocarbon
-        orbit_distance = 35
+        orbit_distance = 65
         orbit_angle = 289
         has_ring = no
 		size = 23
@@ -344,12 +344,12 @@ sys_grissom_init = {
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
-		radius = 190
+		radius = 320
 	}
 	
 	asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 290
+		radius = 450
 	}
 
 	planet = {
@@ -383,7 +383,7 @@ sys_grissom_init = {
     planet = {
         name = "Benda"
         class = pc_molten
-        orbit_distance = 90
+        orbit_distance = 190
         orbit_angle = 340
         has_ring = no
 		size = 17
@@ -406,7 +406,7 @@ sys_grissom_init = {
     planet = {
         name = "Zaherux"
         class = pc_sandsea
-        orbit_distance = 50
+        orbit_distance = 80
         orbit_angle = 329
         has_ring = no
 		size = 16
@@ -433,7 +433,7 @@ sys_grissom_init = {
 		moon = {
 			name = "Zaherux a"
 			class = pc_iron
-			orbit_distance = 8
+			orbit_distance = 18
 			size = 5
 			init_effect = {
 				prevent_anomaly = yes			
@@ -487,7 +487,7 @@ sys_grissom_init = {
     planet = {
         name = "Notanban"
         class = pc_gas_giant
-        orbit_distance = 40
+        orbit_distance = 70
         orbit_angle = 267
         has_ring = no
 		size = 37
@@ -510,7 +510,7 @@ sys_grissom_init = {
 		moon = {
 			name = "Notanban a"
 			class = pc_iron
-			orbit_distance = 8			
+			orbit_distance = 24			
 			size = 7
 		}
 
@@ -563,6 +563,8 @@ sys_grissom_init = {
 		}		
     }
 
+	change_orbit = 60
+
 	planet = {
         count = 1
         class = pc_asteroid
@@ -580,7 +582,7 @@ sys_grissom_init = {
 			type = "armstrongnebula_voyagercluster_massrelay" 
 			name = "Armstrong 1 Relay"
 			random_pos = NO 
-			orbit_distance = 320			
+			orbit_distance = 500			
 		} 
 	}		
 }
@@ -15853,7 +15855,7 @@ sys_cheng_init = {
 	planet = {
 		name = "Cheng"
 		class = pc_m_hyper_star
-		size = 50
+		size = 35
 	}
 
 	planet = {

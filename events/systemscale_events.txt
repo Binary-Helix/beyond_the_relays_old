@@ -1,0 +1,13 @@
+#
+namespace = systemscale
+
+
+event = {
+	id = systemscale.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = "has_system_scale_mod"
+	}
+}

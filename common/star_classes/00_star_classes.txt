@@ -1,3 +1,7 @@
+##############################
+##### REAL SPACE - Stars #####
+##############################
+
 # Blue-Purple Star
 sc_o = {
 	class 			= o_star
@@ -1179,6 +1183,10 @@ sc_fu = {
 		ship_hull_mult = -0.3
 	}
 }
+
+#####################################
+##### REAL SPACE - Binary Stars #####
+#####################################
 
 sc_binary_1 = { # X-ray Binary Star System: Blue star around a Pulsar
     class             = a_star
@@ -3304,6 +3312,10 @@ sc_binary_ms_d = { # Binary System: Mira
 	pc_gaia			= { spawn_odds = 0.0 }
 }
 
+######################################
+##### REAL SPACE - Trinary Stars #####
+######################################
+
 sc_trinary_1 = { # Trinary System: G M K
     class             = g_star
     icon              = g_k_m_trinary_star
@@ -5346,6 +5358,10 @@ sc_trinary_ms_f_d = { # Trinary System
 	pc_gaia			= { spawn_odds = 0.0 }
 }
 
+#####################################
+##### REAL SPACE - Paired Stars #####
+#####################################
+
 sc_paired_b_b_a_a = { # Paired System
     class             = b_star
     icon              = b_b_a_a_paired_star
@@ -5660,19 +5676,128 @@ sc_paired_g_k_k_t = { # Paired System
     num_planets     = { min = 4 max = 10 }
 }
 
-sc_none = { # no star
-    class             = none_star
-    icon              = pc_no_star
-	icon_scale		  = 1.1
-    planet            = {
-                        key = pc_none_star
-                        class = none_star
-                    }
-    spawn_odds         = 4
-    num_planets     = { min = 0 max = 1 }
+#####################################
+##### BEYOND THE RELAYS - Stars #####
+#####################################
 
-	pc_rogue = {
-		spawn_odds = { spawn_odds = 0.01 }
+sc_deep_space = {
+	class = p_green_star
+	planet = { key = pc_invisible_star }
+	icon = a_deep_space
+	spawn_odds = 0
+}
+
+############################################
+##### BEYOND THE RELAYS - Binary Stars #####
+############################################
+
+# Binary A/MG
+sc_binary_a_mg = {
+    class             = b_star
+    icon              = a_m_binary_star
+	icon_scale		  = 0.9
+    planet            = {
+                        key = pc_a_star
+                        class = a_star
+                    }
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    spawn_odds         = 10
+    num_planets     = { min = 4 max = 10 }
+	
+	pc_continental 	= { spawn_odds = 0.2 }
+	pc_desert		= { spawn_odds = 0.4 }
+	pc_tropical		= { spawn_odds = 0.2 }
+	pc_arid 		= { spawn_odds = 0.4 }
+	pc_ocean		= { spawn_odds = 0.2 }
+	pc_tundra		= { spawn_odds = 0.1 }
+	pc_arctic		= { spawn_odds = 0.1 }
+	pc_alpine		= { spawn_odds = 0.1 }
+	pc_savannah		= { spawn_odds = 0.3 }
+}
+
+sc_binary_f_k = {
+class             = k_star
+icon              = f_k_binary_star
+icon_scale		  = 1.0
+planet            = {
+					key = pc_k_star
+					class = k_star
+				}
+planet            = {
+					key = pc_f_star
+					class = f_star
+				}
+spawn_odds         = 15
+num_planets     = { min = 4 max = 10 }
+
+pc_continental 	= { spawn_odds = 0.3 }
+pc_desert		= { spawn_odds = 0.5 }
+pc_tropical		= { spawn_odds = 0.3 }
+pc_arid 		= { spawn_odds = 0.4 }
+pc_ocean		= { spawn_odds = 0.3 }
+pc_tundra		= { spawn_odds = 0.1 }
+pc_arctic		= { spawn_odds = 0.1 }
+pc_alpine		= { spawn_odds = 0.2 }
+pc_savannah		= { spawn_odds = 0.6 }
+}
+
+sc_binary_b_b = {
+    class             = b_star
+    icon              = b_b_binary_star
+	icon_scale		  = 0.9
+    planet            = {
+                        key = pc_b_super_star
+                        class = b_star
+                    }
+    planet            = {
+                        key = pc_b_star
+                        class = b_star
+                    }
+    spawn_odds         = 8
+    num_planets     = { min = 4 max = 10 }
+	
+	pc_continental 	= { spawn_odds = 0.1 }
+	pc_desert		= { spawn_odds = 0.3 }
+	pc_tropical		= { spawn_odds = 0.1 }
+	pc_arid 		= { spawn_odds = 0.3 }
+	pc_ocean		= { spawn_odds = 0.1 }
+	pc_tundra		= { spawn_odds = 0.0 }
+	pc_arctic		= { spawn_odds = 0.0 }
+	pc_alpine		= { spawn_odds = 0.0 }
+	pc_savannah		= { spawn_odds = 0.2 }
+}
+
+############################################
+##### BEYOND THE RELAYS - Trinary Stars #####
+############################################
+
+sc_trinary_o_y_l = {
+    class             = k_star
+    icon              = o_y_l_binary_star
+    icon_scale		  = 1.0
+    planet            = {
+                        key = pc_k_star
+                        class = k_star
+                    }
+    planet            = {
+                        key = pc_f_star
+                        class = f_star
+                    }
+    spawn_odds         = 15
+    num_planets     = { min = 4 max = 10 }
+    
+    pc_continental 	= { spawn_odds = 0.3 }
+    pc_desert		= { spawn_odds = 0.5 }
+    pc_tropical		= { spawn_odds = 0.3 }
+    pc_arid 		= { spawn_odds = 0.4 }
+    pc_ocean		= { spawn_odds = 0.3 }
+    pc_tundra		= { spawn_odds = 0.1 }
+    pc_arctic		= { spawn_odds = 0.1 }
+    pc_alpine		= { spawn_odds = 0.2 }
+    pc_savannah		= { spawn_odds = 0.6 }
 }
 
 random_list = {
@@ -5760,6 +5885,9 @@ random_list = {
 		"sc_binary_k_d"
         "sc_binary_m_d"
         "sc_binary_ms_d"
+        "sc_binary_a_mg"
+        "sc_binary_f_k"
+        "sc_binary_b_b"
     }
 }
 
@@ -5837,6 +5965,7 @@ random_list = {
 		"sc_trinary_m_m_d"
         "sc_trinary_mg_a_d"
 		"sc_trinary_ms_f_d"
+        "sc_trinary_o_y_l"
     }
 }
 
@@ -5878,6 +6007,7 @@ random_list = {
 		"sc_g_super"
 		"sc_k_super"
 		"sc_m_super"
+        "sc_deep_space"
 	}
 }
 

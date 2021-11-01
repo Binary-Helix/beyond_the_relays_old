@@ -1,0 +1,34 @@
+# A Megastructure has been built
+# Root = Country
+# From = Megastructure
+# FromFrom = System
+# FromFromFrom = Fleet
+on_megastructure_built = {
+	events = {
+		pdexotic.01
+		pdexotic.02
+		pdexotic.03
+		pdexotic.04
+	}
+}
+
+on_megastructure_upgraded = {
+	events = {
+		pdexotic.01
+		pdexotic.02
+		pdexotic.03
+		pdexotic.04
+	}
+}
+
+on_press_begin = { 
+	events = { 
+		#pdexotic.05
+	}
+}
+
+on_monthly_pulse = {
+	events = {
+		#pdexotic.05
+	}
+}

@@ -23,11 +23,11 @@ sys_sol_init = {
 
 	asteroid_belt = {
 		type = rocky_asteroid_belt
-		radius = 145
+		radius = 115
 	}
 	asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 290
+		radius = 460
 	}
 
 	planet = {
@@ -43,9 +43,9 @@ sys_sol_init = {
 	planet = {
 		name = "Mercury"
 		class = "pc_iron"
-		orbit_distance = 40
+		orbit_distance = 25
 		orbit_angle = 15
-		size = 10
+		size = 6
 		has_ring = no
 		flags = { mercury_planet pd_ignore}
 	}
@@ -53,9 +53,9 @@ sys_sol_init = {
 	planet = {
 		name = "Venus"
 		class = "pc_hothouse"
-		orbit_distance = 25
+		orbit_distance = 15
 		orbit_angle = 125
-		size = 20
+		size = 15
 		has_ring = no
 		flags = { venus_planet pd_ignore}
 	}
@@ -143,7 +143,7 @@ sys_sol_init = {
 			orbit_distance = 12
 			orbit_angle = 40
 			has_ring = no
-			size = 5
+			size = 4
 			entity = "cold_barren_planet_luna_entity"
 			flags = { luna_planet pd_ignore }
 			init_effect = {
@@ -166,7 +166,7 @@ sys_sol_init = {
 		class = "pc_mephitic"
 		orbit_distance = 25
 		orbit_angle = 60
-		size = 13
+		size = 8
 		has_ring = no
 		entity = "barren_planet_mars_entity"
 		flags = { mars_planet pd_ignore}	
@@ -189,7 +189,7 @@ sys_sol_init = {
 		class = "pc_asteroid"
 		orbit_distance = 30
 		orbit_angle = -210
-		size = 5
+		size = 1
 		has_ring = no
 	}
 	
@@ -198,7 +198,7 @@ sys_sol_init = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = -95
-		size = 5
+		size = 1
 		has_ring = no
 	}
 	
@@ -207,7 +207,7 @@ sys_sol_init = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = 285
-		size = 5
+		size = 1
 		has_ring = no
 	}
 	
@@ -216,7 +216,7 @@ sys_sol_init = {
 		class = "pc_asteroid"
 		orbit_distance = 0
 		orbit_angle = -80
-		size = 5
+		size = 1
 		has_ring = no
 	}
 	
@@ -225,7 +225,7 @@ sys_sol_init = {
 		class = "pc_gas_giant"
 		orbit_distance = 40
 		orbit_angle = -160
-		size = 35
+		size = 36
 		has_ring = no
 		entity = "gas_giant_jupiter_entity"
 		change_orbit = 6
@@ -235,7 +235,7 @@ sys_sol_init = {
 			class = "pc_molten"
 			orbit_distance = 10
 			orbit_angle = 110
-			size = 6
+			size = 4
 			has_ring = no
 		}
 		moon = {
@@ -243,7 +243,7 @@ sys_sol_init = {
 			class = "pc_frozen"
 			orbit_distance = 2.5
 			orbit_angle = 10
-			size = 6
+			size = 3
 			has_ring = no
 		}
 		moon = {
@@ -251,7 +251,7 @@ sys_sol_init = {
 			class = "pc_frozen"
 			orbit_distance = 2.5
 			orbit_angle = 80
-			size = 9
+			size = 6
 			has_ring = no
 		}
 		moon = {
@@ -259,7 +259,7 @@ sys_sol_init = {
 			class = "pc_frozen"
 			orbit_distance = 2.5
 			orbit_angle = -155
-			size = 7
+			size = 6
 			has_ring = no
 		}
 	}
@@ -269,14 +269,14 @@ sys_sol_init = {
 		class = "pc_gas_giant"
 		orbit_distance = 25
 		orbit_angle = 170
-		size = 3
+		size = 34
 		has_ring = yes
 		entity = "gas_giant_05_entity"
 		change_orbit = 7
 		moon = {
 			name = "Titan"
 			class = "pc_frozen"
-			size = 8
+			size = 6
 			orbit_distance = 12
 			orbit_angle = 320
 			has_ring = no
@@ -288,7 +288,7 @@ sys_sol_init = {
 		class = "pc_ice_giant"
 		orbit_distance = 25
 		orbit_angle = 125
-		size = 20
+		size = 28
 		has_ring = no
 		entity = "gas_giant_03_entity"
 	}
@@ -298,7 +298,7 @@ sys_sol_init = {
 		class = "pc_ice_giant"
 		orbit_distance = 25
 		orbit_angle = -195
-		size = 20
+		size = 27
 		has_ring = no
 		entity = "gas_giant_02_entity"
 		change_orbit = 4
@@ -306,7 +306,7 @@ sys_sol_init = {
 		moon = {
 			name = "Triton"
 			class = "pc_frozen"
-			size = 6
+			size = 3
 			orbit_distance = 7
 			orbit_angle = 115
 			has_ring = no
@@ -318,27 +318,24 @@ sys_sol_init = {
 		class = "pc_frozen"
 		orbit_distance = 30
 		orbit_angle = -210
-		size = 6
+		size = 2
 		has_ring = no	
-	
+		init_effect = { 
+			spawn_megastructure = { 
+				type = "localcluster_arcturusstream_massrelay" 
+				name = "Orion 4 Relay"
+				orbit_angle = 0 
+				orbit_distance = 10
+			} 
+		}
 	}
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "localcluster_arcturusstream_massrelay" 
-			name = "Orion 4 Relay"
-			orbit_angle = 0 
-			orbit_distance = 295
-		} 
-	}	
-
-	
+		
 	planet = {
 		name = "Makemake"
 		class = "pc_ice_asteroid"
 		orbit_distance = 0
 		orbit_angle = -95
-		size = 5
+		size = 1
 		has_ring = no
 	}
 	
@@ -347,7 +344,7 @@ sys_sol_init = {
 		class = "pc_ice_asteroid"
 		orbit_distance = 0
 		orbit_angle = 285
-		size = 5
+		size = 1
 		has_ring = no
 	}
 	
@@ -356,7 +353,7 @@ sys_sol_init = {
 		class = "pc_ice_asteroid"
 		orbit_distance = 0
 		orbit_angle = -80
-		size = 5
+		size = 1
 		has_ring = no
 
 	}

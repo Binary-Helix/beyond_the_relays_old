@@ -18,6 +18,60 @@
 #	on_visible = <effect>			# Effect to fire upon site visible, with scope this=country, from=archaeological site.
 #}
 
+###########################################
+##### PLANETARY DIVERSITY - Dig Sites #####
+###########################################
+
+#Archive World
+#Relic + 
+pdcoral_site = {
+	desc = pdcoral_site_desc
+	picture = GFX_evt_coral
+	stages = 4
+	max_instances = 1
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	on_visible = {
+		country_event = { id = story.5 days = 30 }
+	}	
+	
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_D1
+		event = pdcoral.11
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D2
+		event = pdcoral.12
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_D3
+		event = pdcoral.13
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_D4
+		event = pdcoral.14
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+#######################################
+##### TEAM NESSASSITY - Dig Sites #####
+#######################################
+
 ### Hades Nexus
 ## Sheol
 # Gei Hinnom (Prothean Burial Ground) 
