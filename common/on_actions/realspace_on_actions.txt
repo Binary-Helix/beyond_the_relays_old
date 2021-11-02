@@ -25,9 +25,23 @@ on_five_year_pulse = {
 	}
 }
 
-# # New Frontiers Set Subclass
-# on_set_subclass = {
-# 	events = {
-# 		#newfrontiers.4
-# 	}
-# }
+# After closing RS menu
+on_applying_rs_settings = {
+	events = {
+		realspace.101 #Create Vanilla Nebula
+		realspace.102 #Create Real Space Nebula
+		realspace.104 #Decrease in the number of inhabitable worlds
+		realspace.106 #Create civilizations in Sol Cluster
+		realspace.107 #Remove Vanilla Nebula
+		realspace.109 #Create globula
+		realspace.110 #Spawn All Ruined Megastructures
+		realspace.111 #Spawn All Leviathans
+	}
+}
+
+# New Frontiers Set Subclass (Old Version)
+on_set_subclass = {
+	events = {
+
+	}
+}

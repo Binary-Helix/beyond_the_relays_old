@@ -27,7 +27,7 @@ sys_sol_init = {
 	}
 	asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 460
+		radius = 300
 	}
 
 	planet = {
@@ -317,17 +317,9 @@ sys_sol_init = {
 		name = "Pluto"
 		class = "pc_frozen"
 		orbit_distance = 30
-		orbit_angle = -210
+		orbit_angle = 210
 		size = 2
 		has_ring = no	
-		init_effect = { 
-			spawn_megastructure = { 
-				type = "localcluster_arcturusstream_massrelay" 
-				name = "Orion 4 Relay"
-				orbit_angle = 0 
-				orbit_distance = 10
-			} 
-		}
 	}
 		
 	planet = {
@@ -356,6 +348,15 @@ sys_sol_init = {
 		size = 1
 		has_ring = no
 
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "localcluster_arcturusstream_massrelay" 
+			name = "Orion 4 Relay"
+			orbit_angle = 210 
+			orbit_distance = 310
+		} 
 	}
 }
 

@@ -344,12 +344,12 @@ sys_grissom_init = {
 	
 	asteroid_belt = {
 		type = rocky_asteroid_belt
-		radius = 320
+		radius = 420
 	}
 	
 	asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 450
+		radius = 550
 	}
 
 	planet = {
@@ -383,7 +383,7 @@ sys_grissom_init = {
     planet = {
         name = "Benda"
         class = pc_molten
-        orbit_distance = 190
+        orbit_distance = 400
         orbit_angle = 340
         has_ring = no
 		size = 17
@@ -10818,7 +10818,7 @@ sys_yangtze_init = {
 
     planet = {
         name = "Patajiri"
-        class = pc_dextro_chlorine
+        class = pc_chlorine
         orbit_distance = 35
         orbit_angle = 116
         has_ring = no
@@ -15555,7 +15555,7 @@ sys_maxiponia_init = {
 	    name = "Maxiponia"
         class = pc_pulsar
         orbit_distance = 0
-        size = 20
+        size = 40
     }
 
 	planet = {
@@ -16925,7 +16925,7 @@ sys_alphadraconis_init = {
         }
         moon = {
             name = "2175 MR2"
-            class = pc_dextro_chlorine
+            class = pc_chlorine
             orbit_distance = 10
             orbit_angle = 192
             has_ring = no

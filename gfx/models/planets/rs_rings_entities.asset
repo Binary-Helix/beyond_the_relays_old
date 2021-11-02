@@ -1,17 +1,13 @@
 
 # Gas Giant Rings
-@rings_scale = 3.5
-@rings_height = -95
-
-@cull_radius_1 = 3000
-
-@cull_radius_2 = 20000
+@rings_scale = 1.3
+@rings_height = -115
 
 # Large
 
 entity = {
 	name = "gas_giant_rings_01_large_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_01_large_attach"}
 	scale = @rings_scale
@@ -33,7 +29,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_02_large_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_02_large_attach"}
 	scale = @rings_scale
@@ -55,7 +51,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_03_large_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_03_large_attach"}
 	scale = @rings_scale
@@ -77,7 +73,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_04_large_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_04_large_attach"}
 	scale = @rings_scale
@@ -101,7 +97,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_01_sparse_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_01_sparse_attach"}
 	scale = @rings_scale
@@ -123,7 +119,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_02_sparse_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_02_sparse_attach"}
 	scale = @rings_scale
@@ -145,7 +141,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_03_sparse_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_03_sparse_attach"}
 	scale = @rings_scale
@@ -167,7 +163,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_04_sparse_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_04_sparse_attach"}
 	scale = @rings_scale
@@ -191,7 +187,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_01_rare_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_01_rare_attach"}
 	scale = @rings_scale
@@ -213,7 +209,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_02_rare_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_02_rare_attach"}
 	scale = @rings_scale
@@ -237,7 +233,7 @@ entity = {
 
 entity = {
 	name = "gas_giant_rings_01_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_01_small_attach"}
 	scale = @rings_scale
@@ -254,12 +250,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "gas_giant_rings_02_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_02_small_attach"}
 	scale = @rings_scale
@@ -276,12 +272,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "gas_giant_rings_03_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_03_small_attach"}
 	scale = @rings_scale
@@ -298,12 +294,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "gas_giant_rings_04_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_04_small_attach"}
 	scale = @rings_scale
@@ -320,14 +316,14 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 # Thin
 
 entity = {
 	name = "gas_giant_rings_01_thin_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_01_thin_attach"}
 	scale = @rings_scale
@@ -344,12 +340,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "gas_giant_rings_02_thin_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_02_thin_attach"}
 	scale = @rings_scale
@@ -366,12 +362,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "gas_giant_rings_03_thin_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_03_thin_attach"}
 	scale = @rings_scale
@@ -388,14 +384,14 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 # Low
 
 entity = {
 	name = "gas_giant_rings_01_low_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_01_low_attach"}
 	scale = @rings_scale
@@ -412,12 +408,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "gas_giant_rings_02_low_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "gas_giant_rings_02_low_attach"}
 	scale = @rings_scale
@@ -434,12 +430,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "uranus_rings_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 70 }}
 	attach = { "planet" = "gas_giant_rings_02_low_attach"}
 	scale = @rings_scale
@@ -451,7 +447,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_01_big_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_01_big_attach"}
 	scale = @rings_scale
@@ -468,12 +464,12 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 entity = {
 	name = "planetary_rings_02_big_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_02_big_attach"}
 	scale = @rings_scale
@@ -490,14 +486,14 @@ entity = {
 	texture_specular = "ring_tiling_specular.dds"
 	shader="PdxMeshPlanetRingsRS"
 	}
-	scale = 6.0
+	scale = 7.0
 }
 
 # Rare
 
 entity = {
 	name = "planetary_rings_01_rare_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_01_rare_attach"}
 	scale = @rings_scale
@@ -519,7 +515,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_02_rare_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_02_rare_attach"}
 	scale = @rings_scale
@@ -543,7 +539,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_01_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_01_small_attach"}
 	scale = @rings_scale
@@ -565,7 +561,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_02_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_02_small_attach"}
 	scale = @rings_scale
@@ -587,7 +583,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_03_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_03_small_attach"}
 	scale = @rings_scale
@@ -609,7 +605,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_04_small_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_04_small_attach"}
 	scale = @rings_scale
@@ -633,7 +629,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_01_thin_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_01_thin_attach"}
 	scale = @rings_scale
@@ -655,7 +651,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_02_thin_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_02_thin_attach"}
 	scale = @rings_scale
@@ -677,7 +673,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_03_thin_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_03_thin_attach"}
 	scale = @rings_scale
@@ -701,7 +697,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_01_low_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_01_low_attach"}
 	scale = @rings_scale
@@ -723,7 +719,7 @@ entity = {
 
 entity = {
 	name = "planetary_rings_02_low_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500
 	locator = { name = "planet" position = { 0 @rings_height 0 } rotation = { 0 0 3 }}
 	attach = { "planet" = "planetary_rings_02_low_attach"}
 	scale = @rings_scale

@@ -1886,11 +1886,15 @@ entity = {
 entity = {
 	name = "asteroid_entity"
 	pdxmesh = "asteroid_ship_mesh"
+	
 	default_state = "idle"
-		state = { name = "idle" 
-			event = { sound = { soundeffect = "amb_astroid_fields" } }
+		state = { name = "idle"  
+		
+		event = { sound = { soundeffect = "amb_astroid_fields" } }
 		}
 	#state = { name = "idle" animation = "idle" time_offset = { 0 100 } }
+
+	
 	scale = 0.5
 }
 
@@ -1976,34 +1980,23 @@ entity = {
 
 @ringworld_segment_size = 50
 
-@ringworld_scale = 6
-
-@ringworld_north_scale =  2700
-@ringworld_south_scale = -2700
-@ringworld_west_scale  =  2700
-@ringworld_east_scale  = -2700
-
-@cull_radius_1 = 3000
-
-@cull_radius_2 = 20000
-
 
 	#	entity = {
 	#		name = "ringworld_habitable_entity_01_constructor_entity"
 	#		pdxmesh = "ringworld_habitable_01_mesh"
-	#		cull_radius = @cull_radius_1
+	#		cull_radius = 500.0
 	#	}
     #
 	#	entity = {
 	#		name = "ringworld_tech_entity_01_constructor_entity"
 	#		pdxmesh = "ringworld_tech_01_mesh"
-	#			cull_radius = @cull_radius_1
+	#			cull_radius = 500.0
 	#	}
     #
 	#	entity = {
 	#		name = "ringworld_seam_entity_01_constructor_entity"
 	#		pdxmesh = "ringworld_seam_01_mesh"
-	#		cull_radius = @cull_radius_1
+	#		cull_radius = 500.0
 	#	}
 
 
@@ -2033,7 +2026,7 @@ entity = {
 
 entity = {
 	name = "ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -2068,20 +2061,18 @@ entity = {
 	
 	attach = { locator1 = "ringworld_construction_entity" }
 	attach = { locator2 = "ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -2095,7 +2086,7 @@ entity = {
 
 entity = {
 	name = "ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -2131,13 +2122,11 @@ entity = {
 	}
 	
 	attach = { root = "ringworld_habitable_entity_01_clouds_entity" }
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "ringworld_habitable_entity_01_clouds_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_clouds_mesh"
 		
 	default_state = "idle"
@@ -2170,7 +2159,7 @@ entity = {
 
 entity = {
 	name = "ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -2195,15 +2184,13 @@ entity = {
 		size = @ringworld_segment_size
 		
 	}
-	
-	scale = @ringworld_scale
 }
 
 
 
 entity = {
 	name = "ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -2230,13 +2217,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -2255,10 +2240,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "ringworld_tech_entity_01_entity" }
 }
 
 
@@ -2272,7 +2255,7 @@ entity = {
 
 entity = {
 	name = "arthropoid_01_ringworld_construction_entity"
-	#cull_radius = @cull_radius_1
+	#cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -2299,7 +2282,7 @@ entity = {
 
 entity = {
 	name = "arthropoid_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -2334,19 +2317,17 @@ entity = {
 	
 	attach = { locator1 = "arthropoid_01_ringworld_construction_entity" }
 	attach = { locator2 = "arthropoid_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "arthropoid_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"}
     
@@ -2359,7 +2340,7 @@ entity = {
 
 entity = {
 	name = "arthropoid_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -2408,14 +2389,12 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "arthropoid_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -2441,14 +2420,12 @@ entity = {
 		size = @ringworld_segment_size
 		custom_texture = "gfx/models/planets/ringworld_tech_fadein.dds"
 	}
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "arthropoid_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -2482,13 +2459,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "ringworld_destroyed_entity"
-		cull_radius = @cull_radius_1
+		cull_radius = 500.0
 		pdxmesh = "ringworld_destroyed_mesh"
 
 		meshsettings = {
@@ -2526,13 +2501,11 @@ entity = {
 			texture_specular = "ringworld_tech_damaged_spec.dds"
 			shader = "PdxMeshTerra"
 		}
-		
-		scale = @ringworld_scale
 	}
 
 entity = {
 	name = "arthropoid_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -2551,10 +2524,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "arthropoid_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "arthropoid_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "arthropoid_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "arthropoid_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -2588,7 +2559,7 @@ entity = {
 
 entity = {
 	name = "avian_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -2623,20 +2594,18 @@ entity = {
 	
 	attach = { locator1 = "avian_01_ringworld_construction_entity" }
 	attach = { locator2 = "avian_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "avian_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -2651,7 +2620,7 @@ entity = {
 
 entity = {
 	name = "avian_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -2699,13 +2668,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "avian_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -2730,13 +2697,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "avian_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -2769,14 +2734,12 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "avian_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -2795,10 +2758,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "avian_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "avian_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "avian_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "avian_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -2838,7 +2799,7 @@ entity = {
 
 entity = {
 	name = "fungoid_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -2873,20 +2834,18 @@ entity = {
 	
 	attach = { locator1 = "fungoid_01_ringworld_construction_entity" }
 	attach = { locator2 = "fungoid_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "fungoid_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -2900,7 +2859,7 @@ entity = {
 
 entity = {
 	name = "fungoid_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -2948,13 +2907,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "fungoid_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -2979,13 +2936,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "fungoid_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -3018,13 +2973,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "fungoid_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -3043,10 +2996,8 @@ entity = {
 	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
 	}
 	
-	attach = { locator1 = "fungoid_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "fungoid_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "fungoid_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "fungoid_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -3082,7 +3033,7 @@ entity = {
 
 entity = {
 	name = "mammalian_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -3117,19 +3068,17 @@ entity = {
 	
 	attach = { locator1 = "mammalian_01_ringworld_construction_entity" }
 	attach = { locator2 = "mammalian_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "mammalian_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -3142,7 +3091,7 @@ entity = {
 
 entity = {
 	name = "mammalian_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -3190,13 +3139,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "mammalian_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -3221,13 +3168,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "mammalian_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -3260,13 +3205,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "mammalian_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -3285,10 +3228,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "mammalian_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "mammalian_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "mammalian_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "mammalian_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -3319,7 +3260,7 @@ entity = {
 
 entity = {
 	name = "molluscoid_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -3354,19 +3295,17 @@ entity = {
 	
 	attach = { locator1 = "molluscoid_01_ringworld_construction_entity" }
 	attach = { locator2 = "molluscoid_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "molluscoid_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -3379,7 +3318,7 @@ entity = {
 
 entity = {
 	name = "molluscoid_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -3427,13 +3366,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "molluscoid_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -3458,13 +3395,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "molluscoid_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -3497,13 +3432,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "molluscoid_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -3522,10 +3455,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "molluscoid_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "molluscoid_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "molluscoid_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "molluscoid_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -3565,7 +3496,7 @@ entity = {
 
 entity = {
 	name = "plantoid_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -3600,20 +3531,18 @@ entity = {
 	
 	attach = { locator1 = "plantoid_01_ringworld_construction_entity" }
 	attach = { locator2 = "plantoid_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "plantoid_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -3628,7 +3557,7 @@ entity = {
 
 entity = {
 	name = "plantoid_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -3676,13 +3605,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "plantoid_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -3707,13 +3634,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "plantoid_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -3746,13 +3671,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "plantoid_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -3771,10 +3694,8 @@ entity = {
 	start_event = { trigger_once = yes sound = { soundeffect = "ringworld_construction_ambient" } }
 	}
 	
-	attach = { locator1 = "plantoid_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "plantoid_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "plantoid_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "plantoid_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -3810,7 +3731,7 @@ entity = {
 
 entity = {
 	name = "reptilian_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -3845,20 +3766,18 @@ entity = {
 	
 	attach = { locator1 = "reptilian_01_ringworld_construction_entity" }
 	attach = { locator2 = "reptilian_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "reptilian_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -3872,7 +3791,7 @@ entity = {
 
 entity = {
 	name = "reptilian_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -3920,13 +3839,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "reptilian_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -3951,13 +3868,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "reptilian_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -3990,13 +3905,11 @@ entity = {
 	game_data = {
 		size = @ringworld_segment_size
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "reptilian_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -4015,11 +3928,10 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "reptilian_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "reptilian_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "reptilian_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "reptilian_01_ringworld_tech_entity_01_entity" }
 }
+
 
 ######### Lithoid #########
 
@@ -4049,7 +3961,7 @@ entity = {
 
 entity = {
 	name = "lithoid_01_ringworld_3x_seams_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_construction_mesh"
 	
 	meshsettings = {
@@ -4084,20 +3996,18 @@ entity = {
 	
 	attach = { locator1 = "lithoid_01_ringworld_construction_entity" }
 	attach = { locator2 = "lithoid_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "lithoid_01_ringworld_seam_entity_01_full_entity"
-	cull_radius = @cull_radius_2
+	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -4112,7 +4022,7 @@ entity = {
 
 entity = {
 	name = "lithoid_01_ringworld_habitable_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_01_mesh"
 		
 	default_state = "idle"
@@ -4161,13 +4071,11 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "lithoid_01_ringworld_tech_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_01_mesh"
 	
 	default_state = "idle"
@@ -4193,13 +4101,11 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
 	name = "lithoid_01_ringworld_seam_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	default_state = "idle"
@@ -4233,14 +4139,12 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 
 entity = {
 	name = "lithoid_01_ringworld_phase_3_construction_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_01_mesh"
 	
 	meshsettings = {
@@ -4259,10 +4163,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "lithoid_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "lithoid_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "lithoid_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "lithoid_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -4331,8 +4233,6 @@ entity = {
 	
 	attach = { locator1 = "necroid_01_ringworld_construction_entity" }
 	attach = { locator2 = "necroid_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
@@ -4341,10 +4241,10 @@ entity = {
 	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -4408,8 +4308,6 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
@@ -4440,8 +4338,6 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
@@ -4480,8 +4376,6 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 
@@ -4506,10 +4400,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "necroid_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "necroid_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "necroid_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "necroid_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -4577,8 +4469,6 @@ entity = {
 	
 	attach = { locator1 = "nemesis_01_ringworld_construction_entity" }
 	attach = { locator2 = "nemesis_01_ringworld_construction_entity" }
-	
-	scale = @ringworld_scale
 }
 
 
@@ -4587,10 +4477,10 @@ entity = {
 	cull_radius = 10000.0
 	
 	
-	locator = { name = "ringworld_north" 		position = { @ringworld_north_scale	0 	0 		} rotation = {	90	0	0	}		}
-	locator = { name = "ringworld_south" 		position = { @ringworld_south_scale	0 	0 		} rotation = {	-90	0	0	}		}
-	locator = { name = "ringworld_west" 		position = { 0		0 	@ringworld_west_scale 	} rotation = {	0	0	0	}		}
-	locator = { name = "ringworld_east" 		position = { 0		0 	@ringworld_east_scale 	} rotation = {	180	0	0	}		}	
+	locator = { name = "ringworld_north" 		position = { 450	0 	0 		} rotation = {	90	0	0	}		}
+	locator = { name = "ringworld_south" 		position = { -450	0 	0 		} rotation = {	-90	0	0	}		}
+	locator = { name = "ringworld_west" 		position = { 0		0 	450 	} rotation = {	0	0	0	}		}
+	locator = { name = "ringworld_east" 		position = { 0		0 	-450 	} rotation = {	180	0	0	}		}	
     
 	state = { name = "construction"
 	}
@@ -4654,8 +4544,6 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
@@ -4686,8 +4574,6 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 entity = {
@@ -4726,8 +4612,6 @@ entity = {
 		size = @ringworld_segment_size
 		emissive_recolor_crunch = 2.0
 	}
-	
-	scale = @ringworld_scale
 }
 
 
@@ -4752,10 +4636,8 @@ entity = {
 	locator = { name = "locator1" 	position = { -225 	0 	-60.289 	} rotation ={ -30 0 0} 	}
 	locator = { name = "locator2" 	position = {  225 	0 	-60.289		} rotation ={ 30 0 0}	}
 	
-	attach = { locator1 = "nemesis_01_ringworld_habitable_entity_01_phase_3_entity" }
-	attach = { locator2 = "nemesis_01_ringworld_tech_entity_01_phase_3_entity" }
-	
-	scale = @ringworld_scale
+	attach = { locator1 = "nemesis_01_ringworld_habitable_entity_01_entity" }
+	attach = { locator2 = "nemesis_01_ringworld_tech_entity_01_entity" }
 }
 
 
@@ -4793,35 +4675,29 @@ entity = {
 
 entity = {
 	name = "ringworld_habitable_damaged_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_habitable_damaged_01_mesh"
-	
-	scale = @ringworld_scale
 
 }
 
 entity = {
 	name = "ringworld_seam_damaged_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_seam_damaged_01_mesh"
-	
-	scale = @ringworld_scale
 
 }
 
 entity = {
 	name = "ringworld_tech_damaged_entity_01_entity"
-	cull_radius = @cull_radius_1
+	cull_radius = 500.0
 	pdxmesh = "ringworld_tech_damaged_01_mesh"
-	
-	scale = @ringworld_scale
 
 }
 
 entity = {
 	name = "ringworld_01_damaged_full_entity"
 	pdxmesh = "ringworld_01_damaged_full_mesh"
-	scale = 0.06
+	scale = 0.01
 }
 
 
@@ -5271,7 +5147,11 @@ entity = {
 	
 	default_state = "idle"
 	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
+		#start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet" } }
+		#start_event = { trigger_once = yes sound = { soundeffect = "amb_city_planet_flyby" } }
 	}
+	
+	#attach = { planet = "city_planet_surface_ships_entity" }
 	
 }
 
@@ -5405,6 +5285,7 @@ entity = {
 }
 
 
+
 ###### Relic World #######
 
 entity = {
@@ -5445,7 +5326,7 @@ entity = {
 	}
 	
 	default_state = "idle"
-	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+	state = { name = "idle" animation = "idle" time_offset = { 0 100 } 
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_world_relic" } }
 	}
 }
@@ -5485,4 +5366,3 @@ entity = {
 		start_event = { trigger_once = yes sound = { soundeffect = "amb_planet_class_02" } }
 	}
 }
-

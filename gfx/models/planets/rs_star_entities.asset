@@ -1,29 +1,29 @@
 #####   Real Space Stars    ######
 
-@protoplanetary_disk_height_15 = -15
-@protoplanetary_disk_height_25 = -25
-@protoplanetary_disk_height_37 = -37
-@protoplanetary_disk_height_46 = -46
+@protoplanetary_disk_height_15 = -40
+@protoplanetary_disk_height_25 = -60
+@protoplanetary_disk_height_37 = -70
+@protoplanetary_disk_height_46 = -100
 
-@dust_particle_height_100 = -100
+@dust_particle_height_100 = -250
 
-@entity_scale_017 = 1
-@entity_scale_025 = 1.5
-@entity_scale_033 = 2
-@entity_scale_050 = 3
-@entity_scale_075 = 4.5
-@entity_scale_1 = 6
-@entity_scale_125 = 7.5
-@entity_scale_170 = 10
-@entity_scale_175 = 10.5
-@entity_scale_2 = 12
-@entity_scale_3 = 18
-@entity_scale_330 = 20
-@entity_scale_380 = 23
-@entity_scale_450 = 27
+@entity_scale_017 = 0.17
+@entity_scale_025 = 0.25
+@entity_scale_033 = 0.33
+@entity_scale_050 = 0.5
+@entity_scale_075 = 0.75
+@entity_scale_1 = 1
+@entity_scale_125 = 1.25
+@entity_scale_170 = 1.7
+@entity_scale_175 = 1.75
+@entity_scale_2 = 2
+@entity_scale_3 = 3
+@entity_scale_330 = 3.3
+@entity_scale_380 = 3.8
+@entity_scale_450 = 4.5
 
-@cull_radius = 10000
-@large_cull_radius = 30000
+@cull_radius = 2000
+@large_cull_radius = 5000
 
 entity = { # O
 	name = "o_star_class_star_entity"
@@ -413,7 +413,7 @@ entity = { # Nova 1
 	attach = { "planet" = "nova_outbursts_entity" }
 	attach = { "planet" = "nova_flash_entity" }
 
-	scale = 1.0
+	scale = 0.5
 }
 
 entity = { # Nova 2
@@ -430,7 +430,7 @@ entity = { # Nova 2
 	attach = { "planet" = "nova_outbursts_entity" }
 	attach = { "planet" = "nova_flash_entity" }
 
-	scale = 1.0
+	scale = 0.5
 }
 
 entity = { 
@@ -752,7 +752,7 @@ entity = {
 		#event = { time = 0.0 node = "polar_effect_2" particle = "nova_star_outburst_effect"  keep_particle = no trigger_once = yes }
 	}
 	
-	scale = 28.0
+	scale = 14.0
 	
 	game_data = {
 		uv_animation_speed   = -0.01
@@ -782,8 +782,8 @@ entity = {
 		start_event = { time = 0 particle = "protostar_ring_effect" trigger_once = yes keep_particle = yes }
 	}
 	
-	scale = @entity_scale_050 
-	cull_radius = 2500
+	scale = @entity_scale_1 
+	cull_radius = 1000
 }
 
 # LBV (Blue)
@@ -1977,7 +1977,7 @@ entity = {
 	default_state = "idle"
 	state = { name = "idle" state_time = 5 }
 	
-	locator = { name = "locator1" 	position = { 0 @protoplanetary_disk_height_25 0} }
+	locator = { name = "locator1" 	position = { 0 @protoplanetary_disk_height_15 0} }
 	attach = { "locator1" = "fu_star_disk_2_mesh" }
 	attach = { "locator1" = "protoplanetary_disk_orange_cloud_entity" }
 	
