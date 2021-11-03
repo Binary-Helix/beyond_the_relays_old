@@ -173,12 +173,73 @@ event = {
 				has_planet_flag = thessia_planet 
 			}
 			create_archaeological_site = mec_asari_site_thessia_beacon
+			set_capital = yes
 		}
 		if = {
 			limit = {
 				has_origin = mec_asari_origin_thessia
 				any_system_within_border = {
 					has_star_flag = parnitha_system
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = parnitha_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = anchorage
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = nahuala_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = elensia_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = pelion_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:asari_republics
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = myrtil_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:asari_republics
 				}
 			}
 			random_system = {
@@ -237,15 +298,6 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = nahuala_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:asari_republics
-				}
-			}
-			random_system = {
-				limit = {
 					has_star_flag = fotia_system
 				}
 				create_starbase = {
@@ -256,24 +308,6 @@ event = {
 			random_system = {
 				limit = {
 					has_star_flag = mitrios_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:asari_republics
-				}
-			}
-			random_system = {
-				limit = {
-					has_star_flag = elensia_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:asari_republics
-				}
-			}
-			random_system = {
-				limit = {
-					has_star_flag = pelion_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -325,15 +359,7 @@ event = {
 					owner = event_target:asari_republics
 				}
 			}
-			random_system = {
-				limit = {
-					has_star_flag = myrtil_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:asari_republics
-				}
-			}
+
 			random_system = {
 				limit = {
 					has_star_flag = statheta_system
@@ -350,6 +376,12 @@ event = {
 				any_system_within_border = {
 					has_star_flag = trebia_system
 				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = palaven_planet
+				}
+				set_capital = yes
 			}
 			random_system = {
 				limit = {
@@ -473,7 +505,10 @@ event = {
 					has_star_flag = terevan_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:turian_hierarchy
 				}
 			}
@@ -491,7 +526,10 @@ event = {
 					has_star_flag = cersea_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:turian_hierarchy
 				}
 			}
@@ -500,7 +538,10 @@ event = {
 					has_star_flag = kasatum_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:turian_hierarchy
 				}
 			}
@@ -545,13 +586,25 @@ event = {
 					has_star_flag = ursantra_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:turian_hierarchy
 				}
 			}
 			random_system = {
 				limit = {
 					has_star_flag = pistrix_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:turian_hierarchy
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = fortis_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -566,12 +619,21 @@ event = {
 					has_star_flag = pranas_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = surkesh_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = fortuna_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:salarian_union
 				}
 			}
@@ -634,7 +696,10 @@ event = {
 					has_star_flag = limron_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:salarian_union
 				}
 			}
@@ -760,7 +825,10 @@ event = {
 					has_star_flag = ostelo_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:salarian_union
 				}
 			}
@@ -769,7 +837,10 @@ event = {
 					has_star_flag = totau_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:salarian_union
 				}
 			}
@@ -781,12 +852,21 @@ event = {
 					has_star_flag = phontes_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = dekuuna_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = bisalas_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:courts_of_dekuuna
 				}
 			}
@@ -795,7 +875,10 @@ event = {
 					has_star_flag = resyadum_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:courts_of_dekuuna
 				}
 			}
@@ -844,6 +927,15 @@ event = {
 					owner = event_target:courts_of_dekuuna
 				}
 			}
+			random_system = {
+				limit = {
+					has_star_flag = aquila_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:courts_of_dekuuna
+				}
+			}
 		}
 		if = {
 			limit = {
@@ -851,6 +943,12 @@ event = {
 				any_system_within_border = {
 					has_star_flag = kanala_system
 				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = kahje_planet
+				}
+				set_capital = yes
 			}
 			random_system = {
 				limit = {
@@ -875,7 +973,10 @@ event = {
 					has_star_flag = dark_current_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:illuminated_primacy
 				}
 			}
@@ -902,7 +1003,10 @@ event = {
 					has_star_flag = herculaneum_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:illuminated_primacy
 				}
 			}
@@ -913,6 +1017,12 @@ event = {
 				any_system_within_border = {
 					has_star_flag = sol_system
 				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = earth_planet
+				}
+				set_capital = yes
 			}
 			random_system = {
 				limit = {
@@ -937,7 +1047,10 @@ event = {
 					has_star_flag = arcturus_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:systems_alliance
 				}
 			}
@@ -964,7 +1077,10 @@ event = {
 					has_star_flag = utopia_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:systems_alliance
 				}
 			}
@@ -982,7 +1098,10 @@ event = {
 					has_star_flag = iota_persei_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:systems_alliance
 				}
 			}
@@ -991,7 +1110,10 @@ event = {
 					has_star_flag = vetus_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:systems_alliance
 				}
 			}
@@ -1093,12 +1215,21 @@ event = {
 					has_star_flag = aru_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = irune_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = menarel_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:vol_protectorate
 				}
 			}
@@ -1107,7 +1238,10 @@ event = {
 					has_star_flag = yakawa_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:vol_protectorate
 				}
 			}
@@ -1116,7 +1250,10 @@ event = {
 					has_star_flag = cobines_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:vol_protectorate
 				}
 			}
@@ -1134,7 +1271,10 @@ event = {
 					has_star_flag = uba_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:vol_protectorate
 				}
 			}
@@ -1179,7 +1319,10 @@ event = {
 					has_star_flag = burun_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:vol_protectorate
 				}
 			}
@@ -1188,7 +1331,10 @@ event = {
 					has_star_flag = unok_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:vol_protectorate
 				}
 			}
@@ -1197,7 +1343,10 @@ event = {
 					has_star_flag = veskyur_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:vol_protectorate
 				}
 			}
@@ -1218,6 +1367,12 @@ event = {
 					has_star_flag = harsa_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = kharshan_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = indris_system
@@ -1232,7 +1387,10 @@ event = {
 					has_star_flag = koshlanhk_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:batarian_hegemony
 				}
 			}
@@ -1250,16 +1408,22 @@ event = {
 					has_star_flag = untrel_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:batarian_hegemony
 				}
 			}
 			random_system = {
 				limit = {
-					has_star_flag = gravnez_system
+					has_star_flag = gravnaz_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:batarian_hegemony
 				}
 			}
@@ -1388,6 +1552,12 @@ event = {
 					has_star_flag = aralakh_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = tuchanka_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = dranek_system
@@ -1414,6 +1584,12 @@ event = {
 					has_star_flag = nosikae_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = regdika_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = brizhiine_system
@@ -1437,7 +1613,10 @@ event = {
 					has_star_flag = serdicina_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:regdikan_collective
 				}
 			}
@@ -1455,7 +1634,10 @@ event = {
 					has_star_flag = cedinae_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:regdikan_collective
 				}
 			}
@@ -1494,6 +1676,12 @@ event = {
 					has_star_flag = tikkun_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = rannoch_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = kholas_system
@@ -1517,7 +1705,7 @@ event = {
 					has_star_flag = dholen_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
 					owner = event_target:geth_consensus
 				}
 			}
@@ -1526,13 +1714,59 @@ event = {
 					has_star_flag = maat_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
 					owner = event_target:geth_consensus
 				}
 			}
 			random_system = {
 				limit = {
 					has_star_flag = disul_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			
+			random_system = {
+				limit = {
+					has_star_flag = jaavo_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = keelulon_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = raadarum_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = gaalozozh_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:geth_consensus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ruvum_system
 				}
 				create_starbase = {
 					size = starbase_outpost
@@ -1547,12 +1781,21 @@ event = {
 					has_star_flag = ultio_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = vindicta_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = han_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:gothones_remnant
 				}
 			}
@@ -1561,7 +1804,10 @@ event = {
 					has_star_flag = ming_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:gothones_remnant
 				}
 			}
@@ -1582,13 +1828,22 @@ event = {
 					has_star_flag = tasale_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = illium_planet
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
 					has_star_flag = zelene_system
 				}
 				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:asari_corporate_interests
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:illium_corporate_interests
 				}
 			}
 			random_system = {
@@ -1596,8 +1851,11 @@ event = {
 					has_star_flag = lusarn_system
 				}
 				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:asari_corporate_interests
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:illium_corporate_interests
 				}
 			}
 			random_system = {
@@ -1606,7 +1864,7 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:asari_corporate_interests
+					owner = event_target:illium_corporate_interests
 				}
 			}
 		}
@@ -1617,12 +1875,21 @@ event = {
 					has_star_flag = widow_system
 				}
 			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = citadel_station
+				}
+				set_capital = yes
+			}
 			random_system = {
 				limit = {
-					has_star_flag = phoenix_system
+					has_star_flag = widow_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:citadel_council
 				}
 			}
@@ -1631,7 +1898,10 @@ event = {
 					has_star_flag = tomdak_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
 					owner = event_target:citadel_council
 				}
 			}
@@ -1642,6 +1912,12 @@ event = {
 				any_system_within_border = {
 					has_star_flag = anadius_system
 				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = cronos_station
+				}
+				set_capital = yes
 			}
 			random_system = {
 				limit = {
@@ -1675,17 +1951,87 @@ event = {
 					has_star_flag = amazon_system
 				}
 				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = lazarus_system
+				}
+				create_starbase = {
 					size = starbase_outpost
 					owner = event_target:cerberus
 				}
 			}
+			random_system = {
+				limit = {
+					has_star_flag = 41275l_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = lv426_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = netheril_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = dakka_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:cerberus
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = patella_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:cerberus
+				}
+			}
+			
 		}
 		if = {
 			limit = {
-				has_country_flag = heretic_geth
+				has_country_flag = followers_of_nazara
 				any_system_within_border = {
 					has_star_flag = theseaofstorms_system
 				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = heretic_station
+				}
+				set_capital = yes
 			}
 			random_system = {
 				limit = {
@@ -1693,7 +2039,7 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
@@ -1702,7 +2048,7 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
@@ -1711,7 +2057,7 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
@@ -1719,8 +2065,8 @@ event = {
 					has_star_flag = haelazi_system
 				}
 				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:heretic_geth
+					size = starbase_starport
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
@@ -1728,8 +2074,8 @@ event = {
 					has_star_flag = xelazi_system
 				}
 				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:heretic_geth
+					size = starbase_starport
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
@@ -1738,52 +2084,52 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
 				limit = {
-					has_star_flag = jaavo_system
+					has_star_flag = hong_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
 				limit = {
-					has_star_flag = keelulon_system
+					has_star_flag = vamshi_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
 				limit = {
-					has_star_flag = raadarum_system
+					has_star_flag = grissom_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
 				limit = {
-					has_star_flag = gaalozozh_system
+					has_star_flag = tereshkova_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 			random_system = {
 				limit = {
-					has_star_flag = ruvum_system
+					has_star_flag = gagarin_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:heretic_geth
+					owner = event_target:followers_of_nazara
 				}
 			}
 		}
@@ -1799,11 +2145,271 @@ event = {
 					has_star_flag = elunia_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
 					owner = event_target:cat6
 				}
 			}
 		}
+		if = {
+			limit = {
+				has_country_flag = lystheni_order
+				any_system_within_border = {
+					has_star_flag = taesin_system
+				}
+			}
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = sepkai_planet
+				}
+				set_capital = yes
+			}	
+			random_system = {
+				limit = {
+					has_star_flag = taesin_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:lystheni_order
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = omega_empire
+				any_system_within_border = {
+					has_star_flag = sahrabarik_system
+				}
+			}	
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = omega_planet
+				}
+				set_capital = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = arinlarkan_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:omega_empire
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = kairavamori_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:omega_empire
+				}
+			}
+			random_system = {
+				limit = {
+					has_star_flag = amada_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:omega_empire
+				}
+			}			
+		}
+		if = {
+			limit = {
+				has_country_flag = noveria_development_corporation
+				any_system_within_border = {
+					has_star_flag = pax_system
+				}
+			}	
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = noveria_planet
+				}
+				set_capital = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = pax_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:noveria_development_corporation
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = wrill_mining_consortium
+				any_system_within_border = {
+					has_star_flag = malgus_system
+				}
+			}	
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = wrill_planet
+				}
+				set_capital = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = malgus_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:wrill_mining_consortium
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = relic_mineral_works
+				any_system_within_border = {
+					has_star_flag = relic_system
+				}
+			}	
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = drifting_skies_habitat
+				}
+				set_capital = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = relic_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:relic_mineral_works
+				}
+			}
+		}	
+		if = {
+			limit = {
+				has_country_flag = united_anhur_corporations
+				any_system_within_border = {
+					has_star_flag = amun_system
+				}
+			}	
+			random_owned_planet = {
+				limit = {
+					has_planet_flag = anhur_planet
+				}
+				set_capital = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = amun_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:united_anhur_corporations
+				}
+			}
+		}	
+		if = {
+			limit = {
+				has_country_flag = asteria_agriculture
+				any_system_within_border = {
+					has_star_flag = hekate_system
+				}
+			}	
+			random_system = {
+				limit = {
+					has_star_flag = hekate_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:asteria_agriculture
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = raloi_republic
+				any_system_within_border = {
+					has_star_flag = azedes_system
+				}
+			}	
+			random_system = {
+				limit = {
+					has_star_flag = azedes_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:raloi_republic
+				}
+			}
+		}	
+		if = {
+			limit = {
+				has_country_flag = rachni_swarm
+				any_system_within_border = {
+					has_star_flag = maskimxul_system
+				}
+			}	
+			random_system = {
+				limit = {
+					has_star_flag = azedes_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:raloi_republic
+				}
+			}
+		}
+		if = {
+			limit = {
+				has_country_flag = the_collectors
+				any_system_within_border = {
+					has_star_flag = tartarus_system
+				}
+			}	
+			random_system = {
+				limit = {
+					has_star_flag = tartarus_system
+				}
+				create_starbase = {
+					size = starbase_starhold
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:the_collectors
+				}
+			}
+		}	
 	}
 }
 
@@ -2381,9 +2987,9 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = asari_corporate_interests
+					has_country_flag = illium_corporate_interests
 				}
-				set_name = "Asari Corporate Interests"
+				set_name = "Illium Corporate Interests"
 			}
 		}
 		if = {
@@ -2469,9 +3075,9 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = heretic_geth
+					has_country_flag = followers_of_nazara
 				}
-				set_name = "Heretic Geth"
+				set_name = "Followers of Nazara"
 			}
 		}
 		if = {

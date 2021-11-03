@@ -7943,6 +7943,15 @@ sys_kesd_init = {
 			set_planet_flag = starting_deposit
 		}
     }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "dabosknot_merariring_massrelay" 
+			name = "Dabo's 1 Relay"
+			orbit_angle = 186 
+			orbit_distance = 245	
+		} 
+	}
 }
 
 #Oma Verizh is in Vol Protectorate Initializer
@@ -11354,6 +11363,15 @@ sys_766cafka_init = {
         size = 16
         has_ring = no
     }
+	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "zhuquesnest_dabosknot_massrelay" 
+			name = "Zhuques 4 Relay"
+			orbit_angle = 56 
+			orbit_distance = 200
+		} 
+	}
 }
 
 
@@ -11943,15 +11961,15 @@ sys_ilhani_init = {
 
 #####JORMUN'S AEGIR#####
 
-sys_cardack_init = {
-	name = "Cardack"
+sys_cardak_init = {
+	name = "Cardak"
 	class = sc_d
 	max_instances = 1
 
-	flags = { inner_council_system jormunsaegir_system cardack_system btr_system custom_system }
+	flags = { inner_council_system jormunsaegir_system cardak_system btr_system custom_system }
 
     planet = {
-		name = "Cardack"
+		name = "Cardak"
         class = pc_d_star
         orbit_distance = 0
         size = 20
@@ -12029,7 +12047,7 @@ sys_horu_init = {
     class = sc_g
 	max_instances = 1
 
-	flags = { inner_council_system jormunsaegir_system gerklok_system btr_system custom_system }
+	flags = { inner_council_system jormunsaegir_system horu_system btr_system custom_system }
 
     planet = {
 		name = "Horu"
@@ -12821,7 +12839,7 @@ sys_burun_init = {
 	class = sc_m
 	max_instances = 1
 
-	flags = { inner_council_system olof_spot_system burun_system btr_system custom_system }
+	flags = { inner_council_system onof_spot_system burun_system btr_system custom_system }
 
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -12874,7 +12892,7 @@ sys_lebnatch_init = {
 	class = sc_g
 	max_instances = 1
 
-	flags = { inner_council_system olof_spot_system lebnatch_system btr_system custom_system }
+	flags = { inner_council_system onof_spot_system lebnatch_system btr_system custom_system }
 
 	planet = {
 	    name = "Lebnatch"
@@ -12932,7 +12950,7 @@ sys_lobu_init = {
 	class = sc_ae
 	max_instances = 1
 
-	flags = { inner_council_system olof_spot_system lobu_system btr_system custom_system }
+	flags = { inner_council_system onof_spot_system lobu_system btr_system custom_system }
 
 	planet = {
 	    name = "Lobu"
@@ -12956,7 +12974,7 @@ sys_unok_init = {
 	class = sc_m
 	max_instances = 1
 
-	flags = { inner_council_system olof_spot_system unok_system btr_system custom_system }
+	flags = { inner_council_system onof_spot_system unok_system btr_system custom_system }
 
 	planet = {
 	    name = "Unok"
@@ -13005,7 +13023,7 @@ sys_veskyur_init = {
 	class = sc_m
 	max_instances = 1
 
-	flags = { inner_council_system olof_spot_system veskyur_system btr_system custom_system }
+	flags = { inner_council_system onof_spot_system veskyur_system btr_system custom_system }
 
 	planet = {
 	    name = "Vesk Yur"
@@ -14903,7 +14921,7 @@ sys_ondeste_init = {
 	}	
 }
 
-#Tasale is in Asari Corporate Interests Initializer
+#Tasale is in Illium Corporate Interests Initializer
 
 sys_zelene_init = {
     name = "Zelene"
@@ -16393,7 +16411,7 @@ sys_ekarii_init = {
 	
 #Salahiel is in Courts of Dekuuna Initializer
 
-#The Sea of Storms is in Heretic Geth Initializer
+#The Sea of Storms is in Followers of Nazara Initializer
 
 sys_tassrah_init = {
     name = "Tassrah"

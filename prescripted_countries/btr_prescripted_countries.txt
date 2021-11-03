@@ -1466,9 +1466,9 @@ vorcha_clandom={
 #### Corporate Empires ####
 ###########################
 
-# Asari Corporate Interests
+# Illium Corporate Interests
 mec_asariillium_civ={
-    name="NAME_asari_corporate_interests"
+    name="NAME_illium_corporate_interests"
     name_list="mec_asari_names"
 	portrait="mec_asari"
     adjective="PRESCRIPTED_adjective_mec_asariillium_civ"
@@ -1483,7 +1483,7 @@ mec_asariillium_civ={
 	government = "gov_megacorporation"
 	civics = { "mec_asari_civic_illium" "civic_indentured_assets" }
 
-	flags={ custom_start_screen asari_corporate_interests btr_empire }
+	flags={ custom_start_screen illium_corporate_interests btr_empire }
 
 	ethic = "ethic_authoritarian"
 	ethic = "ethic_xenophile"
@@ -1962,21 +1962,21 @@ geth_consensus={
 }
 ## Geth Heretics
 
-heretic_geth={
+followers_of_nazara={
 	name="Name_geth_heretics"
 	name_list="btr_geth"
 	portrait = "geth"
-	adjective = "PRESCRIPTED_adjective_heretic_geth"
-	ship_prefix = "PRESCRIPTED_ship_prefix_name_heretic_geth"
-	species_name = "PRESCRIPTED_species_name_heretic_geth"
-	species_plural = "PRESCRIPTED_species_plural_heretic_geth"
+	adjective = "PRESCRIPTED_adjective_followers_of_nazara"
+	ship_prefix = "PRESCRIPTED_ship_prefix_name_followers_of_nazara"
+	species_name = "PRESCRIPTED_species_name_followers_of_nazara"
+	species_plural = "PRESCRIPTED_species_plural_followers_of_nazara"
 	species_class = "GTH" 
-	species_adjective = "PRESCRIPTED_species_adjective_heretic_geth"
+	species_adjective = "PRESCRIPTED_species_adjective_followers_of_nazara"
 
 	authority = "auth_machine_intelligence"
 	government = "gov_machine_empire"
 	civics={ "civic_machine_warbots" "civic_machine_terminator" }
-	flags = { custom_start_screen heretic_geth btr_empire}
+	flags = { custom_start_screen followers_of_nazara btr_empire}
 
 	ethic = "ethic_gestalt_consciousness"
 
@@ -1987,7 +1987,7 @@ heretic_geth={
 	trait ="trait_robot_high_bandwidth"
 	trait ="trait_robot_durable"
 
-	origin="origin_heretic_geth"	
+	origin="origin_followers_of_nazara"	
 
 	planet_name="Heretic Station"
 	planet_class="pc_heretic_station"
@@ -2014,7 +2014,7 @@ heretic_geth={
 	}
 	ruler={
 		gender = male
-		name="PRESCRIPTED_ruler_name_heretic_geth"
+		name="PRESCRIPTED_ruler_name_followers_of_nazara"
 		portrait="geth"
 		texture=0
 		hair=0

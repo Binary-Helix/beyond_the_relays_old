@@ -1691,731 +1691,731 @@
 # }
 
 # Mining Drones
-hostile_init_12 = {
-	class = "rl_standard_stars"
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 95
-	}
+# hostile_init_12 = {
+# 	class = "rl_standard_stars"
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 95
+# 	}
 	
-	usage = misc_system_init
-	usage_odds = {
-		base = 4
-		modifier = {
-			factor = 0.1
-			NOT = { is_in_cluster = resource_cluster_4 }
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
+# 	usage = misc_system_init
+# 	usage_odds = {
+# 		base = 4
+# 		modifier = {
+# 			factor = 0.1
+# 			NOT = { is_in_cluster = resource_cluster_4 }
+# 		}
+# 		modifier = {
+#             factor = 0
+#             has_star_flag = empire_cluster
+#         }
+# 	}
 	
-	flags = { hostile_system drone_system_1 }
+# 	flags = { hostile_system drone_system_1 }
 	
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = { min = 20 max = 30 }
-		has_ring = no
-	}
+# 	planet = {
+# 		count = 1
+# 		class = star
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = { min = 20 max = 30 }
+# 		has_ring = no
+# 	}
 	
-	change_orbit = 30
+# 	change_orbit = 30
 	
-	planet = {
-		count = 2
-		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-	}
+# 	planet = {
+# 		count = 2
+# 		orbit_distance = 20
+# 		orbit_angle = { min = 90 max = 270 }
+# 	}
 	
-	change_orbit = 25
+# 	change_orbit = 25
 	
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 0 max = 150 }
-	}
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 160 max = 330 }
-	}
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 0 max = 150 }
+# 	}
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 160 max = 330 }
+# 	}
 	
-	planet = {
-		count = { min = 2 max = 5 }
-		orbit_distance = 25
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = { min = 2 max = 5 }
+# 		orbit_distance = 25
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
+# 		moon = {
+# 			count = { min = 0 max = 1 }
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
 	
-	init_effect = {
-		create_drone_country = yes
-		random_system_planet = {
-			limit = { 
-				has_deposit_for = shipclass_mining_station
-				is_star = no
-				NOT = { is_planet_class = pc_gas_giant }
-			}
-			set_deposit = d_minerals_4
-			event_target:drone_country = {
-				save_event_target_as = mining_drones
-				create_fleet = {
-					name = "NAME_Ancient_Mining_Drones"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
-							count = 10
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Mining_Drone"
-							}
-						}
-						while = {
-							count = 4
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Combat_Drone"
-							}
-						}
-						set_location = PREVPREV
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = return_point
-						set_aggro_range = 150
-						queue_actions = {
-							repeat = {
-								wait = {
-									duration = 999
-									random = 10
-								}
-							}
-						}
-					}
-				}
-			}
-			create_mining_station = {
-				owner = event_target:mining_drones
-			}
-		}	
-	}
-}
+# 	init_effect = {
+# 		create_drone_country = yes
+# 		random_system_planet = {
+# 			limit = { 
+# 				has_deposit_for = shipclass_mining_station
+# 				is_star = no
+# 				NOT = { is_planet_class = pc_gas_giant }
+# 			}
+# 			set_deposit = d_minerals_4
+# 			event_target:drone_country = {
+# 				save_event_target_as = mining_drones
+# 				create_fleet = {
+# 					name = "NAME_Ancient_Mining_Drones"
+# 					effect = {
+# 						set_owner = event_target:drone_country
+# 						while = {
+# 							count = 10
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Mining_Drone"
+# 							}
+# 						}
+# 						while = {
+# 							count = 4
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Combat_Drone"
+# 							}
+# 						}
+# 						set_location = PREVPREV
+# 						set_fleet_stance = aggressive
+# 						set_aggro_range_measure_from = return_point
+# 						set_aggro_range = 150
+# 						queue_actions = {
+# 							repeat = {
+# 								wait = {
+# 									duration = 999
+# 									random = 10
+# 								}
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			create_mining_station = {
+# 				owner = event_target:mining_drones
+# 			}
+# 		}	
+# 	}
+# }
 
-# Mining Drones
-hostile_init_12_mining_drones = {
-	class = "rl_standard_stars"
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 95
-	}
+# # Mining Drones
+# hostile_init_12_mining_drones = {
+# 	class = "rl_standard_stars"
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 95
+# 	}
 	
-	usage = misc_system_init
-	usage_odds = {
-		base = 4
-		modifier = {
-			factor = 0
-			NOT = { is_in_cluster = resource_cluster_4 }
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
+# 	usage = misc_system_init
+# 	usage_odds = {
+# 		base = 4
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { is_in_cluster = resource_cluster_4 }
+# 		}
+# 		modifier = {
+#             factor = 0
+#             has_star_flag = empire_cluster
+#         }
+# 	}
 	
-	flags = { hostile_system drone_system_2 }
+# 	flags = { hostile_system drone_system_2 }
 	
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = { min = 20 max = 30 }
-		has_ring = no
-	}
+# 	planet = {
+# 		count = 1
+# 		class = star
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = { min = 20 max = 30 }
+# 		has_ring = no
+# 	}
 	
-	change_orbit = 30
+# 	change_orbit = 30
 	
-	planet = {
-		count = 2
-		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-	}
+# 	planet = {
+# 		count = 2
+# 		orbit_distance = 20
+# 		orbit_angle = { min = 90 max = 270 }
+# 	}
 	
-	change_orbit = 25
+# 	change_orbit = 25
 	
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 0 max = 150 }
-	}
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 160 max = 330 }
-	}
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 0 max = 150 }
+# 	}
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 160 max = 330 }
+# 	}
 	
-	planet = {
-		count = { min = 2 max = 5 }
-		orbit_distance = 25
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = { min = 2 max = 5 }
+# 		orbit_distance = 25
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
+# 		moon = {
+# 			count = { min = 0 max = 1 }
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
 	
-	init_effect = {
-		create_drone_country = yes
-		random_system_planet = {
-			limit = { 
-				has_deposit_for = shipclass_mining_station
-				is_star = no
-				NOT = { is_planet_class = pc_gas_giant }
-			}
-			set_deposit = d_minerals_8
-			event_target:drone_country = {
-				save_event_target_as = mining_drones
-				create_fleet = {
-					name = "NAME_Ancient_Mining_Drones"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
-							count = 8
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Mining_Drone"
-							}
-						}
-						while = {
-							count = 4
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Combat_Drone"
-							}
-						}
-						while = {
-							count = 2
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Destroyer"
-							}
-						}
-						set_location = PREVPREV
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = return_point
-						set_aggro_range = 150
-						queue_actions = {
-							repeat = {
-								wait = {
-									duration = 999
-									random = 10
-								}
-							}
-						}
-					}
-				}
-			}
-			create_mining_station = {
-				owner = event_target:mining_drones
-			}
-		}	
-	}
-}
+# 	init_effect = {
+# 		create_drone_country = yes
+# 		random_system_planet = {
+# 			limit = { 
+# 				has_deposit_for = shipclass_mining_station
+# 				is_star = no
+# 				NOT = { is_planet_class = pc_gas_giant }
+# 			}
+# 			set_deposit = d_minerals_8
+# 			event_target:drone_country = {
+# 				save_event_target_as = mining_drones
+# 				create_fleet = {
+# 					name = "NAME_Ancient_Mining_Drones"
+# 					effect = {
+# 						set_owner = event_target:drone_country
+# 						while = {
+# 							count = 8
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Mining_Drone"
+# 							}
+# 						}
+# 						while = {
+# 							count = 4
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Combat_Drone"
+# 							}
+# 						}
+# 						while = {
+# 							count = 2
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Destroyer"
+# 							}
+# 						}
+# 						set_location = PREVPREV
+# 						set_fleet_stance = aggressive
+# 						set_aggro_range_measure_from = return_point
+# 						set_aggro_range = 150
+# 						queue_actions = {
+# 							repeat = {
+# 								wait = {
+# 									duration = 999
+# 									random = 10
+# 								}
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			create_mining_station = {
+# 				owner = event_target:mining_drones
+# 			}
+# 		}	
+# 	}
+# }
 
-# Mining Drone Destroyers
-hostile_init_12_drone_destroyer = {
-	class = "rl_standard_stars"
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 95
-	}
+# # Mining Drone Destroyers
+# hostile_init_12_drone_destroyer = {
+# 	class = "rl_standard_stars"
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 95
+# 	}
 	
-	usage = misc_system_init
-	usage_odds = {
-		base = 1
-		modifier = {
-			factor = 0
-			NOT = { is_in_cluster = resource_cluster_4 }
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
-			factor = 0
-			is_bottleneck_system = yes
-		}
-	}
+# 	usage = misc_system_init
+# 	usage_odds = {
+# 		base = 1
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { is_in_cluster = resource_cluster_4 }
+# 		}
+# 		modifier = {
+#             factor = 0
+#             has_star_flag = empire_cluster
+#         }
+#         modifier = {
+# 			factor = 0
+# 			is_bottleneck_system = yes
+# 		}
+# 	}
 	
-	flags = { hostile_system drone_destroyer_system }
+# 	flags = { hostile_system drone_destroyer_system }
 	
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = { min = 20 max = 30 }
-		has_ring = no
-	}
+# 	planet = {
+# 		count = 1
+# 		class = star
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = { min = 20 max = 30 }
+# 		has_ring = no
+# 	}
 	
-	change_orbit = 30
+# 	change_orbit = 30
 	
-	planet = {
-		count = 2
-		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-	}
+# 	planet = {
+# 		count = 2
+# 		orbit_distance = 20
+# 		orbit_angle = { min = 90 max = 270 }
+# 	}
 	
-	change_orbit = 25
+# 	change_orbit = 25
 	
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 0 max = 150 }
-	}
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 160 max = 330 }
-	}
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 0 max = 150 }
+# 	}
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 160 max = 330 }
+# 	}
 	
-	planet = {
-		count = { min = 2 max = 5 }
-		orbit_distance = 25
-		orbit_angle = { min = 90 max = 270 }
+# 	planet = {
+# 		count = { min = 2 max = 5 }
+# 		orbit_distance = 25
+# 		orbit_angle = { min = 90 max = 270 }
 		
-		change_orbit = @base_moon_distance
+# 		change_orbit = @base_moon_distance
 		
-		moon = {
-			count = { min = 0 max = 1 }
-			orbit_angle = { min = 90 max = 270 }
-			orbit_distance = 5
-		}
-	}
+# 		moon = {
+# 			count = { min = 0 max = 1 }
+# 			orbit_angle = { min = 90 max = 270 }
+# 			orbit_distance = 5
+# 		}
+# 	}
 	
-	init_effect = {
-		create_drone_country = yes
-		random_system_planet = {
-			limit = { has_deposit_for = shipclass_mining_station }
-			set_deposit = d_minerals_8
-			event_target:drone_country = {
-				save_event_target_as = mining_drones
-				create_fleet = {
-					name = "NAME_Asset_Protection_Unit"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
-							count = 7
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Combat_Drone"
-							}
-						}
-						while = {
-							count = 3
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Destroyer"
-							}
-						}
-						set_location = PREVPREV
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = return_point
-						set_aggro_range = 150
-						queue_actions = {
-							repeat = {
-								wait = {
-									duration = 999
-									random = 10
-								}
-							}
-						}
-					}
-				}
-			}
-			create_mining_station = {
-				owner = event_target:mining_drones
-			}
-		}	
-	}
-}
+# 	init_effect = {
+# 		create_drone_country = yes
+# 		random_system_planet = {
+# 			limit = { has_deposit_for = shipclass_mining_station }
+# 			set_deposit = d_minerals_8
+# 			event_target:drone_country = {
+# 				save_event_target_as = mining_drones
+# 				create_fleet = {
+# 					name = "NAME_Asset_Protection_Unit"
+# 					effect = {
+# 						set_owner = event_target:drone_country
+# 						while = {
+# 							count = 7
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Combat_Drone"
+# 							}
+# 						}
+# 						while = {
+# 							count = 3
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Destroyer"
+# 							}
+# 						}
+# 						set_location = PREVPREV
+# 						set_fleet_stance = aggressive
+# 						set_aggro_range_measure_from = return_point
+# 						set_aggro_range = 150
+# 						queue_actions = {
+# 							repeat = {
+# 								wait = {
+# 									duration = 999
+# 									random = 10
+# 								}
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 			create_mining_station = {
+# 				owner = event_target:mining_drones
+# 			}
+# 		}	
+# 	}
+# }
 
-# Mining Drones ALTERNATE
-hostile_init_13 = {
-	class = "rl_standard_stars"
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 120
-	}
+# # Mining Drones ALTERNATE
+# hostile_init_13 = {
+# 	class = "rl_standard_stars"
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 120
+# 	}
 
-	usage = misc_system_init
-	usage_odds = {
-		base = 2
-		modifier = {
-			factor = 0
-			NOT = { is_in_cluster = resource_cluster_4 }
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-	}
+# 	usage = misc_system_init
+# 	usage_odds = {
+# 		base = 2
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { is_in_cluster = resource_cluster_4 }
+# 		}
+# 		modifier = {
+#             factor = 0
+#             has_star_flag = empire_cluster
+#         }
+# 	}
 	
-	flags = { hostile_system drone_system_3 }
+# 	flags = { hostile_system drone_system_3 }
 	
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = 30
-		has_ring = no
-	}
+# 	planet = {
+# 		count = 1
+# 		class = star
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = 30
+# 		has_ring = no
+# 	}
 
-	planet = {
-		count = 1
-		orbit_distance = 40
-		orbit_angle = 15
-	}
+# 	planet = {
+# 		count = 1
+# 		orbit_distance = 40
+# 		orbit_angle = 15
+# 	}
 
-	planet = {
-		count = 1
-		orbit_distance = 20
-		orbit_angle = 125
-	}
+# 	planet = {
+# 		count = 1
+# 		orbit_distance = 20
+# 		orbit_angle = 125
+# 	}
 
-	planet = {
-		count = 1
-		orbit_distance = 20
-		orbit_angle = 120
+# 	planet = {
+# 		count = 1
+# 		orbit_distance = 20
+# 		orbit_angle = 120
 
-		moon = {
-			orbit_distance = 12
-			orbit_angle = 40
-		}
-	}
+# 		moon = {
+# 			orbit_distance = 12
+# 			orbit_angle = 40
+# 		}
+# 	}
 
-	planet = {
-		count = 1
-		orbit_distance = 20
-		orbit_angle = 60
-	}
+# 	planet = {
+# 		count = 1
+# 		orbit_distance = 20
+# 		orbit_angle = 60
+# 	}
 	
-	planet = {
-		count = 1
-		class = pc_asteroid
-		orbit_distance = 20
-		orbit_angle = -210
-	}
+# 	planet = {
+# 		count = 1
+# 		class = pc_asteroid
+# 		orbit_distance = 20
+# 		orbit_angle = -210
+# 	}
 
-	planet = {
-		count = 1
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = -95
-	}
+# 	planet = {
+# 		count = 1
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = -95
+# 	}
 
-	planet = {
-		count = 1
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = 285
-	}
+# 	planet = {
+# 		count = 1
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = 285
+# 	}
 
-	planet = {
-		count = 1
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = -80
-	}
+# 	planet = {
+# 		count = 1
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = -80
+# 	}
 
-	planet = {
-		count = 1
-		class = pc_gas_giant
-		orbit_distance = 30
-		orbit_angle = -160
-		size = 35
-		change_orbit = 6
+# 	planet = {
+# 		count = 1
+# 		class = pc_gas_giant
+# 		orbit_distance = 30
+# 		orbit_angle = -160
+# 		size = 35
+# 		change_orbit = 6
 
-		moon = {
-			count = 1
-			class = pc_molten
-			size = 6
-			orbit_distance = 10
-			orbit_angle = 100 
-		}
-		moon = {
-			count = 1
-			class = "pc_frozen"
-			size = 6
-			orbit_distance = 2.5
-			orbit_angle = 10
-			has_ring = no
-		}
-		moon = {
-			count = 1
-			class = "pc_frozen"
-			size = 9
-			orbit_distance = 2.5
-			orbit_angle = 80
-			has_ring = no
-		}
-		moon = {
-			count = 1
-			class = "pc_frozen"
-			size = 7
-			orbit_distance = 2.5
-			orbit_angle = -155
-			has_ring = no
-		}
-	}
+# 		moon = {
+# 			count = 1
+# 			class = pc_molten
+# 			size = 6
+# 			orbit_distance = 10
+# 			orbit_angle = 100 
+# 		}
+# 		moon = {
+# 			count = 1
+# 			class = "pc_frozen"
+# 			size = 6
+# 			orbit_distance = 2.5
+# 			orbit_angle = 10
+# 			has_ring = no
+# 		}
+# 		moon = {
+# 			count = 1
+# 			class = "pc_frozen"
+# 			size = 9
+# 			orbit_distance = 2.5
+# 			orbit_angle = 80
+# 			has_ring = no
+# 		}
+# 		moon = {
+# 			count = 1
+# 			class = "pc_frozen"
+# 			size = 7
+# 			orbit_distance = 2.5
+# 			orbit_angle = -155
+# 			has_ring = no
+# 		}
+# 	}
 
-	planet = {
-		count = 1
-		class = pc_gas_giant
-		orbit_distance = 20
-		orbit_angle = 170
-		size = 30
-		has_ring = yes
-		change_orbit = 7
+# 	planet = {
+# 		count = 1
+# 		class = pc_gas_giant
+# 		orbit_distance = 20
+# 		orbit_angle = 170
+# 		size = 30
+# 		has_ring = yes
+# 		change_orbit = 7
 
-		moon = {
-			count = 1
-			class = pc_frozen
-			size = 8
-			orbit_distance = 12
-			orbit_angle = 320
-		}
-	}
+# 		moon = {
+# 			count = 1
+# 			class = pc_frozen
+# 			size = 8
+# 			orbit_distance = 12
+# 			orbit_angle = 320
+# 		}
+# 	}
 
-	planet = {
-		count = 1
-		orbit_distance = 20
-		orbit_angle = 125
-	}
+# 	planet = {
+# 		count = 1
+# 		orbit_distance = 20
+# 		orbit_angle = 125
+# 	}
 	
-	planet = {
-		count = 1
-		orbit_distance = 20
-		orbit_angle = -195
+# 	planet = {
+# 		count = 1
+# 		orbit_distance = 20
+# 		orbit_angle = -195
 
-		change_orbit = 4
+# 		change_orbit = 4
 
-		moon = {
-			count = 1
-		}
-	}
+# 		moon = {
+# 			count = 1
+# 		}
+# 	}
 
-	init_effect = {
-		create_drone_country = yes
-		random_system_planet = {
-			limit = { has_deposit_for = shipclass_mining_station }
-			set_deposit = d_minerals_8
-			event_target:drone_country = {
-				create_fleet = {
-					name = "NAME_Ancient_Mining_Drones"
-					effect = {
-						set_owner = event_target:drone_country
-						while = {
-							count = 10
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Mining_Drone"
-							}
-						}
-						while = {
-							count = 3
-							create_ship = {
-								name = ""
-								design = "NAME_Ancient_Combat_Drone"
-							}
-						}
-						set_location = PREVPREV
-						set_fleet_stance = aggressive
-						set_aggro_range_measure_from = return_point
-						set_aggro_range = 200
-					}
-				}
-			}
-			create_mining_station = {
-				owner = event_target:drone_country
-			}
-		}
-	}	
-}
+# 	init_effect = {
+# 		create_drone_country = yes
+# 		random_system_planet = {
+# 			limit = { has_deposit_for = shipclass_mining_station }
+# 			set_deposit = d_minerals_8
+# 			event_target:drone_country = {
+# 				create_fleet = {
+# 					name = "NAME_Ancient_Mining_Drones"
+# 					effect = {
+# 						set_owner = event_target:drone_country
+# 						while = {
+# 							count = 10
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Mining_Drone"
+# 							}
+# 						}
+# 						while = {
+# 							count = 3
+# 							create_ship = {
+# 								name = ""
+# 								design = "NAME_Ancient_Combat_Drone"
+# 							}
+# 						}
+# 						set_location = PREVPREV
+# 						set_fleet_stance = aggressive
+# 						set_aggro_range_measure_from = return_point
+# 						set_aggro_range = 200
+# 					}
+# 				}
+# 			}
+# 			create_mining_station = {
+# 				owner = event_target:drone_country
+# 			}
+# 		}
+# 	}	
+# }
 
-# Mining Drone Home
-hostile_init_14 = {
-	class = "rl_standard_stars"
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 120
-	}
+# # Mining Drone Home
+# hostile_init_14 = {
+# 	class = "rl_standard_stars"
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 120
+# 	}
 	
-	usage = misc_system_init
-	usage_odds = {
-		base = 10
-		modifier = {
-			factor = 0
-			NOT = { is_in_cluster = resource_cluster_4 }
-		}
-		modifier = {
-            factor = 0
-            has_star_flag = empire_cluster
-        }
-        modifier = {
-			factor = 0
-			is_bottleneck_system = yes
-		}
-	}
+# 	usage = misc_system_init
+# 	usage_odds = {
+# 		base = 10
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { is_in_cluster = resource_cluster_4 }
+# 		}
+# 		modifier = {
+#             factor = 0
+#             has_star_flag = empire_cluster
+#         }
+#         modifier = {
+# 			factor = 0
+# 			is_bottleneck_system = yes
+# 		}
+# 	}
 
-	max_instances = 1
-	spawn_chance = 100
+# 	max_instances = 1
+# 	spawn_chance = 100
 	
-	flags = { hostile_system drone_home_system }
+# 	flags = { hostile_system drone_home_system }
 	
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = { min = 20 max = 30 }
-		has_ring = no
+# 	planet = {
+# 		count = 1
+# 		class = star
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = { min = 20 max = 30 }
+# 		has_ring = no
 
-		init_effect = {
-			create_drone_country = yes
-		}
-	}
+# 		init_effect = {
+# 			create_drone_country = yes
+# 		}
+# 	}
 	
-	change_orbit = 120
+# 	change_orbit = 120
 	
-	planet = {
-		count = 3
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = 70
+# 	planet = {
+# 		count = 3
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = 70
 
-		init_effect = {
-			create_fleet = {
-				name = "NAME_Mining_Corps"
-				effect = {
-					set_owner = event_target:drone_country
-					while = {
-						count = 12
-						create_ship = {
-							name = ""
-							design = "NAME_Ancient_Mining_Drone"
-						}
-					}
-					while = {
-						count = 3
-						create_ship = {
-							name = ""
-							design = "NAME_Ancient_Combat_Drone"
-						}
-					}
-					set_location = {
-						target = prev
-						distance = 20
-						angle = 0
-					}
-					set_formation_scale = 2
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = return_point
-					set_aggro_range = 200
-				}
-			}
-			create_fleet = {
-				name = "NAME_Asset_Protection_Unit"
-				effect = {
-					set_owner = event_target:drone_country
-					while = {
-						count = 10
-						create_ship = {
-							name = ""
-							design = "NAME_Ancient_Destroyer"
-						}
-					}
-					set_location = {
-						target = prev
-						distance = 20
-						angle = 180
-					}
-					set_formation_scale = 2
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = return_point
-					set_aggro_range = 200
-				}
-			}
-			if = {
-				limit = {
-					NOT = { exists = event_target:ore_grinder }
-				}
-				set_planet_flag = ore_grinder_planet
-				set_deposit = d_minerals_10
-				create_fleet = {
-					name = "NAME_Central_Processing"
-					effect = {
-						set_owner = event_target:drone_country
-						create_ship = {
-							name = "NAME_Ore_Grinder"
-							design = "NAME_Drone_Home_Base"
-							graphical_culture = "drone"
-						}
-						set_location = prev
-						save_event_target_as = ore_grinder
-						set_fleet_flag = ore_grinder
-					}
-				}
-			}
-			else = {
-				create_mining_station = {
-					owner = event_target:drone_country
-				}
-			}
-		}
-	}
+# 		init_effect = {
+# 			create_fleet = {
+# 				name = "NAME_Mining_Corps"
+# 				effect = {
+# 					set_owner = event_target:drone_country
+# 					while = {
+# 						count = 12
+# 						create_ship = {
+# 							name = ""
+# 							design = "NAME_Ancient_Mining_Drone"
+# 						}
+# 					}
+# 					while = {
+# 						count = 3
+# 						create_ship = {
+# 							name = ""
+# 							design = "NAME_Ancient_Combat_Drone"
+# 						}
+# 					}
+# 					set_location = {
+# 						target = prev
+# 						distance = 20
+# 						angle = 0
+# 					}
+# 					set_formation_scale = 2
+# 					set_fleet_stance = aggressive
+# 					set_aggro_range_measure_from = return_point
+# 					set_aggro_range = 200
+# 				}
+# 			}
+# 			create_fleet = {
+# 				name = "NAME_Asset_Protection_Unit"
+# 				effect = {
+# 					set_owner = event_target:drone_country
+# 					while = {
+# 						count = 10
+# 						create_ship = {
+# 							name = ""
+# 							design = "NAME_Ancient_Destroyer"
+# 						}
+# 					}
+# 					set_location = {
+# 						target = prev
+# 						distance = 20
+# 						angle = 180
+# 					}
+# 					set_formation_scale = 2
+# 					set_fleet_stance = aggressive
+# 					set_aggro_range_measure_from = return_point
+# 					set_aggro_range = 200
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					NOT = { exists = event_target:ore_grinder }
+# 				}
+# 				set_planet_flag = ore_grinder_planet
+# 				set_deposit = d_minerals_10
+# 				create_fleet = {
+# 					name = "NAME_Central_Processing"
+# 					effect = {
+# 						set_owner = event_target:drone_country
+# 						create_ship = {
+# 							name = "NAME_Ore_Grinder"
+# 							design = "NAME_Drone_Home_Base"
+# 							graphical_culture = "drone"
+# 						}
+# 						set_location = prev
+# 						save_event_target_as = ore_grinder
+# 						set_fleet_flag = ore_grinder
+# 					}
+# 				}
+# 			}
+# 			else = {
+# 				create_mining_station = {
+# 					owner = event_target:drone_country
+# 				}
+# 			}
+# 		}
+# 	}
 	
-	change_orbit = -80
+# 	change_orbit = -80
 	
-	planet = {
-		count = 1
-		orbit_distance = 20
-		orbit_angle = { min = 90 max = 270 }
-		init_effect = {
+# 	planet = {
+# 		count = 1
+# 		orbit_distance = 20
+# 		orbit_angle = { min = 90 max = 270 }
+# 		init_effect = {
 
-		}
-	}
+# 		}
+# 	}
 	
-	change_orbit = 80
+# 	change_orbit = 80
 	
-	planet = {
-		count = { min = 0 max = 2 }
-		orbit_distance = 40
-		orbit_angle = { min = 90 max = 270 }
-	}
+# 	planet = {
+# 		count = { min = 0 max = 2 }
+# 		orbit_distance = 40
+# 		orbit_angle = { min = 90 max = 270 }
+# 	}
 
-	neighbor_system = {
-		distance = { min = 0 max = 50 }
-		initializer = "hostile_init_12"
-	}
+# 	neighbor_system = {
+# 		distance = { min = 0 max = 50 }
+# 		initializer = "hostile_init_12"
+# 	}
 
-	neighbor_system = {
-		distance = { min = 0 max = 50 }
-		initializer = "hostile_init_12_drone_destroyer"
-	}
-}
+# 	neighbor_system = {
+# 		distance = { min = 0 max = 50 }
+# 		initializer = "hostile_init_12_drone_destroyer"
+# 	}
+# }
 
 # # Tiyanki
 # hostile_init_15 = {
@@ -2661,196 +2661,196 @@ hostile_init_14 = {
 # 	}
 # }
 
-### Privateer Conglomerate
-hostile_init_18 = {
-	class = "rl_standard_stars"
-	asteroid_belt = {
-		type = rocky_asteroid_belt
-		radius = 95
-	}
+# ### Privateer Conglomerate
+# hostile_init_18 = {
+# 	class = "rl_standard_stars"
+# 	asteroid_belt = {
+# 		type = rocky_asteroid_belt
+# 		radius = 95
+# 	}
 	
-	usage = misc_system_init
-	usage_odds = {
-		base = 100
-		modifier = {
-			factor = 0
-			NOT = { is_in_cluster = resource_cluster_0 }
-		}
-		modifier = {
-            factor = 0
-            OR = {
-				has_star_flag = empire_cluster
-				host_has_dlc = "Apocalypse"
-			}
-        }
-        modifier = {
-			factor = 0
-			is_bottleneck_system = yes
-		}
-	}
+# 	usage = misc_system_init
+# 	usage_odds = {
+# 		base = 100
+# 		modifier = {
+# 			factor = 0
+# 			NOT = { is_in_cluster = resource_cluster_0 }
+# 		}
+# 		modifier = {
+#             factor = 0
+#             OR = {
+# 				has_star_flag = empire_cluster
+# 				host_has_dlc = "Apocalypse"
+# 			}
+#         }
+#         modifier = {
+# 			factor = 0
+# 			is_bottleneck_system = yes
+# 		}
+# 	}
 
-	max_instances = 1
-	spawn_chance = 100
+# 	max_instances = 1
+# 	spawn_chance = 100
 
-	flags = { hostile_system pirate_home_system pirate_system }
+# 	flags = { hostile_system pirate_home_system pirate_system }
 
-	planet = {
-		count = 1
-		class = star
-		orbit_distance = 0
-		orbit_angle = 1
-		size = { min = 20 max = 30 }
-		has_ring = no
+# 	planet = {
+# 		count = 1
+# 		class = star
+# 		orbit_distance = 0
+# 		orbit_angle = 1
+# 		size = { min = 20 max = 30 }
+# 		has_ring = no
 
-		init_effect = {
-			prevent_anomaly = yes
-			set_deposit = d_energy_4
-			create_pirate_country = yes
-			event_target:pirate_country = {
-				if = {
-					limit = {
-						NOT = {
-							has_modifier = pirate_power
-						}
-					}
-					add_modifier = {
-						modifier = pirate_power
-						days = -1
-					}
-				}
-			}
-			every_country = {
-				establish_communications_no_message = event_target:pirate_country
-			}
+# 		init_effect = {
+# 			prevent_anomaly = yes
+# 			set_deposit = d_energy_4
+# 			create_pirate_country = yes
+# 			event_target:pirate_country = {
+# 				if = {
+# 					limit = {
+# 						NOT = {
+# 							has_modifier = pirate_power
+# 						}
+# 					}
+# 					add_modifier = {
+# 						modifier = pirate_power
+# 						days = -1
+# 					}
+# 				}
+# 			}
+# 			every_country = {
+# 				establish_communications_no_message = event_target:pirate_country
+# 			}
 
-			create_fleet = {
-				name = "NAME_Old_Guard"
-				effect = {
-					set_owner = event_target:pirate_country
-					set_fleet_flag = pirate_home_system_fleet
-					while = {
-						count = 1
-						create_ship = {
-							name = random
-							design = "NAME_Pirate_Galleon"
-							graphical_culture = "pirate_01"
-						}
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 250
-					set_location = {
-						target = prev
-						distance = 90
-						angle = 330
-					}
-					set_fleet_flag = pirate_home_system_fleet
-				}
-			}
+# 			create_fleet = {
+# 				name = "NAME_Old_Guard"
+# 				effect = {
+# 					set_owner = event_target:pirate_country
+# 					set_fleet_flag = pirate_home_system_fleet
+# 					while = {
+# 						count = 1
+# 						create_ship = {
+# 							name = random
+# 							design = "NAME_Pirate_Galleon"
+# 							graphical_culture = "pirate_01"
+# 						}
+# 					}
+# 					set_fleet_stance = aggressive
+# 					set_aggro_range_measure_from = self
+# 					set_aggro_range = 250
+# 					set_location = {
+# 						target = prev
+# 						distance = 90
+# 						angle = 330
+# 					}
+# 					set_fleet_flag = pirate_home_system_fleet
+# 				}
+# 			}
 
-			create_fleet = {
-				name = "NAME_Scarred_Veterans"
-				effect = {
-					set_owner = event_target:pirate_country
-					set_fleet_flag = pirate_home_system_fleet
-					while = {
-						count = 6
-						create_ship = {
-							name = random
-							design = "NAME_Corsair"
-							graphical_culture = "pirate_01"
-						}
-					}
-					while = {
-						count = 10
-						create_ship = {
-							name = random
-							design = "NAME_Marauder"
-							graphical_culture = "pirate_01"
-						}
-					}
-					while = {
-						count = 20
-						create_ship = {
-							name = random
-							design = "NAME_Black_Earl"
-							graphical_culture = "pirate_01"
-						}
-					}
-					while = {
-						count = 4
-						create_ship = {
-							name = random
-							design = "NAME_Skull"
-							graphical_culture = "pirate_01"
-						}
-					}
-					set_fleet_flag = pirate_home_system_fleet
-					set_formation_scale = 2
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 250
-					set_location = {
-						target = prev
-						distance = 90
-						angle = 120
-					}
-				}
-			}
+# 			create_fleet = {
+# 				name = "NAME_Scarred_Veterans"
+# 				effect = {
+# 					set_owner = event_target:pirate_country
+# 					set_fleet_flag = pirate_home_system_fleet
+# 					while = {
+# 						count = 6
+# 						create_ship = {
+# 							name = random
+# 							design = "NAME_Corsair"
+# 							graphical_culture = "pirate_01"
+# 						}
+# 					}
+# 					while = {
+# 						count = 10
+# 						create_ship = {
+# 							name = random
+# 							design = "NAME_Marauder"
+# 							graphical_culture = "pirate_01"
+# 						}
+# 					}
+# 					while = {
+# 						count = 20
+# 						create_ship = {
+# 							name = random
+# 							design = "NAME_Black_Earl"
+# 							graphical_culture = "pirate_01"
+# 						}
+# 					}
+# 					while = {
+# 						count = 4
+# 						create_ship = {
+# 							name = random
+# 							design = "NAME_Skull"
+# 							graphical_culture = "pirate_01"
+# 						}
+# 					}
+# 					set_fleet_flag = pirate_home_system_fleet
+# 					set_formation_scale = 2
+# 					set_fleet_stance = aggressive
+# 					set_aggro_range_measure_from = self
+# 					set_aggro_range = 250
+# 					set_location = {
+# 						target = prev
+# 						distance = 90
+# 						angle = 120
+# 					}
+# 				}
+# 			}
 
-			create_fleet = {
-				name = "NAME_Young_Blood"
-				effect = {
-					set_owner = event_target:pirate_country
-					create_ship_design = {
-						design = "NAME_Reaver"
-					}
-					while = {
-						count = 12
-						create_ship = {
-							name = random
-							design = last_created_design
-							graphical_culture = "pirate_01"
-						}
-					}
-					set_location = {
-						target = prev
-						distance = 90
-						angle = 200
-					}
-					set_fleet_stance = aggressive
-					set_aggro_range_measure_from = self
-					set_aggro_range = 150
-					set_fleet_flag = pirate_home_system_fleet
-					save_global_event_target_as = young_blood
-				}
-			}
-		}
-	}
+# 			create_fleet = {
+# 				name = "NAME_Young_Blood"
+# 				effect = {
+# 					set_owner = event_target:pirate_country
+# 					create_ship_design = {
+# 						design = "NAME_Reaver"
+# 					}
+# 					while = {
+# 						count = 12
+# 						create_ship = {
+# 							name = random
+# 							design = last_created_design
+# 							graphical_culture = "pirate_01"
+# 						}
+# 					}
+# 					set_location = {
+# 						target = prev
+# 						distance = 90
+# 						angle = 200
+# 					}
+# 					set_fleet_stance = aggressive
+# 					set_aggro_range_measure_from = self
+# 					set_aggro_range = 150
+# 					set_fleet_flag = pirate_home_system_fleet
+# 					save_global_event_target_as = young_blood
+# 				}
+# 			}
+# 		}
+# 	}
 
-	change_orbit = 95
+# 	change_orbit = 95
 	
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 0 max = 150 }
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 0 max = 150 }
 
-		init_effect = {
-			prevent_anomaly = yes
-			set_deposit = d_minerals_10
-		}
-	}
-	planet = {
-		class = pc_asteroid
-		orbit_distance = 0
-		orbit_angle = { min = 160 max = 330 }
+# 		init_effect = {
+# 			prevent_anomaly = yes
+# 			set_deposit = d_minerals_10
+# 		}
+# 	}
+# 	planet = {
+# 		class = pc_asteroid
+# 		orbit_distance = 0
+# 		orbit_angle = { min = 160 max = 330 }
 
-		init_effect = {
-			prevent_anomaly = yes
-			set_deposit = d_minerals_8
-		}
-	}
-}
+# 		init_effect = {
+# 			prevent_anomaly = yes
+# 			set_deposit = d_minerals_8
+# 		}
+# 	}
+# }
 
 
 # # Amoeba Home System

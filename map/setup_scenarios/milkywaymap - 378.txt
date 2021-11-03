@@ -624,7 +624,7 @@ static_galaxy_scenario = {
 			base = 0
                 modifier = { 
                         add = 100000 
-                        has_country_flag = heretic_geth
+                        has_country_flag = followers_of_nazara
                 } 
         } 
     }
@@ -2285,7 +2285,7 @@ static_galaxy_scenario = {
 			base = 0
                 modifier = { 
                         add = 100000 
-                        has_country_flag = asari_corporate_interests
+                        has_country_flag = illium_corporate_interests
 				} 
 		}
     }
@@ -3519,13 +3519,13 @@ static_galaxy_scenario = {
     }
 
     system = {
-        name = "Qardak"
+        name = "Qardan"
         id = "369"
         position = {
             x = 145.1474
             y = 219.1085
         }
-        initializer = sys_qardak_init
+        initializer = sys_qardan_init
     }
 
     system = {

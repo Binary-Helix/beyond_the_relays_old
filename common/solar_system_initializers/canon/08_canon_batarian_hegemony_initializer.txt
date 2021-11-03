@@ -609,7 +609,7 @@ sys_gravnaz_init = {
 	class = sc_a
 	max_instances = 1
 
-	flags = { alliance_space_system dabos_knot_system gravnez_system btr_system custom_system }
+	flags = { alliance_space_system dabos_knot_system gravnaz_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 		btr_bat_generate_stations = yes	
@@ -709,8 +709,8 @@ sys_gravnaz_init = {
 
 	init_effect = { 
 		spawn_megastructure = { 
-			type = "dabosknot_merariring_massrelay" 
-			name = "Dabo's 1 Relay"
+			type = "dabosknot_zhuquesnest_massrelay" 
+			name = "Dabo's 3 Relay"
 			orbit_angle = 186 
 			orbit_distance = 245	
 		} 

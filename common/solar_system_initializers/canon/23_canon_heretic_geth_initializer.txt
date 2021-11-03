@@ -12,8 +12,8 @@ sys_theseaofstorms_init = {
 	flags = { terminus_system phoenix_massing_system theseaofstorms_system btr_system custom_system }
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = heretic_geth } 
-			save_global_event_target_as = heretic_geth
+			limit = { has_country_flag = followers_of_nazara } 
+			save_global_event_target_as = followers_of_nazara
 		}
 	}		
 	usage = custom_empire
@@ -35,21 +35,22 @@ sys_theseaofstorms_init = {
         orbit_angle = 144
         size = 22
         has_ring = no   
+		flags = { heretic_station pd_ignore }
 		init_effect = {
 			random_country = {
-				limit = { has_country_flag = heretic_geth }
-				save_global_event_target_as = heretic_geth
+				limit = { has_country_flag = followers_of_nazara }
+				save_global_event_target_as = followers_of_nazara
 			}
 			prevent_anomaly = yes
 			set_global_flag = heretic_station_spawned
 
 			if = {
-				limit = { NOT = { any_country = { has_country_flag = heretic_geth } } }
+				limit = { NOT = { any_country = { has_country_flag = followers_of_nazara } } }
 				create_country = {
-					name = "Heretic Geth"
-					ship_prefix = "PRESCRIPTED_ship_prefix_heretic_geth"
+					name = "Followers of Nazara"
+					ship_prefix = "PRESCRIPTED_ship_prefix_followers_of_nazara"
 					type = default
-                origin = "origin_heretic_geth"
+                origin = "origin_followers_of_nazara"
 					ignore_initial_colony_error = yes
 					civics = { civic = "civic_machine_warbots" civic = "civic_machine_unitary_cohesion" }
 					authority = auth_machine_intelligence
@@ -74,21 +75,21 @@ sys_theseaofstorms_init = {
 					}
 					effect = {
 						set_graphical_culture = geth_01
-						set_country_flag = heretic_geth
+						set_country_flag = followers_of_nazara
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
 						set_country_flag = canon_map
-						save_global_event_target_as = heretic_geth
+						save_global_event_target_as = followers_of_nazara
 					}
 				}
 			}	
 			set_capital = yes
 			random_country = {
-				limit = { has_country_flag = heretic_geth }
-				save_global_event_target_as = heretic_geth
+				limit = { has_country_flag = followers_of_nazara }
+				save_global_event_target_as = followers_of_nazara
 				species = { save_global_event_target_as = gethSpecies }
 			}
-			set_owner = event_target:heretic_geth
+			set_owner = event_target:followers_of_nazara
 			generate_btr_start_deposits_and_blockers = yes
 			generate_her_heretic_station_capitol_buildings = yes
 			generate_her_station_pops = yes
@@ -115,8 +116,8 @@ sys_haelazi_init = {
 	flags = { terminus_system xosar_verge_system haelazi_system empire_home_system custom_system }	
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = heretic_geth } 
-			save_global_event_target_as = heretic_geth
+			limit = { has_country_flag = followers_of_nazara } 
+			save_global_event_target_as = followers_of_nazara
 		}	
 	generate_home_system_resources = yes
 	}
@@ -293,9 +294,9 @@ sys_sesost_init = {
         has_ring = no
 		size = 6
 		init_effect = {
-			set_owner = event_target:heretic_geth
+			set_owner = event_target:followers_of_nazara
 			create_colony = {
-				owner = event_target:heretic_geth
+				owner = event_target:followers_of_nazara
 				species = event_target:gethSpecies
 				ethos = owner
 			}
@@ -466,9 +467,9 @@ sys_seefisgaca_init = {
         has_ring = no
 		size = 17
 		init_effect = {
-			set_owner = event_target:heretic_geth
+			set_owner = event_target:followers_of_nazara
 			create_colony = {
-				owner = event_target:heretic_geth
+				owner = event_target:followers_of_nazara
 				species = event_target:gethSpecies
 				ethos = owner
 			}
@@ -705,9 +706,9 @@ sys_jaavo_init = {
         has_ring = no
 		size = 22
 		init_effect = {
-			set_owner = event_target:heretic_geth
+			set_owner = event_target:followers_of_nazara
 			create_colony = {
-				owner = event_target:heretic_geth
+				owner = event_target:followers_of_nazara
 				species = event_target:gethSpecies
 				ethos = owner
 			}

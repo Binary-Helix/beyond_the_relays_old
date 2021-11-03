@@ -1471,6 +1471,17 @@ generate_cerb_pragia_colony_buildings = {
 	add_building = building_illicit_research_labs	
 }
 
+generate_cerberus_minuteman_buildings_and_districts = {
+	while = { count = 3 add_district = district_hab_housing }
+	while = { count = 3 add_district = district_hab_cultural }
+	while = { count = 2 add_building = building_factory_1 }
+	capital_scope = {
+		add_building = building_hab_capital
+		add_building = building_bureaucratic_1
+		add_building = building_hydroponics_farm
+		add_building = building_research_lab_2
+	}	
+}
 
 generate_cerb_cronos_pops = {
 	while = {
