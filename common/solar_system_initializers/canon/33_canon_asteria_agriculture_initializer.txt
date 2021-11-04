@@ -106,8 +106,8 @@ sys_hekate_init = {
 		flags = { ker_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_poor_mineral_deposits
-			set_planet_flag = starting_deposit
+			add_deposit = d_poor_mineral_deposits
+
     	}
 	}
 
@@ -123,8 +123,8 @@ sys_hekate_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 			add_modifier = {
 				modifier = extensive_moon_system
 				days = -1
@@ -146,8 +146,8 @@ sys_hekate_init = {
 			size = 2
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_platinum_2
-				set_planet_flag = starting_deposit
+				add_deposit = d_platinum_2
+	
 			}
 		}	
 		moon = {
@@ -186,8 +186,8 @@ sys_hekate_init = {
 			size = 1
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_minerals_1
-				set_planet_flag = starting_deposit
+				add_deposit = d_minerals_1
+	
 			}
 		}
 		moon = {
@@ -219,8 +219,8 @@ sys_hekate_init = {
 			size = 1
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_platinum_1
-				set_planet_flag = starting_deposit
+				add_deposit = d_platinum_1
+	
 			}
 		}	
 		moon = {
@@ -245,8 +245,8 @@ sys_hekate_init = {
 			size = 1
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_palladium_1
-				set_planet_flag = starting_deposit
+				add_deposit = d_palladium_1
+	
 			}
 		}			
     }
@@ -261,9 +261,9 @@ sys_hekate_init = {
 		flags = { bothros_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_element_zero_1
+			add_deposit = d_element_zero_1
 			add_deposit = d_platinum_4
-			set_planet_flag = starting_deposit
+
 			# add_anomaly = {
 			# 	category = MEC_EG_ANO_BOTHROS_1091_CAT			###Bothros Anomaly (Mass Extinction)
 			# }

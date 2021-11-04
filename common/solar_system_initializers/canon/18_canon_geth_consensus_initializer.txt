@@ -332,7 +332,7 @@ sys_dholen_init = {
 		size = 2
 		flags = { gotha_planet pd_ignore }		
 		init_effect = {
-			set_deposit = d_iridium_3
+			add_deposit = d_iridium_3
 			add_deposit = d_platinum_5
 			add_deposit = d_palladium_4
 			add_deposit = d_element_zero_3
@@ -348,7 +348,7 @@ sys_dholen_init = {
 		size = 34
 		flags = { charoum_planet pd_ignore }
 		init_effect = {
-			set_deposit= d_rich_mineral_deposits
+			add_deposit= d_rich_mineral_deposits
 			set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
@@ -367,7 +367,7 @@ sys_dholen_init = {
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
 			init_effect = {
-				set_deposit = d_iridium_5
+				add_deposit = d_iridium_5
 				add_deposit = d_platinum_5
 				add_deposit = d_palladium_5
 				add_deposit = d_minerals_5
@@ -384,7 +384,7 @@ sys_dholen_init = {
 		size = 16
 		flags = { haestrom_planet pd_ignore }
 		init_effect = {
-			set_deposit= d_rich_mineral_deposits
+			add_deposit= d_rich_mineral_deposits
 			set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
@@ -435,7 +435,7 @@ sys_disul_init = {
 		size = 8
 		flags = { vasri_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_4
+			add_deposit = d_minerals_4
 		}
     }
 
@@ -448,7 +448,7 @@ sys_disul_init = {
 		size = 10
 		flags = { ciko_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_3
+			add_deposit = d_iridium_3
 			add_deposit = d_platinum_3
 		}
     }
@@ -462,7 +462,7 @@ sys_disul_init = {
 		size = 12
 		flags = { goraka_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_element_zero_2
+			add_deposit = d_element_zero_2
 		}
     }	
 }	
@@ -493,7 +493,7 @@ sys_maat_init = {
         has_ring = no
 		size = 41
 		init_effect = {
-			set_deposit= d_helium_3_3
+			add_deposit= d_helium_3_3
 			set_owner = event_target:geth_consensus
 			create_colony = {
 				owner = event_target:geth_consensus
@@ -512,7 +512,7 @@ sys_maat_init = {
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
 			init_effect = {
-				set_deposit= d_iridium_5
+				add_deposit= d_iridium_5
 				add_deposit= d_platinum_5
 				add_deposit= d_palladium_3
 			}
@@ -523,7 +523,7 @@ sys_maat_init = {
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
 			init_effect = {
-				set_deposit= d_platinum_3
+				add_deposit= d_platinum_3
 				add_deposit= d_minerals_3
 			}
         }
@@ -533,7 +533,7 @@ sys_maat_init = {
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
 			init_effect = {
-				set_deposit= d_element_zero_3
+				add_deposit= d_element_zero_3
 			}
         }
 		moon = {
@@ -542,7 +542,7 @@ sys_maat_init = {
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
 			init_effect = {
-				set_deposit= d_iridium_5
+				add_deposit= d_iridium_5
 				add_deposit= d_platinum_3
 				add_deposit= d_palladium_3
 				add_deposit= d_minerals_3
@@ -554,11 +554,11 @@ sys_maat_init = {
             orbit_distance = 8
             orbit_angle = { min = 90 max = 270 }
 			init_effect = {
-				set_deposit= d_iridium_4
+				add_deposit= d_iridium_4
 			}
         }
 		init_effect = {
-			set_deposit = d_helium_3_3
+			add_deposit = d_helium_3_3
 		}
     }
 

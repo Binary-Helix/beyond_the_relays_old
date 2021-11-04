@@ -33,10 +33,9 @@ sys_parnitha_init = {
 		size = 26
 		has_ring = no
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_energy_5
-			set_planet_flag = starting_deposit
+
+			add_deposit = d_energy_5
+
 			set_planet_flag = starting_mining_target
 		}		
 	}
@@ -49,10 +48,9 @@ sys_parnitha_init = {
 		size = 10
 		has_ring = no
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_physics_3
-			set_planet_flag = starting_deposit
+
+			add_deposit = d_physics_3
+
 			set_planet_flag = starting_research_target
 		}		
 	}
@@ -143,8 +141,8 @@ sys_parnitha_init = {
 				species = { save_global_event_target_as = asariSpecies }
 			}
 			set_owner = event_target:asari_republics
-			generate_btr_start_deposits_and_blockers = yes
 			generate_asr_thessia_deposits = yes
+			generate_start_deposits_and_blockers = yes
 			generate_asr_thessia_capitol_buildings = yes
 			generate_asr_thessia_pops = yes
 			set_name = "Thessia"
@@ -159,10 +157,9 @@ sys_parnitha_init = {
 		size = 15
 		has_ring = no
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_minerals_5
-			set_planet_flag = starting_deposit
+
+			add_deposit = d_minerals_5
+
 			set_planet_flag = starting_mining_target
 		}		
 	}
@@ -174,10 +171,9 @@ sys_parnitha_init = {
 		orbit_angle = { min = 40 max = 100 }
 		size = 1
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_minerals_5
-			set_planet_flag = starting_deposit
+
+			add_deposit = d_minerals_5
+
 			set_planet_flag = starting_mining_target
 		}		
 	}
@@ -190,10 +186,9 @@ sys_parnitha_init = {
 		size = 33
 		has_ring = yes
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_engineering_2
-			set_planet_flag = starting_deposit
+
+			add_deposit = d_engineering_2
+
 		}		
 	}
 	
@@ -205,11 +200,10 @@ sys_parnitha_init = {
 		size = 35
 		has_ring = yes
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_energy_5
+
+			add_deposit = d_energy_5
 			set_planet_flag = starting_mining_target
-			set_planet_flag = starting_deposit
+
 		}		
 	}
 	
@@ -264,8 +258,8 @@ sys_parnitha_init = {
 			init_effect = {
 				prevent_anomaly = yes
 				clear_deposits = yes
-				set_deposit = d_minerals_3
-				set_planet_flag = starting_deposit
+				add_deposit = d_minerals_3
+	
 			}
 		}
     }
@@ -280,9 +274,6 @@ sys_tomaros_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
 	planet = {
@@ -294,7 +285,7 @@ sys_tomaros_init = {
 		has_ring = no
 		flags = { tomaros_star }
 		init_effect = {
-			set_deposit = d_energy_4
+			add_deposit = d_energy_4
 		}		
 	}
 	
@@ -314,7 +305,7 @@ sys_tomaros_init = {
 				ethos = owner
 			}
 			generate_asr_lusia_pops = yes
-			generate_asr_major_colony_buildings = yes	
+			generate_asr_lusia_colony_buildings = yes	
 			
 			set_name = "Lusia"
 		}
@@ -330,7 +321,7 @@ sys_tomaros_init = {
 		flags = { niagolon_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}		
 	}
 	
@@ -344,7 +335,7 @@ sys_tomaros_init = {
 		flags = { egalic_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}			
 	}
 	
@@ -383,9 +374,6 @@ sys_ialessa_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
 	planet = {
@@ -394,7 +382,7 @@ sys_ialessa_init = {
 		size = 30
 		flags = { ialessa_star }
 		init_effect = {
-			set_deposit = d_energy_3
+			add_deposit = d_energy_3
 					
 		}		
 	}
@@ -409,7 +397,7 @@ sys_ialessa_init = {
 		flags = { ilmnos_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_5
-			set_planet_flag = starting_deposit
+
 		}		
 	}
 
@@ -429,7 +417,7 @@ sys_ialessa_init = {
 				ethos = owner
 			}
 			generate_asr_sanves_pops = yes
-			generate_asr_major_colony_buildings = yes	
+			generate_asr_sanves_colony_buildings = yes	
 			
 			set_name = "Sanves"
 		}
@@ -444,7 +432,7 @@ sys_ialessa_init = {
 		flags = { zylium_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}		
 	}
 	
@@ -468,7 +456,7 @@ sys_ialessa_init = {
 		flags = { nossia_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+
 		}		
 	}
 	
@@ -492,9 +480,6 @@ sys_orisoni_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
 	planet = {
@@ -503,13 +488,13 @@ sys_orisoni_init = {
 		size = 20
 		flags = { orisoni_star }
 		init_effect = {
-			set_deposit = d_energy_2
+			add_deposit = d_energy_2
 		}		
 	}
 	
 	planet = {
 		name = "Thissioni"
-		class = pc_mephitic
+		class = pc_arid #pc_mephitic
         orbit_distance = 23
 		orbit_angle = 75
 		size = 15
@@ -533,7 +518,7 @@ sys_orisoni_init = {
 				ethos = owner
 			}
 			generate_asr_niacal_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_niacal_colony_buildings = yes	
 			
 			set_name = "Niacal"
 		}
@@ -559,7 +544,7 @@ sys_orisoni_init = {
 		flags = { egalic_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}	
 		satellite_naming_policy = lower_case_latin_letters
         moon = {
@@ -590,9 +575,6 @@ sys_vernio_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
 	asteroid_belt = {
@@ -608,7 +590,7 @@ sys_vernio_init = {
 		size = 20
 		has_ring = no
 		init_effect = {
-			set_deposit = d_energy_3
+			add_deposit = d_energy_3
 		}		
 	}
 	
@@ -622,7 +604,7 @@ sys_vernio_init = {
 		flags = { nauti_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}	
 	}
 	
@@ -657,7 +639,7 @@ sys_vernio_init = {
 		init_effect = {
 			add_deposit = d_helium_3_3
 			add_deposit = d_mec_asari_tritogenith_collision
-			set_planet_flag = starting_deposit
+
 		}		
 		moon = {
 			name = "Tritogenith I"
@@ -693,7 +675,7 @@ sys_vernio_init = {
 		flags = { polissa_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_5
-			set_planet_flag = starting_deposit
+
 		}	
 		
 		moon = {
@@ -788,7 +770,7 @@ sys_loropi_init = {
 		flags = { espota_station pd_ignore }
 		init_effect = {
 			add_deposit = d_energy_8
-			set_planet_flag = starting_deposit
+
 			set_owner = event_target:asari_republics
 			create_colony = {
 				owner = event_target:asari_republics
@@ -796,7 +778,7 @@ sys_loropi_init = {
 				ethos = owner
 			}
 			generate_asr_espota_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_espota_station_buildings = yes	
 			
 			set_name = "Espota Station"
 		}
@@ -812,7 +794,7 @@ sys_loropi_init = {
 		flags = { paphos_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -845,9 +827,6 @@ sys_teyolia_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
     planet = {
@@ -884,7 +863,7 @@ sys_teyolia_init = {
 				ethos = owner
 			}
 			generate_asr_nevos_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_nevos_colony_buildings = yes	
 			
 			set_name = "Nevos"
 		}
@@ -912,7 +891,7 @@ sys_teyolia_init = {
 		flags = { quirezia_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}	
     }
 
@@ -926,7 +905,7 @@ sys_teyolia_init = {
 		flags = { atebolos_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+
 		}	
     }
 	
@@ -950,9 +929,6 @@ sys_kypladon_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
     planet = {
@@ -994,7 +970,7 @@ sys_kypladon_init = {
 				ethos = owner
 			}
 			generate_asr_cyone_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_cyone_colony_buildings = yes	
 			
 			set_name = "Cyone"
 		}
@@ -1021,7 +997,7 @@ sys_kypladon_init = {
 		init_effect = {
 			add_deposit = d_platinum_5
 			add_deposit = d_palladium_3
-			set_planet_flag = starting_deposit
+
 		}
     }
 	
@@ -1035,7 +1011,7 @@ sys_kypladon_init = {
 		flags = { nili_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
+
 		}
     }	
 
@@ -1049,19 +1025,9 @@ sys_kypladon_init = {
 		flags = { katebolo_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}
     }	
-
-	init_effect = { 
-		spawn_megastructure = { 
-			type = "sileannebula_durwuulastream_massrelay" 
-			name = "Silean 4 Relay"
-			orbit_angle = 270 
-			orbit_distance = 500
-			
-		} 
-	}
 }
 
 sys_nahuala_init = {
@@ -1073,7 +1039,6 @@ sys_nahuala_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
 	}
 
 	asteroid_belt = {
@@ -1100,7 +1065,7 @@ sys_nahuala_init = {
 		init_effect = {
 			add_deposit = d_palladium_5
 			add_deposit = d_minerals_5
-			set_planet_flag = starting_deposit
+
 			set_owner = event_target:asari_republics
 			create_colony = {
 				owner = event_target:asari_republics
@@ -1108,7 +1073,7 @@ sys_nahuala_init = {
 				ethos = owner
 			}
 			generate_asr_agessia_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_agessia_colony_buildings = yes	
 			
 			set_name = "Agessia"
 		}
@@ -1130,7 +1095,7 @@ sys_nahuala_init = {
 				ethos = owner
 			}
 			generate_asr_hyetania_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_hyetania_colony_buildings = yes	
 			
 			set_name = "Hyetania"
 		}		
@@ -1146,7 +1111,7 @@ sys_nahuala_init = {
 		flags = { phoros_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}	
     }
 
@@ -1171,9 +1136,6 @@ sys_fotia_init = {
 	
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
 	planet = {
@@ -1218,7 +1180,7 @@ sys_fotia_init = {
 					ethos = owner
 				}
 				generate_asr_malkos_pops = yes
-				generate_asr_minor_colony_buildings = yes	
+				generate_asr_malkos_colony_buildings = yes	
 				
 				set_name = "Malkos"
 			}
@@ -1243,9 +1205,6 @@ sys_mitrios_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
 	planet = {
@@ -1279,7 +1238,7 @@ sys_mitrios_init = {
 				ethos = owner
 			}
 			generate_asr_charias_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_charias_colony_buildings = yes	
 			
 			set_name = "Charias"
 		}
@@ -1316,9 +1275,6 @@ sys_elensia_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
-
-	
 	}
 
 	planet = {
@@ -1352,7 +1308,7 @@ sys_elensia_init = {
 				ethos = owner
 			}
 			generate_asr_diras_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_diras_colony_buildings = yes	
 			
 			set_name = "Diras"
 		}
@@ -1412,7 +1368,6 @@ sys_pelion_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
 	}
 	
     planet = {
@@ -1433,7 +1388,7 @@ sys_pelion_init = {
 		flags = { zosteros_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -1447,7 +1402,7 @@ sys_pelion_init = {
 		flags = { sthenia_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_iridium_4
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -1467,7 +1422,7 @@ sys_pelion_init = {
 				ethos = owner
 			}
 			generate_asr_trategos_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_trategos_colony_buildings = yes	
 			
 			set_name = "Trategos"
 		}
@@ -1502,7 +1457,6 @@ sys_mesana_init = {
 	flags = { outer_council_system nimbus_cluster_system mesana_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_asr_generate_stations = yes
 	}
 
     planet = {
@@ -1529,7 +1483,7 @@ sys_mesana_init = {
 				ethos = owner
 			}
 			generate_asr_lesuss_pops = yes
-			generate_asr_minor_colony_buildings = yes	
+			generate_asr_lesuss_colony_buildings = yes	
 			
 			set_name = "Lesuss"
 		}
@@ -1555,7 +1509,7 @@ sys_mesana_init = {
 		flags = { medokos_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}		
     }
 
@@ -1569,7 +1523,7 @@ sys_mesana_init = {
 		flags = { shastessia_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -1583,7 +1537,7 @@ sys_mesana_init = {
 		flags = { vylius_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}
     }	
 }

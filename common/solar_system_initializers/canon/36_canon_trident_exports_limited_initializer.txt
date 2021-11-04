@@ -20,8 +20,8 @@ sys_hoplos_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			set_deposit = d_energy_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_energy_3
+
 		}
     }
 
@@ -34,9 +34,9 @@ sys_hoplos_init = {
 		size = 8
 		flags = { talaria_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_platinum_1
+			add_deposit = d_platinum_1
 			add_deposit = d_palladium_1
-			set_planet_flag = starting_deposit
+
 			add_modifier = {
 				modifier = tidal_locked
 				days = -1
@@ -57,8 +57,8 @@ sys_hoplos_init = {
 		size = 11
 		flags = { makhaira_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_platinum_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_platinum_3
+
 			add_modifier = {
 				modifier = btr_scorching_surface
 				days = -1
@@ -82,8 +82,8 @@ sys_hoplos_init = {
 			flags = { kopis_planet pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_minerals_1
-				set_planet_flag = starting_deposit
+				add_deposit = d_minerals_1
+	
 				add_modifier = {
 					modifier = low_gravity
 					days = -1
@@ -102,11 +102,11 @@ sys_hoplos_init = {
 		size = 15
 		flags = { trident_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_poor_eezo_deposits
+			add_deposit = d_poor_eezo_deposits
 			add_deposit = d_poor_iridium_deposits
 			add_deposit = d_poor_mineral_deposits
 			add_deposit = d_trade_value_5
-			set_planet_flag = starting_deposit
+
 			add_modifier = {
 				modifier = hazardous_weather
 				days = -1
@@ -128,8 +128,8 @@ sys_hoplos_init = {
 		flags = { aegis_planet pd_ignore }
 		init_effect = {
 
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_3
+
 			# add_anomaly = {
 			# 	category = MEC_EG_ANO_AEGIS_1092_CAT			###Aegis Anomaly (Rings of Aegis)	
 			# }

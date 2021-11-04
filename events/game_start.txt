@@ -631,11 +631,11 @@ planet_event = {
 						owner = { has_origin = origin_shattered_ring }	#setup in initializer
 					}
 				}
-				generate_start_deposits_and_blockers = yes
+				generate_btr_start_deposits_and_blockers = yes
 			}
 			else_if = {
 				limit = {
-					has_planet_flag = planet_earth
+					has_planet_flag = earth_planet
 					NOR = {
 						owner = { has_origin = origin_shattered_ring }	 #setup in initializer
 						owner = { has_origin = origin_remnants }		 #custom blockers
@@ -649,9 +649,16 @@ planet_event = {
 		}
 
 		if = {
-			limit = { has_planet_flag = void_dweller_habitat_1 }
-			void_dweller_home_planet_setup = yes
+			limit = { 
+				has_planet_flag = void_dweller_habitat_1 
+				OR = {
+					owner = { has_origin = origin_quarian_conclave }
+					owner = { has_origin = origin_cerberus }
+					owner = { has_origin = origin_omega }
+				}
+			}
 		}
+			void_dweller_home_planet_setup = yes
 	}
 }
 

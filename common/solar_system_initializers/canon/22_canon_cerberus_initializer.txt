@@ -491,9 +491,9 @@ sys_patella_init = {
 		has_ring = no
 		flags = { yavo_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_4
+			add_deposit = d_iridium_4
 			add_deposit = d_palladium_4
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -506,8 +506,8 @@ sys_patella_init = {
 		has_ring = no
 		flags = { eperius_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_2
+
 		}
 		moon = {
 			name = "Qiop"
@@ -527,8 +527,8 @@ sys_patella_init = {
 		has_ring = no
 		flags = { xra_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_2
+
 		}
 		moon = {
 			name = "Tryon"
@@ -556,8 +556,8 @@ sys_patella_init = {
 		has_ring = yes
 		flags = { grandluxon_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}
 	}
 
@@ -592,8 +592,8 @@ sys_patella_init = {
 		has_ring = no
 		flags = { secondluxon_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_1
+
 		}
 		moon = {
 			name = "SL-1"
@@ -697,10 +697,10 @@ sys_netheril_init = {
 		size = 16
 		flags = { netheril_planet pd_ignore }	
 		init_effect = {
-			set_deposit = d_iridium_1
+			add_deposit = d_iridium_1
 			add_deposit = d_palladium_1
 			add_deposit = d_platinum_3
-			set_planet_flag = starting_deposit
+
 		}
 	}
 

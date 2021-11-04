@@ -33,8 +33,8 @@ sys_pamyat_init = {
 		size = 17
 		flags = { komarov_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_4
-			set_planet_flag = starting_deposit
+			add_deposit = d_iridium_4
+
 		}
     }
 
@@ -50,7 +50,7 @@ sys_pamyat_init = {
 			add_deposit = d_element_zero_3
 			add_deposit = d_minerals_3
 			add_deposit = d_trade_value_2
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -69,16 +69,16 @@ sys_pamyat_init = {
 
     planet = {
         name = "Volkov"
-        class = "pc_mephitic"
+        class = pc_arid #pc_mephitic
         orbit_distance = 50
         orbit_angle = 195
         has_ring = no
 		size = 4
 		flags = { volkov_planet pd_ignore } 
 		init_effect = {
-			set_deposit = d_rich_iridium_deposits
+			add_deposit = d_rich_iridium_deposits
 			add_deposit = d_trade_value_3
-			set_planet_flag = starting_deposit
+
 		}
 		moon = {
 			name = "Zenevieva"

@@ -54,9 +54,9 @@ sys_amun_init = {
 		flags = { sekhmet_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_element_zero_2
+			add_deposit = d_element_zero_2
 			add_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+
 
 		}
     }
@@ -71,9 +71,9 @@ sys_amun_init = {
 		flags = { sobek_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_helium_3_2
+			add_deposit = d_helium_3_2
 			add_deposit = d_palladium_1
-			set_planet_flag = starting_deposit
+
 			add_modifier = {
 				modifier = extensive_moon_system
 				days = -1
@@ -98,8 +98,8 @@ sys_amun_init = {
 			size = 6
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_minerals_2
-				set_planet_flag = starting_deposit
+				add_deposit = d_minerals_2
+	
 			}
 		}
         moon = {
@@ -121,8 +121,8 @@ sys_amun_init = {
 			size = 4
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_minerals_2
-				set_planet_flag = starting_deposit
+				add_deposit = d_minerals_2
+	
 			}
 		}
 		
@@ -135,8 +135,8 @@ sys_amun_init = {
 			size = 8
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_minerals_4
-				set_planet_flag = starting_deposit
+				add_deposit = d_minerals_4
+	
 			}			
 		}
     }
@@ -213,10 +213,10 @@ sys_amun_init = {
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_anhur_start_buildings = yes
 			generate_anhur_pops = yes
-			set_deposit = d_rich_eezo_deposits
+			add_deposit = d_rich_eezo_deposits
 			add_deposit = d_rich_platinum_deposits
 			add_deposit = d_rich_mineral_deposits
-			set_planet_flag = starting_deposit
+
 			set_name = "Anhur"
 		}
 	}	
@@ -231,9 +231,9 @@ sys_amun_init = {
 		flags = { neith_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_iridium_5
+			add_deposit = d_iridium_5
 			add_deposit = d_trade_value_1
-			set_planet_flag = starting_deposit
+
 		}
 		moon = {
 			name = "Neith a"
@@ -255,8 +255,8 @@ sys_amun_init = {
 		flags = { bast_planet pd_ignore }
 		init_effect = {
 			prevent_anomaly = yes
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_1
+
 		}
 		moon = {
 			name = "Bast a"

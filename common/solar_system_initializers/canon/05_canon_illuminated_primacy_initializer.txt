@@ -219,7 +219,7 @@ sys_obek_init = {
                 ethos = owner
             }
             generate_han_acodu_pops = yes
-            generate_han_major_colony_buildings = yes	
+            generate_han_acodu_colony_buildings = yes	
 
             set_name = "Acodu"
         }
@@ -242,7 +242,7 @@ sys_obek_init = {
 		flags = { volar_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+
 		}
         moon = {
 			name = "Bedil"
@@ -263,7 +263,7 @@ sys_obek_init = {
 		flags = { mdu_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+
 			add_modifier = {
 				modifier = extensive_moon_system
 				days = -1
@@ -293,7 +293,7 @@ sys_obek_init = {
                 ethos = owner
             }
             generate_han_zahni_pops = yes
-            generate_han_major_colony_buildings = yes	
+            generate_han_zahni_colony_buildings = yes	
 
             set_name = "Zahni"
 		}
@@ -343,8 +343,8 @@ sys_stabiae_init = {
                 species = event_target:elcorSpecies
                 ethos = owner
             }
-            generate_han_acodu_pops = yes
-            generate_han_minor_colony_buildings = yes	
+            generate_han_belan_pops = yes
+            generate_han_belan_colony_buildings = yes	
 
             set_name = "Belan"
         }

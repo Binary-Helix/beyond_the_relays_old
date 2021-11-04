@@ -31,10 +31,8 @@ sys_pranas_init = {
         size = 20
 		flags = { pranas_star }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-			set_deposit = d_energy_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_energy_3
+
 			set_planet_flag = starting_mining_target
 		}
 	}
@@ -48,8 +46,8 @@ sys_pranas_init = {
         has_ring = no
 		flags = { saradril_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_2
+
 		}
     }
 
@@ -131,17 +129,17 @@ sys_pranas_init = {
 
     planet = {
         name = "Dragel"
-        class = "pc_mephitic"
+        class = pc_arid #pc_mephitic
         orbit_distance = 100
         orbit_angle = 221
         size = 3
         has_ring = no
 		flags = { dragel_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_platinum_2
+			add_deposit = d_platinum_2
 			add_deposit = d_palladium_2
 			add_deposit = d_iridium_2
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -155,8 +153,7 @@ sys_pranas_init = {
 		flags = { halegeuse_planet pd_ignore }
 		satellite_naming_policy = lower_case_latin_letters
 		init_effect = {
-			set_deposit = d_helium_3_4
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_4
 			set_owner = event_target:salarian_union
 			create_colony = {
 				owner = event_target:salarian_union
@@ -164,7 +161,7 @@ sys_pranas_init = {
 				ethos = owner
 			}
 			generate_sal_halegeuse_pops = yes
-			generate_sal_major_colony_buildings = yes	
+			generate_sal_halegeuse_colony_buildings = yes	
 			
 			set_name = "Halegeuse"
 		}
@@ -201,7 +198,6 @@ sys_ruoshca_init = {
 	max_instances = 1
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
 	}
 
 	flags = { inner_council_system aethon_cluster_system ruoshca_system btr_system custom_system }
@@ -224,7 +220,7 @@ sys_ruoshca_init = {
 		flags = { beknon_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_element_zero_3
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -238,7 +234,7 @@ sys_ruoshca_init = {
 		flags = { aschendal_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_7
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -252,7 +248,7 @@ sys_ruoshca_init = {
 		flags = { osudebal_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_element_zero_1
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -272,7 +268,7 @@ sys_ruoshca_init = {
 				ethos = owner
 			}
 			generate_sal_mannovai_pops = yes
-			generate_sal_major_colony_buildings = yes	
+			generate_sal_mannovai_colony_buildings = yes	
 			
 			set_name = "Mannovai"
 		}
@@ -287,7 +283,6 @@ sys_vothi_init = {
 	flags = { inner_council_system aethon_cluster_system vothi_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes	
 	}
 
 	planet = {
@@ -312,7 +307,7 @@ sys_vothi_init = {
 				ethos = owner
 			}
 			generate_sal_nasurn_pops = yes
-			generate_sal_major_colony_buildings = yes	
+			generate_sal_nasurn_colony_buildings = yes	
 			
 			set_name = "Nasurn"
 		}
@@ -329,8 +324,6 @@ sys_rothila_init = {
 	flags = { inner_council_system aethon_cluster_system rothila_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -363,7 +356,7 @@ sys_rothila_init = {
 			add_deposit = d_iridium_2
 			add_deposit = d_platinum_2
 			add_deposit = d_palladium_1
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -381,9 +374,9 @@ sys_rothila_init = {
 				ethos = owner
 			}
 			generate_sal_dagnes_pops = yes
-			generate_sal_minor_colony_buildings = yes	
+			generate_sal_dagnes_colony_buildings = yes	
 			
-			set_name = "Nasurn"
+			set_name = "Dagnes"
 		}
 		moon = {
 			name = "Warrik"
@@ -420,7 +413,7 @@ sys_rothila_init = {
 		flags = { tinoth_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}
 			moon = {
 				name = "Baleia"
@@ -438,7 +431,7 @@ sys_rothila_init = {
 		flags = { jikkart_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_element_zero_3
-			set_planet_flag = starting_deposit
+
 		}
 	}	
 
@@ -449,7 +442,7 @@ sys_rothila_init = {
         size = 1
 		init_effect = {
 			add_deposit = d_element_zero_3
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -460,7 +453,7 @@ sys_rothila_init = {
         size = 2
 		init_effect = {
 			add_deposit = d_element_zero_3
-			set_planet_flag = starting_deposit
+
 		}
 	}
 }	
@@ -476,8 +469,6 @@ sys_maceddei_init = {
 	flags = { inner_council_system vasdiri_gap_system maceddei_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -505,7 +496,7 @@ sys_maceddei_init = {
 				ethos = owner
 			}
 			generate_sal_jaeto_pops = yes
-			generate_sal_major_colony_buildings = yes	
+			generate_sal_jaeto_colony_buildings = yes	
 			
 			set_name = "Jaëto"
 		}
@@ -530,8 +521,6 @@ sys_gorot_init = {
 	flags = { inner_council_system vasdiri_gap_system gorot_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -569,7 +558,7 @@ sys_gorot_init = {
 				ethos = owner
 			}
 			generate_sal_gorot_pops = yes
-			generate_sal_minor_colony_buildings = yes	
+			generate_sal_gorot_colony_buildings = yes	
 			
 			set_name = "Gorot II"
 		}
@@ -606,8 +595,6 @@ sys_sovak_init = {
 	flags = { outer_council_system nimbus_cluster_system sovak_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -629,7 +616,7 @@ sys_sovak_init = {
 		init_effect = {
 			add_deposit = d_iridium_4
 			add_deposit = d_palladium_3
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -647,7 +634,7 @@ sys_sovak_init = {
 				ethos = owner
 			}
 			generate_sal_gataly_pops = yes
-			generate_sal_major_colony_buildings = yes	
+			generate_sal_gataly_colony_buildings = yes	
 			
 			set_name = "Gataly"
 		}
@@ -682,8 +669,6 @@ sys_limron_init = {
 	flags = { inner_council_system andura_sector_system limron_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -711,7 +696,7 @@ sys_limron_init = {
 		has_ring = no
 		flags = { narota_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_platinum_2
+			add_deposit = d_platinum_2
 		}
 	}
 
@@ -730,7 +715,7 @@ sys_limron_init = {
 				ethos = owner
 			}
 			generate_sal_senoquol_pops = yes
-			generate_sal_major_colony_buildings = yes	
+			generate_sal_senoquoi_colony_buildings = yes	
 			
 			set_name = "Senoquol"
 		}
@@ -772,8 +757,6 @@ sys_antillin_init = {
 	flags = { inner_council_system andura_sector_system antillin_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -816,7 +799,7 @@ sys_antillin_init = {
 				ethos = owner
 			}
 			generate_sal_saetabelo_pops = yes
-			generate_sal_major_colony_buildings = yes	
+			generate_sal_saetabelo_colony_buildings = yes	
 			
 			set_name = "Saetabelo"
 		}
@@ -876,8 +859,6 @@ sys_vildisa_init = {
 	flags = { inner_council_system andura_sector_system vildisa_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -908,7 +889,7 @@ sys_vildisa_init = {
 					ethos = owner
 				}
 				generate_sal_voya_pops = yes
-				generate_sal_minor_colony_buildings = yes	
+				generate_sal_voya_colony_buildings = yes	
 				
 				set_name = "Voya"
 			}	
@@ -935,8 +916,6 @@ sys_anunulibse_init = {
 	flags = { inner_council_system vasdiri_gap_system anunilibse_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -982,7 +961,7 @@ sys_anunulibse_init = {
 				ethos = owner
 			}
 			generate_sal_rannandril_pops = yes
-			generate_sal_minor_colony_buildings = yes	
+			generate_sal_rannandril_colony_buildings = yes	
 			
 			set_name = "Rannandril"
 		}
@@ -1028,8 +1007,6 @@ sys_bedi_init = {
 	flags = { inner_council_system olynprotectorate_system bedi_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_sal_generate_stations = yes
-
 	
 	}
 
@@ -1054,7 +1031,7 @@ sys_bedi_init = {
 				ethos = owner
 			}
 			generate_sal_olor_pops = yes
-			generate_sal_minor_colony_buildings = yes	
+			generate_sal_olor_colony_buildings = yes	
 			
 			set_name = "Olor"
 		}
@@ -1092,12 +1069,7 @@ sys_strabo_init = {
         size = 30
 		flags = { strabo_star }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes
-
-			set_deposit = d_energy_4
-			set_planet_flag = starting_deposit
-
+			add_deposit = d_energy_4
 			create_ambient_object = {
 				type = "nebula_2"
 				entity_offset_height = -5
@@ -1122,9 +1094,8 @@ sys_strabo_init = {
 		size = 27
 		flags = { antigar_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 			add_modifier = {
 				modifier = extensive_moon_system
 				days = -1
@@ -1144,11 +1115,8 @@ sys_strabo_init = {
 			orbit_distance = 5
 			orbit_angle = 230
 			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				set_deposit = d_minerals_1
-				set_planet_flag = starting_deposit
+				add_deposit = d_minerals_1
+	
 			}
 		}
 		moon = {
@@ -1216,7 +1184,6 @@ sys_strabo_init = {
 		}
 		moon = {
 			name = "Jarrahe Station"
-			count = 1
 			class = "pc_jarrahe_station"
 			entity = "btr_jarrahe_station"
 			orbit_angle = { min = 90 max = 270 }
@@ -1224,24 +1191,17 @@ sys_strabo_init = {
 			size = 4
 			flags = { jarrahe_station pd_ignore }
 			init_effect = {
-				prevent_anomaly = yes
-				clear_deposits = yes
-				clear_planet_modifiers = yes 
-				set_deposit = rs_d_engineering_2
+				add_deposit = rs_d_engineering_2
 				add_deposit = d_physics_2
-				set_planet_flag = starting_deposit
 				set_owner = event_target:salarian_union
 				create_colony = {
 					owner = event_target:salarian_union
 					species = event_target:salarianSpecies
 					ethos = owner
 				}
-				#ignore_initial_colony_error = yes				
-				while = {
-					count = 2
-					create_pop = { species = event_target:salarianSpecies }
-				}
-			
+
+				generate_sal_jarrahe_pops = yes
+				generate_sal_jarrahe_colony_buildings = yes
 				add_district = district_pdhab_science
 				add_district = district_pdhab_science	
 				add_district = district_pdhab_mil

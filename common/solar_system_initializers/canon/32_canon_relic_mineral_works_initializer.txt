@@ -60,8 +60,8 @@ sys_relic_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_2
+
 			add_modifier = {
 				modifier = high_gravity
 				days = -1
@@ -85,8 +85,8 @@ sys_relic_init = {
 				modifier = high_gravity
 				days = -1
 			}
-			set_deposit = d_iridium_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_iridium_3
+
 		}
     }
 
@@ -102,8 +102,8 @@ sys_relic_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_helium_3_5
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_5
+
 		}
 		moon = {
 			name = "Drifting Skies"
@@ -188,7 +188,7 @@ sys_relic_init = {
 
     planet = {
 		name = "Rough Tide"
-        class = "pc_mephitic"
+        class = pc_arid #pc_mephitic
         orbit_distance = 40
         orbit_angle = 192
         has_ring = no
@@ -198,9 +198,9 @@ sys_relic_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_average_platinum_deposits
+			add_deposit = d_average_platinum_deposits
 			add_deposit = d_trade_value_2
-			set_planet_flag = starting_deposit
+
 			prevent_anomaly = yes
 			create_country = {
 				name = "NAME_relic_mineral_works"
@@ -284,10 +284,10 @@ sys_relic_init = {
 			prevent_anomaly = yes
 			clear_deposits = yes
 			clear_planet_modifiers = yes 
-			set_deposit = d_minerals_4
+			add_deposit = d_minerals_4
 			add_deposit = d_iridium_1
 			add_deposit = d_alloys_1
-			set_planet_flag = starting_deposit
+
 			create_colony = { 
 				owner = last_created_country 
 				species = last_created 

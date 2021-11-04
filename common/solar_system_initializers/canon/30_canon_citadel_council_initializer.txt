@@ -170,8 +170,8 @@ sys_phoenix_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes		
-			set_deposit = d_minerals_3
-			set_planet_flag = starting_deposit	
+			add_deposit = d_minerals_3
+	
 			add_modifier = {
 				modifier = tidal_locked
 				days = -1
@@ -190,8 +190,8 @@ sys_phoenix_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes		
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit	
+			add_deposit = d_helium_3_2
+	
 	    }
     }
 
@@ -211,7 +211,7 @@ sys_phoenix_init = {
 
     planet = {
         name = "Tuntau"
-        class = "pc_mephitic"
+        class = pc_arid #pc_mephitic
         orbit_distance = 40
         orbit_angle = 148
         has_ring = no
@@ -220,11 +220,11 @@ sys_phoenix_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes		
-			set_deposit = d_iridium_1
+			add_deposit = d_iridium_1
 			add_deposit = d_platinum_1
 			add_deposit = d_palladium_1
 			add_deposit = d_minerals_1
-			set_planet_flag = starting_deposit	
+	
 	    }
     }
 
@@ -239,8 +239,8 @@ sys_phoenix_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes		
-			set_deposit = d_minerals_1
-			set_planet_flag = starting_deposit	
+			add_deposit = d_minerals_1
+	
 	    }
 	}	
 

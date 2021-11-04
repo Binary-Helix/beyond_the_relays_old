@@ -157,7 +157,7 @@ sys_aru_init = {
 		init_effect = {
 			add_deposit = d_iridium_2
 			add_deposit = d_palladium_2
-			set_planet_flag = starting_deposit
+
 			set_owner = event_target:vol_protectorate
 			create_colony = {
 				owner = event_target:vol_protectorate
@@ -223,7 +223,7 @@ sys_menarel_init = {
 		init_effect = {
 			add_deposit = d_iridium_2
 			add_deposit = d_palladium_2
-			set_planet_flag = starting_deposit
+
 			set_owner = event_target:vol_protectorate
 			create_colony = {
 				owner = event_target:vol_protectorate
@@ -246,7 +246,7 @@ sys_menarel_init = {
 		flags = { yimunwol_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -289,8 +289,8 @@ sys_yakawa_init = {
 		size = 25
 		flags = { sakata_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_3
+
 			add_modifier = {
 				modifier = strong_magnetic_field
 				days = -1
@@ -307,8 +307,8 @@ sys_yakawa_init = {
 		size = 32
 		flags = { nambu_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_1
+
 		}
 		moon = {
 			name = "Sumiko"
@@ -319,8 +319,8 @@ sys_yakawa_init = {
 			flags = { sumiko_planet pd_ignore }
 			init_effect = {
 				prevent_anomaly = yes
-				set_deposit = d_trade_value_2
-				set_planet_flag = starting_deposit
+				add_deposit = d_trade_value_2
+	
 			}
         }
 
@@ -354,10 +354,10 @@ sys_yakawa_init = {
 		size = 17
 		flags = { maskawa_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_rich_iridium_deposits
+			add_deposit = d_rich_iridium_deposits
 			add_deposit = d_average_platinum_deposits
 			add_deposit = d_average_palladium_deposits
-			set_planet_flag = starting_deposit
+
 			set_owner = event_target:vol_protectorate
 			create_colony = {
 				owner = event_target:vol_protectorate
@@ -396,9 +396,9 @@ sys_yakawa_init = {
 		size = 29
 		flags = { kobayashi_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_4
+			add_deposit = d_helium_3_4
 			add_deposit = d_exotic_gases_1
-			set_planet_flag = starting_deposit
+
 		}		
 		moon = {
 			name = "Kobayashi a"
@@ -500,8 +500,8 @@ sys_cobines_init = {
 		size = 27
 		flags = { lahman_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_3
+
 		}
     }
 
@@ -557,8 +557,8 @@ sys_omaverizh_init = {
         has_ring = no
 		size = 2
 		init_effect = {
-			set_deposit = d_iridium_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_iridium_1
+
 		}
     }
 
@@ -570,7 +570,7 @@ sys_omaverizh_init = {
 		size = 2
 		init_effect = {
 			add_deposit = d_platinum_2
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -582,7 +582,7 @@ sys_omaverizh_init = {
 		size = 3
 		init_effect = {
 			add_deposit = d_palladium_3
-			set_planet_flag = starting_deposit
+
 		}
     }
 	
@@ -617,8 +617,8 @@ sys_omaverizh_init = {
 		size = 22
 		flags = { furwond_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_3
+
 		}
     }
 }

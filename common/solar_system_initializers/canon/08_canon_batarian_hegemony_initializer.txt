@@ -241,9 +241,9 @@ sys_indris_init = {
 		has_ring = no
 		flags = { camala_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_rich_eezo_deposits
 			add_deposit = d_rich_eezo_deposits
-			set_planet_flag = starting_deposit
+			add_deposit = d_rich_eezo_deposits
+
 			set_owner = event_target:batarian_hegemony
 			create_colony = {
 				owner = event_target:batarian_hegemony
@@ -267,7 +267,7 @@ sys_indris_init = {
 		flags = { ramlat_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_4
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -281,7 +281,7 @@ sys_indris_init = {
 		flags = { hiba_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -306,7 +306,7 @@ sys_indris_init = {
 		init_effect = {
 			add_deposit = d_average_iridium_deposits
 			add_deposit = d_average_palladium_deposits
-			set_planet_flag = starting_deposit
+
 		}
     }
 }
@@ -339,9 +339,9 @@ sys_koshlanhk_init = {
 		has_ring = no
 		flags = { naribnost_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_2
+			add_deposit = d_iridium_2
 			add_deposit = d_platinum_3
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -353,8 +353,8 @@ sys_koshlanhk_init = {
 		has_ring = yes
 		flags = { larklesh_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_palladium_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_palladium_2
+
 		}		
 	}
 
@@ -366,8 +366,8 @@ sys_koshlanhk_init = {
 		has_ring = no
 		flags = { khuramna_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}			
 		moon = {  
 			name = "Khuramna a"
@@ -387,8 +387,8 @@ sys_koshlanhk_init = {
 			orbit_distance = 4
 			size = 2
 			init_effect = {
-				set_deposit = d_trade_value_4
-				set_planet_flag = starting_deposit
+				add_deposit = d_trade_value_4
+	
 			}
 		}	
 	}
@@ -447,8 +447,8 @@ sys_vular_init = {
 		has_ring = no
 		flags = { erszbat_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_element_zero_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_element_zero_1
+
 			set_owner = event_target:batarian_hegemony
 			create_colony = {
 				owner = event_target:batarian_hegemony
@@ -471,8 +471,8 @@ sys_vular_init = {
 		has_ring = yes
 		flags = { azimir_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}
     }
 
@@ -485,8 +485,8 @@ sys_vular_init = {
 		has_ring = no
 		flags = { vana_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_2
+
 		}
     }
 
@@ -534,8 +534,8 @@ sys_untrel_init = {
 		has_ring = no
 		flags = { ezka_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_1
+
 		}
     }
 
@@ -548,11 +548,11 @@ sys_untrel_init = {
 		has_ring = no
 		flags = { klos_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_1
+			add_deposit = d_iridium_1
 			add_deposit = d_platinum_4
 			add_deposit = d_palladium_2
 			add_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -586,8 +586,8 @@ sys_untrel_init = {
 		has_ring = no
 		flags = { uza_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}
     }
 
@@ -642,8 +642,8 @@ sys_gravnaz_init = {
 		size = 14
 		flags = { rekkud_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_palladium_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_palladium_2
+
 		}
     }
 
@@ -676,8 +676,8 @@ sys_gravnaz_init = {
 			}
 		}
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}
     }	
 
@@ -689,8 +689,8 @@ sys_gravnaz_init = {
 		size = 30
 		flags = { ygdra_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_1
+
 		}
 	}
 
@@ -702,8 +702,8 @@ sys_gravnaz_init = {
 		size = 28
 		flags = { jorastan_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}
 	}
 
@@ -745,9 +745,9 @@ sys_shuoma_init = {
 	   	has_ring = no
 		flags = { bumi_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_average_iridium_deposits
+			add_deposit = d_average_iridium_deposits
 			add_deposit = d_rich_mineral_deposits
-			set_planet_flag = starting_deposit
+
 		}
 	}
 	
@@ -760,9 +760,9 @@ sys_shuoma_init = {
 	    has_ring = no   
 		flags = { sectur_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_poor_palladium_deposits
+			add_deposit = d_poor_palladium_deposits
 			add_deposit = d_average_mineral_deposits
-			set_planet_flag = starting_deposit
+
 		}
 	}
 	
@@ -775,8 +775,8 @@ sys_shuoma_init = {
 		has_ring = yes
 		flags = { nukvarn_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_4
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_4
+
 		}
 		moon = {
             name = "Makrag"
@@ -787,10 +787,10 @@ sys_shuoma_init = {
             size = 3
 			flags = { makrag_planet pd_ignore }
 			init_effect = {
-				set_deposit = d_iridium_3
+				add_deposit = d_iridium_3
 				add_deposit = d_platinum_1
 				add_deposit = d_palladium_2
-				set_planet_flag = starting_deposit
+	
 			}
 		}
 		moon = {
@@ -802,9 +802,9 @@ sys_shuoma_init = {
             size = 5
 			flags = { gorbakpa_planet pd_ignore }
 			init_effect = {
-				set_deposit = d_platinum_2
+				add_deposit = d_platinum_2
 				add_deposit = d_minerals_3
-				set_planet_flag = starting_deposit
+	
 			}
         }
 	}
@@ -818,8 +818,8 @@ sys_shuoma_init = {
 		has_ring = no
 		flags = { ghrada_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}
 		moon = {
             name = "Orn'Tvarn"
@@ -830,8 +830,8 @@ sys_shuoma_init = {
 			size = 4
 			flags = { orntvarn_planet pd_ignore }
 			init_effect = {
-				set_deposit = d_element_zero_3
-				set_planet_flag = starting_deposit
+				add_deposit = d_element_zero_3
+	
 			}
         }
 	}
@@ -845,9 +845,9 @@ sys_shuoma_init = {
         has_ring = no
 		flags = { qdurn_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_element_zero_2
+			add_deposit = d_element_zero_2
 			add_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+
 		}
 		moon = {
             name = "Nefari"
@@ -1103,8 +1103,8 @@ sys_urdupos_init = {
         has_ring = no
 		flags = { juxhi_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_element_zero_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_element_zero_2
+
 			set_owner = event_target:batarian_hegemony
 			create_colony = {
 				owner = event_target:batarian_hegemony
@@ -1173,11 +1173,11 @@ sys_bahak_init = {
 		size = 6
 		flags = { clogon_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_1
+			add_deposit = d_iridium_1
 			add_deposit = d_platinum_1
 			add_deposit = d_palladium_1
 			add_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -1218,11 +1218,11 @@ sys_bahak_init = {
 		size = 4
 		flags = { yunaca_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_4
+			add_deposit = d_iridium_4
 			add_deposit = d_platinum_2
 			add_deposit = d_palladium_4
 			add_deposit = d_minerals_4
-			set_planet_flag = starting_deposit
+
 		}		
     }
 
@@ -1235,8 +1235,8 @@ sys_bahak_init = {
 		size = 37
 		flags = { urmola_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_3
+
 		}
     }
 
@@ -1249,8 +1249,8 @@ sys_bahak_init = {
 		size = 36
 		flags = { bastzuda_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_1
+
 		}
     }
 
@@ -1298,8 +1298,8 @@ sys_chelae_init = {
 		size = 16
 		flags = { ophapra_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_2
+
 		}
 	}
 
@@ -1318,8 +1318,8 @@ sys_chelae_init = {
 		size = 14
 		flags = { viwei_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_poor_mineral_deposits
-			set_planet_flag = starting_deposit
+			add_deposit = d_poor_mineral_deposits
+
 			set_owner = event_target:batarian_hegemony
 			create_colony = {
 				owner = event_target:batarian_hegemony
@@ -1340,8 +1340,8 @@ sys_chelae_init = {
 		size = 20
 		flags = { traanides_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_element_zero_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_element_zero_2
+
 		}
 	}
 

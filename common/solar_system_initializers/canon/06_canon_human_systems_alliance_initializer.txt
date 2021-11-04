@@ -139,13 +139,13 @@ sys_sol_init = {
 		}			
 		moon = {
 			name = "Luna"
-			class = "pc_iron"
+			class = pc_pd_barren_cold_hab
 			orbit_distance = 12
 			orbit_angle = 40
 			has_ring = no
 			size = 4
 			entity = "cold_barren_planet_luna_entity"
-			flags = { luna_planet pd_ignore }
+			flags = { luna_planet pd_ignore pd_hab01 }
 			init_effect = {
 				set_owner = event_target:systems_alliance
 				create_colony = {
@@ -154,7 +154,7 @@ sys_sol_init = {
 					ethos = owner
 				}
 				generate_hum_luna_pops = yes
-				generate_hum_minor_colony_buildings = yes	
+				generate_hum_luna_buildings = yes	
 	
 				set_name = "Luna"		
 			}
@@ -163,7 +163,7 @@ sys_sol_init = {
 	
 	planet = {
 		name = "Mars"
-		class = "pc_mephitic"
+		class = "pc_pd_barren_hab"
 		orbit_distance = 25
 		orbit_angle = 60
 		size = 8
@@ -178,7 +178,7 @@ sys_sol_init = {
 				ethos = owner
 			}
 			generate_hum_mars_pops = yes
-			generate_hum_minor_colony_buildings = yes	
+			generate_hum_mars_buildings = yes	
 
 			set_name = "Mars"		
 		}	
@@ -240,7 +240,7 @@ sys_sol_init = {
 		}
 		moon = {
 			name = "Europa"
-			class = "pc_frozen"
+			class = "pc_subglacial"
 			orbit_distance = 2.5
 			orbit_angle = 10
 			size = 3
@@ -368,7 +368,6 @@ sys_sirius_system = {
 	flags = { alliance_space_system local_cluster_system sirius_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
 	planet = {
@@ -404,7 +403,7 @@ sys_sirius_system = {
 				ethos = owner
 			}
 			generate_hum_demeter_pops = yes
-			generate_hum_minor_colony_buildings = yes	
+			generate_hum_demeter_colony_buildings = yes	
 
 			set_name = "Demeter"		
 		}
@@ -418,10 +417,10 @@ sys_sirius_system = {
 		size = 12
 		flags = { persephone_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_iridium_1
+			add_deposit = d_iridium_1
 			add_deposit = d_platinum_2
 			add_deposit = d_palladium_1
-			set_planet_flag = starting_deposit
+
 		}
 	}
 	
@@ -433,8 +432,8 @@ sys_sirius_system = {
 		size = 10
 		flags = { dionysus_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_4
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_4
+
 		}
 	}
 
@@ -456,7 +455,6 @@ sys_61ursaemajoris_init = {
 	flags = { alliance_space_system local_cluster_system 61ursaemajoris_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -483,8 +481,8 @@ sys_61ursaemajoris_init = {
 		size = 6
 		flags = { intarabus_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_4
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_4
+
 		}
 	}
 
@@ -502,7 +500,7 @@ sys_61ursaemajoris_init = {
 				ethos = owner
 			}
 			generate_hum_sirona_pops = yes
-			generate_hum_minor_colony_buildings = yes	
+			generate_hum_sirona_colony_buildings = yes	
 
 			set_name = "Sirona"		
 		}
@@ -521,8 +519,8 @@ sys_61ursaemajoris_init = {
 		size = 34
 		flags = { lenus_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_2
+
 		}
 		moon = {
 			name = "Ancamna"
@@ -552,8 +550,8 @@ sys_61ursaemajoris_init = {
 		size = 37
 		flags = { iovantucarus_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_1
+
 		}
 		moon = {
 			name = "Iovantucarus a"
@@ -586,7 +584,6 @@ sys_arcturus_init = {
 	flags = { alliance_space_system arcturus_stream_system arcturus_system btr_system custom_system }	
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
 	planet = {
@@ -596,8 +593,7 @@ sys_arcturus_init = {
         size = 30
 		flags = { arcturus_star }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
+
 		}	
     }
 	
@@ -615,14 +611,7 @@ sys_arcturus_init = {
 		has_ring = no
 		flags = { alcyoneus_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier = alcyoneus_codex
-				days = -1
-			}
+			add_deposit = d_minerals_2
 		}
 	}
 
@@ -634,8 +623,6 @@ sys_arcturus_init = {
 		entity = "btr_arcturus_station_entity"
 		flags = { arcturus_station pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
 			set_owner = event_target:systems_alliance
 			create_colony = {
 				owner = event_target:systems_alliance
@@ -643,12 +630,11 @@ sys_arcturus_init = {
 				ethos = owner
 			}
 			generate_hum_arcturus_pops = yes
-			add_modifier = {
-				modifier = arcturus_station_codex
-				days = -1
-			}
+			generate_start_buildings_and_districts = yes
+			generate_btr_start_deposits_and_blockers = yes
 		}
 	}
+
 	
 	planet = {
         name = "Souq"
@@ -672,12 +658,7 @@ sys_arcturus_init = {
         has_ring = no
 		flags = { themis_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_2
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier = themis_codex
-				days = -1
-			}
+			add_deposit = d_helium_3_2
 		}
     }
 
@@ -690,14 +671,8 @@ sys_arcturus_init = {
         has_ring = yes
 		flags = { eirene_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier = eirene_codex
-				days = -1
-			}
+
+			add_deposit = d_helium_3_3
    		}
 	}	   
 
@@ -710,12 +685,6 @@ sys_arcturus_init = {
         has_ring = no
 		flags = { eunomia_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			add_modifier = {
-				modifier = eunomia_codex
-				days = -1
-			}
     	}
 	}	
 
@@ -738,7 +707,6 @@ sys_euler_init = {
 	flags = { alliance_space_system arcturus_stream_system euler_system btr_system custom_system }	
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -757,14 +725,8 @@ sys_euler_init = {
 		has_ring = no
 		flags = { fermi_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			set_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier = fermi_codex
-				days = -1
-			}
+
+			add_deposit = d_minerals_1
 		}
     }
 
@@ -777,14 +739,8 @@ sys_euler_init = {
         has_ring = no
 		flags = { benning_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			set_deposit = d_trade_value_2
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier = benning_codex
-				days = -1
-			}		
+
+			add_deposit = d_trade_value_2	
 			set_owner = event_target:systems_alliance
 			create_colony = {
 				owner = event_target:systems_alliance
@@ -792,7 +748,7 @@ sys_euler_init = {
 				ethos = owner
 			}
 			generate_hum_benning_pops = yes
-			generate_hum_minor_colony_buildings = yes	
+			generate_hum_benning_colony_buildings = yes	
 
 			set_name = "Benning"		
 		}
@@ -809,11 +765,7 @@ sys_euler_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			clear_deposits = yes
-			set_deposit = d_minerals_3	
-			add_modifier = {
-				modifier = yukawa_codex
-				days = -1
-			}
+			add_deposit = d_minerals_3	
 		}		
     }
 
@@ -826,14 +778,8 @@ sys_euler_init = {
         has_ring = no
 		flags = { silva_planet pd_ignore }
 		init_effect = {
-			prevent_anomaly = yes
-			clear_deposits = yes	
-			set_deposit = d_helium_3_4
-			set_planet_flag = starting_deposit
-			add_modifier = {
-				modifier = silva_codex
-				days = -1
-			}
+
+			add_deposit = d_helium_3_4
 		}
 		moon = {
 			name = "Oliveira"
@@ -869,7 +815,6 @@ sys_asgard_init = {
 	flags = { alliance_space_system exodus_cluster_system asgard_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -890,8 +835,7 @@ sys_asgard_init = {
 		entity = prairie_planet
 		flags = { terranova_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_rich_platinum_deposits
-			set_planet_flag = starting_deposit
+			add_deposit = d_rich_platinum_deposits
 			set_owner = event_target:systems_alliance
 			create_colony = {
 				owner = event_target:systems_alliance
@@ -899,7 +843,7 @@ sys_asgard_init = {
 				ethos = owner
 			}
 			generate_hum_terranova_pops = yes
-			generate_hum_minor_colony_buildings = yes	
+			generate_hum_terra_nova_colony_buildings = yes	
 
 			set_name = "Terra Nova"		
 		}
@@ -914,8 +858,8 @@ sys_asgard_init = {
         has_ring = no
 		flags = { borr_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_4
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_4
+
 		}
 		moon = {
 			name = "Borr a"
@@ -941,15 +885,14 @@ sys_asgard_init = {
 
     planet = {
         name = "Tyr"
-        class = pc_mephitic
+        class = pc_arid #pc_mephitic
         orbit_distance = 40
         orbit_angle = 102
 		size = 15
         has_ring = no
 		flags = { tyr_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_poor_platinum_deposits
-			set_planet_flag = starting_deposit
+			add_deposit = d_poor_platinum_deposits
 			set_owner = event_target:systems_alliance
 			create_colony = {
 				owner = event_target:systems_alliance
@@ -957,7 +900,7 @@ sys_asgard_init = {
 				ethos = owner
 			}
 			generate_hum_tyr_pops = yes
-			generate_hum_minor_colony_buildings = yes	
+			generate_hum_tyr_colony_buildings = yes	
 
 			set_name = "Tyr"		
 		}
@@ -991,7 +934,6 @@ sys_utopia_init = {
 	flags = { alliance_space_system exodus_cluster_system utopia_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -1011,8 +953,8 @@ sys_utopia_init = {
         has_ring = no
 		flags = { arcadia_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_1
+
 		}
     }
 
@@ -1032,7 +974,7 @@ sys_utopia_init = {
 				ethos = owner
 			}
 			generate_hum_edenprime_pops = yes
-			generate_hum_minor_colony_buildings = yes	
+			generate_hum_eden_prime_colony_buildings = yes	
 
 			set_name = "Eden Prime"		
 		}
@@ -1047,8 +989,8 @@ sys_utopia_init = {
         has_ring = no
 		flags = { zion_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_1
+
 		}
 		moon = {
 			name = "Asphodel"
@@ -1067,8 +1009,8 @@ sys_utopia_init = {
         has_ring = no
 		flags = { nirvana_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_1
+
 		}
     }
 
@@ -1103,7 +1045,6 @@ sys_baldr_init = {
 	flags = { attican_traverse_system yggdrasil_nebula_system baldr_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -1131,15 +1072,15 @@ sys_baldr_init = {
 		size = 17
 		flags = { mindoir_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_average_mineral_deposits
-			set_planet_flag = starting_deposit
+			add_deposit = d_average_mineral_deposits
+
             create_colony = {
                 owner = event_target:systems_alliance
                 species = event_target:humanSpecies
                 ethos = owner
             }
             generate_hum_mindoir_pops = yes
-            generate_hum_minor_colony_buildings = yes	
+            generate_hum_mindoir_colony_buildings = yes	
 
             set_name = "Mindoir"		
 		}
@@ -1152,8 +1093,8 @@ sys_baldr_init = {
 		size = 6
 		flags = { coten_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_2
+
 		}
 	}	
 
@@ -1178,7 +1119,6 @@ sys_iotapersei_init = {
 	flags = { inner_council_system xingyun_system iota_persei_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -1199,7 +1139,7 @@ sys_iotapersei_init = {
 		flags = { hebei_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_minerals_1
-			set_planet_flag = starting_deposit
+
 		}	
     }
 
@@ -1219,7 +1159,7 @@ sys_iotapersei_init = {
                 ethos = owner
             }
             generate_hum_shanxi_pops = yes
-            generate_hum_minor_colony_buildings = yes	
+            generate_hum_shanxhi_colony_buildings = yes	
 
             set_name = "Shanxi"
 		}
@@ -1244,7 +1184,6 @@ sys_vetus_init = {
 	flags = { alliance_space_system petra_nebula_system vetus_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -1285,7 +1224,7 @@ sys_vetus_init = {
                 ethos = owner
             }
             generate_hum_elysium_pops = yes
-            generate_hum_minor_colony_buildings = yes	
+            generate_hum_elysium_colony_buildings = yes	
 
             set_name = "Elysium"
 		}
@@ -1310,8 +1249,8 @@ sys_vetus_init = {
         has_ring = yes
 		flags = { joppa_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_helium_3_3
+
 		}
     }
 
@@ -1324,8 +1263,8 @@ sys_vetus_init = {
         has_ring = no
 		flags = { gilead_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_minerals_3
-			set_planet_flag = starting_deposit
+			add_deposit = d_minerals_3
+
 		}
     }
 
@@ -1348,7 +1287,6 @@ sys_selvandia_init = {
 	flags = { alliance_space_system petra_nebula_system selvandia_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -1367,9 +1305,9 @@ sys_selvandia_init = {
         has_ring = no
 		flags = { sinaloa_planet pd_ignore }
 		init_effect = {
-			set_deposit = d_platinum_3
+			add_deposit = d_platinum_3
 			add_deposit = d_minerals_2
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -1398,7 +1336,7 @@ sys_selvandia_init = {
                 ethos = owner
             }
             generate_hum_yandoa_pops = yes
-            generate_hum_minor_colony_buildings = yes	
+            generate_hum_yandoa_colony_buildings = yes	
 
             set_name = "Yandoa"
 		}
@@ -1445,7 +1383,6 @@ sys_boltzmann_init = {
 	flags = { outer_council_system nimbus_cluster_system boltzmann_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_hum_generate_stations = yes	
 	}
 
     planet = {
@@ -1473,7 +1410,7 @@ sys_boltzmann_init = {
 			add_deposit = d_iridium_3
 			add_deposit = d_platinum_2
 			add_deposit = d_palladium_2
-			set_planet_flag = starting_deposit
+
 		}
     }
 
@@ -1493,7 +1430,7 @@ sys_boltzmann_init = {
                 ethos = owner
             }
             generate_hum_bekenstein_pops = yes
-            generate_hum_minor_colony_buildings = yes	
+            generate_hum_bekenstein_colony_buildings = yes	
 
             set_name = "Bekenstein"
 		}
@@ -1519,7 +1456,7 @@ sys_boltzmann_init = {
 		flags = { veltman_planet pd_ignore }
 		init_effect = {
 			add_deposit = d_helium_3_3
-			set_planet_flag = starting_deposit
+
 		}
     }
 

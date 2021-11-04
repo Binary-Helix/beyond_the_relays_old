@@ -22,7 +22,7 @@ sys_theseaofstorms_init = {
 		class = pc_invisible_star
 		size = 30
 		init_effect = {
-			set_planet_flag = starting_deposit
+
 		}
 	}
 
@@ -152,7 +152,7 @@ sys_haelazi_init = {
 
     planet = {
         name = "Ceeharu"
-        class = pc_mephitic
+        class = pc_arid #pc_mephitic
         orbit_distance = 40
         orbit_angle = 171
         has_ring = no
@@ -775,7 +775,7 @@ sys_ruvum_init = {
 
 	planet = {
         name = "Jessu"
-        class = pc_mephitic
+        class = pc_arid #pc_mephitic
         orbit_distance = 20
         orbit_angle = 146
         has_ring = no
