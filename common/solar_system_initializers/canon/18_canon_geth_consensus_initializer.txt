@@ -145,8 +145,8 @@ sys_tikkun_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			generate_get_colony_pops = yes
-			generate_get_major_colony_buildings = yes	
+			generate_get_adas_pops = yes
+			generate_get_adas_colony_buildings = yes	
 			
 			set_name = "Adas"
 		}
@@ -223,8 +223,8 @@ sys_caarehyosal_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			generate_get_habitat_pops = yes
-			generate_btr_geth_incursion_start_buildings = yes	
+			generate_get_naanacurrel_pops = yes
+			generate_get_naanacurrel_colony_buildings = yes	
 			
 			set_name = "Naana'currel"
 		}
@@ -249,7 +249,6 @@ sys_kholas_init = {
 	flags = { terminus_system perseus_veil_system kholas_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_get_generate_stations = yes	
 	}
 	planet = {
 		name = "Kholas"
@@ -290,10 +289,10 @@ sys_kholas_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			generate_get_habitat_pops = yes
-			generate_btr_geth_incursion_start_buildings = yes	
+			generate_get_kasdavar_pops = yes
+			generate_get_kasdavar_colony_buildings = yes	
 			
-			set_name = "Charoum"
+			set_name = "Kasda'Var"
 		}
     }
 }
@@ -307,7 +306,6 @@ sys_dholen_init = {
 	flags = { terminus_system far_rim_system dholen_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_get_generate_stations = yes	
 	}
 
     planet = {
@@ -355,8 +353,8 @@ sys_dholen_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			generate_get_habitat_pops = yes
-			generate_btr_geth_incursion_start_buildings = yes	
+			generate_get_charoum_pops = yes
+			generate_get_charoum_colony_buildings = yes	
 			
 			set_name = "Charoum"
 		}
@@ -391,8 +389,8 @@ sys_dholen_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			generate_get_colony_pops = yes
-			generate_get_major_colony_buildings = yes	
+			generate_get_haestrom_pops = yes
+			generate_get_haestrom_colony_buildings = yes	
 			
 			set_name = "Haestrom"
 		}
@@ -416,7 +414,6 @@ sys_disul_init = {
 	flags = { terminus_system far_rim_system disul_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_get_generate_stations = yes	
 	}
 
     planet = {
@@ -475,7 +472,6 @@ sys_maat_init = {
 	flags = { terminus_system far_rim_system maat_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_get_generate_stations = yes	
 	}
 
     planet = {
@@ -500,8 +496,8 @@ sys_maat_init = {
 				species = event_target:gethSpecies
 				ethos = owner
 			}
-			generate_get_habitat_pops = yes
-			generate_btr_geth_incursion_start_buildings = yes	
+			generate_get_ammut_pops = yes
+			generate_get_ammut_colony_buildings = yes	
 			
 			set_name = "Ammut"
 		}

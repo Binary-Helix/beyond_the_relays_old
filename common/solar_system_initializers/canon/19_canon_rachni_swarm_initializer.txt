@@ -61,7 +61,7 @@ sys_maskimxul_init = {
 					type = default
 					origin = "origin_rachni_swarm"
 					ignore_initial_colony_error = yes
-					civics = { civic = "civic_hive_devouring_swarm" civic = "civic_hive_subspace_ephapse" }
+					civics = { civic = "civic_hive_pooled_knowledge" civic = "civic_hive_empath" }
 					authority = auth_hive_mind
 					name_list = "btr_collectors"
 					ethos = { ethic = "ethic_gestalt_consciousness" }
@@ -225,7 +225,7 @@ sys_mullaxul_init = {
 				species = event_target:rachniSpecies
 				ethos = owner
 			}
-			generate_rac_utukka_start_buildings = yes
+			generate_rac_utukku_start_buildings = yes
 			generate_rac_utukku_pops = yes	
 			
 			set_name = "Utukku"

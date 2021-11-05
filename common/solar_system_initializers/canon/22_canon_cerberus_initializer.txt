@@ -153,7 +153,9 @@ sys_lazarus_init = {
 			}
 			generate_cerb_lazarus_pops = yes
 			generate_cerberus_lazarus_buildings_and_districts = yes	
-
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
 			set_name = "Lazarus Station"		
 		}
 	}
@@ -196,7 +198,9 @@ sys_41275l_init = {
 			}
 			generate_cerb_minuteman_pops = yes
 			generate_cerberus_minuteman_buildings_and_districts = yes	
-
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
 			set_name = "Minuteman Station"		
 		}
 	}
@@ -264,7 +268,9 @@ sys_lv426_init = {
 			}
 			generate_cerb_barn_pops = yes
 			generate_cerberus_barn_buildings_and_districts = yes	
-
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
 			set_name = "The Barn"		
 		}
 	}
@@ -420,7 +426,9 @@ sys_dakka_init = {
 				prevent_anomaly = yes			
 				clear_deposits = yes
 				clear_planet_modifiers = yes
-
+				add_deposit = d_hydroponics_bays
+				add_deposit = d_cronos_science_labs
+				add_deposit = d_cronos_reactor
 				add_anomaly = {
 					category = MEC_EG_ANO_GIGULA_1171_CAT			###Gigula Anomaly (Ancient Starship)
 				}
@@ -578,6 +586,9 @@ sys_patella_init = {
 			set_owner = event_target:cerberus
 			generate_cerberus_vulcan_buildings_and_districts = yes
 			generate_cerb_vulcan_pops = yes
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
 			set_name = "Vulcan Station"				
 		}
 	}
@@ -721,6 +732,9 @@ sys_netheril_init = {
 			set_owner = event_target:cerberus
 			generate_cerberus_therm_buildings_and_districts = yes
 			generate_cerb_therm_pops = yes
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
 			set_name = "Thermoples Station"				
 		}
 	}

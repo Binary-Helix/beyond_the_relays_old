@@ -30,7 +30,7 @@ sys_theseaofstorms_init = {
 
     planet = {
         name = "Heretic Station"
-        class = pc_heretic_station
+        class = pc_habitat
         orbit_distance = 0
         orbit_angle = 144
         size = 22
@@ -43,7 +43,6 @@ sys_theseaofstorms_init = {
 			}
 			prevent_anomaly = yes
 			set_global_flag = heretic_station_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = followers_of_nazara } } }
 				create_country = {

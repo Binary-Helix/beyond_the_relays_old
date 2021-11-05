@@ -15,6 +15,7 @@ event = {
 			}
 			erase_invalid_spawn_system = yes
 		}
+		set_global_flag = beta_map_spawned
 	}
 }
 
@@ -187,10 +188,13 @@ event = {
 					has_star_flag = parnitha_system
 				}
 				create_starbase = {
-					size = starbase_starport
-					module = anchorage
+					size = starbase_starhold
+					module = shipyard
+					module = shipyard
 					module = trading_hub
+					module = hangar_bay
 					building = crew_quarters
+					building = fleet_academy
 					owner = event_target:asari_republics
 				}
 				btr_generate_stations = yes
@@ -201,9 +205,9 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:asari_republics
 				}
 				btr_generate_stations = yes
@@ -214,9 +218,9 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:asari_republics
 				}
 				btr_generate_stations = yes
@@ -227,9 +231,9 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = resource_silo
 					owner = event_target:asari_republics
 				}
 				btr_generate_stations = yes
@@ -240,9 +244,9 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = offworld_trading_company
 					owner = event_target:asari_republics
 				}
 				btr_generate_stations = yes
@@ -413,6 +417,77 @@ event = {
 			}
 			random_system = {
 				limit = {
+					has_star_flag = trebia_system
+				}
+				create_starbase = {
+					size = starbase_starhold
+					module = shipyard
+					module = shipyard
+					module = trading_hub
+					module = hangar_bay
+					building = crew_quarters
+					building = fleet_academy
+					owner = event_target:turian_hierarchy
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = cersea_system
+				}
+				create_starbase = {
+					size = starbase_starhold
+					module = shipyard
+					module = shipyard
+					module = trading_hub
+					module = hangar_bay
+					building = crew_quarters
+					building = fleet_academy
+					owner = event_target:turian_hierarchy
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = kasatum_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:turian_hierarchy
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = terevan_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = crew_quarters
+					owner = event_target:turian_hierarchy
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ursantra_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = resource_silo
+					owner = event_target:turian_hierarchy
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
 					has_star_flag = orachorum_system
 				}
 				create_starbase = {
@@ -543,19 +618,6 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = terevan_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:turian_hierarchy
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = nedlus_system
 				}
 				create_starbase = {
@@ -564,32 +626,7 @@ event = {
 				}
 				btr_generate_stations = yes
 			}
-			random_system = {
-				limit = {
-					has_star_flag = cersea_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:turian_hierarchy
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = kasatum_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:turian_hierarchy
-				}
-				btr_generate_stations = yes
-			}
+
 			random_system = {
 				limit = {
 					has_star_flag = cete_system
@@ -632,19 +669,6 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = ursantra_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:turian_hierarchy
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = pistrix_system
 				}
 				create_starbase = {
@@ -679,13 +703,68 @@ event = {
 			}
 			random_system = {
 				limit = {
+					has_star_flag = pranas_system
+				}
+				create_starbase = {
+					size = starbase_starhold
+					module = shipyard
+					module = shipyard
+					module = trading_hub
+					module = hangar_bay
+					building = crew_quarters
+					building = fleet_academy
+					owner = event_target:salarian_union
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
 					has_star_flag = fortuna_system
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:salarian_union
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = limron_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = offworld_trading_company
+					owner = event_target:salarian_union
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ostelo_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:salarian_union
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = totau_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = resource_silo
 					owner = event_target:salarian_union
 				}
 				btr_generate_stations = yes
@@ -746,19 +825,6 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:salarian_union
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = limron_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
 					owner = event_target:salarian_union
 				}
 				btr_generate_stations = yes
@@ -893,32 +959,6 @@ event = {
 				}
 				btr_generate_stations = yes
 			}
-			random_system = {
-				limit = {
-					has_star_flag = ostelo_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:salarian_union
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = totau_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:salarian_union
-				}
-				btr_generate_stations = yes
-			}
 		}
 		if = {
 			limit = {
@@ -935,13 +975,26 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = bisalas_system
+					has_star_flag = phontes_system
 				}
 				create_starbase = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = hydroponics_bay
+					owner = event_target:courts_of_dekuuna
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = bisalas_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:courts_of_dekuuna
 				}
 				btr_generate_stations = yes
@@ -952,9 +1005,9 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = offworld_trading_company
 					owner = event_target:courts_of_dekuuna
 				}
 				btr_generate_stations = yes
@@ -1017,6 +1070,45 @@ event = {
 					has_star_flag = kanala_system
 				}
 			}
+			random_system = {
+				limit = {
+					has_star_flag = dark_current_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = hydroponics_bay
+					owner = event_target:illuminated_primacy
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = dark_current_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:illuminated_primacy
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = herculaneum_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = offworld_trading_company
+					owner = event_target:illuminated_primacy
+				}
+				btr_generate_stations = yes
+			}
 			random_owned_planet = {
 				limit = {
 					has_planet_flag = kahje_planet
@@ -1045,19 +1137,6 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = dark_current_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:illuminated_primacy
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = thundering_trench_system
 				}
 				create_starbase = {
@@ -1076,19 +1155,6 @@ event = {
 				}
 				btr_generate_stations = yes
 			}
-			random_system = {
-				limit = {
-					has_star_flag = herculaneum_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:illuminated_primacy
-				}
-				btr_generate_stations = yes
-			}
 		}
 		if = {
 			limit = {
@@ -1102,6 +1168,71 @@ event = {
 					has_planet_flag = earth_planet
 				}
 				set_capital = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = sol_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = fleet_academy
+					owner = event_target:systems_alliance
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = arcturus_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = fleet_academy
+					owner = event_target:systems_alliance
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = iota_persei_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = fleet_academy
+					owner = event_target:systems_alliance
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = vetus_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:systems_alliance
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = utopia_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:systems_alliance
+				}
+				btr_generate_stations = yes
 			}
 			random_system = {
 				limit = {
@@ -1123,19 +1254,7 @@ event = {
 				}
 				btr_generate_stations = yes
 			}
-			random_system = {
-				limit = {
-					has_star_flag = arcturus_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:systems_alliance
-				}
-				btr_generate_stations = yes
-			}
+
 			random_system = {
 				limit = {
 					has_star_flag = euler_system
@@ -1158,49 +1277,10 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = utopia_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:systems_alliance
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = baldr_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:systems_alliance
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = iota_persei_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:systems_alliance
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = vetus_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
 					owner = event_target:systems_alliance
 				}
 				btr_generate_stations = yes
@@ -1321,13 +1401,26 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = menarel_system
+					has_star_flag = aru_system
 				}
 				create_starbase = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
 					building = crew_quarters
+					owner = event_target:vol_protectorate
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = menarel_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:vol_protectorate
 				}
 				btr_generate_stations = yes
@@ -1338,9 +1431,9 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = offworld_trading_company
 					owner = event_target:vol_protectorate
 				}
 				btr_generate_stations = yes
@@ -1351,19 +1444,48 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:vol_protectorate
 				}
 				btr_generate_stations = yes
 			}
 			random_system = {
 				limit = {
-					has_star_flag = omaverizh_system
+					has_star_flag = burun_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = offworld_trading_company
+					owner = event_target:vol_protectorate
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = unok_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = offworld_trading_company
+					owner = event_target:vol_protectorate
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = veskyur_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = offworld_trading_company
 					owner = event_target:vol_protectorate
 				}
 				btr_generate_stations = yes
@@ -1374,9 +1496,19 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:vol_protectorate
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = omaverizh_system
+				}
+				create_starbase = {
+					size = starbase_outpost
 					owner = event_target:vol_protectorate
 				}
 				btr_generate_stations = yes
@@ -1423,45 +1555,6 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = burun_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:vol_protectorate
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = unok_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:vol_protectorate
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = veskyur_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:vol_protectorate
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = sanu_system
 				}
 				create_starbase = {
@@ -1486,10 +1579,13 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = indris_system
+					has_star_flag = harsa_system
 				}
 				create_starbase = {
-					size = starbase_outpost
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = fleet_academy
 					owner = event_target:batarian_hegemony
 				}
 				btr_generate_stations = yes
@@ -1509,23 +1605,13 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = vular_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = event_target:batarian_hegemony
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = untrel_system
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:batarian_hegemony
 				}
 				btr_generate_stations = yes
@@ -1536,9 +1622,30 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:batarian_hegemony
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = indris_system
+				}
+				create_starbase = {
+					size = starbase_outpost
+					owner = event_target:batarian_hegemony
+				}
+				btr_generate_stations = yes
+			}
+
+			random_system = {
+				limit = {
+					has_star_flag = vular_system
+				}
+				create_starbase = {
+					size = starbase_outpost
 					owner = event_target:batarian_hegemony
 				}
 				btr_generate_stations = yes
@@ -1689,6 +1796,19 @@ event = {
 			}
 			random_system = {
 				limit = {
+					has_star_flag = aralakh_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = hydroponics_bay
+					owner = event_target:batarian_hegemony
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
 					has_star_flag = dranek_system
 				}
 				create_starbase = {
@@ -1723,6 +1843,45 @@ event = {
 			}
 			random_system = {
 				limit = {
+					has_star_flag = nosikae_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:regdikan_collective
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = serdicina_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:regdikan_collective
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = cedinae_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
+					owner = event_target:regdikan_collective
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
 					has_star_flag = brizhiine_system
 				}
 				create_starbase = {
@@ -1743,36 +1902,10 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = serdicina_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:regdikan_collective
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = tiikren_system
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:regdikan_collective
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = cedinae_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
 					owner = event_target:regdikan_collective
 				}
 				btr_generate_stations = yes
@@ -1823,6 +1956,58 @@ event = {
 			}
 			random_system = {
 				limit = {
+					has_star_flag = tikkun_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = hangar_bay
+					building = fleet_academy
+					owner = event_target:geth_consensus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = dholen_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = hangar_bay
+					building = fleet_academy
+					owner = event_target:geth_consensus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = maat_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = hangar_bay
+					building = fleet_academy
+					owner = event_target:geth_consensus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = raadarum_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = hangar_bay
+					building = crew_quarters
+					owner = event_target:geth_consensus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
 					has_star_flag = kholas_system
 				}
 				create_starbase = {
@@ -1841,26 +2026,7 @@ event = {
 				}
 				btr_generate_stations = yes
 			}
-			random_system = {
-				limit = {
-					has_star_flag = dholen_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					owner = event_target:geth_consensus
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = maat_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					owner = event_target:geth_consensus
-				}
-				btr_generate_stations = yes
-			}
+
 			random_system = {
 				limit = {
 					has_star_flag = disul_system
@@ -1887,16 +2053,6 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:geth_consensus
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = raadarum_system
-				}
-				create_starbase = {
-					size = starbase_starport
 					owner = event_target:geth_consensus
 				}
 				btr_generate_stations = yes
@@ -1937,7 +2093,7 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = han_system
+					has_star_flag = ultio_system
 				}
 				create_starbase = {
 					size = starbase_starport
@@ -1950,13 +2106,26 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = ming_system
+					has_star_flag = han_system
 				}
 				create_starbase = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = fleet_academy
+					owner = event_target:gothones_remnant
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = ming_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:gothones_remnant
 				}
 				btr_generate_stations = yes
@@ -1987,7 +2156,7 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = zelene_system
+					has_star_flag = tasale_system
 				}
 				create_starbase = {
 					size = starbase_starport
@@ -2000,13 +2169,26 @@ event = {
 			}
 			random_system = {
 				limit = {
+					has_star_flag = zelene_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = offworld_trading_company
+					owner = event_target:illium_corporate_interests
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
 					has_star_flag = lusarn_system
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					module = hangar_bay
+					building = offworld_trading_company
 					owner = event_target:illium_corporate_interests
 				}
 				btr_generate_stations = yes
@@ -2077,6 +2259,58 @@ event = {
 			}
 			random_system = {
 				limit = {
+					has_star_flag = anadius_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = trading_hub
+					building = fleet_academy
+					owner = event_target:cerberus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = lv426_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = hangar_bay
+					module = trading_hub
+					building = hydroponics_bay
+					owner = event_target:cerberus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = patella_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = hangar_bay
+					module = trading_hub
+					building = hydroponics_bay
+					owner = event_target:cerberus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = amazon_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = hangar_bay
+					module = trading_hub
+					building = crew_quarters
+					owner = event_target:cerberus
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
 					has_star_flag = strenuus_system
 				}
 				create_starbase = {
@@ -2107,19 +2341,6 @@ event = {
 			}
 			random_system = {
 				limit = {
-					has_star_flag = amazon_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:cerberus
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
 					has_star_flag = lazarus_system
 				}
 				create_starbase = {
@@ -2134,19 +2355,6 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = lv426_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
 					owner = event_target:cerberus
 				}
 				btr_generate_stations = yes
@@ -2171,19 +2379,6 @@ event = {
 				}
 				btr_generate_stations = yes
 			}
-			random_system = {
-				limit = {
-					has_star_flag = patella_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
-					owner = event_target:cerberus
-				}
-				btr_generate_stations = yes
-			}
 		}
 		if = {
 			limit = {
@@ -2197,6 +2392,45 @@ event = {
 					has_planet_flag = heretic_station
 				}
 				set_capital = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = theseaofstorms_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = hangar_bay
+					building = fleet_academy
+					owner = event_target:followers_of_nazara
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = haelazi_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = hangar_bay
+					building = fleet_academy
+					owner = event_target:followers_of_nazara
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = xelazi_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = shipyard
+					module = hangar_bay
+					building = crew_quarters
+					owner = event_target:followers_of_nazara
+				}
+				btr_generate_stations = yes
 			}
 			random_system = {
 				limit = {
@@ -2224,26 +2458,6 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = haelazi_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					owner = event_target:followers_of_nazara
-				}
-				btr_generate_stations = yes
-			}
-			random_system = {
-				limit = {
-					has_star_flag = xelazi_system
-				}
-				create_starbase = {
-					size = starbase_starport
 					owner = event_target:followers_of_nazara
 				}
 				btr_generate_stations = yes
@@ -2309,24 +2523,24 @@ event = {
 				btr_generate_stations = yes
 			}
 		}
-		if = {
-			limit = {
-				has_country_flag = cat6
-				any_system_within_border = {
-					has_star_flag = elunia_system
-				}
-			}	
-			random_system = {
-				limit = {
-					has_star_flag = elunia_system
-				}
-				create_starbase = {
-					size = starbase_starport
-					owner = event_target:cat6
-				}
-				btr_generate_stations = yes
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		has_country_flag = cat6
+		# 		any_system_within_border = {
+		# 			has_star_flag = elunia_system
+		# 		}
+		# 	}	
+		# 	random_system = {
+		# 		limit = {
+		# 			has_star_flag = elunia_system
+		# 		}
+		# 		create_starbase = {
+		# 			size = starbase_starport
+		# 			owner = event_target:cat6
+		# 		}
+		# 		btr_generate_stations = yes
+		# 	}
+		# }
 		if = {
 			limit = {
 				has_country_flag = lystheni_order
@@ -2348,7 +2562,20 @@ event = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = fleet_academy
+					owner = event_target:lystheni_order
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = zuzel_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:lystheni_order
 				}
 				btr_generate_stations = yes
@@ -2375,7 +2602,20 @@ event = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = offworld_trading_company
+					owner = event_target:omega_empire
+				}
+				btr_generate_stations = yes
+			}
+			random_system = {
+				limit = {
+					has_star_flag = arinlarkan_system
+				}
+				create_starbase = {
+					size = starbase_starport
+					module = trading_hub
+					module = hangar_bay
+					building = hydroponics_bay
 					owner = event_target:omega_empire
 				}
 				btr_generate_stations = yes
@@ -2386,8 +2626,8 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starport
-					module = shipyard
 					module = trading_hub
+					module = hangar_bay
 					building = crew_quarters
 					owner = event_target:omega_empire
 				}
@@ -2399,9 +2639,6 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					module = shipyard
-					module = trading_hub
-					building = crew_quarters
 					owner = event_target:omega_empire
 				}
 				btr_generate_stations = yes
@@ -2428,7 +2665,7 @@ event = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = offworld_trading_company
 					owner = event_target:noveria_development_corporation
 				}
 				btr_generate_stations = yes
@@ -2455,7 +2692,7 @@ event = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = offworld_trading_company
 					owner = event_target:wrill_mining_consortium
 				}
 				btr_generate_stations = yes
@@ -2482,7 +2719,7 @@ event = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = offworld_trading_company
 					owner = event_target:relic_mineral_works
 				}
 				btr_generate_stations = yes
@@ -2509,7 +2746,7 @@ event = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = offworld_trading_company
 					owner = event_target:united_anhur_corporations
 				}
 				btr_generate_stations = yes
@@ -2530,7 +2767,7 @@ event = {
 					size = starbase_starport
 					module = shipyard
 					module = trading_hub
-					building = crew_quarters
+					building = offworld_trading_company
 					owner = event_target:asteria_agriculture
 				}
 				btr_generate_stations = yes
@@ -2566,14 +2803,14 @@ event = {
 			}	
 			random_system = {
 				limit = {
-					has_star_flag = azedes_system
+					has_star_flag = maskimxul_system
 				}
 				create_starbase = {
 					size = starbase_starport
 					module = shipyard
-					module = trading_hub
+					module = hangar_bay
 					building = crew_quarters
-					owner = event_target:raloi_republic
+					owner = event_target:rachni_swarm
 				}
 				btr_generate_stations = yes
 			}
@@ -2591,9 +2828,15 @@ event = {
 				}
 				create_starbase = {
 					size = starbase_starhold
+					module = hangar_bay
+					module = hangar_bay
+					module = hangar_bay
+					module = solar_panel_network
 					module = shipyard
-					module = trading_hub
-					building = crew_quarters
+					module = shipyard
+					building = fleet_academy
+					building = resource_silo
+					building = target_uplink_computer
 					owner = event_target:the_collectors
 				}
 				btr_generate_stations = yes
@@ -2602,216 +2845,610 @@ event = {
 	}
 }
 
-
-# country_event = {
-#     id = btr_setup.2
-#     hide_window = yes
-#     #fire_only_once = yes
-# 	is_triggered_only = yes
-	
-#     immediate = {
-# 		# If any "canon" asari planets exist, save their owners
-# 		random_country = {
-# 			limit = {
-# 				has_origin = mec_asari_origin_thessia
-# 			}
-# 			save_event_target_as = mec_asari_thessia_country
-# 			species = { save_event_target_as = mec_asari_thessia_species }
-# 		}
-# 		random_country = {
-# 			limit = {
-# 				has_origin = mec_asari_origin_illium
-# 			}
-# 			save_event_target_as = mec_asari_illium_country
-# 			species = { save_event_target_as = mec_asari_illium_species }
-# 		}
-# 		random_country = {
-# 			limit = {
-# 				has_origin = origin_omega
-# 			}
-# 			save_event_target_as = btr_asari_omega_country
-# 			species = { save_event_target_as = btr_asari_omega_species }
-# 		}
-# 		# Check for the first "canon" asari species generated by the game.
-# 		# This is to make sure it's folded into the main species on the list instead of being shown in the drop-down.
-# 		every_country = {
-# 			limit = {
-# 				OR = {
-# 					is_same_value = event_target:mec_asari_thessia_country
-# 					is_same_value = event_target:mec_asari_illium_country
-# 					is_same_value = event_target:btr_asari_omega_country
-# 				}
-# 			}
-# 			if = {
-# 				limit = {
-# 					NOT = { exists = event_target:mec_asari_main_country }
-# 				}
-# 				save_global_event_target_as = mec_asari_main_country
-# 				species = { save_global_event_target_as = mec_asari_main_species }
-# 				# If Thessia exists, set it as the main asari species homeworld
-# 				if = {
-# 					limit = {
-# 						exists = event_target:mec_asari_planet_thessia
-# 					}
-# 					event_target:mec_asari_main_species = {
-# 						set_species_homeworld = event_target:mec_asari_planet_thessia
-# 					}
-# 				}
-# 			}
-# 		}
-# 		# Check for duplicate asari offshots and merge them all into one species
-# 		every_country = {
-# 			if = {
-# 				limit = {
-# 					exists = event_target:mec_asari_main_country
-# 					OR = {
-# 						species = { is_same_value = event_target:mec_asari_thessia_species }
-# 						species = { is_same_value = event_target:mec_asari_illium_species }
-# 						species = { is_same_value = event_target:btr_asari_omega_species }
-# 					}
-# 				}
-# 				change_dominant_species = {
-# 					species = event_target:mec_asari_main_species
-# 					change_all = yes
-# 				}
-# 			}
-# 		}
-#     }
-# }
-
-# country_event = {
-#     id = btr_setup.201
-#     hide_window = yes
-#     #fire_only_once = yes
-# 	is_triggered_only = yes
-	
-#     immediate = {
-# 		# If any "canon" asari planets exist, save their owners
-# 		random_country = {
-# 			limit = {
-# 				has_origin = origin_salarian_union
-# 			}
-# 			save_event_target_as = btr_salarian_union_country
-# 			species = { save_event_target_as = btr_salarian_surkesh_species }
-# 		}
-# 		random_country = {
-# 			limit = {
-# 				has_origin = origin_noveria_development_corporation
-# 			}
-# 			save_event_target_as = btr_noveria_development_corporation_country
-# 			species = { save_event_target_as = btr_salarian_noveria_species }
-# 		}
-# 		# Check for the first "canon" asari species generated by the game.
-# 		# This is to make sure it's folded into the main species on the list instead of being shown in the drop-down.
-# 		every_country = {
-# 			limit = {
-# 				OR = {
-# 					is_same_value = event_target:btr_salarian_union_country
-# 					is_same_value = event_target:btr_noveria_development_corporation_country
-# 				}
-# 			}
-# 			if = {
-# 				limit = {
-# 					NOT = { exists = event_target:btr_salarian_main_country }
-# 				}
-# 				save_global_event_target_as = btr_salarian_main_country
-# 				species = { save_global_event_target_as = btr_salarian_main_species }
-# 				# If Thessia exists, set it as the main asari species homeworld
-# 				if = {
-# 					limit = {
-# 						exists = event_target:btr_salarian_planet_surkesh
-# 					}
-# 					event_target:btr_salarian_main_species = {
-# 						set_species_homeworld = event_target:btr_salarian_planet_surkesh
-# 					}
-# 				}
-# 			}
-# 		}
-# 		# Check for duplicate asari offshots and merge them all into one species
-# 		every_country = {
-# 			if = {
-# 				limit = {
-# 					exists = event_target:btr_salarian_main_country
-# 					OR = {
-# 						species = { is_same_value = event_target:btr_salarian_surkesh_species }
-# 						species = { is_same_value = event_target:btr_salarian_noveria_species }
-# 					}
-# 				}
-# 				change_dominant_species = {
-# 					species = event_target:btr_salarian_main_species
-# 					change_all = yes
-# 				}
-# 			}
-# 		}
-#     }
-# }
-
-# country_event = {
-#     id = btr_setup.202
-#     hide_window = yes
-#     #fire_only_once = yes
-# 	is_triggered_only = yes
-	
-#     immediate = {
-# 		# If any "canon" asari planets exist, save their owners
-# 		random_country = {
-# 			limit = {
-# 				has_origin = origin_systems_alliance
-# 			}
-# 			save_event_target_as = btr_systems_alliance_country
-# 			species = { save_event_target_as = btr_human_earth_species }
-# 		}
-# 		random_country = {
-# 			limit = {
-# 				has_origin = origin_cerberus
-# 			}
-# 			save_event_target_as = btr_cerberus_country
-# 			species = { save_event_target_as = btr_human_cronos_species }
-# 		}
-# 		# Check for the first "canon" asari species generated by the game.
-# 		# This is to make sure it's folded into the main species on the list instead of being shown in the drop-down.
-# 		every_country = {
-# 			limit = {
-# 				OR = {
-# 					is_same_value = event_target:btr_systems_alliance_country
-# 					is_same_value = event_target:btr_human_cronos_species
-# 				}
-# 			}
-# 			if = {
-# 				limit = {
-# 					NOT = { exists = event_target:btr_human_main_country }
-# 				}
-# 				save_global_event_target_as = btr_human_main_country
-# 				species = { save_global_event_target_as = btr_human_main_species }
-# 				# If Thessia exists, set it as the main asari species homeworld
-# 				if = {
-# 					limit = {
-# 						exists = event_target:btr_human_planet_earth
-# 					}
-# 					event_target:btr_human_main_species = {
-# 						set_species_homeworld = event_target:btr_human_planet_earth
-# 					}
-# 				}
-# 			}
-# 		}
-# 		# Check for duplicate asari offshots and merge them all into one species
-# 		every_country = {
-# 			if = {
-# 				limit = {
-# 					exists = event_target:btr_human_main_country
-# 					OR = {
-# 						species = { is_same_value = event_target:btr_human_earth_species }
-# 						species = { is_same_value = event_target:btr_human_cronos_species }
-# 					}
-# 				}
-# 				change_dominant_species = {
-# 					species = event_target:btr_human_main_species
-# 					change_all = yes
-# 				}
-# 			}
-# 		}
-#     }
-# }
+country_event = {
+	id = btr_setup.103
+  hide_window = yes
+  is_triggered_only = yes
+  immediate = {
+    if = {
+      limit = {
+        OR = {
+          has_global_flag = beta_map_spawned
+        }
+      }
+      #Set Contacts
+      event_target:asari_republics = {
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+      event_target:salarian_union = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:turian_hierarchy = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:courts_of_dekuuna = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:illuminated_primacy = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:systems_alliance = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:vol_protectorate = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:batarian_hegemony = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:cerberus = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:remnants_of_rakhana = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:krogan_chiefdom = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:lystheni_order = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:omega_empire = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:quarian_conclave = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:gothones_remnant = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:regdikan_collective = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:vorcha_clandom = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:illium_corporate_interests = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:noveria_development_corporation = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:wrill_mining_consortium = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:united_anhur_corporations = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:relic_mineral_works = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:asteria_agriculture
+      }
+	  event_target:asteria_agriculture = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:regdikan_collective
+      }
+	  event_target:asteria_agriculture = {
+        establish_communications_no_message = event_target:asari_republics
+        establish_communications_no_message = event_target:salarian_union
+        establish_communications_no_message = event_target:turian_hierarchy
+        establish_communications_no_message = event_target:courts_of_dekuuna
+        establish_communications_no_message = event_target:illuminated_primacy
+        establish_communications_no_message = event_target:systems_alliance
+        establish_communications_no_message = event_target:vol_protectorate
+        establish_communications_no_message = event_target:batarian_hegemony
+        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:remnants_of_rakhana
+        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:lystheni_order
+        establish_communications_no_message = event_target:omega_empire
+        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:gothones_remnant
+        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:vorcha_clandom
+        establish_communications_no_message = event_target:illium_corporate_interests
+        establish_communications_no_message = event_target:noveria_development_corporation
+        establish_communications_no_message = event_target:wrill_mining_consortium
+        establish_communications_no_message = event_target:united_anhur_corporations
+        establish_communications_no_message = event_target:relic_mineral_works
+        establish_communications_no_message = event_target:regdikan_collective
+	  }
+	}  	
+    #Set Homesystem Survey
+    every_owned_planet = {
+		solar_system = {
+		  every_system_planet = {
+			set_surveyed = {
+				surveyed = yes
+				surveyor = ROOT
+			}
+        }
+      }
+    }
+  }
+}
 
 # Set Protectorates
 country_event = {
