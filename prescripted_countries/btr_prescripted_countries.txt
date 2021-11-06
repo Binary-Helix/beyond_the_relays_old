@@ -86,7 +86,7 @@ salarian_union={
 
 	authority="auth_oligarchic"
 	government="gov_science_directorate"
-	civics={ "civic_technocracy" "civic_meritocracy" }
+	civics={ "civic_btr_salarian_special_task_group" "civic_btr_salarian_matriarchy" }
 
 	flags={ custom_start_screen salarian_union btr_empire genophage_empire council_race }
 
@@ -105,7 +105,7 @@ salarian_union={
 	city_graphical_culture="mammalian_01"	
 	system_name="Pranas"
 	initializer="sys_pranas_init"
-	graphical_culture="humanoid_01"
+	graphical_culture="sa_01"
 	advisor_voice_type = "salarian_union"
 
 	empire_flag={
@@ -154,7 +154,7 @@ turian_hierarchy={
 
 	authority="auth_oligarchic"
 	government="gov_citizen_stratocracy"
-	civics={ "civic_meritocracy" "civic_citizen_service" }
+	civics={ civic_btr_turian_honor civic_btr_turian_universal_service }
 
 	flags={ custom_start_screen turian_hierarchy btr_empire genophage_empire council_race }
 
@@ -229,7 +229,7 @@ courts_of_dekuuna={
 
 	authority="auth_oligarchic"
 	government="gov_irenic_bureaucracy"
-	civics={ "civic_environmentalist" "civic_agrarian_idyll" }
+	civics={ civic_btr_elcor_economic_planning civic_btr_elcor_history_of_stability }
 
 	flags={ custom_start_screen courts_of_dekuuna btr_empire }
 
@@ -299,7 +299,7 @@ illuminated_primacy={
 
 	authority="auth_oligarchic"
 	government="gov_citizen_stratocracy"
-	civics={ "civic_environmentalist" "civic_functional_architecture" }
+	civics={ civic_btr_hanar_blessing_of_the_enkindlers civic_btr_hanar_part_of_the_family }
 
 	flags={ custom_start_screen illuminated_primacy btr_empire }
 
@@ -367,7 +367,7 @@ systems_alliance={
 
 	authority="auth_democratic"
 	government="gov_military_commissariat"
-	civics={ "civic_distinguished_admiralty" "civic_beacon_of_liberty" }
+	civics={ civic_btr_sysalliance_colonial_government civic_btr_sysalliance_unfettered_combat_vi }
 
 	flags={ custom_start_screen systems_alliance btr_empire }
 
@@ -437,7 +437,7 @@ vol_protectorate={
 
 	authority="auth_corporate"
 	government="gov_trade_league"
-	civics={ "civic_free_traders" "civic_trading_posts" }
+	civics={ civic_btr_volus_shrewd_business civic_btr_volus_the_negotiators }
 
 	flags={ custom_start_screen vol_protectorate btr_empire }
 
@@ -579,7 +579,7 @@ batarian_hegemony={
 
 	authority="auth_dictatorial"
 	government="gov_constitutional_dictatorship"
-	civics={ "civic_mining_guilds" "civic_slaver_guilds" }
+	civics={ civic_btr_batarian_hegenomy civic_btr_batarian_slaving_guilds }
 
 	flags={ custom_start_screen batarian_hegemony btr_empire }
 
@@ -928,7 +928,7 @@ omega={
 
 	authority="auth_corporate"
 	government="gov_criminal_syndicate"
-	civics={ "civic_criminal_heritage" "civic_ruthless_competition" }
+	civics={ civic_btr_omega_capital civic_btr_omega_the_only_rule }
 
 	flags={ custom_start_screen omega_empire btr_empire }
 
@@ -998,7 +998,7 @@ omega_b={
 
 	authority="auth_dictatorial"
 	government="gov_totalitarian_regime"
-	civics={ "civic_cutthroat_politics" "civic_mining_guilds" }
+	civics={ civic_btr_omega_capital civic_btr_omega_the_only_rule }
 
 	flags={ custom_start_screen omega btr_empire }
 
@@ -1067,7 +1067,7 @@ quarian_conclave={
 
 	authority = "auth_democratic"
 	government = "gov_rational_consensus"
-	civics={ "civic_technocracy" "civic_meritocracy" }
+	civics={ civic_btr_quarian_last_of_the_quarians civic_btr_quarian_the_conclave }
 
 	flags={ custom_start_screen quarian_conclave btr_empire }
 
@@ -1410,7 +1410,7 @@ vorcha_clandom={
 
 	authority="auth_dictatorial"
 	government="gov_theocratic_republic"
-	civics={ "civic_barbaric_despoilers" "civic_warrior_culture" }
+	civics={ civic_barbaric_despoilers civic_warrior_culture }
 
 	flags={ custom_start_screen vorcha_clandom btr_empire btr_minor }
 
@@ -1908,7 +1908,7 @@ geth_consensus={
 
 	authority="auth_machine_intelligence"
 	government="gov_machine_empire"
-	civics={ "civic_machine_warbots" "civic_machine_unitary_cohesion" }
+	civics={ civic_btr_geth_artifical_efficiency civic_btr_geth_enigmatic_recluses }
 
 	flags={ custom_start_screen geth_consensus btr_empire }
 
@@ -2043,7 +2043,7 @@ rachni_swarm={
 
 	authority="auth_hive_mind"
 	government="gov_hive_mind"
-	civics={ "civic_hive_pooled_knowledge" "civic_hive_empath" }
+	civics={ civic_btr_rachni_crescendo civic_btr_rachni_de_capo_al_fine }
 
 	flags={ custom_start_screen rachni_swarm btr_empire }
 
