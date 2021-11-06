@@ -1184,8 +1184,7 @@ sys_strabo_init = {
 		}
 		moon = {
 			name = "Jarrahe Station"
-			class = "pc_jarrahe_station"
-			entity = "btr_jarrahe_station"
+			class = pc_jarrahe_station
 			orbit_angle = { min = 90 max = 270 }
 			orbit_distance = 18
 			size = 4
@@ -1199,7 +1198,6 @@ sys_strabo_init = {
 					species = event_target:salarianSpecies
 					ethos = owner
 				}
-
 				generate_sal_jarrahe_pops = yes
 				generate_sal_jarrahe_colony_buildings = yes
 				add_district = district_pdhab_science

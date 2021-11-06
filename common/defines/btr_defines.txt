@@ -96,6 +96,15 @@ NGameplay = {
 	PLANET_STATION_ORBIT_DISTANCE		= 3.5	#6.0	# how far from the planet orbital stations will be
 	STARBASE_ORBIT_DISTANCE				= 10.0	#15.0
 	START_YEAR = 2165
+	#NAVAL_CAPACITY_POP_MULT									= 4.5	# Mult value of Naval Capacity for each Pop
+	EMPIRE_SIZE_BASE						= 50	# No penalties at this empire size or below
+	EMPIRE_SIZE_FROM_DISTRICTS				= 0.25		# Per district
+	EMPIRE_SIZE_FROM_SYSTEMS				= 0.25		# Per system
+	EMPIRE_SIZE_FROM_COLONIES				= 0.25		# Per planet
+	EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 0.5		# Per branch office
+	EMPIRE_SIZE_FROM_POPS					= 0.1		# Per pop
+	EMPIRE_SIZE_TECH_COST_PENALTY			= 0.004	# Per empire size above base
+	EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.006	# Per empire size above base
 		}
 
 NCombat = {
@@ -111,7 +120,7 @@ NShip = {
 	SHIP_SPEED_SCALE					= 5.0 #0.0075	#0.045	# Setting this to 1 makes the scripted speed value correspond to units/day
 	
 	FLEET_MOVE_MAX_DIST_SHIPS			= 30.0 #50.0		# Fix for swarm ships pulling in artillery ships.
-	FLEET_BASE_FORMATION_SCALE						= 2.0 #1 #6
+	FLEET_BASE_FORMATION_SCALE						= 5.0 #1 #6
 	FLEET_BASE_FORMATION_DIV						= 5.0	#3
 }
 

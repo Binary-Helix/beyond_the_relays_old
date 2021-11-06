@@ -54,7 +54,7 @@ sys_widow_init = {
 					}
 				}
 				create_country = {
-					name = "Citadel Security"
+					name = "Citadel Council"
 					ship_prefix = "CSV"
 					type = btr_citadel_govt 
 					origin = origin_default
@@ -85,6 +85,7 @@ sys_widow_init = {
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
 						set_country_flag = canon_map
+						set_country_flag = council_race
 						save_global_event_target_as = citadel_council
 					}						
 				}

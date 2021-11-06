@@ -2115,7 +2115,7 @@ generate_illium_pops = {
 
 generate_csec_citadel_pops = {
 	while = {
-	   count = 50
+	   count = 6
 	   generate_misc_council_race_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -2123,7 +2123,7 @@ generate_csec_citadel_pops = {
  
  generate_csec_pinnacle_pops = {
 	while = {
-	   count = 6
+	   count = 3
 	   generate_csec_pinnacle_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
