@@ -107,20 +107,20 @@ NGameplay = {
 	EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.006	# Per empire size above base
 		}
 
-NCombat = {
+# NCombat = {
 
-	COMBAT_BACK_OFF_RATE							= 0.24
-	SHIP_SMOOTH_ROTATION_THRESHOLD					= 7.141
-	COMBAT_DETECT_RANGE_MULT			= 0.18	# 1.05	# Range to engage in combat with other ships is <fleets max attack range> * COMBAT_DETECT_RANGE_MULT
-	COMBAT_DETECT_RANGE_MIN					= 50 #1.6 #4 #10
-	COMBAT_AREA_MIN_ATTACK_RADIUS			= 0.004 #0.08 #0.2
-}	
+# 	COMBAT_BACK_OFF_RATE							= 0.24
+# 	SHIP_SMOOTH_ROTATION_THRESHOLD					= 7.141
+# 	COMBAT_DETECT_RANGE_MULT			= 0.18	# 1.05	# Range to engage in combat with other ships is <fleets max attack range> * COMBAT_DETECT_RANGE_MULT
+# 	COMBAT_DETECT_RANGE_MIN					= 50 #1.6 #4 #10
+# 	COMBAT_AREA_MIN_ATTACK_RADIUS			= 0.004 #0.08 #0.2
+# }	
 
-NShip = {
-	SHIP_SPEED_SCALE					= 5.0 #0.0075	#0.045	# Setting this to 1 makes the scripted speed value correspond to units/day
+# NShip = {
+# 	SHIP_SPEED_SCALE					= 5.0 #0.0075	#0.045	# Setting this to 1 makes the scripted speed value correspond to units/day
 	
-	FLEET_MOVE_MAX_DIST_SHIPS			= 30.0 #50.0		# Fix for swarm ships pulling in artillery ships.
-	FLEET_BASE_FORMATION_SCALE						= 5.0 #1 #6
-	FLEET_BASE_FORMATION_DIV						= 5.0	#3
-}
+# 	FLEET_MOVE_MAX_DIST_SHIPS			= 30.0 #50.0		# Fix for swarm ships pulling in artillery ships.
+# 	FLEET_BASE_FORMATION_SCALE						= 5.0 #1 #6
+# 	FLEET_BASE_FORMATION_DIV						= 5.0	#3
+# }
 
