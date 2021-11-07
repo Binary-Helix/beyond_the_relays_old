@@ -96,7 +96,6 @@ sys_tikkun_init = {
 			random_country = {
 				limit = { has_country_flag = geth_consensus }
 				save_global_event_target_as = geth_consensus
-				species = { save_global_event_target_as = gethSpecies }
 			}
 			set_owner = event_target:geth_consensus
 			generate_btr_start_deposits_and_blockers = yes

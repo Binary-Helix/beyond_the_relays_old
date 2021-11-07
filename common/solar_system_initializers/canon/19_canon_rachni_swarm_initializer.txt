@@ -96,7 +96,6 @@ sys_maskimxul_init = {
 			random_country = {
 				limit = { has_country_flag = rachni_swarm }
 				save_global_event_target_as = rachni_swarm
-				species = { save_global_event_target_as = rachniSpecies }
 			}
 			set_owner = event_target:rachni_swarm
 			generate_btr_start_deposits_and_blockers = yes
