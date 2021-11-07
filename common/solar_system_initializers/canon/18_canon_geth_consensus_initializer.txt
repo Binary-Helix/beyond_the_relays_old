@@ -49,6 +49,9 @@ sys_tikkun_init = {
 			random_country = {
 				limit = { has_country_flag = geth_consensus }
 				save_global_event_target_as = geth_consensus
+				species = {
+					save_global_event_target_as = gethSpecies
+				}
 			}
 			prevent_anomaly = yes
 			set_global_flag = geth_homeworld_spawned
