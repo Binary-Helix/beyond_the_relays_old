@@ -5,5 +5,5 @@ tags={
 	"Galaxy Generation"
 }
 name="Mass Effect: Beyond the Relays - PREALPHA"
-supported_version="3.0.2"
+supported_version="3.1"
 remote_file_id="2486649583"
