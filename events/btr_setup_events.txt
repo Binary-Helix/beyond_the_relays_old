@@ -380,9 +380,11 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		add_modifier = {
-			modifier = mec_asari_mod_origin_thessia_stagnation
-			years = 20
+		if = {
+			limit = { has_country_flag = asari_republics }
+			add_modifier = {
+				modifier = mec_asari_mod_origin_thessia_stagnation
+				years = 20
 		}
 		random_owned_planet = {
 			limit = { 
