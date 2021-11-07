@@ -31,7 +31,7 @@
 # BATARIAN CIVICS #
 ###################
 
-civic_btr_batarian_slaving_guilds = {
+civic_btr_batarian_the_servile_castes = {
 	modification = no
 	potential = {
 		ethics = {
@@ -71,7 +71,7 @@ civic_btr_batarian_slaving_guilds = {
 	}
 }
 
-civic_btr_batarian_hegenomy = {
+civic_btr_batarian_constant_vigilance = {
 	modification = no
 	potential = {
 		ethics = {
@@ -1163,7 +1163,7 @@ civic_btr_drell_architects_of_destruction ={
 	}
 }
 
-civic_btr_drell_beginning_of_the_end ={
+civic_btr_drell_emergency_powers ={
 	modification = no
 	potential = {
 		ethics = {
@@ -1177,23 +1177,13 @@ civic_btr_drell_beginning_of_the_end ={
 			}
 		}
 	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		
+		planet_stability_add = 5
+		planet_crime_mult = -0.15
+		planet_pops_consumer_goods_upkeep_mult = -0.15
 	}
 }
 ####################
