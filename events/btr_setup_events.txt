@@ -385,7 +385,8 @@ country_event = {
 			add_modifier = {
 				modifier = mec_asari_mod_origin_thessia_stagnation
 				years = 20
-		}
+			}
+		}	
 		random_owned_planet = {
 			limit = { 
 				has_planet_flag = thessia_planet 
@@ -3073,7 +3074,7 @@ country_event = {
     if = {
       limit = {
         OR = {
-          has_global_flag = beta_map_spawned
+          has_global_flag = asari_homeworld_spawned
         }
       }
       #Set Contacts
@@ -3742,7 +3743,7 @@ country_event = {
 }
 
 event = {
-    id = btr_setup.201
+    id = btr_setup.2
 	hide_window = yes
 	is_triggered_only = yes
 

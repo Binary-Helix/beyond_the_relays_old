@@ -120,10 +120,6 @@ sys_tartarusdebrisfield_init = {
 		modifiers = none
 		flags = { collectors_station special_planet }
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = the_collectors }
-				save_global_event_target_as = the_collectors
-			}			
 			prevent_anomaly = yes
 			set_global_flag = collectors_spawned
 

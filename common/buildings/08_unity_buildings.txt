@@ -137,11 +137,9 @@ building_heritage_site = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
 		}
 	}
 
@@ -198,7 +196,6 @@ building_hypercomms_forum = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_gestalt = yes
@@ -224,11 +221,9 @@ building_hypercomms_forum = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
 		}
 	}
 
@@ -391,12 +386,10 @@ building_holotemple = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
-		# upkeep = {
-		# 	energy = @b2_upkeep
-		# 	rare_crystals = @b2_rare_upkeep
-		# }
+		upkeep = {
+			energy = @b2_upkeep
+		}
 	}
 
 	upgrades = {
@@ -477,11 +470,9 @@ building_sacred_nexus = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
 		}
 	}
 
@@ -609,7 +600,6 @@ building_sacrificial_temple_2 = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_exotic_gases = yes
 			owner = {
 				OR = {
 					is_spiritualist = no
@@ -643,11 +633,9 @@ building_sacrificial_temple_2 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			exotic_gases = @b3_rare_upkeep
 		}
 	}
 
@@ -693,7 +681,6 @@ building_sacrificial_temple_3 = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_exotic_gases = yes
 			owner = {
 				OR = {
 					is_spiritualist = no
@@ -727,12 +714,9 @@ building_sacrificial_temple_3 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
-			volatile_motes = @b2_rare_upkeep
 		}
 	}
 
@@ -922,7 +906,6 @@ building_galactic_memorial_2 = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_exotic_gases = yes
 			owner = {
 				OR = {
 					is_megacorp = yes
@@ -955,11 +938,9 @@ building_galactic_memorial_2 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
 			minerals = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
 		}
 	}
 
@@ -1059,7 +1040,6 @@ building_galactic_memorial_3 = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_exotic_gases = yes
 			owner = {
 				OR = {
 					is_megacorp = yes
@@ -1092,11 +1072,9 @@ building_galactic_memorial_3 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
 		}
 		upkeep = {
 			minerals = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
 		}
 	}
 
@@ -1288,11 +1266,9 @@ building_hive_cluster = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
 		}
 		upkeep = {
 			trigger = {
@@ -1375,7 +1351,6 @@ building_hive_confluence = {
 	destroy_trigger = {
 		exists = owner
 		owner = { is_hive_empire = no }
-		buildings_no_exotic_gases = yes
 	}
 
 	convert_to = {
@@ -1389,11 +1364,9 @@ building_hive_confluence = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			exotic_gases = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			exotic_gases = @b3_rare_upkeep
 		}
 		upkeep = {
 			trigger = {
@@ -1559,12 +1532,9 @@ building_simulation_2 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
-			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
-		}
+			energy = @b2_upkeep		}
 	}
 
 	planet_modifier = {
@@ -1632,11 +1602,9 @@ building_simulation_3 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
 		}
 	}
 
@@ -1753,7 +1721,6 @@ building_corporate_site = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_megacorp = no
@@ -1774,11 +1741,9 @@ building_corporate_site = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
 		}
 	}
 
@@ -1848,11 +1813,9 @@ building_corporate_forum = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
 		}
 	}
 
@@ -1901,7 +1864,6 @@ building_autocurating_vault = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_machine_empire = yes
@@ -1922,11 +1884,9 @@ building_autocurating_vault = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
 		}
 		produces = {
 			unity = 10
@@ -1983,7 +1943,6 @@ building_citadel_of_faith = {
 		OR = {
 			owner = { is_spiritualist = no }
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
 		}
 	}
 
@@ -2003,11 +1962,9 @@ building_citadel_of_faith = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
 		}
 	}
 
@@ -2045,7 +2002,6 @@ building_corporate_vault = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_megacorp = no
@@ -2065,11 +2021,9 @@ building_corporate_vault = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
 		}
 		produces = {
 			unity = 10
@@ -2111,7 +2065,6 @@ building_alpha_hub = {
 		exists = owner
 		OR = {
 			owner = { is_machine_empire = no }
-			buildings_no_crystals = yes
 		}
 	}
 
@@ -2125,11 +2078,9 @@ building_alpha_hub = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
 		}
 		produces = {
 			unity = 10
@@ -2242,11 +2193,9 @@ building_organic_paradise = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			exotic_gases = @b2_rare_upkeep
 		}
 	}
 
