@@ -100,3 +100,19 @@ ship_event = {
 		}
 	}
 }
+country_event = {
+	id = btr_test.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			add_opinion_modifier = {
+				who = root
+				modifier = opinion_trespass_1
+			}
+		}
+	}
+}
