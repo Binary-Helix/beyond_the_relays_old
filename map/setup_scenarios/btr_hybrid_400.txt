@@ -3,8 +3,8 @@ static_galaxy_scenario = {
     priority = 1
     default = yes
     colonizable_planet_odds = 0.25
-	num_empires = { min = 21 max = 21 }
-	num_empire_default = 22
+	num_empires = { min = 23 max = 23 }
+	num_empire_default = 23
 	num_hyperlanes = { min = 1 max = 5 }
 	num_hyperlanes_default = 5
 	num_gateways = { min = 0 max = 0 }
@@ -94,7 +94,7 @@ static_galaxy_scenario = {
 			base = 0
                 modifier = { 
                         add = 100000 
-                        has_country_flag = quarian_conclave
+                        has_country_flag = migrant_fleet
 				} 
 		}  
     }
@@ -2470,7 +2470,7 @@ static_galaxy_scenario = {
 			base = 0 
 				modifier = { 
 					add = 100000 
-					has_country_flag = regdikan_collective
+					has_country_flag = sedriicae_collective
 				}
 		}
     }

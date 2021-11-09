@@ -11,8 +11,8 @@ sys_nosikae_init = {
 	
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = regdikan_collective } 
-			save_global_event_target_as = regdikan_collective
+			limit = { has_country_flag = sedriicae_collective } 
+			save_global_event_target_as = sedriicae_collective
 		}	
 	generate_home_system_resources = yes
 	}
@@ -29,37 +29,38 @@ sys_nosikae_init = {
     }
 
 	planet = {
-		name = "Regdika"
+		name = "Sed'riicae"
 		class = pc_dextro_desert
 		orbit_distance = 50
 		size = 24
 		has_ring = no
+		starting_planet = yes
 		flags = { regdika_planet pd_ignore}
 		init_effect = {
 			random_country = {
-				limit = { has_country_flag = regdikan_collective }
-				save_global_event_target_as = regdikan_collective
+				limit = { has_country_flag = sedriicae_collective }
+				save_global_event_target_as = sedriicae_collective
 			}
 			prevent_anomaly = yes
 			set_global_flag = forayan_homeworld_spawned
 
 			if = {
-				limit = { NOT = { any_country = { has_country_flag = regdikan_collective } } }
+				limit = { NOT = { any_country = { has_country_flag = sedriicae_collective } } }
 				create_country = {
-					name = "Regdikan Collective"
-					ship_prefix = "PRESCRIPTED_ship_prefix_regdikan_collective"
+					name = "Sed'riicae Collective"
+					ship_prefix = "PRESCRIPTED_ship_prefix_sedriicae_collective"
 					type = default
-					origin = "origin_regdikan_collective"
+					origin = "origin_sedriicae_collective"
 					ignore_initial_colony_error = yes
-					civics = { civic = "civic_exalted_priesthood" civic = "civic_slaver_guilds" }
+					civics = { civic = "civic_btr_forayans_totalitarian_state" civic = "civic_btr_forayans_to_serve_the_people" }
 					authority = auth_oligarchic
 					name_list = "ART3"
-					ethos = { ethic = "ethic_xenophobe" ethic = "ethic_authoritarian" ethic = "ethic_spiritualist" }
+					ethos = { ethic = "ethic_pacifist" ethic = "ethic_fanatic_authoritarian" }
 					species = event_target:forayanSpecies
 					flag = {
 						icon={
 							category="beyondtherelays"
-							file="regdikan_collective.dds"
+							file="sedriicae_collective.dds"
 						}
 						background={
 							category="backgrounds"
@@ -74,26 +75,26 @@ sys_nosikae_init = {
 					}
 					effect = {
 						set_graphical_culture = arthropoid_01
-						set_country_flag = regdikan_collective
+						set_country_flag = sedriicae_collective
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
 						set_country_flag = canon_map
-						save_global_event_target_as = regdikan_collective
+						save_global_event_target_as = sedriicae_collective
 					}
 				}
 			}	
 			set_capital = yes
 			random_country = {
-				limit = { has_country_flag = regdikan_collective }
-				save_global_event_target_as = regdikan_collective
+				limit = { has_country_flag = sedriicae_collective }
+				save_global_event_target_as = sedriicae_collective
 				species = { save_global_event_target_as = forayanSpecies }
 			}
-			set_owner = event_target:regdikan_collective
+			set_owner = event_target:sedriicae_collective
 			generate_btr_start_deposits_and_blockers = yes			
 			generate_for_regdika_capitol_buildings = yes
 			generate_for_regdika_pops = yes
 
-			set_name = "Regdika"
+			set_name = "Sed'riicae"
 		}			
 	}
 	
@@ -315,9 +316,9 @@ sys_serdicina_init = {
 		has_ring = no
 		flags = { xixikii_planet pd_ignore}
 		init_effect = {
-			set_owner = event_target:regdikan_collective
+			set_owner = event_target:sedriicae_collective
 			create_colony = {
-				owner = event_target:regdikan_collective
+				owner = event_target:sedriicae_collective
 				species = event_target:forayanSpecies
 				ethos = owner
 			}
@@ -473,9 +474,9 @@ sys_lisiine_init = {
 			orbit_distance = 12
 			size = 4
 			init_effect = {
-				set_owner = event_target:regdikan_collective
+				set_owner = event_target:sedriicae_collective
 				create_colony = {
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 					species = event_target:forayanSpecies
 					ethos = owner
 				}
@@ -491,9 +492,9 @@ sys_lisiine_init = {
 			orbit_distance = 4
 			size = 4
 			init_effect = {
-				set_owner = event_target:regdikan_collective
+				set_owner = event_target:sedriicae_collective
 				create_colony = {
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 					species = event_target:forayanSpecies
 					ethos = owner
 				}
@@ -513,9 +514,9 @@ sys_lisiine_init = {
 		has_ring = no
 		flags = { perix_planet pd_ignore}
 		init_effect = {
-			set_owner = event_target:regdikan_collective
+			set_owner = event_target:sedriicae_collective
 			create_colony = {
-				owner = event_target:regdikan_collective
+				owner = event_target:sedriicae_collective
 				species = event_target:forayanSpecies
 				ethos = owner
 			}

@@ -238,9 +238,9 @@ courts_of_dekuuna={
 
 	trait= "btr_elcor_conservative_nature"
 	trait= "btr_elcor_physique"
-	trait="trait_nomadic"
-	trait="trait_slow_breeders"
-	trait="trait_nonadaptive"
+	trait= "trait_nomadic"
+	trait= "trait_slow_breeders"
+	trait= "trait_nonadaptive"
 	
 	origin="origin_courts_of_dekuuna"	
 
@@ -506,7 +506,7 @@ vol_protectorate_b={
 
 	authority="auth_oligarchic"
 	government= "gov_executive_committee"
-	civics={ "civic_corporate_dominion" "civic_efficient_bureaucracy" }
+	civics={ "civic_btr_volus_shrewd_business" "civic_btr_volus_the_negotiators" }
 
 	flags={ custom_start_screen vol_protectorate btr_empire canon_map hybrid_map sandbox_map }
 
@@ -562,7 +562,6 @@ vol_protectorate_b={
 #############################
 #### Non-Embassy Empires ####
 #############################
-
 
 # Batarian Hegemony
 batarian_hegemony={
@@ -705,71 +704,138 @@ cerberus={
 	ignore_portrait_duplication=no
 }
 
-# Remnants of Rakhana
-remnants_of_rakhana={
-    name="NAME_remnants_of_rakhana"
-    name_list="btr_drell"
-	portrait="drell"
-    adjective="PRESCRIPTED_adjective_remnants_of_rakhana"
-    ship_prefix="PRESCRIPTED_ship_prefix_remnants_of_rakhana"
-    species_name = "PRESCRIPTED_species_name_remnants_of_rakhana"
-    species_plural = "PRESCRIPTED_species_plural_remnants_of_rakhana"	
-	species_class = "DRE"
-    species_adjective = "PRESCRIPTED_species_adjective_remnants_of_rakhana"
-    #species_bio="PRESCRIPTED_species_bio_remnants_of_rakhana"	
 
-	authority="auth_oligarchic"
-	government="gov_theocratic_oligarchy"
-	civics={ civic_btr_drell_architects_of_destruction civic_btr_drell_emergency_powers }
+# Geth Consensus
+geth_consensus={
+    name="NAME_geth_consensus"
+    name_list="btr_geth"
+	portrait="geth"
+    adjective="PRESCRIPTED_adjective_geth_consensus"
+    ship_prefix="PRESCRIPTED_ship_prefix_geth_consensus"
+    species_name = "PRESCRIPTED_species_name_geth_consensus"
+    species_plural = "PRESCRIPTED_species_plural_geth_consensus"	
+	species_class = "GTH"
+    species_adjective = "PRESCRIPTED_species_adjective_geth_consensus"
+    #species_bio="PRESCRIPTED_species_bio_geth_consensus"
 
-	flags={ custom_start_screen remnants_of_rakhana btr_empire canon_map hybrid_map sandbox_map btr_minor }
+	authority="auth_machine_intelligence"
+	government="gov_machine_empire"
+	civics={ civic_btr_geth_artifical_efficiency civic_btr_geth_enigmatic_recluses }
 
-	ethic="ethic_spiritualist"
-	ethic="ethic_egalitarian"
-	ethic="ethic_militarist"
+	flags={ custom_start_screen geth_consensus btr_empire canon_map hybrid_map sandbox_map }
 
-	trait="trait_nonadaptive"
-	trait="trait_strong"
-	trait="trait_quick_learners"
-	trait="trait_resilient"
-	trait="trait_nomadic"
+	ethic="ethic_gestalt_consciousness"
+
+	trait="trait_machine_unit"
+	trait="btr_geth_neural_network"
+	trait="btr_geth_mobile_platforms"
+	trait="trait_robot_uncanny"
+	trait="trait_robot_high_bandwidth"
+	trait="trait_robot_durable"
 	
-	origin="origin_remnants_of_rakhana"	
+	origin="origin_geth_consensus"	
 
-	planet_name="Rakhana"
-	planet_class="pc_desert"
+	planet_name="Rannoch"
+	planet_class="pc_dextro_arid"
 	city_graphical_culture="mammalian_01"	
-	system_name="Pompeii"
-	initializer="sys_pompeii_init"
-	graphical_culture="molluscoid_01"
+	system_name="Tikkun"
+	initializer="sys_tikkun_init"
+	graphical_culture="geth_01"
 
 	empire_flag={
 		icon={
 			category="masseffect"
-			file="Drell.dds"
+			file="Geth Armory.dds"
 		}
 		background={
 			category="backgrounds"
 			file="00_solid.dds"
 		}
 		colors={
-			"dark_green"
-			"dark_green"
+			"dark_grey"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender = female
+		name="PRESCRIPTED_ruler_name_geth_consensus"
+		portrait="geth"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="geth_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Gothones Remnant
+gothones_remnant={
+    name="NAME_gothones_remnant"
+    name_list="btr_gothones"
+	portrait="gothones"
+    adjective="PRESCRIPTED_adjective_turian_hierarchy"
+    ship_prefix="PRESCRIPTED_ship_prefix_turian_hierarchy"
+    species_name = "PRESCRIPTED_species_name_turian_hierarchy"
+    species_plural = "PRESCRIPTED_species_plural_turian_hierarchy"	
+	species_class = "GOT"
+    species_adjective = "PRESCRIPTED_species_adjective_turian_hierarchy"
+    #species_bio="PRESCRIPTED_species_bio_turian_hierarchy"	
+
+	authority="auth_democratic"
+	government="gov_communal_parity"
+	civics={ "civic_shared_burden" "civic_warrior_culture" }
+
+	flags={ custom_start_screen gothones_remnant btr_empire canon_map hybrid_map sandbox_map council_race }
+
+	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_militarist"
+
+	trait="btr_gothones_physical_enhancements"
+	trait="btr_gothones_genetic_engineering"
+	
+	origin="origin_gothones_remnant"	
+
+	planet_name="Vindicta"
+	planet_class="pc_dextro_arid"
+	city_graphical_culture="mammalian_01"	
+	system_name="Ultio"
+	initializer="sys_ultio_init"
+	graphical_culture="reptilian_01"
+	advisor_voice_type = "l_militarist"
+	empire_flag={
+		icon={
+			category="beyondtherelays"
+			file="gothones_remnant.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_blue"
+			"grey"
 			"null"
 			"null"
 		}
 	}
 	ruler={
 		gender=male
-		name="PRESCRIPTED_ruler_name_remnants_of_rakhana"
-		portrait="drell_male"
-		texture=3
+		name="PRESCRIPTED_ruler_name_turian_hierarchy"
+		portrait="gothones_3"
+		texture=0
 		hair=0
-		clothes=4
+		clothes=5
+		ruler_title="High Anarch"
+		ruler_title_female="High Anarch"
 		leader_class="ruler"
 	}
-	spawn_enabled=no
-	room="drell_room"		
+	spawn_enabled=always
+	room="turian_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
@@ -847,7 +913,7 @@ krogan_chiefdom={
 lystheni_order={
     name="NAME_lystheni_order"
     name_list="btr_salarian"
-	portrait="salarian"
+	portrait="lystheni"
     adjective="PRESCRIPTED_adjective_lystheni_order"
     ship_prefix="PRESCRIPTED_ship_prefix_lystheni_order"
     species_name = "PRESCRIPTED_species_name_lystheni_order"
@@ -866,8 +932,8 @@ lystheni_order={
 	ethic="ethic_xenophile"
 	ethic="ethic_spiritualist"
 
-	trait="btr_salarian_shortlived"
-	trait="btr_salarian_genius"
+	trait="btr_lystheni_biotic_inclination"
+	trait="btr_lystheni_united_vision"
 	trait="trait_rapid_breeders"
 	trait="trait_weak"
 	
@@ -900,7 +966,7 @@ lystheni_order={
 	ruler={
 		gender=male
 		name="PRESCRIPTED_ruler_name_salarian_union"
-		portrait="salarian_2"
+		portrait="lystheni_2"
 		texture=2
 		hair=0
 		clothes=14
@@ -908,6 +974,76 @@ lystheni_order={
 	}
 	spawn_enabled=always
 	room="salarian_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Migrant Fleet
+migrant_fleet={
+    name="NAME_migrant_fleet"
+    name_list="btr_quarian"
+	portrait="quarian"
+    adjective="PRESCRIPTED_adjective_migrant_fleet"
+    ship_prefix="PRESCRIPTED_ship_prefix_migrant_fleet"
+    species_name = "PRESCRIPTED_species_name_migrant_fleet"
+    species_plural = "PRESCRIPTED_species_plural_migrant_fleet"	
+	species_class = "QUA"
+    species_adjective = "PRESCRIPTED_species_adjective_migrant_fleet"
+    #species_bio="PRESCRIPTED_species_bio_migrant_fleet"	
+
+	authority = "auth_democratic"
+	government = "gov_rational_consensus"
+	civics={ civic_btr_quarian_last_of_the_quarians civic_btr_quarian_the_conclave }
+
+	flags={ custom_start_screen migrant_fleet btr_empire canon_map hybrid_map sandbox_map }
+
+	ethic="ethic_egalitarian"
+	ethic="ethic_fanatic_materialist"
+
+	trait="trait_communal"
+	trait="trait_traditional"
+	trait="btr_quarian_weak_immune_system"
+	trait="btr_quarian_adept_engineers"
+	
+	origin="origin_migrant_fleet"	
+
+	planet_name="Rayya"
+	planet_class="pc_dextro_savannah"
+	city_graphical_culture="mammalian_01"	
+	system_name="Raheel-Leyya"
+	initializer="sys_raheelleyya_init"
+	graphical_culture="quar_01"
+	advisor_voice_type="migrant_fleet"	
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Migrant Fleet.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_purple"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_migrant_fleet"
+		portrait = "quarian_female_01"
+		texture = 0
+		hair = 0
+		clothes = 0
+		ruler_title="First Admiral"
+		ruler_title_female="First Admiral"
+		leader_class = "ruler"
+	}
+	spawn_enabled=always
+	room="quarian_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
@@ -1052,172 +1188,34 @@ omega_b={
 	ignore_portrait_duplication=no
 }
 
-# Quarian Conclave
-quarian_conclave={
-    name="NAME_quarian_conclave"
-    name_list="btr_quarian"
-	portrait="quarian"
-    adjective="PRESCRIPTED_adjective_quarian_conclave"
-    ship_prefix="PRESCRIPTED_ship_prefix_quarian_conclave"
-    species_name = "PRESCRIPTED_species_name_quarian_conclave"
-    species_plural = "PRESCRIPTED_species_plural_quarian_conclave"	
-	species_class = "QUA"
-    species_adjective = "PRESCRIPTED_species_adjective_quarian_conclave"
-    #species_bio="PRESCRIPTED_species_bio_quarian_conclave"	
-
-	authority = "auth_democratic"
-	government = "gov_rational_consensus"
-	civics={ civic_btr_quarian_last_of_the_quarians civic_btr_quarian_the_conclave }
-
-	flags={ custom_start_screen quarian_conclave btr_empire canon_map hybrid_map sandbox_map }
-
-	ethic="ethic_egalitarian"
-	ethic="ethic_fanatic_materialist"
-
-	trait="trait_communal"
-	trait="trait_traditional"
-	trait="btr_quarian_weak_immune_system"
-	trait="btr_quarian_adept_engineers"
-	
-	origin="origin_quarian_conclave"	
-
-	planet_name="Rayya"
-	planet_class="pc_dextro_savannah"
-	city_graphical_culture="mammalian_01"	
-	system_name="Raheel-Leyya"
-	initializer="sys_raheelleyya_init"
-	graphical_culture="quar_01"
-	advisor_voice_type="quarian_conclave"	
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Migrant Fleet.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"dark_purple"
-			"black"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_quarian_conclave"
-		portrait = "quarian_female_01"
-		texture = 0
-		hair = 0
-		clothes = 0
-		ruler_title="First Admiral"
-		ruler_title_female="First Admiral"
-		leader_class = "ruler"
-	}
-	spawn_enabled=always
-	room="quarian_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Gothones Remnant
-gothones_remnant={
-    name="NAME_gothones_remnant"
-    name_list="btr_gothones"
-	portrait="turian"
-    adjective="PRESCRIPTED_adjective_turian_hierarchy"
-    ship_prefix="PRESCRIPTED_ship_prefix_turian_hierarchy"
-    species_name = "PRESCRIPTED_species_name_turian_hierarchy"
-    species_plural = "PRESCRIPTED_species_plural_turian_hierarchy"	
-	species_class = "GOT"
-    species_adjective = "PRESCRIPTED_species_adjective_turian_hierarchy"
-    #species_bio="PRESCRIPTED_species_bio_turian_hierarchy"	
-
-	authority="auth_democratic"
-	government="gov_communal_parity"
-	civics={ "civic_shared_burden" "civic_warrior_culture" }
-
-	flags={ custom_start_screen gothones_remnant btr_empire canon_map hybrid_map sandbox_map council_race }
-
-	ethic="ethic_fanatic_egalitarian"
-	ethic="ethic_militarist"
-
-	trait="btr_gothones_physical_enhancements"
-	trait="btr_gothones_genetic_engineering"
-	
-	origin="origin_gothones_remnant"	
-
-	planet_name="Vindicta"
-	planet_class="pc_dextro_arid"
-	city_graphical_culture="mammalian_01"	
-	system_name="Ultio"
-	initializer="sys_ultio_init"
-	graphical_culture="reptilian_01"
-	advisor_voice_type = "l_militarist"
-	empire_flag={
-		icon={
-			category="beyondtherelays"
-			file="gothones_remnant.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"dark_blue"
-			"grey"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=male
-		name="PRESCRIPTED_ruler_name_turian_hierarchy"
-		portrait="turian_3"
-		texture=0
-		hair=0
-		clothes=5
-		ruler_title="High Anarch"
-		ruler_title_female="High Anarch"
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="turian_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-#Regdikan Collective
-regdikan_collective={
-    name="NAME_regdikan_collective"
+#Sed'riicae Collective
+sedriicae_collective={
+    name="NAME_sedriicae_collective"
     name_list="ART3"
 	portrait="art3"
-    adjective="PRESCRIPTED_adjective_regdikan_collective"
-    ship_prefix="PRESCRIPTED_ship_prefix_regdikan_collective"
-    species_name = "PRESCRIPTED_species_name_regdikan_collective"
-    species_plural = "PRESCRIPTED_species_plural_regdikan_collective"	
+    adjective="PRESCRIPTED_adjective_sedriicae_collective"
+    ship_prefix="PRESCRIPTED_ship_prefix_sedriicae_collective"
+    species_name = "PRESCRIPTED_species_name_sedriicae_collective"
+    species_plural = "PRESCRIPTED_species_plural_sedriicae_collective"	
 	species_class = "ART"
-    species_adjective = "PRESCRIPTED_species_adjective_regdikan_collective"
-    #species_bio="PRESCRIPTED_species_bio_quarian_conclave"	
+    species_adjective = "PRESCRIPTED_species_adjective_sedriicae_collective"
+    #species_bio="PRESCRIPTED_species_bio_migrant_fleet"	
 
 	authority = "auth_oligarchic"
 	government = "gov_holy_tribunal"
-	civics={ "civic_exalted_priesthood" "civic_slaver_guilds" }
+	civics={ "civic_btr_forayans_totalitarian_state" "civic_btr_forayans_to_serve_the_people" }
 
-	flags={ custom_start_screen regdikan_collective btr_empire canon_map hybrid_map sandbox_map }
+	flags={ custom_start_screen sedriicae_collective btr_empire canon_map hybrid_map sandbox_map }
 
-	ethic="ethic_xenophobe"
-	ethic="ethic_authoritarian"
-	ethic="ethic_spiritualist"
+	ethic="ethic_fanatic_authoritarian"
+	ethic="ethic_pacifist"
 
 	trait="trait_adaptive"
 
 	
-	origin="origin_regdikan_collective"	
+	origin="origin_sedriicae_collective"	
 
-	planet_name="Regdika"
+	planet_name="Sed'riicae"
 	planet_class="pc_dextro_desert"
 	city_graphical_culture="molluscoid_01"	
 	system_name="Nosikae"
@@ -1228,7 +1226,7 @@ regdikan_collective={
 	empire_flag={
 		icon={
 			category="beyondtherelays"
-			file="regdikan_collective.dds"
+			file="sedriicae_collective.dds"
 		}
 		background={
 			category="backgrounds"
@@ -1243,7 +1241,7 @@ regdikan_collective={
 	}
 	ruler={
 		gender=male
-		name="PRESCRIPTED_ruler_name_regdikan_collective"
+		name="PRESCRIPTED_ruler_name_sedriicae_collective"
 		portrait = "art3"
 		texture = 0
 		hair = 0
@@ -1284,10 +1282,10 @@ parnack_regime={
 	ethic = "ethic_fanatic_xenophobe"
 	ethic = "ethic_militarist"
 
-	trait="trait_very_strong"
+	trait="btr_yahg_physique"
 	trait="trait_deviants"
 	trait="trait_quarrelsome"
-	trait="trait_intelligent"
+	trait="btr_yahg_keen_mind"
 	trait="trait_repugnant"
 	
 	origin="origin_parnack_regime"	
@@ -1326,6 +1324,76 @@ parnack_regime={
 	}
 	spawn_enabled=no
 	room="yahg_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+## Rachni swarm
+rachni_hive={
+    name="NAME_rachni_hive"
+    name_list="btr_collectors"
+	portrait="rachni"
+    adjective="PRESCRIPTED_adjective_rachni_hive"
+    ship_prefix="PRESCRIPTED_ship_prefix_rachni_hive"
+    species_name = "PRESCRIPTED_species_name_rachni_hive"
+    species_plural = "PRESCRIPTED_species_plural_rachni_hive"	
+	species_class = "RAC"
+    species_adjective = "PRESCRIPTED_species_adjective_rachni_hive"
+    #species_bio="PRESCRIPTED_species_bio_rachni_hive"	
+
+	authority="auth_hive_mind"
+	government="gov_hive_mind"
+	civics={ civic_btr_rachni_crescendo civic_btr_rachni_de_capo_al_fine }
+
+	flags={ custom_start_screen rachni_hive btr_empire hybrid_map sandbox_map }
+
+	ethic="ethic_gestalt_consciousness"
+
+	
+	trait="trait_hive_mind"
+	trait="btr_rachni_melodic"
+	trait="btr_rachni_harsh_enviroment_adaptability"
+	trait="trait_rapid_breeders"
+	trait="trait_repugnant"
+	trait="trait_strong"
+	
+	
+	origin = "origin_rachni_swarm"
+
+	planet_name="Suen"
+	planet_class="pc_arid"
+	city_graphical_culture="molluscoid_01"	
+	system_name="Maskim Xul"
+	initializer="sys_maskimxul_init"
+	graphical_culture="molluscoid_01"
+
+	empire_flag={
+		icon={
+			category="domination"
+			file="domination_13.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"grey"
+			"purple"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_rachni_hive"
+		portrait="rachni"
+		texture=1
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="rachni_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
@@ -1391,6 +1459,75 @@ raloi_republic={
 	}
 	spawn_enabled=always
 	room="raloi_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+# Remnants of Rakhana
+remnants_of_rakhana={
+    name="NAME_remnants_of_rakhana"
+    name_list="btr_drell"
+	portrait="drell"
+    adjective="PRESCRIPTED_adjective_remnants_of_rakhana"
+    ship_prefix="PRESCRIPTED_ship_prefix_remnants_of_rakhana"
+    species_name = "PRESCRIPTED_species_name_remnants_of_rakhana"
+    species_plural = "PRESCRIPTED_species_plural_remnants_of_rakhana"	
+	species_class = "DRE"
+    species_adjective = "PRESCRIPTED_species_adjective_remnants_of_rakhana"
+    #species_bio="PRESCRIPTED_species_bio_remnants_of_rakhana"	
+
+	authority="auth_oligarchic"
+	government="gov_theocratic_oligarchy"
+	civics={ civic_btr_drell_architects_of_destruction civic_btr_drell_emergency_powers }
+
+	flags={ custom_start_screen remnants_of_rakhana btr_empire canon_map hybrid_map sandbox_map btr_minor }
+
+	ethic="ethic_spiritualist"
+	ethic="ethic_egalitarian"
+	ethic="ethic_militarist"
+
+	trait="trait_nonadaptive"
+	trait="trait_strong"
+	trait="trait_quick_learners"
+	trait="trait_resilient"
+	trait="trait_nomadic"
+	
+	origin="origin_remnants_of_rakhana"	
+
+	planet_name="Rakhana"
+	planet_class="pc_desert"
+	city_graphical_culture="mammalian_01"	
+	system_name="Pompeii"
+	initializer="sys_pompeii_init"
+	graphical_culture="molluscoid_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Drell.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_green"
+			"dark_green"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=male
+		name="PRESCRIPTED_ruler_name_remnants_of_rakhana"
+		portrait="drell_male"
+		texture=3
+		hair=0
+		clothes=4
+		leader_class="ruler"
+	}
+	spawn_enabled=no
+	room="drell_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
@@ -1535,6 +1672,221 @@ mec_asariillium_civ={
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
 }
+
+#########################
+#### Hostile Empires ####
+#########################
+
+## Collectors
+collectors={
+    name="NAME_the_collectors"
+    name_list="btr_collectors"
+	portrait="collector"
+    adjective="PRESCRIPTED_adjective_collectors"
+    ship_prefix="PRESCRIPTED_ship_prefix_collectors"
+    species_name = "PRESCRIPTED_species_name_collectors"
+    species_plural = "PRESCRIPTED_species_plural_collectors"	
+	species_class = "COL"
+    species_adjective = "PRESCRIPTED_species_adjective_collectors"
+    #species_bio="PRESCRIPTED_species_bio_collectors"	
+
+	authority="auth_hive_mind"
+	government="gov_machine_assimilator"
+	civics={ civic_hive_devouring_swarm civic_hive_one_mind }
+
+	flags={ custom_start_screen collectors_empire btr_empire hybrid_map sandbox_map }
+
+	ethic="ethic_gestalt_consciousness"
+
+	trait="trait_hive_mind"
+	trait="trait_repugnant"
+	trait="trait_nomadic"
+	trait="trait_traditional"
+	trait="trait_resilient"
+	trait="trait_strong"
+	
+	origin="origin_collectors"	
+
+	planet_name="Collector Base"
+	planet_class="pc_collector_base"
+	city_graphical_culture="arthropoid_01"	
+	system_name="Tartarus Debris Field"
+	initializer="sys_tartarusdebrisfield_init"
+	graphical_culture="coll_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="collector.dds"
+		}
+		background={
+			category="backgrounds"
+			file="stripe.dds"
+		}
+		colors={
+			"black"
+			"brown"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender=female
+		name="PRESCRIPTED_ruler_name_collectors"
+		portrait="collector"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+		ruler_title_male = "General"
+		ruler_title_female = "General"
+	}
+	spawn_enabled=always
+	room="collectors_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+}
+
+## Geth Heretics
+
+followers_of_nazara={
+	name="Name_followers_of_nazara"
+	name_list="btr_geth"
+	portrait = "geth"
+	adjective = "PRESCRIPTED_adjective_followers_of_nazara"
+	ship_prefix = "PRESCRIPTED_ship_prefix_name_followers_of_nazara"
+	species_name = "PRESCRIPTED_species_name_followers_of_nazara"
+	species_plural = "PRESCRIPTED_species_plural_followers_of_nazara"
+	species_class = "GTH" 
+	species_adjective = "PRESCRIPTED_species_adjective_followers_of_nazara"
+
+	authority = "auth_machine_intelligence"
+	government = "gov_machine_empire"
+	civics={ "civic_machine_warbots" "civic_machine_terminator" }
+	flags = { custom_start_screen followers_of_nazara btr_empire hybrid_map sandbox_map}
+
+	ethic = "ethic_gestalt_consciousness"
+
+	trait = "trait_machine_unit"
+	trait = "btr_geth_neural_network"
+	trait ="btr_geth_mobile_platforms"
+	trait ="trait_robot_uncanny"
+	trait ="trait_robot_high_bandwidth"
+	trait ="trait_robot_durable"
+
+	origin="origin_followers_of_nazara"	
+
+	planet_name="Heretic Station"
+	planet_class="pc_heretic_station"
+	city_graphical_culture="mammalian_01"	
+	system_name="The Sea of Storms"
+	initializer="sys_theseaofstorms_init"
+	graphical_culture="geth_01"
+
+	empire_flag={
+		icon={
+			category="masseffect"
+			file="Geth Armory.dds"
+		}
+		background={
+			category="backgrounds"
+			file="00_solid.dds"
+		}
+		colors={
+			"dark_grey"
+			"black"
+			"null"
+			"null"
+		}
+	}
+	ruler={
+		gender = male
+		name="PRESCRIPTED_ruler_name_followers_of_nazara"
+		portrait="geth"
+		texture=0
+		hair=0
+		clothes=0
+		leader_class="ruler"
+	}
+	spawn_enabled=always
+	room="geth_room"		
+	spawn_as_fallen=no
+	ignore_portrait_duplication=no
+
+}
+
+########################
+#### NOT IMPLEMENTED ###
+########################
+
+# Prothean Remnant
+#prothean_remnant={
+#	ship_prefix=""
+#	species={
+#		class="PRO"
+#		portrait="prothean"
+#		name="Prothean"
+#		plural="Protheans"
+#		adjective="Prothean"
+#		name_list="btr_prothean"
+#		trait="trait_quick_learners"
+#		trait="trait_repugnant"
+#		trait="trait_intelligent"
+#		trait="trait_decadent"
+#		trait="trait_traditional"
+#	}
+#	name="Prothean Remnant"
+#	adjective="Prothean Remnant"
+#	authority="auth_oligarchic"
+#	government="gov_military_junta"
+#	planet_name="Ilos"
+#	planet_class="pc_arid"
+#	system_name="Refuge"
+#	initializer=""
+#	graphical_culture="avian_01"
+#	city_graphical_culture="mammalian_01"
+#	flags={
+#		prothean_remnant
+#	}
+#	empire_flag={
+#		icon={
+#			category="domination"
+#			file="domination_22.dds"
+#		}
+#		background={
+#			category="backgrounds"
+#			file="v.dds"
+#		}
+#		colors={
+#			"yellow"
+#			"red"
+#			"null"
+#			"null"
+#		}
+#	}
+#	ruler={
+#		gender=male
+#		name="Anartun Tyri"
+#		portrait="prothean"
+#		texture=0
+#		hair=0
+#		clothes=0
+#		leader_class="ruler"
+#	}
+#	spawn_as_fallen=no
+#	ignore_portrait_duplication=no
+#	room="prothean_room"
+#	spawn_enabled=no
+#	ethic="ethic_authoritarian"
+#	ethic="ethic_xenophobe"
+#	ethic="ethic_militarist"
+#	civics={
+#		"civic_efficient_bureaucracy"
+#		"civic_nationalistic_zeal"
+#	}
+#	origin="origin_default"
+#}
+
 
 # # Noveria Development Corporation
 # noveria_development_corporation={
@@ -1817,354 +2169,3 @@ mec_asariillium_civ={
 # 	spawn_as_fallen=no
 # 	ignore_portrait_duplication=no
 # }
-
-
-#########################
-#### Hostile Empires ####
-#########################
-
-## Collectors
-collectors={
-    name="NAME_the_collectors"
-    name_list="btr_collectors"
-	portrait="collector"
-    adjective="PRESCRIPTED_adjective_collectors"
-    ship_prefix="PRESCRIPTED_ship_prefix_collectors"
-    species_name = "PRESCRIPTED_species_name_collectors"
-    species_plural = "PRESCRIPTED_species_plural_collectors"	
-	species_class = "COL"
-    species_adjective = "PRESCRIPTED_species_adjective_collectors"
-    #species_bio="PRESCRIPTED_species_bio_collectors"	
-
-	authority="auth_hive_mind"
-	government="gov_machine_assimilator"
-	civics={ civic_hive_devouring_swarm civic_hive_one_mind }
-
-	flags={ custom_start_screen collectors_empire btr_empire hybrid_map sandbox_map }
-
-	ethic="ethic_gestalt_consciousness"
-
-	trait="trait_hive_mind"
-	trait="trait_repugnant"
-	trait="trait_nomadic"
-	trait="trait_traditional"
-	trait="trait_resilient"
-	trait="trait_strong"
-	
-	origin="origin_collectors"	
-
-	planet_name="Collector Base"
-	planet_class="pc_collector_base"
-	city_graphical_culture="arthropoid_01"	
-	system_name="Tartarus Debris Field"
-	initializer="sys_tartarusdebrisfield_init"
-	graphical_culture="coll_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="collector.dds"
-		}
-		background={
-			category="backgrounds"
-			file="stripe.dds"
-		}
-		colors={
-			"black"
-			"brown"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_collectors"
-		portrait="collector"
-		texture=0
-		hair=0
-		clothes=0
-		leader_class="ruler"
-		ruler_title_male = "General"
-		ruler_title_female = "General"
-	}
-	spawn_enabled=always
-	room="collectors_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-
-# Geth Consensus
-geth_consensus={
-    name="NAME_geth_consensus"
-    name_list="btr_geth"
-	portrait="geth"
-    adjective="PRESCRIPTED_adjective_geth_consensus"
-    ship_prefix="PRESCRIPTED_ship_prefix_geth_consensus"
-    species_name = "PRESCRIPTED_species_name_geth_consensus"
-    species_plural = "PRESCRIPTED_species_plural_geth_consensus"	
-	species_class = "GTH"
-    species_adjective = "PRESCRIPTED_species_adjective_geth_consensus"
-    #species_bio="PRESCRIPTED_species_bio_geth_consensus"
-
-	authority="auth_machine_intelligence"
-	government="gov_machine_empire"
-	civics={ civic_btr_geth_artifical_efficiency civic_btr_geth_enigmatic_recluses }
-
-	flags={ custom_start_screen geth_consensus btr_empire canon_map hybrid_map sandbox_map }
-
-	ethic="ethic_gestalt_consciousness"
-
-	trait="trait_machine_unit"
-	trait="btr_geth_neural_network"
-	trait="btr_geth_mobile_platforms"
-	trait="trait_robot_uncanny"
-	trait="trait_robot_high_bandwidth"
-	trait="trait_robot_durable"
-	
-	origin="origin_geth_consensus"	
-
-	planet_name="Rannoch"
-	planet_class="pc_dextro_arid"
-	city_graphical_culture="mammalian_01"	
-	system_name="Tikkun"
-	initializer="sys_tikkun_init"
-	graphical_culture="geth_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Geth Armory.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"dark_grey"
-			"black"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender = female
-		name="PRESCRIPTED_ruler_name_geth_consensus"
-		portrait="geth"
-		texture=0
-		hair=0
-		clothes=0
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="geth_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-## Geth Heretics
-
-followers_of_nazara={
-	name="Name_geth_heretics"
-	name_list="btr_geth"
-	portrait = "geth"
-	adjective = "PRESCRIPTED_adjective_followers_of_nazara"
-	ship_prefix = "PRESCRIPTED_ship_prefix_name_followers_of_nazara"
-	species_name = "PRESCRIPTED_species_name_followers_of_nazara"
-	species_plural = "PRESCRIPTED_species_plural_followers_of_nazara"
-	species_class = "GTH" 
-	species_adjective = "PRESCRIPTED_species_adjective_followers_of_nazara"
-
-	authority = "auth_machine_intelligence"
-	government = "gov_machine_empire"
-	civics={ "civic_machine_warbots" "civic_machine_terminator" }
-	flags = { custom_start_screen followers_of_nazara btr_empire hybrid_map sandbox_map}
-
-	ethic = "ethic_gestalt_consciousness"
-
-	trait = "trait_machine_unit"
-	trait = "btr_geth_neural_network"
-	trait ="btr_geth_mobile_platforms"
-	trait ="trait_robot_uncanny"
-	trait ="trait_robot_high_bandwidth"
-	trait ="trait_robot_durable"
-
-	origin="origin_followers_of_nazara"	
-
-	planet_name="Heretic Station"
-	planet_class="pc_heretic_station"
-	city_graphical_culture="mammalian_01"	
-	system_name="The Sea of Storms"
-	initializer="sys_theseaofstorms_init"
-	graphical_culture="geth_01"
-
-	empire_flag={
-		icon={
-			category="masseffect"
-			file="Geth Armory.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"dark_grey"
-			"black"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender = male
-		name="PRESCRIPTED_ruler_name_followers_of_nazara"
-		portrait="geth"
-		texture=0
-		hair=0
-		clothes=0
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="geth_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-
-}
-
-## Rachni swarm
-rachni_hive={
-    name="NAME_rachni_hive"
-    name_list="btr_collectors"
-	portrait="rachni"
-    adjective="PRESCRIPTED_adjective_rachni_hive"
-    ship_prefix="PRESCRIPTED_ship_prefix_rachni_hive"
-    species_name = "PRESCRIPTED_species_name_rachni_hive"
-    species_plural = "PRESCRIPTED_species_plural_rachni_hive"	
-	species_class = "RAC"
-    species_adjective = "PRESCRIPTED_species_adjective_rachni_hive"
-    #species_bio="PRESCRIPTED_species_bio_rachni_hive"	
-
-	authority="auth_hive_mind"
-	government="gov_hive_mind"
-	civics={ civic_btr_rachni_crescendo civic_btr_rachni_de_capo_al_fine }
-
-	flags={ custom_start_screen rachni_hive btr_empire hybrid_map sandbox_map }
-
-	ethic="ethic_gestalt_consciousness"
-
-	
-	trait="trait_hive_mind"
-	trait="btr_rachni_melodic"
-	trait="btr_rachni_harsh_enviroment_adaptability"
-	trait="trait_rapid_breeders"
-	trait="trait_repugnant"
-	trait="trait_strong"
-	
-	
-	origin = "origin_rachni_swarm"
-
-	planet_name="Suen"
-	planet_class="pc_arid"
-	city_graphical_culture="molluscoid_01"	
-	system_name="Maskim Xul"
-	initializer="sys_maskimxul_init"
-	graphical_culture="molluscoid_01"
-
-	empire_flag={
-		icon={
-			category="domination"
-			file="domination_13.dds"
-		}
-		background={
-			category="backgrounds"
-			file="00_solid.dds"
-		}
-		colors={
-			"grey"
-			"purple"
-			"null"
-			"null"
-		}
-	}
-	ruler={
-		gender=female
-		name="PRESCRIPTED_ruler_name_rachni_hive"
-		portrait="rachni"
-		texture=1
-		hair=0
-		clothes=0
-		leader_class="ruler"
-	}
-	spawn_enabled=always
-	room="rachni_room"		
-	spawn_as_fallen=no
-	ignore_portrait_duplication=no
-}
-########################
-#### NOT IMPLEMENTED ###
-########################
-
-# Prothean Remnant
-#prothean_remnant={
-#	ship_prefix=""
-#	species={
-#		class="PRO"
-#		portrait="prothean"
-#		name="Prothean"
-#		plural="Protheans"
-#		adjective="Prothean"
-#		name_list="btr_prothean"
-#		trait="trait_quick_learners"
-#		trait="trait_repugnant"
-#		trait="trait_intelligent"
-#		trait="trait_decadent"
-#		trait="trait_traditional"
-#	}
-#	name="Prothean Remnant"
-#	adjective="Prothean Remnant"
-#	authority="auth_oligarchic"
-#	government="gov_military_junta"
-#	planet_name="Ilos"
-#	planet_class="pc_arid"
-#	system_name="Refuge"
-#	initializer=""
-#	graphical_culture="avian_01"
-#	city_graphical_culture="mammalian_01"
-#	flags={
-#		prothean_remnant
-#	}
-#	empire_flag={
-#		icon={
-#			category="domination"
-#			file="domination_22.dds"
-#		}
-#		background={
-#			category="backgrounds"
-#			file="v.dds"
-#		}
-#		colors={
-#			"yellow"
-#			"red"
-#			"null"
-#			"null"
-#		}
-#	}
-#	ruler={
-#		gender=male
-#		name="Anartun Tyri"
-#		portrait="prothean"
-#		texture=0
-#		hair=0
-#		clothes=0
-#		leader_class="ruler"
-#	}
-#	spawn_as_fallen=no
-#	ignore_portrait_duplication=no
-#	room="prothean_room"
-#	spawn_enabled=no
-#	ethic="ethic_authoritarian"
-#	ethic="ethic_xenophobe"
-#	ethic="ethic_militarist"
-#	civics={
-#		"civic_efficient_bureaucracy"
-#		"civic_nationalistic_zeal"
-#	}
-#	origin="origin_default"
-#}

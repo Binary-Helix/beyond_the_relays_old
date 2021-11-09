@@ -27,6 +27,331 @@
 #	ai_playable = {}							# Similar to "playable", for AI
 #}
 
+####################
+# ASARI REP CIVICS #
+####################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_2 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+###################
+# SALARIAN CIVICS #
+###################
+civic_btr_salarian_special_task_group ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		intel_decryption_add = 1
+		intel_encryption_add = 1
+		envoys_add = 1
+		spy_network_daily_value_mult = 0.25 
+	}
+}
+civic_btr_salarian_matriarchy ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = { value = ethic_gestalt_consciousness }
+		}
+		authority = {
+			NOT = {	value = auth_corporate}	
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		edicts_cost_mult = -0.2
+		governor_skill_levels = 1
+	}
+}
+
+#################
+# TURIAN CIVICS #
+#################
+civic_btr_turian_universal_service ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {	value = ethic_gestalt_consciousness}
+		}
+		authority = {
+			NOT = {	value = auth_corporate}
+		}
+	}
+	
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_naval_cap_mult = 0.25
+		#adding the unity soldier stuff wip
+	}
+}
+civic_btr_turian_honor ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {	value = ethic_gestalt_consciousness}
+		}
+		authority = {
+			NOT = {	value = auth_corporate}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.25
+		pop_government_ethic_attraction = 0.10
+	}
+}
+
+################
+# ELCOR CIVICS #
+################
+civic_btr_elcor_history_of_stability ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		pop_government_ethic_attraction = 0.20
+		planet_stability_add = 10
+	}
+}
+
+civic_btr_elcor_economic_planning ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		pop_demotion_time_mult = -0.5
+	}
+}
+
+################
+# HANAR CIVICS #
+################
+civic_btr_hanar_blessing_of_the_enkindlers = {
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_unity_produces_mult = 0.15
+		spiritualist_attraction = 0.20
+	}
+}
+
+civic_btr_hanar_part_of_the_family ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		intel_decryption_add = 2
+		spy_network_daily_value_mult = 0.1
+		army_damage_mult = 0.15
+	}
+}
+
+##########################
+# SYSTEM ALLIANCE CIVICS #
+##########################
+civic_btr_sysalliance_colonial_government ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		starbase_outpost_influence_cost_mult = -0.15
+		planet_colony_development_speed_mult = 0.1
+	}
+}
+
+civic_btr_sysalliance_unfettered_combat_vi ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		ship_evasion_mult = 0.1
+		ship_tracking_mult = 0.1
+		ship_fire_rate_mult = 0.05
+	}
+}
+
+################
+# VOLUS CIVICS #
+################
+civic_btr_volus_shrewd_business ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {	value = ethic_gestalt_consciousness}
+		}
+	}
+	
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		trade_value_mult = 0.20
+		country_consumer_goods_produces_mult = 0.10
+	}
+}
+
+civic_btr_volus_the_negotiators ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {	value = ethic_gestalt_consciousness}
+		}
+		
+	}
+	
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		envoys_add = 2
+		army_damage_mult = -0.20
+	}
+}
+
 ###################
 # BATARIAN CIVICS #
 ###################
@@ -109,9 +434,10 @@ civic_btr_batarian_constant_vigilance = {
 		planet_jobs_unity_produces_mult = 0.15
 	}
 }
-####################
-# ASARI REP CIVICS #
-####################
+
+###################
+# CERBERUS CIVICS #
+###################
 civic_btr_asarirep_1 ={
 	modification = no
 	potential = {
@@ -146,7 +472,7 @@ civic_btr_asarirep_1 ={
 	}
 }
 
-civic_btr_asarirep_2 ={
+civic_btr_asarirep_1 ={
 	modification = no
 	potential = {
 		ethics = {
@@ -179,177 +505,119 @@ civic_btr_asarirep_2 ={
 		
 	}
 }
-##########################
-# SYSTEM ALLIANCE CIVICS #
-##########################
-civic_btr_sysalliance_colonial_government ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		starbase_outpost_influence_cost_mult = -0.15
-		planet_colony_development_speed_mult = 0.1
-	}
-}
 
-civic_btr_sysalliance_unfettered_combat_vi ={
+###############
+# GETH CIVICS #
+###############
+civic_btr_geth_artifical_efficiency ={
 	modification = no
 	potential = {
 		ethics = {
 			NOT = {
-				value = ethic_gestalt_consciousness
+				value = ethic_authoritarian
 			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		ship_evasion_mult = 0.1
-		ship_tracking_mult = 0.1
-		ship_fire_rate_mult = 0.05
-	}
-}
-###################
-# SALARIAN CIVICS #
-###################
-civic_btr_salarian_special_task_group ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		intel_decryption_add = 1
-		intel_encryption_add = 1
-		envoys_add = 1
-		spy_network_daily_value_mult = 0.25 
-	}
-}
-civic_btr_salarian_matriarchy ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = { value = ethic_gestalt_consciousness }
-		}
-		authority = {
-			NOT = {	value = auth_corporate}	
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		edicts_cost_mult = -0.2
-		governor_skill_levels = 1
-	}
-}
-#################
-# TURIAN CIVICS #
-#################
-civic_btr_turian_universal_service ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {	value = ethic_gestalt_consciousness}
-		}
-		authority = {
-			NOT = {	value = auth_corporate}
-		}
-	}
-	
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_naval_cap_mult = 0.25
-		#adding the unity soldier stuff wip
-	}
-}
-civic_btr_turian_honor ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {	value = ethic_gestalt_consciousness}
-		}
-		authority = {
-			NOT = {	value = auth_corporate}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_war_exhaustion_mult = -0.25
-		pop_government_ethic_attraction = 0.10
-	}
-}
-################
-# VOLUS CIVICS #
-################
-civic_btr_volus_shrewd_business ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {	value = ethic_gestalt_consciousness}
-		}
-	}
-	
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		trade_value_mult = 0.20
-		country_consumer_goods_produces_mult = 0.10
-	}
-}
-
-civic_btr_volus_the_negotiators ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {	value = ethic_gestalt_consciousness}
 		}
 		
 	}
-	
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		envoys_add = 2
-		army_damage_mult = -0.20
+		country_energy_produces_mult = 0.10
+		planet_jobs_upkeep_mult = -0.1
+		country_admin_cap_mult = 0.1
 	}
 }
+
+civic_btr_geth_enigmatic_recluses ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_authoritarian
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		intel_encryption_add = 3
+	}
+}
+
+###################
+# GOTHONES CIVICS #
+###################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+
 #################
 # KROGAN CIVICS #
 #################
@@ -396,6 +664,446 @@ civic_btr_krogan_clans_of_tuchanka ={
 	}
 	modifier = {
 		pop_government_ethic_attraction = 0.2
+	}
+}
+
+##################
+# LYSTHENI ORDER #
+##################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+##################
+# QUARIAN CIVICS #
+##################
+civic_btr_quarian_the_conclave ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_admin_cap_mult = 0.15
+		country_naval_cap_mult = 0.15
+		pop_government_ethic_attraction = 0.1
+
+	}
+}
+
+civic_btr_quarian_last_of_the_quarians ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.2
+		ship_disengage_chance_mult = -0.3
+		pop_defense_armies_add = 2
+	}
+}
+
+################
+# OMEGA CIVICS #
+################
+civic_btr_omega_the_only_rule ={
+	modification = no
+	potential = {
+		OR = {
+			authority = {value = auth_corporate}
+		}
+	}
+	random_weight = {
+		base = 5
+	}
+	modifier = {
+		spy_network_daily_value_mult = 0.33
+		intel_decryption_add = 1
+		country_unity_produces_add = 10
+		branch_office_value_mult = 0.1
+		planet_branch_offices_cost_mult = -0.1
+	}
+	description = civic_tooltip_criminal_heritage_effects
+}
+
+civic_btr_omega_capital ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_democratic
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		envoys_add = 1
+		trade_value_mult = 0.15
+	}
+}
+
+##################
+# FORAYAN CIVICS #
+##################
+civic_btr_forayans_totalitarian_state ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		pop_happiness = 0.15
+		intel_encryption_add = 2
+		intel_decryption_add = -2
+	}
+}
+
+civic_btr_forayans_to_serve_the_people ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_unity_produces_mult = 0.2
+		envoys_add = -2
+	}
+}
+
+##################
+# PARNACK CIVICS #
+##################
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+civic_btr_asarirep_1 ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		
+	}
+}
+
+#################
+# RACHNI CIVICS #
+#################
+civic_btr_rachni_de_capo_al_fine ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_authoritarian
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		starbase_defensive_war_ship_build_speed_mult = 0.2
+		ships_upkeep_mult = -0.1
+	}
+}
+
+civic_btr_rachni_crescendo ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_authoritarian
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_engineering_tech_research_speed = 0.1
+		planet_jobs_simple_drone_engineering_research_produces_mult = 0.025
+	}
+}
+
+################
+# RALOI CIVICS #
+################
+civic_btr_raloi_spreading_our_wings={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		science_ship_survey_speed = 0.15
+		ship_speed_mult = 0.1
+	}
+}
+
+civic_btr_raloi_birds_of_a_feather ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_unity_produces_mult = 0.15
+		pop_demotion_time_mult = -0.15
+		country_admin_cap_mult = 0.075
+	}
+}
+
+################
+# DRELL CIVICS #
+################
+civic_btr_drell_architects_of_destruction ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_unity_produces_mult = -0.15
+		planet_district_mining_build_speed_mult = 0.20
+		planet_jobs_specialist_produces_mult = -0.1
+	}
+}
+
+civic_btr_drell_emergency_powers ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		planet_stability_add = 5
+		planet_crime_mult = -0.15
+		planet_pops_consumer_goods_upkeep_mult = -0.15
 	}
 }
 #################
@@ -468,10 +1176,11 @@ civic_btr_asarirep_1 ={
 		
 	}
 }
-##################
-# FORAYAN CIVICS #
-##################
-civic_btr_forayans_totalitarian_state ={
+
+#################
+# ILLIUM CIVICS #
+#################
+civic_btr_asarirep_1 ={
 	modification = no
 	potential = {
 		ethics = {
@@ -485,17 +1194,27 @@ civic_btr_forayans_totalitarian_state ={
 			}
 		}
 	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		pop_happiness = 0.15
-		intel_encryption_add = 2
-		intel_decryption_add = -2
+		
 	}
 }
 
-civic_btr_forayans_to_serve_the_people ={
+civic_btr_asarirep_1 ={
 	modification = no
 	potential = {
 		ethics = {
@@ -509,14 +1228,35 @@ civic_btr_forayans_to_serve_the_people ={
 			}
 		}
 	}
+	possible = {
+		ethics = {
+			#OR = {
+				
+			#}
+		}
+		civics = {
+			#NOT = {
+				
+			#}
+		}
+	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		country_unity_produces_mult = 0.2
-		envoys_add = -2
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
 ##################
 # NOVERIA CIVICS #
 ##################
@@ -657,535 +1397,7 @@ civic_btr_asarirep_1 ={
 		
 	}
 }
-##################
-# QUARIAN CIVICS #
-##################
-civic_btr_quarian_the_conclave ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_admin_cap_mult = 0.15
-		country_naval_cap_mult = 0.15
-		pop_government_ethic_attraction = 0.1
 
-	}
-}
-
-civic_btr_quarian_last_of_the_quarians ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		ship_home_territory_fire_rate_mult = 0.2
-		ship_disengage_chance_mult = -0.3
-		pop_defense_armies_add = 2
-	}
-}
-###################
-# CERBERUS CIVICS #
-###################
-civic_btr_asarirep_1 ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		
-	}
-}
-
-civic_btr_asarirep_1 ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		
-	}
-}
-################
-# OMEGA CIVICS #
-################
-civic_btr_omega_the_only_rule ={
-	modification = no
-	potential = {
-		OR = {
-			authority = {value = auth_corporate}
-		}
-	}
-	random_weight = {
-		base = 5
-	}
-	modifier = {
-		spy_network_daily_value_mult = 0.33
-		intel_decryption_add = 1
-		country_unity_produces_add = 10
-		branch_office_value_mult = 0.1
-		planet_branch_offices_cost_mult = -0.1
-	}
-	description = civic_tooltip_criminal_heritage_effects
-}
-
-civic_btr_omega_capital ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		envoys_add = 1
-		trade_value_mult = 0.15
-	}
-}
-###############
-# GETH CIVICS #
-###############
-civic_btr_geth_artifical_efficiency ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-		
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_energy_produces_mult = 0.10
-		planet_jobs_upkeep_mult = -0.1
-		country_admin_cap_mult = 0.1
-	}
-}
-
-civic_btr_geth_enigmatic_recluses ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		intel_encryption_add = 3
-	}
-}
-#################
-# RACHNI CIVICS #
-#################
-civic_btr_rachni_de_capo_al_fine ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		starbase_defensive_war_ship_build_speed_mult = 0.2
-		ships_upkeep_mult = -0.1
-	}
-}
-
-civic_btr_rachni_crescendo ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_engineering_tech_research_speed = 0.1
-		planet_jobs_simple_drone_engineering_research_produces_mult = 0.025
-	}
-}
-################
-# ELCOR CIVICS #
-################
-civic_btr_elcor_history_of_stability ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		pop_government_ethic_attraction = 0.20
-		planet_stability_add = 10
-	}
-}
-
-civic_btr_elcor_economic_planning ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		pop_demotion_time_mult = -0.5
-	}
-}
-##################
-# PARNACK CIVICS #
-##################
-civic_btr_asarirep_1 ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		
-	}
-}
-
-civic_btr_asarirep_1 ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		
-	}
-}
-################
-# RALOI CIVICS #
-################
-civic_btr_raloi_spreading_our_wings={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		science_ship_survey_speed = 0.15
-		ship_speed_mult = 0.1
-	}
-}
-
-civic_btr_raloi_birds_of_a_feather ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_unity_produces_mult = 0.15
-		pop_demotion_time_mult = -0.15
-		country_admin_cap_mult = 0.075
-	}
-}
-###################
-# GOTHONES CIVICS #
-###################
-civic_btr_asarirep_1 ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		
-	}
-}
-
-civic_btr_asarirep_1 ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		
-	}
-}
-################
-# DRELL CIVICS #
-################
-civic_btr_drell_architects_of_destruction ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_unity_produces_mult = -0.15
-		planet_district_mining_build_speed_mult = 0.20
-		planet_jobs_specialist_produces_mult = -0.1
-	}
-}
-
-civic_btr_drell_emergency_powers ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		planet_stability_add = 5
-		planet_crime_mult = -0.15
-		planet_pops_consumer_goods_upkeep_mult = -0.15
-	}
-}
 ####################
 # COLLECTOR CIVICS #
 ####################
@@ -1256,9 +1468,11 @@ civic_btr_asarirep_1 ={
 		
 	}
 }
-#################
-# ILLIUM CIVICS #
-#################
+
+
+##############################
+# FOLLOWERS OF NAZARA CIVICS #
+##############################
 civic_btr_asarirep_1 ={
 	modification = no
 	potential = {
@@ -1326,43 +1540,4 @@ civic_btr_asarirep_1 ={
 		
 	}
 }
-################
-# HANAR CIVICS #
-################
-civic_btr_hanar_blessing_of_the_enkindlers = {
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_unity_produces_mult = 0.15
-		spiritualist_attraction = 0.20
-	}
-}
 
-civic_btr_hanar_part_of_the_family ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		intel_decryption_add = 2
-		spy_network_daily_value_mult = 0.1
-		army_damage_mult = 0.15
-	}
-}

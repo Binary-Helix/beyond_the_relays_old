@@ -132,7 +132,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = quarian_conclave
+				has_country_flag = migrant_fleet
 			}
 			add_resource = { energy = 700	}
 			add_resource = { minerals = 320 }
@@ -325,13 +325,13 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = collectors
+				has_country_flag = the_collectors
 			}
-			add_resource = { energy = 2000	}
-			add_resource = { minerals = 330 }
-			add_resource = { alloys = 250	}
+			add_resource = { energy = 4000	}
+			add_resource = { minerals = 1330 }
+			add_resource = { alloys = 1250	}
 			add_resource = { influence = 100 }
-			add_resource = { food = 1050	}
+			add_resource = { food = 2050	}
 		}
 	}
 }
@@ -344,38 +344,35 @@ event = {
 		every_country = {
 			limit = {
 				is_country_type = default
+				is_country_type = neutral_faction
+				is_country_type = rebel
+				is_country_type = enclave
+				is_country_type = tiyanki
+				is_country_type = tiyanki_garrison
+				is_country_type = amoeba
+				is_country_type = amoeba_borderless
+				is_country_type = amoeba_garrison
+				is_country_type = crystal
+				is_country_type = drone
 				NOT = { has_country_flag = btr_empire }
 				is_ai = yes
 			}
-		}
-	}
-}
-
-#Pregame Genocide
-country_event = {
-	id = btr_setup.103
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		if = {
-			limit = { is_ai = no }
+			destroy_country = yes
+			every_owned_pop = {
+				limit = { NOT = { has_pop_flag = init_spawn } }
+				kill_pop = yes
+			}
 			every_country = {
-				every_owned_pop = {
-					limit = { NOT = { has_pop_flag = init_spawn } }
-					kill_pop = yes
+				every_owned_planet = {
+					check_planet_employment = yes				
 				}
-				every_country = {
-					every_owned_planet = {
-						check_planet_employment = yes				
-					}
-				}	 	 
 			}
 		}
 	}
 }
 
 country_event = {
-	id = btr_setup.104
+	id = btr_setup.103
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -2048,7 +2045,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_origin = origin_regdikan_collective
+				has_origin = origin_sedriicae_collective
 				any_system_within_border = {
 					has_star_flag = nosikae_system
 				}
@@ -2068,7 +2065,7 @@ country_event = {
 					module = shipyard
 					module = trading_hub
 					building = crew_quarters
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2081,7 +2078,7 @@ country_event = {
 					module = trading_hub
 					module = hangar_bay
 					building = hydroponics_bay
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2094,7 +2091,7 @@ country_event = {
 					module = trading_hub
 					module = hangar_bay
 					building = hydroponics_bay
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2104,7 +2101,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2114,7 +2111,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2124,7 +2121,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2134,7 +2131,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2144,7 +2141,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -2154,7 +2151,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:regdikan_collective
+					owner = event_target:sedriicae_collective
 				}
 				btr_generate_stations = yes
 			}
@@ -3067,7 +3064,7 @@ country_event = {
 }
 
 country_event = {
-	id = btr_setup.105
+	id = btr_setup.104
   hide_window = yes
   is_triggered_only = yes
   immediate = {
@@ -3091,9 +3088,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3115,9 +3112,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3139,9 +3136,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3163,9 +3160,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3187,9 +3184,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3211,9 +3208,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3235,9 +3232,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3259,9 +3256,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3283,9 +3280,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3307,9 +3304,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3331,9 +3328,9 @@ country_event = {
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3355,9 +3352,9 @@ country_event = {
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3379,9 +3376,9 @@ country_event = {
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3390,7 +3387,7 @@ country_event = {
         establish_communications_no_message = event_target:relic_mineral_works
         establish_communications_no_message = event_target:asteria_agriculture
       }
-	  event_target:quarian_conclave = {
+	  event_target:migrant_fleet = {
         establish_communications_no_message = event_target:asari_republics
         establish_communications_no_message = event_target:salarian_union
         establish_communications_no_message = event_target:turian_hierarchy
@@ -3405,7 +3402,7 @@ country_event = {
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3428,8 +3425,8 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:migrant_fleet
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3438,7 +3435,7 @@ country_event = {
         establish_communications_no_message = event_target:relic_mineral_works
         establish_communications_no_message = event_target:asteria_agriculture
       }
-	  event_target:regdikan_collective = {
+	  event_target:sedriicae_collective = {
         establish_communications_no_message = event_target:asari_republics
         establish_communications_no_message = event_target:salarian_union
         establish_communications_no_message = event_target:turian_hierarchy
@@ -3452,7 +3449,7 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
@@ -3476,9 +3473,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
         establish_communications_no_message = event_target:wrill_mining_consortium
@@ -3500,9 +3497,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:noveria_development_corporation
         establish_communications_no_message = event_target:wrill_mining_consortium
@@ -3524,9 +3521,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:wrill_mining_consortium
@@ -3548,9 +3545,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3572,9 +3569,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3596,9 +3593,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3620,9 +3617,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3644,9 +3641,9 @@ country_event = {
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
-        establish_communications_no_message = event_target:quarian_conclave
+        establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
-        establish_communications_no_message = event_target:regdikan_collective
+        establish_communications_no_message = event_target:sedriicae_collective
         establish_communications_no_message = event_target:vorcha_clandom
         establish_communications_no_message = event_target:illium_corporate_interests
         establish_communications_no_message = event_target:noveria_development_corporation
@@ -3695,7 +3692,7 @@ country_event = {
 
 # Set Protectorates
 country_event = {
-	id = btr_setup.106
+	id = btr_setup.105
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -3719,7 +3716,7 @@ country_event = {
 
 # Set Minor Empires
 country_event = {
-	id = btr_setup.107
+	id = btr_setup.106
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
@@ -4144,9 +4141,9 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = quarian_conclave
+					has_country_flag = migrant_fleet
 				}
-				set_name = "Quarian Conclave"
+				set_name = "The Migrant Fleet"
 			}
 		}
 		if = {
@@ -4166,9 +4163,9 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = regdikan_collective
+					has_country_flag = sedriicae_collective
 				}
-				set_name = "Regdikan Collective"
+				set_name = "Sed'riicae Collective"
 			}
 		}
 		if = {
@@ -6155,11 +6152,11 @@ country_event = {
 
 		# if = {
 		# 	limit = {
-		# 		has_country_flag = quarian_conclave
+		# 		has_country_flag = migrant_fleet
 		# 	}
 		# 	create_fleet = {
 		# 		effect = {
-		# 			set_owner = event_target:quarian_conclave
+		# 			set_owner = event_target:migrant_fleet
 
 		# 			create_ship = {
 		# 				name = Rayya
