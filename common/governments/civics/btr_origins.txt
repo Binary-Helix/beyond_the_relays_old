@@ -300,3 +300,17 @@ origin_gothones_remnant = {
 	}
 
 }
+origin_prothean_remnant = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_city_ruins
+	random_weight = {
+		base = 0
+	}
+
+	starting_colony = pc_relic
+	
+	playable = {
+		host_has_dlc = "Ancient Relics Story Pack"
+	}
+}
