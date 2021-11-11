@@ -788,7 +788,7 @@ gothones_remnant={
 
 	authority="auth_democratic"
 	government="gov_communal_parity"
-	civics={ "civic_shared_burden" "civic_warrior_culture" }
+	civics={ "civic_shared_burden" "civic_diplomatic_corps" }
 
 	flags={ custom_start_screen gothones_remnant btr_empire canon_map hybrid_map sandbox_map council_race }
 
@@ -1201,8 +1201,8 @@ sedriicae_collective={
     species_adjective = "PRESCRIPTED_species_adjective_sedriicae_collective"
     #species_bio="PRESCRIPTED_species_bio_migrant_fleet"	
 
-	authority = "auth_oligarchic"
-	government = "gov_holy_tribunal"
+	authority="auth_dictatorial"
+	government = "gov_theocratic_dictatorship"
 	civics={ "civic_btr_forayans_totalitarian_state" "civic_btr_forayans_to_serve_the_people" }
 
 	flags={ custom_start_screen sedriicae_collective btr_empire canon_map hybrid_map sandbox_map }
@@ -1358,7 +1358,7 @@ rachni_hive={
 	trait="trait_strong"
 	
 	
-	origin = "origin_rachni_swarm"
+	origin = "origin_rachni_hive"
 
 	planet_name="Suen"
 	planet_class="pc_arid"
@@ -1457,7 +1457,7 @@ raloi_republic={
 		clothes=0
 		leader_class="ruler"
 	}
-	spawn_enabled=always
+	spawn_enabled=no
 	room="raloi_room"		
 	spawn_as_fallen=no
 	ignore_portrait_duplication=no
@@ -1692,7 +1692,7 @@ collectors={
 
 	authority="auth_hive_mind"
 	government="gov_machine_assimilator"
-	civics={ civic_hive_devouring_swarm civic_hive_one_mind }
+	civics={ civic_hive_subsumed_will civic_hive_one_mind }
 
 	flags={ custom_start_screen collectors_empire btr_empire hybrid_map sandbox_map }
 

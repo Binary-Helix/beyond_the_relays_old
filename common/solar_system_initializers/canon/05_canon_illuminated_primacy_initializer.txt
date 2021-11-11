@@ -214,8 +214,8 @@ sys_obek_init = {
         init_effect = {
             set_owner = event_target:illuminated_primacy
             create_colony = {
-                owner = event_target:courts_of_dekuuna
-                species = event_target:elcorSpecies
+                owner = event_target:illuminated_primacy
+                species = event_target:hanarSpecies
                 ethos = owner
             }
             generate_han_acodu_pops = yes
@@ -339,8 +339,8 @@ sys_stabiae_init = {
         init_effect = {
             set_owner = event_target:illuminated_primacy
             create_colony = {
-                owner = event_target:courts_of_dekuuna
-                species = event_target:elcorSpecies
+                owner = event_target:illuminated_primacy
+                species = event_target:hanarSpecies
                 ethos = owner
             }
             generate_han_belan_pops = yes

@@ -134,9 +134,10 @@ sys_tartarusdebrisfield_init = {
 					name = "The Collectors"
 					ship_prefix = "PRESCRIPTED_ship_prefix_collectors"
 					type = default 
-					civics = { civic = "civic_hive_devouring_swarm" civic = "civic_hive_one_mind" }
+					civics = { civic = "civic_hive_subsumed_will" civic = "civic_hive_one_mind" }
 					authority = auth_hive_mind
 					name_list = btr_collectors
+					origin = origin_collectors
 					ethos = { ethic = "ethic_gestalt_consciousness" }
 					species = event_target:collectorSpecies
 					flag = {
@@ -184,4 +185,3 @@ sys_tartarusdebrisfield_init = {
 	}	
 }	
 	
-

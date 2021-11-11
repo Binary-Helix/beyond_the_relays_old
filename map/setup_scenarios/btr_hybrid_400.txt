@@ -3,8 +3,8 @@ static_galaxy_scenario = {
     priority = 1
     default = yes
     colonizable_planet_odds = 0.25
-	num_empires = { min = 22 max = 22 }
-	num_empire_default = 22
+	num_empires = { min = 21  max = 21 }
+	num_empire_default = 21
 	num_hyperlanes = { min = 1 max = 5 }
 	num_hyperlanes_default = 5
 	num_gateways = { min = 0 max = 0 }
@@ -360,7 +360,7 @@ static_galaxy_scenario = {
 			base = 0
                 modifier = { 
                         add = 100000 
-                        has_country_flag = omega
+                        has_country_flag = omega_empire
                 } 
         } 
     }
@@ -1539,7 +1539,7 @@ static_galaxy_scenario = {
 			base = 0 
 				modifier = { 
 					add = 100000 
-						has_country_flag = cerberus
+						has_country_flag = cerberus_empire
 				}
 		}
     }
@@ -2319,7 +2319,7 @@ static_galaxy_scenario = {
 			base = 0 
 				modifier = { 
 					add = 100000 
-					has_country_flag = collectors
+					has_country_flag = collectors_empire
 				}
 		}
 	}
@@ -2639,7 +2639,6 @@ static_galaxy_scenario = {
             y = 66.95742
         }
         initializer = sys_fotia_init
-        flags = { test_system_init }
     }
 
     system = {

@@ -228,7 +228,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = cerberus
+				has_country_flag = cerberus_empire
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 350 }
@@ -325,7 +325,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = the_collectors
+				has_country_flag = collectors_empire
 			}
 			add_resource = { energy = 4000	}
 			add_resource = { minerals = 1330 }
@@ -2464,7 +2464,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = cerberus
+				has_country_flag = cerberus_empire
 				any_system_within_border = {
 					has_star_flag = anadius_system
 				}
@@ -2484,7 +2484,7 @@ country_event = {
 					module = shipyard
 					module = trading_hub
 					building = fleet_academy
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2510,7 +2510,7 @@ country_event = {
 					module = hangar_bay
 					module = trading_hub
 					building = hydroponics_bay
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2523,7 +2523,7 @@ country_event = {
 					module = hangar_bay
 					module = trading_hub
 					building = crew_quarters
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2533,7 +2533,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2543,7 +2543,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2553,7 +2553,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2563,7 +2563,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2573,7 +2573,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2583,7 +2583,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -2593,7 +2593,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:cerberus
+					owner = event_target:cerberus_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -3014,7 +3014,7 @@ country_event = {
 		}	
 		if = {
 			limit = {
-				has_country_flag = rachni_swarm
+				has_country_flag = rachni_hive
 				any_system_within_border = {
 					has_star_flag = maskimxul_system
 				}
@@ -3028,14 +3028,14 @@ country_event = {
 					module = shipyard
 					module = hangar_bay
 					building = crew_quarters
-					owner = event_target:rachni_swarm
+					owner = event_target:rachni_hive
 				}
 				btr_generate_stations = yes
 			}
 		}
 		if = {
 			limit = {
-				has_country_flag = the_collectors
+				has_country_flag = collectors_empire
 				any_system_within_border = {
 					has_star_flag = tartarus_system
 				}
@@ -3055,7 +3055,7 @@ country_event = {
 					building = fleet_academy
 					building = resource_silo
 					building = target_uplink_computer
-					owner = event_target:the_collectors
+					owner = event_target:collectors_empire
 				}
 				btr_generate_stations = yes
 			}
@@ -3083,7 +3083,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3107,7 +3107,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3131,7 +3131,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3155,7 +3155,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3179,7 +3179,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3203,7 +3203,7 @@ country_event = {
         establish_communications_no_message = event_target:illuminated_primacy
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3227,7 +3227,7 @@ country_event = {
         establish_communications_no_message = event_target:illuminated_primacy
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3251,7 +3251,7 @@ country_event = {
         establish_communications_no_message = event_target:illuminated_primacy
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3267,7 +3267,7 @@ country_event = {
         establish_communications_no_message = event_target:relic_mineral_works
         establish_communications_no_message = event_target:asteria_agriculture
       }
-	  event_target:cerberus = {
+	  event_target:cerberus_empire = {
         establish_communications_no_message = event_target:asari_republics
         establish_communications_no_message = event_target:salarian_union
         establish_communications_no_message = event_target:turian_hierarchy
@@ -3300,7 +3300,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
@@ -3324,7 +3324,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
@@ -3348,7 +3348,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:omega_empire
@@ -3372,7 +3372,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3396,7 +3396,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3420,7 +3420,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3444,7 +3444,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3468,7 +3468,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3492,7 +3492,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3516,7 +3516,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3540,7 +3540,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3564,7 +3564,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3588,7 +3588,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3612,7 +3612,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3636,7 +3636,7 @@ country_event = {
         establish_communications_no_message = event_target:systems_alliance
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
-        establish_communications_no_message = event_target:cerberus
+        establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
         establish_communications_no_message = event_target:krogan_chiefdom
         establish_communications_no_message = event_target:lystheni_order
@@ -3728,6 +3728,8 @@ country_event = {
 				modifier = btr_minor_empire
 				days = 10950
 			}
+		}	
+		if = {	
 			limit = {
 				has_country_flag = independent_colony
 			}
@@ -4086,7 +4088,7 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = cerberus
+					has_country_flag = cerberus_empire
 				}
 				set_name = "Cerberus"
 			}
@@ -4284,7 +4286,7 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = collectors
+					has_country_flag = collectors_empire
 				}
 				set_name = "The Collectors"
 			}
@@ -4317,9 +4319,9 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = rachni_swarm
+					has_country_flag = rachni_hive
 				}
-				set_name = "Rachni Swarm"
+				set_name = "Rachni Hive"
 			}
 		}
 	}

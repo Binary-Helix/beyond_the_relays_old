@@ -1408,10 +1408,12 @@ sys_fragotz_init = {
 		}
     }
 
+	change_orbit = 150
+
     planet = {
         count = { min = 4 max = 10 }
         class = pc_asteroid
-        orbit_distance = 150
+        orbit_distance = 0
 		orbit_angle = { min = 10 max = 190 }		
 		init_effect = {
 			add_deposit = d_minerals_1
@@ -18390,4 +18392,3 @@ sys_paz_init = {
 }
 
 #Raheel-Leyya is in The Migrant Fleet Initializer
-

@@ -75,7 +75,7 @@ sys_parnitha_init = {
 			}
 			prevent_anomaly = yes
 			set_global_flag = asari_homeworld_spawned
-
+			generate_asariPop = yes
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = asari_republics } } }
 				create_country = {
