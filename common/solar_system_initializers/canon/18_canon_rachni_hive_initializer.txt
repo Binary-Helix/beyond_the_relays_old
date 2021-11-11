@@ -10,8 +10,8 @@ sys_maskimxul_init = {
 	flags = { attican_traverse_system ninmah_cluster_system maskimxul_system btr_system custom_system empire_home_system }
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = rachni_swarm } 
-			save_global_event_target_as = rachni_swarm
+			limit = { has_country_flag = rachni_hive } 
+			save_global_event_target_as = rachni_hive
 		}	
 	generate_home_system_resources = yes
 	}
@@ -47,19 +47,19 @@ sys_maskimxul_init = {
 
 		init_effect = {
 			random_country = {
-				limit = { has_country_flag = rachni_swarm }
-				save_global_event_target_as = rachni_swarm
+				limit = { has_country_flag = rachni_hive }
+				save_global_event_target_as = rachni_hive
 			}
 			prevent_anomaly = yes
 			set_global_flag = rachni_homeworld_spawned
 
 			if = {
-				limit = { NOT = { any_country = { has_country_flag = rachni_swarm } } }
+				limit = { NOT = { any_country = { has_country_flag = rachni_hive } } }
 				create_country = {
-					name = "Rachni Swarm"
-					ship_prefix = "PRESCRIPTED_ship_prefix_rachni_swarm"
+					name = "Rachni Hive"
+					ship_prefix = "PRESCRIPTED_ship_prefix_rachni_hive"
 					type = default
-					origin = "origin_rachni_swarm"
+					origin = "origin_rachni_hive"
 					ignore_initial_colony_error = yes
 					civics = { civic = "civic_btr_rachni_crescendo" civic = "civic_btr_rachni_de_capo_al_fine" }
 					authority = auth_hive_mind
@@ -84,20 +84,20 @@ sys_maskimxul_init = {
 					}
 					effect = {
 						set_graphical_culture = molluscoid_01
-						set_country_flag = rachni_swarm
+						set_country_flag = rachni_hive
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
 						set_country_flag = canon_map
-						save_global_event_target_as = rachni_swarm
+						save_global_event_target_as = rachni_hive
 					}
 				}
 			}	
 			set_capital = yes
 			random_country = {
-				limit = { has_country_flag = rachni_swarm }
-				save_global_event_target_as = rachni_swarm
+				limit = { has_country_flag = rachni_hive }
+				save_global_event_target_as = rachni_hive
 			}
-			set_owner = event_target:rachni_swarm
+			set_owner = event_target:rachni_hive
 			generate_btr_start_deposits_and_blockers = yes
 			generate_rac_suen_start_buildings = yes
 			generate_rac_suen_pops = yes
@@ -167,8 +167,8 @@ sys_mullaxul_init = {
 	flags = { attican_traverse_system ninmah_cluster_system mullaxul_system btr_system custom_system }
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = rachni_swarm } 
-			save_global_event_target_as = rachni_swarm
+			limit = { has_country_flag = rachni_hive } 
+			save_global_event_target_as = rachni_hive
 		}	
 	generate_home_system_resources = yes
 	}	
@@ -218,9 +218,9 @@ sys_mullaxul_init = {
 		init_effect = {
 			add_deposit = d_rich_mineral_deposits
 
-			set_owner = event_target:rachni_swarm
+			set_owner = event_target:rachni_hive
 			create_colony = {
-				owner = event_target:rachni_swarm
+				owner = event_target:rachni_hive
 				species = event_target:rachniSpecies
 				ethos = owner
 			}
