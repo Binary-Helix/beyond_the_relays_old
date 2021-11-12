@@ -1258,6 +1258,9 @@ gov_criminal_syndicate = {
 	possible = {
 		has_authority = auth_corporate
 		has_valid_civic = civic_criminal_heritage
+		OR = {
+			has_valid_civic = civic_btr_omega_the_only_rule
+		}
 	}
 
 	weight = {
