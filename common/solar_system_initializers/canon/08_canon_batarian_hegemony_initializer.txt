@@ -56,15 +56,25 @@ sys_harsa_init = {
 		flags = { kharshan_planet pd_ignore }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = batarian_hegemony }
-				save_global_event_target_as = batarian_hegemony
-			}
 			prevent_anomaly = yes
 			set_global_flag = batarian_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = batarian_hegemony } } }
+				create_species = { 
+					name = "Batarian"
+					class = BAT
+					portrait = batarian
+					#homeworld = THIS 
+					traits = { 
+				  trait="btr_batarian_superiority"
+				  trait="trait_repugnant"
+				  trait="btr_batarian_shrewd_business"
+				  trait="trait_industrious"
+				  trait="trait_deviants"
+					  ideal_planet_class = "pc_continental"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = batarianSpecies }
 				create_country = {
 					name = "Batarian Hegemony"
 					ship_prefix = "PRESCRIPTED_ship_prefix_batarian_hegemony"
@@ -211,7 +221,6 @@ sys_indris_init = {
 	flags = { alliance_space_system kites_nest_system indris_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -315,8 +324,10 @@ sys_koshlanhk_init = {
     name = "Koshlanhk"
     class = "sc_m"
 	max_instances = 1
-
 	flags = { alliance_space_system kites_nest_system koshlanhk_system btr_system custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
 
     planet = {
     name = "Koshlanhk"
@@ -408,11 +419,9 @@ sys_vular_init = {
     name = "Vular"
     class = sc_g
 	max_instances = 1
-
 	flags = { alliance_space_system kites_nest_system vular_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -505,11 +514,9 @@ sys_untrel_init = {
     name = "Untrel"
     class = sc_f
 	max_instances = 1
-
 	flags = { alliance_space_system kites_nest_system untrel_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -608,11 +615,9 @@ sys_gravnaz_init = {
 	name = "Grav'naz"
 	class = sc_a
 	max_instances = 1
-
 	flags = { alliance_space_system dabos_knot_system gravnaz_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
 	planet = {
@@ -721,11 +726,9 @@ sys_shuoma_init = {
 	name = "Shuoma"
 	class = sc_m
 	max_instances = 1
-
 	flags = { alliance_space_system dabos_knot_system shuoma_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 	
 	planet = {
@@ -878,11 +881,9 @@ sys_foillavas_init = {
     name = "Foilla'vas"
     class = sc_g
 	max_instances = 1
-
 	flags = { alliance_space_system lobarter_cluster_system foillavas_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -926,11 +927,9 @@ sys_ruotht_init = {
     name = "Ruotht"
     class = sc_g
 	max_instances = 1
-
 	flags = { alliance_space_system lobarter_cluster_system ruotht_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -994,11 +993,9 @@ sys_fathar_init = {
     name = "Fathar"
     class = sc_m
 	max_instances = 1
-
 	flags = { terminus_system omega_nebula_system fathar_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -1070,11 +1067,9 @@ sys_urdupos_init = {
     name = "Urdu'pos" 
     class = sc_k
 	max_instances = 1
-
 	flags = { alliance_space_system petra_nebula_system urdupos_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -1145,11 +1140,9 @@ sys_bahak_init = {
     name = "Bahak"
     class = sc_g
 	max_instances = 1
-
 	flags = { alliance_space_system viper_nebula_system bahak_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 	
     planet = {
@@ -1276,11 +1269,9 @@ sys_chelae_init = {
     name = "Chelae"
     class = sc_g
 	max_instances = 1
-
 	flags = { alliance_space_system viper_nebula_system chelae_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {

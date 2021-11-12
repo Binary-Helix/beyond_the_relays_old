@@ -56,15 +56,25 @@ sys_kanala_init = {
 		flags = { kahje_planet pd_ignore }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = illuminated_primacy }
-				save_global_event_target_as = illuminated_primacy
-			}
 			prevent_anomaly = yes
 			set_global_flag = hanar_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = illuminated_primacy } } }
+                create_species = { 
+                    name = "Hanar"
+                    class = HAN
+                    portrait = hanar
+                    #homeworld = THIS 
+                    traits = { 
+                  trait="trait_weak"
+                  trait="trait_traditional"
+                  trait="trait_communal"
+                  trait="btr_hanar_bureaucratic"
+                  trait="btr_hanar_spiritual"
+                      ideal_planet_class = "pc_cascadian"
+                    }
+                  }
+                  last_created_species = { save_global_event_target_as = hanarSpecies }
 				create_country = {
 					name = "Illuminated Primacy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_illuminated_primacy"
@@ -192,7 +202,6 @@ sys_obek_init = {
 	flags = { inner_council_system olynprotectorate_system obek_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_han_generate_stations = yes	
 	}
 
     planet = {
@@ -317,7 +326,6 @@ sys_stabiae_init = {
 	flags = { outer_council_system vesuvius_nebula_system stabiae_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_han_generate_stations = yes	
 	}
 
     planet = {

@@ -74,15 +74,24 @@ sys_sol_init = {
 		deposit_blockers = none
 		modifiers = none
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = systems_alliance }
-				save_global_event_target_as = systems_alliance
-			}
 			prevent_anomaly = yes
 			set_global_flag = human_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = systems_alliance } } }
+				create_species = { 
+					name = "Human"
+					class = HUM
+					portrait = human
+					#homeworld = THIS 
+					traits = { 
+				  trait="btr_human_flexible"
+				  trait="btr_human_multicultural"
+				  trait="trait_wasteful"
+				  trait="trait_quick_learners"
+					  ideal_planet_class = "pc_continental"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = humanSpecies }
 				create_country = {
 					name = "Systems Alliance"
 					ship_prefix = "PRESCRIPTED_ship_prefix_systems_alliance"
@@ -629,7 +638,7 @@ sys_arcturus_init = {
 				species = event_target:humanSpecies
 				ethos = owner
 			}
-			generate_hum_arcturus_pops = yes
+			generate_hum_arcturusstation_pops = yes
 			generate_start_buildings_and_districts = yes
 			generate_btr_start_deposits_and_blockers = yes
 		}

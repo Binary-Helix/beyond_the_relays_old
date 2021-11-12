@@ -58,15 +58,25 @@ sys_phontes_init = {
 		flags = { dekuuna_planet pd_ignore }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = courts_of_dekuuna }
-				save_global_event_target_as = courts_of_dekuuna
-			}
 			prevent_anomaly = yes
 			set_global_flag = elcor_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = courts_of_dekuuna } } }
+				create_species = { 
+					name = "Elcor"
+					class = ELC
+					portrait = elcor
+					#homeworld = THIS 
+					traits = { 
+				  trait="btr_elcor_physique"
+				  trait="trait_nomadic"
+				  trait="trait_slow_breeders"
+				  trait="trait_nonadaptive"
+				  trait="btr_elcor_conservative_nature"
+					  ideal_planet_class = "pc_cascadian"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = elcorSpecies }
 				create_country = {
 					name = "Courts of Dekuuna"
 					ship_prefix = "PRESCRIPTED_ship_prefix_courts_of_dekuuna"
@@ -181,7 +191,6 @@ sys_bisalas_init = {
 	flags = { outer_council_system durwuula_stream_system bisalas_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_elc_generate_stations = yes	
 	}
 
 	planet = {
@@ -286,7 +295,6 @@ sys_resyadum_init = {
 
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_elc_generate_stations = yes	
 	}
 
 	asteroid_belt = {
@@ -347,7 +355,7 @@ sys_resyadum_init = {
 				ethos = owner
 			}
 			generate_elc_jurdal_pops = yes
-			generate_elc_major_colony_buildings = yes	
+			generate_elc_jurdal_colony_buildings = yes	
 			
 			set_name = "Jurdal"
 		}						
@@ -373,7 +381,6 @@ sys_salahiel_init = {
 	flags = { terminus_system phoenix_massing_system salahiel_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_elc_generate_stations = yes	
 	}
 
     planet = {
@@ -416,7 +423,6 @@ sys_batalla_init = {
 	flags = { terminus_system omega_nebula_system batalla_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_elc_generate_stations = yes	
 	}
 
     planet = {

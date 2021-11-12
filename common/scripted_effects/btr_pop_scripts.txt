@@ -610,6 +610,11 @@ generate_tur_epyrus_colony_buildings = {
 	add_building = building_capital
 }
 
+generate_tur_edessan_colony_buildings = {
+	while = { count = 2 add_district = { district_type = district_pdhab_mining ignore_cap = yes } }
+	add_building = building_capital
+}
+
 generate_tur_chatti_colony_buildings = {
 	while = { count = 7 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 5 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -814,6 +819,16 @@ generate_elc_yapolam_colony_buildings = {
 	add_building = building_temple	
 }
 
+generate_elc_jurdal_colony_buildings = {
+	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_generator ignore_cap = yes } }
+	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
+	add_building = building_capital
+	add_building = building_temple	
+	add_building = building_factory_1
+}
+
 generate_elc_dekuuna_pops = {
 	while = {
 	   count = 28
@@ -830,7 +845,7 @@ generate_elc_yapolam_pops = {
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
-generate_elc_jurdaal_pops = {
+generate_elc_jurdal_pops = {
 	while = {
 	   count = 21
 	   generate_elcor_main_pop = yes
@@ -1225,7 +1240,7 @@ generate_vol_salau_pops = {
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
-generate_vol_waldan_pops = {
+generate_vol_walden_pops = {
 	while = {
 	   count = 18
 	   generate_volus_main_pop = yes
@@ -2057,7 +2072,7 @@ generate_her_major_colony_buildings = {
 
 generate_her_station_pops = {
 	while = {
-		count = 40
+		count = 30
 		generate_geth_main_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }

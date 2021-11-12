@@ -66,21 +66,30 @@ sys_aralakh_init = {
         size = 20
 		has_ring = no
 		starting_planet = yes
-
 		deposit_blockers = none
 		modifiers = none
 		flags = { tuchanka_planet pd_ignore }
-
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = krogan_chiefdom }
-				save_global_event_target_as = krogan_chiefdom
-			}
 			prevent_anomaly = yes
 			set_global_flag = krogan_homeworld_spawned
 
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = krogan_chiefdom } } }
+				create_species = { 
+					name = "Krogan"
+					class = KRO
+					portrait = krogan
+					#homeworld = THIS 
+					traits = { 
+				  trait="btr_krogan_genophage"		
+				  trait="btr_krogan_trait_core"
+				  trait="trait_quarrelsome"
+				  trait="trait_very_strong"
+				  trait="trait_slow_learners"
+					  ideal_planet_class = "pc_nuked"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = kroganSpecies }
 				create_country = {
 					name = "Krogan Chiefdom"
 					ship_prefix = "PRESCRIPTED_ship_prefix_krogan_chiefdom"

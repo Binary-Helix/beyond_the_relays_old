@@ -11,8 +11,8 @@ sys_pompeii_init = {
 	
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = courts_of_dekuuna } 
-			save_global_event_target_as = courts_of_dekuuna
+			limit = { has_country_flag = remnants_of_rakhana } 
+			save_global_event_target_as = remnants_of_rakhana
 		}	
 	generate_home_system_resources = yes
 	}
@@ -36,14 +36,25 @@ sys_pompeii_init = {
 		size = 18
 		flags = { rakhana_planet pd_ignore }
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = remnants_of_rakhana }
-				save_global_event_target_as = remnants_of_rakhana
-			}
 			prevent_anomaly = yes
 			set_global_flag = drell_homeworld_spawned
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = remnants_of_rakhana } } }
+				create_species = { 
+					name = "Drell"
+					class = DRE
+					portrait = drell
+					#homeworld = THIS 
+					traits = { 
+				  trait="trait_nonadaptive"
+				  trait="trait_strong"
+				  trait="trait_quick_learners"
+				  trait="trait_resilient"
+				  trait="trait_nomadic"
+					  ideal_planet_class = "pc_desert"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = drellSpecies }
 				create_country = {
 					name = "Remnants of Rakhana"
 					ship_prefix = "PRESCRIPTED_ship_prefix_remnants_of_rakhana"

@@ -56,7 +56,6 @@ sys_pax_init = {
 			}
 			prevent_anomaly = yes
 			set_global_flag = noveria_homeworld_spawned		
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = noveria_development_corporation } } }
 				create_country = {

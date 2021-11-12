@@ -38,10 +38,6 @@ sys_theseaofstorms_init = {
 		starting_planet = yes
 		flags = { heretic_station pd_ignore }
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = followers_of_nazara }
-				save_global_event_target_as = followers_of_nazara
-			}
 			prevent_anomaly = yes
 			set_global_flag = heretic_station_spawned
 			if = {
@@ -50,7 +46,7 @@ sys_theseaofstorms_init = {
 					name = "Followers of Nazara"
 					ship_prefix = "PRESCRIPTED_ship_prefix_followers_of_nazara"
 					type = default
-                origin = "origin_followers_of_nazara"
+              		origin = "origin_followers_of_nazara"
 					ignore_initial_colony_error = yes
 					civics = { civic = "civic_machine_warbots" civic = "civic_btr_geth_artifical_efficiency" }
 					authority = auth_machine_intelligence
@@ -115,10 +111,6 @@ sys_haelazi_init = {
     class = "sc_k"
 	flags = { terminus_system xosar_verge_system haelazi_system empire_home_system custom_system }	
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = followers_of_nazara } 
-			save_global_event_target_as = followers_of_nazara
-		}	
 	generate_home_system_resources = yes
 	}
 

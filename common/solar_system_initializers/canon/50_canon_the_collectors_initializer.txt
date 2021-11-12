@@ -10,8 +10,8 @@ sys_tartarusdebrisfield_init = {
 	flags = { galactic_core_system tartarus_system btr_system custom_system empire_home_system }
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = the_collectors } 
-			save_global_event_target_as = the_collectors
+			limit = { has_country_flag = collectors_empire } 
+			save_global_event_target_as = collectors_empire
 		}
 		generate_home_system_resources = yes
 	}	
@@ -122,14 +122,23 @@ sys_tartarusdebrisfield_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			set_global_flag = collectors_spawned
-
-			if = {
-				limit = {
-					NOT = {
-						any_country = { 
-							has_country_flag = the_collectors }
-					}
+			if = { limit = { NOT = { any_country = { has_country_flag = collectors_empire } } }
+			create_species = { 
+				name = "Collectors"
+				class = COL
+				portrait = collector
+				#homeworld = THIS 
+				traits = { 
+			  trait="trait_hive_mind"
+			  trait="trait_repugnant"
+			  trait="trait_nomadic"
+			  trait="trait_traditional"
+			  trait="trait_resilient"
+			  trait="trait_strong"
+				  ideal_planet_class = "pc_arid"
 				}
+			  }
+			  last_created_species = { save_global_event_target_as = collectorSpecies }
 				create_country = {
 					name = "The Collectors"
 					ship_prefix = "PRESCRIPTED_ship_prefix_collectors"
@@ -158,11 +167,11 @@ sys_tartarusdebrisfield_init = {
 					}
 					effect = {
 						set_graphical_culture = mammalian_01
-						set_country_flag = the_collectors
+						set_country_flag = collectors_empire
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
 						set_country_flag = canon_map
-						save_global_event_target_as = the_collectors
+						save_global_event_target_as = collectors_empire
 					}						
 				}
 			}
@@ -170,11 +179,11 @@ sys_tartarusdebrisfield_init = {
 			set_planet_flag = megastructure
 			set_planet_flag = habitat
 			random_country = {
-				limit = { has_country_flag = the_collectors }
-				save_global_event_target_as = the_collectors
+				limit = { has_country_flag = collectors_empire }
+				save_global_event_target_as = collectors_empire
 				species = { save_global_event_target_as = collectorSpecies }
 			}
-			set_owner = event_target:the_collectors
+			set_owner = event_target:collectors_empire
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_collectors_capitol_buildings = yes	
 			generate_collector_base_pops = yes

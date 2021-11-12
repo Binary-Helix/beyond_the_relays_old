@@ -464,7 +464,7 @@ ethos = owner
 
 generate_collectorsPop = { # Collector pops
 if = {
-limit = { NOT = { exists = event_target:collectorsSpecies } }
+limit = { NOT = { exists = event_target:collectorSpecies } }
 create_species = { 
   name = "Collectors"
   class = COL
@@ -480,10 +480,10 @@ trait="trait_strong"
     ideal_planet_class = "pc_arid"
   }
 }
-last_created_species = { save_global_event_target_as = collectorsSpecies }
+last_created_species = { save_global_event_target_as = collectorSpecies }
 }
 create_pop = {
-species = event_target:collectorsSpecies
+species = event_target:collectorSpecies
 ethos = owner
 }
 }

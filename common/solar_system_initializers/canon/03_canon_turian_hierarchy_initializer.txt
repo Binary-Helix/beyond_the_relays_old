@@ -61,15 +61,25 @@ sys_trebia_init = {
 		deposit_blockers = none		
 		modifiers = none
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = turian_hierarchy }
-				save_global_event_target_as = turian_hierarchy
-			}
 			prevent_anomaly = yes
 			set_global_flag = turian_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = turian_hierarchy } } }
+				create_species = { 
+					name = "Turian"
+					class = TUR
+					portrait = turian
+					#homeworld = THIS 
+					traits = { 
+				  trait="btr_turian_patriotic"
+				  trait="btr_turian_militaristic"
+				  trait="trait_conformists"
+				  trait="trait_nonadaptive"
+				  trait="trait_talented"
+					  ideal_planet_class = "pc_dextro_arid"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = turianSpecies }
 				create_country = {
 					name = "Turian Hierarchy"
 					ship_prefix = "PRESCRIPTED_ship_prefix_turian_hierarchy"
@@ -1464,8 +1474,8 @@ sys_sabulum_init = {
 				species = event_target:turianSpecies
 				ethos = owner
 			}
-			generate_tur_edessen_pops = yes
-			generate_tur_minor_colony_buildings = yes	
+			generate_tur_edessan_pops = yes
+			generate_tur_edessan_colony_buildings = yes	
 			
 			set_name = "Edessan"
 		}

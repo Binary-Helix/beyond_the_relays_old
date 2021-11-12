@@ -69,15 +69,24 @@ sys_parnitha_init = {
 		flags = { thessia_planet pd_ignore }
 		
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = asari_republics }
-				save_global_event_target_as = asari_republics
-			}
 			prevent_anomaly = yes
 			set_global_flag = asari_homeworld_spawned
-			generate_asariPop = yes
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = asari_republics } } }
+				create_species = { 
+					name = "Asari"
+					class = MECASA
+					portrait = mec_asari
+					#homeworld = THIS 
+					traits = { 
+				  trait = "mec_asari_trait_core"
+				  trait = "mec_asari_trait_biotic"
+				  trait = "trait_charismatic"
+				  trait = "mec_asari_trait_sophisticated"
+					  ideal_planet_class = "pc_continental"
+					}
+				  }
+				last_created_species = { save_global_event_target_as = asariSpecies }
 				create_country = {
 					name = "Asari Republics"
 					ship_prefix = "PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"

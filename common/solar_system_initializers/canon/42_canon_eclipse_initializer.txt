@@ -17,13 +17,13 @@ sys_faryar_init = {
 		init_effect = {
 			create_country = {
 				name_list = btr_merc
-				species = last_created
+				species = event_target:asariSpecies
 				type = mercenary
 				civics = { civic = civic_anarcho_tribalism }
 				origin = "origin_default"
 				flag = {
 					icon={
-						category="masseffectblack"
+						category="masseffect"
 						file="eclipse.dds"
 					}
 					background={
@@ -31,8 +31,8 @@ sys_faryar_init = {
 						file="00_solid.dds"
 					}
 					colors={
-						"yellow"
-						"black"
+						"dark_grey"
+						"dark_blue"
 						"null"
 						"null"
 					}
@@ -47,7 +47,7 @@ sys_faryar_init = {
 				set_graphical_culture = pirate_01
 				save_global_event_target_as = eclipse
 				set_country_flag = eclipse
-				set_name = "Eclipse"
+				set_name = "eclipse"
 				create_ship_design = { design = "NAME_Marauder_Starbase" }
 				add_ship_design = last_created_design
 			}
@@ -199,7 +199,7 @@ sys_faryar_init = {
 				type = "abandoned_starbase_01_object"
 				location = this
 			}
-		}
+		}		
 	}
 
 

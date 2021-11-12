@@ -46,15 +46,26 @@ sys_maskimxul_init = {
 		flags = { suen_planet pd_ignore }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = rachni_hive }
-				save_global_event_target_as = rachni_hive
-			}
 			prevent_anomaly = yes
 			set_global_flag = rachni_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = rachni_hive } } }
+				create_species = { 
+					name = "Rachni"
+					class = RAC
+					portrait = rachni
+					#homeworld = THIS 
+					traits = { 
+				  trait="trait_hive_mind"
+				  trait="btr_rachni_melodic"
+				  trait="btr_rachni_harsh_enviroment_adaptability"
+				  trait="trait_rapid_breeders"
+				  trait="trait_repugnant"
+				  trait="trait_strong"
+					  ideal_planet_class = "pc_arid"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = rachniSpecies }
 				create_country = {
 					name = "Rachni Hive"
 					ship_prefix = "PRESCRIPTED_ship_prefix_rachni_hive"
@@ -166,10 +177,6 @@ sys_mullaxul_init = {
 
 	flags = { attican_traverse_system ninmah_cluster_system mullaxul_system btr_system custom_system }
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = rachni_hive } 
-			save_global_event_target_as = rachni_hive
-		}	
 	generate_home_system_resources = yes
 	}	
     planet = {

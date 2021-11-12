@@ -46,13 +46,7 @@ sys_widow_init = {
 			prevent_anomaly = yes
 			set_global_flag = citadel_spawned
 
-			if = {
-				limit = {
-					NOT = {
-						any_country = { 
-							has_country_flag = citadel_council }
-					}
-				}
+			if = { limit = { NOT = { any_country = { has_country_flag = citadel_council } } }
 				create_country = {
 					name = "Citadel Council"
 					ship_prefix = "CSV"
@@ -97,7 +91,6 @@ sys_widow_init = {
 			}
 			set_owner = event_target:citadel_council
 			generate_btr_start_deposits_and_blockers = yes
-			generate_csec_citadel_districts = yes
 			generate_csec_citadel_pops = yes
 			set_planet_flag = megastructure
 			set_planet_flag = habitat
@@ -131,10 +124,6 @@ sys_phoenix_init = {
     class = "sc_f"
 	max_instances = 1  
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = citadel_council } 
-			save_global_event_target_as = citadel_council
-		}
 		generate_home_system_resources = yes
 	}	
 
@@ -259,8 +248,7 @@ sys_phoenix_init = {
 				ethos = owner
 			}
 			generate_csec_pinnacle_pops = yes
-			generate_csec_pinnacle_buildings = yes	
-			
+			add_building = building_hab_capital
 			set_name = "Pinnacle Station"
 		}	
 	}	

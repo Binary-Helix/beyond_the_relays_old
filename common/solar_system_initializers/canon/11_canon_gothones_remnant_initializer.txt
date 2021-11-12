@@ -64,15 +64,22 @@ sys_ultio_init = {
 		modifiers = none
 		flags = { vindicta_planet pd_ignore }
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = gothones_remnant }
-				save_global_event_target_as = gothones_remnant
-			}
 			prevent_anomaly = yes
 			set_global_flag = gothones_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = gothones_remnant } } }
+				create_species = { 
+					name = "Gothones"
+					class = GOT
+					portrait = gothones
+					#homeworld = THIS 
+					traits = { 
+					  trait="btr_gothones_physical_enhancements"
+					  trait="btr_gothones_genetic_engineering"
+					  ideal_planet_class = "pc_nuked"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = gothonesSpecies }
 				create_country = {
 					name = "Gothones Remnant"
 					ship_prefix = "GRV"
@@ -83,7 +90,7 @@ sys_ultio_init = {
 					authority = auth_democratic
 					name_list = "btr_turian"
 					ethos = { ethic = "ethic_fanatic_xenophile" ethic = "ethic_egalitarian" }
-					species = event_target:asariSpecies
+					species = event_target:gothonesSpecies
 					flag = {
 						icon = {
 							category = "beyondtherelays"

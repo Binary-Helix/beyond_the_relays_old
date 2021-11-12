@@ -64,15 +64,24 @@ sys_pranas_init = {
 		flags = { surkesh_planet pd_ignore salarian_homeworld }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = salarian_union }
-				save_global_event_target_as = salarian_union
-			}
 			prevent_anomaly = yes
 			set_global_flag = salarian_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = salarian_union } } }
+				create_species = { 
+					name = "Salarian"
+					class = SAL
+					portrait = salarian
+					#homeworld = THIS 
+					traits = { 
+				  trait = "btr_salarian_shortlived"
+				  trait = "btr_salarian_genius"
+				  trait = "trait_rapid_breeders"
+				  trait = "trait_weak"
+					  ideal_planet_class = "pc_tropical"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = salarianSpecies }
 				create_country = {
 					name = "Salarian Union"
 					ship_prefix = "PRESCRIPTED_ship_prefix_salarian_union"
@@ -110,7 +119,6 @@ sys_pranas_init = {
 					}
 				}
 			}		
-					
 			set_capital = yes
 			random_country = {
 				limit = { has_country_flag = salarian_union }

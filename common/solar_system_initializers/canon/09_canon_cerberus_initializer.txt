@@ -8,7 +8,6 @@ sys_anadius_init = {
     name = "Anadius"
     class = "sc_m_giant"
 	flags = { attican_traverse_system horse_head_nebula_system anadius_system empire_home_system btr_cerberus_system custom_system }
-
 	init_effect = { 
 		random_country = { 
 			limit = { has_country_flag = cerberus_empire } 
@@ -46,13 +45,8 @@ sys_anadius_init = {
 		flags = { cronos_station pd_ignore } 
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = cerberus_empire }
-				save_global_event_target_as = cerberus_empire
-			}
 			prevent_anomaly = yes
 			set_global_flag = cronos_station_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = cerberus_empire } } }
 				create_country = {
@@ -120,13 +114,8 @@ sys_lazarus_init = {
 	name = "Lazarus"
 	class = sc_deep_space
 	max_instances = 1
-
 	flags = { attican_traverse_system horse_head_nebula_system lazarus_system btr_system custom_system }
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = cerberus_empire } 
-			save_global_event_target_as = cerberus_empire
-		}	
 	generate_home_system_resources = yes
 	}
 
@@ -166,14 +155,9 @@ sys_41275l_init = {
 	name = "412-75 L"
 	class = sc_m_hyper
 	max_instances = 1
-
 	flags = { attican_traverse_system horse_head_nebula_system 41275l_system btr_system custom_system }
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = cerberus_empire } 
-			save_global_event_target_as = cerberus_empire
-		}	
-	generate_home_system_resources = yes
+		generate_home_system_resources = yes
 	}
 
 	planet = {
@@ -220,13 +204,8 @@ sys_lv426_init = {
 	name = "LV-426"
 	class = sc_k_giant
 	max_instances = 1
-
 	flags = { attican_traverse_system horse_head_nebula_system lv426_system btr_system custom_system }
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = cerberus_empire } 
-			save_global_event_target_as = cerberus_empire
-		}	
 	generate_home_system_resources = yes
 	}
 
@@ -303,12 +282,7 @@ sys_dakka_init = {
     name = "Dakka"
     class = "sc_g"
 	flags = { attican_traverse_system nubian_expanse_system dakka_system btr_system custom_system mercenary_home_system }
-
-	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = cerberus_empire } 
-			save_global_event_target_as = cerberus_empire
-		}	
+	init_effect = { 	
 	generate_home_system_resources = yes
 	}
 
@@ -465,13 +439,8 @@ sys_patella_init = {
 	name = "Patella"
 	class = sc_a
 	max_instances = 1
-
 	flags = { alliance_space_system voyager_cluster_system patella_system btr_system custom_system }
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = cerberus_empire } 
-			save_global_event_target_as = cerberus_empire
-		}	
 	generate_home_system_resources = yes
 	}
 
@@ -682,13 +651,8 @@ sys_netheril_init = {
     name = "Netheril"
     class = sc_k
 	max_instances = 1
-
 	flags = { attican_traverse_system shadow_sea_system netheril_system btr_system custom_system }
 	init_effect = { 
-		random_country = { 
-			limit = { has_country_flag = cerberus_empire } 
-			save_global_event_target_as = cerberus_empire
-		}	
 	generate_home_system_resources = yes
 	}
 		

@@ -63,63 +63,23 @@ sys_chabtan_init = {
 		init_effect = {
 			prevent_anomaly = yes
 			set_global_flag = yahg_homeworld_spawned
-			random_country = {
-				limit = { has_country_flag = parnack_regime }
-				save_global_event_target_as = parnack_regime
-			}
 			if = {
-				limit = {
-					OR = {
-						any_country = { 
-							has_country_flag = parnack_regime_player }
+				limit = { NOT = { any_country = { has_country_flag = parnack_regime } } }
+				create_species = { 
+					name = "Yahg"
+					class = YAH
+					portrait = yahg
+					#homeworld = THIS 
+					traits = { 
+					  trait="btr_yahg_physique"
+					  trait="trait_deviants"
+					  trait="trait_quarrelsome"
+					  trait="btr_yahg_keen_mind"
+					  trait="trait_repugnant"
+					  ideal_planet_class = "pc_badlands"
 					}
-				}
-				last_created_species = { save_global_event_target_as = yahgSpecies }
-				create_country = {
-					name = "Parnack Regime"
-					ship_prefix = "PRESCRIPTED_ship_prefix_parnack_regime"
-					type = default
-					origin = "origin_parnack_regime"
-					ignore_initial_colony_error = yes
-					civics = { civic = "civic_warrior_culture" civic = "civic_barbaric_despoilers" }
-					authority = auth_dictatorial
-					name_list = "btr_yahg"
-					ethos = { ethic = "ethic_fanatic_xenophobe" ethic = "ethic_militarist" }
-					species = event_target:yahgSpecies
-					flag = {
-						icon={ 
-							category = "masseffectblack"
-							file = "Parnack Regime.dds"
-						}	
-						background={
-							category = "backgrounds"
-							file = "00_solid.dds"
-						}
-						colors={ 
-							"red" 
-							"red" 
-							"null" 
-							"null"
-						}
-					}
-					effect = {
-						set_graphical_culture = mammalian_01
-						set_country_flag = parnack_regime_player
-						set_country_flag = parnack_regime
-						set_country_flag = init_spawned
-						set_country_flag = custom_start_screen
-						set_country_flag = canon_map
-						save_global_event_target_as = parnack_regime
-					}
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						any_country = { 
-							has_country_flag = parnack_regime_player }
-					}
-				}
+				  }
+				  last_created_species = { save_global_event_target_as = yahgSpecies }
 				create_country = {
 					name = "Parnack Regime"
 					ship_prefix = "PRV"
@@ -165,7 +125,6 @@ sys_chabtan_init = {
 			}
 			set_owner = event_target:parnack_regime
 			generate_start_deposits_and_blockers = yes
-			generate_yah_parnack_capitol_buildings = yes
 			generate_yah_parnack_pops = yes
 			set_name = "Parnack"
 		}	

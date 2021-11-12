@@ -37,15 +37,22 @@ sys_nosikae_init = {
 		starting_planet = yes
 		flags = { regdika_planet pd_ignore}
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = sedriicae_collective }
-				save_global_event_target_as = sedriicae_collective
-			}
 			prevent_anomaly = yes
 			set_global_flag = forayan_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = sedriicae_collective } } }
+				create_species = { 
+					name = "Forayan"
+					class = ART
+					portrait = art3
+					#homeworld = THIS 
+					traits = { 
+					  trait="btr_forayans_collective_will"
+					  trait="btr_forayans_caste_system"
+					  ideal_planet_class = "pc_dextro_arid"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = forayanSpecies }
 				create_country = {
 					name = "Sed'riicae Collective"
 					ship_prefix = "PRESCRIPTED_ship_prefix_sedriicae_collective"

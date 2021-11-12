@@ -52,15 +52,24 @@ sys_raheelleyya_init = {
 		modifiers = none
 		flags = { rayya_fleet pd_ignore }
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = migrant_fleet }
-				save_global_event_target_as = migrant_fleet
-			}
 			prevent_anomaly = yes
 			set_global_flag = quarian_fleet_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = migrant_fleet } } }
+				create_species = { 
+					name = "Quarian"
+					class = QUA
+					portrait = quarian
+					#homeworld = THIS 
+					traits = { 
+				  trait="btr_quarian_weak_immune_system"
+				  trait="btr_quarian_adept_engineers"
+				  trait="trait_rapid_breeders"
+				  trait="trait_weak"
+					  ideal_planet_class = "pc_dextro_savannah"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = quarianSpecies }
 				create_country = {
 					name = "The Migrant Fleet"
 					ship_prefix = "origin_migrant_fleet"

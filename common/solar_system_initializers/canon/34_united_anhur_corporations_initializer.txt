@@ -151,18 +151,14 @@ sys_amun_init = {
 		starting_planet = yes
 		deposit_blockers = none
 		modifiers = none
-
 		flags = { anhur_planet pd_ignore }
-
 		init_effect = {
 			random_country = {
 				limit = { has_country_flag = united_anhur_corporations }
 				save_global_event_target_as = united_anhur_corporations
 			}
-
 			prevent_anomaly = yes
 			set_global_flag = uac_homeworld_spawned			
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = united_anhur_corporations } } }
 				create_country = {

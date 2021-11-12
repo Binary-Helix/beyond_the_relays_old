@@ -64,18 +64,25 @@ sys_azedes_init = {
 		flags = { turvess_planet special_start_planet } 
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = raloi_republic }
-				save_global_event_target_as = raloi_republic
-			}
 			prevent_anomaly = yes
 			set_global_flag = raloi_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = raloi_republic } } }
+				create_species = { 
+					name = "Raloi"
+					class = AVI
+					portrait = AVI4
+					#homeworld = THIS 
+					traits = { 
+				  trait="trait_talented"
+				  trait="trait_conservational"
+					  ideal_planet_class = "pc_dextro_continental"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = raloiSpecies }
 				create_country = {
 					name = "Raloi Republic"
-					ship_prefix = "PRESCRIPTED_ship_prefix_geth_consensus"
+					ship_prefix = "PRESCRIPTED_ship_prefix_raloi_republic"
 					type = primitive
 					origin = "origin_raloi_republic"
 					ignore_initial_colony_error = yes
@@ -101,7 +108,7 @@ sys_azedes_init = {
 						}
 					}
 					effect = {
-						set_graphical_culture = arthropoid_01
+						set_graphical_culture = avian_01
 						set_country_flag = raloi_republic
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen

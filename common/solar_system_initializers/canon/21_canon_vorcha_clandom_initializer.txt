@@ -36,18 +36,18 @@ sys_kyzil_init = {
         has_ring = no
 		size = 4
 		flags = { naskral_planet pd_ignore }
-		init_effect = {
-			set_owner = event_target:vorcha_clandom
-			create_colony = {
-				owner = event_target:vorcha_clandom
-				species = event_target:vorchaSpecies
-				ethos = owner
-			}
-			generate_vor_naskral_pops = yes
-			generate_vorcha_buildings = yes	
+		# init_effect = {
+		# 	set_owner = event_target:vorcha_clandom
+		# 	create_colony = {
+		# 		owner = event_target:vorcha_clandom
+		# 		species = event_target:vorchaSpecies
+		# 		ethos = owner
+		# 	}
+		# 	generate_vor_naskral_pops = yes
+		# 	generate_vorcha_buildings = yes	
 			
-			set_name = "Naskral"
-		}
+		# 	set_name = "Naskral"
+		# }
     }
 
     planet = {
@@ -62,15 +62,24 @@ sys_kyzil_init = {
 		flags = { heshtok_planet pd_ignore }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = vorcha_clandom }
-				save_global_event_target_as = vorcha_clandom
-			}
 			prevent_anomaly = yes
 			set_global_flag = vorcha_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = vorcha_clandom } } }
+				create_species = { 
+					name = "Vorcha"
+					class = VOR
+					portrait = vorcha
+					#homeworld = THIS 
+					traits = { 
+					  trait="trait_repugnant"
+					  trait="btr_vorcha_biology"
+					  trait="btr_vorcha_warring_language"
+					  trait="trait_quarrelsome"
+					  ideal_planet_class = "pc_arid"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = vorchaSpecies }
 				create_country = {
 					name = "Vorcha Clandom"
 					ship_prefix = "PRESCRIPTED_ship_prefix_vorcha_clandom"
@@ -185,7 +194,6 @@ sys_aquila_init = {
     flags = { attican_traverse_system ismar_frontier_system aquila_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-
 	}
 
     planet = {
@@ -337,7 +345,6 @@ sys_zaherin_init = {
 	flags = { attican_traverse_system pylos_nebula_system zaherin_system btr_system custom_system }	
 		init_effect = {
 		generate_home_system_resources = yes
-
 	}
 	
     planet = {

@@ -56,15 +56,25 @@ sys_aru_init = {
 		flags = { irune_planet pd_ignore }
 
 		init_effect = {
-			random_country = {
-				limit = { has_country_flag = vol_protectorate }
-				save_global_event_target_as = vol_protectorate
-			}
 			prevent_anomaly = yes
 			set_global_flag = volus_homeworld_spawned
-
 			if = {
 				limit = { NOT = { any_country = { has_country_flag = vol_protectorate } } }
+				create_species = { 
+					name = "Volus"
+					class = VOL
+					portrait = volus
+					#homeworld = THIS 
+					traits = { 
+					  trait="trait_nonadaptive"
+					  trait="trait_weak"
+					  trait="btr_volus_tradesmen"
+					  trait="trait_sedentary"
+					  trait="btr_volus_trait_core"
+					  ideal_planet_class = "pc_ammonia"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = volusSpecies }
 				create_country = {
 					name = "Vol Protectorate"
 					ship_prefix = "PRESCRIPTED_ship_prefix_vol_protectorate"
@@ -203,7 +213,6 @@ sys_menarel_init = {
 	flags = { inner_council_system aethon_cluster_system menarel_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_vol_generate_stations = yes	
 	}
 
 	planet = {
@@ -270,7 +279,6 @@ sys_yakawa_init = {
 	flags = { attican_traverse_system caleston_rift_system yakawa_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_vol_generate_stations = yes	
 	}
     planet = {
 	    name = "Yakawa"
@@ -442,7 +450,6 @@ sys_cobines_init = {
 	flags = { alliance_space_system dabos_knot_system cobines_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_vol_generate_stations = yes	
 	}
 
 	planet = {
@@ -524,7 +531,6 @@ sys_omaverizh_init = {
 	flags = { alliance_space_system dabos_knot_system omaverizh_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_vol_generate_stations = yes	
 	}
 
 	asteroid_belt = {
@@ -633,7 +639,6 @@ sys_uba_init = {
 	flags = { outer_council_system minos_wasteland_system uba_system btr_system custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
-		btr_vol_generate_stations = yes	
 	}
 
     planet = {
