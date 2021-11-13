@@ -16,7 +16,7 @@ empire_init_add_technologies = {
 # fromfrom: secondary species (if exists)
 empire_init_capital_planet = {
 	events = {
-		mec_asari_setup.201
+	#	mec_asari_setup.201
 		# at this point the species might have changed (because we added traits), so FROMFROM might not be the secondary species anymore
 	}
 }
@@ -24,7 +24,7 @@ empire_init_capital_planet = {
 # scope: none
 on_game_start = {
 	events = {
-		mec_asari_setup.401
+		#mec_asari_setup.401
 	}
 }
 
@@ -38,8 +38,8 @@ on_game_start_country = {
 
 on_press_begin = {
 	events = {
-		mec_asari_setup.301
-		mec_asari_setup.302
+		#mec_asari_setup.301
+		#mec_asari_setup.302
 		mec_asari_setup.501
 		mec_asari_setup.502
 		mec_asari_asi.201
@@ -96,7 +96,7 @@ on_leader_spawned = {
 # FromFrom = Pop
 on_pop_grown = {
 	events = {
-		mec_asari_pop.101
+		#mec_asari_pop.101
 	}
 }
 

@@ -1,0 +1,105 @@
+####################################################
+##### PLANETARY DIVERSITY - Research Buildings #####
+####################################################
+
+
+building_nature_preserve = {
+	base_buildtime = 360
+
+	is_capped_by_modifier = yes
+	
+	convert_to = {
+		building_volatiles_mine
+		building_geothermal_slurry_site
+		building_ammonia_electrodeposition
+		building_frozen_gas_mine
+		building_lava_mine
+		building_karst_mine
+		building_reef_lab
+		#building_nature_preserve
+		building_nightside_mining
+		building_sugarbush
+		building_undersea_gasmine
+		building_salt_mine
+		building_aquifer_lab
+		building_megaflora_mine
+		building_storm_lab
+		building_coral_mine
+		building_acid_lab
+		building_rogue_mine
+		building_lichen_farm
+		building_eyeball_lab
+		building_sulfur_lab
+		building_glacio_forge 
+		building_lanthanide_mine
+		building_supercon_lab
+	}
+
+	category = research
+	
+	potential = {
+		NOT = { has_modifier = resort_colony }
+		is_planet_class = pc_biolumen
+	}
+	
+	#prerequisites = {
+	#	tech_society_1
+	#}
+
+	allow = {
+		has_upgraded_capital = yes
+	}
+
+	#planet_modifier = {
+	#	planet_jobs_unity_produces_mult = 0.10
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_jungle_ranger_add = 2
+			job_jungle_ranger_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			job_calculator_per_pop = 0.05
+		}
+	}
+	
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 400
+		}
+		upkeep = {
+			energy = 1
+		}
+	}	
+
+	ai_resource_production = {
+		trigger = { always = yes }
+		society_research = 30
+		unity = 20
+	}
+}

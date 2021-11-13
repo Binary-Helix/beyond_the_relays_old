@@ -1,6 +1,7 @@
-##########################################################################
-# Decisions
-##########################################################################
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####         pd_decisions.txt        #####
+###########################################
 
 # Adapted Environment
 decision_engineered_environment = {
@@ -28,13 +29,13 @@ decision_engineered_environment = {
 		is_pd_hive_arcology = no
 		is_pd_robot_arcology = no
 		is_pd_rare = no
-		NOT = { is_planet_class = pc_pdshroud }
+		#NOT = { is_planet_class = pc_pdshroud }
 		NOT = { is_planet_class = pc_gaia }
 		NOT = { is_planet_class = pc_relic }
 		NOT = { is_planet_class = pc_milarc_relic }
 		NOT = { is_planet_class = pc_hive }
-		NOT = { is_planet_class = pc_pdhive1 }
-		NOT = { is_planet_class = pc_pdhive2 }
+		#NOT = { is_planet_class = pc_pdhive1 }
+		#NOT = { is_planet_class = pc_pdhive2 }
 		NOT = { is_planet_class = pc_machine }
 		NOT = { is_planet_class = pc_hive }
 		NOT = { has_modifier = engineered_environment }
@@ -149,7 +150,7 @@ decision_engineered_environment_gaia = {
 	potential = {
 		is_artificial = no
 		is_artificial = no
-		NOT = { is_planet_class = pc_pdshroud }
+		#NOT = { is_planet_class = pc_pdshroud }
 		NOT = { is_planet_class = pc_gaia }
 		NOT = { is_planet_class = pc_city }
 		NOT = { is_planet_class = pc_ecocity }
@@ -161,11 +162,11 @@ decision_engineered_environment_gaia = {
 		NOT = { is_planet_class = pc_necrohive }
 		NOT = { is_planet_class = pc_relic }
 		NOT = { is_planet_class = pc_milarc_relic }
-		NOT = { is_planet_class = pc_crystal }
-		NOT = { is_planet_class = pc_graveyard }
-		NOT = { is_planet_class = pc_floating }
-		NOT = { is_planet_class = pc_archive }
-		NOT = { is_planet_class = pc_technoorganic }
+		# NOT = { is_planet_class = pc_crystal }
+		# NOT = { is_planet_class = pc_graveyard }
+		# NOT = { is_planet_class = pc_floating }
+		# NOT = { is_planet_class = pc_archive }
+		# NOT = { is_planet_class = pc_technoorganic }
 		NOT = { is_planet_class = pc_pd_gas_giant_hab }
 		NOT = { is_planet_class = pc_pd_barren_hab }
 		NOT = { is_planet_class = pc_pd_barren_cold_hab }
@@ -175,8 +176,8 @@ decision_engineered_environment_gaia = {
 		NOT = { is_planet_class = pc_pd_hothouse_hab }
 		NOT = { is_planet_class = pc_pd_asteroid_hab }
 		NOT = { is_planet_class = pc_hive }
-		NOT = { is_planet_class = pc_pdhive1 }
-		NOT = { is_planet_class = pc_pdhive2 }
+		# NOT = { is_planet_class = pc_pdhive1 }
+		# NOT = { is_planet_class = pc_pdhive2 }
 		NOT = { is_planet_class = pc_bioforge }
 		NOT = { is_planet_class = pc_biocapital }
 		NOT = { is_planet_class = pc_megafloraforge }
@@ -250,7 +251,7 @@ decision_removeocean = {
 		NOT = { is_planet_class = pc_milarc_relic }
 		NOT = { owner = { has_trait = trait_pc_aquatic_preference } }
 		NOT = { is_planet_class = pc_city }
-		NOT = { is_planet_class = pc_pdshroud }
+		#NOT = { is_planet_class = pc_pdshroud }
 		NOT = { is_planet_class = pc_ecocity }
 		NOT = { is_planet_class = pc_corpoarc }
 		NOT = { is_planet_class = pc_palacearc }
@@ -353,7 +354,7 @@ decision_oceancapital = {
 	
 	potential = {
 		owner = { has_trait = trait_pc_aquatic_preference }
-		NOT = { is_planet_class = pc_pdshroud }
+		#NOT = { is_planet_class = pc_pdshroud }
 		NOT = { is_planet_class = pc_aquatic }
 		NOT = { has_planet_flag = pdaquapicture }
 		NOT = { is_planet_class = pc_relic }
@@ -638,11 +639,11 @@ decision_pd_transplant_tree = {
 				is_planet_class = pc_relic
 				is_planet_class = pc_milarc_relic
 				is_planet_class = pc_city
-				is_planet_class = pc_floating
-				is_planet_class = pc_crystal
-				is_planet_class = pc_technoorganic
-				is_planet_class = pc_graveyard
-				is_planet_class = pc_crucible
+				# is_planet_class = pc_floating
+				# is_planet_class = pc_crystal
+				# is_planet_class = pc_technoorganic
+				# is_planet_class = pc_graveyard
+				# is_planet_class = pc_crucible
 				}
 			 }
 		add_deposit = d_pd_tree_of_life_special
@@ -2034,4 +2035,1187 @@ decision_shroud_crucible = {
  	}
 }
 
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####     pd_cityworldreplaces.txt    #####
+###########################################
 
+# Arcology Project
+decision_arcology_project = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+	
+	potential = {
+		NOR = {
+			#is_planet_class = pc_pdshroud
+			is_planet_class = pc_city
+			is_planet_class = pc_relic
+			is_planet_class = pc_milarc_relic
+			is_planet_class = pc_ecocity
+			is_planet_class = pc_corpoarc
+			is_planet_class = pc_palacearc
+			is_planet_class = pc_capitalarc
+			is_planet_class = pc_shroudcity
+			is_planet_class = pc_shroudecocity
+			is_planet_class = pc_shroudcapitalarc
+			is_planet_class = pc_shroudpalacearc
+			is_planet_class = pc_shroudmilarc
+			is_planet_class = pc_shroudcorpoarc
+			is_planet_class = pc_milarc
+			is_planet_class = pc_necropolis
+			is_planet_class = pc_machine_necropolis
+			is_planet_class = pc_necrohive
+			has_modifier = resort_colony
+			has_modifier = penal_colony
+			has_modifier = slave_colony
+			has_modifier = pm_wenkwort_custodian
+			is_pd_unique = yes
+		}
+		is_artificial = no
+		exists = owner
+		owner = { has_ascension_perk = ap_arcology_project }
+	}
+	
+	allow = {
+		custom_tooltip = {
+			fail_text = decision_arcology_project_requirements
+			free_district_slots < 1
+			num_districts = { type = district_farming value < 1 }
+			num_districts = { type = district_mining value < 1 }
+			num_districts = { type = district_generator value < 1 }
+		}
+		num_uncleared_blockers < 1
+	}
+	
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {		
+			clear_deposits = yes
+			set_industrial_focus_flags = yes
+			change_pc = pc_city
+			IF = {
+				limit = { owner = { NOT = { has_trait = trait_pc_aquatic_preference } } }
+				set_planet_entity = {
+					entity = "city_planet_entity"
+					graphical_culture = owner
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_aquatic_preference } }
+				set_planet_entity = {
+					entity = "aquaticcity_planet_01_entity"
+					picture = "pc_aquaticcity"
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+				IF = { limit = { NOT = { has_modifier = pdammoniaatmosphere } }	add_modifier = { modifier = pdammoniaatmosphere	} }
+				remove_modifier = ammonia
+				set_planet_entity = { 
+					picture = pc_ammoniacity 
+					entity = ammonia_arc_planet_01_entity
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_sulfur_preference } }
+				IF = { limit = { NOT = { has_modifier = pdsulfuratmosphere } }	add_modifier = { modifier = pdsulfuratmosphere	} }
+				remove_modifier = pdsulfur
+				set_planet_entity = { 
+					picture = pc_sulfurcity 
+					entity = sulfur_arc_planet_01_entity
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_methane_preference } }
+				IF = { limit = { NOT = { has_modifier = pdmethaneatmosphere } }	add_modifier = { modifier = pdmethaneatmosphere	} }
+				remove_modifier = methane
+				set_planet_entity = {
+					picture = pc_methanecity 
+					entity = methane_arc_planet_01_entity 
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_ash_preference } }
+				IF = { limit = { NOT = { has_modifier = pdashatmosphere } }	add_modifier = { modifier = pdashatmosphere	} }
+				remove_modifier = ash
+				set_planet_entity = { 
+					picture = pc_ashcity 
+					entity = ash_arc_planet_01_entity
+				}
+			}
+			owner = {
+				country_event = { id = distar.201 } # port for living planet distar.197, triggers in event
+			}
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_housing
+				VARIABLE = num_housing_districts
+			}
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_arms_industry
+				VARIABLE = num_industrial_districts
+			}
+			set_ecu_industrial_districts_effect = yes
+			planet_event = { id = mega.200 }
+			planet_event = { id = pdengine.14 }
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = { 
+			factor = 0	
+			owner = { any_owned_planet = { is_planet_class = pc_city } }
+		}
+	}
+}
+
+# Arcology Project (Relic Worlds)
+decision_arcology_project_relic = {
+	owned_planets_only = yes
+	icon = decision_arcology_project
+
+	enactment_time = 3600
+	resources = {
+		category = decisions
+		cost = {
+			influence = 200
+			minerals = 20000
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_relic
+		is_artificial = no
+		exists = owner
+		owner = {
+			OR = {
+				is_regular_empire = yes
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+	}
+	
+	allow = {
+		num_uncleared_blockers < 1
+		owner = { has_technology = tech_housing_2 }
+	}
+	
+	effect = {
+		# Make city-planet
+		custom_tooltip = decision_arcology_project_effects
+		hidden_effect = {		
+			clear_deposits = yes
+			set_industrial_focus_flags = yes
+			change_pc = pc_city
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_housing
+				VARIABLE = num_housing_districts
+			}
+			relic_world_conversion_effect = {
+				DISTRICT = district_arcology_arms_industry
+				VARIABLE = num_industrial_districts
+			}
+			set_ecu_industrial_districts_effect = yes
+			IF = {
+				limit = { owner = { NOT = { has_trait = trait_pc_aquatic_preference } } }
+				set_planet_entity = {
+					entity = "city_planet_entity"
+					graphical_culture = owner
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_aquatic_preference } }
+				set_planet_entity = {
+					entity = "aquaticcity_planet_01_entity"
+					picture = "pc_aquaticcity"
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_ammonia_preference } }
+				IF = { limit = { NOT = { has_modifier = pdammoniaatmosphere } }	add_modifier = { modifier = pdammoniaatmosphere	} }
+				remove_modifier = ammonia
+				set_planet_entity = { 
+					picture = pc_ammoniacity 
+					entity = ammonia_arc_planet_01_entity
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_sulfur_preference } }
+				IF = { limit = { NOT = { has_modifier = pdsulfuratmosphere } }	add_modifier = { modifier = pdsulfuratmosphere	} }
+				remove_modifier = pdsulfur
+				set_planet_entity = { 
+					picture = pc_sulfurcity 
+					entity = sulfur_arc_planet_01_entity
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_methane_preference } }
+				IF = { limit = { NOT = { has_modifier = pdmethaneatmosphere } }	add_modifier = { modifier = pdmethaneatmosphere	} }
+				remove_modifier = methane
+				set_planet_entity = {
+					picture = pc_methanecity 
+					entity = methane_arc_planet_01_entity 
+				}
+			}
+			IF = {
+				limit = { owner = { has_trait = trait_pc_ash_preference } }
+				IF = { limit = { NOT = { has_modifier = pdashatmosphere } }	add_modifier = { modifier = pdashatmosphere	} }
+				remove_modifier = ash
+				set_planet_entity = { 
+					picture = pc_ashcity 
+					entity = ash_arc_planet_01_entity
+				}
+			}
+			add_deposit = d_former_relic_world
+			planet_event = { id =  mega.201 }
+			while = {
+				count = 4
+				solar_system = {
+					random_system_ambient_object = {
+						limit = { has_ambient_object_flag = relic_world_debris }
+						destroy_ambient_object = this
+					}
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						is_active_resolution = "resolution_ecology_environmental_control_board"
+						is_active_resolution = "resolution_ecology_paradise_initiative"
+					}
+				}
+				owner = {
+					set_timed_country_flag = { flag = resolution_breached_terraformed days = 3600 }
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		weight = 10
+		modifier = { 
+			factor = 0	
+			owner = { any_owned_planet = { is_planet_class = pc_city }
+			}
+		}
+	}
+}
+
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####     pd_exotic_decisions.txt     #####
+###########################################
+
+# Radiotophic Uncolonized World
+decision_radiotrophic_world_nocolony = {
+	icon = decision_radiotrophic
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 5000
+			sr_rad_bloom = 1000
+		}
+	}
+	
+	potential = {
+		exists = space_owner
+		space_owner = { is_same_value = from }
+		from = { 
+			has_trait = trait_pc_irradiated_preference 
+			has_technology = tech_climate_restoration
+		}
+		OR = {
+			is_wet = yes
+			is_cold = yes
+			is_dry = yes
+			is_pd_exotic = yes
+		}
+		is_colony = no
+		NOT = { has_planet_flag = pd_radiotrophic_transformation }
+	}
+
+	effect = {
+		custom_tooltip = decision_radiotrophic_world_effects_custom
+		#change_pc = pc_pdshroud
+		hidden_effect = { 
+			set_planet_flag = pd_radiotrophic_transformation 
+			planet_event = { id = pdexotic.07 days = 1800 } 
+			add_modifier = {
+				modifier = pdradiotrophictransformation days = -1
+			}
+		}
+	}   
+
+	ai_weight = {
+        weight = 0
+        modifier = {
+            factor = 0
+            or = {
+                free_building_slots > 0
+                owner = {
+                    or = {
+                        resource_stockpile_compare = { resource = energy value < 6000 } 
+                        resource_stockpile_compare = { resource = influence value < 150 }
+					} 
+				}
+            }
+        }
+    }
+}
+
+# Upgrade Rad-Bloom Transplant Deposit
+decision_radiotrophic_upgrade_radblooms = {
+	icon = decision_radiotrophic
+	owned_planets_only = yes
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			energy =  500
+			sr_rad_bloom = 500
+		}
+	}
+		
+	prerequisites = { "tech_upgrade_rad_blooms" }
+	
+	potential = {
+		from = { 
+			has_trait = trait_pc_irradiated_preference 
+			has_technology = tech_upgrade_rad_blooms
+		}
+		is_planet_class = pc_irradiated
+		has_deposit = d_rad_blooms_transplant
+	}
+
+	effect = {
+		remove_deposit = d_rad_blooms_transplant
+		add_deposit = d_rad_blooms_transplant_upgrade
+	}   
+
+	ai_weight = {
+        weight = 0
+        modifier = {
+            factor = 0
+            or = {
+                free_building_slots > 0
+                owner = {
+                    or = {
+                        resource_stockpile_compare = { resource = energy value < 6000 } 
+                        resource_stockpile_compare = { resource = influence value < 150 }
+                     } 
+				}
+            }
+        }
+    }
+}
+
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####     pd_habitat_decisions.txt    #####
+###########################################
+
+# Make Trade Moon
+decision_trademoonhab = {
+	icon = decision_trademoonhab
+	owned_planets_only = yes
+	
+	#prerequisites = {
+	#	"tech_terrestrial_sculpting"		
+	#}
+
+	#enactment_time = 0
+	resources = {
+		category = decisions
+		cost = {
+			energy = 250
+		}
+	}
+	
+	potential = { 
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+			is_planet_class = pc_pd_frozen_hab
+			is_planet_class = pc_pd_molten_hab
+			is_planet_class = pc_pd_hothouse_hab
+			is_planet_class = pc_pd_toxic_hab
+			is_planet_class = pc_pd_gas_giant_hab
+			is_planet_class = pc_pd_asteroid_hab
+		}
+		NOT = { has_planet_flag = pd_commercial_hab }
+		NOT = { has_planet_flag = pd_hab_d2 }
+		owner = { is_gestalt = no }
+	}
+
+	effect = {
+		custom_tooltip = decision_commercial_hab_effects_short
+		hidden_effect = {
+			set_planet_flag = pd_commercial_hab
+			IF = { limit = { NOT = { has_planet_flag = pd_hab_d1 } } set_planet_flag = pd_hab_d1 }
+			ELSE_IF = { limit = { has_planet_flag = pd_hab_d1 } set_planet_flag = pd_hab_d2 }
+		}
+	}    
+	
+	ai_weight = { 
+		weight = 1
+	}
+}
+
+# Make Military
+decision_milhab = {
+	icon = decision_milhab
+	owned_planets_only = yes
+	
+	#prerequisites = {
+	#	"tech_terrestrial_sculpting"		
+	#}
+
+	enactment_time = 1
+	resources = {
+		category = decisions
+		cost = {
+			energy = 250
+		}
+	}
+	
+	potential = { 
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+			is_planet_class = pc_pd_frozen_hab
+			is_planet_class = pc_pd_molten_hab
+			is_planet_class = pc_pd_asteroid_hab
+			is_planet_class = pc_pd_toxic_hab
+			is_planet_class = pc_pd_hothouse_hab
+			is_planet_class = pc_pd_gas_giant_hab
+		}
+		NOT = { has_planet_flag = pd_hab_d2 }
+		NOT = { has_planet_flag = pd_mil_hab }
+	}
+
+	effect = {
+		custom_tooltip = decision_mil_hab_effects_short
+		hidden_effect = {
+			set_planet_flag = pd_mil_hab
+			IF = { limit = { NOT = { has_planet_flag = pd_hab_d1 } } set_planet_flag = pd_hab_d1 }
+			ELSE_IF = { limit = { has_planet_flag = pd_hab_d1 } set_planet_flag = pd_hab_d2 }
+		}
+	}    
+	
+	ai_weight = { 
+		weight = 1
+	}
+}
+
+# Advanced Habitat
+decision_upgrade_pd_habitat = {
+	owned_planets_only = yes
+	icon = decision_satellite_in_orbit
+
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1000
+		}
+	}
+
+	potential = {
+		OR = {
+		is_planet_class = pc_pd_barren_cold_hab
+		is_planet_class = pc_pd_barren_hab
+		is_planet_class = pc_pd_frozen_hab
+		is_planet_class = pc_pd_gas_giant_hab
+		is_planet_class = pc_pd_hothouse_hab
+		is_planet_class = pc_pd_toxic_hab
+		is_planet_class = pc_pd_molten_hab
+		#is_planet_class = pc_pd_asteroid_hab
+		}
+		NOT = { has_planet_flag = advanced_habitat }
+		exists = owner
+		owner = {
+			has_technology = tech_pdhabitat_1
+		}
+	}
+
+	allow = {
+		free_district_slots = 0
+	}
+
+	effect = {
+		if = {
+			limit = { NOT = { is_planet_class = pc_pd_asteroid_hab }
+			}
+			add_deposit = d_expanded_dome_system
+		}
+		else_if = {
+			limit = { is_planet_class = pc_pd_asteroid_hab }
+			add_deposit = d_expanded_dome_system_1
+		}
+		hidden_effect = {
+			set_planet_flag = advanced_habitat
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_upgrade_pd_habitat_2 = {
+	owned_planets_only = yes
+	icon = decision_satellite_in_orbit
+
+	enactment_time = 1440
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 1500
+		}
+	}
+
+	potential = {
+		OR = {
+		is_planet_class = pc_pd_barren_cold_hab
+		is_planet_class = pc_pd_barren_hab
+		is_planet_class = pc_pd_frozen_hab
+		is_planet_class = pc_pd_gas_giant_hab
+		is_planet_class = pc_pd_hothouse_hab
+		is_planet_class = pc_pd_toxic_hab
+		is_planet_class = pc_pd_molten_hab
+		#is_planet_class = pc_pd_asteroid_hab
+		}
+		has_planet_flag = advanced_habitat
+		NOT = { has_planet_flag = advanced_habitat_2 }
+		exists = owner
+		owner = {
+			has_technology = tech_pdhabitat_2
+		}
+	}
+
+	allow = {
+		free_district_slots = 0
+		has_building = building_hab_major_capital
+		#has_major_upgraded_capital = yes
+	}
+
+	effect = {
+		if = {
+			limit = { NOT = { is_planet_class = pc_pd_asteroid_hab }
+			}
+			add_deposit = d_expanded_dome_system
+		}
+		else_if = {
+			limit = { is_planet_class = pc_pd_asteroid_hab }
+			add_deposit = d_expanded_dome_system_1
+		}
+		hidden_effect = {
+			set_planet_flag = advanced_habitat_2
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+
+decision_destroy_planetary_hab = {
+	#owned_planets_only = yes
+	icon = decision_satellite_in_orbit #TODO
+
+	#enactment_time = 1440
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+		}
+	}
+
+	potential = {
+		OR = {
+		is_planet_class = pc_pd_barren_cold_hab
+		is_planet_class = pc_pd_barren_hab
+		is_planet_class = pc_pd_frozen_hab
+		is_planet_class = pc_pd_gas_giant_hab
+		is_planet_class = pc_pd_hothouse_hab
+		is_planet_class = pc_pd_toxic_hab
+		is_planet_class = pc_pd_molten_hab
+		is_planet_class = pc_pd_asteroid_hab
+		}
+		num_pops < 1
+	}
+
+	allow = {
+		num_pops < 1
+	}
+
+	effect = {
+		custom_tooltip = PD_REMOVE_HAB_TOOLTIP
+		owner = { add_resource = { alloys = 200	} }
+		hidden_effect = {
+		if = {
+			limit = { is_planet_class = pc_pd_barren_cold_hab }
+			change_pc = pc_barren_cold
+		}
+		if = {
+			limit = { is_planet_class = pc_pd_barren_hab }
+			change_pc = pc_barren
+		}
+		if = {
+			limit = { is_planet_class = pc_pd_frozen_hab }
+			change_pc = pc_frozen
+		}
+		if = {
+			limit = { is_planet_class = pc_pd_gas_giant_hab }
+			change_pc = pc_gas_giant
+		}
+		if = {
+			limit = { is_planet_class = pc_pd_hothouse_hab }
+			change_pc = pc_hothouse
+		}
+		if = {
+			limit = { is_planet_class = pc_pd_toxic_hab }
+			change_pc = pc_toxic
+		}
+		if = {
+			limit = { is_planet_class = pc_pd_molten_hab }
+			change_pc = pc_molten
+		}
+		if = {
+			limit = { is_planet_class = pc_pd_asteroid_hab }
+			change_pc = pc_asteroid
+		}	
+		remove_deposit = d_expanded_dome_system
+		remove_deposit = d_expanded_dome_system_1
+	}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+# Advanced Habitat
+decision_upgrade_pd_asteroid_habitat = {
+	owned_planets_only = yes
+	icon = decision_satellite_in_orbit
+
+	enactment_time = 360
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 500
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_pd_asteroid_hab
+		NOT = { has_planet_flag = advanced_habitat }
+		exists = owner
+		owner = {
+			has_technology = tech_pdhabitat_1
+		}
+	}
+
+	allow = {
+		free_district_slots = 0
+	}
+
+	effect = {
+		if = {
+			limit = { NOT = { is_planet_class = pc_pd_asteroid_hab }
+			}
+			add_deposit = d_expanded_dome_system
+		}
+		else_if = {
+			limit = { is_planet_class = pc_pd_asteroid_hab }
+			add_deposit = d_expanded_dome_system_1
+		}
+		hidden_effect = {
+			set_planet_flag = advanced_habitat
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+decision_upgrade_pd_asteroid_habitat_2 = {
+	owned_planets_only = yes
+	icon = decision_satellite_in_orbit
+
+	enactment_time = 720
+	resources = {
+		category = decisions
+		cost = {
+			alloys = 750
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_pd_asteroid_hab
+		has_planet_flag = advanced_habitat
+		NOT = { has_planet_flag = advanced_habitat_2 }
+		exists = owner
+		owner = {
+			has_technology = tech_pdhabitat_2
+		}
+	}
+
+	allow = {
+		free_district_slots = 0
+		has_building = building_hab_major_capital
+		#has_major_upgraded_capital = yes
+	}
+
+	effect = {
+		if = {
+			limit = { NOT = { is_planet_class = pc_pd_asteroid_hab }
+			}
+			add_deposit = d_expanded_dome_system
+		}
+		else_if = {
+			limit = { is_planet_class = pc_pd_asteroid_hab }
+			add_deposit = d_expanded_dome_system_1
+		}
+		hidden_effect = {
+			set_planet_flag = advanced_habitat_2
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+	}
+}
+
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####   pd_hiveprospect_replace.txt   #####
+###########################################
+
+decision_prospect = {
+	owned_planets_only = yes
+
+	enactment_time = 180
+	resources = {
+		category = decisions
+		cost = {
+			influence = 25
+			energy = 500
+		}
+	}
+
+	potential = {
+		is_artificial = no
+		is_pd_arcology = no
+		is_pd_unique = no
+		NOT = { is_planet_class = pc_machine }
+		NOT = { is_planet_class = pc_hive }
+		NOT = { is_planet_class = pc_bioforge }
+		NOT = { is_planet_class = pc_biocapital }
+		NOT = { is_planet_class = pc_machine_factory }
+		NOT = { is_planet_class = pc_machine_capital }
+		NOT = { is_planet_class = pc_machine_fort }
+		# NOT = { is_planet_class = pc_pdhive1 }
+		# NOT = { is_planet_class = pc_pdhive2 }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_ecocity }
+		NOT = { is_planet_class = pc_corpoarc }
+		NOT = { is_planet_class = pc_palacearc }
+		NOT = { is_planet_class = pc_capitalarc }
+		NOT = { is_planet_class = pc_necropolis }
+		NOT = { is_planet_class = pc_machine_necropolis }
+		NOT = { is_planet_class = pc_necrohive }
+		NOT = { is_planet_class = pc_milarc }
+		NOT = { is_planet_class = pc_megafloraforge }
+		NOT = { is_planet_class = pc_megafloracapital }
+		NOT = { is_planet_class = pc_megaflorafort }
+		owner = {
+			has_active_tradition = tr_adaptability_finish
+		}
+		NOT = { has_planet_flag = planet_prospected }
+	}
+
+	effect = {
+		custom_tooltip = decision_prospect_effects_short
+		hidden_effect = {
+			set_planet_flag = planet_prospected
+			add_random_non_blocker_deposit = yes
+			create_message = {
+				type = MESSAGE_TYPE_PLANET_PROSPECTED
+				localization = MESSAGE_PLANET_PROSPECTED
+				days = 30
+				target = this
+				variable = {
+					type = name
+					localization = PLANET
+					scope = this
+				}
+				variable = {
+					type = name
+					localization = DEPOSIT
+					scope = last_added_deposit
+				}
+			}
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			num_pops < 20
+		}
+	}
+}
+
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####       pd_mon_decisions.txt      #####
+###########################################
+
+# Orbital Mirrors
+decision_orbital_mirrors = {
+	icon = decision_pd_orbital_mirrors
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_solar_reflectrion"		
+	}
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			minerals = 1000
+		}
+	}
+	
+	potential = {
+		is_artificial = no
+		is_pd_arcology = no
+		NOT = { has_modifier = resort_colony }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_crucible }
+		NOT = { has_deposit = d_pd_orbital_mirrors }
+		NOT = { has_deposit = d_snowball_wasteland_1 }
+	}
+
+	effect = {
+		add_deposit = d_pd_orbital_mirrors
+	}    
+	
+	ai_weight = {
+        weight = 10
+	}
+}
+
+# Seismic Resonators
+decision_seismic_resonators = {
+	icon = decision_seismic_resonators
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_seismic_resonators"		
+	}
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			minerals = 1000
+		}
+	}
+	
+	potential = {
+		is_artificial = no
+		is_pd_arcology = no
+		NOT = { has_modifier = resort_colony }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_crucible }
+		NOT = { has_deposit = d_pd_seismic_resonators }
+		NOT = { has_deposit = d_snowball_wasteland_1 }
+	}
+
+	effect = {
+		add_deposit = d_pd_seismic_resonators
+	}    
+	
+	ai_weight = {
+        weight = 10
+	}
+}
+
+# Nanite Soil
+decision_bionanite_soil = {
+	icon = decision_bionanite_soil
+	owned_planets_only = yes
+	
+	prerequisites = {
+		"tech_nanite_soil"		
+	}
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			minerals = 1000
+		}
+	}
+	
+	potential = {
+		is_artificial = no
+		is_pd_arcology = no
+		NOT = { has_modifier = resort_colony }
+		NOT = { is_planet_class = pc_city }
+		NOT = { is_planet_class = pc_crucible }
+		NOT = { has_deposit = d_pd_bionanite_soil }
+		NOT = { has_deposit = d_snowball_wasteland_1 }
+	}
+
+	effect = {
+		add_deposit = d_pd_bionanite_soil
+	}    
+	
+	ai_weight = {
+        weight = 10
+	}
+}
+
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####     pd_resort_overwrite.txt     #####
+###########################################
+
+# Resort Colony
+decision_resort_colony = {
+	owned_planets_only = yes
+
+	prerequisites = {
+		"tech_resort_colonies"
+	}
+
+	resources = {
+		category = decisions
+		cost = {
+			influence = 100
+		}
+	}
+
+	potential = {
+		is_capital = no
+		is_pd_arcology = no
+		is_pd_unique = no
+		NOT = { has_modifier = penal_colony }
+		NOT = { has_modifier = slave_colony }
+		NOT = { is_planet_class = pc_city }
+		owner = {
+			is_regular_empire = yes
+		}
+		is_artificial = no
+	}
+
+	allow = {
+		planet_size >= 15
+		custom_tooltip = {
+			fail_text = decision_resort_colony_no_districts
+			num_districts = { type = any value < 1 }
+			num_buildings = { type = any value < 2 }
+		}
+		custom_tooltip = {
+			fail_text = no_upgraded_capital_tooltip
+			has_upgraded_capital = no
+		}
+		custom_tooltip = {
+			fail_text = decision_resort_colony_only_one
+			NOT = {
+				owner = {
+					any_owned_planet = { has_modifier = resort_colony }
+				}
+			}
+		}
+	}
+
+	effect = {
+		add_modifier = {
+			modifier = resort_colony
+			days = -1
+		}
+		hidden_effect = {
+			remove_building = building_colony_shelter
+			add_building = building_resort_capital
+		}
+		hidden_effect = { validate_planet_buildings_and_districts = yes }
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+###########################################
+##### PLANETARY DIVERSITY - Decisions #####
+#####    pd_snowball_decisions.txt    #####
+###########################################
+
+# Remove the Cold Zones
+decision_snowball_wasteland_1 = {
+	icon = decision_pd_orbital_mirrors
+	owned_planets_only = yes
+	
+	#prerequisites = {
+	#	"tech_solar_reflectrion"		
+	#}
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			minerals = 1000
+		}
+	}
+	
+	potential = { 
+		has_deposit = d_snowball_wasteland_1
+		owner = {
+			has_technology = tech_solar_reflectrion
+		}
+	}
+
+	effect = {
+		remove_deposit = d_snowball_wasteland_1
+		add_deposit = d_pd_orbital_mirrors
+		hidden_effect = {
+			planet_event = { id = snowball_earth.11	}
+		}
+	}    
+	
+	ai_weight = { 
+		weight = 1000
+	}
+}
+
+# Remove Low Geothermal
+decision_snowball_wasteland_2 = {
+	icon = decision_seismic_resonators
+	owned_planets_only = yes
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			minerals = 1000
+		}
+	}
+	
+	potential = { 
+		has_deposit = d_snowball_wasteland_2
+		owner = {
+			has_technology = tech_seismic_resonators
+		}
+	}
+
+	effect = {
+		remove_deposit = d_snowball_wasteland_2
+		add_deposit = d_pd_seismic_resonators
+		hidden_effect = {
+			planet_event = { id = snowball_earth.12	}
+			IF = {
+				limit = { has_planet_flag = planet_earth }
+				set_planet_entity = {
+					picture = pc_snow
+					entity = snowball_planet_earththaw_01_entity
+				}
+			}
+			IF = {
+				limit = { NOT = { has_planet_flag = planet_earth } }
+				set_planet_entity = {
+					picture = pc_snow
+					entity = snowball_planet_thaw_01_entity
+				}
+			}
+		}
+	}    
+	
+	ai_weight = { 
+		weight = 1000
+	}
+}
+
+# Remove Ruined Soil
+decision_snowball_wasteland_3 = {
+	icon = decision_bionanite_soil
+	owned_planets_only = yes
+
+	enactment_time = 1800
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			minerals = 1000
+		}
+	}
+	
+	potential = { 
+		has_deposit = d_snowball_wasteland_3
+		owner = {
+			has_technology = tech_nanite_soil
+		}
+	}
+
+	effect = {
+		remove_deposit = d_snowball_wasteland_3
+		add_deposit = d_pd_bionanite_soil
+		hidden_effect = {
+			planet_event = { id = snowball_earth.13	}
+			IF = {
+				limit = { has_planet_flag = planet_earth }
+				set_planet_entity = {
+					picture = pc_continental
+					entity = continental_planet_earth_entity
+				}
+			}
+			IF = {
+				limit = { NOT = { has_planet_flag = planet_earth } }
+				set_planet_entity = {
+					picture = pc_continental
+					entity = continental_planet_01_entity
+				}
+			}
+		}
+	}    
+	
+	ai_weight = { 
+		weight = 1000
+	}
+}

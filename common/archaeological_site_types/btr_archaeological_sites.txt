@@ -68,9 +68,181 @@ pdcoral_site = {
 	}
 }
 
-#######################################
-##### TEAM NESSASSITY - Dig Sites #####
-#######################################
+############################################
+##### MASS EFFECT CRUCIBLE - Dig Sites #####
+############################################
+
+# Citadel Exploration
+citadel_dig_site = {
+	desc = citadel_dig_site_desc
+	picture = btr_GFX_evt_citadel_1
+	stages = 7
+	max_instances = 1
+	weight = { base = 0 }
+	potential = {}
+	visible = { 
+		default_site_visible_trigger = yes
+		#has_country_flag = "discovered_citadel_first"
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		#owner = { has_country_flag = "discovered_citadel_first" }
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.2
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.3
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.4
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.5
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.6
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.7
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_citadel.8
+	}
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+# Ilos Prothean Ruins
+ilos_dig_site = {
+	desc = ilos_dig_site_desc
+	picture = btr_GFX_evt_ilos_dig_site
+	stages = 5
+	max_instances = 1
+	weight = { base = 0 }
+	potential = {}
+	visible = { # maybe change?
+		default_site_visible_trigger = yes
+		#has_country_flag = ilos_event
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+		#exists = owner
+		#owner = { has_country_flag = ilos_event }
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.4
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.5
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.6
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.7
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_ilos.8
+	}
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+# Mars Prothean Ruins
+mars_dig_site = {
+	desc = mars_dig_site_desc
+	picture = btr_GFX_evt_mars_base_camp
+	stages = 8
+	max_instances = 1
+	weight = { base = 0 }
+	potential = {}
+	visible = { 
+		default_site_visible_trigger = yes
+		has_country_flag = "systems_alliance"
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+		exists = owner
+		owner = { has_country_flag = "systems_alliance" }
+	}
+	stage = {
+		difficulty = 1
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.2
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.3
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.4
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.5
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.6
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.7
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.8
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_mars.9
+	}
+	on_roll_failed = {
+		from = { standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events } }
+	}
+}
+
+##############################
+##### MEC:EG - Dig Sites #####
+##############################
 
 ### Hades Nexus
 ## Sheol
@@ -128,6 +300,79 @@ mec_eg_site_geihinnom_graves = {
 	on_roll_failed = {
 		from = {
 			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_eg_site_geihinnom_mini_events }
+		}
+	}
+}
+
+#################################
+##### MEC:ASARI - Dig Sites #####
+#################################
+
+
+# Thessia: Prothean Beacon
+mec_asari_site_thessia_beacon = {
+	desc = "mec_asari_site_thessia_beacon_intro"
+	picture = GFX_mec_event_thessia_01
+	stages = 7
+	weight = {
+		base = 0
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		has_origin = mec_asari_origin_thessia
+	}
+
+	on_visible = {
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B1
+		event = mec_asari_site.101
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_B2
+		event = mec_asari_site.102
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_B3
+		event = mec_asari_site.103
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_B4
+		event = mec_asari_site.104
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_B5
+		event = mec_asari_site.105
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_B6
+		event = mec_asari_site.106
+	}
+
+	stage = {
+		difficulty = 12
+		icon = GFX_archaeology_runes_E6
+		event = mec_asari_site.107
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_asari_site_thessia_mini_events }
 		}
 	}
 }

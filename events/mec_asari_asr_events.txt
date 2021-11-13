@@ -39,7 +39,7 @@ country_event = {
 			years = 20
 		}
 		random_owned_planet = {
-			limit = { has_planet_flag = btr_asari_planet_thessia }
+			limit = { has_planet_flag = thessia_planet }
 			set_planet_flag = mec_asari_thessia_owned_by_@prev
 			save_global_event_target_as = mec_asari_thessia_owned_by_@prev
 			owner = {
@@ -48,65 +48,65 @@ country_event = {
 			}
 			create_archaeological_site = mec_asari_site_thessia_beacon
 		}
-		if = {
-			limit = {
-				has_origin = mec_asari_origin_thessia
-				any_system_within_border = {
-					has_star_flag = btr_asari_parnitha_system
-				}
-			}
-			closest_system = {
-				min_steps = 0
-				max_steps = 2
-				limit = {
-					has_star_flag = btr_asari_ialessa_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = root
-				}
-				mec_asari_setup_origin_planets = yes
-				mec_asari_generate_stations = yes
-			}
-			closest_system = {
-				min_steps = 0
-				max_steps = 2
-				limit = {
-					has_star_flag = btr_asari_orisoni_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = root
-				}
-				mec_asari_setup_origin_planets = yes
-				mec_asari_generate_stations = yes
-			}
-			closest_system = {
-				min_steps = 0
-				max_steps = 2
-				limit = {
-					has_star_flag = btr_asari_tomaros_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = root
-				}
-				mec_asari_setup_origin_planets = yes
-				mec_asari_generate_stations = yes
-			}
-			closest_system = {
-				min_steps = 0
-				max_steps = 2
-				limit = {
-					has_star_flag = btr_asari_vernio_system
-				}
-				create_starbase = {
-					size = starbase_outpost
-					owner = root
-				}
-				mec_asari_generate_stations = yes
-			}
-		}
+		# if = {
+		# 	limit = {
+		# 		has_origin = mec_asari_origin_thessia
+		# 		any_system_within_border = {
+		# 			has_star_flag = parnitha_system
+		# 		}
+		# 	}
+		# 	closest_system = {
+		# 		min_steps = 0
+		# 		max_steps = 2
+		# 		limit = {
+		# 			has_star_flag = ialessa_system
+		# 		}
+		# 		create_starbase = {
+		# 			size = starbase_outpost
+		# 			owner = root
+		# 		}
+		# 		mec_asari_setup_origin_planets = yes
+		# 		mec_asari_generate_stations = yes
+		# 	}
+		# 	closest_system = {
+		# 		min_steps = 0
+		# 		max_steps = 2
+		# 		limit = {
+		# 			has_star_flag = btr_asari_orisoni_system
+		# 		}
+		# 		create_starbase = {
+		# 			size = starbase_outpost
+		# 			owner = root
+		# 		}
+		# 		mec_asari_setup_origin_planets = yes
+		# 		mec_asari_generate_stations = yes
+		# 	}
+		# 	closest_system = {
+		# 		min_steps = 0
+		# 		max_steps = 2
+		# 		limit = {
+		# 			has_star_flag = btr_asari_tomaros_system
+		# 		}
+		# 		create_starbase = {
+		# 			size = starbase_outpost
+		# 			owner = root
+		# 		}
+		# 		mec_asari_setup_origin_planets = yes
+		# 		mec_asari_generate_stations = yes
+		# 	}
+		# 	closest_system = {
+		# 		min_steps = 0
+		# 		max_steps = 2
+		# 		limit = {
+		# 			has_star_flag = btr_asari_vernio_system
+		# 		}
+		# 		create_starbase = {
+		# 			size = starbase_outpost
+		# 			owner = root
+		# 		}
+		# 		mec_asari_generate_stations = yes
+		# 	}
+		# }
 	}
 }
 

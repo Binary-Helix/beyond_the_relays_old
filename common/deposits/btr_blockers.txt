@@ -1,165 +1,147 @@
-## Possible Deposit Variables ##
-# resources, resource and amount
-# potential trigger (planet scope)
-# planet_modifier - applied to planet only when deposit blocker has been cleared
-# constant_modifier - applied to planet always
-# blocker = <key/any/none> - default any
-# station = station class in orbit to gather
-
 @high = 16
 @med = 8
 @low = 4
 
-@high_rare = 2
-@med_rare = 1
-@low_rare = 0.5
+@high_rare = 0.5
+@mid_rare = 0.25
+@low_rare = 0.1
 
-#Reference: Earth
-#7 mining
-#8 farming
-#8 energy
-#3 blocked
+@planet_type_bonus = 1.5
 
-####
-# ILLIUM DEPOSITS
-####
+##########################################
+##### PLANETARY DIVERSITY - Blockers #####
+##########################################
 
-d_mec_asari_nosastra_metropolis = {
-	icon = d_city
+d_pdhive10 = {
+	icon = d_pdhive
 	
-	category = deposit_cat_rare
 	is_for_colonizable = yes
+	category = deposit_cat_blockers	
 	
-	planet_modifier = { 
-		#trade_value_mult = 0.15
-		trade_value_add = 25
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_entertainer_add = 1
-		}
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
+	potential = { always = no }
+	can_be_cleared = { always = no }
 
-d_mec_asari_manjoros_plaza = {
-	is_for_colonizable = yes
-	icon = d_city
-	
-	planet_modifier = { 
-		district_generator_max = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_bureaucrat_add = 1
-		}
+	planet_modifier = {	
+		planet_max_districts_add = -10
 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_mec_asari_sulsara_oasis = {
-	is_for_colonizable = yes
-	icon = d_solar_array
-	
-	planet_modifier = { 
-		district_generator_max = 4
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_mec_asari_saefos_valley = {
-	is_for_colonizable = yes
-	icon = d_mec_asari_rural
-	
-	planet_modifier = { 
-		district_farming_max = 3
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_mec_asari_nosedana_vertical = {
-	is_for_colonizable = yes
-	icon = d_city
-
 	resources = {
-		produces = {
-			food = 20
-		}
-	}
-	
-	drop_weight = {
-		weight = 0
+		category = deposit_blockers
 	}
 }
 
-d_mec_asari_kyatari_thanoris = {
+d_pdhive8 = {
+	icon = d_pdhive
+	
 	is_for_colonizable = yes
-	icon = d_city
+	category = deposit_cat_blockers	
 	
-	planet_modifier = { 
-		district_mining_max = 2
-	}
-	
-	drop_weight = {
-		weight = 0
-	}
-}
+	potential = { always = no }
+	can_be_cleared = { always = no }
 
-d_mec_asari_sedera_canyon = {
-	is_for_colonizable = yes
-	icon = d_arid_highlands
-	
-	planet_modifier = { 
-		district_mining_max = 2
+	planet_modifier = {	
+		planet_max_districts_add = -8
 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
-
-d_mec_asari_azarbilhos_industrial = {
-	is_for_colonizable = yes
-	icon = d_city
-	
-	planet_modifier = { 
-		planet_housing_add = 5
-	}
-
 	resources = {
-		produces = {
-			consumer_goods = 10
-		}
-	}
-	
-	drop_weight = {
-		weight = 0
+		category = deposit_blockers
 	}
 }
 
-# Blockers
+d_pdhive6 = {
+	icon = d_pdhive
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	can_be_cleared = { always = no }
+
+	planet_modifier = {	
+		planet_max_districts_add = -6
+	}
+	
+	resources = {
+		category = deposit_blockers
+	}
+}
+
+d_pdhive5 = {
+	icon = d_pdhive
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	can_be_cleared = { always = no }
+
+	planet_modifier = {	
+		planet_max_districts_add = -5
+	}
+	
+	resources = {
+		category = deposit_blockers
+	}
+}
+
+d_pdhive4 = {
+	icon = d_pdhive
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	can_be_cleared = { always = no }
+
+	planet_modifier = {	
+		planet_max_districts_add = -4
+	}
+	
+	resources = {
+		category = deposit_blockers
+	}
+}
+
+d_pdhive3 = {
+	icon = d_pdhive
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	can_be_cleared = { always = no }
+
+	planet_modifier = {	
+		planet_max_districts_add = -3
+	}
+	
+	resources = {
+		category = deposit_blockers
+	}
+}
+
+d_pdhive2 = {
+	icon = d_pdhive
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	can_be_cleared = { always = no }
+
+	planet_modifier = {	
+		planet_max_districts_add = -2
+	}
+	
+	resources = {
+		category = deposit_blockers
+	}
+}
+
+################################
+##### MEC:ASARI - Blockers #####
+################################
+
 
 d_mec_asari_arcology_unfinished = {
 	icon = d_metal_boneyard
@@ -720,6 +702,92 @@ d_mec_asari_neo_sulsara = {
 	#	modifier = {
 	#	}
 	#}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_zalis_spill = {
+	icon = d_bubbling_swamp
+	time = 120
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_zalis_sea
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 600
+		}
+	}
+}
+
+d_mec_asari_zalis_sea = {
+	is_for_colonizable = yes
+	icon = d_teeming_reef
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_yisrin_devastated = {
+	icon = d_city_ruins
+	time = 240
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_yisrin_restored
+	}
+	
+	on_cleared = {
+		create_pop = {
+			species = owner
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 450
+		}
+	}
+}
+
+d_mec_asari_yisrin_restored = {
+	is_for_colonizable = yes
+	icon = d_building
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
 	
 	drop_weight = {
 		weight = 0

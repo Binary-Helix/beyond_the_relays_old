@@ -49,7 +49,7 @@ d_arid_highlands = {
 		is_dry = yes
 		is_planet_class = pc_tidallylocked
 		is_planet_class = pc_supercon
-		is_planet_class = pc_graveyard		
+		#is_planet_class = pc_graveyard		
 		}
 	}
 	
@@ -118,9 +118,8 @@ d_hot_springs = {
 			is_planet_class = pc_nuked
 			is_planet_class = pc_irradiated
 			is_planet_class = pc_superhabitable
-			is_planet_class = pc_floating
-			is_planet_class = pc_technoorganic
-			is_planet_class = pc_crystal
+			#is_planet_class = pc_technoorganic
+			#is_planet_class = pc_crystal
 			is_planet_class = pc_ammonia
 			is_planet_class = pc_sulfur
 			is_planet_class = pc_acid
@@ -201,9 +200,8 @@ d_rushing_waterfalls = {
 		OR = {
 		is_wet = yes
 		is_planet_class = pc_superhabitable
-		is_planet_class = pc_floating
-		is_planet_class = pc_crystal
-		is_planet_class = pc_technoorganic
+		#is_planet_class = pc_crystal
+	#	is_planet_class = pc_technoorganic
 		is_planet_class = pc_biolumen
 		is_planet_class = pc_karst
 		is_planet_class = pc_storm
@@ -241,17 +239,16 @@ d_searing_desert = {
 	potential = {	
 		OR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_nuked
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_planet_class = pc_irradiated
 			is_planet_class = pc_tidallylocked
 			is_planet_class = pc_supercon
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_dry = yes
 		}
 	}
@@ -287,7 +284,7 @@ d_frozen_gas_lake = {
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_cold = yes
@@ -295,10 +292,9 @@ d_frozen_gas_lake = {
 			is_planet_class = pc_sulfur
 			is_planet_class = pc_acid
 			is_planet_class = pc_methane
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_geothermal
 		}
 	}
@@ -371,25 +367,19 @@ d_geothermal_vent = {
 	potential = {
 		OR = {
 			is_planet_class = pc_arctic
-			is_planet_class = pc_dextro_arctic			
 			is_planet_class = pc_tundra
-			is_planet_class = pc_dextro_tundra			
 			is_planet_class = pc_rogue
 			is_planet_class = pc_lichen
 			is_planet_class = pc_eyeball
 			is_planet_class = pc_glacio
 			is_planet_class = pc_lanthanide
 			is_planet_class = pc_savannah
-			is_planet_class = pc_dextro_savannah
 			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_desert			
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
 			is_planet_class = pc_coral
 			is_planet_class = pc_storm
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_steppe
@@ -404,7 +394,7 @@ d_geothermal_vent = {
 			is_planet_class = pc_basalt
 			is_planet_class = pc_frozen_desert
 			is_planet_class = pc_mushroom
-			is_planet_class = pc_graveyard
+			#is_planet_class = pc_graveyard
 			is_planet_class = pc_geothermal
 			is_planet_class = pc_karst
 			is_planet_class = pc_primal
@@ -442,11 +432,10 @@ d_underwater_vent = {
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
 			is_planet_class = pc_reef
 			is_planet_class = pc_aquatic		
 			is_planet_class = pc_nuked
@@ -456,10 +445,9 @@ d_underwater_vent = {
 			is_planet_class = pc_mangrove
 			is_planet_class = pc_glacial
 			is_planet_class = pc_superhabitable
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_storm
 		}
 	}
@@ -493,17 +481,14 @@ d_tempestous_mountain = {
 	potential = {
 		OR = {
 			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_alpine
-			is_planet_class = pc_dextro_alpine			
 			is_planet_class = pc_highland
 			is_planet_class = pc_duneforest
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_planet_class = pc_continental
-			is_planet_class = pc_dextro_continental			
 			is_planet_class = pc_cascadian
 			is_planet_class = pc_hajungle
 			is_planet_class = pc_cenote
@@ -516,14 +501,13 @@ d_tempestous_mountain = {
 			is_planet_class = pc_snow
 			is_planet_class = pc_tidallylocked
 			is_planet_class = pc_supercon
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_ammonia
 			is_planet_class = pc_sulfur
 			is_planet_class = pc_acid
 			is_planet_class = pc_methane
-			is_planet_class = pc_graveyard
+			#is_planet_class = pc_graveyard
 			is_planet_class = pc_antarctic
 			is_planet_class = pc_aeolian
 			is_planet_class = pc_retinal
@@ -606,18 +590,13 @@ d_veiny_cliffs = {
 	potential = {
 		OR = {
 			is_planet_class = pc_alpine
-			is_planet_class = pc_dextro_alpine			
 			is_planet_class = pc_highland
 			is_planet_class = pc_duneforest
 			is_planet_class = pc_arctic
-			is_planet_class = pc_dextro_arctic			
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_continental
-			is_planet_class = pc_dextro_continental			
 			is_planet_class = pc_nuked
 			is_planet_class = pc_irradiated
 			
@@ -631,10 +610,9 @@ d_veiny_cliffs = {
 			is_planet_class = pc_glacial
 			is_planet_class = pc_hadesert
 			is_planet_class = pc_methane
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
-			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
+			#is_planet_class = pc_graveyard
 			is_planet_class = pc_superhabitable
 			is_planet_class = pc_retinal
 			is_planet_class = pc_forest
@@ -682,20 +660,15 @@ d_mineral_fields = {
 	potential = {
 		OR = {
 			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_savannah
-			is_planet_class = pc_dextro_savannah
 			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_desert			
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
 			is_planet_class = pc_coral
 			is_planet_class = pc_storm
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_tundra
-			is_planet_class = pc_dextro_tundra			
 			is_planet_class = pc_reef
+			is_planet_class = pc_tundra
 			is_planet_class = pc_rogue
 			is_planet_class = pc_lichen
 			is_planet_class = pc_eyeball
@@ -759,7 +732,7 @@ d_submerged_caves = {
 	}	
 	
 	potential = {
-			is_planet_class = pc_aquatic
+		is_planet_class = pc_aquatic
 	}
 	
 	drop_weight = {
@@ -791,18 +764,14 @@ d_prosperous_mesa = {
 	potential = {
 		OR = {
 			is_planet_class = pc_continental
-			is_planet_class = pc_dextro_continental			
 			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_savannah
-			is_planet_class = pc_dextro_savannah
 			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_desert			
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
 			is_planet_class = pc_coral
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_planet_class = pc_cascadian
@@ -820,10 +789,9 @@ d_prosperous_mesa = {
 			is_planet_class = pc_superhabitable
 			is_planet_class = pc_tidallylocked
 			is_planet_class = pc_supercon
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
-			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
+			#is_planet_class = pc_graveyard
 			is_planet_class = pc_retinal
 			is_planet_class = pc_forest
 			is_planet_class = pc_lake	
@@ -864,20 +832,15 @@ d_ore_rich_caverns = {
 	potential = {
 		OR = {
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
+			is_planet_class = pc_reef
 			is_planet_class = pc_alpine
-			is_planet_class = pc_dextro_alpine			
 			is_planet_class = pc_highland
 			is_planet_class = pc_duneforest
 			is_planet_class = pc_arctic
-			is_planet_class = pc_dextro_arctic			
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_tundra
-			is_planet_class = pc_dextro_tundra			
 			is_planet_class = pc_rogue
 			is_planet_class = pc_lichen
 			is_planet_class = pc_eyeball
@@ -886,7 +849,7 @@ d_ore_rich_caverns = {
 			is_planet_class = pc_nuked
 			is_planet_class = pc_irradiated
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_planet_class = pc_desertislands
@@ -907,10 +870,9 @@ d_ore_rich_caverns = {
 			is_planet_class = pc_sulfur
 			is_planet_class = pc_acid
 			is_planet_class = pc_methane
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_antarctic
 			is_planet_class = pc_aeolian
 			is_planet_class = pc_geothermal
@@ -953,32 +915,25 @@ d_rich_mountain = {
 	potential = {
 		OR = {
 			is_planet_class = pc_continental
-			is_planet_class = pc_dextro_continental			
 			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_desert			
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
 			is_planet_class = pc_coral
 			is_planet_class = pc_alpine
-			is_planet_class = pc_dextro_alpine			
 			is_planet_class = pc_highland
 			is_planet_class = pc_duneforest
 			is_planet_class = pc_arctic
-			is_planet_class = pc_dextro_arctic			
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_tundra
-			is_planet_class = pc_dextro_tundra			
 			is_planet_class = pc_rogue
 			is_planet_class = pc_lichen
 			is_planet_class = pc_eyeball
 			is_planet_class = pc_glacio
 			is_planet_class = pc_lanthanide
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_planet_class = pc_cascadian
@@ -1003,10 +958,9 @@ d_rich_mountain = {
 			is_planet_class = pc_methane
 			is_planet_class = pc_tidallylocked
 			is_planet_class = pc_supercon
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
-			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
+			#is_planet_class = pc_graveyard
 			is_planet_class = pc_antarctic
 			is_planet_class = pc_aeolian
 			is_planet_class = pc_geothermal
@@ -1054,16 +1008,14 @@ d_submerged_ore_veins = {
 	potential = {
 		OR = {
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
+			is_planet_class = pc_reef
 			is_planet_class = pc_aquatic
 			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_savannah
-			is_planet_class = pc_dextro_savannah
 			is_planet_class = pc_nuked
 			is_planet_class = pc_irradiated
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_relic
 			is_planet_class = pc_milarc_relic
 			is_planet_class = pc_desertislands
@@ -1080,10 +1032,9 @@ d_submerged_ore_veins = {
 			is_planet_class = pc_semiarid
 			is_planet_class = pc_glacial
 			is_planet_class = pc_superhabitable
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_karst
 			is_planet_class = pc_storm
 		}
@@ -1165,7 +1116,6 @@ d_lichen_fields = {
 			is_planet_class = pc_nuked
 			is_planet_class = pc_irradiated
 			is_planet_class = pc_arctic
-			is_planet_class = pc_dextro_arctic			
 			is_planet_class = pc_frozen_desert
 			is_planet_class = pc_glacial
 			is_planet_class = pc_antarctic
@@ -1215,16 +1165,14 @@ d_bountiful_plains = {
 	potential = {
 		OR = {
 		is_planet_class = pc_arid
-		is_planet_class = pc_dextro_arid		
 		is_planet_class = pc_outback
 		is_planet_class = pc_coastal
 		is_planet_class = pc_savannah
-		is_planet_class = pc_dextro_savannah		
 		is_planet_class = pc_mesa
 		is_planet_class = pc_badlands
 		is_planet_class = pc_med
 		is_planet_class = pc_oasis
-		is_planet_class = pc_graveyard
+		#is_planet_class = pc_graveyard
 		is_planet_class = pc_prairie
 		is_planet_class = pc_veld
 		is_planet_class = pc_semiarid
@@ -1265,15 +1213,14 @@ d_rugged_woods = {
 	potential = {
 		OR = {
 		is_planet_class = pc_continental
-		is_planet_class = pc_dextro_continental		
 		is_planet_class = pc_cascadian
 		is_planet_class = pc_boreal
 		is_planet_class = pc_snow
 		is_planet_class = pc_superhabitable
 		is_planet_class = pc_tidallylocked
 		is_planet_class = pc_supercon
-		is_planet_class = pc_crystal
-		is_planet_class = pc_technoorganic
+		#is_planet_class = pc_crystal
+		#is_planet_class = pc_technoorganic
 		is_planet_class = pc_retinal
 		is_planet_class = pc_forest
 		is_planet_class = pc_lake	
@@ -1319,16 +1266,14 @@ d_green_hills = {
 	potential = {
 		OR = {
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
+			is_planet_class = pc_reef
 			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_desertislands
 			is_planet_class = pc_mangrove
 			is_planet_class = pc_hajungle
 			is_planet_class = pc_cenote
 			is_planet_class = pc_biolumen
 			is_planet_class = pc_geothermal
-			is_planet_class = pc_floating
 		}
 	}
 	
@@ -1367,11 +1312,9 @@ d_forgiving_tundra = {
 	potential = {
 		OR = {
 			is_planet_class = pc_alpine
-			is_planet_class = pc_dextro_alpine			
 			is_planet_class = pc_highland
 			is_planet_class = pc_duneforest
 			is_planet_class = pc_tundra
-			is_planet_class = pc_dextro_tundra			
 			is_planet_class = pc_rogue
 			is_planet_class = pc_lichen
 			is_planet_class = pc_eyeball
@@ -1416,7 +1359,7 @@ d_boggy_fens = {
 	potential = {
 		OR = {
 		is_planet_class = pc_ocean
-		is_planet_class = pc_dextro_ocean		
+		is_planet_class = pc_reef
 		is_planet_class = pc_subarctic	
 		is_planet_class = pc_swamp
 		is_planet_class = pc_mud
@@ -1424,6 +1367,7 @@ d_boggy_fens = {
 		is_planet_class = pc_mushroom
 		is_planet_class = pc_wetswamp
 		is_planet_class = pc_fog
+		}
 	}
 	
 	drop_weight = {
@@ -1461,7 +1405,6 @@ d_nutritious_mudland = {
 	potential = {
 		OR = {
 		is_planet_class = pc_desert
-		is_planet_class = pc_dextro_desert		
 		is_planet_class = pc_salt
 		is_planet_class = pc_aquifer
 		is_planet_class = pc_coral
@@ -1589,11 +1532,10 @@ d_lush_jungle = {
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
+			is_planet_class = pc_reef
 			is_planet_class = pc_desertislands
 			is_planet_class = pc_mangrove
 			is_planet_class = pc_wetswamp
@@ -1604,10 +1546,9 @@ d_lush_jungle = {
 			is_planet_class = pc_oasis
 			is_planet_class = pc_geothermal
 			is_planet_class = pc_superhabitable
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_primal
 		}
 	}
@@ -1643,14 +1584,10 @@ d_fertile_lands = {
 	potential = {
 		OR = {
 			is_planet_class = pc_savannah
-			is_planet_class = pc_dextro_savannah
 			is_planet_class = pc_continental
-			is_planet_class = pc_dextro_continental			
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_cascadian
@@ -1660,14 +1597,13 @@ d_fertile_lands = {
 			is_planet_class = pc_semiarid
 			is_planet_class = pc_tidallylocked
 			is_planet_class = pc_supercon
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_ammonia
 			is_planet_class = pc_sulfur
 			is_planet_class = pc_acid
 			is_planet_class = pc_methane
-			is_planet_class = pc_graveyard
+			#is_planet_class = pc_graveyard
 			is_planet_class = pc_retinal
 			is_planet_class = pc_forest
 			is_planet_class = pc_lake	
@@ -1713,12 +1649,9 @@ d_great_river = {
 	potential = {
 		OR = {
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_desert			
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
 			is_planet_class = pc_coral
@@ -1727,7 +1660,7 @@ d_great_river = {
 			is_planet_class = pc_mesa
 			is_planet_class = pc_badlands
 			is_planet_class = pc_med
-			is_planet_class = pc_graveyard
+			#is_planet_class = pc_graveyard
 			is_planet_class = pc_hadesert
 			is_planet_class = pc_karst
 		}
@@ -1766,11 +1699,9 @@ d_black_soil = {
 	potential = {
 		OR = {
 			is_planet_class = pc_continental
-			is_planet_class = pc_dextro_continental			
 			is_planet_class = pc_savannah
-			is_planet_class = pc_dextro_savannah
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_wetswamp
 			is_planet_class = pc_fog
 			is_planet_class = pc_cascadian
@@ -1782,13 +1713,11 @@ d_black_soil = {
 			is_planet_class = pc_geothermal
 			is_planet_class = pc_tidallylocked
 			is_planet_class = pc_supercon
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 			is_planet_class = pc_retinal
 			is_planet_class = pc_forest	
 			is_planet_class = pc_lake	
@@ -1902,16 +1831,15 @@ d_teeming_reef = {
 	potential = {		
 		OR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
+			is_planet_class = pc_reef
 			is_planet_class = pc_aquatic
 			is_planet_class = pc_desertislands
 			is_planet_class = pc_superhabitable
-			is_planet_class = pc_graveyard
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
+#			is_planet_class = pc_graveyard
+#			is_planet_class = pc_crystal
+#			is_planet_class = pc_technoorganic
 		}
 	}
 	
@@ -1948,12 +1876,9 @@ d_marvelous_oasis = {
 	potential = {
 		OR = {
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_desert			
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
 			is_planet_class = pc_coral
@@ -1999,17 +1924,13 @@ d_tropical_island = {
 	potential = {
 		OR = {
 			is_planet_class = pc_arid
-			is_planet_class = pc_mephitic
-			is_planet_class = pc_dextro_arid			
 			is_planet_class = pc_outback
 			is_planet_class = pc_coastal
 			is_planet_class = pc_desert
-			is_planet_class = pc_dextro_desert			
 			is_planet_class = pc_salt
 			is_planet_class = pc_aquifer
 			is_planet_class = pc_coral
 			is_planet_class = pc_tropical
-			is_planet_class = pc_dextro_tropical
 			is_planet_class = pc_mangrove
 			is_planet_class = pc_hajungle
 			is_planet_class = pc_cenote
@@ -2096,24 +2017,20 @@ d_dust_caverns = {
 		}			
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_technoorganic
-		}
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_graveyard
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_technoorganic
+		# }
 		modifier = {
 			factor = 2
 			is_planet_class = pc_primal
@@ -2155,24 +2072,20 @@ d_dust_desert = {
 		}			
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}				
-		modifier = {
-			factor = 2
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_technoorganic
-		}
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_graveyard
+		# }			
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_technoorganic
+		# }
 		modifier = {
 			factor = 0
 			solar_system = {
@@ -2215,24 +2128,20 @@ d_bubbling_swamp = {
 		}		
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}					
-		modifier = {
-			factor = 1
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_technoorganic
-		}	
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_graveyard
+		# }		
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_technoorganic
+		# }	
 		modifier = {
 			factor = 0
 			solar_system = {
@@ -2270,24 +2179,20 @@ d_fuming_bog = {
 		}				
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}			
-		modifier = {
-			factor = 1
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_technoorganic
-		}
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_graveyard
+		# }			
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_technoorganic
+		# }
 		modifier = {
 			factor = 0
 			solar_system = {
@@ -2330,24 +2235,20 @@ d_crystalline_caverns = {
 		}			
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}				
-		modifier = {
-			factor = 1
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_technoorganic
-		}
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_graveyard
+		# }			
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_technoorganic
+		# }
 		modifier = {
 			factor = 2
 			is_planet_class = pc_hothouse
@@ -2383,12 +2284,11 @@ d_crystal_forest = {
 		can_have_habitable_deposits = yes
 		NOR = { 
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
 			is_planet_class = pc_reef
 			is_planet_class = pc_nuked
 			is_planet_class = pc_irradiated
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}
 	}
 	
@@ -2404,24 +2304,20 @@ d_crystal_forest = {
 		}		
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}					
-		modifier = {
-			factor = 1
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_technoorganic
-		}
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_graveyard
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_technoorganic
+		# }
 		modifier = {
 			factor = 0
 			solar_system = {
@@ -2452,23 +2348,21 @@ d_crystal_reef = {
 	potential = {
 		OR = { 
 			is_planet_class = pc_ocean
-			is_planet_class = pc_dextro_ocean
-			is_planet_class = pc_reef			
+			is_planet_class = pc_reef
 			is_planet_class = pc_aquatic 
 			is_planet_class = pc_nuked
 			is_planet_class = pc_irradiated
 			is_planet_class = pc_gaia
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 			is_planet_class = pc_desertislands
 			is_planet_class = pc_subarctic
 			is_planet_class = pc_geothermal
 			is_planet_class = pc_superhabitable
 			is_planet_class = pc_tidallylocked
 			is_planet_class = pc_supercon
-			is_planet_class = pc_floating
-			is_planet_class = pc_crystal
-			is_planet_class = pc_technoorganic
-			is_planet_class = pc_graveyard
+			# is_planet_class = pc_crystal
+			# is_planet_class = pc_technoorganic
+			# is_planet_class = pc_graveyard
 		}
 	}
 	
@@ -2484,28 +2378,24 @@ d_crystal_reef = {
 		}		
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}			
 		modifier = {
 			factor = 2
 			is_planet_class = pc_aquatic
 		}				
-		modifier = {
-			factor = 1
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 1
-			is_planet_class = pc_technoorganic
-		}
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_graveyard
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 1
+		# 	is_planet_class = pc_technoorganic
+		# }
 		modifier = {
 			factor = 0
 			solar_system = {
@@ -2543,7 +2433,7 @@ d_betharian_deposit = {
 		}		
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}					
 		modifier = {
 			factor = 2
@@ -2561,22 +2451,18 @@ d_betharian_deposit = {
 			factor = 2
 			is_planet_class = pc_supercon
 		}				
-		modifier = {
-			factor = 2
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_technoorganic
-		}			
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_graveyard
+		# }			
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_technoorganic
+		# }			
 		modifier = {
 			factor = 2
 			is_planet_class = pc_karst
@@ -2614,7 +2500,7 @@ d_alien_pets_deposit = {
 		}		
 		modifier = {
 			factor = 2
-			is_planet_class = pc_pdshroud
+			#is_planet_class = pc_pdshroud
 		}					
 		modifier = {
 			factor = 2
@@ -2632,22 +2518,18 @@ d_alien_pets_deposit = {
 			factor = 2
 			is_planet_class = pc_supercon
 		}				
-		modifier = {
-			factor = 2
-			is_planet_class = pc_graveyard
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_floating
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_crystal
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_technoorganic
-		}			
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_graveyard
+		# }				
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_crystal
+		# }		
+		# modifier = {
+		# 	factor = 2
+		# 	is_planet_class = pc_technoorganic
+		# }			
 		modifier = {
 			factor = 2
 			is_planet_class = pc_karst
@@ -2688,7 +2570,7 @@ d_buzzing_plains = {
 	potential = {
 		OR = {
 		is_planet_class = pc_gaia
-		is_planet_class = pc_pdshroud
+		#is_planet_class = pc_pdshroud
 		}
 	}
 	
@@ -2718,7 +2600,7 @@ d_mineral_striations = {
 	potential = {
 		OR = {
 		is_planet_class = pc_gaia
-		is_planet_class = pc_pdshroud
+		#is_planet_class = pc_pdshroud
 		}
 	}
 	
@@ -2753,7 +2635,7 @@ d_natural_farmland = {
 	potential = {
 		OR = {
 		is_planet_class = pc_gaia
-		is_planet_class = pc_pdshroud
+		#is_planet_class = pc_pdshroud
 		}
 	}
 	
@@ -2779,8 +2661,7 @@ d_hab_gas_1 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2799,8 +2680,7 @@ d_hab_gas_2 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2819,8 +2699,7 @@ d_hab_gas_3 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2839,8 +2718,7 @@ d_hab_gas_4 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2859,8 +2737,7 @@ d_hab_gas_5 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2879,8 +2756,7 @@ d_hab_crystal_1 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2899,8 +2775,7 @@ d_hab_crystal_2 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2919,8 +2794,7 @@ d_hab_crystal_3 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2939,8 +2813,7 @@ d_hab_crystal_4 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2959,8 +2832,7 @@ d_hab_crystal_5 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2979,8 +2851,7 @@ d_hab_mote_1 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -2999,8 +2870,7 @@ d_hab_mote_2 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3019,8 +2889,7 @@ d_hab_mote_3 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3039,8 +2908,7 @@ d_hab_mote_4 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3059,8 +2927,7 @@ d_hab_mote_5 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3086,8 +2953,7 @@ d_hab_zro_1 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3113,8 +2979,7 @@ d_hab_zro_2 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3140,8 +3005,7 @@ d_hab_zro_3 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3167,8 +3031,7 @@ d_hab_dark_matter_1 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3194,8 +3057,7 @@ d_hab_dark_matter_2 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3221,8 +3083,7 @@ d_hab_dark_matter_3 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3248,8 +3109,7 @@ d_hab_living_metal_1 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3271,8 +3131,7 @@ d_hab_alloy_1 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3294,8 +3153,7 @@ d_hab_alloy_2 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3317,8 +3175,7 @@ d_hab_alloy_3 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3340,8 +3197,7 @@ d_hab_alloy_4 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 
@@ -3363,8 +3219,7 @@ d_hab_alloy_5 = {
 	}
 	
 	drop_weight = {
-		weight = 0.01
-		#does not occur naturally, but needs a non-zero weight
+		weight = 0
 	}
 }
 

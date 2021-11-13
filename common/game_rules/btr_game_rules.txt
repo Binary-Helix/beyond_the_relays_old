@@ -26,22 +26,22 @@ can_orbital_bombard = {
 	}
 }
 
-#Root = country
-#This = planet
-can_terraform_planet = {
-	NAND = {
-		root = { has_policy_flag = pre_sapients_protect }
-		any_owned_pop = { is_sapient = no }
-	}
-	NAND = {
-		root = { has_origin = origin_pd_tree_of_life }
-	}
-	custom_tooltip = {
-		fail_text = "requires_actor_not_devouring_swarm_lithoid"
-		root = { is_lithoid_devouring_swarm = no }
-	}
-	custom_tooltip = {
-		fail_text = "requires_actor_not_pdtol"
-		root = { NOT = { has_origin = origin_pd_tree_of_life } }
-	}
-}
+# #Root = country
+# #This = planet
+# can_terraform_planet = {
+# 	NAND = {
+# 		root = { has_policy_flag = pre_sapients_protect }
+# 		any_owned_pop = { is_sapient = no }
+# 	}
+# 	NAND = {
+# 		root = { has_origin = origin_pd_tree_of_life }
+# 	}
+# 	custom_tooltip = {
+# 		fail_text = "requires_actor_not_devouring_swarm_lithoid"
+# 		root = { is_lithoid_devouring_swarm = no }
+# 	}
+# 	custom_tooltip = {
+# 		fail_text = "requires_actor_not_pdtol"
+# 		root = { NOT = { has_origin = origin_pd_tree_of_life } }
+# 	}
+# }

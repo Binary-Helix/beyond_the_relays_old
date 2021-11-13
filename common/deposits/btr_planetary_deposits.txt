@@ -5,6 +5,6742 @@
 # constant_modifier - applied to planet always
 # blocker = <key/any/none> - default any
 # station = station class in orbit to gather
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 0.5
+@mid_rare = 0.25
+@low_rare = 0.1
+
+@planet_type_bonus = 1.5
+
+#################################
+##### REAL SPACE - Deposits #####
+#################################
+
+
+rs_d_dark_matter_deposit_1 = {
+	resources = { 
+		category = orbital_mining_deposits
+		produces = {
+			sr_dark_matter = 1
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 10
+			OR = {
+				is_planet_class = pc_collapsar
+				is_planet_class = pc_microquasar_1
+				is_planet_class = pc_microquasar_2
+			}
+		}
+		modifier = {
+			factor = 0.5
+			is_inside_nebula = no
+		}		
+	}
+}
+
+rs_d_dark_matter_deposit_2 = {
+	resources = { 
+		category = orbital_research_deposits
+		produces = {
+			sr_dark_matter = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	drop_weight = {
+		weight = 0
+		modifier = {
+			weight = 1
+			OR = {
+				is_planet_class = pc_collapsar
+				is_planet_class = pc_microquasar_1
+				is_planet_class = pc_microquasar_2
+			}
+		}
+	}
+}
+
+rs_d_dark_matter_deposit_3 = {
+	resources = { 
+		category = orbital_research_deposits
+		produces = {
+			sr_dark_matter = 3
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	drop_weight = {
+		weight = 0	
+	}
+}
+
+##########################################
+##### PLANETARY DIVERSITY - Deposits #####
+##########################################
+
+#Event Deposits
+#Biolumen World 
+
+d_hunterreserve = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -4
+			job_researcher_add = 1
+			job_researcher_per_pop = 0.05 # 1 per 20
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 1
+			job_brain_drone_per_pop = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 3
+			job_calculator_per_pop = 0.05
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_biolumen
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Techno-Orgnaic World
+
+d_peace_museum = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.20
+			job_culture_worker_add = 5
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			planet_jobs_unity_produces_mult = 0.20
+			job_brain_drone_add = 5
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			planet_jobs_unity_produces_mult = 0.20
+			job_calculator_add = 5
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_technoorganic
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_subsurface_assembly = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = no
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			sr_living_metal = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_subsurface_assembly_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_subsurface_assembly_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_subsurface_assembly_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_technoorganic
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Graveyard
+
+d_tiyanki_cleanup = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+		district_generator_max = 2
+		job_tiyankicleanup_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			district_generator_max = 2
+			job_mining_drone_add = 3
+			job_technician_drone_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			district_generator_max = 2
+			job_mining_drone_add = 3
+			job_technician_drone_add = 3
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_graveyard
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_tiyanki_station = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+		planet_max_districts_add = 2
+		job_researcher_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = 2
+			job_brain_drone_add = 6
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			planet_max_districts_add = 2
+			job_calculator_add = 6
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_graveyard
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#DuneZro
+d_zro_dune = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = no
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_pdzro_harvester_max = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_pdzro_harvester_max = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_pdzro_harvester_max = 3
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_sandsea
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdsandworms = {
+	icon = d_pdsandworms
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	can_be_cleared = { always = no }
+
+	planet_modifier = {	
+		planet_max_districts_add = -6
+	}
+	
+	resources = {
+		category = deposit_blockers
+	}
+}
+
+#Karst Caves
+
+d_potential_cave = {
+	time = 270
+	icon = d_potential_cave
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = {
+		is_planet_class = pc_karst
+	}
+
+	planet_modifier = {	
+		planet_max_districts_add = -2
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	blocker_swap_types = {
+		d_mineral_cave
+		d_livable_cave
+		d_hot_springs
+		d_livable_cave
+		d_ore_rich_caverns
+		d_fungal_caves
+	}
+	
+	drop_weight = {
+		weight = 100
+		modifier = {
+			factor = 0
+			num_free_districts = {
+				type = district_city
+				value < 2
+			}
+		}
+	}
+}
+
+d_mineral_cave = {
+	icon = d_mineral_cave
+	is_for_colonizable = yes
+	category = deposit_cat_minerals
+	use_for_min_max_adjustments = yes
+	use_weights_for_terraforming_swap_types = yes
+
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_mineral_fields
+		d_veiny_cliffs
+		d_mineral_striations # gaia
+	}
+	
+	potential = {
+		is_planet_class = pc_karst
+	}
+
+	planet_modifier = {	
+		district_mining_max = 1
+	}
+
+	drop_weight = {
+		weight = @high
+	}
+}
+
+d_livable_cave = {
+	icon = d_livable_cave
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		is_planet_class = pc_karst
+	}
+
+	planet_modifier = {	
+		planet_max_districts_add = 2
+	}
+	
+	drop_weight = {	weight = 0 }
+}
+
+#Changable Rare Planets
+#Geothermal
+
+d_geothermal_slurry_site = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		#d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_geothermal_slurry_site_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_geothermal_slurry_site_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_geothermal_slurry_site_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_geothermal
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Tidally-Locked
+
+d_nightside_mining_operations = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		#d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_nightside_mining_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_nightside_mining_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			building_nightside_mining_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_tidallylocked
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+}
+
+#Supercontinet
+
+d_supercon_site = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		#d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_supercon_lab_max = 1
+			##building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_supercon_lab_max = 1
+			##building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			building_supercon_lab_max = 1
+			##building_crystal_mines_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_supercon
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+	
+}
+
+#Superhabitable
+
+d_ancient_motes = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		#d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_volatiles_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_volatiles_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_volatiles_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_superhabitable
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Karst
+
+d_karst_cave = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		#d_karst_cave
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_karst_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_karst_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_karst_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_karst
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Reef
+
+d_great_reef = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		#d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_reef_lab_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_reef_lab_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_reef_lab_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_reef
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_biolumen_nature_preserve = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		#d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_nature_preserve_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_nature_preserve_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_nature_preserve_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_biolumen
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_aquatic_trench = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		#d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_undersea_gasmine_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_undersea_gasmine_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_undersea_gasmine_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_aquatic
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_coral_fields = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		#d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_coral_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_coral_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_coral_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_coral
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_salt_caves = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		#d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_salt_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_salt_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_salt_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_salt
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_aquifer_cave = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		#d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_aquifer_lab_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_aquifer_lab_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_aquifer_lab_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_aquifer
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_storm_corridor = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		#d_storm_corridor
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		exists = owner
+	#		NOT = { has_building = building_storm_lab }
+	#	}
+	#	modifier = {
+	#		planet_housing_mult = -0.1
+	#	}
+	#}
+
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		exists = owner
+	#		has_building = building_storm_lab
+	#	}
+	#	modifier = {
+	#		planet_housing_mult = -0.1
+	#	}
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_storm_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_storm_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_storm_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_storm
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_eyeball_site = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_storm_corridor
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		#d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_eyeball_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_eyeball_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_eyeball_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_eyeball
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_glacio_lake = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_storm_corridor
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		#d_glacio_lake
+		d_supercon_site
+		d_lanthanide_deposit
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_glacio_forge_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_glacio_forge_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_glacio_forge_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_glacio
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_lanthanide_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_storm_corridor
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_supercon_site
+		#d_lanthanide_deposit
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_lanthanide_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_lanthanide_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_lanthanide_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_lanthanide
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_rogue_geo = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_storm_corridor
+		d_acid_lakes
+		#d_rogue_geo
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_supercon_site
+		d_lanthanide_deposit
+		d_lichen_forest
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_rogue_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_rogue_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_rogue_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_rogue
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_lichen_forest = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_storm_corridor
+		d_acid_lakes
+		d_rogue_geo
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_supercon_site
+		d_lanthanide_deposit
+		#d_lichen_forest
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_lichen_farm_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_lichen_farm_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_lichen_farm_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_lichen
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_megaflora_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		#d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_megaflora_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_megaflora_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_megaflora_mine_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_megaflora
+			is_planet_class = pc_megaflorahive
+			is_planet_class = pc_megafloratol
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ecogarden = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -5	
+			planet_amenities_mult = 0.1
+			planet_jobs_unity_produces_mult = 0.1
+			job_preserve_ranger_add = 5
+			job_preserve_ranger_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -5	
+			planet_amenities_mult = 0.1
+			planet_jobs_unity_produces_mult = 0.1
+			job_agri_drone_add = 10
+			job_agri_drone_per_pop = 0.10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -5	
+			planet_amenities_mult = 0.1
+			planet_jobs_unity_produces_mult = 0.1
+			job_agri_drone_add = 10
+			job_agri_drone_per_pop = 0.10
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_ecocity
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_tiyanki_small = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_tiyanki_large = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		district_generator_max = 3
+		#building_gas_extractors_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_unit04 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		is_planet_class = pc_technoorganic
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_roboticist_add = 2
+			planet_jobs_food_produces_mult = 0.10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {	
+			job_agri_drone_add = 5
+			planet_jobs_food_produces_mult = 0.10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_replicator_add = 3
+			planet_jobs_engineering_research_produces_mult = 0.10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_dead04 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		is_planet_class = pc_technoorganic
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 2
+			planet_jobs_engineering_research_produces_mult = 0.10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {	
+			job_brain_drone_add = 2
+			planet_jobs_engineering_research_produces_mult = 0.10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_calculator_add = 2
+			planet_jobs_engineering_research_produces_mult = 0.10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_home04 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_unit04
+
+	potential = {
+		is_planet_class = pc_technoorganic
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_jobs_food_produces_mult = 0.1
+			biological_pop_happiness = 0.1
+			planet_jobs_unity_produces_mult = 0.1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {	
+			planet_jobs_food_produces_mult = 0.15
+			planet_jobs_unity_produces_mult = 0.15
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			planet_jobs_produces_mult = 0.15
+			planet_jobs_unity_produces_mult = 0.1
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdcrystalpatch = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			rare_crystals = 0.5
+		}
+	}
+
+	planet_modifier = {
+		district_mining_max = 2
+		district_farming_max = 2
+	}
+
+	potential = {
+		NOT = { is_planet_class = pc_crystal }
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_technocanal = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			engineering_research = 10
+		}
+	}
+
+	planet_modifier = {
+		district_farming_max = 3
+	}
+
+	potential = {
+		NOT = { is_planet_class = pc_technoorganic }
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_remaining_stores = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "d_station_reactor"
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			food = 30
+			minerals = 20
+			energy = -50
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hive_crystal1 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdhive
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		#building_crystal_mines_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hive_crystal2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdhive
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		building_crystal_mines_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hive_gas1 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdhive
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		#building_gas_extractors_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hive_gas2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdhive
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		#building_gas_extractors_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hive_motes1 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdhive
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		#building_mote_harvesters_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hive_motes2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdhive
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+
+	planet_modifier = { 
+		#building_mote_harvesters_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# tree of life origin
+# Half way
+d_pd_tree_of_life_3 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree2
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_pd_tree_of_life
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.20
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_housing_add = 15
+		district_farming_max = 8
+	}
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 8
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Half way
+d_pd_tree_of_life_2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_pd_tree_of_life
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.15
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_housing_add = 10
+		district_farming_max = 4
+	}
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 4
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#colony
+d_pd_tree_of_life_1 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree
+
+	potential = {
+		exists = owner
+		planet = {
+			owner = {
+				has_origin = origin_pd_tree_of_life
+			}
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.1
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_housing_add = 5
+		district_farming_max = 2
+	}
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 2
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+d_tol_sap = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	potential = {
+		exists = owner
+		planet = {
+			owner = {
+				has_origin = origin_pd_tree_of_life
+			}
+		}
+	}
+
+	planet_modifier = {
+		district_generator_max = 2
+		#building_gas_extractors_max = 1
+		planet_stability_add = 10
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#deadtree
+d_pd_tree_of_life_dead = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree
+
+	potential = {
+		exists = owner
+		planet = {
+			owner = {
+				has_origin = origin_pd_tree_of_life
+			}
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.10
+		district_mining_max = 2
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Ringworld
+d_pd_tree_of_life_ringworld = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_pd_tree_of_life
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.15
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_housing_add = 50
+		planet_jobs_food_produces_mult = 0.10
+	}
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 4
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Special
+d_pd_tree_of_life_special = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_pd_tree_of_life
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.15
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_housing_add = 10
+	}
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 4
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Habitat
+d_pd_tree_of_life_habitat = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	icon = d_huge_tree
+
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_pd_tree_of_life
+		}
+	}
+
+	planet_modifier = {
+		pop_growth_speed = 0.1
+		planet_jobs_society_research_produces_mult = 0.10
+		planet_housing_add = 5
+		planet_max_districts_add = -1
+	}
+
+	resources = {
+		category = planet_deposits
+		upkeep = {
+			food = 4
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pd_hive_world_boost = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdhive
+	
+	potential = {
+		is_planet_class = pc_hive
+	}
+
+	planet_modifier = { 
+		pop_growth_speed = 0.25
+		planet_stability_add = 10 
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pd_machine_world_boost = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pd_machine_world_boost
+	
+	potential = {
+		is_planet_class = pc_hive
+	}
+
+	planet_modifier = { 
+		pop_amenities_usage_mult = -0.15
+		planet_buildings_upkeep_mult = -0.1
+		planet_stability_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdstorm_nice = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		is_planet_class = pc_storm
+	}
+
+	planet_modifier = { 
+		job_researcher_add = 2
+		job_culture_worker_add = 2
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_jobs_unity_produces_mult = 0.1
+		planet_max_districts_add = -2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdstorm_nice_2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdstorm_nice
+
+	potential = {
+		NOR = {
+			is_artificial = yes
+			is_pd_exotic = yes
+			is_pd_unique = yes
+		}
+	}
+
+	planet_modifier = { 
+		job_researcher_add = 2
+		planet_jobs_society_research_produces_mult = 0.1
+		planet_max_districts_add = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdstorm_greedy = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = {
+		is_planet_class = pc_storm
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.1
+			district_mining_max = 4
+			job_gas_extractor_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {	
+			pop_environment_tolerance = -0.1
+			district_mining_max = 4
+			job_gas_extraction_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			district_mining_max = 6
+			job_gas_extraction_drone_add = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdstorm_greedy_2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdstorm_greedy
+
+	potential = {
+		is_planet_class = pc_storm
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			pop_environment_tolerance = -0.05
+			district_mining_max = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {	
+			pop_environment_tolerance = -0.05
+			district_mining_max = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			district_mining_max = 3
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdstorm_purge = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_pdstorm_greedy
+
+	potential = {
+		is_planet_class = pc_storm
+	}
+
+	planet_modifier = { 
+		job_gas_extractor_add = 4
+		planet_max_districts_add = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdgaia = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_storm_corridor
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		#d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}
+
+	#resources = {
+	#	category = planet_deposits
+	#	produces = {
+	#		volatile_motes = 2
+	#		exotic_gases = 2
+	#		rare_crystals = 2
+	#	}
+	#}
+
+	planet_modifier = {
+		trade_value_mult = 0.1
+		planet_amenities_mult = 0.1
+		##building_gas_extractors_max = 1
+		##building_mote_harvesters_max = 1
+		##building_crystal_mines_max = 1
+		planet_max_districts_add = 2
+	}
+
+	potential = {
+		is_planet_class = pc_gaia
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdshroud = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_storm_corridor
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		#d_pdshroud
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			sr_zro = 1
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_mult = 0.1
+		planet_max_districts_add = 2
+	}
+
+	potential = {
+			is_planet_class = pc_pdshroud
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_milarc = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -5	
+			planet_orbital_bombardment_damage = -0.75
+			#army_starting_experience_add = 300 
+			#army_defense_damage_mult = 0.50 
+			job_soldier_add = 5
+			job_soldier_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -5	
+			planet_orbital_bombardment_damage = -0.75
+			#army_starting_experience_add = 300 
+			#army_defense_damage_mult = 0.50 
+			job_warrior_drone_add = 5
+			job_warrior_drone_per_pop = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -5	
+			planet_orbital_bombardment_damage = -0.75
+			#army_starting_experience_add = 300 
+			#army_defense_damage_mult = 0.50 
+			job_warrior_drone_add = 5
+			job_warrior_drone_per_pop = 0.05
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_milarc
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pd_broken_drydocks = {
+	icon = d_pd_broken_drydocks
+	time = 270
+	
+	is_for_colonizable = yes
+	category = deposit_cat_rare_blocker	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_pd_repaired_drydocks
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+}
+
+d_pd_repaired_drydocks = {
+	icon = d_pd_broken_drydocks
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 4
+			job_soldier_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 4
+			job_warrior_drone_add = 4
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 4
+			job_warrior_drone_add = 4
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_corpoarc = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_max_districts_add = -5	
+			trade_value_mult = 0.1
+			planet_jobs_unity_produces_mult = 0.1
+			job_entertainer_add = 5
+			job_entertainer_per_pop = 0.05
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_corpoarc
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pd_orbital_mirrors = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	planet_modifier = {
+		district_generator_max = 3
+	}
+
+	potential = {
+		is_colonizable = yes
+		is_artificial = no
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pd_seismic_resonators = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	planet_modifier = {
+		district_mining_max = 3
+	}
+
+	potential = {
+		is_colonizable = yes
+		is_artificial = no
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pd_bionanite_soil = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	use_weights_for_terraforming_swap_types = no
+	
+	planet_modifier = {
+		district_farming_max = 3
+	}
+
+	potential = {
+		is_colonizable = yes
+		is_artificial = no
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+#Ammonia
+d_ammonia_sea = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		#d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_ammonia_electrodeposition_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_ammonia_electrodeposition_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_ammonia_electrodeposition_max = 1
+			#building_mote_harvesters_max = 1
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_ammonia
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Sulfur
+d_sulfur_pool = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_pdshroud
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_sulfur_lab_max = 1
+			#building_mote_harvesters_max = 1
+			biological_pop_happiness = 0.1
+			lithoid_pop_happiness = 0.1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_sulfur_lab_max = 1
+			#building_mote_harvesters_max = 1
+			planet_stability_add = 10
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_sulfur_lab_max = 1
+			#building_mote_harvesters_max = 1
+			planet_stability_add = 10
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_sulfur
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Methane
+d_frozen_gas_mountain = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		#d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_frozen_gas_mine_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_frozen_gas_mine_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_frozen_gas_mine_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_methane
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Ash
+d_lava_lakes = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		#d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_lava_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_lava_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_lava_mine_max = 1
+			#building_crystal_mines_max = 1
+		}
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_ash
+			is_planet_class = pc_primal
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Radiotrophic
+d_rad_blooms_field = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_rad_blooms_field
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	planet_modifier = {
+		planet_housing_mult = -0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = {
+					has_trait = trait_pc_irradiated_preference 
+					has_trait = trait_pc_nuked_preference 
+				}
+			}
+		}
+		modifier = {
+			pop_growth_speed = 0.2
+			building_sugarbush_max = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { 
+				owner = { 
+					OR = {
+						has_trait = trait_pc_irradiated_preference 
+						has_trait = trait_pc_nuked_preference
+					} 
+				} 
+			}
+		}
+		modifier = {
+			pop_growth_speed = -0.10
+			planet_jobs_physics_research_produces_mult = 0.15
+			planet_jobs_society_research_produces_mult = 0.15
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_irradiated
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Radiotrophic Transplant
+d_rad_blooms_transplant = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_rad_blooms_field
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	planet_modifier = {
+		planet_housing_mult = -0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_trait = trait_pc_irradiated_preference }
+		}
+		modifier = {
+			pop_growth_speed = 0.1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_trait = trait_pc_irradiated_preference } }
+		}
+		modifier = {
+			pop_growth_speed = -0.10
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_irradiated
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Radiotrophic Transplanet Upgrade
+d_rad_blooms_transplant_upgrade = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = d_rad_blooms_field
+
+	use_weights_for_terraforming_swap_types = no
+	should_swap_deposit_on_terraforming = no
+
+	planet_modifier = {
+		planet_housing_mult = -0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_trait = trait_pc_irradiated_preference }
+		}
+		modifier = {
+			pop_growth_speed = 0.2
+			building_sugarbush_max = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			NOT = { owner = { has_trait = trait_pc_irradiated_preference } }
+		}
+		modifier = {
+			pop_growth_speed = -0.10
+		}
+	}
+
+	potential = {
+		is_planet_class = pc_irradiated
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdacid_rain = {
+	time = 270
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 2000
+		}
+	}
+
+	#potential = {
+	#	planet_size >= 10
+	#}
+
+	planet_modifier = {
+		planet_jobs_robotic_produces_mult = -1.0
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+
+	ai_weight = {
+		weight = 1000
+	}
+
+	prerequisites = { "tech_pdacid_rain" }
+}
+
+d_acid_lakes = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	use_weights_for_terraforming_swap_types = yes
+	should_swap_deposit_on_terraforming = yes
+	terraforming_swap_types = {
+		d_geothermal_slurry_site
+		d_nightside_mining_operations
+		d_ancient_motes
+		d_karst_cave
+		d_great_reef
+		d_ammonia_sea
+		d_frozen_gas_mountain
+		d_lava_lakes
+		d_biolumen_nature_preserve
+		d_aquatic_trench
+		d_pdshroud
+		d_salt_caves
+		d_aquifer_cave
+		d_megaflora_deposit
+		d_coral_fields
+		#d_acid_lakes
+		d_rogue_geo
+		d_lichen_forest
+		d_eyeball_site
+		d_pdgaia
+		d_sulfur_pool
+		d_glacio_lake
+		d_lanthanide_deposit
+		d_supercon_site
+	}	
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			building_acid_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			building_acid_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			building_acid_lab_max = 1
+			#building_gas_extractors_max = 1
+		}
+	}
+
+	potential = {
+			is_planet_class = pc_acid
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+#Energy + Mineral + Science
+
+d_pdhabminerals = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "unused/d_space_walk"
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_miner_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_mining_drone_add = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdhabscience = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "unused/d_space_walk"
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+			}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pdhabenergy = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	icon = "unused/d_space_walk"
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_technician_drone_add = 2
+			}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_technician_drone_add = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#GG Storms
+
+d_ggstorm15 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -15
+	}
+
+	potential = {
+			is_planet_class = pc_pd_gas_giant_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ggstorm10 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -10
+	}
+
+	potential = {
+			is_planet_class = pc_pd_gas_giant_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ggstorm5 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -5
+	}
+
+	potential = {
+			is_planet_class = pc_pd_gas_giant_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ggstorm4 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -4
+	}
+
+	potential = {
+			is_planet_class = pc_pd_gas_giant_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ggstorm3 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -3
+	}
+
+	potential = {
+			is_planet_class = pc_pd_gas_giant_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ggstorm2 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	potential = {
+			is_planet_class = pc_pd_gas_giant_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_ggstorm1 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	potential = {
+			is_planet_class = pc_pd_gas_giant_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Barren Blockers
+
+d_bblock15 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -15
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_bblock10 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -10
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_bblock5 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -5
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_bblock4 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -4
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_bblock3 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -3
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_bblock2 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_bblock1 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_barren_cold_hab
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Molten Blockers
+
+d_mblock15 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -15
+	}
+
+	potential = {
+			is_planet_class = pc_pd_molten_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mblock10 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -10
+	}
+
+	potential = {
+		is_planet_class = pc_pd_molten_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mblock5 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -5
+	}
+
+	potential = {
+		is_planet_class = pc_pd_molten_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mblock4 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -4
+	}
+
+	potential = {
+		is_planet_class = pc_pd_molten_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mblock3 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -3
+	}
+
+	potential = {
+		is_planet_class = pc_pd_molten_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mblock2 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	potential = {
+		is_planet_class = pc_pd_molten_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mblock1 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	potential = {
+		is_planet_class = pc_pd_molten_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Frozen Blockers
+
+d_fblock15 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -15
+	}
+
+	potential = {
+			is_planet_class = pc_pd_frozen_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fblock10 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -10
+	}
+
+	potential = {
+			is_planet_class = pc_pd_frozen_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fblock5 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -5
+	}
+
+	potential = {
+		is_planet_class = pc_pd_frozen_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fblock4 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -4
+	}
+
+	potential = {
+		is_planet_class = pc_pd_frozen_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fblock3 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -3
+	}
+
+	potential = {
+		is_planet_class = pc_pd_frozen_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fblock2 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	potential = {
+		is_planet_class = pc_pd_frozen_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_fblock1 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	potential = {
+		is_planet_class = pc_pd_frozen_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Hothouse Blockers
+
+d_hhblock15 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -15
+	}
+
+	potential = {
+			is_planet_class = pc_pd_hothouse_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hhblock10 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -10
+	}
+
+	potential = {
+			is_planet_class = pc_pd_hothouse_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hhblock5 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -5
+	}
+
+	potential = {
+			is_planet_class = pc_pd_hothouse_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hhblock4 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -4
+	}
+
+	potential = {
+			is_planet_class = pc_pd_hothouse_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hhblock3 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -3
+	}
+
+	potential = {
+			is_planet_class = pc_pd_hothouse_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hhblock2 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	potential = {
+			is_planet_class = pc_pd_hothouse_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_hhblock1 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	potential = {
+			is_planet_class = pc_pd_hothouse_hab
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_expanded_dome_system = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+
+	planet_modifier = {
+		planet_max_districts_add = 2
+		pop_environment_tolerance = 0.10
+	}
+
+	potential = {
+		OR = {
+			is_planet_class = pc_pd_hothouse_hab
+			is_planet_class = pc_pd_barren_cold_hab
+			is_planet_class = pc_pd_barren_hab
+			is_planet_class = pc_pd_frozen_hab
+			is_planet_class = pc_pd_gas_giant_hab
+			is_planet_class = pc_pd_molten_hab
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_expanded_dome_system_1 = {
+	is_for_colonizable = yes
+	use_for_min_max_adjustments = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+
+	planet_modifier = {
+		planet_max_districts_add = 1
+		pop_environment_tolerance = 0.10
+	}
+
+	potential = { is_planet_class = pc_pd_asteroid_hab }
+
+	drop_weight = { weight = 0 }
+}
+
+d_snowball_wasteland_1 = {
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	icon = d_frozen_wasteland
+
+	planet_modifier = {
+		planet_max_districts_add = -5
+		pop_environment_tolerance = -0.2
+	}
+
+	potential = {
+		is_planet_class = pc_continental
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_snowball_wasteland_2 = {
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	icon = d_frozen_wasteland
+
+	planet_modifier = {
+		planet_max_districts_add = -9
+		pop_environment_tolerance = -0.35
+	}
+
+	potential = {
+		is_planet_class = pc_continental
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_snowball_wasteland_3 = {
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	can_be_cleared = { always = no }
+	icon = d_frozen_wasteland
+
+	planet_modifier = {
+		district_farming_max = -20
+		pop_environment_tolerance = -0.45
+	}
+
+	potential = {
+		is_planet_class = pc_continental
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_snowball_stockpile = {
+	is_for_colonizable = yes
+	icon = d_snowball_stockpile
+	category = deposit_cat_rare
+	
+	resources = {
+		category = planet_deposits
+		produces = {
+			energy = 10
+			minerals = 10
+			food = 10
+			consumer_goods = 10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_deepcaves_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = 2
+		planet_orbital_bombardment_damage = -0.2
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_deepcaves_deposit
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 1
+			OR = {
+			is_wet =  yes
+			is_cold = yes
+			is_dry = yes
+			}
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}	
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_geothermal_pools_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		planet_amenities_mult = 0.10
+		planet_jobs_energy_produces_mult = 0.05
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_geothermal_pools_deposit
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 1
+			OR = {
+			is_wet =  yes
+			is_cold = yes
+			#is_dry = yes
+			}
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_geothermal
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}	
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_grand_canyons_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+		planet_jobs_minerals_produces_mult = 0.05
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_grand_canyons_deposit
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 1
+			OR = {
+			is_wet =  yes
+			is_cold = yes
+			is_dry = yes
+			}
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_mesa
+		}			
+		modifier = {
+			factor = 2
+			is_planet_class = pc_badlands
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}	
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_biolumen_shores_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+		pop_growth_from_immigration = 0.1
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_biolumen_shores_deposit
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 1
+			OR = {
+			is_wet =  yes
+			is_cold = yes
+			}
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_desertislands
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_ocean
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_subarctic
+		}		
+		modifier = {
+			factor = 0
+			OR = {
+			is_planet_class = pc_sandsea
+			is_planet_class = pc_antarctic
+			is_planet_class = pc_aeolian
+			is_planet_class = pc_frozen_desert
+			}
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}	
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_cryovolcanos = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		building_gas_extractors_max = 1
+		planet_jobs_minerals_produces_mult = 0.1
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_cryovolcanos
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 3
+			OR = {
+			is_cold = yes
+			}
+		}	
+		modifier = {
+			factor = 2
+			is_planet_class = pc_ammonia
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_methane
+		}		
+		modifier = {
+			factor = 0
+			OR = {
+			is_wet = yes
+			is_dry = yes
+			}
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}	
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_large_lihtium_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.1
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_large_lihtium_deposit
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 1
+			OR = {
+			is_dry =  yes
+			is_cold = yes
+			}
+		}		
+		modifier = {
+			factor = 3
+			is_planet_class = pc_salt
+		}		
+		modifier = {
+			factor = 3
+			is_planet_class = pc_coral
+		}		
+		modifier = {
+			factor = 3
+			is_planet_class = pc_aquifer
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}			
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_powerful_auroras_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+		planet_jobs_physics_research_produces_mult = 0.1
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_powerful_auroras_deposit
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 1
+			OR = {
+			is_cold = yes
+			is_wet = yes
+			}
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_glacial
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}		
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_underwater_ruins_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.05
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_underwater_ruins_deposit
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 1
+			OR = {
+			is_wet = yes
+			is_dry = yes
+			}
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_aquatic
+		}		
+		modifier = {
+			factor = 0
+			OR = {
+			is_planet_class = pc_sandsea
+			is_planet_class = pc_antarctic
+			is_planet_class = pc_aeolian
+			is_planet_class = pc_frozen_desert
+			is_planet_class = pc_ash
+			is_planet_class = pc_floating
+			}
+		}		
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_storm_waters = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+		is_planet_class = pc_storm
+	}
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+	
+	drop_weight = {
+		weight = 0	
+	}
+}
+
+d_sand_rivers_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		planet_jobs_minerals_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.1
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_sand_rivers_deposit
+		}		
+		modifier = {
+			factor = 1
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 2
+			OR = {
+				is_dry = yes
+			}
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_sandsea
+		}				
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}	
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_volcanic_soil_deposit = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	potential = {
+		can_have_habitable_deposits = yes
+	}
+	
+	planet_modifier = {
+		planet_jobs_food_produces_mult = 0.05
+		district_farming_max = 1
+	}
+	
+	drop_weight = {
+		weight = @mid_rare
+		modifier = {
+			factor = 0
+			has_deposit = d_volcanic_soil_deposit
+		}		
+		modifier = {
+			factor = 1
+			is_planet_class = pc_gaia
+		}		
+		modifier = {
+			factor = 2
+			OR = {
+				is_dry = yes
+			}
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_primal
+		}		
+		modifier = {
+			factor = 2
+			is_planet_class = pc_ash
+		}			
+		modifier = {
+			factor = 0
+			is_planet_class = pc_floating
+		}		
+		modifier = {
+			factor = 0
+			solar_system = {
+				OR = {
+					has_star_flag = empire_home_system
+					has_star_flag = sol_system
+					has_star_flag = deneb_system
+				}
+			}
+		}		
+	}
+}
+
+d_pd_portal_research_zone = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	icon = d_quarantine_zone
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_researcher_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_calculator_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_brain_drone_add = 5
+	}
+
+	planet_modifier = {
+		pop_happiness = -0.1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_pd_dimensional_prison = {
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+	
+	icon = d_quarantine_zone
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_researcher_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_calculator_add = 5
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_brain_drone_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#######################################
+##### MEC:Asari - Unique Deposits #####
+#######################################
+
+####
+# EPHO DEPOSITS
+####
+
+d_mec_asari_epho_arthenn_traces = {
+	icon = d_metal_boneyard
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.30
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_epho_zapote_caves = {
+	icon = d_ore_rich_caverns
+	
+	category = deposit_cat_minerals
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+####
+# HELYME DEPOSITS
+####
+
+d_mec_asari_helyme_arthenn_ruins = {
+	icon = d_broken_spire
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.30
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_helyme_terlanis_mountain = {
+	icon = d_mountain_range
+	
+	category = deposit_cat_minerals
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_helyme_editos_ocean = {
+	icon = d_toxic_kelp
+	
+	category = deposit_cat_energy
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+####
+# ILLIUM DEPOSITS
+####
+
+d_mec_asari_nosastra_metropolis = {
+	icon = d_city
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		#trade_value_mult = 0.15
+		trade_value_add = 25
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_entertainer_add = 1
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_manjoros_plaza = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_bureaucrat_add = 1
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sulsara_oasis = {
+	is_for_colonizable = yes
+	icon = d_solar_array
+	
+	planet_modifier = { 
+		district_generator_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_saefos_valley = {
+	is_for_colonizable = yes
+	icon = d_mec_asari_rural
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_nosedana_vertical = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	resources = {
+		produces = {
+			food = 20
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_kyatari_thanoris = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sedera_canyon = {
+	is_for_colonizable = yes
+	icon = d_arid_highlands
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_azarbilhos_industrial = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		planet_housing_add = 5
+	}
+
+	resources = {
+		produces = {
+			consumer_goods = 10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+####
+# LUSIA DEPOSITS
+####
+
+d_mec_asari_lusia_monoi_metropolis = {
+	icon = d_city
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_generator_max = 2
+		district_mining_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_lusia_tatenis_chain = {
+	icon = d_geothermal_vent
+	
+	category = deposit_cat_energy
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_lusia_shali_desert = {
+	icon = d_searing_desert
+	
+	category = deposit_cat_minerals
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_lusia_noskonetis = {
+	icon = d_reactor
+	
+	category = deposit_cat_minerals
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+####
+# NIACAL DEPOSITS
+####
+
+d_mec_asari_niacal_jungles = {
+	icon = d_lush_jungle
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 6
+		planet_districts_cost_mult = 0.30
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_niacal_tumilasal_delta = {
+	icon = d_great_river
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_niacal_aurolis = {
+	icon = d_mec_asari_rural
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_jobs_society_research_produces_mult = 0.20
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+####
+# SANVES DEPOSITS
+####
+
+d_mec_asari_sanves_tesanda_caldera = {
+	icon = d_active_volcano
+	time = 360
+	
+	category = deposit_cat_blockers
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_sanves_tesanda_quarry
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	potential = { always = no }
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sanves_tesanda_quarry = {
+	icon = d_mining_tunnels
+	
+	category = deposit_cat_minerals
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sanves_etheai_arcologies = {
+	icon = d_central_spire
+	
+	category = deposit_cat_energy
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sanves_ulemas_forests = {
+	icon = d_dense_jungle
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+####
+# TARITH DEPOSITS
+####
+
+d_mec_asari_tarith_toxic_platinum = {
+	icon = d_noxious_swamp
+	time = 360
+	
+	category = deposit_cat_blockers
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		planet_max_districts_add = -3
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_tarith_platinum
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	potential = { always = no }
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_platinum = {
+	icon = d_crater
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 5
+		planet_jobs_minerals_produces_mult = 0.25
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_toxic_klixos = {
+	icon = d_noxious_swamp
+	time = 360
+	
+	category = deposit_cat_blockers
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		planet_max_districts_add = -3
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_tarith_klixos
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	potential = { always = no }
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_klixos = {
+	icon = d_boggy_fens
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_flora = {
+	icon = d_huge_tree
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		pop_environment_tolerance = -0.10
+		planet_jobs_food_produces_mult = -0.20
+		planet_jobs_society_research_produces_mult = 0.20
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+####
+# THESSIA DEPOSITS
+####
+
+d_mec_asari_republic_armali = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_nosdesera = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_serrice_university = {
+	is_for_colonizable = yes
+	icon = d_building_complex
+	
+	#category = deposit_cat_rare
+	
+	planet_modifier = {
+		district_generator_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_cresyl_plateau = {
+	is_for_colonizable = yes
+	icon = d_betharian_deposit
+	
+	planet_modifier = { 
+		district_mining_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_askasian_mountains = {
+	is_for_colonizable = yes
+	icon = d_mountain_range
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_pulian_delta = {
+	is_for_colonizable = yes
+	icon = d_great_river
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_senecan_lakes = {
+	is_for_colonizable = yes
+	icon = d_crystal_reef
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_irssal_tea = {
+	is_for_colonizable = yes
+	icon = d_black_soil
+	
+	planet_modifier = { 
+		district_farming_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_athame_temple = {
+	is_for_colonizable = yes
+	icon = d_monument
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		planet_researchers_produces_mult = 0.20
+	}
+	
+	#resources = {
+	#	category = planet_deposits
+	#	produces = {
+	#		society_research = 5
+	#		physics_research = 5
+	#		engineering_research = 5
+	#	}
+	#}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_eezo_deposits = {
+	is_for_colonizable = yes
+	icon = d_infestation
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		trade_value_add = 15
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_thessia_net = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = {
+		planet_amenities_mult = 0.20
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_zylium_eezo = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+		
+	planet_modifier = {
+		trade_value_add = 5
+	}
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_mec_asari_doriae_bacteria = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 3
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+d_mec_asari_tritogenith_collision = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+
+d_mec_asari_republic_egalitarian = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_entertainer_add = 1
+			job_entertainer_per_pop = 0.025 # 1 per 40
+			pop_ethic_egalitarian_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_authoritarian = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_bureaucrat_add = 1
+			job_bureaucrat_per_pop = 0.025 # 1 per 40
+			pop_ethic_authoritarian_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_xenophile = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_healthcare_add = 1
+			job_healthcare_per_pop = 0.025 # 1 per 40
+			pop_ethic_xenophile_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_xenophobe = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_enforcer_add = 1
+			job_enforcer_per_pop = 0.025 # 1 per 40
+			pop_ethic_xenophobe_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_pacifist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_artisan_add = 1
+			job_artisan_per_pop = 0.025 # 1 per 40
+			pop_ethic_pacifist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_militarist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_foundry_add = 1
+			job_foundry_per_pop = 0.025 # 1 per 40
+			pop_ethic_militarist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_materialist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_researcher_add = 1
+			job_researcher_per_pop = 0.025 # 1 per 40
+			pop_ethic_materialist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_spiritualist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+			owner = { is_spiritualist = no }
+		}
+		modifier = {
+			job_culture_worker_add = 1
+			job_culture_worker_per_pop = 0.025 # 1 per 40
+			pop_ethic_spiritualist_attraction_mult = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+			owner = { is_spiritualist = yes }
+		}
+		modifier = {
+			job_priest_add = 1
+			job_priest_per_pop = 0.025 # 1 per 40
+			pop_ethic_spiritualist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#####################################
+##### MEC:EGM - Unique Deposits #####
+#####################################
+
+
+### Argos Rho
+## Hydra
+# Varmalus (Hardy Life)
+d_mec_eg_varmalus_life = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Armstrong Nebula
+## Gagarin
+# Junthor (Ancient Obelisk)
+d_mec_eg_junthor_obelisk = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			engineering_research = 2
+			society_research = 2 
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Armstrong Nebula
+## Gagarin
+# Rayingri (Collision Course)
+d_mec_eg_rayingri_collision = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Armstrong Nebula
+## Hong
+# Pomal (Shallow Seas)
+d_mec_eg_pomal_seas = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Armstrong Nebula
+## Hong
+# Casbin (Pre-Garden World)
+d_mec_eg_casbin_pregarden = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Artemis Tau
+## Macedon
+# Patavig (Rich Ammonia Seas)
+d_mec_eg_patavig_seas = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 3
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Artemis Tau
+## Knosses
+# Armeni (Alien Crypts)
+d_mec_eg_armeni_crypts = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 3
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Attican Beta
+## Hercules
+# Syided (Stunning Auroras)
+d_mec_eg_syided_auroras = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 2
+			physics_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Attican Beta
+## Theseus
+# Quana Anomaly (Shattered Mines)
+d_mec_eg_quana_ruins = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+####### OR 
+
+### Attican Beta
+## Theseus
+# Quana Anomaly (Shattered Mines)
+d_mec_eg_quana_mines = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 4
+		}
+	}
+	station = shipclass_mining_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Caleston Rift
+## Solveig
+# Solveig (Birth of a Red Giant)
+d_mec_eg_solveig_redgiant = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			energy = 4
+			physics_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Gemini Sigma
+## Han
+# Mavigon (Rudimentary Life)
+d_mec_eg_mavigon_life = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Gemini Sigma
+## Han
+# Farcrothu (Sculpted Moons)
+d_mec_eg_farcrothu_moons = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+		
+	planet_modifier = {
+		trade_value_add = 3
+	}
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Hades Gamma
+## Antaeus
+# Ploba (Impossible Structures) 
+d_mec_eg_ploba_structures = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			engineering_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Hades Gamma
+## Antaeus
+# Chohe (Hardy Lifeforms) 
+d_mec_eg_chohe_life = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Hades Nexus
+## Hekate
+# Bothros (Mass Extinction)
+d_mec_eg_bothros_extinction = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Hades Nexus
+## Sheol
+# Gei Hinnom (Prothean Burial Ground) 
+#d_mec_eg_geihinnom_graves = {
+#	resources = {
+#		category = orbital_research_deposits
+#		produces = {
+#			society_research = 8
+#		}
+#	}
+#	station = shipclass_research_station 
+#	is_for_colonizable = no
+#	
+#	potential = { always = no }
+#	drop_weight = {	weight = 0 }
+#}
+
+## OR
+
+### Hades Nexus
+## Sheol
+# Gei Hinnom (Prothean Burial Ground) 
+#d_mec_eg_geihinnom_mines = {
+#	station = shipclass_mining_station
+#	is_for_colonizable = no
+#	
+#	resources = {
+#		category = orbital_mining_deposits
+#		produces = {
+#			minerals = 4
+#		}
+#	}
+#
+#	planet_modifier = {
+#		trade_value_add = 6
+#	}
+#	
+#	potential = { always = no }
+#	drop_weight = { weight = 0 }
+#}
+
+################################################################################################################################################################################################
+
+### Hourglass Nebula
+## Ploitari
+# Zanethu (Post-Garden World)
+d_mec_eg_zanethu_minerals = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			minerals = 4
+		}
+	}
+	station = shipclass_mining_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Hawking Eta
+## Schwarzschild
+# Etamis (Mass Extinction)
+d_mec_eg_etamis_extinction = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Ismar Frontier
+## Aquilla
+# Vecchio (Alien Gravesite) 
+d_mec_eg_vecchio_graves = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Ismar Frontier
+## Elysta
+# Hesano (Prothean Ship)
+d_mec_eg_hesano_ship = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 2
+			engineering_research = 2 
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Rosetta Nebula
+## Enoch
+# Joab (Mass Extinction) 
+d_mec_eg_joab_extinction = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+### Rosetta Nebula
+## Phi Clio
+# Cyllene (Abandoned Stations) 
+d_mec_eg_cyllene_stations = {
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			energy = 4
+		}
+	}
+	station = shipclass_mining_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Styx Theta
+## Acheron
+#Altahe (Shared Atmosphere)
+d_mec_eg_altahe_atmosphere = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 2
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### The Strike Abyssal
+## Thal
+#Sarait (Atmospheric Switching)
+d_mec_eg_sarait_atmosphere = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 2
+			society_research = 2 
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+################################################################################################################################################################################################
+
+### Vallhallan Threshold
+## Micah
+#Israfil (Impossible Life)
+d_mec_eg_israfil_life = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 3
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+####### OR 
+
+### Vallhallan Threshold
+## Micah
+#Israfil (Impossible Life)
+d_mec_eg_israfil_eezo = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+		
+	planet_modifier = {
+		trade_value_add = 8
+	}
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
 
 ###############################################
 ##### BEYOND THE RELAYS - Unique Deposits #####
