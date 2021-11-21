@@ -1,0 +1,663 @@
+####################
+##### CERBERUS #####
+####################
+
+#####HORSE HEAD NEBULA#####
+
+sys_sandbox_anadius_init = {
+    name = "Anadius"
+    class = "sc_m_giant"
+	flags = { attican_traverse_system horse_head_nebula_system anadius_system empire_home_system btr_cerberus_system custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = cerberus_empire } 
+			save_global_event_target_as = cerberus_empire
+		}	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
+
+	planet = {
+		name = "Anadius"
+        class = "pc_m_giant_star"
+        orbit_distance = 0
+        size = 50
+    }
+
+	planet = {
+		name = "Cronos Station"
+		class = pc_habitat
+		orbit_distance = 122
+		orbit_angle = 215
+		size = 12
+		has_ring = no
+		entity = cerberus_cronos_01_game_entity
+		starting_planet = yes
+		deposit_blockers = none
+		modifiers = none
+		flags = { cronos_station pd_ignore } 
+
+		init_effect = {
+			prevent_anomaly = yes
+			set_global_flag = cronos_station_spawned
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = cerberus_empire } } }
+				create_country = {
+					name = "Cerberus"
+					ship_prefix = "CSV"
+					type = default
+					origin = "origin_cerberus"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_criminal_heritage" civic = "civic_ruthless_competition" }
+					authority = auth_corporate
+					name_list = "btr_cerberus"
+					ethos = { ethic = "ethic_fanatic_xenophobe" ethic = "ethic_militarist" }
+					species = event_target:humanSpecies
+					flag = {
+						icon={
+							category="masseffect"
+							file="Cerberus 2.dds"
+						}
+						background={
+							category="backgrounds"
+							file="v.dds"
+						}
+						colors={
+							"orange"
+							"black"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = reptilian_01
+						set_country_flag = cerberus_empire
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = cerberus_empire
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = cerberus_empire }
+				save_global_event_target_as = cerberus_empire
+				species = { save_global_event_target_as = humanSpecies }
+			}
+			give_technology = {
+				tech = tech_hydroponics
+				message = no
+			}
+			set_planet_flag = megastructure
+			set_planet_flag = habitat
+			set_owner = event_target:cerberus_empire
+			generate_btr_start_deposits_and_blockers = yes
+			generate_cerberus_cronos_buildings_and_districts = yes
+			generate_cerb_cronos_pops = yes
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
+			set_name = "Cronos Station"
+		}
+	}	
+}
+
+sys_sandbox_lazarus_init = {
+	name = "Lazarus"
+	class = sc_deep_space
+	max_instances = 1
+	flags = { attican_traverse_system horse_head_nebula_system lazarus_system btr_system sandbox_map  custom_system }
+	init_effect = { 
+	generate_home_system_resources = yes
+	}
+
+	planet = {
+		class = pc_invisible_star
+		size = 0
+		orbit_distance = 0
+	}	
+
+	change_orbit = 75
+
+	planet = {
+		name = "Lazarus Station"
+		class = pc_lazarus_station
+		size = 3
+		orbit_distance = 0
+		flags = { lazarus_station pd_ignore }
+		init_effect = {
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor	
+		}
+	}
+}
+
+#412-75 L
+sys_sandbox_41275l_init = {
+	name = "412-75 L"
+	class = sc_m_hyper
+	max_instances = 1
+	flags = { attican_traverse_system horse_head_nebula_system 41275l_system btr_system sandbox_map  custom_system }
+	init_effect = { 
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "412-75 L"
+		class = pc_m_hyper_star
+		size = 40
+		orbit_distance = 0
+	}	
+
+	planet = {
+		name = "Minuteman Station"
+		class = pc_minuteman_station
+		size = 6
+		orbit_distance = 100
+		flags = { minuteman_station pd_ignore }
+		init_effect = {
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
+		}
+	}
+
+	planet = {
+        name = "412-75 L-I"
+        class = "pc_gas_giant"
+        orbit_distance = 150
+        orbit_angle = 64
+        has_ring = no
+		size = 26
+		flags = { 41275li_planet pd_ignore }
+    }
+}
+
+sys_sandbox_lv426_init = {
+	name = "LV-426"
+	class = sc_k_giant
+	max_instances = 1
+	flags = { attican_traverse_system horse_head_nebula_system lv426_system btr_system sandbox_map  custom_system }
+	init_effect = { 
+	generate_home_system_resources = yes
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 105
+	}
+
+	planet = {
+		name = "LV-426"
+		class = pc_k_giant_star
+		size = 40
+		orbit_distance = 0
+	}	
+
+	planet = {
+        name = "LV-426 I"
+        class = pc_hadesert
+        orbit_distance = 75
+        orbit_angle = 64
+        has_ring = no
+		size = 17
+		flags = { lv426i_planet pd_ignore }
+    }
+
+	planet = {
+		name = "The Barn"
+		class = pc_the_barn_station
+		size = 6
+		orbit_distance = 30
+		flags = { thebarn_station pd_ignore }
+		#entity = 
+		init_effect = {
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor
+		}
+	}
+
+	planet = {
+        name = "LV-426 II"
+        class = pc_barren
+        orbit_distance = 65
+        orbit_angle = 64
+        has_ring = no
+		size = 4
+		flags = { lv426ii_planet pd_ignore }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "horseheadnebula_argosrho_massrelay" 
+			name = "Horse Head 2 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
+	}
+}
+
+
+##### NUBIAN EXPANSE #####
+
+sys_sandbox_dakka_init = {
+    name = "Dakka"
+    class = "sc_g"
+	flags = { attican_traverse_system nubian_expanse_system dakka_system btr_system sandbox_map  custom_system mercenary_home_system }
+	init_effect = { 	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1	
+		
+    planet = {
+		name = "Dakka"
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 30
+		flags = { dakka_star }
+	}
+
+    planet = {
+        name = "Bannik"
+        class = "pc_hothouse"
+        orbit_distance = 40
+        orbit_angle = 22
+        has_ring = no
+		size = 20
+		flags = { bannik_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Pragia"
+        class = "pc_tropical"
+        orbit_distance = 20
+        orbit_angle = 156
+        has_ring = no
+		flags = { pragia_planet pd_ignore }
+		size = 12
+        init_effect = {
+			generate_btr_start_deposits_and_blockers = yes
+		}
+    }
+
+    planet = {
+        name = "Alkonost"
+        class = "pc_ice_giant"
+        orbit_distance = 40
+        orbit_angle = 64
+        has_ring = no
+		size = 26
+		flags = { alkonost_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Gamayun"
+        class = "pc_gas_giant"
+        orbit_distance = 45
+        orbit_angle = 81
+        has_ring = no
+		size = 33
+		flags = { gamayaun_planet pd_ignore }		
+
+		moon = { 
+			name = "Gamayun a"
+			class = "pc_barren"
+			orbit_angle = 145
+			orbit_distance = 6
+			size = 3
+		}	
+		moon = { 
+			name = "Gamayun b"
+			class = "pc_frozen"
+			orbit_angle = 82
+			orbit_distance = 6
+			size = 2
+		}
+		moon = { 
+			name = "Gamayun c"
+			class = "pc_iron"
+			orbit_angle = 340
+			orbit_distance = 6
+			size = 2
+		}
+		moon = { 
+			name = "Gamayun d"
+			class = "pc_iron"
+			orbit_angle = 1
+			orbit_distance = 8
+			size = 5
+		}
+		moon = { 
+			name = "Gamayun e"
+			class = "pc_asteroid"
+			orbit_angle = 160
+			orbit_distance = 6
+			size = 2
+		}
+		moon = { 
+			name = "Gigula"
+			class = "pc_frozen"
+			orbit_angle = 16
+			orbit_distance = 8
+			size = 4
+			flags = { gigula_planet pd_ignore }
+			init_effect = {
+				prevent_anomaly = yes			
+				clear_deposits = yes
+				clear_planet_modifiers = yes
+				add_deposit = d_hydroponics_bays
+				add_deposit = d_cronos_science_labs
+				add_deposit = d_cronos_reactor
+				add_anomaly = {
+					category = MEC_EG_ANO_GIGULA_1171_CAT			###Gigula Anomaly (Ancient Starship)
+				}
+			}
+		}		
+    }
+
+    planet = {
+        name = "Zirnitra"
+        class = "pc_frozen_desert"
+        orbit_distance = 55
+        orbit_angle = 264
+        has_ring = no
+		size = 6
+		flags = { zirnitra_planet pd_ignore }
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "nubianexpanse_shadowsea_massrelay" 
+			name = "Nubian Expanse 1 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
+	}
+
+}
+
+##### VOYAGER CLUSTER #####
+
+
+sys_sandbox_patella_init = {
+	name = "Patella"
+	class = sc_a
+	max_instances = 1
+	flags = { alliance_space_system voyager_cluster_system patella_system btr_system sandbox_map  custom_system }
+	init_effect = { 
+	generate_home_system_resources = yes
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 250
+	}
+
+	planet = {
+		name = "Patella"
+		class = pc_a_star
+        orbit_distance = 0
+		orbit_angle = 1
+		size = 33
+		has_ring = no
+		flags = { patella_star }
+	}
+
+	planet = {
+		name = "Yavo"
+		class = pc_molten
+        orbit_distance = 90
+		orbit_angle = { min = 1 max = 360 }
+		size = 14
+		has_ring = no
+		flags = { yavo_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_iridium_4
+			add_deposit = d_palladium_4
+
+		}
+	}
+
+	planet = {
+		name = "Eperuis"
+		class = pc_barren
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 15
+		has_ring = no
+		flags = { eperius_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_2
+
+		}
+		moon = {
+			name = "Qiop"
+			class = pc_frozen
+			orbit_distance = 12
+			orbit_angle = { min = 90 max = 270 }
+			size = 2
+		}
+	}
+
+	planet = {
+		name = "Xra"
+		class = pc_tundra
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 19
+		has_ring = no
+		flags = { xra_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_2
+
+		}
+		moon = {
+			name = "Tryon"
+			class = pc_iron
+			orbit_distance = 12
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "Pryon"
+			class = pc_barren_cold
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+	}
+
+	planet = {
+		name = "Grand Luxon"
+		class = pc_gas_giant
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 37
+		change_orbit = 8
+		has_ring = yes
+		flags = { grandluxon_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+
+		}
+	}
+
+	planet = {
+		name = "Vulcan Station"
+		class = pc_vulcan_station
+        orbit_distance = 40
+		orbit_angle = { min = 1 max = 360 }
+		size = 4
+		has_ring = no
+		flags = { vulcan_station pd_ignore }
+		init_effect = {
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor			
+		}
+	}
+
+	planet = {
+		name = "Second Luxon"
+		class = pc_ice_giant
+        orbit_distance = 35
+		orbit_angle = { min = 1 max = 360 }
+		size = 27
+		change_orbit = 5
+		has_ring = no
+		flags = { secondluxon_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_1
+
+		}
+		moon = {
+			name = "SL-1"
+			class = pc_frozen
+			orbit_distance = 12
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-2"
+			class = pc_frozen
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 1
+		}
+		moon = {
+			name = "SL-3"
+			class = pc_barren_cold
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+		moon = {
+			name = "SL-4"
+			class = pc_iron
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-5"
+			class = pc_cryovolcanic
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+		moon = {
+			name = "SL-6"
+			class = pc_hydrocarbon
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-7"
+			class = pc_frozen
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 2
+		}
+		moon = {
+			name = "SL-8"
+			class = pc_ice_asteroid
+			orbit_distance = 6
+			orbit_angle = { min = 1 max = 360 }
+			size = 3
+		}
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "voyagercluster_armstrongnebula_massrelay" 
+			name = "Voyager 3 Relay"
+			orbit_angle = 45
+			orbit_distance = 200
+			
+		} 
+	}
+}
+
+#####SHADOW SEA#####
+
+
+sys_sandbox_netheril_init = {
+    name = "Netheril"
+    class = sc_k
+	max_instances = 1
+	flags = { attican_traverse_system shadow_sea_system netheril_system btr_system sandbox_map  custom_system }
+	init_effect = { 
+	generate_home_system_resources = yes
+	}
+		
+    planet = {
+		name = "Netheril"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 33
+		flags = { netheril_star }	
+
+    }	
+
+	planet = {
+		name = "Landeth"
+		class = pc_volcanic
+        orbit_distance = 30
+		size = 16
+		flags = { netheril_planet pd_ignore }	
+		init_effect = {
+			add_deposit = d_iridium_1
+			add_deposit = d_palladium_1
+			add_deposit = d_platinum_3
+
+		}
+	}
+
+	planet = {
+		name = "Thermoples Station"
+		class = pc_thermoples_station
+        orbit_distance = 70
+		orbit_angle = { min = 1 max = 360 }
+		size = 4
+		has_ring = no
+		flags = { thermoples_station pd_ignore }
+		init_effect = {
+			add_deposit = d_hydroponics_bays
+			add_deposit = d_cronos_science_labs
+			add_deposit = d_cronos_reactor			
+		}
+	}
+
+	planet = {
+		name = "Oreme"
+		class = pc_hothouse
+        orbit_distance = 60
+		size = 14
+		flags = { oreme_planet pd_ignore }	
+	}	
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "shadowsea_nubianexpanse_massrelay" 
+			name = "Shadow Sea 4 Relay"
+			orbit_angle = 90
+			orbit_distance = 125
+			
+		} 
+	}	
+}

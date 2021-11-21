@@ -1,6 +1,30 @@
 
 namespace = btr_setup
 
+country_event = {
+	id = btr_setup.01 
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					galaxy_size = "btr_hybrid_400"
+				}
+			}
+			set_global_flag = playing_hybrid
+		}
+		if = {
+			limit = { 
+				OR = {
+					galaxy_size = "btr_sandbox_400"
+				}
+			}
+			set_global_flag = playing_sandbox
+		}
+	} 
+}
 
 # Add starting resources
 country_event = {
@@ -11,7 +35,19 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
+				has_global_flag = playing_sandbox
+			}
+			add_resource = { energy = 200	}
+			add_resource = { minerals = 200 }
+			add_resource = { alloys = 200	}
+			add_resource = { influence = 50 }
+			add_resource = { food = 200	}
+			add_resource = { consumer_goods = 200 }
+		}
+		if = {
+			limit = {
 				has_country_flag = asari_republics
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 3500	}
 			add_resource = { minerals = 2000 }
@@ -23,6 +59,7 @@ country_event = {
 		if = {
 			limit = {	
 				has_country_flag = salarian_union
+				has_global_flag = playing_hybrid
 			}	
 			add_resource = { energy = 2600	}
 			add_resource = { minerals = 1480 }
@@ -34,6 +71,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = turian_hierarchy
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 2750	}
 			add_resource = { minerals = 1650 }
@@ -45,6 +83,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = courts_of_dekuuna
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1900	}
 			add_resource = { minerals = 1200 }
@@ -56,6 +95,7 @@ country_event = {
 		if = {
 			limit = {	
 				has_country_flag = illuminated_primacy
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1850	}
 			add_resource = { minerals = 1240 }
@@ -67,6 +107,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = systems_alliance
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 450 }
@@ -78,6 +119,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = vol_protectorate
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 3100	}
 			add_resource = { minerals = 1240 }
@@ -89,6 +131,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = batarian_hegemony	
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1200	}
 			add_resource = { minerals = 600 }
@@ -100,6 +143,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = remnants_of_rakhana	
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 300	}
 			add_resource = { minerals = 200 }
@@ -110,7 +154,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = krogan_chiefdom
+				has_country_flag = aralakh_kahmat
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 400	}
 			add_resource = { minerals = 200 }
@@ -122,6 +167,7 @@ country_event = {
 		if = {
 			limit = { 
 				has_country_flag = lystheni_order
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 400 }
@@ -133,6 +179,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = migrant_fleet
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 700	}
 			add_resource = { minerals = 320 }
@@ -144,6 +191,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = lystheni_order
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 860	}
 			add_resource = { minerals = 350 }
@@ -155,6 +203,7 @@ country_event = {
 		if = {
 			limit = {	
 				has_country_flag = parnack_regime_player
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 400	}
 			add_resource = { minerals = 200 }
@@ -166,6 +215,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = raloi_republic
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 450	}
 			add_resource = { minerals = 200 }
@@ -177,6 +227,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = vorcha_clandom
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 620	}
 			add_resource = { minerals = 250 }
@@ -188,6 +239,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = geth_consensus
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 2800	}
 			add_resource = { minerals = 1050 }
@@ -197,6 +249,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = rachni_hive
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 350 }
@@ -207,6 +260,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = gothones_remnant
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 950	}
 			add_resource = { minerals = 420 }
@@ -218,6 +272,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = illium_corporate_interests
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1900	}
 			add_resource = { minerals = 710 }
@@ -229,6 +284,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = cerberus_empire
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 350 }
@@ -239,7 +295,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = followers_of_nazara
+				has_country_flag = disciples_of_nazara
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 2700	}
 			add_resource = { minerals = 1050 }
@@ -260,6 +317,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = noveria_development_corporation
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 500 }
@@ -271,6 +329,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = omega_empire
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 600 }
@@ -282,6 +341,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = relic_mineral_works
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 2500 }
@@ -293,6 +353,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = asteria_agriculture
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 500 }
@@ -304,6 +365,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = united_anhur_corporations
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 2500 }
@@ -315,6 +377,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = wrill_mining_consortium
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 2500 }
@@ -326,6 +389,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = collectors_empire
+				has_global_flag = playing_hybrid
 			}
 			add_resource = { energy = 4000	}
 			add_resource = { minerals = 1330 }
@@ -393,6 +457,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = mec_asari_origin_thessia
 				any_system_within_border = {
 					has_star_flag = parnitha_system
@@ -619,6 +684,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_turian_hierarchy
 				any_system_within_border = {
 					has_star_flag = trebia_system
@@ -905,6 +971,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_salarian_union
 				any_system_within_border = {
 					has_star_flag = pranas_system
@@ -1177,6 +1244,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_courts_of_dekuuna
 				any_system_within_border = {
 					has_star_flag = phontes_system
@@ -1280,6 +1348,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_illuminated_primacy
 				any_system_within_border = {
 					has_star_flag = kanala_system
@@ -1373,6 +1442,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_systems_alliance
 				any_system_within_border = {
 					has_star_flag = sol_system
@@ -1603,6 +1673,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_vol_protectorate
 				any_system_within_border = {
 					has_star_flag = aru_system
@@ -1781,6 +1852,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_batarian_hegemony
 				any_system_within_border = {
 					has_star_flag = harsa_system
@@ -1998,7 +2070,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_origin = origin_krogan_chiefdom
+				has_global_flag = playing_hybrid
+				has_origin = origin_aralakh_kahmat
 				any_system_within_border = {
 					has_star_flag = aralakh_system
 				}
@@ -2018,7 +2091,7 @@ country_event = {
 					module = shipyard
 					module = trading_hub
 					building = hydroponics_bay
-					owner = event_target:krogan_chiefdom
+					owner = event_target:aralakh_kahmat
 				}
 				btr_generate_stations = yes
 			}
@@ -2028,7 +2101,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:krogan_chiefdom
+					owner = event_target:aralakh_kahmat
 				}
 				btr_generate_stations = yes
 			}
@@ -2038,13 +2111,14 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:krogan_chiefdom
+					owner = event_target:aralakh_kahmat
 				}
 				btr_generate_stations = yes
 			}
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_sedriicae_collective
 				any_system_within_border = {
 					has_star_flag = nosikae_system
@@ -2158,6 +2232,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_geth_consensus
 				any_system_within_border = {
 					has_star_flag = tikkun_system
@@ -2295,6 +2370,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = origin_gothones_remnant
 				any_system_within_border = {
 					has_star_flag = ultio_system
@@ -2358,6 +2434,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_origin = mec_asari_origin_illium
 				any_system_within_border = {
 					has_star_flag = tasale_system
@@ -2464,6 +2541,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = cerberus_empire
 				any_system_within_border = {
 					has_star_flag = anadius_system
@@ -2600,7 +2678,8 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_flag = followers_of_nazara
+				has_global_flag = playing_hybrid
+				has_country_flag = disciples_of_nazara
 				any_system_within_border = {
 					has_star_flag = theseaofstorms_system
 				}
@@ -2620,7 +2699,7 @@ country_event = {
 					module = shipyard
 					module = hangar_bay
 					building = fleet_academy
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2633,7 +2712,7 @@ country_event = {
 					module = shipyard
 					module = hangar_bay
 					building = fleet_academy
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2646,7 +2725,7 @@ country_event = {
 					module = shipyard
 					module = hangar_bay
 					building = crew_quarters
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2656,7 +2735,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2666,7 +2745,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2676,7 +2755,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2686,7 +2765,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2696,7 +2775,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2706,7 +2785,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2716,7 +2795,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2726,7 +2805,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2736,7 +2815,7 @@ country_event = {
 				}
 				create_starbase = {
 					size = starbase_outpost
-					owner = event_target:followers_of_nazara
+					owner = event_target:disciples_of_nazara
 				}
 				btr_generate_stations = yes
 			}
@@ -2761,6 +2840,7 @@ country_event = {
 		# }
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = lystheni_order
 				any_system_within_border = {
 					has_star_flag = taesin_system
@@ -2801,6 +2881,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = omega_empire
 				any_system_within_border = {
 					has_star_flag = sahrabarik_system
@@ -2864,6 +2945,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = noveria_development_corporation
 				any_system_within_border = {
 					has_star_flag = pax_system
@@ -2891,6 +2973,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = wrill_mining_consortium
 				any_system_within_border = {
 					has_star_flag = malgus_system
@@ -2918,6 +3001,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = relic_mineral_works
 				any_system_within_border = {
 					has_star_flag = relic_system
@@ -2945,6 +3029,7 @@ country_event = {
 		}	
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = united_anhur_corporations
 				any_system_within_border = {
 					has_star_flag = amun_system
@@ -2972,6 +3057,7 @@ country_event = {
 		}	
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = asteria_agriculture
 				any_system_within_border = {
 					has_star_flag = hekate_system
@@ -2993,6 +3079,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = raloi_republic
 				any_system_within_border = {
 					has_star_flag = azedes_system
@@ -3014,6 +3101,7 @@ country_event = {
 		}	
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = rachni_hive
 				any_system_within_border = {
 					has_star_flag = maskimxul_system
@@ -3035,6 +3123,7 @@ country_event = {
 		}
 		if = {
 			limit = {
+				has_global_flag = playing_hybrid
 				has_country_flag = collectors_empire
 				any_system_within_border = {
 					has_star_flag = tartarus_system
@@ -3071,7 +3160,7 @@ country_event = {
     if = {
       limit = {
         OR = {
-          has_global_flag = asari_homeworld_spawned
+			has_global_flag = playing_hybrid
         }
       }
       #Set Contacts
@@ -3085,7 +3174,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3109,7 +3198,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3133,7 +3222,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3157,7 +3246,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3181,7 +3270,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3205,7 +3294,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3229,7 +3318,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3253,7 +3342,7 @@ country_event = {
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3277,7 +3366,7 @@ country_event = {
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3301,7 +3390,7 @@ country_event = {
         establish_communications_no_message = event_target:vol_protectorate
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3315,7 +3404,7 @@ country_event = {
         establish_communications_no_message = event_target:relic_mineral_works
         establish_communications_no_message = event_target:asteria_agriculture
       }
-	  event_target:krogan_chiefdom = {
+	  event_target:aralakh_kahmat = {
         establish_communications_no_message = event_target:asari_republics
         establish_communications_no_message = event_target:salarian_union
         establish_communications_no_message = event_target:turian_hierarchy
@@ -3350,7 +3439,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
@@ -3374,7 +3463,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:migrant_fleet
         establish_communications_no_message = event_target:gothones_remnant
@@ -3398,7 +3487,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:gothones_remnant
@@ -3422,7 +3511,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3446,7 +3535,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3470,7 +3559,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3494,7 +3583,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3518,7 +3607,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3542,7 +3631,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3566,7 +3655,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3590,7 +3679,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3614,7 +3703,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3638,7 +3727,7 @@ country_event = {
         establish_communications_no_message = event_target:batarian_hegemony
         establish_communications_no_message = event_target:cerberus_empire
         establish_communications_no_message = event_target:remnants_of_rakhana
-        establish_communications_no_message = event_target:krogan_chiefdom
+        establish_communications_no_message = event_target:aralakh_kahmat
         establish_communications_no_message = event_target:lystheni_order
         establish_communications_no_message = event_target:omega_empire
         establish_communications_no_message = event_target:migrant_fleet
@@ -3652,9 +3741,9 @@ country_event = {
         establish_communications_no_message = event_target:relic_mineral_works
 	  }
 	  event_target:geth_consensus = {
-        establish_communications_no_message = event_target:followers_of_nazara
+        establish_communications_no_message = event_target:disciples_of_nazara
 	  }
-	  event_target:followers_of_nazara = {
+	  event_target:disciples_of_nazara = {
         establish_communications_no_message = event_target:geth_consensus
 	  }
 	}  	
@@ -3698,14 +3787,14 @@ country_event = {
 
 	immediate = {
 		if = {
-			limit = { exists = event_target:vol_protectorate exists = event_target:turian_hierarchy }
+			limit = { has_global_flag = playing_hybrid exists = event_target:vol_protectorate exists = event_target:turian_hierarchy }
 			event_target:vol_protectorate = {
 				establish_communications_no_message = event_target:turian_hierarchy
 				set_subject_of = { who = event_target:turian_hierarchy subject_type = special_protectorate }
 			}
 		}
 		if = {
-			limit = { exists = event_target:asteria_agriculture exists = event_target:asari_republics }
+			limit = { has_global_flag = playing_hybrid exists = event_target:asteria_agriculture exists = event_target:asari_republics }
 			event_target:asteria_agriculture = {
 				establish_communications_no_message = event_target:asari_republics
 				set_subject_of = { who = event_target:asari_republics subject_type = subsidiary }				
@@ -3872,6 +3961,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = omega_empire
 			}
 			every_owned_pop_species = {
@@ -3886,6 +3976,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = citadel_council
 			}
 			every_owned_pop_species = {
@@ -3900,6 +3991,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = noveria_development_corporation
 			}
 			every_owned_pop_species = {
@@ -3914,6 +4006,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = wrill_mining_consortium
 			}
 			every_owned_pop_species = {
@@ -3928,6 +4021,7 @@ country_event = {
 		}		
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = relic_mineral_works
 			}
 			every_owned_pop_species = {
@@ -3942,6 +4036,7 @@ country_event = {
 		}			
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = united_anhur_corporations
 			}
 			every_owned_pop_species = {
@@ -3956,6 +4051,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = illuminated_primacy
 			}
 			every_owned_pop_species = {
@@ -3970,6 +4066,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
+				has_global_flag = playing_hybrid
 				has_country_flag = illium_corporate_interests
 			}
 			every_owned_pop_species = {
@@ -4110,9 +4207,9 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = krogan_chiefdom
+					has_country_flag = aralakh_kahmat
 				}
-				set_name = "Krogan Chiefdom"
+				set_name = "Aralakh Kahmat"
 			}
 		}
 		if = {
@@ -4308,9 +4405,9 @@ country_event = {
 			}
 			every_country = {
 				limit = {
-					has_country_flag = followers_of_nazara
+					has_country_flag = disciples_of_nazara
 				}
-				set_name = "Followers of Nazara"
+				set_name = "Disciples of Nazara"
 			}
 		}
 		if = {

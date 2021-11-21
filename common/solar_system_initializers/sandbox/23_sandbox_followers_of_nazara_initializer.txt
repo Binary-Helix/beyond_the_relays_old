@@ -4,12 +4,12 @@
 
 #####THE PHOENIX MASSING#####
 
-sys_theseaofstorms_init = {
+sys_sandbox_theseaofstorms_init = {
     name = "The Sea of Storms"
     class = sc_deep_space
 	max_instances = 1
 
-	flags = { terminus_system phoenix_massing_system theseaofstorms_system btr_system custom_system }
+	flags = { terminus_system phoenix_massing_system theseaofstorms_system btr_system sandbox_map  custom_system }
 	init_effect = { 
 		random_country = { 
 			limit = { has_country_flag = disciples_of_nazara } 
@@ -44,7 +44,7 @@ sys_theseaofstorms_init = {
 				limit = { NOT = { any_country = { has_country_flag = disciples_of_nazara } } }
 				create_country = {
 					name = "Disciples of Nazara"
-					ship_prefix = "PRESCRIPTED_ship_prefix_disciples_of_nazara"
+					ship_prefix = ""
 					type = default
               		origin = "origin_disciples_of_nazara"
 					ignore_initial_colony_error = yes
@@ -106,7 +106,7 @@ sys_theseaofstorms_init = {
 
 ##### Xosar Verge #####
 
-sys_haelazi_init = {
+sys_sandbox_haelazi_init = {
     name = "Haelazi"
     class = "sc_k"
 	flags = { terminus_system xosar_verge_system haelazi_system empire_home_system custom_system }	
@@ -161,12 +161,12 @@ sys_haelazi_init = {
 	}
 }
 
-sys_xelazi_init = {
+sys_sandbox_xelazi_init = {
 	name = "Xelasi"
 	class = sc_a_super
 	max_instances = 1
 
-	flags = { terminus_system xosar_verge_system xelazi_system btr_system custom_system }
+	flags = { terminus_system xosar_verge_system xelazi_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -252,12 +252,12 @@ sys_xelazi_init = {
 	}
 }
 
-sys_sesost_init = {
+sys_sandbox_sesost_init = {
 	name = "Sesost"
 	class = sc_m_giant
 	max_instances = 1
 
-	flags = { terminus_system xosar_verge_system sesost_system btr_system custom_system }
+	flags = { terminus_system xosar_verge_system sesost_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -285,27 +285,15 @@ sys_sesost_init = {
         orbit_angle = 119
         has_ring = no
 		size = 6
-		init_effect = {
-			set_owner = event_target:disciples_of_nazara
-			create_colony = {
-				owner = event_target:disciples_of_nazara
-				species = event_target:gethSpecies
-				ethos = owner
-			}
-			generate_her_colony_pops = yes
-			generate_her_major_colony_buildings = yes	
-			
-			set_name = "Saeto'Shar"
-		}
     }
 }
 
-sys_yassu_init = {
+sys_sandbox_yassu_init = {
 	name = "Yassu"
 	class = sc_g
 	max_instances = 1
 
-	flags = { terminus_system xosar_verge_system yassu_system btr_system custom_system }
+	flags = { terminus_system xosar_verge_system yassu_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -362,12 +350,12 @@ sys_yassu_init = {
 	}
 }
 
-sys_yeelixeeme_init = {
+sys_sandbox_yeelixeeme_init = {
 	name = "Yeeli'Xeeme"
 	class = sc_m
 	max_instances = 1
 
-	flags = { terminus_system xosar_verge_system yeelixeeme_system btr_system custom_system }
+	flags = { terminus_system xosar_verge_system yeelixeeme_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -416,12 +404,12 @@ sys_yeelixeeme_init = {
     }
 }
 
-sys_seefisgaca_init = {
+sys_sandbox_seefisgaca_init = {
 	name = "Seefis'Gaca"
 	class = sc_k
 	max_instances = 1
 
-	flags = { terminus_system xosar_verge_system seefisgaca_system btr_system custom_system }
+	flags = { terminus_system xosar_verge_system seefisgaca_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -458,18 +446,6 @@ sys_seefisgaca_init = {
         orbit_angle = 119
         has_ring = no
 		size = 17
-		init_effect = {
-			set_owner = event_target:disciples_of_nazara
-			create_colony = {
-				owner = event_target:disciples_of_nazara
-				species = event_target:gethSpecies
-				ethos = owner
-			}
-			generate_her_colony_pops = yes
-			generate_her_major_colony_buildings = yes	
-			
-			set_name = "Rastrom"
-		}
     }
 	
 	planet = {
@@ -528,12 +504,12 @@ sys_seefisgaca_init = {
 }
 
 #####CASSIOPEIA CLUSTER#####
-sys_keelulon_init = {
+sys_sandbox_keelulon_init = {
     name = "Kee-Lulon"
     class = sc_binary_3
 	max_instances = 1
 
-	flags = { terminus_system cassiopeia_cluster_system keelulon_system btr_system custom_system }
+	flags = { terminus_system cassiopeia_cluster_system keelulon_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -589,12 +565,12 @@ sys_keelulon_init = {
 	}
 }
 
-sys_raadarum_init = {
+sys_sandbox_raadarum_init = {
     name = "Raadarum"
     class = sc_b_super
 	max_instances = 1
 
-	flags = { terminus_system cassiopeia_cluster_system raadarum_system btr_system custom_system }
+	flags = { terminus_system cassiopeia_cluster_system raadarum_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -664,12 +640,12 @@ sys_raadarum_init = {
 	}
 }	
 
-sys_jaavo_init = {
+sys_sandbox_jaavo_init = {
     name = "Jaavo"
     class = sc_g
 	max_instances = 1
 
-	flags = { terminus_system cassiopeia_cluster_system jaavo_system btr_system custom_system }
+	flags = { terminus_system cassiopeia_cluster_system jaavo_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -697,18 +673,6 @@ sys_jaavo_init = {
         orbit_angle = 146
         has_ring = no
 		size = 22
-		init_effect = {
-			set_owner = event_target:disciples_of_nazara
-			create_colony = {
-				owner = event_target:disciples_of_nazara
-				species = event_target:gethSpecies
-				ethos = owner
-			}
-			generate_her_colony_pops = yes
-			generate_her_major_colony_buildings = yes
-			
-			set_name = "Gaezal'Jenal"
-		}
     }
 
 	planet = {
@@ -730,12 +694,12 @@ sys_jaavo_init = {
     }
 }
 
-sys_ruvum_init = {
+sys_sandbox_ruvum_init = {
     name = "Ruvum"
     class = sc_d
 	max_instances = 1
 
-	flags = { terminus_system cassiopeia_cluster_system ruvum_system btr_system custom_system }
+	flags = { terminus_system cassiopeia_cluster_system ruvum_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}
@@ -785,12 +749,12 @@ sys_ruvum_init = {
 }
 
 
-sys_gaalozozh_init = {
+sys_sandbox_gaalozozh_init = {
     name = "Gaalo-Zozh"
     class = sc_binary_b_t
 	max_instances = 1
 
-	flags = { terminus_system cassiopeia_cluster_system gaalozozh_system btr_system custom_system }
+	flags = { terminus_system cassiopeia_cluster_system gaalozozh_system btr_system sandbox_map  custom_system }
 	init_effect = {
 		generate_home_system_resources = yes
 	}

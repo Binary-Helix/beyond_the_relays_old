@@ -4,10 +4,10 @@
 
 ##### KROGAN DMZ #####
 
-sys_aralakh_init = {
+sys_sandbox_aralakh_init = {
     name = "Aralakh"
     class = "sc_f"
-	flags = { inner_council_system krogan_dmz_system aralakh_system btr_system custom_system empire_home_system }
+	flags = { inner_council_system krogan_dmz_system aralakh_system btr_system sandbox_map  custom_system empire_home_system }
 	
 	init_effect = { 
 		random_country = { 
@@ -92,7 +92,7 @@ sys_aralakh_init = {
 				  last_created_species = { save_global_event_target_as = kroganSpecies }
 				create_country = {
 					name = "Aralakh Kahmat"
-					ship_prefix = "PRESCRIPTED_ship_prefix_aralakh_kahmat"
+					ship_prefix = ""
 					type = default
 					origin = "origin_aralakh_kahmat"
 					ignore_initial_colony_error = yes

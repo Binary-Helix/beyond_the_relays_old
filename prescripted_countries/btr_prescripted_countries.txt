@@ -840,24 +840,24 @@ gothones_remnant={
 	ignore_portrait_duplication=no
 }
 
-# Krogan Chiefdom
-krogan_chiefdom={
-    name="NAME_krogan_chiefdom"
+# Aralakh Kahmat
+aralakh_kahmat={
+    name="NAME_aralakh_kahmat"
     name_list="btr_krogan"
 	portrait="krogan"
-    adjective="PRESCRIPTED_adjective_krogan_chiefdom"
-    ship_prefix="PRESCRIPTED_ship_prefix_krogan_chiefdom"
-    species_name = "PRESCRIPTED_species_name_krogan_chiefdom"
-    species_plural = "PRESCRIPTED_species_plural_krogan_chiefdom"	
+    adjective="PRESCRIPTED_adjective_aralakh_kahmat"
+    ship_prefix="PRESCRIPTED_ship_prefix_aralakh_kahmat"
+    species_name = "PRESCRIPTED_species_name_aralakh_kahmat"
+    species_plural = "PRESCRIPTED_species_plural_aralakh_kahmat"	
 	species_class = "KRO"
-    species_adjective = "PRESCRIPTED_species_adjective_krogan_chiefdom"
-    #species_bio="PRESCRIPTED_species_bio_krogan_chiefdom"	
+    species_adjective = "PRESCRIPTED_species_adjective_aralakh_kahmat"
+    #species_bio="PRESCRIPTED_species_bio_aralakh_kahmat"	
 
 	authority="auth_democratic"
 	government="gov_bandit_commune"
 	civics={ civic_btr_krogan_blood_and_ash civic_btr_krogan_clans_of_tuchanka }
 
-	flags={ custom_start_screen krogan_chiefdom btr_empire canon_map hybrid_map sandbox_map }
+	flags={ custom_start_screen aralakh_kahmat btr_empire canon_map hybrid_map sandbox_map }
 
 	ethic="ethic_xenophobe"
 	ethic="ethic_fanatic_militarist"
@@ -868,7 +868,7 @@ krogan_chiefdom={
 	trait="trait_very_strong"
 	trait="trait_slow_learners"
 	
-	origin="origin_krogan_chiefdom"	
+	origin="origin_aralakh_kahmat"	
 
 	planet_name="Tuchanka"
 	planet_class="pc_arid"
@@ -876,7 +876,7 @@ krogan_chiefdom={
 	system_name="Aralakh"
 	initializer="sys_aralakh_init"
 	graphical_culture="reptilian_01"
-	advisor_voice_type = "krogan_chiefdom"
+	advisor_voice_type = "aralakh_kahmat"
 	empire_flag={
 		icon={
 			category="masseffectsilver"
@@ -895,7 +895,7 @@ krogan_chiefdom={
 	}
 	ruler={
 		gender=male
-		name="PRESCRIPTED_ruler_name_krogan_chiefdom"
+		name="PRESCRIPTED_ruler_name_aralakh_kahmat"
 		portrait="krogan_wrex"
 		texture=3
 		hair=0
@@ -1749,21 +1749,21 @@ collectors={
 
 ## Geth Heretics
 
-followers_of_nazara={
-	name="Name_followers_of_nazara"
+disciples_of_nazara={
+	name="Name_disciples_of_nazara"
 	name_list="btr_geth"
 	portrait = "geth"
-	adjective = "PRESCRIPTED_adjective_followers_of_nazara"
-	ship_prefix = "PRESCRIPTED_ship_prefix_name_followers_of_nazara"
-	species_name = "PRESCRIPTED_species_name_followers_of_nazara"
-	species_plural = "PRESCRIPTED_species_plural_followers_of_nazara"
+	adjective = "PRESCRIPTED_adjective_disciples_of_nazara"
+	ship_prefix = "PRESCRIPTED_ship_prefix_name_disciples_of_nazara"
+	species_name = "PRESCRIPTED_species_name_disciples_of_nazara"
+	species_plural = "PRESCRIPTED_species_plural_disciples_of_nazara"
 	species_class = "GTH" 
-	species_adjective = "PRESCRIPTED_species_adjective_followers_of_nazara"
+	species_adjective = "PRESCRIPTED_species_adjective_disciples_of_nazara"
 
 	authority = "auth_machine_intelligence"
 	government = "gov_machine_empire"
 	civics={ "civic_machine_warbots" "civic_machine_terminator" }
-	flags = { custom_start_screen followers_of_nazara btr_empire hybrid_map sandbox_map}
+	flags = { custom_start_screen disciples_of_nazara btr_empire hybrid_map sandbox_map}
 
 	ethic = "ethic_gestalt_consciousness"
 
@@ -1774,7 +1774,7 @@ followers_of_nazara={
 	trait ="trait_robot_high_bandwidth"
 	trait ="trait_robot_durable"
 
-	origin="origin_followers_of_nazara"	
+	origin="origin_disciples_of_nazara"	
 
 	planet_name="Heretic Station"
 	planet_class="pc_heretic_station"
@@ -1801,7 +1801,7 @@ followers_of_nazara={
 	}
 	ruler={
 		gender = male
-		name="PRESCRIPTED_ruler_name_followers_of_nazara"
+		name="PRESCRIPTED_ruler_name_disciples_of_nazara"
 		portrait="geth"
 		texture=0
 		hair=0
