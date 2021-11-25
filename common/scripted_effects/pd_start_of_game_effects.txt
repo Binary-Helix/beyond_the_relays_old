@@ -2366,7 +2366,10 @@ generate_pd_start_deposits_and_blockers = {
 	
 	if = {
 		limit = {
-			is_planet_class = pc_aquatic
+			OR = {
+				is_planet_class = pc_aquatic
+				is_planet_class = pc_aquatic_uw
+			}
 		}
 		
 		# 3 + 3 energy		
@@ -2406,6 +2409,79 @@ generate_pd_start_deposits_and_blockers = {
 		if = { limit = { not = { has_modifier = aquatic } } add_modifier = { modifier = aquatic days = -1 } }
 	}
 
+	if = {
+		limit = {
+			owner = { is_anglers_empire = yes }
+			OR = {
+				is_planet_class = pc_aquatic
+				is_planet_class = pc_aquatic_uw
+			}
+		}
+		while = {
+			limit = { num_districts = { type = district_farming value > 0 } }
+			remove_district = district_farming
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_farming_uncapped
+			}
+		}
+	}
+
+	# Aquatic Paradise Origin
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_aquatic_paradise
+			}
+		}
+		if = {
+			limit = {
+				owner = { is_hive_empire = yes }
+				NOT =  { has_modifier = ocean_paradise_hive }
+			}
+			add_modifier = { modifier = ocean_paradise_hive }
+		}
+		else_if = {
+			limit = {
+				owner = { is_hive_empire = no }
+				NOT =  { has_modifier = ocean_paradise }
+			}
+			add_modifier = { modifier = ocean_paradise }
+		}
+		clear_deposits = yes
+		clear_blockers = yes
+
+		# Food
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+
+		# Minerals
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_submerged_ore_veins
+
+		# Energy
+		add_deposit = d_underwater_vent
+		add_deposit = d_underwater_vent
+		add_deposit = d_underwater_vent
+
+		# Bonus
+		add_deposit = d_crystal_reef
+		random_list = {
+			50 = { add_deposit = d_submerged_ore_veins }
+			50 = { add_deposit = d_underwater_vent }
+		}
+		add_deposit = d_aquatic_trench
+		change_pc = pc_aquatic
+		set_planet_entity = { picture = pc_aquatic_uw } 
+		set_planet_flag = pdaquapicture
+		add_district = district_mining
+	}
 	if = {
 		limit = {
 			is_planet_class = pc_irradiated
