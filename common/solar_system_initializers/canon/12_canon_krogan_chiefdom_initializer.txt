@@ -11,8 +11,8 @@ sys_aralakh_init = {
 	
 	init_effect = { 
 		random_country = { 
-			limit = { has_country_flag = krogan_chiefdom } 
-			save_global_event_target_as = krogan_chiefdom
+			limit = { has_country_flag = aralakh_kahmat } 
+			save_global_event_target_as = aralakh_kahmat
 		}	
 	generate_home_system_resources = yes
 	}
@@ -74,7 +74,7 @@ sys_aralakh_init = {
 			set_global_flag = krogan_homeworld_spawned
 
 			if = {
-				limit = { NOT = { any_country = { has_country_flag = krogan_chiefdom } } }
+				limit = { NOT = { any_country = { has_country_flag = aralakh_kahmat } } }
 				create_species = { 
 					name = "Krogan"
 					class = KRO
@@ -91,10 +91,10 @@ sys_aralakh_init = {
 				  }
 				  last_created_species = { save_global_event_target_as = kroganSpecies }
 				create_country = {
-					name = "Krogan Chiefdom"
-					ship_prefix = "PRESCRIPTED_ship_prefix_krogan_chiefdom"
+					name = "Aralakh Kahmat"
+					ship_prefix = "PRESCRIPTED_ship_prefix_aralakh_kahmat"
 					type = default
-					origin = "origin_krogan_chiefdom"
+					origin = "origin_aralakh_kahmat"
 					ignore_initial_colony_error = yes
 					civics = { civic = "civic_btr_krogan_blood_and_ash" civic = "civic_btr_krogan_clans_of_tuchanka" }
 					authority = auth_democratic
@@ -119,21 +119,21 @@ sys_aralakh_init = {
 					}
 					effect = {
 						set_graphical_culture = reptilian_01
-						set_country_flag = krogan_chiefdom
+						set_country_flag = aralakh_kahmat
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
 						set_country_flag = canon_map
-						save_global_event_target_as = krogan_chiefdom
+						save_global_event_target_as = aralakh_kahmat
 					}
 				}
 			}	
 			set_capital = yes
 			random_country = {
-				limit = { has_country_flag = krogan_chiefdom }
-				save_global_event_target_as = krogan_chiefdom
+				limit = { has_country_flag = aralakh_kahmat }
+				save_global_event_target_as = aralakh_kahmat
 				species = { save_global_event_target_as = kroganSpecies }
 			}
-			set_owner = event_target:krogan_chiefdom
+			set_owner = event_target:aralakh_kahmat
 			generate_btr_start_deposits_and_blockers = yes			
 			generate_kro_tuchanka_capitol_buildings = yes
 			generate_kro_tuchanka_pops = yes

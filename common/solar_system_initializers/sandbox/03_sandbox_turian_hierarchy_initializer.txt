@@ -1,0 +1,1389 @@
+############################
+##### TURIAN HIERARCHY #####
+############################
+
+##### APIEN CREST #####
+
+sys_sandbox_trebia_init = {
+    name = "Trebia"
+    class = "sc_g"
+	flags = { outer_council_system apien_crest_system trebia_system btr_system sandbox_map  custom_system empire_home_system }
+	
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = turian_hierarchy } 
+			save_global_event_target_as = turian_hierarchy
+		}	
+	generate_home_system_resources = yes
+	}
+
+	usage = custom_empire
+	max_instances = 1	
+
+    planet = {
+		name = "Trebia"
+        class = "pc_g_star"
+        orbit_distance = 0
+        size = 25
+		flags = { trebia_star}
+    }
+
+    planet = {
+        name = "Aventen"
+        class = "pc_hothouse"
+        orbit_distance = 75
+        orbit_angle = 11
+        has_ring = no
+        size = 13
+		flags = { aventen_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Caelax"
+        class = "pc_barren"
+        orbit_distance = 80
+        orbit_angle = 350
+        has_ring = no
+        size = 15
+		flags = { aventen_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Palaven"
+        class = "pc_dextro_arid"
+        orbit_distance = 80
+        orbit_angle = 156
+        size = 22
+		has_ring = no		
+		starting_planet = yes
+		flags = { palaven_planet pd_ignore }
+
+		deposit_blockers = none		
+		modifiers = none
+		init_effect = {
+			prevent_anomaly = yes
+			set_global_flag = turian_homeworld_spawned
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = turian_hierarchy } } }
+				create_species = { 
+					name = "Turian"
+					class = TUR
+					portrait = turian
+					#homeworld = THIS 
+					traits = { 
+				  trait="btr_turian_patriotic"
+				  trait="btr_turian_militaristic"
+				  trait="trait_conformists"
+				  trait="trait_nonadaptive"
+				  trait="trait_talented"
+					  ideal_planet_class = "pc_dextro_arid"
+					}
+				  }
+				  last_created_species = { save_global_event_target_as = turianSpecies }
+				create_country = {
+					name = "Turian Hierarchy"
+					ship_prefix = "THV"
+					type = default
+					origin = "origin_turian_hierarchy"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_btr_turian_universal_service" civic = "civic_btr_turian_honor" }
+					authority = auth_oligarchic
+					name_list = "btr_turian"
+					ethos = { ethic = "ethic_egalitarian" ethic = "ethic_militarist" ethic = "ethic_xenophile" }
+					species = event_target:turianSpecies
+					flag = {
+						icon={
+							category="beyondtherelays"
+							file="turian_hierarchy.dds"
+						}
+						background={
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors={
+							"dark_blue"
+							"grey"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = reptilian_01
+						set_country_flag = turian_hierarchy
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = turian_hierarchy
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = turian_hierarchy }
+				save_global_event_target_as = turian_hierarchy
+				species = { save_global_event_target_as = turianSpecies }
+			}
+			set_owner = event_target:turian_hierarchy
+			generate_btr_start_deposits_and_blockers = yes			
+			generate_tur_palaven_capitol_buildings = yes
+			generate_tur_palaven_pops = yes
+			add_deposit = d_palaven_radiation
+			add_deposit = d_palaven_cipritine
+			add_deposit = d_sercusium_river
+			set_name = "Palaven"
+		}		     
+
+        moon = {
+            name = "Menae"
+            class = "pc_dextro_arid"
+            orbit_distance = 10
+            orbit_angle = 336
+            has_ring = no
+            size = 8
+        }
+        moon = {
+            name = "Nanus"
+            class = "pc_dextro_desert"
+            orbit_distance = 6
+            orbit_angle = 336
+            has_ring = no
+            size = 5
+        }		
+    }
+
+    planet = {
+        name = "Impera"
+        class = "pc_hothouse"
+        orbit_distance = 80
+        orbit_angle = 208
+        has_ring = no
+        size = 4
+    }
+
+    planet = {
+        name = "Essenus"
+        class = "pc_gas_giant"
+        orbit_distance = 80
+        orbit_angle = 272
+        has_ring = no
+        size = 37
+    }
+
+    planet = {
+        name = "Datriux"
+        class = "pc_frozen"
+        orbit_distance = 80
+        orbit_angle = 209
+        has_ring = no
+        size = 18
+    }   	
+}
+
+sys_sandbox_orachorum_init = {
+	name = "Orachorum"
+	class = "sc_f"
+	max_instances = 1
+
+	flags = { inner_council_system apien_crest_system orachorum_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+	planet = {
+	    name = "Orachorum"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 31
+		flags = { orachorum_star }
+    }
+
+	planet = {
+        name = "Esterum"
+        class = pc_molten
+        orbit_distance = 75
+        orbit_angle = 132
+		size = 15
+        has_ring = no
+		flags = { esterum_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_iridium_1
+
+		}
+    }
+
+	planet = {
+        name = "Namur"
+        class = pc_chlorine
+        orbit_distance = 200
+        orbit_angle = 132
+		size = 14
+        has_ring = no
+		flags = { namur_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_element_zero_1
+
+		}
+    }
+
+    planet = {
+        name = "Chatti"
+        class = pc_dextro_ocean
+        orbit_distance = 200
+        orbit_angle = 132
+		size = 20
+        has_ring = no
+		flags = { chatti_planet pd_ignore }
+    }	
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "apiencrest_meadecluster_massrelay" 
+			name = "Apien 1 Relay"
+			orbit_angle = 168 
+			orbit_distance = 500
+			
+		} 
+    } 
+}
+
+sys_sandbox_navale_init = {
+	name = "Navale"
+	class = "sc_f"
+	max_instances = 1
+
+	flags = { inner_council_system apien_crest_system navale_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+	planet = {
+	    name = "Navale"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 25
+		flags = { navale_star }
+    }
+
+	planet = {
+        name = "Solvit"
+        class = pc_hot_jupiter
+        orbit_distance = 75
+        orbit_angle = 337
+		size = 37
+		has_ring = no
+		flags = { solvit_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_4
+
+		}
+    }
+
+	planet = {
+        name = "Formilun"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 132
+		size = 12
+        has_ring = no
+		flags = { formilun_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_4
+
+		}
+    }
+
+    planet = {
+        name = "Aephus"
+        class = pc_dextro_med
+        orbit_distance = 100
+        orbit_angle = 132
+		size = 19
+        has_ring = no
+		flags = { osudebal_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Gerens"
+        class = pc_barren_cold
+        orbit_distance = 100
+        orbit_angle = 155
+		size = 7
+        has_ring = no
+		flags = { gerrens_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Ratis"
+        class = pc_iron
+        orbit_distance = 100
+        orbit_angle = 282
+		size = 9
+        has_ring = no
+		flags = { ratis_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_5
+
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "apiencrest_serpentnebula_massrelay" 
+			name = "Apien 2 Relay"
+			orbit_angle = 8 
+			orbit_distance = 500			
+		} 
+	}
+}
+
+sys_sandbox_castellus_init = {
+    name = "Castellus"
+    class = sc_g
+	max_instances = 1
+
+	flags = { inner_council_system apien_crest_system castellus_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+		
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 450
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 495
+	}
+
+    planet = {
+	    name = "Castellus"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+		flags = { castellus_star }
+    }
+
+    planet = {
+        name = "Carborix"
+        class = pc_barren
+        orbit_distance = 75
+        orbit_angle = 277
+        has_ring = no
+        size = 6
+		flags = { carborix_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_1
+
+		}
+    }
+
+    planet = {
+        name = "Nios"
+        class = pc_hothouse
+        orbit_distance = 100
+        orbit_angle = 249
+        has_ring = no
+        size = 7
+		flags = { nios_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_platinum_1
+
+		}
+    }
+
+    planet = {
+        name = "Digeris"
+        class = pc_dextro_prairie
+        orbit_distance = 100
+        orbit_angle = 231
+        has_ring = no
+        size = 10
+		flags = { digeris_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Fiax"
+        class = pc_frozen
+        orbit_distance = 100
+        orbit_angle = 154
+        has_ring = no
+        size = 24
+		flags = { flax_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_iridium_4
+			add_deposit = d_platinum_2
+			add_deposit = d_palladium_2
+			add_deposit = d_minerals_4
+
+		}
+    }
+
+    planet = {
+        name = "Iritum"
+        class = pc_gas_giant
+        orbit_distance = 100
+        orbit_angle = 133
+        has_ring = yes
+        size = 33
+		flags = { iritum_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_3
+
+		}
+		moon = {
+			name = "Iritum a"
+			class = pc_pd_barren_hab
+			orbit_distance = 8
+			orbit_angle = 133
+			size = 7
+		}
+		moon = {
+			name = "Iritum b"
+			class = pc_pd_frozen_hab
+			orbit_distance = 8
+			orbit_angle = 133
+			size = 3
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "apiencrest_proditoresscar_massrelay" 
+			name = "Apien 3 Relay"
+			orbit_angle = 8 
+			orbit_distance = 500
+			
+		} 
+	}
+}
+
+sys_sandbox_centrixaurum_init = {
+	name = "Centrix Aurum"
+	class = "sc_m_giant"
+	max_instances = 1
+
+	flags = { inner_council_system apien_crest_system centrixaurum_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+	planet = {
+	    name = "Centrix Aurum"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 25
+		flags = { centrixaurum_star }
+    }
+
+	planet = {
+        name = "Alcapus"
+        class = pc_hothouse
+        orbit_distance = 75
+        orbit_angle = 132
+		size = 6
+        has_ring = no
+		flags = { alcapus_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Epyrus"
+        class = pc_dextro_tepid
+        orbit_distance = 133
+        orbit_angle = 132
+		size = 15
+        has_ring = no
+		flags = { epyrus_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Norel"
+        class = pc_frozen
+        orbit_distance = 133
+        orbit_angle = 155
+		size = 12
+        has_ring = no
+		flags = { norel_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Leliehielaron"
+        class = pc_cryovolcanic
+        orbit_distance = 133
+        orbit_angle = 282
+		size = 9
+        has_ring = no
+		flags = { leliehielaron_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_iridium_1
+			add_deposit = d_element_zero_1
+			add_deposit = d_minerals_2
+
+		}
+    }
+}
+
+sys_sandbox_gemmae_init = {
+    name = "Gemmae"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { inner_council_system apien_crest_system gemmae_system btr_system sandbox_map  custom_system }
+
+    planet = {
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 50
+    }
+
+    planet = {
+        name = "Pheiros"
+        class = pc_pd_asteroid_hab
+        orbit_distance = 400
+        orbit_angle = 337
+        has_ring = no
+        size = 3
+		flags = { pheiros_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_energy_7
+		}
+    }	
+}
+
+#####MINOS WASTELAND#####
+
+sys_sandbox_caestus_init = {
+    name = "Caestus"
+    class = sc_g
+	max_instances = 1
+
+	flags = { outer_council_system minos_wasteland_system caestus_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+    planet = {
+	    name = "Caestus"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 25
+		flags = { caestus_star }
+    }
+
+    planet = {
+        name = "Invictus"
+        class = pc_dextro_tropical
+        orbit_distance = 75
+        orbit_angle = 239
+        size = 18
+        has_ring = no
+		flags = { invictus_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_element_zero_2
+		}
+    }
+
+    planet = {
+        name = "Temerarus"
+        class = pc_hothouse
+        orbit_distance = 375
+        orbit_angle = 342
+        size = 8
+        has_ring = no
+		flags = { temerarus_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
+    }
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "minoswasteland_nimbuscluster_massrelay" 
+			name = "Minos 1 Relay"
+			orbit_angle = 340 
+			orbit_distance = 500
+			
+		} 
+	}		
+}
+
+sys_sandbox_arrae_init = {
+    name = "Arrae"
+    class = sc_a
+	max_instances = 1
+
+	flags = { outer_council_system minos_wasteland_system arrae_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+    planet = {
+	    name = "Arrae"
+        class = pc_a_star
+        orbit_distance = 0
+        size = 25
+		flags = { arrae_star }
+    }
+
+    planet = {
+        name = "Erros"
+        class = pc_iron
+        orbit_distance = 75
+        orbit_angle = 177
+        size = 17
+        has_ring = no
+		flags = { erros_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_2
+
+		}	
+    }
+
+    planet = {
+        name = "Gellix"
+        class = pc_dextro_alpine
+        orbit_distance = 133
+        orbit_angle = 212
+        size = 9
+        has_ring = no
+		flags = { gellix_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Antinax"
+        class = pc_hothouse
+        orbit_distance = 133
+        orbit_angle = 121
+        size = 24
+        has_ring = no
+		flags = { antinax_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_1
+
+		}	
+    }
+
+    planet = {
+        name = "Nirrus"
+        class = pc_gas_giant
+        orbit_distance = 133
+        orbit_angle = 171
+        size = 35
+        has_ring = yes
+		flags = { nirrus_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+
+		}	
+    }	
+}
+
+#####AETHON CLUSTER#####
+sys_sandbox_nura_init = {
+    name = "Nura"
+    class = sc_f
+	max_instances = 1
+
+	flags = { inner_council_system aethon_cluster_system nura_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+    planet = {
+	    name = "Nura"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+		flags = { nura_star }
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 226
+	}
+
+    planet = {
+        name = "Lahu"
+        class = pc_sandsea
+        orbit_distance = 75
+        orbit_angle = 61
+        has_ring = no
+        size = 21
+		flags = { lahu_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Oma Ker"
+        class = pc_dextro_continental
+        orbit_distance = 133
+        orbit_angle = 247
+        has_ring = no
+        size = 17
+		flags = { omaker_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Welm Urun"
+        class = pc_gas_giant
+        orbit_distance = 133
+        orbit_angle = 245
+        has_ring = yes
+        size = 35
+		flags = { welmurun_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+
+		}
+    }
+
+    planet = {
+        name = "Gorgun"
+        class = pc_cloudless_gas_giant
+        orbit_distance = 133
+        orbit_angle = 143
+        has_ring = no
+        size = 36
+		flags = { solupaolis_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_1
+
+		}
+    }
+	
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "aethoncluster_meadecluster_massrelay" 
+			name = "Aethon 1 Relay"
+			orbit_angle = 60 
+			orbit_distance = 500
+			
+		} 
+	}
+}
+
+
+##### CALESTON RIFT ######
+sys_sandbox_talava_init = {
+    name = "Talava"
+    class = "sc_f"
+	max_instances = 1
+
+	flags = { attican_traverse_system caleston_rift_system talava_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+
+    planet = {
+	    name = "Talava"
+        class = "pc_f_star"
+        orbit_distance = 0
+        size = 20
+		flags = { talava_star }
+		init_effect = {
+			add_deposit = d_energy_3
+
+		}
+    }
+
+    planet = {
+        name = "Aitarus"
+        class = "pc_barren"
+        orbit_distance = 75
+        orbit_angle = 304
+        has_ring = no
+		size = 22
+		flags = { aitarus_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_2
+
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_scorching_surface
+				days = -1
+			}
+		}
+	}	
+
+    planet = {
+        name = "Kaushus"
+        class = "pc_volcanic"
+        orbit_distance =133
+        orbit_angle = 177
+        has_ring = no
+		size = 15
+		flags = { kaushus_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = btr_unwise_mining_venture
+				days = -1
+			}
+			add_deposit = d_minerals_2
+
+			add_modifier = {
+				modifier = unstable_tectonics
+				days = -1
+			}
+		}
+    }
+
+    planet = {
+        name = "Maitrum"
+        class = "pc_pd_barren_hab"
+        orbit_distance = 133
+        orbit_angle = 293
+        has_ring = no
+		size = 14
+		flags = { maitrum_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_poor_mineral_deposits
+		}
+    }
+
+    planet = {
+        name = "Taitus"
+        class = pc_arid #pc_mephitic
+        orbit_distance = 133
+        orbit_angle = 142
+        has_ring = no
+		size = 11
+		flags = { taitus_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_average_iridium_deposits
+			add_deposit = d_average_platinum_deposits
+			add_deposit = d_rich_platinum_deposits
+
+		}
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "calestonrift_hawkingeta_massrelay" 
+			name = "Caleston 5 Relay"
+			orbit_angle = 194 
+			orbit_distance = 500
+			
+		} 
+	}		
+}
+
+#####MEADE CLUSTER#####
+
+sys_sandbox_mactare_init = {
+    name = "Mactare"
+    class = sc_k
+	max_instances = 1
+
+	flags = { inner_council_system meade_cluster_system mactare_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+
+    planet = {
+	    name = "Mactare"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+		flags = { mactare_star }
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 225
+	}	
+	
+	planet = {
+		name = "Sanhei"
+		class = pc_hothouse
+        orbit_distance = 75
+        size = 8
+		flags = { sanhei_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Taetrus"
+		class = pc_dextro_tropical
+        orbit_distance = 100
+        size = 17
+		flags = { taetrus_planet pd_ignore }
+        moon = {
+			name = "Taetrus a"
+			class = pc_subarctic
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+			size = 6
+        }	
+    }
+    
+    planet = {
+		name = "Regeris"
+		class = pc_asteroid
+        orbit_distance = 50
+        size = 8
+		flags = { regeris_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_element_zero_3
+
+		}
+	}
+	
+	planet = {
+		name = "Palex"
+		class = pc_gas_giant
+        orbit_distance = 50
+        size = 35
+		has_ring = no
+		flags = { doroga_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_2
+
+			add_modifier = {
+				modifier = extensive_moon_system
+				days = -1
+			}
+		}
+        satellite_naming_policy = lower_case_latin_letters
+        moon = {
+            count = { min = 4 max = 5 }
+            class = random
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+        }		
+	}
+	
+	planet = {
+		name = "Xemna"
+		class = pc_gas_giant
+        orbit_distance = 100
+        size = 37
+		has_ring = yes
+		flags = { xemna_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_1
+
+		}	
+        satellite_naming_policy = lower_case_latin_letters
+        moon = {
+            count = { min = 2 max = 6 }
+            class = random
+            orbit_distance = 8
+            orbit_angle = { min = 90 max = 270 }
+        }	
+	}
+	
+	planet = {
+		name = "Telae"
+		class = pc_barren_cold
+        orbit_distance = 140
+        size = 7
+		flags = { telae_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_minerals_3
+
+		}	
+		moon = {
+			name = "Telae a"
+			class = pc_iron
+			orbit_distance = 4
+			size = 5
+		}	
+	}	
+}
+
+sys_sandbox_narbo_init = {
+    name = "Narbo"
+    class = sc_k_giant
+	max_instances = 1
+
+	flags = { inner_council_system meade_cluster_system narbo_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+    planet = {
+	    name = "Narbo"
+        class = pc_k_giant_star
+        orbit_distance = 0
+        size = 25
+		flags = { narbo_star }
+    }
+
+	planet = {
+		name = "Eutica"
+		class = pc_aquatichot
+        orbit_distance = 75
+        size = 25 
+		flags = { eutica_planet pd_ignore }
+	}
+	
+	planet = {
+		name = "Nimines"
+		class = pc_pd_barren_hab
+        orbit_distance = 200
+        size = 15
+		flags = { nimines_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_iridium_1
+			add_deposit = d_platinum_1
+			add_deposit = d_palladium_1
+			add_deposit = d_minerals_2
+		}	
+	}
+
+	planet = {
+		name = "Lokar"
+		class = pc_subglacial
+        orbit_distance = 200
+        size = 19
+		flags = { lokar_planet pd_ignore }
+    }	
+    
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "meadecluster_apiencrest_massrelay" 
+			name = "Meade 3 Relay"
+			orbit_angle = 168 
+			orbit_distance = 500
+			
+		} 
+	}	
+}
+
+
+sys_sandbox_nedlus_init = {
+    name = "Nedlus"
+    class = sc_f
+	max_instances = 1
+
+	flags = { inner_council_system meade_cluster_system nedlus_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+    planet = {
+		name = "Nedlus"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 30
+		flags = { nedlus_star }
+    }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 120
+	}
+	
+	planet = {
+		name = "Arsacid"
+		class = pc_hot_jupiter
+        orbit_distance = 75
+		size = 36
+		flags = { arsacid_planet pd_ignore }
+	}	
+
+	planet = {
+		name = "Parthia"
+		class = pc_dextro_lanthanide
+        orbit_distance = 100
+		size = 20
+		has_ring = no
+		flags = { parthia_planet pd_ignore }
+	}
+	
+	planet = {
+		name = "Ctesiphon"
+		class = pc_ammonia
+        orbit_distance = 100
+		size = 21
+		has_ring = no
+		flags = { ctesiphon_planet pd_ignore }
+		moon = {
+			name = "Ctesiphon a"
+			class = pc_iron
+			orbit_distance = 12
+			size = 4
+		}	
+		moon = {
+			name = "Ecbatana"
+			class = pc_ammonia
+			orbit_distance = 8
+			size = 7
+		}
+	}
+	
+	planet = {
+		name = "Hesterax"
+		class = pc_ice_giant
+        orbit_distance = 100
+		has_ring = yes
+		size = 39
+		flags = { hesterax_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Susa"
+		class = pc_iron
+        orbit_distance = 100
+		size = 4
+	}	
+}	
+
+#####PRODICATORE'S SCAR#####
+
+sys_sandbox_laudate_init = {
+	name = "Laudate"
+	class = sc_f
+	max_instances = 1
+
+	flags = { inner_council_system proditors_scar_system laudate_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 210
+	}
+
+	planet = {
+	    name = "Laudate"
+        class = pc_f_star
+        orbit_distance = 0
+        size = 20
+		flags = { laudate_star }
+    }
+
+	planet = {
+		name = "Arabor"
+		class = pc_molten
+        orbit_distance = 45
+        size = 13
+		flags = { arabor_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Lutum"
+		class = pc_acid
+        orbit_distance = 30
+        size = 18
+		has_ring = no
+		flags = { lutum_planet pd_ignore }
+	}
+	
+	planet = {
+		name = "Magna"
+		class = pc_dextro_coral
+        orbit_distance = 30
+        size = 16
+		has_ring = no
+		flags = { magna_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Petram"
+		class = pc_iron
+        orbit_distance = 35
+        size = 12
+		has_ring = no
+		flags = { petram_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Iuto"
+		class = pc_barren_cold
+        orbit_distance = 35
+        size = 14
+		has_ring = no
+		flags = { iuto_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Lapellam"
+		class = pc_gas_giant
+        orbit_distance = 35
+        size = 34
+		has_ring = no
+		flags = { lapellum_planet pd_ignore }
+	}
+
+	planet = {
+		class = pc_ice_asteroid
+        orbit_distance = 25
+        size = 1
+		init_effect = {
+			add_deposit = d_palladium_4
+		}
+	}
+
+	planet = {
+		name = "Caerulus"
+		class = pc_iron
+        orbit_distance = 35
+        size = 17
+		has_ring = yes
+		flags = { caerulus_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Dilatelux"
+		class = pc_ice_giant
+        orbit_distance = 35
+        size = 29
+		has_ring = yes
+		flags = { dilatelux_planet pd_ignore }
+	}
+}
+
+sys_sandbox_sabulum_init = {
+	name = "Sabulum"
+	class = sc_m
+	max_instances = 1
+
+	flags = { inner_council_system proditors_scar_system sabulum_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+	planet = {
+	    name = "Sabulum"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+		flags = { sabulum_star }
+    }
+
+	planet = {
+		name = "Edessan"
+		class = pc_dextro_desert
+        orbit_distance = 30
+        size = 24
+		flags = { edessan_planet pd_ignore }
+		init_effect = {
+			add_modifier = {
+				modifier = high_gravity
+				days = -1
+			}
+		}
+	}
+
+	planet = {
+		name = "Caustes"
+		class = pc_ethane_ocean
+        orbit_distance = 45
+        size = 13
+		flags = { caustes_planet pd_ignore }
+	}
+	
+	planet = {
+		name = "Jactatum"
+		class = pc_gas_giant
+        orbit_distance = 30
+        size = 33
+		flags = { jactatum_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Vastus"
+		class = pc_frozen
+        orbit_distance = 45
+        size = 10
+		flags = { vastus_planet pd_ignore }
+	}
+
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "proditoresscar_apiencrest_massrelay" 
+			name = "Proditore's 1 Relay"
+			orbit_angle = 17 
+			orbit_distance = 200
+		} 
+	}
+}
+
+#####SERPENT NEBULA######
+
+sys_sandbox_terevan_init = {
+    name = "Terevan"
+    class = sc_a
+	max_instances = 1
+
+	flags = { outer_council_system serpent_nebula_system terevan_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+
+	}
+
+    planet = {
+	    name = "Terevan"
+        class = pc_a_star
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 180
+		flags = { terevan_star }
+    }
+
+	planet = {
+		name = "Tracmus Duxes"
+		class = pc_dextro_veld
+        orbit_distance = 45
+		size = 18
+		flags = { tracmusduxes_planet pd_ignore }
+	}	
+	
+	planet = {
+		name = "Lodantus"
+		class = pc_gas_giant
+        orbit_distance = 70
+		size = 34
+		flags = { lodantus_planet pd_ignore }
+		init_effect = {
+			add_deposit = d_helium_3_3
+
+		}
+		moon = {
+			name = "Lodantus a"
+			class = pc_shattered
+			orbit_distance = 6
+			size = 8
+		}
+	}	
+	init_effect = { 
+		spawn_megastructure = { 
+			type = "serpentnebula_apiencrest_massrelay" 
+			name = "Serpent 2 Relay"
+			orbit_angle = 130 
+			orbit_distance = 200
+			
+		} 
+	}
+
+	
+}
+
+#####HORSE HEAD NEBULA#####

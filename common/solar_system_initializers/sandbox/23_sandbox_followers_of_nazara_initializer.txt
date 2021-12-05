@@ -1,0 +1,840 @@
+########################
+##### HERETIC GETH #####
+########################
+
+#####THE PHOENIX MASSING#####
+
+sys_sandbox_theseaofstorms_init = {
+    name = "The Sea of Storms"
+    class = sc_deep_space
+	max_instances = 1
+
+	flags = { terminus_system phoenix_massing_system theseaofstorms_system btr_system sandbox_map  custom_system }
+	init_effect = { 
+		random_country = { 
+			limit = { has_country_flag = disciples_of_nazara } 
+			save_global_event_target_as = disciples_of_nazara
+		}
+	}		
+	usage = custom_empire
+
+	planet = {
+		class = pc_invisible_star
+		size = 30
+		init_effect = {
+
+		}
+	}
+
+	change_orbit = 90
+
+    planet = {
+        name = "Heretic Station"
+        class = pc_habitat
+        orbit_distance = 0
+        orbit_angle = 144
+        size = 22
+        has_ring = no   
+		starting_planet = yes
+		flags = { heretic_station pd_ignore }
+		init_effect = {
+			prevent_anomaly = yes
+			set_global_flag = heretic_station_spawned
+			if = {
+				limit = { NOT = { any_country = { has_country_flag = disciples_of_nazara } } }
+				create_country = {
+					name = "Disciples of Nazara"
+					ship_prefix = ""
+					type = default
+              		origin = "origin_disciples_of_nazara"
+					ignore_initial_colony_error = yes
+					civics = { civic = "civic_machine_warbots" civic = "civic_btr_geth_artifical_efficiency" }
+					authority = auth_machine_intelligence
+					name_list = "btr_geth"
+					ethos = { ethic = "ethic_gestalt_consciousness" }
+					species = event_target:gethSpecies
+					flag = {
+						icon={
+							category="masseffect"
+							file="Geth Armory.dds"
+						}
+						background={
+							category="backgrounds"
+							file="00_solid.dds"
+						}
+						colors={
+							"dark_grey"
+							"black"
+							"null"
+							"null"
+						}
+					}
+					effect = {
+						set_graphical_culture = geth_01
+						set_country_flag = disciples_of_nazara
+						set_country_flag = init_spawned
+						set_country_flag = custom_start_screen
+						set_country_flag = canon_map
+						save_global_event_target_as = disciples_of_nazara
+					}
+				}
+			}	
+			set_capital = yes
+			random_country = {
+				limit = { has_country_flag = disciples_of_nazara }
+				save_global_event_target_as = disciples_of_nazara
+				species = { save_global_event_target_as = gethSpecies }
+			}
+			set_owner = event_target:disciples_of_nazara
+			generate_btr_start_deposits_and_blockers = yes
+			generate_her_heretic_station_capitol_buildings = yes
+			generate_her_station_pops = yes
+			set_name = "Heretic Station"
+		}    
+    }		    
+	
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "thephoenixmassing_xosarverge_massrelay" 
+			name = "Phoenix 2 Relay"
+			orbit_angle = 27 
+			orbit_distance = 200
+			
+		} 
+	}
+}
+
+##### Xosar Verge #####
+
+sys_sandbox_haelazi_init = {
+    name = "Haelazi"
+    class = "sc_k"
+	flags = { terminus_system xosar_verge_system haelazi_system empire_home_system custom_system }	
+	init_effect = { 
+	generate_home_system_resources = yes
+	}
+
+	max_instances = 1
+
+    planet = {
+		name = "Haelazi"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 20
+		flags = { haelazi_star }
+    }
+
+    planet = {
+        name = "Henbay"
+        class = pc_hothouse
+        orbit_distance = 40
+		orbit_angle = { min = 40 max = 180 }
+        size = 10
+		has_ring = no
+		flags = { henbay_planet pd_ignore }
+	}
+
+	planet = {
+		name = "Yimorn"
+		class = pc_gas_giant
+		orbit_distance = 55
+		size = 34
+		has_ring = yes
+	}	
+
+    planet = {
+        name = "Ceeharu"
+        class = pc_arid #pc_mephitic
+        orbit_distance = 40
+        orbit_angle = 171
+        has_ring = no
+		size = 12
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "xosarverge_thephoenixmassing_massrelay" 
+			name = "Xosar 2 Relay"
+			orbit_angle = 2 
+			orbit_distance = 200
+		} 
+	}
+}
+
+sys_sandbox_xelazi_init = {
+	name = "Xelasi"
+	class = sc_a_super
+	max_instances = 1
+
+	flags = { terminus_system xosar_verge_system xelazi_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 185
+	}
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 235
+	}
+
+	planet = {
+		name = "Xelasi"
+        class = pc_a_super_star
+        orbit_distance = 0
+        size = 35
+    }
+
+	planet = {
+        name = "Raanbay"
+        class = pc_hot_jupiter
+        orbit_distance = 70
+        orbit_angle = 119
+        has_ring = no
+		size = 32
+    }
+	
+	planet = {
+        name = "Rofo'Homma"
+        class = pc_molten
+        orbit_distance = 35
+        orbit_angle = 119
+        has_ring = no
+		size = 10
+    }
+	
+	planet = {
+        name = "Wesost"
+        class = pc_hothouse
+        orbit_distance = 55
+        orbit_angle = 119
+        has_ring = no
+		size = 7
+    }
+
+	planet = {
+        name = "Genn"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = no
+		size = 10
+    }
+
+	planet = {
+		name = "Faso'Yul"
+        class = pc_iron
+        orbit_distance = 35
+        orbit_angle = 119
+        has_ring = no
+		size = 2
+	}
+
+	planet = {
+		name = "Jiman"
+        class = pc_ice_giant
+        orbit_distance = 35
+        orbit_angle = 119
+        has_ring = yes
+		size = 28
+	}
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "xosarverge_cassiopeiacluster_massrelay" 
+			name = "Xosar 1 Relay"
+			orbit_angle = 2 
+			orbit_distance = 200
+		} 
+	}
+}
+
+sys_sandbox_sesost_init = {
+	name = "Sesost"
+	class = sc_m_giant
+	max_instances = 1
+
+	flags = { terminus_system xosar_verge_system sesost_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Sesost"
+        class = pc_m_giant_star
+        orbit_distance = 0
+        size = 35
+    }
+
+	planet = {
+        name = "Heeris"
+        class = pc_molten
+        orbit_distance = 30
+        orbit_angle = 119
+        has_ring = no
+		size = 12
+    }
+	
+	planet = {
+        name = "Saeto'Shar"
+        class = pc_frozen_desert
+        orbit_distance = 90
+        orbit_angle = 119
+        has_ring = no
+		size = 6
+    }
+}
+
+sys_sandbox_yassu_init = {
+	name = "Yassu"
+	class = sc_g
+	max_instances = 1
+
+	flags = { terminus_system xosar_verge_system yassu_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Yassu"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+    }
+
+	planet = {
+        name = "Hasha"
+        class = pc_barren
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 8
+    }
+	
+	planet = {
+        name = "Shomos"
+        class = pc_glacio
+        orbit_distance = 70
+        orbit_angle = 119
+        has_ring = no
+		size = 16
+    }
+
+	planet = {
+        name = "Fael"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 119
+        has_ring = no
+		size = 38
+    }
+	
+	planet = {
+        name = "Tunna"
+        class = pc_ice_giant
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = no
+		size = 31
+		moon = {
+			name = "Jarul"
+			class = pc_cryovolcanic
+			orbit_distance = 10
+			orbit_angle = 119
+			has_ring = no
+			size = 4
+		}
+	}
+}
+
+sys_sandbox_yeelixeeme_init = {
+	name = "Yeeli'Xeeme"
+	class = sc_m
+	max_instances = 1
+
+	flags = { terminus_system xosar_verge_system yeelixeeme_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Yeeli'Xeeme"
+        class = pc_m_star
+        orbit_distance = 0
+        size = 25
+    }
+
+	planet = {
+        name = "Viko"
+        class = pc_barren_cold
+        orbit_distance = 55
+        orbit_angle = 119
+        has_ring = no
+		size = 7
+    }
+	
+	planet = {
+        name = "Jahi"
+        class = pc_shattered
+        orbit_distance = 90
+        orbit_angle = 119
+        has_ring = no
+		size = 14
+    }
+
+	planet = {
+        name = "Shewan"
+        class = pc_frozen
+        orbit_distance = 25
+        orbit_angle = 119
+        has_ring = no
+		size = 7
+    }
+	
+	planet = {
+        name = "Quiko"
+        class = pc_cryovolcanic
+        orbit_distance = 90
+        orbit_angle = 119
+        has_ring = no
+		size = 10
+    }
+}
+
+sys_sandbox_seefisgaca_init = {
+	name = "Seefis'Gaca"
+	class = sc_k
+	max_instances = 1
+
+	flags = { terminus_system xosar_verge_system seefisgaca_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	planet = {
+		name = "Seefis'Gaca"
+        class = pc_k_star
+        orbit_distance = 0
+        size = 25
+    }
+
+	planet = {
+        name = "Ceeleya"
+        class = pc_hothouse
+        orbit_distance = 35
+		orbit_angle = 119
+        has_ring = no
+		size = 12
+    }
+	
+	planet = {
+        name = "Shaefirn"
+        class = pc_hothouse
+        orbit_distance = 20
+        orbit_angle = 119
+        has_ring = no
+		size = 14
+    }
+
+	planet = {
+        name = "Rastrom"
+        class = pc_methane
+        orbit_distance = 25
+        orbit_angle = 119
+        has_ring = no
+		size = 17
+    }
+	
+	planet = {
+        name = "Jael"
+        class = pc_diamond
+        orbit_distance = 90
+        orbit_angle = 119
+        has_ring = no
+		size = 9
+    }
+
+	planet = {
+        name = "Yaestrom"
+        class = pc_barren_cold
+        orbit_distance = 35
+        orbit_angle = 119
+        has_ring = no
+		size = 6
+    }
+
+	planet = {
+        name = "Xandeka"
+        class = pc_subglacial
+        orbit_distance = 25
+        orbit_angle = 119
+        has_ring = no
+		size = 11
+    }
+	
+	planet = {
+        name = "Zeetalir"
+        class = pc_ethane_ocean
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = no
+		size = 18
+    }
+
+	planet = {
+        name = "Fito"
+        class = pc_frozen
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = no
+		size = 3
+    }
+
+	planet = {
+        name = "Waamornh"
+        class = pc_frozen
+        orbit_distance = 40
+        orbit_angle = 119
+        has_ring = no
+		size = 5
+    }
+}
+
+#####CASSIOPEIA CLUSTER#####
+sys_sandbox_keelulon_init = {
+    name = "Kee-Lulon"
+    class = sc_binary_3
+	max_instances = 1
+
+	flags = { terminus_system cassiopeia_cluster_system keelulon_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 115
+	}
+
+    planet = {
+		name = "Kee"
+        class = pc_m_giant_star
+        orbit_distance = 20
+        size = 30
+		flags = { dholen_star}
+    }
+
+	planet = {
+		name = "Lulon"
+        class = pc_b_star
+        orbit_distance = 30
+        size = 20
+		flags = { dholen_star}
+    }
+
+    planet = {
+        name = "Jaela"
+        class = pc_molten
+        orbit_distance = 60
+        orbit_angle = 239
+        has_ring = no
+		size = 12
+		flags = { jaela_planet pd_ignore }		
+    }
+
+    planet = {
+        name = "Tadeor"
+        class = pc_ice_giant
+        orbit_distance = 85
+        orbit_angle = 214
+        has_ring = no
+		size = 34
+		flags = { tadeor_planet pd_ignore }
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "cassiopeiacluster_xosarverge_massrelay" 
+			name = "Cassiopeia 1 Relay"
+			orbit_angle = 2 
+			orbit_distance = 200
+		} 
+	}
+}
+
+sys_sandbox_raadarum_init = {
+    name = "Raadarum"
+    class = sc_b_super
+	max_instances = 1
+
+	flags = { terminus_system cassiopeia_cluster_system raadarum_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+    planet = {
+		name = "Raadarum"
+        class = pc_b_super_star
+        orbit_distance = 0
+        size = 30
+    }
+	
+    planet = {
+        name = "Xonar"
+        class = pc_hothouse
+        orbit_distance = 60
+        orbit_angle = 239
+        has_ring = no
+		size = 14
+		flags = { xonar_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Rafeed"
+        class = pc_carbon
+        orbit_distance = 35
+        orbit_angle = 214
+        has_ring = no
+		size = 10
+		flags = { rafeed_planet pd_ignore }
+    }
+
+    planet = {
+        name = "Rayna"
+        class = pc_iron
+        orbit_distance = 40
+        orbit_angle = 90
+        has_ring = no
+		size = 5
+		flags = { rayna_planet pd_ignore }
+    }	
+
+	planet = {
+        name = "Xulan"
+        class = pc_gas_giant
+        orbit_distance = 50
+        orbit_angle = 90
+        has_ring = yes
+		size = 35
+		flags = { xulan_planet pd_ignore }
+		moon = {
+			name = "Xulan a"
+			class = pc_iron
+			orbit_distance = 15
+			orbit_angle = 90
+			has_ring = no
+			size = 3
+		}
+    }
+
+    init_effect = { 
+		spawn_megastructure = { 
+			type = "cassiopeiacluster_farrim_massrelay" 
+			name = "Cassiopeia 2 Relay"
+			orbit_angle = 36 
+			orbit_distance = 360
+		} 
+	}
+}	
+
+sys_sandbox_jaavo_init = {
+    name = "Jaavo"
+    class = sc_g
+	max_instances = 1
+
+	flags = { terminus_system cassiopeia_cluster_system jaavo_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+    planet = {
+		name = "Jaavo"
+        class = pc_g_star
+        orbit_distance = 0
+        size = 30
+    }
+
+    planet = {
+        name = "Herris"
+        class = pc_iron
+        orbit_distance = 45
+        orbit_angle = 146
+        has_ring = no
+		size = 12
+    }
+
+	planet = {
+        name = "Gaezal'Jenal"
+        class = pc_dextro_highland
+        orbit_distance = 40
+        orbit_angle = 146
+        has_ring = no
+		size = 22
+    }
+
+	planet = {
+        name = "Gernal"
+        class = pc_barren_cold
+        orbit_distance = 20
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+    }
+
+	planet = {
+        name = "Lofirn"
+        class = pc_frozen
+        orbit_distance = 20
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+    }
+}
+
+sys_sandbox_ruvum_init = {
+    name = "Ruvum"
+    class = sc_d
+	max_instances = 1
+
+	flags = { terminus_system cassiopeia_cluster_system ruvum_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+    planet = {
+		name = "Ruvum"
+        class = pc_d_star
+        orbit_distance = 0
+        size = 30
+    }
+
+    planet = {
+        name = "Refaes"
+        class = pc_volcanic
+        orbit_distance = 30
+        orbit_angle = 146
+        has_ring = no
+		size = 8
+    }
+
+	planet = {
+        name = "Yulla'Saar"
+        class = pc_barren
+        orbit_distance = 30
+        orbit_angle = 146
+        has_ring = no
+		size = 5
+    }
+
+	planet = {
+        name = "Jessu"
+        class = pc_arid #pc_mephitic
+        orbit_distance = 20
+        orbit_angle = 146
+        has_ring = no
+		size = 20
+    }
+
+	planet = {
+        name = "Zeezorm Leemm"
+        class = pc_frozen
+        orbit_distance = 20
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+    }
+}
+
+
+sys_sandbox_gaalozozh_init = {
+    name = "Gaalo-Zozh"
+    class = sc_binary_b_t
+	max_instances = 1
+
+	flags = { terminus_system cassiopeia_cluster_system gaalozozh_system btr_system sandbox_map  custom_system }
+	init_effect = {
+		generate_home_system_resources = yes
+	}
+
+    planet = {
+		name = "Gaalo"
+        class = pc_b_star
+        orbit_distance = 0
+        size = 30
+    }
+
+    planet = {
+        name = "Zozh"
+        class = pc_t_star
+        orbit_distance = 20
+        orbit_angle = 146
+        has_ring = no
+		size = 8
+    }
+
+	planet = {
+        name = "Maeni"
+        class = pc_barren
+        orbit_distance = 30
+        orbit_angle = 146
+        has_ring = no
+		size = 15
+    }
+
+	planet = {
+        name = "Yena"
+        class = pc_hothouse
+        orbit_distance = 30
+        orbit_angle = 146
+        has_ring = no
+		size = 10
+    }
+
+	planet = {
+        name = "Sochol"
+        class = pc_barren_cold
+        orbit_distance = 20
+        orbit_angle = 146
+        has_ring = no
+		size = 18
+    }
+
+	planet = {
+        name = "Naara'Das"
+        class = pc_gas_giant
+        orbit_distance = 55
+        orbit_angle = 146
+        has_ring = yes
+		size = 34
+    }
+
+	planet = {
+        name = "Tonbarr"
+        class = pc_chlorine
+        orbit_distance = 30
+        orbit_angle = 146
+        has_ring = no
+		size = 16
+    }
+
+	planet = {
+        name = "Vael"
+        class = pc_gas_giant
+        orbit_distance = 40
+        orbit_angle = 146
+        has_ring = no
+		size = 32
+		moon = {
+			name = "Yedu"
+			class = pc_hydrocarbon
+			orbit_distance = 10
+			orbit_angle = 146
+			has_ring = no
+			size = 8
+			
+		}
+    }
+}
