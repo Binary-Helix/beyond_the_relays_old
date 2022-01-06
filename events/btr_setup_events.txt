@@ -372,6 +372,18 @@ country_event = {
 			add_resource = { influence = 100 }
 			add_resource = { food = 2050	}
 		}
+		if = {
+			limit = {
+				has_country_flag = sedriicae_collective
+				galaxy_size = btr_hybrid_400
+			}
+			add_resource = { energy = 1150	}
+			add_resource = { minerals = 2500 }
+			add_resource = { alloys = 1350 }
+			add_resource = { influence = 100 }
+			add_resource = { food = 1350	}
+			add_resource = { consumer_goods = 800}
+		}
 	}
 }
 
