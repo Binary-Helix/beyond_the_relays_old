@@ -46,3 +46,29 @@ gov_salarian_government = {
 		base = 10000
 	}
 }
+
+gov_cerberus_government = {
+	ruler_title = RT_ILLUSIVEMAN
+	ruler_title_female = RT_ILLUSIVEWOMAN
+	
+	should_force_rename = no
+	leader_class = governor
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			leader_class = governor
+		}
+	}
+	possible = {
+		has_authority = auth_corporate
+		has_country_flag = cerberus_empire
+	}
+	
+	weight = {
+		base = 10000
+	}
+}
