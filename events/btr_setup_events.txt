@@ -4430,6 +4430,110 @@ country_event = {
 		
 	}
 }
+country_event = {
+	id = btr_setup.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# Destroys player ships (military) to replace them with corvettes of their design
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_military owner = { is_ai = no }
+			}
+			fleet = {
+				if = {
+					limit = { exists = leader}
+					leader = { unassign_leader = this}
+				}
+				set_name = "DISBAND ME"
+				delete_fleet = {
+					target = this
+					destroy_template = yes
+				}
+			}
+			delete_ship = this
+		}
+		# Sets star as spawn location of the fleet
+		root.capital_scope = {
+			star = {
+				save_event_target_as = fleet_location
+			}
+		}	
+		# Creates 3 Corvettes for each empire
+		create_fleet = {
+			effect = {
+				set_owner = root
+				set_location = event_target:fleet_location
+				while = {
+					count = 3
+					create_btr_corvette = yes
+					set_location = {
+						target = event_target:fleet_location
+						distance = 80
+						angle = random
+					}
+				}
+			}
+		}
+		if = {
+			limit = { is_ai = yes }
+			# creates 3 scientists for each empire
+			while = {
+				count = 3
+				create_leader = {
+					class = scientist
+					species = owner_main_species
+					name = random
+					skill = 1
+				}
+			}
+			# creates a science ship for the ai empires
+			while = {
+				count = 1
+				create_fleet = {
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random 
+							random_existing_design = science
+							graphical_culture = owner
+							prefix = no
+						}
+						set_fleet_stance = evasive
+						set_location = root.capital_scope.star
+						owner = {
+							create_leader = {
+								class = scientist
+								sub_type = survey
+								name = random
+								species = owner_main_species
+							}
+						}
+						set_leader = last_created_leader
+					}
+				}
+			}
+			# Creates a construction ship for ai empires
+			while = {
+				count = 1
+				create_fleet = {
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random 
+							design = last_created_design
+							random_existing_design = constructor
+							graphical_culture = owner
+							prefix = no
+						}
+						set_fleet_stance = evasive
+						set_location = root.capital_scope.star
+					}
+				}
+			}
+		}
+	}
+}
 # country_event = {
 # 	id = btr_setup.104
 # 	hide_window = yes
