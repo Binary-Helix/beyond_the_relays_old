@@ -501,7 +501,6 @@ generate_sal_jarrahe_pops = {
 
 #####Turian Hierarchy######
 
-
 generate_tur_palaven_capitol_buildings = {
 	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
@@ -1869,7 +1868,6 @@ generate_get_habitat_pops = {
 
 #####CERBERUS#####
 
-
 generate_cerberus_cronos_buildings_and_districts = {
 	while = { count = 3 add_district = district_hab_industrial }
 	while = { count = 3 add_district = district_hab_energy }
@@ -2093,6 +2091,26 @@ generate_her_colony_pops = {
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
+#####THE COLLECTORS######
+
+generate_col_collector_station_capitol_buildings = {
+	while = { count = 3 add_district = { district_type = district_rw_hive ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_rw_generator ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_rw_science ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_rw_farming ignore_cap = yes } }
+	while = { count = 3 add_district = { district_type = district_rw_industrial ignore_cap = yes } }
+}
+
+generate_collector_base_pops = {
+	while = {
+		count = 34
+		generate_collectorsPop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn }
+}
+
+##### LYSTHENI #####
+
 generate_sepkai_pops = {
 	while = {
 	   count = 26
@@ -2100,6 +2118,8 @@ generate_sepkai_pops = {
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
+
+##### OMEGA #####
 
 generate_omega_pops = {
 	while = {
@@ -2113,6 +2133,8 @@ generate_omega_pops = {
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
+##### MIGRANT FLEET #####
+
 generate_rayya_pops = {
 	while = {
 	   count = 34
@@ -2120,6 +2142,8 @@ generate_rayya_pops = {
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
+
+##### ILLIUM #####
 
 generate_illium_pops = {
 	while = {
@@ -2252,14 +2276,6 @@ generate_asteria_pops = {
 	while = {
 	   count = 10
 	   generate_asariPop = yes
-	}
-	every_owned_pop = { set_pop_flag = init_spawn }
-}
-
-generate_collector_base_pops = {
-	while = {
-		count = 34
-		generate_collectorsPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
