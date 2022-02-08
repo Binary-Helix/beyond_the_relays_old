@@ -1037,7 +1037,7 @@ generate_her_major_colony_buildings = {
 }
 
 ## COLLECTORS ##
-generate_col_collector_station_capitol_buildings = {
+generate_col_collector_base_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_rw_hive ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_generator ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_science ignore_cap = yes } }
@@ -1064,9 +1064,10 @@ generate_btr_citadel_districts = {
 }
 
 generate_btr_omega_districts = {
-	while = { count = 3 add_district = district_hab_housing }
-	while = { count = 5 add_district = district_hab_energy }
-	while = { count = 3 add_district = district_hab_commercial }
+	while = { count = 1 add_district = { district_type = district_hab_housing ignore_cap = yes}
+	while = { count = 2 add_district = {district_type = district_hab_energy ignore_cap = yes}
+	while = { count = 1 add_district = { district_type = district_hab_commercial ignore_cap = yes} }
+	while = { count = 1 add_district = { district_type = district_pdhab_food ignore_cap = yes} }
 	add_building = building_hab_major_capital
 	add_building = building_bureaucratic_1
 	add_building = building_research_lab_1
