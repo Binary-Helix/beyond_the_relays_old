@@ -802,13 +802,6 @@ generate_for_xixikii_colony_buildings = {
 
 ## PARNACK ##
 generate_yah_parnack_capitol_buildings = {
-	if = {
-		limit = { 
-			NOT = {
-				has_country_flag = parnack_regime_primitive
-			}
-		 }
-	}
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
@@ -1064,8 +1057,8 @@ generate_btr_citadel_districts = {
 }
 
 generate_btr_omega_districts = {
-	while = { count = 1 add_district = { district_type = district_hab_housing ignore_cap = yes}
-	while = { count = 2 add_district = {district_type = district_hab_energy ignore_cap = yes}
+	while = { count = 1 add_district = { district_type = district_hab_housing ignore_cap = yes} }
+	while = { count = 2 add_district = {district_type = district_hab_energy ignore_cap = yes} }
 	while = { count = 1 add_district = { district_type = district_hab_commercial ignore_cap = yes} }
 	while = { count = 1 add_district = { district_type = district_pdhab_food ignore_cap = yes} }
 	add_building = building_hab_major_capital
@@ -1077,10 +1070,10 @@ generate_btr_omega_districts = {
 }
 
 generate_btr_geth_incursion_start_buildings = {
-	while = { count = 0 add_district = district_city }
-	while = { count = 2 add_district = district_mining }
-	while = { count = 0 add_district = district_farming }
-	while = { count = 2 add_district = district_generator }
+	while = { count = 0 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
+	while = { count = 0 add_district = { district_type = district_farming ignore_cap = yes } }
+	while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
 	add_building = building_deployment_post
 }
 

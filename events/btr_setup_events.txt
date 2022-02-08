@@ -387,28 +387,43 @@ country_event = {
 	}
 }
 
+#Pregame Genocide
 event = {
 	id = btr_setup.102
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		every_country = {
-			limit = {
-				is_country_type = default
-				is_country_type = neutral_faction
-				is_country_type = rebel
-				is_country_type = enclave
-				is_country_type = tiyanki
-				is_country_type = tiyanki_garrison
-				is_country_type = amoeba
-				is_country_type = amoeba_borderless
-				is_country_type = amoeba_garrison
-				is_country_type = crystal
-				is_country_type = drone
-				NOT = { has_country_flag = btr_empire }
-				is_ai = yes
+			if = {
+				limit = {
+					is_country_type = default
+					is_country_type = neutral_faction
+					is_country_type = rebel
+					is_country_type = enclave
+					is_country_type = tiyanki
+					is_country_type = tiyanki_garrison
+					is_country_type = amoeba
+					is_country_type = amoeba_borderless
+					is_country_type = amoeba_garrison
+					is_country_type = crystal
+					is_country_type = drone
+					NOT = { has_country_flag = btr_empire }
+					is_ai = yes
+				}
+				destroy_country = yes
+				every_owned_pop = {	
+					limit = { 
+						NOT = { 
+							 has_pop_flag = init_spawn 
+						}
+					}
+					kill_pop = yes
+				}
 			}
-			destroy_country = yes
+		if = {
+			limit = {
+				has_country_flag = btr_empire
+			}
 			every_owned_pop = {
 				limit = { NOT = { has_pop_flag = init_spawn } }
 				kill_pop = yes

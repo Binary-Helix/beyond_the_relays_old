@@ -135,7 +135,7 @@ sys_sandbox_tartarusdebrisfield_init = {
 			  trait="trait_traditional"
 			  trait="trait_resilient"
 			  trait="trait_strong"
-				  ideal_planet_class = "pc_arid"
+			  ideal_planet_class = "pc_arid"
 				}
 			  }
 			  last_created_species = { save_global_event_target_as = collectorSpecies }
@@ -143,10 +143,11 @@ sys_sandbox_tartarusdebrisfield_init = {
 					name = "The Collectors"
 					ship_prefix = ""
 					type = default 
+					origin = origin_collectors
+					ignore_initial_colony_error = yes
 					civics = { civic = "civic_hive_subsumed_will" civic = "civic_hive_one_mind" }
 					authority = auth_hive_mind
 					name_list = btr_collectors
-					origin = origin_collectors
 					ethos = { ethic = "ethic_gestalt_consciousness" }
 					species = event_target:collectorSpecies
 					flag = {
@@ -170,7 +171,7 @@ sys_sandbox_tartarusdebrisfield_init = {
 						set_country_flag = collectors_empire
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
-						set_country_flag = canon_map
+						set_country_flag = sandbox_map
 						save_global_event_target_as = collectors_empire
 					}						
 				}
