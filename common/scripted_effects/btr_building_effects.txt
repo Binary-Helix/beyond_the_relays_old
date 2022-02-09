@@ -692,7 +692,6 @@ generate_bat_nefari_colony_buildings = {
 		while = { count = 1 add_district = { district_type = district_pdhab_food ignore_cap = yes } }
 		add_building = building_hab_capital
 }
-	
 
 generate_bat_mught_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
@@ -720,6 +719,7 @@ generate_bat_juxhi_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 }
+
 ## DRELL ##
 
 generate_dre_rahkana_capitol_buildings = {
@@ -761,7 +761,7 @@ generate_lys_sepkai_capitol_buildings = {
 }
 
 ## SEDRI ##
-enerate_for_regdika_capitol_buildings = {
+generate_for_regdika_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
@@ -814,7 +814,7 @@ generate_yah_parnack_capitol_buildings = {
 }
 
 ## RALOI ##
-enerate_btr_ral_turvess_capitol_buildings = {
+generate_btr_ral_turvess_capitol_buildings = {
 	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
@@ -1030,17 +1030,13 @@ generate_her_major_colony_buildings = {
 }
 
 ## COLLECTORS ##
-generate_col_collector_base_capitol_buildings = {
+generate_btr_collectors_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_rw_hive ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_generator ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_science ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_farming ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_industrial ignore_cap = yes } }
 }
-
-
-
-
 
 generate_btr_citadel_districts = {
 	add_district_and_planet_size_if_needed_effect = { district =  district_hab_housing }
