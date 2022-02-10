@@ -183,6 +183,10 @@ sys_tartarusdebrisfield_init = {
 				save_global_event_target_as = collectors_empire
 				species = { save_global_event_target_as = collectorSpecies }
 			}
+			give_technology = {
+				tech = tech_gene_tailoring
+				message = yes
+			}
 			set_owner = event_target:collectors_empire
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_collectors_capitol_buildings = yes	

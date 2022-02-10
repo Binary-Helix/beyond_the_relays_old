@@ -1054,15 +1054,15 @@ generate_btr_citadel_districts = {
 
 generate_btr_omega_districts = {
 	while = { count = 1 add_district = { district_type = district_hab_housing ignore_cap = yes} }
-	while = { count = 2 add_district = {district_type = district_hab_energy ignore_cap = yes} }
+	while = { count = 2 add_district = { district_type = district_hab_energy ignore_cap = yes} }
 	while = { count = 1 add_district = { district_type = district_hab_commercial ignore_cap = yes} }
-	while = { count = 1 add_district = { district_type = district_pdhab_food ignore_cap = yes} }
 	add_building = building_hab_major_capital
 	add_building = building_bureaucratic_1
 	add_building = building_research_lab_1
 	add_building = building_foundry_1
 	add_building = building_factory_1
     add_building = building_commercial_zone
+	add_building = building_hydroponics_farm
 }
 
 generate_btr_geth_incursion_start_buildings = {
