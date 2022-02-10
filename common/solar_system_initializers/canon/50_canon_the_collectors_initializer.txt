@@ -185,7 +185,9 @@ sys_tartarusdebrisfield_init = {
 			}
 			give_technology = {
 				tech = tech_gene_tailoring
-				message = yes
+				tech = tech_regenerative_hull_tissue
+				tech = tech_unity_of_purpose
+				message = no
 			}
 			set_owner = event_target:collectors_empire
 			generate_btr_start_deposits_and_blockers = yes
