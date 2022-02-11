@@ -16,11 +16,10 @@ generate_asr_thessia_deposits = {
 }
 
 generate_asr_thessia_capitol_buildings = { 
-	while = { count = 4 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
-	while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes }}
 	add_building = building_system_capital
 	add_building = building_research_lab_1
 	add_building = building_factory_1
