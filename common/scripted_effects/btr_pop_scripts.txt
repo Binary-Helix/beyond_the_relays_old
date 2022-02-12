@@ -13,7 +13,7 @@ generate_asr_thessia_pops = {
 
 generate_asr_lusia_pops = {
 	while = {
-		count = 24
+		count = 25
 		generate_asariPop = yes
 	 }
 	 every_owned_pop = { set_pop_flag = init_spawn }
@@ -101,7 +101,7 @@ generate_asr_agessia_pops = {
 
 generate_asr_lesuss_pops = {
 	while = {
-		count = 1
+		count = 3
 		generate_asariPop = yes
 	 }
 	 every_owned_pop = { set_pop_flag = init_spawn }
@@ -162,7 +162,7 @@ generate_sal_gataly_pops = {
 
 generate_sal_senoquol_pops = {
 	while = {
-		count = 2
+		count = 3
 		generate_salarianPop = yes
 	 }
 	 every_owned_pop = { set_pop_flag = init_spawn }
@@ -170,7 +170,7 @@ generate_sal_senoquol_pops = {
 
 generate_sal_saetabelo_pops = {
 	while = {
-		count = 3
+		count = 2
 		generate_salarianPop = yes
 	 }
 	 every_owned_pop = { set_pop_flag = init_spawn }
@@ -255,7 +255,7 @@ generate_tur_chatti_pops = {
 
 generate_tur_aephus_pops = {
 	while = {
-	   count = 19
+	   count = 20
 	   generate_turianPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -287,7 +287,7 @@ generate_tur_taetrus_pops = {
 
 generate_tur_magna_pops = {
 	while = {
-	   count = 17
+	   count = 24
 	   generate_turianPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -395,7 +395,7 @@ generate_elc_dekuuna_pops = {
 
 generate_elc_yapolam_pops = {
 	while = {
-	   count = 20
+	   count = 8
 	   generate_elcorPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -419,7 +419,7 @@ generate_elc_ekuuna_pops = {
 
 generate_elc_thunawanuro_pops = {
 	while = {
-	   count = 25
+	   count = 14
 	   generate_elcorPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -438,7 +438,7 @@ generate_elc_oltan_pops = {
 
 generate_han_kahje_pops = {
 	while = {
-	   count = 27
+	   count = 24
 	   generate_hanarPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -446,7 +446,7 @@ generate_han_kahje_pops = {
 
 generate_han_acodu_pops = {
 	while = {
-	   count = 19
+	   count = 18
 	   generate_hanarPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -462,14 +462,35 @@ generate_han_belan_pops = {
 
 generate_han_zahni_pops = {
 	while = {
-	   count = 4
+	   count = 3
 	   generate_hanarPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 generate_han_kahje_drell_pops = {
 	while = {
-		count = 8
+		count = 3
+		generate_drellPop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn}
+}
+generate_han_acodu_drell_pops = {
+	while = {
+		count = 1
+		generate_drellPop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn}
+}
+generate_han_zahni_drell_pops = {
+	while = {
+		count = 1
+		generate_drellPop = yes
+	}
+	every_owned_pop = { set_pop_flag = init_spawn}
+}
+generate_han_belan_drell_pops = {
+	while = {
+		count = 1
 		generate_drellPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn}
@@ -480,7 +501,7 @@ generate_han_kahje_drell_pops = {
 
 generate_hum_earth_pops = {
 	while = {
-	   count = 34
+	   count = 32
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -489,7 +510,7 @@ generate_hum_earth_pops = {
 
 generate_hum_luna_pops = {
 	while = {
-	   count = 5
+	   count = 4
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -497,7 +518,7 @@ generate_hum_luna_pops = {
 
 generate_hum_mars_pops = {
 	while = {
-	   count = 5
+	   count = 4
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -506,7 +527,7 @@ generate_hum_mars_pops = {
 
 generate_hum_elysium_pops = {
 	while = {
-	   count = 10
+	   count = 5
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -514,7 +535,7 @@ generate_hum_elysium_pops = {
 
 generate_hum_edenprime_pops = {
 	while = {
-	   count = 5
+	   count = 4
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -522,7 +543,7 @@ generate_hum_edenprime_pops = {
 
 generate_hum_terranova_pops = {
 	while = {
-	   count = 8
+	   count = 4
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -530,7 +551,7 @@ generate_hum_terranova_pops = {
 
 generate_hum_tyr_pops = {
 	while = {
-	   count = 2
+	   count = 1
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -546,7 +567,7 @@ generate_hum_benning_pops = {
 
 generate_hum_demeter_pops = {
 	while = {
-	   count = 8
+	   count = 4
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -554,7 +575,7 @@ generate_hum_demeter_pops = {
 
 generate_hum_sirona_pops = {
 	while = {
-	   count = 6
+	   count = 4
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -562,7 +583,7 @@ generate_hum_sirona_pops = {
 
 generate_hum_shanxi_pops = {
 	while = {
-	   count = 7
+	   count = 4
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -570,7 +591,7 @@ generate_hum_shanxi_pops = {
 
 generate_hum_bekenstein_pops = {
 	while = {
-	   count = 6
+	   count = 5
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -587,7 +608,7 @@ generate_hum_yandoa_pops = {
 
 generate_hum_mindoir_pops = {
 	while = {
-	   count = 2
+	   count = 3
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -595,7 +616,7 @@ generate_hum_mindoir_pops = {
 
 generate_hum_arcturusstation_pops = {
 	while = {
-	   count = 2
+	   count = 1
 	   generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -866,7 +887,7 @@ generate_for_axhani_hab_pops = {
 
 generate_yah_parnack_pops = {
 	while = {
-	   count = 24
+	   count = 22
 	   generate_yahgPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -876,21 +897,13 @@ generate_yah_parnack_pops = {
 
 generate_ral_turvess_pops = {
 	while = {
-	   count = 31
+	   count = 28
 	   generate_raloiPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
 
 #####VORCHA CLANDOM#####
-
-generate_vorcha_buildings = {
-	add_building = building_capital	
-}
-
-generate_parasc_buildings = {
-	add_building = building_hab_capital
-}
 
 generate_vor_heshtok_pops = {
 	while = {
@@ -910,7 +923,7 @@ generate_vor_naskral_pops = {
 
 generate_vor_parasc_pops = {
 	while = {
-	   count = 2
+	   count = 4
 	   generate_vorchaPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -920,7 +933,7 @@ generate_vor_parasc_pops = {
 
 generate_get_rannoch_pops = {
 	while = {
-		count = 40
+		count = 30
 		generate_gethPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -928,7 +941,7 @@ generate_get_rannoch_pops = {
 
 generate_get_adas_pops = {
 	while = {
-		count = 25
+		count = 4
 		generate_gethPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -936,7 +949,7 @@ generate_get_adas_pops = {
 
 generate_get_charoum_pops = {
 	while = {
-		count = 20
+		count = 8
 		generate_gethPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -944,7 +957,7 @@ generate_get_charoum_pops = {
 
 generate_get_haestrom_pops = {
 	while = {
-		count = 25
+		count = 4
 		generate_gethPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -968,7 +981,7 @@ generate_get_naanacurrel_pops = {
 
 generate_get_charoum_pops = {
 	while = {
-		count = 10
+		count = 8
 		generate_gethPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -994,7 +1007,7 @@ generate_get_habitat_pops = {
 
 generate_cerb_cronos_pops = {
 	while = {
-		count = 20
+		count = 15
 		generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1002,7 +1015,7 @@ generate_cerb_cronos_pops = {
 
 generate_cerb_lazarus_pops = {
 	while = {
-		count = 5
+		count = 3
 		generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1010,7 +1023,7 @@ generate_cerb_lazarus_pops = {
 
 generate_cerb_minuteman_pops = {
 	while = {
-		count = 8
+		count = 3
 		generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1018,7 +1031,7 @@ generate_cerb_minuteman_pops = {
 
 generate_cerb_barn_pops = {
 	while = {
-		count = 10
+		count = 3
 		generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1042,7 +1055,7 @@ generate_cerb_vulcan_pops = {
 
 generate_cerb_therm_pops = {
 	while = {
-		count = 10
+		count = 3
 		generate_humanPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1062,7 +1075,7 @@ generate_gothones_vindicta_pops = {
 
 generate_rac_suen_pops = {
 	while = {
-		count = 40
+		count = 25
 		generate_rachniPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1070,7 +1083,7 @@ generate_rac_suen_pops = {
 
 generate_rac_utukku_pops = {
 	while = {
-		count = 15
+		count = 17
 		generate_rachniPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1080,7 +1093,7 @@ generate_rac_utukku_pops = {
 
 generate_asi_illium_pops = {
 	while = {
-	   count = 21
+	   count = 15
 	   generate_asariPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1090,7 +1103,7 @@ generate_asi_illium_pops = {
 
 generate_her_station_pops = {
 	while = {
-		count = 30
+		count = 15
 		generate_gethPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1098,7 +1111,7 @@ generate_her_station_pops = {
 
 generate_her_colony_pops = {
 	while = {
-		count = 20
+		count = 5
 		generate_gethPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1132,7 +1145,7 @@ generate_omega_pops = {
 	   generate_asariPop = yes
 	}
 	while = {
-		count = 27
+		count = 13
 		generate_misc_terminus_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1142,7 +1155,7 @@ generate_omega_pops = {
 
 generate_rayya_pops = {
 	while = {
-	   count = 34
+	   count = 10
 	   generate_quarianPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1166,7 +1179,7 @@ generate_illium_pops = {
 
 generate_csec_citadel_pops = {
 	while = {
-	   count = 6
+	   count = 12
 	   generate_misc_council_race_pop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1182,7 +1195,7 @@ generate_csec_citadel_pops = {
 
 generate_anhur_pops = {
 	while = {
-	   count = 7
+	   count = 6
 	   generate_humanPop = yes
 	}
 	while = {
@@ -1198,11 +1211,11 @@ generate_anhur_pops = {
 
 generate_wrill_pops = {
 	while = {
-	   count = 4
+	   count = 2
 	   generate_kroganPop = yes
 	}
 	while = {
-		count = 6
+		count = 4
 		generate_vorchaPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1230,28 +1243,12 @@ generate_relic_pops = {
 
 generate_noveria_pops = {
 	while = {
-		count = 3
+		count = 2
 		generate_salarianPop = yes
 	}
 	while = {
 		count = 2
-		generate_turianPop = yes
-	}
-	while = {
-		count = 2
 		generate_humanPop = yes
-	}
-	while = {
-		count = 2
-		generate_humanPop = yes
-	}
-	while = {
-		count = 1
-		generate_hanarPop = yes
-	}
-	while = {
-		count = 2
-		generate_asariPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
 }
@@ -1279,7 +1276,7 @@ generate_relic_drifting_skies_pops = {
 
 generate_asteria_pops = {
 	while = {
-	   count = 10
+	   count = 13
 	   generate_asariPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
@@ -1287,7 +1284,7 @@ generate_asteria_pops = {
 
 generate_namakli_pops = {
 	while = {
-		count = 3
+		count = 4
 		generate_vorchaPop = yes
 	}
 	every_owned_pop = { set_pop_flag = init_spawn }
