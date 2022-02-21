@@ -105,7 +105,7 @@ sys_sandbox_chabtan_init = {
 						set_country_flag = parnack_regime_primitive
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
-						set_country_flag = canon_map
+						set_country_flag = sandbox_map
 						save_global_event_target_as = parnack_regime
 					}						
 				}
@@ -125,6 +125,7 @@ sys_sandbox_chabtan_init = {
 			}
 			set_owner = event_target:parnack_regime
 			generate_start_deposits_and_blockers = yes
+			generate_yah_parnack_capitol_buildings = yes
 			generate_yah_parnack_pops = yes
 			set_name = "Parnack"
 		}	

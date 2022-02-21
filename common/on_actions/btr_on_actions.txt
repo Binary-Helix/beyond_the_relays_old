@@ -20,16 +20,19 @@ empire_init_capital_planet = {
 
 on_game_start_country = {
 	events = {
-	 	btr_setup.1
+		btr_setup.1
 		btr_setup.102
 		btr_setup.103		
 		btr_setup.104
 		btr_setup.105
 		btr_setup.106
+		btr_setup.109
 		btr_setup.2
 		btr_setup.201
 		btr_setup.202
 		btr_setup.203
+		btr_setup.3
+		btr_setup.4
 	# #	btr_mars.0
 	# 	#migrant_fleet.0
 	# 	#btr_geth_start.1
@@ -175,3 +178,8 @@ on_planet_bombarded = {
 	#	btr_mercenary.28
 	}
 }
+# empire_init_add_technologies = {
+# 	events = {
+# 		btr_setup.3
+# 	}
+# }

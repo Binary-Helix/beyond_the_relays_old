@@ -28,6 +28,7 @@ mec_asarirepublics_civ={
 	trait = "mec_asari_trait_biotic"
 	trait = "trait_charismatic"
 	trait = "mec_asari_trait_sophisticated"
+	trait = "trait_asari_habitability_preference"
 
 	origin="mec_asari_origin_thessia"	
 
@@ -85,7 +86,7 @@ salarian_union={
     #species_bio="PRESCRIPTED_species_bio_salarian_union"	
 
 	authority="auth_oligarchic"
-	government="gov_science_directorate"
+	government="gov_salarian_government"
 	civics={ "civic_btr_salarian_special_task_group" "civic_btr_salarian_matriarchy" }
 
 	flags={ custom_start_screen salarian_union btr_empire canon_map hybrid_map sandbox_map genophage_empire council_race }
@@ -97,6 +98,7 @@ salarian_union={
 	trait="btr_salarian_genius"
 	trait="trait_rapid_breeders"
 	trait="trait_weak"
+	trait = "trait_salarian_habitability_preference"
 	
 	origin="origin_salarian_union"	
 
@@ -167,6 +169,7 @@ turian_hierarchy={
 	trait="trait_conformists"
 	trait="trait_nonadaptive"
 	trait="trait_talented"
+	trait = "trait_turian_habitability_preference"
 	
 	origin="origin_turian_hierarchy"	
 
@@ -241,6 +244,7 @@ courts_of_dekuuna={
 	trait= "trait_nomadic"
 	trait= "trait_slow_breeders"
 	trait= "trait_nonadaptive"
+	trait = "trait_elcor_habitability_preference"
 	
 	origin="origin_courts_of_dekuuna"	
 
@@ -311,6 +315,7 @@ illuminated_primacy={
 	trait="trait_communal"
 	trait="btr_hanar_bureaucratic"
 	trait="btr_hanar_spiritual"
+	trait = "trait_hanar_habitability_preference"
 	
 	origin="origin_illuminated_primacy"	
 
@@ -378,6 +383,7 @@ systems_alliance={
 	trait="btr_human_multicultural"
 	trait="trait_wasteful"
 	trait="trait_quick_learners"
+	trait = "trait_human_habitability_preference"
 	
 	origin="origin_systems_alliance"	
 
@@ -449,6 +455,7 @@ vol_protectorate={
 	trait="btr_volus_tradesmen"
 	trait="trait_sedentary"
 	trait="btr_volus_trait_core"
+	trait = "trait_volus_habitability_preference"
 	
 	origin="origin_vol_protectorate"	
 
@@ -518,6 +525,7 @@ vol_protectorate_b={
 	trait="btr_volus_tradesmen"
 	trait="trait_sedentary"
 	trait="btr_volus_trait_core"
+	trait = "trait_volus_habitability_preference"
 	
 	origin="origin_vol_protectorate"	
 
@@ -590,6 +598,7 @@ batarian_hegemony={
 	trait="btr_batarian_shrewd_business"
 	trait="trait_industrious"
 	trait="trait_deviants"
+	trait = "trait_batarian_habitability_preference"
 	
 	origin="origin_batarian_hegemony"	
 
@@ -647,7 +656,7 @@ cerberus={
     #species_bio="PRESCRIPTED_species_bio_cerberus"	
 
 	authority="auth_corporate"
-	government="gov_criminal_syndicate"
+	government= "gov_cerberus_government"
 	
 	civics={ "civic_criminal_heritage" "civic_ruthless_competition" }
 
@@ -661,6 +670,7 @@ cerberus={
 	trait="btr_human_multicultural"
 	trait="trait_wasteful"
 	trait="trait_quick_learners"
+	trait = "trait_human_habitability_preference"
 	
 	origin="origin_cerberus"	
 
@@ -797,6 +807,7 @@ gothones_remnant={
 
 	trait="btr_gothones_physical_enhancements"
 	trait="btr_gothones_genetic_engineering"
+	trait = "trait_gothones_habitability_preference"
 	
 	origin="origin_gothones_remnant"	
 
@@ -867,6 +878,7 @@ aralakh_kahmat={
 	trait="trait_quarrelsome"
 	trait="trait_very_strong"
 	trait="trait_slow_learners"
+	trait = "trait_krogan_habitability_preference"
 	
 	origin="origin_aralakh_kahmat"	
 
@@ -936,6 +948,7 @@ lystheni_order={
 	trait="btr_lystheni_united_vision"
 	trait="trait_rapid_breeders"
 	trait="trait_weak"
+	trait = "trait_lystheni_habitability_preference"
 	
 	origin="origin_lystheni_order"	
 
@@ -1004,6 +1017,7 @@ migrant_fleet={
 	trait="trait_traditional"
 	trait="btr_quarian_weak_immune_system"
 	trait="btr_quarian_adept_engineers"
+	trait = "trait_quarian_habitability_preference"
 	
 	origin="origin_migrant_fleet"	
 
@@ -1075,6 +1089,7 @@ omega={
 	trait = "mec_asari_trait_biotic"
 	trait = "trait_charismatic"
 	trait = "mec_asari_trait_sophisticated"
+	trait = "trait_asari_habitability_preference"
 	
 	origin="origin_omega"	
 
@@ -1145,6 +1160,7 @@ omega_b={
 	trait = "mec_asari_trait_biotic"
 	trait = "trait_charismatic"
 	trait = "mec_asari_trait_sophisticated"
+	trait = "trait_asari_habitability_preference"
 	
 	origin="origin_omega"	
 
@@ -1211,6 +1227,7 @@ sedriicae_collective={
 	ethic="ethic_pacifist"
 
 	trait="trait_adaptive"
+	trait = "trait_forayan_habitability_preference"
 
 	
 	origin="origin_sedriicae_collective"	
@@ -1287,6 +1304,7 @@ parnack_regime={
 	trait="trait_quarrelsome"
 	trait="btr_yahg_keen_mind"
 	trait="trait_repugnant"
+	trait = "trait_yahg_habitability_preference"
 	
 	origin="origin_parnack_regime"	
 
@@ -1356,6 +1374,7 @@ rachni_hive={
 	trait="trait_rapid_breeders"
 	trait="trait_repugnant"
 	trait="trait_strong"
+	trait = "trait_rachni_habitability_preference"
 	
 	
 	origin = "origin_rachni_hive"
@@ -1422,6 +1441,7 @@ raloi_republic={
 
 	trait="trait_talented"
 	trait="trait_conservational"
+	trait = "trait_raloi_habitability_preference"
 	
 	origin="origin_raloi_republic"	
 
@@ -1491,6 +1511,7 @@ remnants_of_rakhana={
 	trait="trait_quick_learners"
 	trait="trait_resilient"
 	trait="trait_nomadic"
+	trait = "trait_drell_habitability_preference"
 	
 	origin="origin_remnants_of_rakhana"	
 
@@ -1558,6 +1579,7 @@ vorcha_clandom={
 	trait="btr_vorcha_biology"
 	trait="btr_vorcha_warring_language"
 	trait="trait_quarrelsome"
+	trait = "trait_vorcha_habitability_preference"
 	
 	origin="origin_vorcha_clandom"	
 
@@ -1630,6 +1652,7 @@ mec_asariillium_civ={
 	trait = "mec_asari_trait_biotic"
 	trait = "trait_charismatic"
 	trait = "mec_asari_trait_sophisticated"
+	trait = "trait_asari_habitability_preference"
 	
 	origin="mec_asari_origin_illium"	
 
@@ -1704,6 +1727,7 @@ collectors={
 	trait="trait_traditional"
 	trait="trait_resilient"
 	trait="trait_strong"
+	trait = "trait_collector_habitability_preference"
 	
 	origin="origin_collectors"	
 

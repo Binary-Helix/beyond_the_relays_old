@@ -166,7 +166,7 @@ sys_tartarusdebrisfield_init = {
 						}
 					}
 					effect = {
-						set_graphical_culture = mammalian_01
+						set_graphical_culture = coll_01
 						set_country_flag = collectors_empire
 						set_country_flag = init_spawned
 						set_country_flag = custom_start_screen
@@ -182,6 +182,12 @@ sys_tartarusdebrisfield_init = {
 				limit = { has_country_flag = collectors_empire }
 				save_global_event_target_as = collectors_empire
 				species = { save_global_event_target_as = collectorSpecies }
+			}
+			give_technology = {
+				tech = tech_gene_tailoring
+				tech = tech_regenerative_hull_tissue
+				tech = tech_unity_of_purpose
+				message = no
 			}
 			set_owner = event_target:collectors_empire
 			generate_btr_start_deposits_and_blockers = yes

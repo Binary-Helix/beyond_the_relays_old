@@ -1,31 +1,5 @@
 
 namespace = btr_setup
-
-country_event = {
-	id = btr_setup.01 
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = {
-		if = {
-			limit = {
-				OR = {
-					galaxy_size = "btr_hybrid_400"
-				}
-			}
-			set_global_flag = playing_hybrid
-		}
-		if = {
-			limit = { 
-				OR = {
-					galaxy_size = "btr_sandbox_400"
-				}
-			}
-			set_global_flag = playing_sandbox
-		}
-	} 
-}
-
 # Add starting resources
 country_event = {
 	id = btr_setup.1
@@ -35,7 +9,8 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				has_global_flag = playing_sandbox
+				galaxy_size = btr_sandbox_400
+				#has_global_flag = playing_sandbox
 			}
 			add_resource = { energy = 200	}
 			add_resource = { minerals = 200 }
@@ -47,7 +22,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = asari_republics
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 3500	}
 			add_resource = { minerals = 2000 }
@@ -59,7 +34,7 @@ country_event = {
 		if = {
 			limit = {	
 				has_country_flag = salarian_union
-				has_global_flag = playing_hybrid
+				#galaxy_size = btr_hybrid_400
 			}	
 			add_resource = { energy = 2600	}
 			add_resource = { minerals = 1480 }
@@ -71,7 +46,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = turian_hierarchy
-				has_global_flag = playing_hybrid
+				#galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 2750	}
 			add_resource = { minerals = 1650 }
@@ -83,7 +58,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = courts_of_dekuuna
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1900	}
 			add_resource = { minerals = 1200 }
@@ -95,7 +70,7 @@ country_event = {
 		if = {
 			limit = {	
 				has_country_flag = illuminated_primacy
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1850	}
 			add_resource = { minerals = 1240 }
@@ -107,7 +82,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = systems_alliance
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 450 }
@@ -119,7 +94,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = vol_protectorate
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 3100	}
 			add_resource = { minerals = 1240 }
@@ -131,7 +106,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = batarian_hegemony	
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1200	}
 			add_resource = { minerals = 600 }
@@ -143,7 +118,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = remnants_of_rakhana	
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 300	}
 			add_resource = { minerals = 200 }
@@ -155,7 +130,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = aralakh_kahmat
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 400	}
 			add_resource = { minerals = 200 }
@@ -167,7 +142,7 @@ country_event = {
 		if = {
 			limit = { 
 				has_country_flag = lystheni_order
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 400 }
@@ -179,7 +154,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = migrant_fleet
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 700	}
 			add_resource = { minerals = 320 }
@@ -191,7 +166,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = lystheni_order
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 860	}
 			add_resource = { minerals = 350 }
@@ -203,7 +178,7 @@ country_event = {
 		if = {
 			limit = {	
 				has_country_flag = parnack_regime_player
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 400	}
 			add_resource = { minerals = 200 }
@@ -215,7 +190,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = raloi_republic
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 450	}
 			add_resource = { minerals = 200 }
@@ -227,7 +202,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = vorcha_clandom
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 620	}
 			add_resource = { minerals = 250 }
@@ -239,7 +214,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = geth_consensus
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 2800	}
 			add_resource = { minerals = 1050 }
@@ -249,7 +224,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = rachni_hive
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 350 }
@@ -260,7 +235,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = gothones_remnant
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 950	}
 			add_resource = { minerals = 420 }
@@ -272,7 +247,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = illium_corporate_interests
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1900	}
 			add_resource = { minerals = 710 }
@@ -284,7 +259,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = cerberus_empire
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 350 }
@@ -296,7 +271,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = disciples_of_nazara
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 2700	}
 			add_resource = { minerals = 1050 }
@@ -317,7 +292,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = noveria_development_corporation
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 500 }
@@ -329,7 +304,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = omega_empire
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 800	}
 			add_resource = { minerals = 600 }
@@ -341,7 +316,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = relic_mineral_works
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 2500 }
@@ -353,7 +328,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = asteria_agriculture
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 500 }
@@ -365,7 +340,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = united_anhur_corporations
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 2500 }
@@ -377,7 +352,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = wrill_mining_consortium
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 1150	}
 			add_resource = { minerals = 2500 }
@@ -389,7 +364,7 @@ country_event = {
 		if = {
 			limit = {
 				has_country_flag = collectors_empire
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 			}
 			add_resource = { energy = 4000	}
 			add_resource = { minerals = 1330 }
@@ -397,38 +372,66 @@ country_event = {
 			add_resource = { influence = 100 }
 			add_resource = { food = 2050	}
 		}
+		if = {
+			limit = {
+				has_country_flag = sedriicae_collective
+				galaxy_size = btr_hybrid_400
+			}
+			add_resource = { energy = 1150	}
+			add_resource = { minerals = 2500 }
+			add_resource = { alloys = 1350 }
+			add_resource = { influence = 100 }
+			add_resource = { food = 1350	}
+			add_resource = { consumer_goods = 800}
+		}
 	}
 }
 
+#Pregame Genocide
 event = {
 	id = btr_setup.102
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
 		every_country = {
-			limit = {
-				is_country_type = default
-				is_country_type = neutral_faction
-				is_country_type = rebel
-				is_country_type = enclave
-				is_country_type = tiyanki
-				is_country_type = tiyanki_garrison
-				is_country_type = amoeba
-				is_country_type = amoeba_borderless
-				is_country_type = amoeba_garrison
-				is_country_type = crystal
-				is_country_type = drone
-				NOT = { has_country_flag = btr_empire }
-				is_ai = yes
+			if = {
+				limit = {
+					is_country_type = default
+					is_country_type = neutral_faction
+					is_country_type = rebel
+					is_country_type = enclave
+					is_country_type = tiyanki
+					is_country_type = tiyanki_garrison
+					is_country_type = amoeba
+					is_country_type = amoeba_borderless
+					is_country_type = amoeba_garrison
+					is_country_type = crystal
+					is_country_type = drone
+					NOT = { has_country_flag = btr_empire }
+					is_ai = yes
+				}
+				destroy_country = yes
+				every_owned_pop = {	
+					limit = { 
+						NOT = { 
+							 has_pop_flag = init_spawn 
+						}
+					}
+					kill_pop = yes
+				}
 			}
-			destroy_country = yes
-			every_owned_pop = {
-				limit = { NOT = { has_pop_flag = init_spawn } }
-				kill_pop = yes
-			}
-			every_country = {
-				every_owned_planet = {
-					check_planet_employment = yes				
+			if = {
+				limit = {
+					has_country_flag = btr_empire
+				}
+				every_owned_pop = {
+					limit = { NOT = { has_pop_flag = init_spawn } }
+					kill_pop = yes
+				}
+				every_country = {
+					every_owned_planet = {
+						check_planet_employment = yes				
+					}
 				}
 			}
 		}
@@ -457,7 +460,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = mec_asari_origin_thessia
 				any_system_within_border = {
 					has_star_flag = parnitha_system
@@ -684,7 +687,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_turian_hierarchy
 				any_system_within_border = {
 					has_star_flag = trebia_system
@@ -971,7 +974,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_salarian_union
 				any_system_within_border = {
 					has_star_flag = pranas_system
@@ -1244,7 +1247,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_courts_of_dekuuna
 				any_system_within_border = {
 					has_star_flag = phontes_system
@@ -1348,7 +1351,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_illuminated_primacy
 				any_system_within_border = {
 					has_star_flag = kanala_system
@@ -1442,7 +1445,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_systems_alliance
 				any_system_within_border = {
 					has_star_flag = sol_system
@@ -1673,7 +1676,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_vol_protectorate
 				any_system_within_border = {
 					has_star_flag = aru_system
@@ -1852,7 +1855,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_batarian_hegemony
 				any_system_within_border = {
 					has_star_flag = harsa_system
@@ -2070,7 +2073,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_aralakh_kahmat
 				any_system_within_border = {
 					has_star_flag = aralakh_system
@@ -2118,7 +2121,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_sedriicae_collective
 				any_system_within_border = {
 					has_star_flag = nosikae_system
@@ -2232,7 +2235,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_geth_consensus
 				any_system_within_border = {
 					has_star_flag = tikkun_system
@@ -2370,7 +2373,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = origin_gothones_remnant
 				any_system_within_border = {
 					has_star_flag = ultio_system
@@ -2434,7 +2437,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_origin = mec_asari_origin_illium
 				any_system_within_border = {
 					has_star_flag = tasale_system
@@ -2541,7 +2544,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = cerberus_empire
 				any_system_within_border = {
 					has_star_flag = anadius_system
@@ -2678,7 +2681,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = disciples_of_nazara
 				any_system_within_border = {
 					has_star_flag = theseaofstorms_system
@@ -2840,7 +2843,7 @@ country_event = {
 		# }
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = lystheni_order
 				any_system_within_border = {
 					has_star_flag = taesin_system
@@ -2881,7 +2884,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = omega_empire
 				any_system_within_border = {
 					has_star_flag = sahrabarik_system
@@ -2945,7 +2948,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = noveria_development_corporation
 				any_system_within_border = {
 					has_star_flag = pax_system
@@ -2973,7 +2976,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = wrill_mining_consortium
 				any_system_within_border = {
 					has_star_flag = malgus_system
@@ -3001,7 +3004,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = relic_mineral_works
 				any_system_within_border = {
 					has_star_flag = relic_system
@@ -3029,7 +3032,7 @@ country_event = {
 		}	
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = united_anhur_corporations
 				any_system_within_border = {
 					has_star_flag = amun_system
@@ -3057,7 +3060,7 @@ country_event = {
 		}	
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = asteria_agriculture
 				any_system_within_border = {
 					has_star_flag = hekate_system
@@ -3079,7 +3082,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = raloi_republic
 				any_system_within_border = {
 					has_star_flag = azedes_system
@@ -3101,7 +3104,7 @@ country_event = {
 		}	
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = rachni_hive
 				any_system_within_border = {
 					has_star_flag = maskimxul_system
@@ -3123,7 +3126,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = collectors_empire
 				any_system_within_border = {
 					has_star_flag = tartarus_system
@@ -3160,7 +3163,7 @@ country_event = {
     if = {
       limit = {
         OR = {
-			has_global_flag = playing_hybrid
+			galaxy_size = btr_hybrid_400
         }
       }
       #Set Contacts
@@ -3787,14 +3790,14 @@ country_event = {
 
 	immediate = {
 		if = {
-			limit = { has_global_flag = playing_hybrid exists = event_target:vol_protectorate exists = event_target:turian_hierarchy }
+			limit = { galaxy_size = btr_hybrid_400 exists = event_target:vol_protectorate exists = event_target:turian_hierarchy }
 			event_target:vol_protectorate = {
 				establish_communications_no_message = event_target:turian_hierarchy
 				set_subject_of = { who = event_target:turian_hierarchy subject_type = special_protectorate }
 			}
 		}
 		if = {
-			limit = { has_global_flag = playing_hybrid exists = event_target:asteria_agriculture exists = event_target:asari_republics }
+			limit = { galaxy_size = btr_hybrid_400 exists = event_target:asteria_agriculture exists = event_target:asari_republics }
 			event_target:asteria_agriculture = {
 				establish_communications_no_message = event_target:asari_republics
 				set_subject_of = { who = event_target:asari_republics subject_type = subsidiary }				
@@ -3961,7 +3964,7 @@ country_event = {
 	immediate = {
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = omega_empire
 			}
 			every_owned_pop_species = {
@@ -3976,7 +3979,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = citadel_council
 			}
 			every_owned_pop_species = {
@@ -3991,7 +3994,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = noveria_development_corporation
 			}
 			every_owned_pop_species = {
@@ -4006,7 +4009,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = wrill_mining_consortium
 			}
 			every_owned_pop_species = {
@@ -4021,7 +4024,7 @@ country_event = {
 		}		
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = relic_mineral_works
 			}
 			every_owned_pop_species = {
@@ -4036,7 +4039,7 @@ country_event = {
 		}			
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = united_anhur_corporations
 			}
 			every_owned_pop_species = {
@@ -4051,7 +4054,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = illuminated_primacy
 			}
 			every_owned_pop_species = {
@@ -4066,7 +4069,7 @@ country_event = {
 		}
 		if = {
 			limit = { 
-				has_global_flag = playing_hybrid
+				galaxy_size = btr_hybrid_400
 				has_country_flag = illium_corporate_interests
 			}
 			every_owned_pop_species = {
@@ -4419,6 +4422,223 @@ country_event = {
 					has_country_flag = rachni_hive
 				}
 				set_name = "Rachni Hive"
+			}
+		}
+	}
+}
+country_event = {
+	id = btr_setup.109
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = btr_empire
+			}
+			every_country = {
+				give_technology = {
+					tech = tech_automated_exploration
+				}
+			}
+		}
+		
+	}
+}
+country_event = {
+	id = btr_setup.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		# Destroys player ships (military) to replace them with corvettes of their design
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_military owner = { is_ai = no }
+			}
+			fleet = {
+				if = {
+					limit = { exists = leader}
+					leader = { unassign_leader = this}
+				}
+				set_name = "DISBAND ME"
+				delete_fleet = {
+					target = this
+					destroy_template = yes
+				}
+			}
+			delete_ship = this
+		}
+		# Sets star as spawn location of the fleet
+		root.capital_scope = {
+			star = {
+				save_event_target_as = fleet_location
+			}
+		}	
+		# Creates 3 Corvettes for each empire
+		create_fleet = {
+			effect = {
+				set_owner = root
+				set_location = event_target:fleet_location
+				while = {
+					count = 3
+					create_btr_corvette = yes
+					set_location = {
+						target = event_target:fleet_location
+						distance = 80
+						angle = random
+					}
+				}
+			}
+		}
+		if = {
+			limit = { is_ai = yes }
+			# creates 3 scientists for each empire
+			while = {
+				count = 3
+				create_leader = {
+					class = scientist
+					species = owner_main_species
+					name = random
+					skill = 1
+				}
+			}
+			# creates a science ship for the ai empires
+			while = {
+				count = 1
+				create_fleet = {
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random 
+							random_existing_design = science
+							graphical_culture = owner
+							prefix = no
+						}
+						set_fleet_stance = evasive
+						set_location = root.capital_scope.star
+						owner = {
+							create_leader = {
+								class = scientist
+								sub_type = survey
+								name = random
+								species = owner_main_species
+							}
+						}
+						set_leader = last_created_leader
+					}
+				}
+			}
+			# Creates a construction ship for ai empires
+			while = {
+				count = 1
+				create_fleet = {
+					effect = {
+						set_owner = root
+						create_ship = {
+							name = random 
+							design = last_created_design
+							random_existing_design = constructor
+							graphical_culture = owner
+							prefix = no
+						}
+						set_fleet_stance = evasive
+						set_location = root.capital_scope.star
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = btr_setup.4
+	hide_window = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	immediate = {
+		every_galaxy_planet = { 
+			limit = {  
+				OR = {
+					is_planet_class = pc_dextro_continental
+					is_planet_class = pc_dextro_prairie
+					is_planet_class = pc_dextro_ocean
+					is_planet_class = pc_dextro_mangrove
+					is_planet_class = pc_dextro_desert
+					is_planet_class = pc_dextro_supercon
+					is_planet_class = pc_dextro_tepid
+					is_planet_class = pc_dextro_lake
+					is_planet_class = pc_dextro_med
+					is_planet_class = pc_dextro_semiarid
+					is_planet_class = pc_dextro_savannah
+					is_planet_class = pc_dextro_aquatic
+					is_planet_class = pc_dextro_aquaticcity
+					is_planet_class = pc_dextro_hajungle
+					is_planet_class = pc_dextro_superhabitable
+					is_planet_class = pc_dextro_tropical
+					is_planet_class = pc_dextro_biolumen
+					is_planet_class = pc_dextro_hadesert
+					is_planet_class = pc_dextro_primal
+					is_planet_class = pc_dextro_steppe
+					is_planet_class = pc_dextro_desertislands
+					is_planet_class = pc_dextro_duneforest
+					is_planet_class = pc_dextro_oasis
+					is_planet_class = pc_dextro_arid
+					is_planet_class = pc_dextro_coral
+					is_planet_class = pc_dextro_veld
+					is_planet_class = pc_dextro_tidallylocked
+					is_planet_class = pc_dextro_wetswamp
+					is_planet_class = pc_dextro_aquaticcold
+					is_planet_class = pc_dextro_boreal
+					is_planet_class = pc_dextro_forest
+					is_planet_class = pc_dextro_swamp
+					is_planet_class = pc_dextro_mesa
+					is_planet_class = pc_dextro_aquatichot
+					is_planet_class = pc_dextro_geothermal
+					is_planet_class = pc_dextro_karst
+					is_planet_class = pc_dextro_lanthanide
+					is_planet_class = pc_dextro_storm
+					is_planet_class = pc_dextro_tundra
+					is_planet_class = pc_dextro_cascadian
+					is_planet_class = pc_dextro_highland
+					is_planet_class = pc_dextro_sandsea
+					is_planet_class = pc_dextro_outback	
+					is_planet_class = pc_dextro_aquifer
+					is_planet_class = pc_dextro_subarctic
+					is_planet_class = pc_dextro_lichen
+					is_planet_class = pc_dextro_mud
+					is_planet_class = pc_dextro_alpine
+					is_planet_class = pc_dextro_glacio
+					is_planet_class = pc_dextro_eyeball
+					is_planet_class = pc_dextro_rogue
+					is_planet_class = pc_dextro_snow
+					is_planet_class = pc_dextro_arctic
+					is_planet_class = pc_dextro_glacial
+					is_planet_class = pc_dextro_aeolian
+					is_planet_class = pc_dextro_frozen_desert
+					is_planet_class = pc_dextro_antarctic
+					is_planet_class = pc_dextro_nuked
+					is_planet_class = pc_dextro_retinal
+					is_planet_class = pc_dextro_ash
+					is_planet_class = pc_dextro_ashcity
+					is_planet_class = pc_dextro_ashring
+					is_planet_class = pc_dextro_acid
+					is_planet_class = pc_dextro_ammonia
+					is_planet_class = pc_dextro_ammoniacity
+					is_planet_class = pc_dextro_ammoniaring
+					is_planet_class = pc_dextro_methane
+					is_planet_class = pc_dextro_methanecity
+					is_planet_class = pc_dextro_methanering
+					is_planet_class = pc_dextro_sulfur
+					is_planet_class = pc_dextro_sulfurcity
+					is_planet_class = pc_dextro_sulfurring
+					is_planet_class = pc_dextro_irradiated
+				}
+			}	
+			random_list = {
+				100 = { 
+					add_modifier = { modifier = dextro_planet days = -1	} 
+				}
 			}
 		}
 	}

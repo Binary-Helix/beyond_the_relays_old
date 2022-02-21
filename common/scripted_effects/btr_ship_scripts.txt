@@ -1,0 +1,279 @@
+create_btr_corvette = {
+	if = {
+		limit = {
+			root = {
+				is_species_class = HUM
+				has_country_flag = systems_alliance
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = sa_01
+		}
+	}
+	else_if = {
+		limit = {
+			root = {
+				is_species_class = HUM
+				has_country_flag = cerberus_empire
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = cerb_01
+		}
+	}
+	else_if = {
+		limit = {
+			root = {
+				is_species_class = MECASA
+				has_country_flag = asari_republics
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = asari_01
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = MECASA
+				has_country_flag = illium_corporate_interests
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = asari_01
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = SAL
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = VOL
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = LYS
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = KRO
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = TUR
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = tur_01
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = HAN
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = DRE
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = ELC
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = GOT
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = tur_01
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = GTH
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = geth_01
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				has_country_flag = omega_empire
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = QUA
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = quar_01
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = RAC
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = HSK
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = BAT
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				is_species_class = VOR
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+	else_if = {
+		limit = { 
+			root = {
+				has_country_flag = raloi_republic
+			}
+		}
+		create_ship = {
+			name = random 
+			random_existing_design = corvette
+			prefix = no
+			graphical_culture = root
+		}
+	}
+}

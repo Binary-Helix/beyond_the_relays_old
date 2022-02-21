@@ -60,13 +60,13 @@ sys_parnitha_init = {
 		class = "pc_continental"
 		orbit_distance = 66
 		orbit_angle = 80
-		size = 14
+		size = 25
 		has_ring = no
 		starting_planet = yes
 
 		deposit_blockers = none
 		modifiers = none
-		flags = { thessia_planet pd_ignore }
+		flags = { thessia_planet pd_ignore special_start_planet }
 		
 		init_effect = {
 			prevent_anomaly = yes
@@ -140,6 +140,7 @@ sys_parnitha_init = {
 			generate_start_deposits_and_blockers = yes
 			generate_asr_thessia_capitol_buildings = yes
 			generate_asr_thessia_pops = yes
+			generate_asr_thessia_deposits = yes
 			set_name = "Thessia"
 		}
 	}
