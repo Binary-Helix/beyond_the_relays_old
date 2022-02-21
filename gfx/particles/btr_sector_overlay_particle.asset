@@ -1,0 +1,35 @@
+particle={
+	name="btr_sector_overlay_particle"
+	subsystem={
+		name="btr_sector_overlay"
+		max_amount=1
+		slave_particles=0
+		sort = "depth"
+		emitter_type="point"
+		invert=no
+		trail=no
+		local_space=yes
+		billboard=no
+		hide=no
+		texture={
+			file="gfx/particles/btr_sector_overlay.dds"
+			x=1
+			y=1
+			shader="ParticleAdditive"
+		}
+		color={
+			alpha=250.000
+		}
+		position={
+			x=0.000
+			y=0.000
+			z=0.000
+		}
+		start=0.000
+		duration=-1.000
+		life=999.000
+		emission=1.000
+		size=180.000
+		particle_pitch=90.000
+	}
+}
