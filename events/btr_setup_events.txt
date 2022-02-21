@@ -4446,6 +4446,25 @@ country_event = {
 		
 	}
 }
+country_event =  {
+	id = btr_setup.110
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = btr_empire
+			}
+			every_country = {
+				give_technology = {
+					tech = tech_production_increase
+				}
+			}
+		}
+	}
+}
 country_event = {
 	id = btr_setup.3
 	hide_window = yes
