@@ -1037,9 +1037,10 @@ generate_btr_collectors_capitol_buildings = {
 	while = { count = 3 add_district = { district_type = district_rw_science ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_farming ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_rw_industrial ignore_cap = yes } }
-	add_building = building_hive_major_capital
+	add_building = building_machine_major_capital
 	add_building = building_class_4_singularity
-	add_building = building_hive_node
+	add_building = building_machine_assembly_plant
+	add_building = building_simulation_1
 }
 
 generate_btr_citadel_districts = {

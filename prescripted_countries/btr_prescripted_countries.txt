@@ -1713,20 +1713,20 @@ collectors={
     species_adjective = "PRESCRIPTED_species_adjective_collectors"
     #species_bio="PRESCRIPTED_species_bio_collectors"	
 
-	authority="auth_hive_mind"
+	authority="auth_driven_assimilator"
 	government="gov_machine_assimilator"
-	civics={ civic_hive_subsumed_will civic_hive_one_mind }
+	civics={ "civic_machine_assimilator" "civic_machine_unitary_cohesion" }
 
 	flags={ custom_start_screen collectors_empire btr_empire hybrid_map sandbox_map }
 
 	ethic="ethic_gestalt_consciousness"
 
-	trait="trait_hive_mind"
-	trait="trait_repugnant"
-	trait="trait_nomadic"
-	trait="trait_traditional"
-	trait="trait_resilient"
-	trait="trait_strong"
+	trait="trait_machine_unit"
+	trait="trait_robot_streamlined_protocols"
+	trait="trait_robot_recycled"
+	trait="trait_robot_logic_engines"
+	trait="trait_robot_loyalty_circuits"
+	trait="trait_robot_high_maintenance"
 	trait = "trait_collector_habitability_preference"
 	
 	origin="origin_collectors"	
@@ -1755,7 +1755,7 @@ collectors={
 		}
 	}
 	ruler={
-		gender=female
+		gender = male
 		name="PRESCRIPTED_ruler_name_collectors"
 		portrait="collector"
 		texture=0
