@@ -1727,6 +1727,21 @@ collectors={
 	trait="trait_robot_high_bandwidth"
 	trait = "trait_collector_habitability_preference"
 	
+secondary_species = {
+        class = "MECASA"
+        portrait = "mec_asari"
+        name = "PRESCRIPTED_species_mec_asarirepublics_civ"
+        plural = "PRESCRIPTED_species_plural_mec_asarirepublics_civ"
+        adjective = "PRESCRIPTED_adjective_mec_asarirepublics_civ"
+        name_list = "mec_asari_names"
+        trait="trait_cybernetic"
+		trait = "mec_asari_trait_core"
+		trait = "mec_asari_trait_biotic"
+		trait = "trait_charismatic"
+		trait = "mec_asari_trait_sophisticated"
+		trait = "trait_asari_habitability_preference"
+    }
+
 	origin="origin_collectors"	
 
 	planet_name="Collector Base"
@@ -1761,7 +1776,6 @@ collectors={
 		clothes=0
 		leader_class="ruler"
 		ruler_title_male = "General"
-		ruler_title_female = "General"
 	}
 	spawn_enabled=always
 	room="collectors_room"		
