@@ -1,0 +1,26 @@
+# Non-asari leaders have a chance of getting educated in Thessia trait
+country_event = {
+	id = btr_asrep.02
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+			AND = {
+				NOT = {
+					from = {
+						species = { has_trait = mec_asari_trait_core }
+					}
+				}
+				has_global_flag = btr_asari_rep_university_open_doors
+			}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = scientist }
+				add_trait = btr_leader_trait_thessian_grad
+			}
+		}
+	}
+}
