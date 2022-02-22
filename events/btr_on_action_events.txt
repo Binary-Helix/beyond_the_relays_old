@@ -20,7 +20,28 @@ country_event = {
 			if = {
 				limit = { leader_class = scientist }
 				add_trait = btr_leader_trait_thessian_grad
+				add_skill = 1
 			}
+		}
+	}
+}
+
+# Asari Leaders get the asari leader trait
+country_event = {
+	id = btr_asrep.03
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+			from = {
+				species = { has_trait = mec_asari_trait_core }
+			}
+	}
+
+	immediate = {
+		from = {
+			add_trait = btr_leader_trait_asari
+			add_skill = 2
 		}
 	}
 }

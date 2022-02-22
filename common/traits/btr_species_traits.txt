@@ -50,9 +50,9 @@ mec_asari_trait_core = {
 		weight = 0
 	}
 
-	opposites = {
-		
-	}
+	# opposites = {
+	#	
+	#}
 
 	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_core.dds"
 
@@ -68,18 +68,28 @@ mec_asari_trait_core = {
 mec_asari_trait_biotic = {
 	cost = 2
 	potential_crossbreeding_chance = 0.75
-	#opposites = { }
 	allowed_archetypes = { BIOLOGICAL }
 	modification = no
 	randomized = no
 	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_biotic.dds"
 	
 	modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+		army_damage_mult = 0.15
 	}
-	custom_tooltip = mec_asari_trait_BIOTIC_EFFECT
+}
+
+btr_asari_trait_smooth_talk = {
+	cost = 0
+	potential_crossbreeding_chance = 0.75
+	allowed_archetypes = { BIOLOGICAL }
+	modification = no
+	randomized = no
 	
-	slave_cost = {
-		energy = 500
+	# Embassy effect in diplomaticy_economy
+	modifier = {
+		planet_amenities_mult = 0.1
+		army_damage_mult = 0.15
 	}
 }
 
