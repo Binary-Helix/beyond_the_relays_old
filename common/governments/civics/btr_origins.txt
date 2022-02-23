@@ -1,3 +1,22 @@
+btr_origin_asrep = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		diplo_weight_economy_mult = 0.33
+		country_trade_fee = -0.2
+		country_consumer_goods_produces_mult = 0.05
+		country_war_exhaustion_mult = 0.1
+		country_claim_influence_cost_mult = 1
+	}
+}
+
+
 origin_systems_alliance = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
@@ -233,26 +252,6 @@ origin_asteria_agriculture = {
 	random_weight = { 
 		base = 0 
 	} 
-}
-
-mec_asari_origin_thessia = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/mec_asari_origin_thessia_icon.dds"
-	picture = GFX_mec_asari_origin_thessia
-
-	initializers = { sys_parnitha_init }
-	max_once_global = yes
-	preferred_planet_class_neighbor = no
-
-	description = "mec_origin_tooltip_mec_asari_thessia_effects"
-	#Disable various first time events, they're not new to Thessia
-	flags = { mec_asari_asr custom_start_screen first_contact_event first_alien_life first_colony Story5 }
-
-	advanced_start = yes
-
-	#random_weight = {
-	#	base = 0
-	#}
 }
 
 mec_asari_origin_illium = {
