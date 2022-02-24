@@ -1,0 +1,202 @@
+##################
+# Vanilla Worlds #
+##################
+pc_highgrav_barren = {
+	entity = "barren_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_barren
+
+	atmosphere_color 		= hsv { 0.1 0.4 0.7 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	min_distance_from_sun = 40
+	max_distance_from_sun = 200
+	spawn_odds = 10
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0.2
+
+	planet_size = { min = 12 max = 30 }
+	moon_size = { min = 6 max = 10 }
+
+	colonizable = no
+}
+
+pc_highgrav_desert = {
+	entity = "desert_planet"
+	icon = GFX_planet_type_desert
+
+	climate = "dry"
+	initial = yes
+
+	entity_scale = @planet_standard_scale
+
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = @habitable_spawn_odds
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	production_spawn_chance = 0.4
+
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = yes
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_highgrav_cascadian = {
+	entity = "cascadian_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_cascadian
+	#appearance
+	picture = pc_cascadian
+	atmosphere_color 		= hsv { 0.58 0.5 0.9 }			
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_alpine.dds"
+	#planet defines
+	climate = "wet"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }		
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	spawn_odds = 0
+	uses_alternative_skies_for_moons = yes
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+}	
+
+pc_highgrav_forest = {
+	entity = "forest_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_forest
+	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+	#planet defines
+	climate = "wet"
+	colonizable = yes
+	initial = yes		
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	spawn_odds = 0
+	uses_alternative_skies_for_moons = yes
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_highgrav_veld = {
+	entity = "veld_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_veld
+	#appearance
+	picture = pc_veld  
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
+	#planet defines
+	climate = "dry"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }		
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	spawn_odds = 0
+	uses_alternative_skies_for_moons = yes
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_highgrav_arid = {
+	entity = "arid_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_arid
+
+	climate = "dry"
+	initial = yes
+
+	atmosphere_color 		= hsv { 0.50 0.3 0.7 }		#DONE
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	min_distance_from_sun = @habitable_min_distance
+	max_distance_from_sun = @habitable_max_distance
+	spawn_odds = @habitable_spawn_odds
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	colonizable = yes
+	district_set = standard
+	uses_alternative_skies_for_moons = yes
+
+	carry_cap_per_free_district = @carry_cap_normal
+}
+
+pc_highgrav_methane = {
+	entity = "methane_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_methane
+	#appearance
+	picture = pc_methane
+	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_methane.dds"
+	#planet defines
+	climate = "exotic"
+	colonizable = yes
+	initial = yes
+	#colonization_tech = { }		
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+	district_set = standard
+	carry_cap_per_free_district = @carry_cap_normal
+	starting_planet = no
+	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
+}
+
+pc_highgrav_chthonian = {
+	entity = "chthonian_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_barren
+	#appearance
+	picture = pc_chthonian
+	atmosphere_color 		= hsv { 0.55 0.3 0.75 }		
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+	#planet defines
+	colonizable = no
+	#colonization_tech = { }		
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+}
+
