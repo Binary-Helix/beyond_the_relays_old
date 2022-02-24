@@ -221,7 +221,7 @@ sys_bisalas_init = {
 		flags = { urdaum_planet pd_ignore }
 		moon = {
 			name = "Yapolam"
-			class = pc_cascadian
+			class = pc_highgrav_cascadian
 			orbit_distance = 13
 			orbit_angle = 177
 			size = 25	
@@ -337,7 +337,7 @@ sys_resyadum_init = {
 
 	planet = {
         name = "Jurdal"
-        class = pc_forest
+        class = pc_highgrav_forest
         orbit_distance = 35
         orbit_angle = 177
         size = 24
@@ -391,7 +391,7 @@ sys_salahiel_init = {
 
     planet = {
         name = "Ekuuna"
-        class = pc_veld
+        class = pc_highgrav_veld
         orbit_distance = 60
         orbit_angle = 24
         has_ring = no
@@ -444,7 +444,7 @@ sys_batalla_init = {
 
     planet = {
         name = "Thunawanuro"
-        class = pc_forest
+        class = pc_highgrav_forest
         orbit_distance = 30
         orbit_angle = 305
         has_ring = no
