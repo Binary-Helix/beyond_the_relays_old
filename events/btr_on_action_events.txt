@@ -45,3 +45,25 @@ country_event = {
 		}
 	}
 }
+
+# Asari Generals get the Commando trait
+country_event = {
+	id = btr_asrep.03
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+			from = {
+				species = { has_trait = mec_asari_trait_core }
+			}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { leader_class = general }
+				add_trait = btr_leader_trait_commando
+			}
+		}
+	}
+}

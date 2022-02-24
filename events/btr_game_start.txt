@@ -1,5 +1,7 @@
+namespace = btr_game_start
+
 ### Faction initializer event
-event = {
+country_event = {
 	id = btr_game_start.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -8,11 +10,55 @@ event = {
 		### Asari Republics Faction Setup
 		if = {
 			limit = {
-				from = {
-					has_government = gov_mec_asr
-				}
+				has_origin = btr_origin_asrep
 			}
 			enable_faction_of_type = xenoist
+			break = yes
+		}
+	}
+}
+
+### Origins -> tech, empire, deposits modifier initializer event
+country_event = {
+	id = btr_game_start.2
+	hide_window = yes
+	fire_only_once = yes
+
+	immediate = {
+		if = {
+			limit = { has_origin = btr_origin_asrep }
+			give_technology = {
+				tech = btr_tech_asrep_asari_arch
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_asrep_ship_design
+				message = no
+			}
+			add_modifier = {
+				modifier = btr_asrep_empire_modifier
+				days = -1
+			}
+			add_relic = btr_r_asrep_asha_lib
+			add_relic = btr_r_asrep_athane_temple
+			# home_planet = {
+			# 	add_deposit = btr_d_asrep_armali
+			# 	add_deposit = btr_d_asrep_nosdesera
+			# 	add_deposit = btr_d_asrep_serrice_univ
+			# 	add_deposit = btr_d_asrep_cresyl_plateau
+			# 	add_deposit = btr_d_asrep_askasian_mountains
+			# 	add_deposit = btr_d_asrep_pulian_delta
+			# 	add_deposit = btr_d_asrep_senecan_lakes
+			# 	add_deposit = btr_d_asrep_irssal_tea
+			# 	add_deposit = btr_d_asrep_eezo_deposits
+			# 	add_deposit = btr_d_asrep_thessia_net
+			# 	add_blocker = {
+			# 		type = btr_d_asrep_yisrin
+			# 	}
+			# 	add_blocker = {
+			# 		type = btr_d_asrep_zalis_spill
+			# 	}
+			# }
 			break = yes
 		}
 	}
