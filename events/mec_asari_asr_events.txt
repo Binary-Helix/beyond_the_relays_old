@@ -30,7 +30,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_origin = mec_asari_origin_thessia
+		has_origin = btr_origin_asrep
 	}
 
 	immediate = {
@@ -46,7 +46,7 @@ country_event = {
 				set_country_flag = mec_asari_thessia_owner_of_@prev
 				save_global_event_target_as = mec_asari_thessia_owner_of_@prev
 			}
-			create_archaeological_site = mec_asari_site_thessia_beacon
+			#create_archaeological_site = btr_site_prothean_beacon
 		}
 		# if = {
 		# 	limit = {

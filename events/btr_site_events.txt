@@ -1,0 +1,123 @@
+namespace = btr_site
+
+# Prothean digsite events - btr_site.100
+fleet_event = {
+	id = btr_site.101
+	title = "btr_site.101.name"
+	desc = "btr_site.101.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.101.a
+	}
+}
+
+fleet_event = {
+	id = btr_site.102
+	title = "btr_site.102.name"
+	desc = "btr_site.102.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.102.a
+	}
+}
+
+fleet_event = {
+	id = btr_site.103
+	title = "btr_site.103.name"
+	desc = "btr_site.103.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.103.a
+	}
+}
+
+fleet_event = {
+	id = btr_site.104
+	title = "btr_site.104.name"
+	desc = "btr_site.104.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.104.a
+	}
+}
+
+fleet_event = {
+	id = btr_site.105
+	title = "btr_site.105.name"
+	desc = "btr_site.105.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.105.a
+	}
+}

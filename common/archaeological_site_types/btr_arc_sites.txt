@@ -376,3 +376,53 @@ mec_asari_site_thessia_beacon = {
 		}
 	}
 }
+
+
+#################################
+##### BTR Prothean Dig Site #####
+#################################
+btr_site_prothean_beacon = {
+	desc = "btr_asari_site_prothean_beacon_intro"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.101
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.102
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.103
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.104
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.105
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}

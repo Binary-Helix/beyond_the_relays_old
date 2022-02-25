@@ -11542,7 +11542,9 @@ sys_satuarrd_init = {
         has_ring = no
         size = 12
 		flags = { rilar_planet pd_ignore }
-
+		init_effect = {
+			create_archaeological_site = btr_site_prothean_beacon
+		}
     }
 
     planet = {
@@ -11646,6 +11648,9 @@ sys_judor_init = {
         size = 21
 		has_ring = no
 		flags = { judoriv_planet pd_ignore }
+		init_effect = {
+			create_archaeological_site = btr_site_prothean_beacon
+		}
 	}
 
 	planet = {
