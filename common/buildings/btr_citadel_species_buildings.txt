@@ -59,7 +59,7 @@ btr_building_asrep_comm_center = {
 }
 
 btr_building_asrep_sports_center = {
-	base_buildtime = @b4_time
+	base_buildtime = 175
 	icon = building_holo_theatres
 	empire_limit = { 
 		base = 1
@@ -99,14 +99,14 @@ btr_building_asrep_sports_center = {
 	# convert_to = {}
 
 	planet_modifier = {
-		planet_amenities_mult = 0.05
+		planet_amenities_mult = 0.06
 		job_culture_worker_add = 1
-		job_entertainer_add = 1
-		job_duelist_add = 1
+		job_entertainer_add = 4
+		job_duelist_add = 2
 	}
 
 	country_modifier = {
-		pop_happiness = 0.05
+		pop_happiness = 0.1
 	}
 
 	resources = {
@@ -117,7 +117,7 @@ btr_building_asrep_sports_center = {
 			energy = 20
 		}
 		cost = {
-			minerals = @b4_minerals
+			minerals = 800
 		}
 		upkeep = {
 			energy = 5
