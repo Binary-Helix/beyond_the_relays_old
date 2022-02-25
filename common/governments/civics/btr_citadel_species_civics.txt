@@ -1,7 +1,7 @@
 ####################
 # ASARI REP CIVICS #
 ####################
-civic_btr_asari_rep_thes_dip_corp ={
+btr_civic_asrep_thes_dip_corp ={
 	modification = no
 	potential = {
 		ethics = {
@@ -25,7 +25,7 @@ civic_btr_asari_rep_thes_dip_corp ={
 	}
 }
 
-civic_btr_asari_rep_democracy = {
+btr_civic_asrep_democracy = {
 	modification = no
 	potential = {
 		ethics = {
@@ -48,7 +48,7 @@ civic_btr_asari_rep_democracy = {
 	}
 }
 
-civic_btr_asari_universities = {
+btr_civic_asrep_universities = {
 	potential = {
 		origin = {
 			value = btr_origin_asrep
@@ -62,5 +62,69 @@ civic_btr_asari_universities = {
 		planet_researchers_unity_produces_add = 1
 		all_technology_research_speed = 0.05
 		empire_size_colonies_mult = -0.5
+	}
+}
+
+######################
+# TURIAN HIER CIVICS #
+######################
+btr_civic_turhie_honor ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.25
+		pop_government_ethic_attraction = 0.10
+	}
+}
+
+btr_civic_turhie_service ={
+	modification = no
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_naval_cap_mult = 0.25
+		diplo_weight_naval_mult = 0.33
+	}
+}
+
+btr_civic_turhie_honor ={
+	potential = {
+		origin = {
+			value = btr_origin_turhie
+		}	
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_alloys_produces_mult = 0.15
+		starbase_shipyard_build_speed_mult = 0.33
 	}
 }

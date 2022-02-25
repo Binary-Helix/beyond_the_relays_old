@@ -17,7 +17,7 @@ mec_asarirepublics_civ={
 
 	authority = "auth_democratic"
 	government = "gov_mec_asr"
-	civics = { civic_btr_asari_rep_democracy civic_btr_asari_rep_thes_dip_corp }
+	civics = { btr_civic_asrep_democracy btr_civic_asrep_thes_dip_corp }
 
 	flags={ custom_start_screen asari_republics btr_empire canon_map hybrid_map sandbox_map council_race }
 
@@ -156,20 +156,19 @@ turian_hierarchy={
 
 	authority="auth_oligarchic"
 	government="gov_citizen_stratocracy"
-	civics={ civic_btr_turian_honor civic_btr_turian_universal_service }
+	civics={ btr_civic_turhie_honor btr_civic_turhie_service }
 
 	flags={ custom_start_screen turian_hierarchy btr_empire canon_map hybrid_map sandbox_map genophage_empire council_race }
 
+	ethic="ethic_fanatic_militarist"
 	ethic="ethic_egalitarian"
-	ethic="ethic_militarist"
-	ethic="ethic_xenophile"
 
 	trait="btr_turian_patriotic"
 	trait="btr_turian_militaristic"
 	trait="trait_conformists"
 	trait="trait_nonadaptive"
 	trait="trait_talented"
-	trait = "trait_turian_habitability_preference"
+	trait="trait_turian_habitability_preference"
 	
 	origin="origin_turian_hierarchy"	
 
