@@ -41,6 +41,7 @@ generate_asr_sanves_colony_buildings = {
 	add_building = building_bureaucratic_1
 	add_building = building_factory_1
     add_building = building_commercial_zone
+	add_building = building_holo_theatres
 }
 
 generate_asr_lusia_colony_buildings = {
@@ -52,20 +53,23 @@ generate_asr_lusia_colony_buildings = {
 	add_building = building_bureaucratic_1
 	add_building = building_factory_1
     add_building = building_commercial_zone
+	add_building = building_holo_theatres
 }
 
 generate_asr_niacal_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
-	add_building = building_factory_1	
+	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_asr_trategos_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
 	add_building = building_capital
-	add_building = building_factory_1	
+	add_building = building_factory_1
+	add_building = building_holo_theatres	
 }
 
 generate_asr_hyetania_colony_buildings = {
@@ -73,7 +77,8 @@ generate_asr_hyetania_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
 	add_building = building_capital
-	add_building = building_factory_1	
+	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_asr_nevos_colony_buildings = {
@@ -83,7 +88,8 @@ generate_asr_nevos_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_capital
-	add_building = building_factory_1	
+	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_asr_cyone_colony_buildings = {
@@ -93,10 +99,12 @@ generate_asr_cyone_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
 	add_building = building_capital
-	add_building = building_factory_1	
+	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_asr_malkos_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
@@ -107,6 +115,7 @@ generate_asr_malkos_colony_buildings = {
 generate_asr_charias_colony_buildings = {
 	while = { count = 6 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_asr_diras_colony_buildings = {
@@ -114,11 +123,13 @@ generate_asr_diras_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_asr_lesuss_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_asr_espota_station_buildings = {
@@ -129,6 +140,7 @@ generate_asr_espota_station_buildings = {
 generate_asr_agessia_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_mining ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_asr_major_colony_buildings = {
