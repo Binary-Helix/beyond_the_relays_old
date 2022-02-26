@@ -178,22 +178,25 @@ generate_sal_surkesh_capitol_buildings = {
     add_building = building_commercial_zone
 	add_building = building_embassy	
 	add_building = building_institute	
-	add_building = building_stronghold
+	add_building = building_holo_theatres
 }
 
 generate_sal_halegeuse_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_pdhab_food ignore_cap = yes } }
 	add_building = building_hab_capital
+	add_building = building_holo_theatres
 }
 
 generate_sal_nasurn_colony_buildings = {
-	while = { count = 1 add_district = { district_type = district_pdhab_food ignore_cap = yes } }
+	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_sal_dagnes_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_sal_gataly_colony_buildings = {
@@ -203,6 +206,7 @@ generate_sal_gataly_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_research_lab_2
+	add_building = building_holo_theatres
 }
 
 generate_sal_olor_colony_buildings = {
@@ -210,6 +214,7 @@ generate_sal_olor_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_sal_saetabelo_colony_buildings = {
@@ -218,6 +223,7 @@ generate_sal_saetabelo_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_research_lab_2
+	add_building = building_holo_theatres
 }
 
 generate_sal_voya_colony_buildings = {
@@ -226,6 +232,7 @@ generate_sal_voya_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_research_lab_2
+	add_building = building_holo_theatres
 }
 
 generate_sal_senoquoi_colony_buildings = {
@@ -234,6 +241,7 @@ generate_sal_senoquoi_colony_buildings = {
 	while = { count = 4 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_sal_rannandril_colony_buildings = {
@@ -242,6 +250,7 @@ generate_sal_rannandril_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_sal_gorot_colony_buildings = {
@@ -250,6 +259,7 @@ generate_sal_gorot_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_sal_mannovai_colony_buildings = {
@@ -257,7 +267,8 @@ generate_sal_mannovai_colony_buildings = {
 	while = { count = 5 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
 	add_building = building_capital	
-	add_building = building_factory_1	
+	add_building = building_factory_1
+	add_building = building_holo_theatres	
 }
 
 generate_sal_jaeto_colony_buildings = {
@@ -275,16 +286,18 @@ generate_sal_nasurn_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_capital	
 	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_sal_jarrahe_colony_buildings = {
 	add_building = building_hab_capital
+	add_building = building_holo_theatres
 }
 
 ## TURIAN HIERACHY ##
 
 generate_tur_palaven_capitol_buildings = {
-	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
+	while = { count = 2 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
@@ -295,6 +308,7 @@ generate_tur_palaven_capitol_buildings = {
 	add_building = building_military_academy
 	add_building = building_stronghold
 	add_building = building_bureaucratic_1
+	add_building = building_holo_theatres
 }
 
 generate_tur_menae_colony_buildings = {
@@ -311,12 +325,14 @@ generate_tur_nanus_colony_buildings = {
 generate_tur_maitrum_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_pdhab_mining ignore_cap = yes } }
 	add_building = building_hab_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_parthia_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_omaker_colony_buildings = {
@@ -325,11 +341,13 @@ generate_tur_omaker_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }	
 	add_building = building_capital
 	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_tur_pheiros_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_pdhab_mining ignore_cap = yes } }
 	add_building = building_hab_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_digeris_colony_buildings = {
@@ -337,31 +355,36 @@ generate_tur_digeris_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_nimines_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_pdhab_mining ignore_cap = yes } }
 	add_building = building_hab_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_taetrus_colony_buildings = {
 	while = { count = 5 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }	
 	add_building = building_capital
-	add_building = building_factory_1	
+	add_building = building_factory_1
+	add_building = building_holo_theatres
 }
 
 generate_tur_tracmus_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }	
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_invictus_colony_buildings = {
 	while = { count = 7 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }		
 	add_building = building_capital
-	add_building = building_factory_1		
+	add_building = building_factory_1
+	add_building = building_holo_theatres		
 }
 
 generate_tur_gellix_colony_buildings = {
@@ -373,6 +396,7 @@ generate_tur_magna_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 6 add_district = { district_type = district_industrial ignore_cap = yes } }	
 	add_building = building_capital
+	add_building = building_holo_theatres
 
 }
 
@@ -382,18 +406,21 @@ generate_tur_aephus_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }	
 	add_building = building_capital
-	add_building = building_factory_1		
+	add_building = building_factory_1
+	add_building = building_holo_theatres	
 }
 
 generate_tur_epyrus_colony_buildings = {
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }	
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_edessan_colony_buildings = {
 	while = { count = 2 add_district = { district_type = district_pdhab_mining ignore_cap = yes } }
 	add_building = building_capital
+	add_building = building_holo_theatres
 }
 
 generate_tur_chatti_colony_buildings = {
