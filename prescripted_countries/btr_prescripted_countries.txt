@@ -17,20 +17,20 @@ mec_asarirepublics_civ={
 
 	authority = "auth_democratic"
 	government = "gov_mec_asr"
-	civics = { "mec_asari_civic_thessia" "civic_diplomatic_corps" }
+	civics = { civic_btr_asari_rep_democracy civic_btr_asari_rep_thes_dip_corp }
 
 	flags={ custom_start_screen asari_republics btr_empire canon_map hybrid_map sandbox_map council_race }
 
 	ethic = "ethic_fanatic_xenophile"
 	ethic = "ethic_egalitarian"
 
-	trait = "mec_asari_trait_core"
-	trait = "mec_asari_trait_biotic"
-	trait = "trait_charismatic"
-	trait = "mec_asari_trait_sophisticated"
-	trait = "trait_asari_habitability_preference"
+	trait = mec_asari_trait_core
+	trait = mec_asari_trait_biotic
+	trait = btr_asari_trait_smooth_talk
+	trait = mec_asari_trait_sophisticated
+	trait = trait_asari_habitability_preference
 
-	origin="mec_asari_origin_thessia"	
+	origin= btr_origin_asrep	
 
 	planet_name = "Thessia"
 	planet_class = "pc_continental"
@@ -244,6 +244,7 @@ courts_of_dekuuna={
 	trait= "trait_nomadic"
 	trait= "trait_slow_breeders"
 	trait= "trait_nonadaptive"
+	trait = elcor_test_trait
 	trait = "trait_elcor_habitability_preference"
 	
 	origin="origin_courts_of_dekuuna"	

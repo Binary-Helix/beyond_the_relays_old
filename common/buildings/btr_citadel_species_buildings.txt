@@ -1,0 +1,128 @@
+btr_building_asrep_comm_center = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+
+	category = unity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_asrep
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_asrep } }
+		}
+	}
+
+	# convert_to = {}
+
+	planet_modifier = {
+		planets_unity_produces_add = 3
+		planet_amenities_mult = 0.05
+		pop_cat_worker_political_power = 0.1
+		pop_cat_specialist_political_power = 0.1
+		job_culture_worker_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 4
+		}
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = 6
+		}
+	}
+}
+
+btr_building_asrep_sports_center = {
+	base_buildtime = 175
+	icon = building_holo_theatres
+	empire_limit = { 
+		base = 1
+	}
+
+	category = amenity
+
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_asrep
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_asrep } }
+		}
+	}
+
+	# convert_to = {}
+
+	planet_modifier = {
+		planet_amenities_mult = 0.06
+		job_culture_worker_add = 1
+		job_entertainer_add = 4
+		job_duelist_add = 2
+	}
+
+	country_modifier = {
+		pop_happiness = 0.1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+			unity = 2
+			energy = 20
+		}
+		cost = {
+			minerals = 800
+		}
+		upkeep = {
+			energy = 5
+			food = 5
+			minerals = 1
+		}
+	}
+}

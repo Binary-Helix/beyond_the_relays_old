@@ -1,0 +1,25 @@
+###################################
+### BTR - ASARI REPUBLIC EVENTS ###
+###################################
+namespace = btr_asrep
+
+# Asari university open doors policy enacted
+country_event = {
+	id = btr_asrep.01
+	title = btr_asrep.01.name
+	desc = btr_asrep.01.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		has_valid_civic = civic_btr_asari_universities
+	}
+
+	immediate = {
+		set_global_flag = btr_asari_rep_university_open_doors
+	}
+
+	option = {
+		name = btr_asrep.01.a
+	}
+}
