@@ -23,6 +23,7 @@ fleet_event = {
 	
 	option = {
 		name = btr_site.101.a
+		small_artifact_reward = yes
 	}
 }
 
@@ -47,6 +48,13 @@ fleet_event = {
 	
 	option = {
 		name = btr_site.102.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
 	}
 }
 
@@ -71,6 +79,7 @@ fleet_event = {
 	
 	option = {
 		name = btr_site.103.a
+		small_artifact_reward = yes
 	}
 }
 
@@ -95,6 +104,13 @@ fleet_event = {
 	
 	option = {
 		name = btr_site.104.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
 	}
 }
 
@@ -119,5 +135,8 @@ fleet_event = {
 	
 	option = {
 		name = btr_site.105.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
 	}
 }
