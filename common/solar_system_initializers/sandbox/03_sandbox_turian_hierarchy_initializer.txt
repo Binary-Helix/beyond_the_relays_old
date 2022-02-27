@@ -71,12 +71,12 @@ sys_sandbox_trebia_init = {
 					portrait = turian
 					#homeworld = THIS 
 					traits = { 
-				  trait="btr_turian_patriotic"
-				  trait="btr_turian_militaristic"
-				  trait="trait_conformists"
-				  trait="trait_nonadaptive"
-				  trait="trait_talented"
-					  # ideal_planet_class = "pc_dextro_arid"
+						trait = btr_turian_trait_core
+						trait = btr_turian_trait_team_player
+						trait = btr_turian_trait_martial_nat
+						trait = btr_turian_trait_op_discipline
+						trait = trait_turian_habitability_preference
+						ideal_planet_class = "pc_dextro_arid"
 					}
 				  }
 				  last_created_species = { save_global_event_target_as = turianSpecies }

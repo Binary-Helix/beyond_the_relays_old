@@ -15,8 +15,8 @@ btr_tech_asrep_asari_arch = {
     modifier = {
 		planet_structures_upkeep_mult = -0.10
         planet_structures_cost_mult = -0.10
-		planet_structures_unity_produces_add = 0.2
-		# Amenities
+		# Unity from Structures
+		# Amenities from Structures
     }
 
     weight_modifier = { factor = 0 }
@@ -35,7 +35,7 @@ btr_tech_asrep_ship_design = {
     }
 
     modifier = {
-        ships_cost_mult = 3
+        starbase_shipyard_build_cost_mult = 3
 		ships_upkeep_mult = 2.5
 		ship_speed_mult = 0.1
 		ship_shield_mult = 0.05
@@ -46,5 +46,48 @@ btr_tech_asrep_ship_design = {
 		ship_evasion_mult = 0.05
     }
 
+    weight_modifier = { factor = 0 }
+}
+
+### Turian Hierarchy Tech
+btr_tech_turhie_elkoss = {
+    icon = tech_eezo_extraction
+    cost = @tier3cost1
+    area = engineering
+    tier = 3
+    category = {
+        materials
+    }
+
+    prerequisites = {
+        
+    }
+
+    modifier = {
+        ships_upkeep_mult = -0.10
+        # Ship repair speed
+    }
+    weight_modifier = { factor = 0 }
+}
+
+btr_tech_turhie_fleet_in_being = {
+    icon = tech_eezo_extraction
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        military_theory
+    }
+
+    prerequisites = {
+        
+    }
+
+    modifier = {
+        diplo_weight_naval_mult = 0.15
+        country_naval_cap_add = 10
+        ship_fire_rate_mult = 0.05
+        ship_disengage_chance_mult = -0.10
+    }
     weight_modifier = { factor = 0 }
 }

@@ -61,5 +61,39 @@ country_event = {
 			# }
 			break = yes
 		}
+		else_if = {
+			limit = { has_origin = btr_origin_turhie }
+			give_technology = {
+				tech = btr_tech_turhie_elkoss
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_turhie_fleet_in_being
+				message = no
+			}
+			give_technology = {
+				tech = tech_planetary_unification
+			}
+			add_modifier = {
+				modifier = btr_turhie_empire_modifier
+				days = -1
+			}
+			capital_scope = {
+				add_modifier = { modifier = prosp_uni_mod days = 7200 }
+				generate_turianPop = yes
+				generate_turianPop = yes
+				generate_turianPop = yes
+				generate_turianPop = yes
+			}
+			add_relic = btr_r_turhie_banner
+			# home_planet = {
+				# add_deposit = btr_d_turhie_temple_palaven
+				# add_deposit = btr_d_turhie_cipritine
+				# add_deposit = btr_d_turhie_urcaveix
+				# add_deposit = btr_d_turhie_bountiful_oceans
+				# add_deposit = btr_d_turhie_hot_spots
+			# }
+			break = yes
+		}
 	}
 }
