@@ -9,9 +9,6 @@ building_foundry_1 = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		OR = {
-			building_relaxed_basic_income_check = yes
-		}
 	}
 
 	destroy_trigger = {
@@ -633,7 +630,6 @@ building_factory_1 = {
 		}
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		building_relaxed_basic_income_check = yes
 	}
 
 	destroy_trigger = {

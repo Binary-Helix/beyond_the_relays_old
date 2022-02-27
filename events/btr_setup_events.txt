@@ -452,10 +452,8 @@ country_event = {
 			}
 		}	
 		random_owned_planet = {
-			limit = { 
-				has_planet_flag = thessia_planet 
-			}
-			create_archaeological_site = mec_asari_site_thessia_beacon
+			limit = { has_planet_flag = thessia_planet }
+			# create_archaeological_site = mec_asari_site_thessia_beacon
 			set_capital = yes
 		}
 		if = {

@@ -142,6 +142,7 @@ sys_parnitha_init = {
 			generate_asr_thessia_capitol_buildings = yes
 			generate_asr_thessia_pops = yes
 			generate_asr_thessia_deposits = yes
+			create_archaeological_site = btr_site_prothean_beacon
 			set_name = "Thessia"
 		}
 	}
@@ -764,7 +765,7 @@ sys_loropi_init = {
         orbit_angle = 117
         size = 3
         has_ring = no
-		flags = { espota_station pd_ignore }
+		flags = { espota_station pd_science_hab }
 		init_effect = {
 			add_deposit = d_energy_8
 
