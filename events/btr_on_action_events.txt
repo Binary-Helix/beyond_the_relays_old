@@ -45,7 +45,15 @@ country_event = {
 			}
 		}
 		else_if = {
-			limit = { from = { species = { has_trait = btr_turian_trait_core } } }
+			limit = { 
+				from = { 
+					species = { has_trait = btr_turian_trait_core }
+					OR = {
+						leader_class = general
+						leader_class = admiral
+					}
+				} 
+		}
 			from = {
 				add_trait = btr_leader_trait_extensive_training
 			}
