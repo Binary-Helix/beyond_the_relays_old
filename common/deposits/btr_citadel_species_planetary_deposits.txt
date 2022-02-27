@@ -232,3 +232,85 @@ btr_d_asrep_tidal_barrage = {
 		weight = 0
 	}
 }
+
+### PALAVEN (Turian Hierarchy)
+btr_d_turhie_temple_palaven = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+	resources = {
+		produces = {
+			unity = 3
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+btr_d_turhie_cipritine = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		pop_government_ethic_attraction = 0.1
+	}
+	resources = {
+		produces = {
+			unity = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_turhie_urcaveix = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		planet_max_districts_add = -3
+		army_starting_experience_add = 200
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_turhie_bountiful_oceans = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		district_farming_max = 3
+		planet_jobs_food_produces_mult = 0.15
+		pop_habitability = 0.1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+btr_d_turhie_hot_spots = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		district_generator_max = 4
+		job_technician_add = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

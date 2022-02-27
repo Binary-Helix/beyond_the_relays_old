@@ -93,3 +93,55 @@ btr_r_asrep_athane_temple = {
 		}
 	}
 }
+
+### Turian Hierarchy
+btr_r_turhie_banner = {
+	portrait = "GFX_relic_prothean_sphere"
+	sound = event_prothean_sphere
+	activation_duration = 2200
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			unity = 1500
+			energy = 5000
+		}
+	}
+
+	score = 0 # No score initial relic
+
+	possible = {
+		custom_tooltip = {
+			fail_text = requires_relic_no_cooldown
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+		# custom_tooltip = {
+		# 	fail_text = btr_requires_defensive_war
+		# 	owner = {
+		# 		has_modifier = defensive_war
+		# 	}
+		# }
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		army_morale = 0.25
+		country_war_exhaustion_mult = -0.1
+	}
+
+	active_effect = {
+		hidden_effect = {
+			add_modifier = {
+				modifier = relic_activation_cooldown
+				years = 10
+			}
+		}
+		add_modifier = {
+			modifier = btr_r_turhie_banner_modifier
+			years = 10
+		}
+	}
+}
