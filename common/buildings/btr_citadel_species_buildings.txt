@@ -174,7 +174,7 @@ btr_building_turhie_kasr = {
 			unity = 1
 		}
 		cost = {
-			minerals = 500
+			minerals = 1500
 		}
 		upkeep = {
 			energy = 4
@@ -215,22 +215,17 @@ btr_building_turhie_castra_auxilia = {
 	}
 
 	planet_modifier = {
-		army_defense_damage_mult = 0.25
-		pop_defense_armies_add = 4
-		job_soldier_add = 1
+		pop_growth_speed = 0.1
+		pop_defense_armies_add = 3
 	}
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner }
-			unity = 1
-		}
 		cost = {
-			minerals = 500
+			minerals = 1000
 		}
 		upkeep = {
-			energy = 4
+			energy = 2
 		}
 	}
 }

@@ -63,14 +63,14 @@ country_event = {
 		}
 		else_if = {
 			limit = { has_origin = btr_origin_turhie }
-			# give_technology = {
-			# 	tech = btr_tech_asrep_asari_arch
-			# 	message = no
-			# }
-			# give_technology = {
-			# 	tech = btr_tech_asrep_ship_design
-			# 	message = no
-			# }
+			give_technology = {
+				tech = btr_tech_turhie_elkoss
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_turhie_fleet_in_being
+				message = no
+			}
 			give_technology = {
 				tech = tech_planetary_unification
 			}
