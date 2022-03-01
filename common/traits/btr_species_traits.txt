@@ -503,9 +503,9 @@ btr_geth_trait_core = {
 
 	triggered_pop_modifier = { 
 		potential = {
-			owner = { has_valid_civic = btr_getcon_remnant_code }
+			owner = { has_valid_civic = btr_civic_getcon_remnant_code }
 			exists = planet
-			planet = { is_artificial = no }
+			planet = { is_artificial = yes }
 		}
 		pop_assembly_speed = 0.05
 	}
@@ -529,7 +529,7 @@ btr_geth_trait_linked_consci = {
 	}
 }
 
-btr_geth_purpose_built_models = {
+btr_geth_trait_purpose_built_models = {
 	cost = 0
 	
 	allowed_archetypes = { MACHINE }
@@ -544,7 +544,7 @@ btr_geth_purpose_built_models = {
 	}
 }
 
-btr_geth_deontological_primacy = {
+btr_geth_trait_deontological_primacy = {
 	cost = 0
 	
 	allowed_archetypes = { MACHINE }
@@ -557,29 +557,6 @@ btr_geth_deontological_primacy = {
 		country_unity_produces_mult = 0.05
 
 	}
-}
-
-btr_geth_mobile_platforms = {
-	cost = 0
-	opposites = {
-		"trait_robot_double_jointed"
-		"trait_robot_bulky"
-		"trait_robot_mass_produced"
-	}
-
-	initial = yes
-	randomized = no
-	modification = no
-
-	allowed_archetypes = {
-		MACHINE
-	}
-	modifier = {
-		army_damage_mult = 0.2
-		pop_housing_usage_mult = -0.2
-		pop_assembly_speed = 0.2
-	}
-
 }
 
 #################################

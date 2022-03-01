@@ -41,11 +41,12 @@ country_event = {
 			}
 			2 = {
 				modifier = { # 50% chance if self preservation in effect
-					OR = {
-						has_origin = btr_origin_getcon
-						has_active_tradition = tr_synchronicity_self_preservation
-					}
+					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
+				}
+				modifier = {
+					has_origin = btr_origin_getcon
+					factor = 0.9
 				}
 				if = { # surveying scientist
 					limit = {
@@ -89,11 +90,12 @@ country_event = {
 			}
 			2 = {
 				modifier = { # 50% chance if self preservation in effect
-					OR = {
-						has_origin = btr_origin_getcon
-						has_active_tradition = tr_synchronicity_self_preservation
-					}
+					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
+				}
+				modifier = {
+					has_origin = btr_origin_getcon
+					factor = 0.9
 				}
 				if = { # engineering scientist
 					limit = {
@@ -136,11 +138,12 @@ country_event = {
 			}
 			2 = {
 				modifier = { # 50% chance if self preservation in effect
-					OR = {
-						has_origin = btr_origin_getcon
-						has_active_tradition = tr_synchronicity_self_preservation
-					}
+					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
+				}
+				modifier = {
+					has_origin = btr_origin_getcon
+					factor = 0.9
 				}
 				if = { # society scientist
 					limit = {
@@ -183,11 +186,12 @@ country_event = {
 			}
 			2 = {
 				modifier = { # 50% chance if self preservation in effect
-					OR = {
-						has_origin = btr_origin_getcon
-						has_active_tradition = tr_synchronicity_self_preservation
-					}
+					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
+				}
+				modifier = {
+					has_origin = btr_origin_getcon
+					factor = 0.9
 				}
 				if = { # society scientist
 					limit = {
@@ -230,11 +234,12 @@ country_event = {
 			}
 			2 = {
 				modifier = { # 50% chance if self preservation in effect
-					OR = {
-						has_origin = btr_origin_getcon
-						has_active_tradition = tr_synchronicity_self_preservation
-					}
+					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
+				}
+				modifier = {
+					has_origin = btr_origin_getcon
+					factor = 0.9
 				}
 				if = { # commanding admiral
 					limit = {
@@ -278,11 +283,12 @@ country_event = {
 			}
 			2 = {
 				modifier = { # 50% chance if self preservation in effect
-					OR = {
-						has_origin = btr_origin_getcon
-						has_active_tradition = tr_synchronicity_self_preservation
-					}
+					has_active_tradition = tr_synchronicity_self_preservation
 					factor = 0.5
+				}
+				modifier = {
+					has_origin = btr_origin_getcon
+					factor = 0.9
 				}
 				if = { # planet governor
 					limit = {

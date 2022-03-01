@@ -53,9 +53,19 @@ country_event = {
 						leader_class = admiral
 					}
 				} 
-		}
+			}
 			from = {
 				add_trait = btr_leader_trait_extensive_training
+			}
+		}
+		else_if = {
+			limit = { 
+				from = { 
+					species = { has_trait = btr_geth_trait_core }
+				} 
+			}
+			from = {
+				add_trait = btr_leader_trait_internal_consensus
 			}
 		}
 	}
