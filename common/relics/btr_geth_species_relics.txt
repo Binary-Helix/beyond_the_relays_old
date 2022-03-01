@@ -1,0 +1,45 @@
+btr_r_getcon_creator_archives = {
+	portrait = "GFX_relic_prothean_sphere"
+	sound = event_prothean_sphere
+	activation_duration = 360
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			energy = 3000
+		}
+	}
+
+	score = 0 # No score initial relic
+
+	possible = {
+		custom_tooltip = {
+			fail_text = requires_relic_no_cooldown
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		all_technology_research_speed = 0.05
+	}
+
+	active_effect = {
+		hidden_effect = {
+			add_modifier = {
+				modifier = relic_activation_cooldown
+				days = 360
+			}
+		}
+		random_list = {
+			1 = {  }
+			1 = {  }
+			1 = {  }
+			1 = {  }
+			1 = {  }
+		}
+	}
+}
