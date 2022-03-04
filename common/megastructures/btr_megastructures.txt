@@ -29,7 +29,11 @@ btr_mega_geth_sphere_0 = {
 		}
 	}
 
-	prerequisites = { btr_tech_getcon_geth_sphere }
+	prerequisites = { btr_tech_getcon_geth_sphere_phys }
+
+	potential = {
+		has_technology = btr_tech_getcon_geth_sphere_soc
+	}
 
 	possible = {
 		exists = starbase
@@ -40,6 +44,10 @@ btr_mega_geth_sphere_0 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_dyson_sphere"
 			from = { NOT = { has_country_flag = built_dyson_sphere } }
+		}
+		custom_tooltip = {
+			fail_text = btr_getcon_sphere_no_soc_tech 
+			from = { has_technology = btr_tech_getcon_geth_sphere_soc }
 		}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"

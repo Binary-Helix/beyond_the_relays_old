@@ -14,11 +14,33 @@ btr_tech_getcon_uv_pd_laser = {
 }
 
 
-btr_tech_getcon_geth_sphere = {
-	area = engineering
+btr_tech_getcon_geth_sphere_phys = {
+	area = physics
 	cost = @tier5cost3
 	tier = 5
-	category = { voidcraft }
+	category = { field_manipulation }
+	prerequisites = { tech_mega_engineering }
+	weight = @tier5weight2
+	is_rare = yes
+
+	potential = {
+		has_origin = btr_origin_getcon
+	}
+
+	weight_modifier = {
+		modifier = {
+			# Consensus gets near immediate access
+			factor = 50
+			has_origin = btr_origin_getcon
+		}
+	}
+}
+
+btr_tech_getcon_geth_sphere_soc = {
+	area = society
+	cost = @tier5cost3
+	tier = 5
+	category = { statecraft }
 	prerequisites = { tech_mega_engineering }
 	weight = @tier5weight2
 	is_rare = yes

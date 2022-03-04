@@ -112,9 +112,11 @@ sys_tikkun_init = {
 			generate_get_rannoch_pops = yes
 			set_name = "Rannoch"
 
-			add_deposit = btr_d_getcon_ancestor_fleet
-			add_deposit = btr_d_getcon_mother_heat
 			add_deposit = btr_d_getcon_insect
+			add_deposit = btr_d_getcon_mining_pads
+			add_deposit = btr_d_getcon_graveyard
+			add_deposit = btr_d_getcon_mother_heat
+			add_deposit = btr_d_getcon_ancestor_fleet
 		}
 		
 		moon = {
@@ -311,9 +313,7 @@ sys_dholen_init = {
 	max_instances = 1
 
 	flags = { terminus_system far_rim_system dholen_system btr_system custom_system }
-	init_effect = {
-		generate_home_system_resources = yes
-	}
+	init_effect = { generate_home_system_resources = yes }
 
     planet = {
 		name = "Dholen"
