@@ -377,7 +377,7 @@ action_make_rival = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_terrible_opinion_or_supremacist"
@@ -498,7 +498,7 @@ action_form_defensive_pact = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -520,10 +520,10 @@ action_form_defensive_pact = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -625,7 +625,7 @@ action_form_non_aggression_pact = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -706,7 +706,7 @@ action_form_commercial_pact = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -728,7 +728,7 @@ action_form_commercial_pact = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_gestalt_consciousness"
@@ -788,7 +788,7 @@ action_form_commercial_pact = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -874,7 +874,7 @@ action_form_research_agreement = {
 			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -896,7 +896,7 @@ action_form_research_agreement = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_machine_terminator"
@@ -964,7 +964,7 @@ action_form_research_agreement = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1106,10 +1106,10 @@ action_guarantee_independence = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1227,7 +1227,7 @@ action_support_independence = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 	}
 }
@@ -1276,7 +1276,7 @@ action_form_migration_pact = {
 			from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1298,7 +1298,7 @@ action_form_migration_pact = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		if = {
 			limit = { from = { has_valid_civic = civic_barbaric_despoilers } }
@@ -1360,7 +1360,7 @@ action_form_migration_pact = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1382,7 +1382,7 @@ action_form_migration_pact = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 		custom_tooltip = {
 			fail_text = "requires_good_or_better_opinion"
@@ -1489,7 +1489,7 @@ action_offer_federation_association_status = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1708,7 +1708,7 @@ action_invite_to_federation = {
 		}
 
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1730,7 +1730,7 @@ action_invite_to_federation = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_excellent_or_better_opinion"
@@ -1742,7 +1742,7 @@ action_invite_to_federation = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1919,7 +1919,7 @@ action_ask_to_join_federation = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -1941,7 +1941,7 @@ action_ask_to_join_federation = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_excellent_or_better_opinion"
@@ -2086,7 +2086,7 @@ action_close_borders = {
 		can_control_access_for = from
 
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
@@ -2181,7 +2181,7 @@ action_demand_vassalization = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_in_galactic_empire"
@@ -2299,7 +2299,7 @@ action_demand_protectorate = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_in_galactic_empire"
@@ -2409,7 +2409,7 @@ action_demand_tributary = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_inward_perfection"
-			NOT = { has_valid_civic = civic_inwards_perfection }
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous }
 		}
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_in_galactic_empire"
@@ -2682,7 +2682,7 @@ action_ask_to_become_vassalized = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -2755,7 +2755,7 @@ action_ask_to_become_vassalized = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -2828,7 +2828,7 @@ action_ask_to_become_protectorate = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -2901,7 +2901,7 @@ action_ask_to_become_protectorate = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -3026,7 +3026,7 @@ action_ask_to_become_tributary = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -3093,7 +3093,7 @@ action_ask_to_become_subsidiary = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_inwards_perfection } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous } }
 			if = {
 				limit = {
 					has_intel = {
@@ -3166,7 +3166,7 @@ action_ask_to_become_subsidiary = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -3203,7 +3203,7 @@ action_ask_to_become_thrall = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -3240,7 +3240,7 @@ action_ask_to_become_dominion = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -3277,7 +3277,7 @@ action_ask_to_become_satellite = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -3314,7 +3314,7 @@ action_ask_to_become_signatory = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_pompous"
-			NOT = { has_valid_civic = civic_pompous_purists	}
+			NOT = { has_valid_civic = btr_civic_getcon_nebulous_late	}
 		}
 	}
 }
@@ -3502,7 +3502,7 @@ action_embassy = {
 			}
 		}
 		if = {
-			limit = { from = { has_valid_civic = civic_pompous_purists } }
+			limit = { from = { has_valid_civic = btr_civic_getcon_nebulous_late } }
 			if = {
 				limit = {
 					has_intel = {
