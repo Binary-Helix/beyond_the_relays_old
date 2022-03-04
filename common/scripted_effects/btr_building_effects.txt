@@ -854,13 +854,13 @@ generate_parasc_buildings = {
 
 ## GETH ##
 generate_get_rannoch_capitol_buildings = {
+	while = { count = 1 add_district = { district_type = district_nexus ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_machine_major_capital
 	add_building = building_research_lab_1
 	add_building = building_foundry_1
-	add_building = building_drone_storage
     add_building = building_machine_assembly_plant
 	add_building = building_stronghold
 }
@@ -870,6 +870,7 @@ generate_get_adas_colony_buildings = {
 	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_machine_capital
+	add_building = building_machine_assembly_plant
 }
 
 generate_get_charoum_colony_buildings = {
@@ -877,21 +878,26 @@ generate_get_charoum_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_pdhab_energy ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_pdhab_industrial ignore_cap = yes } }
 	add_building = building_hab_capital
+	add_building = building_machine_assembly_plant
 }
 
 generate_get_haestrom_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_nexus ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_mining ignore_cap = yes } }
 	while = { count = 4 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_machine_capital
 	add_building = building_research_lab_1
+	add_building = building_machine_assembly_plant
 }
 
 generate_get_ammut_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_pdhab_housing ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_pdhab_mining ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_pdhab_energy ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_pdhab_industrial ignore_cap = yes } }
 	add_building = building_hab_capital
+	add_building = building_machine_assembly_plant
 }
 
 generate_get_naanacurrel_colony_buildings = {
@@ -899,6 +905,7 @@ generate_get_naanacurrel_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_machine_capital
+	add_building = building_machine_assembly_plant
 }
 
 generate_get_kasdavar_colony_buildings = {
@@ -906,6 +913,7 @@ generate_get_kasdavar_colony_buildings = {
 	while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_machine_capital
+	add_building = building_machine_assembly_plant
 }
 
 generate_btr_geth_incursion_start_buildings = {
