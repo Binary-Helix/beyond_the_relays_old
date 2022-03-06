@@ -1,0 +1,16 @@
+btr_origin_getcon = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.3
+		country_engineering_research_produces_mult = 0.2
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = -0.2
+	}
+}

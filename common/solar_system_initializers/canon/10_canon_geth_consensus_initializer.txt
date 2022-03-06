@@ -56,12 +56,11 @@ sys_tikkun_init = {
 					portrait = geth
 					#homeworld = THIS 
 					traits = { 
-				  trait="trait_machine_unit"
-				  trait="btr_geth_neural_network"
-				  trait="btr_geth_mobile_platforms"
-				  trait="trait_robot_uncanny"
-				  trait="trait_robot_high_bandwidth"
-				  trait="trait_robot_durable"
+						trait = "trait_machine_unit"
+						trait = btr_geth_trait_core
+						trait = btr_geth_trait_purpose_built_models
+						trait = btr_geth_trait_deontological_primacy
+						trait = btr_geth_trait_linked_consci
 					}
 				  }
 				  last_created_species = { save_global_event_target_as = gethSpecies }
@@ -113,10 +112,11 @@ sys_tikkun_init = {
 			generate_get_rannoch_pops = yes
 			set_name = "Rannoch"
 
-			add_deposit = d_rannoch_geth_base
-			add_deposit = d_rannoch_quarian_ruins
-			add_deposit = d_rannoch_consensus_core
-			add_deposit = d_rannoch_geth_factory
+			add_deposit = btr_d_getcon_insect
+			add_deposit = btr_d_getcon_mining_pads
+			add_deposit = btr_d_getcon_graveyard
+			add_deposit = btr_d_getcon_mother_heat
+			add_deposit = btr_d_getcon_ancestor_fleet
 		}
 		
 		moon = {
@@ -313,9 +313,7 @@ sys_dholen_init = {
 	max_instances = 1
 
 	flags = { terminus_system far_rim_system dholen_system btr_system custom_system }
-	init_effect = {
-		generate_home_system_resources = yes
-	}
+	init_effect = { generate_home_system_resources = yes }
 
     planet = {
 		name = "Dholen"
