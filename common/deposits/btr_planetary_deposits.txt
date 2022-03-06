@@ -7276,9 +7276,13 @@ d_consumption_chambers = {
 	is_for_colonizable = yes
 	icon = d_collector_consumption_chambers
 	category = deposit_cat_rare
+	planet_modifier = {
+		pop_assembly_speed = 2
+	}
 	resources = {
 		produces = {
-			food = 200
+			energy = 100
+			unity = 100
 		}
 	}
 	drop_weight = {
@@ -7292,7 +7296,8 @@ d_deconstruction_bays = {
 	category = deposit_cat_rare
 	resources = {
 		produces = {
-			minerals = 500
+			minerals = 200
+			alloys = 200
 		}
 	}
 	drop_weight = {
