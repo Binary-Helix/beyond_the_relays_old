@@ -66,3 +66,12 @@ pm_no_magnetic_field = {
 	
 	modifier = "btr_no_magnetic_field"
 }
+
+pm_btr_collector_stasis_pods = {
+	spawn_chance = {
+		modifier = {
+			add = 100
+			is_planet_class = pc_collector_base
+		}
+	}
+}
