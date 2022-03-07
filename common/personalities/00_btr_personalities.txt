@@ -1,0 +1,260 @@
+# FuzzyPinkDragon
+
+# Set 1
+turian_hierarchy = {
+	aggressiveness = 1.7
+	trade_willingness = 0.5
+	bravery = 1.0
+	combat_bravery = 1.8
+
+	military_spending = 1.0
+	colony_spending = 0.7
+
+	federation_acceptance = +50
+	nap_acceptance = +10
+	commercial_pact_acceptance = +25
+	research_agreement_acceptance = +15
+	defensive_pact_acceptance = +60
+	migration_pact_acceptance = +10
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.4
+	shields_ratio = 0.3
+	hull_ratio = 0.3
+
+	threat_modifier = 1.5
+	threat_others_modifier = 1.5
+	friction_modifier = 1.4
+	claims_modifier = 1.4
+
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = yes
+		opportunist = yes
+		slaver = no
+		uplifter = no
+		purger = no
+		displacer = yes
+		infiltrator = no
+		dominator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = yes
+		crisis_fighter = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_country_flag = turian_hierachy
+	}
+}
+# Turian Hierarchy Complete
+
+# Set 2
+asari_republic = {
+	aggressiveness = 1.0
+	trade_willingness = 0.7
+	bravery = 0.5
+	combat_bravery = 0.6
+
+	military_spending = 0.5
+	colony_spending = 0.6
+
+	federation_acceptance = +10
+	nap_acceptance = +50
+	commercial_pact_acceptance = +50
+	research_agreement_acceptance = +5
+	defensive_pact_acceptance = +50
+	migration_pact_acceptance = +100
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.2
+	shields_ratio = 0.4
+	hull_ratio = 0.4
+
+	threat_modifier = 1.5
+	threat_others_modifier = 2.0
+	friction_modifier = 0.5
+	claims_modifier = 1.5
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = yes
+		opportunist = no
+		slaver = no
+		uplifter = yes
+		purger = no
+		displacer = no
+		infiltrator = no
+		dominator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_country_flag = asari_republic
+	}
+}
+# Asari Republic Complete 
+
+# Set 3
+batarian_hegemony = {
+	aggressiveness = 1.5
+	trade_willingness = 0.3
+	bravery = 0.5
+	combat_bravery = 1.3
+
+	military_spending = 0.8
+	colony_spending = 0.9
+
+	federation_acceptance = -200
+	nap_acceptance = +50
+	commercial_pact_acceptance = +0
+	research_agreement_acceptance = +0
+	defensive_pact_acceptance =-50
+	migration_pact_acceptance = -200
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.2
+	shields_ratio = 0.4
+	hull_ratio = 0.4
+
+	threat_modifier = 1.8
+	threat_others_modifier = 2.0
+	friction_modifier = 1.5
+	claims_modifier = 1.8
+
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = yes
+		displacer = yes
+		infiltrator = no 
+		dominator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = yes
+		multispecies = no 
+		crisis_fighter = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_country_flag = batarian_hegemony
+	}
+}
+# Batarian Hegemony Complete
+
+# Set 4
+volus_empire = {
+	aggressiveness = 0
+	trade_willingness = 1
+	bravery = 0.75
+	combat_bravery = 0.5
+
+	military_spending = 0.75
+	colony_spending = 1
+
+	federation_acceptance = +600
+	nap_acceptance = +1000
+	commercial_pact_acceptance = +1000
+	research_agreement_acceptance = +500
+	defensive_pact_acceptance = +200
+	migration_pact_acceptance = +0
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.5
+	shields_ratio = 0.25
+	hull_ratio = 0.25
+
+	threat_modifier = 1.5
+	threat_others_modifier = 2.0
+	friction_modifier = 0.75
+	claims_modifier = 1
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = yes
+		opportunist = no
+		slaver = no
+		uplifter = no
+		purger = no
+		displacer = no
+		infiltrator = no
+		dominator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = yes
+		crisis_fighter = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_country_flag = volus_empire
+	}
+}
+# Volus Empire Complete
+
+# Set 5
+aralakh_kahmat = {
+	aggressiveness = 1.5
+	trade_willingness = 0.5
+	bravery = 1.5
+	combat_bravery = 2.0
+
+	military_spending = 1.2
+	colony_spending = 0.6
+
+	federation_acceptance = 0
+	nap_acceptance = -100
+	commercial_pact_acceptance = -20
+	research_agreement_acceptance = 0
+	defensive_pact_acceptance = 20
+	migration_pact_acceptance = 0
+
+	weapon_preferences = weapon_type_strike_craft
+	armor_ratio = 0.4
+	shields_ratio = 0.4
+	hull_ratio = 0.2
+
+	threat_modifier = 0.3
+	threat_others_modifier = 0.9
+	friction_modifier = 1.0
+	claims_modifier = 2.0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = no
+		displacer = no
+		infiltrator = no
+		dominator = yes
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_country_flag = aralakh_kahmat
+	}
+}
