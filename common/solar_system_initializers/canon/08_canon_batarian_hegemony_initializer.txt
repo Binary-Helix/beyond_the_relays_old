@@ -302,7 +302,7 @@ sys_indris_init = {
         orbit_angle = 186
         size = 5
 		has_ring = no
-		flags = { kaver_station pd_ignore }
+		flags = { kaver_station pd_commercial_hab }
     }
 
     planet = {
@@ -398,6 +398,7 @@ sys_koshlanhk_init = {
 			class = "pc_habitat"
 			orbit_distance = 4
 			size = 2
+			flags = { khuramna_station pd_commercial_hab }
 			init_effect = {
 				add_deposit = d_trade_value_4
 	
