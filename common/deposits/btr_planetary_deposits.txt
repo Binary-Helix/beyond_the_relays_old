@@ -8192,51 +8192,14 @@ d_asari_yisrin_restored = {
 	}
 }
 
+d_btr_collector_stasis_pods = {
+	is_for_colonizable = no
+	icon = d_collector_stasis_pods
+	category = deposit_cat_rare
 
+	potential = { always = no }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	planet_modifier = {
+		pop_assembly_speed = 4.0
+	}
+}
