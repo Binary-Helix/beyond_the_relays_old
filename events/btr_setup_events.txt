@@ -459,7 +459,7 @@ country_event = {
 		if = {
 			limit = {
 				galaxy_size = btr_hybrid_400
-				has_origin = mec_asari_origin_thessia
+				has_origin = btr_origin_asrep
 				any_system_within_border = {
 					has_star_flag = parnitha_system
 				}
@@ -3806,29 +3806,38 @@ country_event = {
 
 # Set Minor Empires
 country_event = {
-	id = btr_setup.106
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		if = {
-			limit = {
-				has_country_flag = btr_minor
-			}
-			add_modifier = {
-				modifier = btr_minor_empire
-				days = 10950
-			}
-		}	
-		if = {	
-			limit = {
-				has_country_flag = independent_colony
-			}
-			add_modifier = {
-				modifier = btr_independent_colony
-				days = -1
-			}
-		}
-	}
+    id = btr_setup.106
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        if = {
+            limit = {
+                has_country_flag = btr_minor
+            }
+            add_modifier = {
+                modifier = btr_minor_empire
+                days = 10950
+            }
+        }    
+        if = {    
+            limit = {
+                has_country_flag = independent_colony
+            }
+            add_modifier = {
+                modifier = btr_independent_colony
+                days = -1
+            }
+        }
+        if = {    
+            limit = {
+                has_origin = origin_systems_alliance
+            }
+            add_modifier = {
+                modifier = btr_memory_of_shanxi
+                days = -1
+            }
+        }
+    }
 }
 
 event = {
