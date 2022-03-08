@@ -149,7 +149,55 @@ turian_hierarchy = {
 	}
 }
 
-#courts_of_dekuuna = {}
+courts_of_dekuuna = {
+	aggressiveness = 0.6
+	trade_willingness = 0.6
+	bravery = 0.5
+	combat_bravery = 0.5
+
+	military_spending = 0.3
+	colony_spending = 0.6
+
+	federation_acceptance = 10
+	nap_acceptance = 100
+	commercial_pact_acceptance = 50
+	research_agreement_acceptance = 25
+	defensive_pact_acceptance = 100
+	migration_pact_acceptance = 75
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.5
+	shields_ratio = 0.3
+	hull_ratio = 0.2
+
+	threat_modifier = 1.6
+	threat_others_modifier = 1.8
+	friction_modifier = 0.5
+	claims_modifier = 1.5
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = yes
+		opportunist = no
+		slaver = no
+		uplifter = yes
+		purger = no
+		displacer = no
+		infiltrator = no 
+		dominator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no 
+		crisis_fighter = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_origin = origin_courts_of_dekuuna
+	}	
+}
 
 illuminated_primacy = {
 	aggressiveness = 0
@@ -509,7 +557,55 @@ migrant_fleet = {
 
 #omega = {}
 
-#sedriicae_collective = {} 
+sedriicae_collective = {
+	aggressiveness = 0.4
+	trade_willingness = 0.2
+	bravery = 0.3
+	combat_bravery = 0.8
+
+	military_spending = 0.2
+	colony_spending = 0.5
+
+	federation_acceptance = 300
+	nap_acceptance = 50
+	commercial_pact_acceptance = 100
+	research_agreement_acceptance = 100
+	defensive_pact_acceptance = 100
+	migration_pact_acceptance = 500
+
+	weapon_preferences = weapon_type_kinetic
+	armor_ratio = 0.5
+	shields_ratio = 0.2
+	hull_ratio = 0.3
+
+	threat_modifier = 0.8
+	threat_others_modifier = 0.4
+	friction_modifier = 0.4
+	claims_modifier = 0.6
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = no
+		purger = no
+		displacer = no
+		infiltrator = no 
+		dominator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = no 
+		crisis_fighter = yes
+	}
+
+	allow = {
+		is_country_type = default
+		has_origin = origin_sedriicae_collective
+	}
+} 
 
 parnack_regime = {
 	aggressiveness = 2.0
@@ -713,7 +809,55 @@ vorcha_clandom = {
 	}
 }
 
-#collectors = {}
+collectors = {
+	aggressiveness = 2.0
+	trade_willingness = 0.2
+	bravery = 0
+	combat_bravery = 2.0
+
+	military_spending = 1.2
+	colony_spending = 1.2
+
+	federation_acceptance = -1000
+	nap_acceptance = -1000
+	commercial_pact_acceptance = -1000
+	research_agreement_acceptance = -1000
+	defensive_pact_acceptance = -1000
+	migration_pact_acceptance = -1000
+
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.7
+	shields_ratio = 0.1
+	hull_ratio = 0.2
+
+	threat_modifier = 2.0
+	threat_others_modifier = 0.25
+	friction_modifier = 0
+	claims_modifier = 0
+
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = yes
+		uplifter = no
+		purger = no
+		displacer = no
+		infiltrator = yes
+		dominator = yes
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = no
+	}
+
+	allow = {
+		is_country_type = default
+		has_origin = origin_collectors
+	}
+}
 
 disciples_of_nazara = {
 	aggressiveness = 3.0
