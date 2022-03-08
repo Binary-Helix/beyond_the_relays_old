@@ -84,10 +84,10 @@ sys_sol_init = {
 					portrait = human
 					#homeworld = THIS 
 					traits = { 
-				  trait="btr_human_flexible"
-				  trait="btr_human_multicultural"
-				  trait="trait_wasteful"
-				  trait="trait_quick_learners"
+						trait = btr_human_core
+						trait = btr_human_biodiversity
+						trait = btr_human_frontier_spirit
+						trait = btr_human_rugged_ind
 					  # ideal_planet_class = "pc_continental"
 					}
 				  }
@@ -96,12 +96,12 @@ sys_sol_init = {
 					name = "Systems Alliance"
 					ship_prefix = "PRESCRIPTED_ship_prefix_systems_alliance"
 					type = default
-					origin = "origin_systems_alliance"
+					origin = btr_origin_sysall
 					ignore_initial_colony_error = yes
-					civics = { civic = "civic_btr_sysalliance_colonial_government" civic = "civic_btr_sysalliance_unfettered_combat_vi" }
+					civics={ civic = btr_civic_sysall_colonial_government civic = btr_civic_sysall_unfettered_ai }
 					authority = auth_democratic
 					name_list = "btr_systems_alliance"
-					ethos = { ethic = "ethic_fanatic_egalitarian" ethic = "ethic_militarist" }
+					ethos = { ethic = ethic_egalitarian ethic = ethic_militarist ethic = ethic_materialist }
 					species = event_target:humanSpecies
 					flag = {
 						icon={
@@ -140,10 +140,11 @@ sys_sol_init = {
 			generate_btr_start_deposits_and_blockers = yes
 			generate_hum_earth_capitol_buildings = yes
 			generate_hum_earth_pops = yes
-			add_deposit = d_vancouver
-			add_deposit = d_london
-			add_deposit = d_sao_paulo_shipyards
-			add_deposit = d_atmospheric_purifiers
+			add_deposit = btr_d_sysall_east_africa
+			add_deposit = btr_d_sysall_deep_minerals
+			add_deposit = btr_d_sysall_norsefire
+			add_deposit = btr_d_sysall_land_grants
+			add_deposit = btr_d_sysall_vila_militar
 			set_name = "Earth"
 		}			
 		moon = {

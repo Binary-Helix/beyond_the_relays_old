@@ -89,3 +89,23 @@ btr_leader_trait_internal_consensus = {
 		weight = 100
 	}
 }
+
+### SYSTEM ALLIANCE
+# System alliance sticky leader trait (All)
+btr_leader_trait_twice_bright = {
+	cost = 3
+	modification = no
+
+	icon = "gfx/interface/icons/traits/geth_trait.dds"
+	modifier = {
+		species_leader_exp_gain = 0.15
+		leader_skill_levels = 1
+	}
+
+	leader_trait = { admiral general scientist governor ruler }
+	leader_class = { admiral general scientist governor ruler }
+
+	ai_weight = {
+		weight = 100
+	}
+}

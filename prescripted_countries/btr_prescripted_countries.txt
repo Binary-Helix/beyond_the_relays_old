@@ -369,20 +369,21 @@ systems_alliance={
 
 	authority="auth_democratic"
 	government="gov_military_commissariat"
-	civics={ civic_btr_sysalliance_colonial_government civic_btr_sysalliance_unfettered_combat_vi }
+	
+	civics={ btr_civic_sysall_colonial_government btr_civic_sysall_unfettered_ai }
 
 	flags={ custom_start_screen systems_alliance btr_empire canon_map hybrid_map sandbox_map }
 
-	ethic="ethic_fanatic_egalitarian"
-	ethic="ethic_militarist"
+	ethic = ethic_egalitarian
+	ethic = ethic_militarist
+	ethic = ethic_materialist
 
-	trait="btr_human_flexible"
-	trait="btr_human_multicultural"
-	trait="trait_wasteful"
-	trait="trait_quick_learners"
-	trait = "trait_human_habitability_preference"
+	trait = btr_human_core
+	trait = btr_human_biodiversity
+	trait = btr_human_frontier_spirit
+	trait = btr_human_rugged_ind
 	
-	origin="origin_systems_alliance"	
+	origin = btr_origin_sysall
 
 	planet_name="Earth"
 	planet_class="pc_continental"
