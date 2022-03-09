@@ -551,13 +551,13 @@ generate_hum_earth_capitol_buildings = {
 	while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_major_capital
-	add_building = building_holo_theatres
 	add_building = building_research_lab_1
 	add_building = building_commercial_zone
 	add_building = building_foundry_1
 	add_building = building_factory_1
 	add_building = building_embassy	
-	add_building = building_stronghold	
+	add_building = building_stronghold
+	add_building = building_holo_theatres
 }
 
 generate_hum_luna_buildings = {
