@@ -145,12 +145,12 @@ NArmy = {
 		ARMY_MILITARY_POWER_MORALE_MULT = 0.5
 		ARMY_MILITARY_POWER_NO_MORALE_FACTOR	= 3
 
-		ARMY_DISENGAGE_BASE_CHANCE					= 0.75 # Chance each time a ship takes damage that it disengages, scales with damage received (X = chance at SHIP_DISENGAGE_HEALTH_THRESHOLD of health damage)
+		ARMY_DISENGAGE_BASE_CHANCE					= 1.0 # Chance each time a ship takes damage that it disengages, scales with damage received (X = chance at SHIP_DISENGAGE_HEALTH_THRESHOLD of health damage)
 		ARMY_DISENGAGE_MAX_CHANCE					= 1.0
 		ARMY_DISENGAGE_HEALTH_THRESHOLD				= 0.5 # Morale must be below this before damage taken for an army to disengage
 		ARMY_DISENGAGE_MORALE_DIV					= 2.0 # At max morale, army chance to disengage is divided by this
 		ARMY_DISENGAGE_MORALE_MIN_DIV				= 0.75
-		ARMY_DISENGAGE_TARGET_PRIO					= 0.5	# Target priority for disengaged armies is multiplied by this	
+		ARMY_DISENGAGE_TARGET_PRIO					= 0	# Target priority for disengaged armies is multiplied by this	
 }
 
 # NCombat = {
