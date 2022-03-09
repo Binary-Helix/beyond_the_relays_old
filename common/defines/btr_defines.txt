@@ -105,7 +105,53 @@ NGameplay = {
 	EMPIRE_SIZE_FROM_POPS					= 0.1		# Per pop
 	EMPIRE_SIZE_TECH_COST_PENALTY			= 0.004	# Per empire size above base
 	EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.006	# Per empire size above base
-		}
+}
+
+
+NArmy = {
+		MONTHLY_REINFORCE				= 0.2				# Monthly health percentage reinforcement of armies
+
+		BASE_HEALTH						= 200.0				# Base health
+		BASE_DAMAGE_MIN					= 1.5				# Base min damage
+		BASE_DAMAGE_MAX					= 3.0				# Base max damage
+
+		BASE_MORALE						= 200.0				# Base morale
+		MORALE_DAMAGE_MULT				= 1.0				# Morale Damage Multiplier how much of damage is also dealt to morale.
+		MONTHLY_MORALE_REGENERATION		= 1.0				# How much morale this unit regenerates each month percentage of max value.
+		DISENGAGED_EFFECT				= 0.15				# When a unit is disengaged, damage it deals is multiplied by this
+		BROKEN_MORALE_EFFECT			= 0.25				# When a unit's morale is 0, damage it deals is multiplied by this
+		LOW_MORALE_THRESHOLD			= 0.5
+		LOW_MORALE_EFFECT				= 0.75				# When a unit's morale is less LOW_MORALE_THRESHOLD, damage it deals is multiplied by this
+
+		ARMY_EXP_GAIN_DAMAGE_DEALT		= 2.0				# Gained each time army deals damage
+		ARMY_EXP_GAIN_DAMAGE_TAKEN		= 1.0				# Gained each time army takes damage
+		ARMY_EXP_EXPERIENCED			= 100				# Amount of exp to reach experienced rank
+		ARMY_EXP_VETERAN				= 1000				# Amount of exp to reach veteran rank
+		ARMY_EXP_ELITE					= 10000				# Amount of exp to reach elite rank
+
+		NUM_DAYS_BEFORE_RETREAT			= 15				# How many days that need to pass before we can retreat.
+		RETREAT_UNIT_LOST_MIN_CHANCE	= 0					# Chance that a retreating unit is lost (scales to health)
+		RETREAT_UNIT_LOST_MAX_CHANCE	= 0
+
+		GROUND_COMBAT_RANDOM_TARGETING_WEIGHT	= 1.0		# The higher this is, the more random army targeting will be
+		GROUND_COMBAT_LOW_HEALTH_THRESHOLD		= 0.5		# The army health threshold at which the low health targeting weight is applied
+		GROUND_COMBAT_LOW_HEALTH_TARGETING_WEIGHT = 2.0
+
+		ARMY_MILITARY_POWER_SCALE		= 0.25
+		ARMY_MILITARY_POWER_EXPONENT	= 0.65	# math: power = ( ( effective_health * damage_per_day ) ^ exponent ) * scale
+		ARMY_MILITARY_POWER_DAMAGE_MULT	= 1
+		ARMY_MILITARY_POWER_MORALE_DAMAGE_MULT	= 0.5
+		ARMY_MILITARY_POWER_HEALTH_MULT	= 1
+		ARMY_MILITARY_POWER_MORALE_MULT = 0.5
+		ARMY_MILITARY_POWER_NO_MORALE_FACTOR	= 3
+
+		ARMY_DISENGAGE_BASE_CHANCE					= 0.75 # Chance each time a ship takes damage that it disengages, scales with damage received (X = chance at SHIP_DISENGAGE_HEALTH_THRESHOLD of health damage)
+		ARMY_DISENGAGE_MAX_CHANCE					= 0.5
+		ARMY_DISENGAGE_HEALTH_THRESHOLD				= 0.5 # Morale must be below this before damage taken for an army to disengage
+		ARMY_DISENGAGE_MORALE_DIV					= 2.0 # At max morale, army chance to disengage is divided by this
+		ARMY_DISENGAGE_MORALE_MIN_DIV				= 1.0
+		ARMY_DISENGAGE_TARGET_PRIO					= 0.5	# Target priority for disengaged armies is multiplied by this	
+}
 
 # NCombat = {
 
