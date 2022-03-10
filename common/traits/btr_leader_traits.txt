@@ -32,20 +32,3 @@ btr_leader_trait_asari = {
 		weight = 100
 	}
 }
-
-# Asari commando trait
-btr_leader_trait_commando = {
-	cost = 3
-	modification = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_philosopher.dds"
-	modifier = {
-		army_disengage_chance_mult = 1
-	}
-	
-	leader_trait = { general }
-	leader_class = { general }
-
-	ai_weight = {
-		weight = 100
-	}
-}
