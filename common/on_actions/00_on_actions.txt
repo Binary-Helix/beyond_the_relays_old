@@ -15,7 +15,6 @@ on_game_start = {
 		galactic_features.420 # Spawn VLUUR
 		clones.1 # Clone Army Origin, fix species before Leaders are generated
 		central.1 # Central Crystal event
-		btr_game_start.1 # Setup factions for each empire
 	}
 	random_events = {
 		19 = 0
@@ -2205,12 +2204,10 @@ on_leader_spawned = {
 		syndaw.1050 # Machine Intelligence ruler gets trait
 		distar.173 # New Leaders Get Brainslug Trait
 		clones.24 # New Leaders gain Clone Army Admiral traits
-		btr_asrep.03 # New Leaders gain Asari Trait
 	}
 	random_events = {
-		70 = 0
+		80 = 0
 		20 = utopia.2601
-		10 = btr_asrep.02 # New non-Asari leaders may gain university trait
 	}
 }
 

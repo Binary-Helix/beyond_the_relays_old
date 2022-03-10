@@ -468,7 +468,6 @@ pm_low_gravity = {
 			factor = 0
 			has_planet_modifier = "pm_low_gravity"
 		}
-<<<<<<< HEAD
 		modifier = {
 			factor = 0
 			OR = {
@@ -482,7 +481,6 @@ pm_low_gravity = {
 				is_planet_class = pc_highgrav_veld
 			}
 		}
-=======
 		
 		modifier = {
 			factor = 0
@@ -490,88 +488,6 @@ pm_low_gravity = {
 		}
 	}
 	
-	modifier = "low_gravity"
-}
-
-pm_high_gravity = {
-	spawn_chance = {
-		modifier = {
-			add = 10
-			is_dry = yes
-		}
-		modifier = {
-			add = 10
-			is_wet = yes
-		}
-		modifier = {
-			add = 10
-			is_cold = yes
-		}			
-		modifier = {
-			add = 0 	# Gaia Planets are basically Paradise Worlds and shouldn't suffer from bad planet modifiers
-			is_planet_class = "pc_gaia"
-		}			
-		modifier = {
-			add = 10
-			is_planet_class = pc_relic
-		}
-		modifier = {
-			factor = 2
-			planet_size > 19
-			OR = {
-				is_wet = yes
-				is_cold = yes
-				is_dry = yes
-				is_planet_class = pc_relic
-			}
-		}
-		modifier = {
-			factor = 2
-			planet_size > 22
-			OR = {
-				is_wet = yes
-				is_cold = yes
-				is_dry = yes
-				is_planet_class = pc_relic
-			}
-		}
-		modifier = {
-			factor = 0.5
-			planet_size < 16
-			OR = {
-				is_wet = yes
-				is_cold = yes
-				is_dry = yes
-				is_planet_class = pc_relic
-			}
-		}
-		modifier = {
-			factor = 0
-			planet_size < 12
-			OR = {
-				is_wet = yes
-				is_cold = yes
-				is_dry = yes
-				is_planet_class = pc_relic
-			}
-		}
-		modifier = {
-			factor = 0
-			has_planet_modifier = "pm_low_gravity"
-		}
-		modifier = {
-			factor = 0
-			has_planet_modifier = "pm_high_gravity"
-		}
->>>>>>> parent of 08ae990 (Asari Republics specsheet complete (no factions))
-		
-		modifier = {
-			factor = 0
-			num_modifiers > 1
-		}
-	}
-	
-<<<<<<< HEAD
 	modifier = "low_gravity"
 }
 
@@ -656,11 +572,6 @@ pm_high_gravity = {
 # 	modifier = "high_gravity"
 # }
 
-=======
-	modifier = "high_gravity"
-}
-
->>>>>>> parent of 08ae990 (Asari Republics specsheet complete (no factions))
 pm_mineral_rich = {
 	spawn_chance = {
 		modifier = {
