@@ -71,7 +71,7 @@ sys_kanala_init = {
                   trait="trait_communal"
                   trait="btr_hanar_bureaucratic"
                   trait="btr_hanar_spiritual"
-                      ideal_planet_class = "pc_cascadian"
+                      # ideal_planet_class = "pc_cascadian"
                     }
                   }
                   last_created_species = { save_global_event_target_as = hanarSpecies }
@@ -294,7 +294,7 @@ sys_obek_init = {
         orbit_angle = 67
         size = 17
         has_ring = no
-		flags = { volar_planet pd_ignore }
+		flags = { volar_planet pd_mining_hab }
 		init_effect = {
             set_owner = event_target:illuminated_primacy
             create_colony = {

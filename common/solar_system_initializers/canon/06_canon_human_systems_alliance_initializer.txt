@@ -88,7 +88,7 @@ sys_sol_init = {
 				  trait="btr_human_multicultural"
 				  trait="trait_wasteful"
 				  trait="trait_quick_learners"
-					  ideal_planet_class = "pc_continental"
+					  # ideal_planet_class = "pc_continental"
 					}
 				  }
 				  last_created_species = { save_global_event_target_as = humanSpecies }
@@ -154,7 +154,7 @@ sys_sol_init = {
 			has_ring = no
 			size = 4
 			entity = "cold_barren_planet_luna_entity"
-			flags = { luna_planet pd_ignore pd_hab01 }
+			flags = { luna_planet pd_mining_hab pd_hab01 }
 			init_effect = {
 				set_owner = event_target:systems_alliance
 				create_colony = {
@@ -178,7 +178,7 @@ sys_sol_init = {
 		size = 8
 		has_ring = no
 		entity = "barren_planet_mars_entity"
-		flags = { mars_planet pd_ignore}	
+		flags = { mars_planet pd_mining_hab}	
 		init_effect = {
 			set_owner = event_target:systems_alliance
 			create_colony = {
@@ -630,7 +630,7 @@ sys_arcturus_init = {
 		orbit_distance = 30
 		size = 12
 		entity = "btr_arcturus_station_entity"
-		flags = { arcturus_station pd_ignore }
+		flags = { arcturus_station pd_science_hab }
 		init_effect = {
 			set_owner = event_target:systems_alliance
 			create_colony = {

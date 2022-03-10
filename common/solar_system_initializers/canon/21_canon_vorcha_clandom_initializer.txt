@@ -76,7 +76,7 @@ sys_kyzil_init = {
 					  trait="btr_vorcha_biology"
 					  trait="btr_vorcha_warring_language"
 					  trait="trait_quarrelsome"
-					  ideal_planet_class = "pc_arid"
+					  # ideal_planet_class = "pc_arid"
 					}
 				  }
 				  last_created_species = { save_global_event_target_as = vorchaSpecies }
@@ -260,7 +260,7 @@ sys_aquila_init = {
 
     planet = {
         name = "Volturno"
-        class = pc_arid #pc_mephitic
+        class = pc_highgrav_arid #pc_mephitic
         orbit_distance = 70
         orbit_angle = 207
         size = 25

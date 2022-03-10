@@ -30,13 +30,13 @@ sys_theseaofstorms_init = {
 
     planet = {
         name = "Heretic Station"
-        class = pc_habitat
+        class = pc_heretic_station
         orbit_distance = 0
         orbit_angle = 144
         size = 22
         has_ring = no   
 		starting_planet = yes
-		flags = { heretic_station pd_ignore }
+		flags = { heretic_station pd_science_hab }
 		init_effect = {
 			prevent_anomaly = yes
 			set_global_flag = heretic_station_spawned

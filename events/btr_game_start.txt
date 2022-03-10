@@ -1,0 +1,19 @@
+### Faction initializer event
+event = {
+	id = btr_game_start.1
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		### Asari Republics Faction Setup
+		if = {
+			limit = {
+				from = {
+					has_government = gov_mec_asr
+				}
+			}
+			enable_faction_of_type = xenoist
+			break = yes
+		}
+	}
+}

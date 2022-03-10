@@ -17,20 +17,20 @@ mec_asarirepublics_civ={
 
 	authority = "auth_democratic"
 	government = "gov_mec_asr"
-	civics = { "mec_asari_civic_thessia" "civic_diplomatic_corps" }
+	civics = { civic_btr_asari_rep_democracy civic_btr_asari_rep_thes_dip_corp }
 
 	flags={ custom_start_screen asari_republics btr_empire canon_map hybrid_map sandbox_map council_race }
 
 	ethic = "ethic_fanatic_xenophile"
 	ethic = "ethic_egalitarian"
 
-	trait = "mec_asari_trait_core"
-	trait = "mec_asari_trait_biotic"
-	trait = "trait_charismatic"
-	trait = "mec_asari_trait_sophisticated"
-	trait = "trait_asari_habitability_preference"
+	trait = mec_asari_trait_core
+	trait = mec_asari_trait_biotic
+	trait = btr_asari_trait_smooth_talk
+	trait = mec_asari_trait_sophisticated
+	trait = trait_asari_habitability_preference
 
-	origin="mec_asari_origin_thessia"	
+	origin= btr_origin_asrep	
 
 	planet_name = "Thessia"
 	planet_class = "pc_continental"
@@ -244,6 +244,7 @@ courts_of_dekuuna={
 	trait= "trait_nomadic"
 	trait= "trait_slow_breeders"
 	trait= "trait_nonadaptive"
+	trait = elcor_test_trait
 	trait = "trait_elcor_habitability_preference"
 	
 	origin="origin_courts_of_dekuuna"	
@@ -1713,22 +1714,35 @@ collectors={
     species_adjective = "PRESCRIPTED_species_adjective_collectors"
     #species_bio="PRESCRIPTED_species_bio_collectors"	
 
-	authority="auth_hive_mind"
-	government="gov_machine_assimilator"
-	civics={ civic_hive_subsumed_will civic_hive_one_mind }
+	authority="auth_machine_intelligence"
+	government="gov_machine_empire"
+	civics={ "civic_machine_assimilator" "civic_machine_unitary_cohesion" }
 
 	flags={ custom_start_screen collectors_empire btr_empire hybrid_map sandbox_map }
 
 	ethic="ethic_gestalt_consciousness"
 
-	trait="trait_hive_mind"
-	trait="trait_repugnant"
-	trait="trait_nomadic"
-	trait="trait_traditional"
-	trait="trait_resilient"
-	trait="trait_strong"
+	trait="trait_machine_unit"
+	trait="trait_robot_logic_engines"
+	trait="trait_robot_high_maintenance"
+	trait="trait_robot_high_bandwidth"
 	trait = "trait_collector_habitability_preference"
 	
+secondary_species = {
+        class = "MECASA"
+        portrait = "mec_asari"
+        name = "PRESCRIPTED_species_mec_asarirepublics_civ"
+        plural = "PRESCRIPTED_species_plural_mec_asarirepublics_civ"
+        adjective = "PRESCRIPTED_adjective_mec_asarirepublics_civ"
+        name_list = "mec_asari_names"
+        trait="trait_cybernetic"
+		trait = "mec_asari_trait_core"
+		trait = "mec_asari_trait_biotic"
+		trait = "trait_charismatic"
+		trait = "mec_asari_trait_sophisticated"
+		trait = "trait_asari_habitability_preference"
+    }
+
 	origin="origin_collectors"	
 
 	planet_name="Collector Base"
@@ -1755,7 +1769,7 @@ collectors={
 		}
 	}
 	ruler={
-		gender=female
+		gender = male
 		name="PRESCRIPTED_ruler_name_collectors"
 		portrait="collector"
 		texture=0
@@ -1763,7 +1777,6 @@ collectors={
 		clothes=0
 		leader_class="ruler"
 		ruler_title_male = "General"
-		ruler_title_female = "General"
 	}
 	spawn_enabled=always
 	room="collectors_room"		

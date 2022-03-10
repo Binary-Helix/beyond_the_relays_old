@@ -129,13 +129,11 @@ sys_tartarusdebrisfield_init = {
 				portrait = collector
 				#homeworld = THIS 
 				traits = { 
-			  trait="trait_hive_mind"
-			  trait="trait_repugnant"
-			  trait="trait_nomadic"
-			  trait="trait_traditional"
-			  trait="trait_resilient"
-			  trait="trait_strong"
-				  ideal_planet_class = "pc_arid"
+				trait="trait_machine_unit"
+				trait="trait_robot_logic_engines"
+				trait="trait_robot_high_maintenance"
+				trait="trait_robot_high_bandwidth"
+				  # ideal_planet_class = "pc_arid"
 				}
 			  }
 			  last_created_species = { save_global_event_target_as = collectorSpecies }
@@ -143,8 +141,8 @@ sys_tartarusdebrisfield_init = {
 					name = "The Collectors"
 					ship_prefix = "PRESCRIPTED_ship_prefix_collectors"
 					type = default 
-					civics = { civic = "civic_hive_subsumed_will" civic = "civic_hive_one_mind" }
-					authority = auth_hive_mind
+					civics = { civic = "civic_machine_assimilator" civic = "civic_machine_unitary_cohesion"}
+					authority = auth_machine_intelligence
 					name_list = btr_collectors
 					origin = origin_collectors
 					ethos = { ethic = "ethic_gestalt_consciousness" }

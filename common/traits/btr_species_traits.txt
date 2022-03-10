@@ -50,9 +50,9 @@ mec_asari_trait_core = {
 		weight = 0
 	}
 
-	opposites = {
-		
-	}
+	# opposites = {
+	#	
+	#}
 
 	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_core.dds"
 
@@ -68,18 +68,28 @@ mec_asari_trait_core = {
 mec_asari_trait_biotic = {
 	cost = 2
 	potential_crossbreeding_chance = 0.75
-	#opposites = { }
 	allowed_archetypes = { BIOLOGICAL }
 	modification = no
 	randomized = no
 	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_biotic.dds"
 	
 	modifier = {
+		planet_jobs_energy_produces_mult = 0.05
+		army_damage_mult = 0.15
 	}
-	custom_tooltip = mec_asari_trait_BIOTIC_EFFECT
+}
+
+btr_asari_trait_smooth_talk = {
+	cost = 0
+	potential_crossbreeding_chance = 0.75
+	allowed_archetypes = { BIOLOGICAL }
+	modification = no
+	randomized = no
 	
-	slave_cost = {
-		energy = 500
+	# Embassy effect in diplomaticy_economy
+	modifier = {
+		planet_amenities_mult = 0.1
+		army_damage_mult = 0.15
 	}
 }
 
@@ -93,27 +103,13 @@ mec_asari_trait_sophisticated = {
 	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_sophisticated.dds"
 	
 	modifier = {
-		pop_amenities_usage_mult = 0.20
+		pop_amenities_usage_mult = 0.1
 	}
 	#custom_tooltip = mec_asari_trait_SOPHISTICATED_EFFECT
 	
 	#slave_cost = {
 	#	energy = 150
 	#}
-}
-
-mec_asari_leader_trait_farsighted = {
-	cost = 1
-	modification = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_philosopher.dds"
-	self_modifier = {
-		leader_skill_levels = 1
-	}
-	leader_trait = all
-	opposites = { "leader_trait_substance_abuser" }
-
-	initial = no
-	randomized = no
 }
 
 

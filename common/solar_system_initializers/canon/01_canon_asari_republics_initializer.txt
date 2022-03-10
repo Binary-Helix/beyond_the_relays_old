@@ -79,11 +79,12 @@ sys_parnitha_init = {
 					portrait = mec_asari
 					#homeworld = THIS 
 					traits = { 
-				  trait = "mec_asari_trait_core"
-				  trait = "mec_asari_trait_biotic"
-				  trait = "trait_charismatic"
-				  trait = "mec_asari_trait_sophisticated"
-					  ideal_planet_class = "pc_continental"
+				  		trait = mec_asari_trait_core
+				  		trait = mec_asari_trait_biotic
+				  		trait = btr_asari_trait_smooth_talk
+				  		trait = mec_asari_trait_sophisticated
+					  	trait = trait_asari_habitability_preference
+						  #ideal_planet_class = "pc_continental"
 					}
 				  }
 				last_created_species = { save_global_event_target_as = asariSpecies }
@@ -763,7 +764,7 @@ sys_loropi_init = {
         orbit_angle = 117
         size = 3
         has_ring = no
-		flags = { espota_station pd_ignore }
+		flags = { espota_station pd_science_hab }
 		init_effect = {
 			add_deposit = d_energy_8
 
@@ -1167,7 +1168,7 @@ sys_fotia_init = {
 			name = "Malkos"
 			class = pc_tidallylocked
 			orbit_distance = 45
-			size = 6
+			size = 11
 			init_effect = {
 				set_owner = event_target:asari_republics
 				create_colony = {
