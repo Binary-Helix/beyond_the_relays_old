@@ -110,5 +110,62 @@ country_event = {
 				days = -1
 			}
 		}
+		else_if = {
+			limit = { has_origin = origin_collectors }
+			give_technology = {
+				tech = tech_shields_2
+			}
+			give_technology = {
+				tech = tech_shields_3
+			}
+			give_technology = {
+				tech = tech_shields_4
+			}
+			give_technology = {
+				tech = tech_shields_5
+			}
+			give_technology = {
+				tech = tech_lasers_2
+			}
+			give_technology = {
+				tech = tech_lasers_3
+			}
+			give_technology = {
+				tech = tech_lasers_4
+			}
+			give_technology = {
+				tech = tech_energy_lance_1
+			}
+			give_technology = {
+				tech = tech_energy_lance_2
+			}
+			give_technology = {
+				tech = tech_energy_torpedoes_1
+			}
+			give_technology = {
+				tech = tech_energy_torpedoes_2
+			}
+			give_technology = {
+				tech = tech_dark_matter_deflector
+			}
+			give_technology = {
+				tech = tech_dark_matter_power_core
+			}
+			give_technology = {
+				tech = tech_dark_matter_propulsion
+			}
+			give_technology = {
+				tech = tech_dragon_armor
+			}
+			give_technology = {
+				tech = tech_destroyers
+			}
+			give_technology = {
+				tech = tech_cruisers
+			}
+			give_technology = {
+				tech = tech_battleships
+			}
+		}
 	}
 }
