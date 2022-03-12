@@ -106,8 +106,24 @@ country_event = {
 		else_if = {
 			limit = { has_origin = btr_origin_sysall }
 			add_modifier = {
-				modifier = btr_sysall_empire_modifier
+				modifier = btr_sysall_shanxi_memory
 				days = -1
+			}
+			add_modifier = {
+				modifier = btr_sysall_empire_modifier
+				years = 30
+			}
+			give_technology = {
+				tech = btr_tech_sysall_exogeni
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_sysall_eldfell
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_sysall_hahne
+				message = no
 			}
 		}
 		else_if = {
