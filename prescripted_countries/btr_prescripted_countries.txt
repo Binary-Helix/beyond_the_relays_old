@@ -29,7 +29,6 @@ mec_asarirepublics_civ={
 	trait = btr_asari_trait_smooth_talk
 	trait = mec_asari_trait_sophisticated
 	trait = trait_asari_habitability_preference
-	trait = trait_psionic
 
 	origin= btr_origin_asrep	
 
@@ -370,22 +369,20 @@ systems_alliance={
 
 	authority="auth_democratic"
 	government="gov_military_commissariat"
-	
-	civics={ btr_civic_sysall_colonial_government btr_civic_sysall_unfettered_ai }
+	civics={ civic_btr_sysalliance_colonial_government civic_btr_sysalliance_unfettered_combat_vi }
 
 	flags={ custom_start_screen systems_alliance btr_empire canon_map hybrid_map sandbox_map }
 
-	ethic = ethic_egalitarian
-	ethic = ethic_militarist
-	ethic = ethic_materialist
+	ethic="ethic_fanatic_egalitarian"
+	ethic="ethic_militarist"
 
-	trait = trait_human_habitability_preference
-	trait = btr_human_core
-	trait = btr_human_biodiversity
-	trait = btr_human_frontier_spirit
-	trait = btr_human_rugged_ind
+	trait="btr_human_flexible"
+	trait="btr_human_multicultural"
+	trait="trait_wasteful"
+	trait="trait_quick_learners"
+	trait = "trait_human_habitability_preference"
 	
-	origin = btr_origin_sysall
+	origin="origin_systems_alliance"	
 
 	planet_name="Earth"
 	planet_class="pc_continental"

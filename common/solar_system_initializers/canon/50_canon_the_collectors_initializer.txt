@@ -135,8 +135,7 @@ sys_tartarusdebrisfield_init = {
 				trait="trait_robot_high_bandwidth"
 				  # ideal_planet_class = "pc_arid"
 				}
-				extra_trait_points = 3
-				}
+			  }
 			  last_created_species = { save_global_event_target_as = collectorSpecies }
 				create_country = {
 					name = "The Collectors"
@@ -195,7 +194,6 @@ sys_tartarusdebrisfield_init = {
 			add_deposit = d_consumption_chambers
 			add_deposit = d_deconstruction_bays
 			add_deposit = d_btr_collector_stasis_pods
-			add_deposit = d_dark_matter_deposit_10
 			set_name = "Collector Base"
 		}
 	}	
