@@ -17,7 +17,6 @@ generate_asariPop = {
 				trait = btr_asari_trait_smooth_talk
 				trait = mec_asari_trait_sophisticated
 				trait = trait_asari_habitability_preference
-				trait = trait_psionic
 				# ideal_planet_class = "pc_continental"
 			}
 		}
@@ -172,11 +171,10 @@ generate_humanPop = {
 			portrait = human
 			#homeworld = THIS 
 			traits = {
-				trait = trait_human_habitability_preference
-				trait = btr_human_core
-				trait = btr_human_biodiversity
-				trait = btr_human_frontier_spirit
-				trait = btr_human_rugged_ind
+				trait = "btr_human_flexible"
+				trait = "btr_human_multicultural"
+				trait = "trait_wasteful"
+				trait = "trait_quick_learners"
 				# ideal_planet_class = "pc_continental"
 			}
 		}

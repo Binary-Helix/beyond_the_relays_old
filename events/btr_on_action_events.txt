@@ -68,16 +68,6 @@ country_event = {
 				add_trait = btr_leader_trait_internal_consensus
 			}
 		}
-		else_if = {
-			limit = { 
-				from = {
-					species = { has_trait = btr_human_core }
-				}
-			}
-			from = {
-				add_trait = btr_leader_trait_twice_bright
-			} 
-		}
 	}
 }
 
