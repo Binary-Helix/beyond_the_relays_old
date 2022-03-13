@@ -229,3 +229,104 @@ btr_building_turhie_castra_auxilia = {
 		}
 	}
 }
+
+### Systems Alliance Buildings
+btr_building_sysall_colonial_affairs = {
+	base_buildtime = 150
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_sysall
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_sysall } }
+		}
+	}
+
+	planet_modifier = {
+		job_bureaucrat_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 300
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}
+
+### Systems Alliance Buildings
+btr_building_sysall_interplanetary_combat = {
+	base_buildtime = 720
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_sysall
+		}
+		planet = {
+			has_deposit = btr_d_sysall_vila_militar
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_sysall } }
+		}
+	}
+
+	planet_modifier = {
+		pop_defense_armies_add = 2
+		army_starting_experience_add = 150
+		job_soldier_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1500
+		}
+		upkeep = {
+			energy = 2
+		}
+	}
+}

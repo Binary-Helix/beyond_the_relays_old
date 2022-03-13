@@ -551,20 +551,17 @@ generate_hum_earth_capitol_buildings = {
 	while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_major_capital
-	add_building = building_bureaucratic_1
 	add_building = building_research_lab_1
 	add_building = building_commercial_zone
 	add_building = building_foundry_1
 	add_building = building_factory_1
 	add_building = building_embassy	
-	add_building = building_stronghold	
+	add_building = building_stronghold
+	add_building = building_holo_theatres
 }
 
 generate_hum_luna_buildings = {
-	# while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
-	# while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
-	# while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
-	# while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+	while = { count = 1 add_district = { district_type = district_pdhab_housing ignore_cap = yes } }
 	add_district = district_pdhab_mil
 	add_building = building_hab_capital
 	add_building = building_stronghold
@@ -572,10 +569,7 @@ generate_hum_luna_buildings = {
 }
 
 generate_hum_mars_buildings = {
-	# while = { count = 3 add_district = { district_type = district_city ignore_cap = yes } }
-	# while = { count = 2 add_district = { district_type = district_mining ignore_cap = yes } }
-	# while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
-	# while = { count = 2 add_district = { district_type = district_generator ignore_cap = yes } }
+	while = { count = 1 add_district = { district_type = district_pdhab_housing ignore_cap = yes } }
 	add_district = district_hab_science
 	add_building = building_hab_capital
 	add_building = building_holo_theatres
@@ -590,30 +584,35 @@ generate_hum_elysium_colony_buildings = {
 }
 
 generate_hum_eden_prime_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_holo_theatres
 }
 
 generate_hum_shanxhi_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 3 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_holo_theatres
 }
 
 generate_hum_demeter_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_factory_1	
 }
 
 generate_hum_sirona_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_farming ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_generator ignore_cap = yes } }	
 	add_building = building_capital
 }
 
 generate_hum_bekenstein_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_factory_1	
@@ -627,11 +626,13 @@ generate_hum_terra_nova_colony_buildings = {
 }
 
 generate_hum_benning_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 2 add_district = { district_type = district_farming ignore_cap = yes } }
 	add_building = building_capital
 }
 
 generate_hum_mindoir_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_capital
 }
@@ -644,6 +645,7 @@ generate_hum_tyr_colony_buildings = {
 }
 
 generate_hum_yandoa_colony_buildings = {
+	while = { count = 1 add_district = { district_type = district_city ignore_cap = yes } }
 	while = { count = 1 add_district = { district_type = district_industrial ignore_cap = yes } }
 	add_building = building_capital
 	add_building = building_factory_1	

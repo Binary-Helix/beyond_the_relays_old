@@ -91,3 +91,66 @@ btr_tech_turhie_fleet_in_being = {
     }
     weight_modifier = { factor = 0 }
 }
+
+### Systems Alliance Tech
+btr_tech_sysall_exogeni = {
+    icon = tech_eezo_extraction
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        new_worlds
+    }
+
+    prerequisites = {
+        
+    }
+
+    modifier = {
+        shipsize_starbase_outpost_build_speed_mult = -0.15
+        shipclass_colonizer_build_cost_mult = -0.5
+        planet_colony_development_speed_mult = 0.33
+    }
+    weight_modifier = { factor = 0 }
+}
+
+btr_tech_sysall_eldfell = {
+    icon = tech_eezo_extraction
+    cost = @tier3cost1
+    area = physics
+    tier = 3
+    category = {
+        field_manipulation
+    }
+
+    prerequisites = {
+        
+    }
+
+    modifier = {
+        planet_jobs_energy_produces_mult = 0.1
+        station_gatherers_energy_produces_mult = 0.1
+        ships_upkeep_mult = -0.05
+    }
+    weight_modifier = { factor = 0 }
+}
+
+btr_tech_sysall_hahne = {
+    icon = tech_eezo_extraction
+    cost = @tier3cost1
+    area = engineering
+    tier = 3
+    category = {
+        industry
+    }
+
+    prerequisites = {
+        
+    }
+
+    modifier = {
+        army_health = 0.1
+        army_damage_mult = 0.02
+    }
+    weight_modifier = { factor = 0 }
+}

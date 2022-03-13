@@ -99,8 +99,89 @@ country_event = {
 			limit = { has_origin = btr_origin_getcon }
 			add_modifier = {
 				modifier = btr_getcon_empire_modifier
+				days = -1
 			}
 			add_relic = btr_r_getcon_creator_archives
+		}
+		else_if = {
+			limit = { has_origin = btr_origin_sysall }
+			add_modifier = {
+				modifier = btr_sysall_shanxi_memory
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_sysall_empire_modifier
+				years = 30
+			}
+			give_technology = {
+				tech = btr_tech_sysall_exogeni
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_sysall_eldfell
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_sysall_hahne
+				message = no
+			}
+		}
+		else_if = {
+			limit = { has_origin = origin_collectors }
+			give_technology = {
+				tech = tech_shields_2
+			}
+			give_technology = {
+				tech = tech_shields_3
+			}
+			give_technology = {
+				tech = tech_shields_4
+			}
+			give_technology = {
+				tech = tech_shields_5
+			}
+			give_technology = {
+				tech = tech_lasers_2
+			}
+			give_technology = {
+				tech = tech_lasers_3
+			}
+			give_technology = {
+				tech = tech_lasers_4
+			}
+			give_technology = {
+				tech = tech_energy_lance_1
+			}
+			give_technology = {
+				tech = tech_energy_lance_2
+			}
+			give_technology = {
+				tech = tech_energy_torpedoes_1
+			}
+			give_technology = {
+				tech = tech_energy_torpedoes_2
+			}
+			give_technology = {
+				tech = tech_dark_matter_deflector
+			}
+			give_technology = {
+				tech = tech_dark_matter_power_core
+			}
+			give_technology = {
+				tech = tech_dark_matter_propulsion
+			}
+			give_technology = {
+				tech = tech_dragon_armor
+			}
+			give_technology = {
+				tech = tech_destroyers
+			}
+			give_technology = {
+				tech = tech_cruisers
+			}
+			give_technology = {
+				tech = tech_battleships
+			}
 		}
 	}
 }

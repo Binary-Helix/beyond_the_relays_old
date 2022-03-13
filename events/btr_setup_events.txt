@@ -84,9 +84,9 @@ country_event = {
 				has_country_flag = systems_alliance
 				galaxy_size = btr_hybrid_400
 			}
-			add_resource = { energy = 2750	}
+			add_resource = { energy = 2950	}
 			add_resource = { minerals = 3500 }
-			add_resource = { alloys = 2650	}
+			add_resource = { alloys = 3050	}
 			add_resource = { influence = 800 }
 			add_resource = { food = 2000	}
 			add_resource = { consumer_goods = 1500 }
@@ -3834,16 +3834,7 @@ country_event = {
                 days = -1
             }
         }
-        if = {    
-            limit = {
-                has_origin = origin_systems_alliance
-            }
-            add_modifier = {
-                modifier = btr_memory_of_shanxi
-                days = 7800
-            }
-        }
-    }
+	}
 }
 
 event = {

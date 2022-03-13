@@ -1,0 +1,29 @@
+once = {  }
+
+per_relation = {
+	embassy = {
+		trigger = {
+			species = { has_trait = btr_asari_trait_smooth_talk }
+			has_embassy = from
+		}
+		resources = {
+			category = diplomatic_networking
+			produces = {
+				unity = 1
+			}
+		}
+	}
+
+	embassy = {
+		trigger = {
+			has_valid_civic = btr_civic_sysall_hum_rising
+			has_embassy = from
+		}
+		resources = {
+			category = diplomatic_networking
+			produces = {
+				unity = 5
+			}
+		}
+	}
+}
