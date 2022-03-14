@@ -23,10 +23,9 @@ country_event = {
 	id = btr_game_start.2
 	hide_window = yes
 	is_triggered_only = yes
-	
 	immediate = {
 		if = {
-			limit = { has_country_flag = asari_republics }
+			limit = { has_origin = btr_origin_asrep }
 			give_technology = {
 				tech = btr_tech_asrep_asari_arch
 				message = no
@@ -62,7 +61,7 @@ country_event = {
 			break = yes
 		}
 		else_if = {
-			limit = { has_country_flag = turian_hierarchy }
+			limit = { has_origin = btr_origin_turhie }
 			give_technology = {
 				tech = btr_tech_turhie_elkoss
 				message = no
