@@ -96,7 +96,7 @@ alloys_expenditure_earlyships ={
 		years_passed < 10
 		or = {
 			years_passed > 3
-			has_country_flag = str_disable_corvettes
+			has_country_flag = btr_disable_corvettes
 		}
 	}
 	fraction = {
@@ -377,7 +377,7 @@ alloys_expenditure_ship_upgrades = {
 		}
 		modifier = {
 			add = 1000
-			years_passed < @str_years_of_guaranteed_truce
+			years_passed < @btr_years_of_guaranteed_truce
 		}
 		modifier = {
 			add = 600
@@ -428,15 +428,15 @@ alloys_expenditure_starbases = {
 
 	potential = {
 		nand = {
-			has_country_flag = str_emergency_fleetbuilding_rush
+			has_country_flag = btr_emergency_fleetbuilding_rush
 			resource_stockpile_compare = {
 				resource = alloys
 				value < 500
 			}
 		}
-		str_save_alloys_against_rush = no
+		btr_save_alloys_against_rush = no
 		or = {
-			years_passed < @str_years_of_extended_truce
+			years_passed < @btr_years_of_extended_truce
 			used_naval_capacity_percent > 0.5
 			resource_stockpile_compare = {
 				resource = influence
@@ -531,9 +531,9 @@ alloys_expenditure_starbases_expand = {
 
 	potential = {
 		not = {
-			has_country_flag = str_emergency_fleetbuilding_rush
+			has_country_flag = btr_emergency_fleetbuilding_rush
 		}
-		str_save_alloys_against_rush = no
+		btr_save_alloys_against_rush = no
 		has_ai_expansion_plan = yes
 		highest_threat < 50
 		NOR = {
@@ -556,7 +556,7 @@ alloys_expenditure_starbases_excess = {
 			resource = alloys
 			value > 2000
 		}
-		str_save_alloys_against_rush = no
+		btr_save_alloys_against_rush = no
 	}
 
 	fraction = {
@@ -608,7 +608,7 @@ alloys_expenditure_colonies = {
 
 	potential = {
 		nand = {
-			has_country_flag = str_emergency_fleetbuilding_rush
+			has_country_flag = btr_emergency_fleetbuilding_rush
 			resource_stockpile_compare = {
 				resource = alloys
 				value < 500
@@ -769,8 +769,8 @@ alloys_upkeep_ships = {
 
 	potential = {
 		or = {
-			years_passed > @str_years_of_guaranteed_truce
-			has_country_flag = str_need_to_defend_against_rush
+			years_passed > @btr_years_of_guaranteed_truce
+			has_country_flag = btr_need_to_defend_against_rush
 			is_at_war = yes
 			resource_stockpile_compare = {
 				resource = alloys

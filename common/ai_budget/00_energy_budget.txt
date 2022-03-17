@@ -134,7 +134,7 @@ energy_expenditure_deposit_blockers = {
 
 	potential = {
 		years_passed > 3
-		str_raw_ecocrisis_level_1 = no
+		btr_raw_ecocrisis_level_1 = no
 		or = {
 			resource_income_compare = {
 				resource = minerals
@@ -336,7 +336,7 @@ energy_upkeep_building_unstucker = { # Covers most other things
 	category = planets
 
 	potential = {
-		has_country_flag = str_planet_buildings_unstuck
+		has_country_flag = btr_planet_buildings_unstuck
 	}
 
 	fraction = {
@@ -350,7 +350,7 @@ energy_upkeep_starbase_unstucker = { # Covers most other things
 	category = starbases
 
 	potential = {
-		has_country_flag = str_planet_buildings_unstuck
+		has_country_flag = btr_planet_buildings_unstuck
 	}
 
 	fraction = {
@@ -368,9 +368,9 @@ energy_upkeep_country_not_terraforming = { # Covers most other things
 			or = {
 				and = {
 					has_ascension_perk = ap_world_shaper
-					has_country_flag = str_has_terraformables
+					has_country_flag = btr_has_terraformables
 				}
-				has_country_flag = str_lets_terraform
+				has_country_flag = btr_lets_terraform
 			}
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
@@ -407,7 +407,7 @@ energy_upkeep_country_getting_rushed_panic = { # Covers most other things
 	category = country
 
 	potential = {
-		str_make_fleet_against_rush = yes
+		btr_make_fleet_against_rush = yes
 	}
 
 	fraction = {
@@ -427,7 +427,7 @@ energy_upkeep_country_can_spend = { # Covers most other things
 		}
 		nand = {
 			has_ascension_perk = ap_world_shaper
-			has_country_flag = str_has_terraformables
+			has_country_flag = btr_has_terraformables
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
 				resource = energy
@@ -464,7 +464,7 @@ energy_upkeep_warprep = { # Covers most other things
 		prepare_for_war = yes
 		nand = {
 			has_ascension_perk = ap_world_shaper
-			has_country_flag = str_has_terraformables
+			has_country_flag = btr_has_terraformables
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
 				resource = energy
@@ -487,7 +487,7 @@ energy_upkeep_country_a = { # Covers most other things
 		has_country_flag = acceptable_raw_economy
 		nand = {
 			has_ascension_perk = ap_world_shaper
-			has_country_flag = str_has_terraformables
+			has_country_flag = btr_has_terraformables
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
 				resource = energy
@@ -509,7 +509,7 @@ energy_upkeep_country_f = { # Covers most other things
 		has_country_flag = fine_raw_economy
 		nand = {
 			has_ascension_perk = ap_world_shaper
-			has_country_flag = str_has_terraformables
+			has_country_flag = btr_has_terraformables
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
 				resource = energy
@@ -532,7 +532,7 @@ energy_upkeep_country_g = { # Covers most other things
 		has_country_flag = good_raw_economy
 		nand = {
 			has_ascension_perk = ap_world_shaper
-			has_country_flag = str_has_terraformables
+			has_country_flag = btr_has_terraformables
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
 				resource = energy
@@ -571,7 +571,7 @@ energy_upkeep_fleetbuilding = {
 	type = upkeep
 	category = country
 	potential = {
-		years_passed > @str_years_of_guaranteed_truce
+		years_passed > @btr_years_of_guaranteed_truce
 		used_naval_capacity_percent < 0.6
 	}
 	fraction = {
@@ -588,9 +588,9 @@ energy_expenditure_ultralate = {
 			or = {
 				and = {
 					has_ascension_perk = ap_world_shaper
-					has_country_flag = str_has_terraformables
+					has_country_flag = btr_has_terraformables
 				}
-				has_country_flag = str_lets_terraform
+				has_country_flag = btr_lets_terraform
 			}
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
@@ -665,7 +665,7 @@ energy_upkeep_lategame = {
 		}
 		nand = {
 			has_ascension_perk = ap_world_shaper
-			has_country_flag = str_has_terraformables
+			has_country_flag = btr_has_terraformables
 			used_naval_capacity_percent > 0.9
 			resource_stockpile_compare = {
 				resource = energy
