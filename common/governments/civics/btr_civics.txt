@@ -27,49 +27,289 @@
 #	ai_playable = {}							# Similar to "playable", for AI
 #}
 
-###################
-# SALARIAN CIVICS #
-###################
-civic_btr_salarian_special_task_group ={
+#########################
+# ASARI REPUBLIC CIVICS #
+#########################
+btr_civic_asrep_thes_dip_corp ={
 	modification = no
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
+		origin = {
+			value = btr_origin_asrep
 		}
 	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		intel_decryption_add = 1
-		intel_encryption_add = 1
-		envoys_add = 1
-		spy_network_daily_value_mult = 0.25 
+		envoys_add = 3
+		diplo_weight_mult = 0.33
+		diplo_weight_naval_mult = -0.1
 	}
 }
-civic_btr_salarian_matriarchy ={
+
+btr_civic_asrep_democracy = {
 	modification = no
 	potential = {
-		ethics = {
-			NOT = { value = ethic_gestalt_consciousness }
-		}
-		authority = {
-			NOT = {	value = auth_corporate}	
+		origin = {
+			value = btr_origin_asrep
 		}
 	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		edicts_cost_mult = -0.2
-		governor_skill_levels = 1
+		country_war_exhaustion_mult = 0.1
+		empire_size_colonies_mult = -0.5
+	}
+}
+
+btr_civic_asrep_universities = {
+	potential = {
+		origin = {
+			value = btr_origin_asrep
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		diplo_weight_technology_mult = 0.1
+		# Unity from researchers
+		all_technology_research_speed = 0.05
+		empire_size_colonies_mult = -0.5
+	}
+}
+
+###########################
+# TURIAN HIERARCHY CIVICS #
+###########################
+btr_civic_turhie_honor ={
+	modification = no
+
+	icon = "gfx/interface/icons/traits/Turian_Honor.dds"
+	potential = {
+		origin = {
+			value = btr_origin_turhie
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.25
+		pop_government_ethic_attraction = 0.10
+	}
+}
+
+btr_civic_turhie_service ={
+	modification = no
+	icon = "gfx/interface/icons/traits/Universal_Service_small.dds"
+	potential = {
+		origin = {
+			value = btr_origin_turhie
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_naval_cap_mult = 0.25
+		diplo_weight_naval_mult = 0.33
+	}
+}
+
+btr_civic_turhie_elkoss ={
+	potential = {
+		origin = {
+			value = btr_origin_turhie
+		}	
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_alloys_produces_mult = 0.15
+		starbase_shipyard_build_speed_mult = 0.33
+	}
+}
+
+##########################
+# SYSTEM ALLIANCE CIVICS #
+##########################
+
+btr_civic_sysall_colonial_government = {
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_sysall
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	modifier = {
+		country_starbase_influence_cost_mult = -0.2
+		planet_colony_development_speed_mult = 0.1
+	}
+}
+
+btr_civic_sysall_unfettered_ai = {
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_sysall
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	modifier = {
+		ship_evasion_mult = 0.10
+		ship_tracking_mult = 0.10
+		ship_fire_rate_mult = 0.10
+	}
+}
+
+btr_civic_sysall_hum_rising = {
+	potential = {
+		origin = {
+			value = btr_origin_sysall
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	modifier = {
+		pop_ethic_xenophile_attraction_mult = 0.2
+		# Unity per embassy in diplomatic economy
+	}
+}
+
+#########################
+# GETH CONSENSUS CIVICS #
+#########################
+btr_civic_getcon_nebulous = {
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_getcon
+		}
+	}
+	random_weight = {
+		factor = 0
+	}
+	modifier = {
+		country_claim_influence_cost_mult = 1
+		starbase_outpost_influence_cost_mult = 0.5
+		intel_encryption_add = 10
+	}
+}
+
+btr_civic_getcon_nebulous_late = {
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_getcon
+		}
+	}
+	random_weight = {
+		factor = 0
+	}
+	modifier = {
+		country_claim_influence_cost_mult = 1
+		starbase_outpost_influence_cost_mult = 0.5
+		intel_encryption_add = 10
+	}
+}
+
+btr_civic_getcon_collective_concious = {
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_getcon
+		}
+	}
+	random_weight = {
+		factor = 0
+	}
+	modifier = {
+		planet_crime_mult = -0.1
+	}
+}
+
+btr_civic_getcon_remnant_code = {
+	potential = {
+		origin = {
+			value = btr_origin_getcon
+		}
+	}
+	random_weight = {
+		factor = 0
+	}
+	modifier = {
+		planet_amenities_mult = 0.1
+	}
+}
+
+#########################
+# SALARIAN UNION CIVICS #
+#########################
+btr_civic_saluni_hold_the_line = {
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_saluni
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+}
+
+btr_civic_saluni_quality_tech ={
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_saluni
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.5
+		ships_upkeep_mult = 0.5
+		armies_upkeep_mult = 0.5
+		country_naval_cap_mult = -0.4
+		ship_speed_mult = 0.35
+		ship_interstellar_speed_mult = 0.35
+		ship_windup_mult = 0.25
+		ship_winddown_mult = 0.25
+		ship_disengage_chance_mult = 0.2
+		ship_sensor_range_add = 1
+	}
+}
+
+btr_civic_saluni_strategic_enlightenment = {
+	potential = {
+		origin = {
+			value = btr_origin_saluni
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.5
+		ships_upkeep_mult = 0.5
+		armies_upkeep_mult = 0.5
+		country_naval_cap_mult = -0.4
+		ship_speed_mult = 0.35
+		ship_interstellar_speed_mult = 0.35
+		ship_windup_mult = -0.25
+		ship_winddown_mult = -0.25
+		ship_disengage_chance_mult = 0.2
+		ship_sensor_range_add = 1
 	}
 }
 

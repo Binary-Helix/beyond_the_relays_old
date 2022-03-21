@@ -86,14 +86,14 @@ salarian_union={
     species_adjective = "PRESCRIPTED_species_adjective_salarian_union"
     #species_bio="PRESCRIPTED_species_bio_salarian_union"	
 
-	authority="auth_oligarchic"
-	government="gov_salarian_government"
-	civics={ "civic_btr_salarian_special_task_group" "civic_btr_salarian_matriarchy" }
+	authority= auth_imperial
+	government= gov_despotic_hegemony
+	civics={ btr_civic_saluni_hold_the_line btr_civic_saluni_quality_tech }
 
 	flags={ custom_start_screen salarian_union btr_empire canon_map hybrid_map sandbox_map genophage_empire council_race }
 
-	ethic="ethic_egalitarian"
-	ethic="ethic_fanatic_materialist"
+	ethic = ethic_egalitarian
+	ethic = ethic_fanatic_materialist
 
 	trait="btr_salarian_shortlived"
 	trait="btr_salarian_genius"
@@ -101,8 +101,7 @@ salarian_union={
 	trait="trait_weak"
 	trait = "trait_salarian_habitability_preference"
 	
-	origin="origin_salarian_union"	
-
+	origin = btr_origin_saluni
 	planet_name="Sur'Kesh"
 	planet_class="pc_tropical"
 	city_graphical_culture="mammalian_01"	

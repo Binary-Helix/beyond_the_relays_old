@@ -1,0 +1,83 @@
+namespace = btr_saluni
+# Entered fully surveyed space
+fleet_event = {
+	id = btr_saluni.01
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_valid_civic = btr_civic_saluni_hold_the_line
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				from = {
+					is_surveyed = {
+						who = root.owner
+						status = yes
+					}
+				}
+			}
+			every_owned_ship = {
+				limit = {
+					NOT = {
+						has_modifier = btr_saluni_hold_the_line_survey
+					}
+				}
+				add_modifier = {
+					modifier = btr_saluni_hold_the_line_survey
+				}
+			}
+		}
+		else = {
+			remove_modifier = btr_saluni_hold_the_line_survey
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_saluni.02
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	trigger = {
+		owner = {
+			has_valid_civic = btr_civic_saluni_hold_the_line
+		}
+	}
+
+	immediate = {
+		from = {
+			if = {
+				limit = { 
+					exists = owner
+				}
+				random_spynetwork = {
+					limit = {
+						owner = { is_same_value = root.owner }
+						target = { is_same_value = owner }
+					}
+					if = {
+						limit = { is_spynetwork_level >= 100 }
+						root = {
+							every_owned_ship = {
+								limit = {
+									NOT = {
+										has_modifier = btr_saluni_hold_the_line_full_spy
+									}
+								}
+								add_modifier = {
+									modifier = btr_saluni_hold_the_line_full_spy
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

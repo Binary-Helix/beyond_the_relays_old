@@ -1,3 +1,68 @@
+btr_origin_asrep = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		diplo_weight_economy_mult = 0.33
+		country_trade_fee = -0.2
+		country_consumer_goods_produces_mult = 0.05
+		country_war_exhaustion_mult = 0.1
+		country_claim_influence_cost_mult = 1
+	}
+}
+
+btr_origin_turhie = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+}
+
+btr_origin_sysall = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+	
+	modifier = {
+		shipclass_colonizer_build_cost_mult = -0.15
+	}
+}
+
+btr_origin_getcon = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.3
+		country_engineering_research_produces_mult = 0.2
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = -0.2
+	}
+}
+
+btr_origin_saluni = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		spy_network_daily_value_mult = 0.5
+		ship_fire_rate_mult = -0.3
+	}
+}
 
 origin_systems_alliance = { 
 	is_origin = yes 
