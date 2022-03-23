@@ -1,5 +1,5 @@
 namespace = btr_saluni
-# Entered fully surveyed space
+# Salarian union entered fully surveyed space
 fleet_event = {
 	id = btr_saluni.01
 	hide_window = yes
@@ -38,6 +38,7 @@ fleet_event = {
 	}
 }
 
+# Salarian union entered full spy network territory 
 fleet_event = {
 	id = btr_saluni.02
 	hide_window = yes
@@ -56,23 +57,96 @@ fleet_event = {
 				limit = { 
 					exists = owner
 				}
-				random_spynetwork = {
-					limit = {
-						owner = { is_same_value = root.owner }
-						target = { is_same_value = owner }
-					}
-					if = {
-						limit = { is_spynetwork_level >= 100 }
-						root = {
-							every_owned_ship = {
-								limit = {
-									NOT = {
-										has_modifier = btr_saluni_hold_the_line_full_spy
+				# Maybe always trigger from salarian union scope
+				root.owner = {
+					random_spynetwork = {
+						limit = {
+							target = {
+								is_same_value = prevprevprev.owner
+							}
+						}
+						if = {
+							limit = { is_spynetwork_level >= 100 }
+							root = {
+								every_owned_ship = {
+									limit = {
+										NOT = {
+											has_modifier = btr_saluni_hold_the_line_full_spy
+										}
+									}
+									add_modifier = {
+										modifier = btr_saluni_hold_the_line_full_spy
 									}
 								}
-								add_modifier = {
-									modifier = btr_saluni_hold_the_line_full_spy
-								}
+							}
+						}
+						else = {
+							remove_modifier = btr_saluni_hold_the_line_full_spy
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Leadered salarian union army landed on surveyed planet
+planet_event = {
+	id = btr_saluni.03
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			random_owned_army = {
+				limit = {
+					exists = planet
+					exists = leader
+					planet = { 
+						is_same_value = root
+						solar_system = {
+							is_surveyed = {
+								who = prevprevprev
+								status = yes
+							}
+						}
+					}
+				}
+				leader = {
+					add_trait = btr_leader_trait_general_survey_bonus
+				}
+			}
+		}
+	}
+}
+
+# Leadered salarian union army landed on full spy planet
+planet_event = {
+	id = btr_saluni.04
+	is_triggered_only = yes
+
+	immediate = {
+		from = {
+			random_owned_army = {
+				limit = {
+					exists = planet
+					exists = leader
+					planet = { 
+						is_same_value = root
+					}
+				}
+				log = "Entering army scope: [This.GetName]"
+				owner = {
+					random_spynetwork = {
+						limit = {
+							target = {
+								is_same_value = root.owner
+							}
+						}
+						log = "Entering spy network scope: [This.Target.GetName]"
+						if = {
+							limit = { is_spynetwork_level >= 30 }
+							prevprev.leader = {
+								add_trait = btr_leader_trait_general_survey_bonus
 							}
 						}
 					}

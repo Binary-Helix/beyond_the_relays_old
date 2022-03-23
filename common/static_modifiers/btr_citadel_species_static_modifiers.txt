@@ -44,11 +44,18 @@ btr_sysall_shanxi_memory = {
 ### Salarian Union
 btr_saluni_hold_the_line_survey = {
 	ship_weapon_damage = 0.25
-	army_damage_mult = 0.25
 }
 
 btr_saluni_hold_the_line_full_spy = {
 	ship_weapon_damage = 0.25
+}
+
+btr_saluni_hold_the_line_survey_army = {
+	army_attack_damage_mult = 0.25
+	pop_growth_speed = 0.1
+}
+
+btr_saluni_hold_the_line_full_spy_army = {
+	army_attack_damage_mult = 0.25
 	army_collateral_damage_mult = 0.25
-	army_damage_mult = 0.25
 }

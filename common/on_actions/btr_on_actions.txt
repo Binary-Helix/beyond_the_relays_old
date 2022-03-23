@@ -184,6 +184,27 @@ on_planet_bombarded = {
 	#	btr_mercenary.28
 	}
 }
+
+# A fleet has entered a system | See also: on_fleet_auto_move_arrival
+# Scope = Fleet
+# From = System
+on_entering_system_fleet = {
+	events = {
+		btr_saluni.01
+		btr_saluni.02
+	}
+}
+
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+on_ground_combat_started = {
+	events = {
+		btr_saluni.03
+		btr_saluni.04
+	}
+}
+
 # empire_init_add_technologies = {
 # 	events = {
 # 		btr_setup.3
