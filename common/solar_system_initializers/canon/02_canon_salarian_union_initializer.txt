@@ -74,10 +74,11 @@ sys_pranas_init = {
 					portrait = salarian
 					#homeworld = THIS 
 					traits = { 
-				  trait = "btr_salarian_shortlived"
-				  trait = "btr_salarian_genius"
-				  trait = "trait_rapid_breeders"
-				  trait = "trait_weak"
+						trait= btr_salarian_trait_core
+						trait= btr_salarian_trait_impressive_mind
+						trait= btr_salarian_trait_bleeding_edge
+						trait= btr_salarian_trait_tradecraft
+						trait = "trait_salarian_habitability_preference"
 					  # ideal_planet_class = "pc_tropical"
 					}
 				  }
@@ -88,7 +89,7 @@ sys_pranas_init = {
 					type = default
 					origin = "btr_origin_saluni"
 					ignore_initial_colony_error = yes
-					civics = { civic = "civic_btr_salarian_special_task_group" civic = "civic_btr_salarian_matriarchy" }
+					civics = { civic = btr_civic_saluni_quality_tech civic = btr_civic_saluni_hold_the_line }
 					authority = auth_oligarchic
 					name_list = "btr_salarian"
 					ethos = { ethic = "ethic_egalitarian" ethic = "ethic_fanatic_materialist" }
