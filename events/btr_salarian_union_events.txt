@@ -134,7 +134,6 @@ planet_event = {
 						is_same_value = root
 					}
 				}
-				log = "Entering army scope: [This.GetName]"
 				owner = {
 					random_spynetwork = {
 						limit = {
@@ -142,7 +141,6 @@ planet_event = {
 								is_same_value = root.owner
 							}
 						}
-						log = "Entering spy network scope: [This.Target.GetName]"
 						if = {
 							limit = { is_spynetwork_level >= 30 }
 							prevprev.leader = {

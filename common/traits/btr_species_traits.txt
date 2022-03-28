@@ -116,7 +116,7 @@ mec_asari_trait_sophisticated = {
 # SALARIAN TRAITS #
 ###################
 
-btr_salarian_genius = {
+btr_salarian_trait_core = {
 	cost = 0
 	opposites = {
 		"trait_natural_engineers"
@@ -124,25 +124,21 @@ btr_salarian_genius = {
 		"trait_natural_sociologists"
 	}
 
+
+	leader_age_min = 8
+	leader_age_max = 40
+	
 	initial = yes
 	randomized = no
 	modification = no
 	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		intel_decryption_mult = 0.15
-		intel_encryption_mult = 0.15
-	}
-
-	slave_cost = {
-		energy = 100
+		leader_age = 15
 	}
 }
 
-btr_salarian_shortlived = {
+btr_salarian_trait_impressive_mind = {
 	cost = 0
 	opposites = {
 		"trait_enduring"
@@ -150,8 +146,24 @@ btr_salarian_shortlived = {
 		"trait_fleeting"
 	}
 
-	leader_age_min = 16
-	leader_age_max = 40
+	initial = yes
+	randomized = no
+	modification = no 
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		planet_researchers_produces_mult = 0.20
+		army_damage_mult = -0.25
+	}
+}
+
+btr_salarian_trait_bleeding_edge = {
+	cost = 0
+	opposites = {
+		"trait_enduring"
+		"trait_venerable"
+		"trait_fleeting"
+	}
 
 	initial = yes
 	randomized = no
@@ -159,10 +171,15 @@ btr_salarian_shortlived = {
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		leader_age = -30
-		species_leader_exp_gain = 0.10
-
+		ship_weapon_range_mult = 0.1
+		planet_jobs_specialist_produces_mult = 0.15
+		planet_jobs_worker_produces_mult = 0.05
+		planet_buildings_energy_upkeep_mult = 0.2
 	}
+}
+
+btr_salarian_trait_tradecraft = {
+
 }
 
 

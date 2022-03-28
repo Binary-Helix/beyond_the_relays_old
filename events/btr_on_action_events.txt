@@ -78,6 +78,17 @@ country_event = {
 				add_trait = btr_leader_trait_twice_bright
 			} 
 		}
+		else_if = {
+			limit = { 
+				from = {
+					species = { has_trait = btr_human_core }
+					leader_class = scientist
+				}
+			 }
+			 from = {
+				 add_trait = btr_leader_trait_general_full_had_to_me
+			 }
+		}
 	}
 }
 
