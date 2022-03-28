@@ -1,0 +1,136 @@
+# #Defensive armies can't transport of the planet
+# #maintenance is directly scripted here. 0.25 translates to 0.25 monthly cost (excluding other upkeep modifiers)
+# #morale_damage = 1		# average morale damage of the army, default: auto (calculated from morale * MORALE_DAMAGE_MULT)
+
+# # Army Rework Armies
+# 	mobile_infantry_division = {
+# 	damage = 1.00
+# 	health = 1.00
+# 	morale = 1.00
+# 	morale_damage = 1.00
+# 	collateral_damage = 1.00
+# 	war_exhaustion = 1.00
+# 	time = 90
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 100
+# 		}
+
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
+
+# 	show_tech_unlock_if = {
+# 		OR = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			OR = {
+# 				NOT = { has_authority = auth_machine_intelligence }
+# 				has_valid_civic = civic_machine_assimilator
+# 			}
+# 		}
+# 	}
+# }
+
+# 	mechanized_division = {
+# 	damage = 1.00
+# 	health = 1.00
+# 	morale = 1.00
+# 	morale_damage = 1.00
+# 	collateral_damage = 1.00
+# 	war_exhaustion = 1.00
+# 	time = 90
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 100
+# 		}
+
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
+
+# 	show_tech_unlock_if = {
+# 		OR = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			OR = {
+# 				NOT = { has_authority = auth_machine_intelligence }
+# 				has_valid_civic = civic_machine_assimilator
+# 			}
+# 		}
+# 	}
+# }
+
+# 	air_assault_division = {
+# 	damage = 1.00
+# 	health = 1.00
+# 	morale = 1.00
+# 	morale_damage = 1.00
+# 	collateral_damage = 1.00
+# 	war_exhaustion = 1.00
+# 	time = 90
+# 	icon = GFX_army_type_assault
+# 	prerequisites = { "tech_assault_armies" }
+# 	resources = {
+# 		category = armies
+# 		cost = {
+# 			minerals = 100
+# 		}
+
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
+
+# 	show_tech_unlock_if = {
+# 		OR = {
+# 			NOT = { has_authority = auth_machine_intelligence }
+# 			has_valid_civic = civic_machine_assimilator
+# 		}
+# 	}
+# 	potential = {
+# 		from = {
+# 			NOR = {
+# 				has_trait = "trait_mechanical"
+# 				has_trait = "trait_machine_unit"
+# 				is_sapient = no
+# 			}
+# 		}
+# 		owner = {
+# 			OR = {
+# 				NOT = { has_authority = auth_machine_intelligence }
+# 				has_valid_civic = civic_machine_assimilator
+# 			}
+# 		}
+# 	}
+# }
