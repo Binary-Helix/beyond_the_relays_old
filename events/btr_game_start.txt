@@ -112,6 +112,10 @@ country_event = {
 				modifier = btr_sysall_empire_modifier
 				years = 30
 			}
+			add_modifier = {
+				modifier = btr_sysall_traverse_race
+				years = 50
+			}
 			give_technology = {
 				tech = btr_tech_sysall_exogeni
 				message = no
@@ -123,6 +127,13 @@ country_event = {
 			give_technology = {
 				tech = btr_tech_sysall_hahne
 				message = no
+			}
+		}
+		else_if = {
+			limit = { has_origin = origin_batarian_hegemony }
+			add_modifier = {
+				modifier = btr_batar_traverse_race
+				years = 50
 			}
 		}
 		else_if = {
