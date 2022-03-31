@@ -1,0 +1,100 @@
+######################
+#### Crime events ####
+######################
+
+# Chora's Den Established (High Crime)
+planet_event = {
+	id = btr_den.0
+	title = btr_den.0.name
+	desc = {
+		trigger = {
+			owner = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+		}
+		text = btr_den.0.desc
+	}
+	show_sound = event_criminal_activity
+	location = root
+
+	trigger = {
+		has_owner = yes
+		owner = { is_country_type = default }
+		NOR = {
+			has_planet_flag = criminal_underworld_event_up
+			has_modifier = unemployment_benefits
+			has_modifier = activity_program
+			has_modifier = standby_mode
+			has_modifier = drone_deviancy
+			has_modifier = drone_corruption
+			has_modifier = gang_wars
+			has_modifier = center_of_drug_trade
+			has_modifier = mob_rule
+		}
+		NOT = { has_planet_flag = closed_den } # Cooldown
+		NOT = { has_planet_flag = choras_den_opened }
+		num_pops > 0
+		planet_crime >= 30
+	}
+
+	mean_time_to_happen = {
+		months = 180
+
+		modifier = {
+			factor = 0.5
+			planet_crime >= 50
+		}
+		modifier = {
+			factor = 0.5
+			planet_crime >= 70
+		}
+		modifier = {
+			factor = 0.5
+			planet_crime >= 90
+		}
+	}
+
+	immediate = {
+		set_planet_flag = choras_den_opened
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_ethic = ethic_gestalt_consciousness }
+				}
+			}
+			add_modifier = { modifier = "btr_choras_den" days = -1 }
+			break = yes
+		}
+	}
+
+	after = {
+		hidden_effect = {
+			remove_planet_flag = criminal_underworld_event_up
+		}
+	}
+
+	option = {
+		name = btr_den.0.B
+		trigger = {
+			owner = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+		}
+		tooltip = {
+			add_modifier = { modifier = "btr_choras_den" days = -1 }
+		}
+	}
+
+	option = {
+		name = btr_den.0.A
+		set_planet_flag = choras_den_closed
+		trigger = {
+			owner = {
+				NOT = { has_ethic = ethic_gestalt_consciousness }
+			}
+		}
+		tooltip = {
+			add_modifier = { modifier = "btr_choras_den_closed" days = -1}
+		}
+	}
+}
