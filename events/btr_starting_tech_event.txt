@@ -1,0 +1,100 @@
+namespace = btr_starting_tech
+
+country_event = {
+	id = btr_setup.111
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = asari_republics
+			}
+			every_country = {
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_galactic_ambitions
+				}
+				give_technology = {
+					tech = tech_hypercomms_forum
+				}
+				give_technology = {
+					tech = tech_xeno_diplomacy
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+			}
+		}
+	}
+	immediate = {
+		if = {
+			limit = { 
+				has_country_flag = systems_alliance
+			}
+		}
+	}
+}
