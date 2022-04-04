@@ -153,3 +153,93 @@ planet_event = {
 		}
 	}
 }
+
+# Salarian Enlightment
+country_event = {
+	id = btr_saluni.05
+	title = btr_saluni.05.name
+	desc = btr_saluni.05.desc
+	picture = GFX_evt_metropolis
+	show_sound = event_laboratory_sound
+	location = FROMFROM
+
+	is_triggered_only = yes
+
+	immediate = {
+		FROMFROM = {
+			owner = { save_event_target_as = primitive_country }
+			observation_outpost_owner = {
+				# Xenoist Faction Enlightenment Demand
+				set_timed_country_flag = {
+					flag = recent_enlightenment_timed
+					days = 7200 # 20 years
+				}
+				add_intel = {
+					who = event_target:primitive_country
+					amount = 100
+				}
+			}
+			observation_outpost = {
+				dismantle = yes
+			}
+			solar_system = {
+				if = {
+					limit = {
+						starbase = { owner = { is_same_value = root } }
+					}
+					starbase = {
+						set_owner = event_target:primitive_country
+						if = {
+							limit = { has_starbase_size = starbase_outpost }
+							set_starbase_size = starbase_starport
+						}
+					}
+				}
+				every_system_planet = {
+					limit = {
+						exists = owner
+						owner = { is_same_value = root }
+					}
+					set_owner = event_target:primitive_country
+				}
+			}
+			event_target:primitive_country = {
+				switch = {
+					trigger = has_country_flag
+					stone_age = {
+						remove_country_flag = stone_age
+						root = { set_country_flag = uplifted_stone }
+					}
+					bronze_age = {
+						remove_country_flag = bronze_age
+						root = { set_country_flag = uplifted_bronze }
+					}
+					iron_age = {
+						remove_country_flag = iron_age
+						if = {
+							limit = { has_country_flag = was_bronze }
+							root = { set_country_flag = uplifted_bronze }
+						}
+					}
+					late_medieval_age = { remove_country_flag = late_medieval_age }
+					renaissance_age = { remove_country_flag = renaissance_age }
+					steam_age = { remove_country_flag = steam_age }
+					industrial_age = { remove_country_flag = industrial_age }
+					machine_age = { remove_country_flag = machine_age }
+					atomic_age = { remove_country_flag = atomic_age }
+				}
+				set_country_flag = early_space_age
+				country_event = { id = primitive.16 }
+				add_opinion_modifier = { who = root modifier = opinion_enlightened_us }
+				set_subject_of = {
+					who = root
+					subject_type = protectorate
+				}
+			}
+		}
+	}
+
+	option = {
+		name = btr_saluni.05.a
+	}
+}

@@ -1,0 +1,37 @@
+example = {
+	icon = "GFX_fleet_mission_button_passive_observation"
+	small_icon = 3
+
+	resources = {
+		category = station_observer_missions
+		upkeep = {
+			energy = 1
+			society_research = 1
+			influence = 2
+		}
+
+		produces = {
+			society_research = 6
+		}
+	}
+
+	monthly_progress = 0.04
+	completion_event = observation.1001
+
+	potential = {
+		OR = {
+			has_ethic = "ethic_xenophile"
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+	}
+	valid = {
+		OR = {
+			has_ethic = "ethic_xenophile"
+			has_ethic = "ethic_fanatic_xenophile"
+		}
+	}
+
+	ai_weight = {
+		weight = 100
+	}
+}

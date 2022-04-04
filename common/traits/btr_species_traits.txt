@@ -118,12 +118,6 @@ mec_asari_trait_sophisticated = {
 
 btr_salarian_trait_core = {
 	cost = 0
-	opposites = {
-		"trait_natural_engineers"
-		"trait_natural_physicists"
-		"trait_natural_sociologists"
-	}
-
 
 	leader_age_min = 8
 	leader_age_max = 40
@@ -140,11 +134,6 @@ btr_salarian_trait_core = {
 
 btr_salarian_trait_impressive_mind = {
 	cost = 0
-	opposites = {
-		"trait_enduring"
-		"trait_venerable"
-		"trait_fleeting"
-	}
 
 	initial = yes
 	randomized = no
@@ -159,11 +148,6 @@ btr_salarian_trait_impressive_mind = {
 
 btr_salarian_trait_bleeding_edge = {
 	cost = 0
-	opposites = {
-		"trait_enduring"
-		"trait_venerable"
-		"trait_fleeting"
-	}
 
 	initial = yes
 	randomized = no
@@ -171,15 +155,23 @@ btr_salarian_trait_bleeding_edge = {
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		ship_weapon_range_mult = 0.1
 		planet_jobs_specialist_produces_mult = 0.15
 		planet_jobs_worker_produces_mult = 0.05
-		planet_buildings_energy_upkeep_mult = 0.2
 	}
 }
 
 btr_salarian_trait_tradecraft = {
+	cost = 0
 
+	initial = yes
+	randomized = no
+	modification = no 
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		empire_size_pops_mult = -0.15
+		leader_skill_levels = 1
+	}
 }
 
 
