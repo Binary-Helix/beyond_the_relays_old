@@ -154,3 +154,21 @@ btr_tech_sysall_hahne = {
     }
     weight_modifier = { factor = 0 }
 }
+
+### Salarian Union Tech
+
+btr_tech_saluni_exo_arch = {
+    icon = tech_eezo_extraction
+    cost = @tier3cost1
+    area = society
+    tier = 3
+    category = {
+        new_worlds
+    }
+
+    prerequisites = {
+        
+    }
+
+    weight_modifier = { factor = 10 }
+}
