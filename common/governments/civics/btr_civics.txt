@@ -818,71 +818,52 @@ civic_btr_forayans_to_serve_the_people ={
 ##################
 # PARNACK CIVICS #
 ##################
-civic_btr_asarirep_1 ={
+btr_civic_pack_ment ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		
+		planet_stability_add = 15
+		pop_government_ethic_attraction = 0.50
+		#can't join federations
+		pop_happiness = 0.10
+
 	}
 }
 
-civic_btr_asarirep_1 ={
+btr_civic_enfor_iso ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
+	random_weight = {
+		base = 0
 	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
+	modifier = {
+		country_trust_cap_add = -0.33
+		country_trust_growth = -0.33
+		diplo_weight_naval_mult = 0.50
+		country_war_exhaustion_mult = -0.25
+		country_claim_influence_cost_mult = -0.10
+
+	}
+}
+
+btr_civic_gal_hege ={
+	modification = yes
+	potential = {
+		origin = {
+			value = btr_origin_parnkreg
 		}
 	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		
+		country_influence_produces_add = 1
+		diplo_weight_mult = 0.20
+		starbase_outpost_cost_mult = -0.33
+		country_subject_acceptance_add = +0.50 #doesn't seem right yet...
+		#subjugation wargoal is awlays available
+
 	}
 }
 

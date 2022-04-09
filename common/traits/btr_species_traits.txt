@@ -829,7 +829,7 @@ btr_yahg_trait_apex_pred = {
 
 	modifier = {
 		pop_growth_speed = -0.15
-		planet_pops_food_upkeep_mult = 0.15
+		planet_pops_organics_food_upkeep_mult = 0.15
 		planet_housing_add = -1
 		army_damage_mult = 0.66
 		army_morale = 0.66
@@ -883,9 +883,7 @@ btr_yahg_trait_cont_obsess = {
 	modifier = {
 		pop_resettlement_cost_mult = -0.75
 		planet_jobs_unity_produces_mult = 0.10 
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_jobs_physics_research_upkeep_mult = 0.10
+		planet_researchers_produces_mult = 0.10
 		
 	}
 }

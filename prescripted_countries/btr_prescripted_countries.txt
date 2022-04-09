@@ -1288,14 +1288,15 @@ parnack_regime={
     species_adjective = "PRESCRIPTED_species_adjective_parnack_regime"
     #species_bio="PRESCRIPTED_species_bio_parnack_regime"	
 
-	authority="auth_dictatorial"
-	government="gov_military_dictatorship"
-	civics={ "civic_warrior_culture" "civic_barbaric_despoilers" }
+	authority = "auth_oligarchic"
+	government= "gov_military_junta"
+	civics={ "btr_civic_pack_ment" "btr_civic_enfor_iso" }
 
 	flags={ custom_start_screen parnack_regime btr_empire canon_map hybrid_map sandbox_map btr_minor parnack_regime_player }
 
-	ethic = "ethic_fanatic_xenophobe"
+	ethic = "ethic_xenophobe"
 	ethic = "ethic_militarist"
+	ethic = "ethic_authoritarian"
 
 	trait = "btr_yahg_trait_core"
 	trait = "btr_yahg_trait_apex_pred"
@@ -1303,7 +1304,7 @@ parnack_regime={
 	trait = "btr_yahg_trait_cont_obsess"
 	trait = "btr_yahg_trait_hype_perecpt"
 		
-	origin="origin_parnack_regime"	
+	origin= "btr_origin_parnkreg"	
 
 	planet_name="Parnack"
 	planet_class="pc_badlands"
