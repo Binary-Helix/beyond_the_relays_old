@@ -140,5 +140,18 @@ country_event = {
 				years = 50
 			}
 		}
+		else_if = {
+			limit = { has_origin = btr_origin_parnkreg }
+			give_technology = {
+				tech = btr_tech_parnkreg_regAlpha
+			}
+			give_technology = {
+				tech = btr_tech_parnkreg_standArm
+			}
+			add_modifier = {
+				modifier = btr_parnkreg_modifier
+				years = 15
+			}
+		}
 	}
 }

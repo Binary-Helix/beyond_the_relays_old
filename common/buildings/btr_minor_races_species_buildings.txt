@@ -1,0 +1,60 @@
+### Parnack Regime Buildings
+
+btr_building_parnkreg_blood = {
+	base_buildtime = 360
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_parnkreg
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_parnkreg } }
+		}
+	}
+
+	planet_modifier = {
+		job_duelist_add = 3
+		job_soldier_add = 2
+		job_enforcer_add = 1
+		planet_amenities_add = 10
+	}
+
+	army_modifier = {
+		army_starting_experience_add = 1001
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			trigger = { exists = owner }
+		}
+		cost = {
+			minerals = 1200
+		}
+		upkeep = {
+			energy = 10
+			consumer_goods = 2
+			alloys = 10
+		}
+	}
+}
