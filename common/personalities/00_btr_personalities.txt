@@ -100,7 +100,7 @@ salarian_union = {
 }
 
 turian_hierarchy = {
-	aggressiveness = 1.2
+	aggressiveness = 1.1
 	trade_willingness = 0.5
 	bravery = 1.0
 	combat_bravery = 1.8
@@ -109,11 +109,11 @@ turian_hierarchy = {
 	colony_spending = 0.7
 
 	federation_acceptance = 50
-	nap_acceptance = 10
+	nap_acceptance = 20
 	commercial_pact_acceptance = 25
-	research_agreement_acceptance = 15
+	research_agreement_acceptance = 20
 	defensive_pact_acceptance = 60
-	migration_pact_acceptance = 10
+	migration_pact_acceptance = 15
 
 	weapon_preferences = weapon_type_kinetic
 	armor_ratio = 0.4
@@ -126,7 +126,7 @@ turian_hierarchy = {
 	claims_modifier = 1.4
 
 	behaviour = {
-		conqueror = yes
+		conqueror = no
 		subjugator = yes
 		liberator = yes
 		opportunist = yes
