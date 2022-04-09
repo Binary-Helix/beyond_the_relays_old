@@ -1,0 +1,1754 @@
+namespace = btr_starting_tech
+
+country_event = {
+	id = btr_setup.111
+	hide_window = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_country_flag = asari_republics
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_galactic_ambitions
+				}
+				give_technology = {
+					tech = tech_hypercomms_forum
+				}
+				give_technology = {
+					tech = tech_xeno_diplomacy
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+			
+		}		
+		if = {
+			limit = { 
+				has_country_flag = systems_alliance
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_administrative_ai
+				}
+				give_technology = {
+					tech = tech_combat_computers_1
+				}
+			
+		}
+		if = {
+			limit = {
+				has_country_flag = turian_hierarchy
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_galactic_ambitions
+				}
+				give_technology = {
+					tech = tech_interstellar_campaigns
+				}
+				give_technology = {
+					tech = tech_combat_training
+				}
+				give_technology = {
+					tech = tech_centralized_command
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = salarian_union
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_decryption_1
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_galactic_ambitions
+				}
+				give_technology = {
+					tech = tech_interstellar_campaigns
+				}
+				give_technology = {
+					tech = tech_xeno_diplomacy
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_encryption_1
+				}
+				give_technology = {
+					tech = tech_decryption_2
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = courts_of_dekuuna
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = illuminated_primacy
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = geth_consensus
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_2
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_campaigns
+				}
+				give_technology = {
+					tech = tech_combat_training
+				}
+				give_technology = {
+					tech = tech_centralized_command
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = disciples_of_nazara
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_2
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_campaigns
+				}
+				give_technology = {
+					tech = tech_combat_training
+				}
+				give_technology = {
+					tech = tech_centralized_command
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}	
+		}
+		if = {
+			limit = {
+				has_country_flag = omega_empire
+			}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_2
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = collectors_empire
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_3
+				}
+				give_technology = {
+					tech = tech_lasers_4
+				}
+				give_technology = {
+					tech = tech_genome_mapping
+				}
+				give_technology = {
+					tech = tech_gene_tailoring
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_campaigns
+				}
+				give_technology = {
+					tech = tech_combat_training
+				}
+				give_technology = {
+					tech = tech_centralized_command
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_starbase_3
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_ship_armor_4
+				}	
+		}
+		if = {
+			limit = {
+				has_country_flag = vol_protectorate
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_2
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = { 
+				has_country_flag = batarian_hegemony
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_encryption_1
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+		}
+		if = {
+			limit = { 
+				has_country_flag = remnants_of_rakhana
+			}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+		}
+		if = {
+			limit = { 
+				has_country_flag = aralakh_kahmat
+			}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+		}
+		if = {
+			limit = { 
+				has_country_flag = rachni_hive
+			}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = remnants_of_rakhana
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_3
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_genome_mapping
+				}
+				give_technology = {
+					tech = tech_gene_tailoring
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_interstellar_campaigns
+				}
+				give_technology = {
+					tech = tech_combat_training
+				}
+				give_technology = {
+					tech = tech_centralized_command
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_starbase_3
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_ship_armor_4
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = united_anhur_corporations
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_2
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = relic_mineral_works
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_2
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = wrill_mining_consortium
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_2
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = asteria_agriculture
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_2
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = citadel_council
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_2
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = lystheni_order
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_decryption_1
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_ground_defense_planning
+				}
+				give_technology = {
+					tech = tech_centralized_command
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_encryption_1
+				}
+				give_technology = {
+					tech = tech_decryption_2
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = migrant_fleet
+			}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_shields_3
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_doctrine_fleet_size_1
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_3
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = sedriicae_collective
+			}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_mining_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_1
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = parnack_regime_player
+			}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = raloi_republic
+			}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_thrusters_1
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = vorcha_clandom
+			}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = illium_corporate_interests
+			}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_lasers_2
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_ship_armor_3
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_3
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_mining_1
+				}
+		}
+		if = {
+			limit = {
+				has_country_flag = cerberus_empire
+			}
+				give_technology = {
+					tech = tech_planetary_shield_generator
+				}
+				give_technology = {
+					tech = tech_physics_1
+				}
+				give_technology = {
+					tech = tech_sensors_2
+				}
+				give_technology = {
+					tech = tech_shields_2
+				}
+				give_technology = {
+					tech = tech_interstellar_fleet_traditions
+				}
+				give_technology = {
+					tech = tech_genome_mapping
+				}
+				give_technology = {
+					tech = tech_gene_tailoring
+				}
+				give_technology = {
+					tech = tech_society_1
+				}
+				give_technology = {
+					tech = tech_space_mining_1
+				}
+				give_technology = {
+					tech = tech_engineering_1
+				}
+				give_technology = {
+					tech = tech_alloys_1
+				}
+				give_technology = {
+					tech = tech_thrusters_2
+				}
+				give_technology = {
+					tech = tech_missiles_2
+				}
+				give_technology = {
+					tech = tech_mass_drivers_2
+				}
+				give_technology = {
+					tech = tech_autocannons_1
+				}
+				give_technology = {
+					tech = tech_starbase_2
+				}
+				give_technology = {
+					tech = tech_destroyers
+				}
+				give_technology = {
+					tech = tech_cruisers
+				}
+				give_technology = {
+					tech = tech_battleships
+				}
+				give_technology = {
+					tech = tech_strike_craft_1
+				}
+		}
+	}
+}
