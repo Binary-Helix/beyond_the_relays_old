@@ -1,0 +1,48 @@
+### Parnack Regime Tech
+
+btr_tech_parnkreg_regAlpha = {
+    cost = @tier1cost0
+    area = society
+    tier = 1
+    category = {
+        statecraft
+    }
+    prerequisites = {
+	
+	}
+        
+
+    modifier = {
+		country__unity_produces_mult = 0.10
+        planet_jobs_worker_produces_mult = 0.05
+		
+		# Country Unity Produced
+		# Workers production increase
+		#
+    }
+
+    weight_modifier = { factor = 0 }
+}
+
+btr_tech_parnkreg_standArm = {
+    cost = @tier1cost0
+    area = society
+    tier = 1
+    category = {
+        military_theory
+    }
+    prerequisites = {
+	
+	}
+    modifier = {
+		armies__upkeep_mult = -0.20
+		
+		# Army upkeep -20%
+    }
+
+    weight_modifier = { factor = 0 }
+}
+
+
+
+
