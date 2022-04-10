@@ -237,56 +237,31 @@ country_event = {
 
 	option = {
 		name = btr_saluni.05.a
-
-		set_variable = {
-			which = btr_saluni_gift_world_count
-			value = 0
-		}
-
-		export_resource_stockpile_to_variable = {
-			resource = influence
-			variable = current_influence
-		}
-
-		every_owned_planet = {
-			if = {
-				limit = { has_planet_flag = btr_saluni_gift_mark }
-			
-				prev = {
-					change_variable = {
-						which = btr_saluni_gift_world_count
-						value = 1
-					}
-				}
-			}
-		}
-
-		allow = {
+		fromfrom = {
 			owner = {
-				check_variable_arithmetic = {
-					which = btr_saluni_gift_world_count
-					multiply = 100
-					value < current_influence
-				}
+				shift_ethic = ethic_fanatic_militarist
+				shift_ethic = ethic_xenophobe
 			}
 		}
+	}
 
-		owner = {
-			add_resource = { influence = -100 mult = btr_saluni_gift_world_count }
-		}
-
-		event_target:primitive_country = {
-			set_subject_of = {
-				who = root
-				subject_type = protectorate
+	option = {
+		name = btr_saluni.05.b
+		fromfrom = {
+			owner = {
+				shift_ethic = ethic_fanatic_pacifist
+				shift_ethic = ethic_xenophile
 			}
 		}
+	}
 
-		every_owned_planet = {
-			if = {
-				limit = { has_planet_flag = btr_saluni_gift_mark }
-			
-				set_owner = event_target:primitive_country
+	option = {
+		name = btr_saluni.05.c
+		fromfrom = {
+			owner = {
+				shift_ethic = ethic_pacifist
+				shift_ethic = ethic_materialist
+				shift_ethic = ethic_xenophile
 			}
 		}
 	}

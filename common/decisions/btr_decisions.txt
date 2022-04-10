@@ -3,7 +3,6 @@
 ### Salarian Union ###
 
 btr_decision_saluni_mark_for_giving = {
-	owned_planets_only = yes
 	icon = decision_resources
 
 	effect = {
@@ -11,7 +10,13 @@ btr_decision_saluni_mark_for_giving = {
 	}
 
 	potential = {
-		owner = { has_technology = btr_tech_saluni_exo_arch }
+		star_system = {
+			owner = exists
+			owner = {
+				has_origin = btr_origin_saluni
+				NOT = { has_country_flag = btr_saluni_uplifting }
+			}
+		}
 		NOT = { has_planet_flag = btr_saluni_gift_mark }
 	}
 }

@@ -5,30 +5,19 @@ example = {
 	resources = {
 		category = station_observer_missions
 		upkeep = {
-			energy = 1
-			society_research = 1
-			influence = 2
-		}
-
-		produces = {
-			society_research = 6
+			society_research = 5
+			energy = 10
 		}
 	}
 
-	monthly_progress = 0.04
-	completion_event = observation.1001
+	monthly_progress = 1
+	completion_event = btr_saluni.05
 
 	potential = {
-		OR = {
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"
-		}
+		has_origin = btr_origin_saluni
 	}
 	valid = {
-		OR = {
-			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"
-		}
+		has_origin = btr_origin_saluni
 	}
 
 	ai_weight = {
