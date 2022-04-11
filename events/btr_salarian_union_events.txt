@@ -231,6 +231,10 @@ country_event = {
 				set_country_flag = early_space_age
 				country_event = { id = primitive.16 }
 				add_opinion_modifier = { who = root modifier = opinion_enlightened_us }
+				set_subject_of = {
+					who = root
+					subject_type = protectorate
+				}
 			}
 		}
 	}
@@ -264,5 +268,56 @@ country_event = {
 				shift_ethic = ethic_xenophile
 			}
 		}
+	}
+}
+
+# Salarian ship gift
+country_event = {
+	id = btr_saluni.06
+	title = btr_saluni.06.name
+	desc = btr_saluni.06.desc
+
+	is_triggered_only = yes
+
+	immediate = {
+		export_resource_stockpile_to_variable = { 
+			resource = influence
+			variable = btr_influence
+		}
+	}
+
+	option = {
+		name = btr_saluni.06.a
+		allow = {
+			check_variable = {
+				which = btr_influence
+				value > btr_saluni_ships_cost_to_gift
+			}
+		}
+		every_owned_fleet = {
+			if = {
+				limit = { exists = solar_system }
+				solar_system = {
+					root = {
+						every_subject = {
+							limit = {
+								exists = prevprev.owner
+								prevprev.owner = { is_same_value = prev }
+							}
+							prevprevprev = {
+								set_owner = prev
+							}
+						}
+					}
+				}
+			}
+		}
+		add_resource = {
+			influence = -1
+			mult = btr_saluni_ships_cost_to_gift
+		}
+	}
+	option = {
+		name = btr_saluni.06.b
 	}
 }

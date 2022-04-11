@@ -52,6 +52,53 @@ btr_element_zero_edict_ftl = {
 	}
 }
 
+btr_give_salarian_ships = {
+	length = -1
+	icon = GFX_edict_type_policy
+
+	potential = {
+		has_origin = btr_origin_saluni
+	}
+
+	effect = {
+		set_variable = {
+			which = btr_saluni_ships_cost_to_gift
+			value = 0
+		}
+		every_owned_fleet = {
+			if = {
+				limit = { exists = solar_system }
+				solar_system = {
+					root = {
+						every_subject = {
+							limit = {
+								exists = prevprev.owner
+								prevprev.owner = { is_same_value = prev }
+							}
+							root = {
+								change_variable = {
+									which = btr_saluni_ships_cost_to_gift
+									value = prevprevprevprev.trigger:fleet_power
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		multiply_variable = {
+			which = btr_saluni_ships_cost_to_gift
+			value = 3
+		}
+
+		country_event = {
+			id = btr_saluni.06
+			days = 1
+		}
+	}
+}
+
 # #################
 # # Biotics
 # #################
