@@ -888,32 +888,6 @@ btr_yahg_trait_cont_obsess = {
 	}
 }
 
-btr_yahg_trait_hype_perecpt = {
-	cost = 0
-
-	#Opposites TBD
-	opposites = {
-		"trait_intelligent"
-		"trait_natural_physicists"
-		"trait_natural_engineers"
-		"trait_natural_sociologists"
-	}
-
-	initial = yes
-	randomized = no
-	modification = no
-	allowed_archetypes = {
-		BIOLOGICAL
-	}
-
-	modifier = {
-		leader_skill_levels = +2
-		species_leader_exp_gain = 0.33
-		
-		
-	}
-}
-
 
 
 #################

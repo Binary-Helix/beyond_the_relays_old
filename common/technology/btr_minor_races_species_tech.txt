@@ -15,10 +15,12 @@ btr_tech_parnkreg_regAlpha = {
     modifier = {
 		country_unity_produces_mult = 0.10
         planet_jobs_worker_produces_mult = 0.05
+        pop_cat_worker_political_power = -0.5
+        pop_cat_specialist_political_power = -0.5
 		
 		# Country Unity Produced
 		# Workers production increase
-		#
+		# Less Pop Policatal Power (Worker and Specialists)
     }
 
     weight_modifier = { factor = 0 }
