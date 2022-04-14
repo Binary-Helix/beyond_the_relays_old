@@ -130,12 +130,13 @@ civic_btr_elcor_history_of_stability ={
 		base = 0
 	}
 	modifier = {
-		pop_government_ethic_attraction = 0.20
+		pop_government_ethic_attraction = 0.25
 		planet_stability_add = 10
+		pop_demotion_time_mult = 0.66
 	}
 }
 
-civic_btr_elcor_economic_planning ={
+civic_btr_elcor_elders_of_dekuna ={
 	modification = no
 	potential = {
 		ethics = {
@@ -148,7 +149,7 @@ civic_btr_elcor_economic_planning ={
 		base = 0
 	}
 	modifier = {
-		pop_demotion_time_mult = -0.5
+		governor_skill_levels = 3
 	}
 }
 
