@@ -117,7 +117,7 @@ civic_btr_turian_honor ={
 ################
 # ELCOR CIVICS #
 ################
-civic_btr_elcor_history_of_stability ={
+btr_civic_elcor_history_of_stability ={
 	modification = no
 	potential = {
 		ethics = {
@@ -138,7 +138,7 @@ civic_btr_elcor_history_of_stability ={
 	}
 }
 
-civic_btr_elcor_elders_of_dekuna ={
+btr_civic_elcor_elders_of_dekuna ={
 	modification = no
 	potential = {
 		ethics = {
@@ -153,11 +153,11 @@ civic_btr_elcor_elders_of_dekuna ={
 	modifier = {
 		governor_skill_levels = 3
 	}
-civic_btr_breadbasket_of_the_council_space ={
-		modification = yes
-		potential = {
-			origin = {
-				value = btr_origin_courts_o_dek	
+btr_civic_breadbasket_of_the_council_space ={
+	modification = yes
+	potential = {
+		origin = {
+		value = btr_origin_courts_o_dek	
 			}
 		}
 		random_weight = {
