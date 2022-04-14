@@ -1,4 +1,4 @@
-district_arcology_housing = {
+district_btr_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
@@ -131,7 +131,7 @@ district_arcology_housing = {
 	}
 }
 
-district_arcology_arms_industry = {
+district_btr_arms_industry = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
@@ -319,7 +319,7 @@ district_arcology_arms_industry = {
 	}
 }
 
-district_arcology_civilian_industry = {
+district_btr_civilian_industry = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
@@ -464,7 +464,7 @@ district_arcology_civilian_industry = {
 	}
 }
 
-district_arcology_leisure = {
+district_btr_leisure = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
@@ -485,11 +485,11 @@ district_arcology_leisure = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_arcology_organic_housing
+		district_btr_organic_housing
 		district_city
 		district_nexus
 		district_hive
-		district_arcology_housing
+		district_btr_housing
 	}
 
 	resources = {
@@ -551,7 +551,7 @@ district_arcology_leisure = {
 	}
 }
 
-district_arcology_organic_housing = {
+district_btr_organic_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
@@ -572,11 +572,11 @@ district_arcology_organic_housing = {
 
 	conversion_ratio = 1
 	convert_to = {
-		district_arcology_leisure
+		district_btr_leisure
 		district_city
 		district_nexus
 		district_hive
-		district_arcology_housing
+		district_btr_housing
 	}
 
 	resources = {
@@ -604,7 +604,7 @@ district_arcology_organic_housing = {
 	}
 }
 
-district_arcology_administrative = 	{
+district_btr_administrative = 	{
 
 	base_buildtime = 600
 	is_capped_by_modifier = no
@@ -630,7 +630,7 @@ district_arcology_administrative = 	{
 	convert_to = {
 		district_nexus
 		district_hive
-		district_arcology_religious
+		district_btr_religious
 	}
 
 	resources = {
@@ -698,7 +698,7 @@ district_arcology_administrative = 	{
 	}
 }
 
-district_arcology_religious = {
+district_btr_religious = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
@@ -721,7 +721,7 @@ district_arcology_religious = {
 	convert_to = {
 		district_nexus
 		district_hive
-		district_arcology_administrative
+		district_btr_administrative
 	}
 
 	resources = {
