@@ -134,7 +134,7 @@ civic_btr_elcor_history_of_stability ={
 		planet_stability_add = 10
 		pop_demotion_time_mult = 0.66
 	    planet_administrators_upkeep_mult = -0.10
-		planet_researchers_produces_mult = -0.05
+		planet_researchers_produces_mult = -0.5
 	}
 }
 
@@ -153,6 +153,22 @@ civic_btr_elcor_elders_of_dekuna ={
 	modifier = {
 		governor_skill_levels = 3
 	}
+civic_btr_breadbasket_of_the_council_space ={
+		modification = yes
+		potential = {
+			origin = {
+				value = btr_origin_courts_o_dek	
+			}
+		}
+		random_weight = {
+			base = 0
+		}
+		modifier = {
+			planet_jobs_worker_only_food_produces_mult = 0.10
+			country_resource_max_food_add = 40,000
+			monthly_trades_food_produces_add = 0.5
+			country_galactic_standard_food_produces_add = 0.20
+		}
 }
 
 ################
