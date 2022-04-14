@@ -163,11 +163,27 @@ btr_tech_saluni_exo_arch = {
     area = society
     tier = 3
     category = {
-        new_worlds
+        biology
     }
 
     prerequisites = {
-        
+        tech_epigenetic_triggers
+    }
+
+    weight_modifier = { factor = 10 }
+}
+
+btr_tech_saluni_silent_dreadnoughts = {
+    icon = tech_eezo_extraction
+    cost = @tier5cost1
+    area = engineering
+    tier = 3
+    category = {
+        voidcraft
+    }
+
+    prerequisites = {
+        tech_battleships
     }
 
     weight_modifier = { factor = 10 }

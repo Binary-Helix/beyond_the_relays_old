@@ -1,35 +1,3 @@
 
 
 ### Salarian Union ###
-
-btr_decision_saluni_mark_for_giving = {
-	icon = decision_resources
-
-	effect = {
-		set_planet_flag = btr_saluni_gift_mark
-	}
-
-	potential = {
-		star_system = {
-			owner = exists
-			owner = {
-				has_origin = btr_origin_saluni
-				NOT = { has_country_flag = btr_saluni_uplifting }
-			}
-		}
-		NOT = { has_planet_flag = btr_saluni_gift_mark }
-	}
-}
-
-btr_decision_saluni_unmark_for_giving = {
-	owned_planets_only = yes
-	icon = decision_resources
-
-	effect = {
-		remove_planet_flag = btr_saluni_gift_mark
-	}
-
-	potential = {
-		 has_planet_flag = btr_saluni_gift_mark 
-	}
-}

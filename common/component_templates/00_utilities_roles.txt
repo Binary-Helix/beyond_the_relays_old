@@ -95,7 +95,7 @@ utility_component_template = {
 	ship_behavior = "line"
 
 	class_restriction = { shipclass_military }
-	size_restriction = { cruiser battleship crisis_cruiser }
+	size_restriction = { cruiser battleship btr_silent_dreadnought crisis_cruiser }
 	component_set = "combat_computers"
 	upgrades_to = "COMBAT_COMPUTER_LINE_BASIC"
 
@@ -497,7 +497,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { destroyer cruiser battleship crisis_destroyer crisis_cruiser }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought crisis_destroyer crisis_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_1" }
@@ -526,7 +526,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { destroyer cruiser battleship crisis_destroyer crisis_cruiser }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought crisis_destroyer crisis_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_2" }
@@ -555,7 +555,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_military_special }
-	size_restriction = { destroyer cruiser battleship crisis_destroyer crisis_cruiser star_eater }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought crisis_destroyer crisis_cruiser star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_3" }
@@ -593,7 +593,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { destroyer cruiser battleship crisis_destroyer crisis_cruiser }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought crisis_destroyer crisis_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -621,7 +621,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military }
-	size_restriction = { destroyer cruiser battleship crisis_destroyer crisis_cruiser }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought crisis_destroyer crisis_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "line"
 	prerequisites = { "tech_precognition_interface" }
@@ -653,7 +653,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought titan juggernaut crisis_destroyer crisis_cruiser star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_1" }
@@ -682,7 +682,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought titan juggernaut crisis_destroyer crisis_cruiser star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_2" }
@@ -711,7 +711,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought titan juggernaut crisis_destroyer crisis_cruiser star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_3" }
@@ -750,7 +750,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser star_eater }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought titan juggernaut crisis_destroyer crisis_cruiser star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -778,7 +778,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase }
-	size_restriction = { destroyer cruiser battleship titan juggernaut crisis_destroyer crisis_cruiser }
+	size_restriction = { destroyer cruiser battleship btr_silent_dreadnought titan juggernaut crisis_destroyer crisis_cruiser }
 	component_set = "combat_computers"
 	ship_behavior = "artillery"
 	prerequisites = { "tech_precognition_interface" }
@@ -810,7 +810,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater }
+	size_restriction = { cruiser battleship btr_silent_dreadnought juggernaut titan star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_1" }
@@ -838,7 +838,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater }
+	size_restriction = { cruiser battleship btr_silent_dreadnought juggernaut titan star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_2" }
@@ -866,7 +866,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater }
+	size_restriction = { cruiser battleship btr_silent_dreadnought juggernaut titan star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_3" }
@@ -904,7 +904,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater }
+	size_restriction = { cruiser battleship btr_silent_dreadnought juggernaut titan star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_combat_computers_autonomous" }
@@ -931,7 +931,7 @@ utility_component_template = {
 		}
 	}
 	class_restriction = { shipclass_military shipclass_starbase shipclass_military_special }
-	size_restriction = { cruiser battleship juggernaut titan star_eater }
+	size_restriction = { cruiser battleship btr_silent_dreadnought juggernaut titan star_eater }
 	component_set = "combat_computers"
 	ship_behavior = "carrier"
 	prerequisites = { "tech_precognition_interface" }
