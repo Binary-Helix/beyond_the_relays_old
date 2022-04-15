@@ -154,6 +154,15 @@ utility_component_template = {
 	prerequisites = { "tech_shields_2" }
 	component_set = "SHIELD_2"
 	upgrades_to = "LARGE_SHIELD_3"
+	ai_weight = {
+		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+	}
 }
 
 # Shields
@@ -230,6 +239,15 @@ utility_component_template = {
 	prerequisites = { "tech_shields_3" }
 	component_set = "SHIELD_3"
 	upgrades_to = "LARGE_SHIELD_4"
+	ai_weight = {
+		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+	}
 }
 
 # Advanced Shields
@@ -243,6 +261,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t4_cost
+			exotic_gases = 0.25
 		}
 		upkeep = {
 			energy = @shield_s_t4_upkeep_energy
@@ -261,7 +280,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
 		}
 	}
 }
@@ -276,6 +296,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t4_cost
+			exotic_gases = 0.50
 		}
 		upkeep = {
 			energy = @shield_m_t4_upkeep_energy
@@ -294,7 +315,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
 		}
 	}
 }
@@ -309,6 +331,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t4_cost
+			exotic_gases = 1
 		}
 		upkeep = {
 			energy = @shield_l_t4_upkeep_energy
@@ -326,8 +349,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
 		}
 	}
 }
@@ -343,6 +374,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t5_cost
+			exotic_gases = 0.333
 		}
 		upkeep = {
 			energy = @shield_s_t5_upkeep_energy
@@ -361,7 +393,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
 		}
 	}
 }
@@ -376,6 +409,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t5_cost
+			exotic_gases = 0.666
 		}
 		upkeep = {
 			energy = @shield_m_t5_upkeep_energy
@@ -394,7 +428,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
 		}
 	}
 }
@@ -409,6 +444,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t5_cost
+			exotic_gases = 1.333
 		}
 		upkeep = {
 			energy = @shield_l_t5_upkeep_energy
@@ -426,8 +462,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
 		}
 	}
 }
@@ -447,6 +491,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t6_cost
+			sr_dark_matter = 0.25
 		}
 		upkeep = {
 			energy = @shield_s_t6_upkeep_energy
@@ -464,7 +509,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -479,6 +525,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t6_cost
+			sr_dark_matter = 0.5
 		}
 		upkeep = {
 			energy = @shield_m_t6_upkeep_energy
@@ -495,8 +542,9 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -511,6 +559,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t6_cost
+			sr_dark_matter = 1
 		}
 		upkeep = {
 			energy = @shield_l_t6_upkeep_energy
@@ -527,8 +576,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -547,6 +604,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t7_cost
+			sr_zro = 0.111
 		}
 		upkeep = {
 			energy = @shield_s_t7_upkeep_energy
@@ -564,7 +622,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
+			is_country_type = default
+			resource_stockpile_compare = { resource = sr_zro value <= 50 }
 		}
 	}
 }
@@ -579,6 +638,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t7_cost
+			sr_zro = 0.222
 		}
 		upkeep = {
 			energy = @shield_m_t7_upkeep_energy
@@ -596,7 +656,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
+			is_country_type = default
+			resource_stockpile_compare = { resource = sr_zro value <= 50 }
 		}
 	}
 }
@@ -611,6 +672,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t7_cost
+			sr_zro = 0.333
 		}
 		upkeep = {
 			energy = @shield_l_t7_upkeep_energy
@@ -627,8 +689,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
+			is_country_type = default
+			resource_stockpile_compare = { resource = sr_zro value <= 50 }
 		}
 	}
 }

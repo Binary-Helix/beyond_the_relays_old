@@ -243,6 +243,7 @@ building_fortress = {
 				free_building_slots = 0
 				owner = { used_naval_capacity_percent < 0.4	}
 			}
+			buildings_no_motes = yes
 		}
 	}
 
@@ -278,9 +279,11 @@ building_fortress = {
 		}
 		cost = {
 			minerals = @b2_minerals
+			volatile_motes = @b2_rare_cost
 		}
 		upkeep = {
 			energy = 1
+			volatile_motes = @b2_rare_upkeep
 		}
 	}
 
