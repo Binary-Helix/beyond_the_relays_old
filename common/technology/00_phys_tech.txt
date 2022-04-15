@@ -2062,13 +2062,13 @@ tech_shield_rechargers_1 = {
 
 tech_planetary_shield_generator = {
 	area = physics
-	cost = @tier3cost1
-	tier = 3
+	cost = @tier5cost1
+	tier = 5
 	category = { field_manipulation }
 	ai_update_type = all
 	is_rare = yes
-	prerequisites = { "tech_shields_3" }
-	weight = @tier3weight1
+	prerequisites = { "tech_shields_4" }
+	weight = @tier5weight1
 
 	weight_modifier = {
 		factor = 0.5

@@ -35,8 +35,8 @@ btr_tech_asrep_ship_design = {
     }
 
     modifier = {
-        starbase_shipyard_build_cost_mult = 3
-		ships_upkeep_mult = 2.5
+        starbase_shipyard_build_cost_mult = 1
+		ships_upkeep_mult = 1.5
 		ship_speed_mult = 0.1
 		ship_shield_mult = 0.05
 		ship_armor_mult = 0.05
@@ -89,12 +89,12 @@ btr_tech_turhie_fleet_in_being = {
         ship_fire_rate_mult = 0.05
         ship_disengage_chance_mult = -0.10
     }
-    weight_modifier = { factor = 0 }
+    weight_modifier  = { factor = 0 }
 }
 
 ### Systems Alliance Tech
 btr_tech_sysall_exogeni = {
-    icon = tech_eezo_extraction
+    icon = "tech_exogeni"
     cost = @tier3cost1
     area = society
     tier = 3
@@ -115,7 +115,7 @@ btr_tech_sysall_exogeni = {
 }
 
 btr_tech_sysall_eldfell = {
-    icon = tech_eezo_extraction
+    icon = "tech_eldfell"
     cost = @tier3cost1
     area = physics
     tier = 3
@@ -136,7 +136,7 @@ btr_tech_sysall_eldfell = {
 }
 
 btr_tech_sysall_hahne = {
-    icon = tech_eezo_extraction
+    icon = "tech_hahne"
     cost = @tier3cost1
     area = engineering
     tier = 3
