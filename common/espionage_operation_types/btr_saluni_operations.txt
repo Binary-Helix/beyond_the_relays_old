@@ -1,0 +1,58 @@
+btr_operation_extranet_denial = {
+	categories = { op_cat_sabotage op_cat_government }
+	picture = GFX_evt_acquire_asset
+	desc = operation_acquire_asset_desc
+	stages = 2
+
+	target = starbase
+
+	target_potential = {
+		solar_system = {
+			any_bordering_country = {
+				has_origin = btr_origin_saluni
+			}
+		}
+	}
+
+	resources = {
+		category = operations
+		cost = {
+			energy = 1000
+		}
+		upkeep = {
+			energy = 7
+		}
+	}
+
+	spy_power_cost = 30
+	potential = { 
+		has_nemesis = yes
+	}
+	allow = {
+		custom_tooltip = {
+			is_running_espionage_operation = no
+			fail_text = operation_one_at_a_time
+		}
+	}
+	stage = { #Install operatives
+		difficulty = 4
+		icon = GFX_espionage_chapter_icon_surveillance
+		event = btr_saluni.1000
+	}
+	stage = { #Target identified
+		difficulty = 4
+		icon = GFX_espionage_chapter_icon_target
+		event = btr_saluni.1001
+	}
+	on_roll_failed = {
+		standard_espionage_operation_on_roll_failed = { RANDOM_EVENTS = operation_random_events_generic }
+	}
+	on_create = {
+	# 	target = {
+	# 		set_timed_country_flag = {
+	# 			flag = espionage_operation_targeted_by@root.owner #Used in random Spy Network events
+	# 			days = @operationTargetedByTimer
+	# 		}
+	# 	}
+	}
+}

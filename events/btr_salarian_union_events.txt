@@ -321,3 +321,32 @@ country_event = {
 		name = btr_saluni.06.b
 	}
 }
+
+espionage_operation_event = {
+	id = btr_saluni.1000
+	title = btr_saluni.1000.name
+	espionage_operation = yes
+	desc = btr_saluni.1000.desc
+	picture = GFX_evt_spy_network
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = { }
+
+	option = { name = ACKNOWLEDGED }
+}
+
+espionage_operation_event = {
+	id = btr_saluni.1001
+	title = btr_saluni.1001.name
+	espionage_operation = yes
+	desc = btr_saluni.1001.desc
+	picture = GFX_evt_spy_network
+	show_sound = event_default
+	is_triggered_only = yes
+
+	immediate = { }
+
+	option = { name = ACKNOWLEDGED }
+}
+

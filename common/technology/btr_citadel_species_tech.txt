@@ -170,7 +170,11 @@ btr_tech_saluni_exo_arch = {
         tech_epigenetic_triggers
     }
 
-    weight_modifier = { factor = 10 }
+    potential = {
+        has_origin = btr_origin_saluni
+    }
+
+    weight_modifier = { factor = 50 }
 }
 
 btr_tech_saluni_silent_dreadnoughts = {
@@ -186,5 +190,25 @@ btr_tech_saluni_silent_dreadnoughts = {
         tech_battleships
     }
 
-    weight_modifier = { factor = 10 }
+    potential = {
+        has_origin = btr_origin_saluni
+    }
+
+    weight_modifier = { factor = 50 }
+}
+
+btr_tech_saluni_first_strike_protocols = {
+    icon = tech_eezo_extraction
+    cost = @tier1cost1
+    area = engineering
+    tier = 0
+    category = {
+        voidcraft
+    }
+
+    prerequisites = {
+        tech_battleships
+    }
+
+    weight_modifier = { factor = 0 }
 }

@@ -331,3 +331,112 @@ btr_building_sysall_interplanetary_combat = {
 		}
 	}
 }
+
+### Salarian Union Buildings
+btr_building_saluni_exo_arch_res_outpost = {
+	base_buildtime = 720
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_saluni
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_saluni } }
+		}
+	}
+
+	country_modifier = {
+		all_technology_research_speed = 0.15
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1500
+		}
+		upkeep = {
+			energy = 3
+		}
+	}
+}
+
+btr_building_saluni_covert_collection = {
+	base_buildtime = 720
+	base_cap_amount = 1
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_saluni
+		}
+		has_technology = btr_tech_saluni_exo_arch
+	}
+
+	allow = {
+		exists = owner
+		has_major_upgraded_capital = yes
+		buildings_simple_allow = yes
+		owner = {
+			has_technology = tech_colonial_centralization
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_saluni } }
+		}
+	}
+
+	planet_modifier = {
+		country_engineering_research_produces_mult = 0.05
+		planet_crime_add = -35
+		army_defense_damage_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.1
+		job_technician_add = 6
+	}
+
+	country_modifier = {
+		envoys_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 1500
+		}
+		upkeep = {
+			energy = 10
+		}
+	}
+}
