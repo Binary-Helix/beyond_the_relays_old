@@ -1773,6 +1773,10 @@ action_invite_to_federation = {
 				}
 			}
 		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = btr_civic_pack_ment }
+		}
 	}
 }
 
@@ -1963,6 +1967,10 @@ action_ask_to_join_federation = {
 					is_federation_leader = yes
 				}
 			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_actor_not_inward_perfection"
+			NOT = { has_valid_civic = btr_civic_pack_ment }
 		}
 	}
 }
