@@ -296,6 +296,8 @@ tech_repeatable_weapon_type_kinetic_fire_rate = {
 			factor = @disfavored_weapon_ai_tech_factor
 			NOT = { is_preferred_weapons = weapon_type_kinetic }
 		}
+		weight = 1
+		factor = 125 #scaling factor0
 	}
 
 	weight_groups = {

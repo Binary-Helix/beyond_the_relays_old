@@ -1871,6 +1871,14 @@ tech_strike_craft_2 = {
 	ai_weight = {
 		weight = 0.1
 		modifier = {
+			factor = 10
+			not = { has_technology = tech_energy_torpedoes_1 }
+		}
+		modifier = {
+			factor = 100000
+			has_technology = tech_cruisers
+		}
+		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
