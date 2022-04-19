@@ -164,7 +164,7 @@ tech_mega_engineering = {
 	}
 
 	ai_weight = {
-		factor = @best_megastructure_ai_tech_factor
+		factor = 100000
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -235,7 +235,7 @@ tech_science_nexus = {
 	}
 
 	ai_weight = {
-		factor = @best_megastructure_ai_tech_factor
+		factor = 10
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -306,6 +306,7 @@ tech_sentry_array = {
 	}
 
 	ai_weight = {
+		factor = 10
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -384,6 +385,7 @@ tech_strategic_coordination = {
 	}
 
 	ai_weight = {
+		factor = 1000000
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -458,6 +460,7 @@ tech_interstellar_assembly = {
 	}
 
 	ai_weight = {
+		factor = 10
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -536,6 +539,7 @@ tech_mega_art = {
 	}
 
 	ai_weight = {
+		factor = 10
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -628,16 +632,13 @@ tech_gateway_activation = {
 	}
 
 	ai_weight = {
+		factor = 40000 #FTL techs are good
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
-		}
-		modifier = {
-			factor = 2
-			is_ai = no #auto-research
 		}
 	}
 }
@@ -707,16 +708,13 @@ tech_gateway_construction = {
 	}
 
 	ai_weight = {
+		factor = 40000 #FTL techs are good
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
-		}
-		modifier = {
-			factor = 2
-			is_ai = no #auto-research
 		}
 	}
 }
@@ -744,7 +742,7 @@ tech_dyson_sphere = {
 	}
 
 	ai_weight = {
-		factor = @best_megastructure_ai_tech_factor
+		factor = 2000000
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -774,6 +772,7 @@ tech_matter_decompressor = {
 	}
 
 	ai_weight = {
+		factor = 1000000
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -803,7 +802,7 @@ tech_ring_world = {
 	}
 
 	ai_weight = {
-		factor = @best_megastructure_ai_tech_factor
+		factor = 500000
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -882,6 +881,7 @@ tech_mega_shipyard = {
 	}
 
 	ai_weight = {
+		factor = 10
 		modifier = {
 			factor = 1.25
 			research_leader = {

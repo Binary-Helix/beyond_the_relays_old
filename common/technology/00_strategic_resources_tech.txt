@@ -35,8 +35,13 @@ tech_mine_living_metal = {
 			}
 		}
 		modifier = {
-			factor = 20
+			factor = 1000
 			has_country_flag = dragon_breeders #so they can recruit Fledgeling Dragons
+		}
+		modifier = {
+			factor = 0
+			is_ai = yes
+			has_monthly_income = { resource = engineering_research value < 750 }
 		}
 	}
 }
@@ -70,6 +75,12 @@ tech_mine_betharian = {
 	}
 
 	ai_weight = {
+		weight = 40 #strategic resource
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -127,7 +138,12 @@ tech_mine_volatile_motes = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #important resource
+		weight = 50000 #important resource
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 50
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -180,7 +196,12 @@ tech_volatile_motes = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #important resource
+		weight = 50000 #important resource
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 50
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -234,7 +255,16 @@ tech_mine_exotic_gases = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #important resource
+		weight = 50000
+		factor = 5 #important resource
+		modifier = {
+			factor = 125 #scaling factor
+			always = yes
+		}
+		modifier = {
+			factor = 50
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -287,7 +317,12 @@ tech_exotic_gases = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #important resource
+		weight = 50000 #important resource
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -341,7 +376,12 @@ tech_mine_rare_crystals = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #strategic resource
+		weight = 40000 #strategic resource
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 50
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -395,7 +435,12 @@ tech_rare_crystals = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor
+		weight = 50000 #important resource
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 50
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -455,7 +500,8 @@ tech_mine_zro = {
 	}
 
 	ai_weight = {
-		factor = 1.5 #very rare tech
+		weight = 3 #very rare tech
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -507,7 +553,8 @@ tech_mine_dark_matter = {
 	}
 
 	ai_weight = {
-		factor = 2 #strategic resource
+		weight = 5 #strategic resource
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -559,7 +606,8 @@ tech_nanite_transmutation = {
 	}
 
 	ai_weight = {
-		factor = @strategic_resource_ai_tech_factor #important resource
+		weight = 5 #important resource
+		factor = 5 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
