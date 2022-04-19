@@ -350,3 +350,28 @@ espionage_operation_event = {
 	option = { name = ACKNOWLEDGED }
 }
 
+# Salarian Event Destroy Deposit
+planet_event = {
+	id = btr_saluni.07
+	title = btr_saluni.07.name
+	desc = btr_saluni.07.desc
+
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	trigger = {
+		has_deposit = btr_d_saluni_maint_beauty
+		planet_devastation >= 60
+	}
+
+	immediate = {
+		remove_deposit = btr_d_saluni_maint_beauty
+		# TODO: THIS MIGHT RESULT IN WEIRD BUGS UNDER OCCUPATION
+		owner = {
+			set_country_flag = btr_saluni_maint_beauty_lost
+		}
+	}
+
+	option = { name = DISGUSTING }
+}
