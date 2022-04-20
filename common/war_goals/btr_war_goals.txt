@@ -82,7 +82,16 @@ btr_wg_subjugation_yahg = {
 				}
 			}
 		}
+		from = {
+			every_system = {
+				limit = { NOT = { any_system_planet = { exists = owner }} }
+				starbase = {
+					set_owner = root
+				}
+			}
+		}
 	}
+	
 
 	on_status_quo = {
 		if = {
