@@ -264,6 +264,9 @@ btr_civic_saluni_hold_the_line = {
 	random_weight = {
 		base = 0
 	}
+	modifier = {
+		spy_network_daily_value_add = 1
+	}
 }
 
 btr_civic_saluni_quality_tech ={
@@ -301,18 +304,6 @@ btr_civic_saluni_strategic_enlightenment = {
 	}
 	random_weight = {
 		base = 0
-	}
-	modifier = {
-		starbase_shipyard_build_speed_mult = 0.5
-		ships_upkeep_mult = 0.5
-		armies_upkeep_mult = 0.5
-		country_naval_cap_mult = -0.4
-		ship_speed_mult = 0.35
-		ship_interstellar_speed_mult = 0.35
-		ship_windup_mult = -0.25
-		ship_winddown_mult = -0.25
-		ship_disengage_chance_mult = 0.2
-		ship_sensor_range_add = 1
 	}
 }
 

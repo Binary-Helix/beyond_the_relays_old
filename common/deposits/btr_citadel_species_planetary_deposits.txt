@@ -412,6 +412,7 @@ btr_d_saluni_optim_energy = {
 	icon = d_city
 
 	planet_modifier = {
+		planet_max_districts_add = -2
 		district_generator_max = 3
 		pop_growth_speed = 0.1
 		country_energy_produces_mult = 0.1
@@ -450,7 +451,7 @@ btr_d_saluni_vast_wild = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			rare_crystals = 4
+			platinum = 2
 		}
 	}
 	
@@ -464,7 +465,6 @@ btr_d_saluni_stg_hq = {
 	icon = d_city
 
 	planet_modifier = {
-		job_chemist_add = 4
 		job_artificer_add = 4
 		job_researcher_add = 4
 		job_technician_add = 4

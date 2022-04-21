@@ -381,15 +381,15 @@ btr_building_saluni_exo_arch_res_outpost = {
 }
 
 btr_building_saluni_covert_collection = {
-	base_buildtime = 720
+	base_buildtime = 600
 	base_cap_amount = 1
 	potential = {
 		exists = owner
 		owner = {
 			is_regular_empire = yes
 			has_origin = btr_origin_saluni
+			has_technology = btr_tech_saluni_exo_arch
 		}
-		has_technology = btr_tech_saluni_exo_arch
 	}
 
 	allow = {
@@ -433,7 +433,7 @@ btr_building_saluni_covert_collection = {
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = 1500
+			minerals = 1000
 		}
 		upkeep = {
 			energy = 10
