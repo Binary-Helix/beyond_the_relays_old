@@ -1,6 +1,6 @@
 ### Parnack Regime Tech
 
-btr_tech_parnkreg_regAlpha = {
+btr_tech_parnkreg_reg_alpha = {
     cost = @tier1cost0
     area = society
     tier = 1
@@ -17,16 +17,12 @@ btr_tech_parnkreg_regAlpha = {
         planet_jobs_worker_produces_mult = 0.05
         pop_cat_worker_political_power = -0.5
         pop_cat_specialist_political_power = -0.5
-		
-		# Country Unity Produced
-		# Workers production increase
-		# Less Pop Policatal Power (Worker and Specialists)
     }
 
     weight_modifier = { factor = 0 }
 }
 
-btr_tech_parnkreg_standArm = {
+btr_tech_parnkreg_stand_arm = {
     cost = @tier1cost0
     area = society
     tier = 1
@@ -37,10 +33,7 @@ btr_tech_parnkreg_standArm = {
 	
 	}
     modifier = {
-		
 		armies_upkeep_mult = -0.20
-		
-		# Army upkeep -20%
     }
 
     weight_modifier = { factor = 0 }
