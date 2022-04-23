@@ -14,3 +14,29 @@ btr_origin_getcon = {
 		country_society_research_produces_mult = -0.2
 	}
 }
+
+
+btr_origin_gether = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		ship_fire_rate_mult = 0.20
+		army_starting_experience_add = 101
+		army_collateral_damage_mult = 1
+		country_war_exhaustion_mult = -0.50
+		ship_orbital_bombardment_mult = -0.40
+
+		#Determined Exterminator Effects
+		country_starbase_influence_cost_mult = -0.3
+		ship_weapon_damage = 0.25
+		starbase_shipyard_build_cost_mult = -0.15
+		country_naval_cap_mult = 0.33
+	}
+
+}
