@@ -789,8 +789,10 @@ btr_forayans_caste_system = {
 # YAHG  TRAITS #
 ################
 
-btr_yahg_physique = {
+btr_yahg_trait_core = {
 	cost = 0
+
+	#Opposites TBD
 	opposites = {
 		"trait_resilient"
 		"trait_strong"
@@ -800,19 +802,25 @@ btr_yahg_physique = {
 	initial = yes
 	randomized = no
 	modification = no
+
+	immortal_leaders = no
+	
+	leader_age_min = 30
+	leader_age_max = 100
+
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
 
 	modifier = {
-		army_damage_mult = 0.2
-		army_attack_health_mult = 0.15
-		army_defense_health_mult = 0.15
+		leader_age = 50
 	}
 }
 
-btr_yahg_keen_mind = {
+btr_yahg_trait_apex_pred = {
 	cost = 0
+
+	#Opposites TBD
 	opposites = {
 		"trait_intelligent"
 		"trait_natural_physicists"
@@ -828,14 +836,67 @@ btr_yahg_keen_mind = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.25
-		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		intel_decryption_mult = 0.2
-		intel_encryption_mult = 0.2
+		pop_growth_speed = -0.15
+		planet_pops_organics_food_upkeep_mult = 0.15
+		pop_housing_usage_mult = 0.25
+		army_damage_mult = 0.66
+		army_morale = 0.66
 	}
 }
+
+
+btr_yahg_trait_truthsay = {
+	cost = 0
+
+	#Opposites TBD
+	opposites = {
+		"trait_intelligent"
+		"trait_natural_physicists"
+		"trait_natural_engineers"
+		"trait_natural_sociologists"
+	}
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.15 
+		empire_size_pops_mult= -0.20 
+		
+	}
+}
+
+btr_yahg_trait_cont_obsess = {
+	cost = 0
+
+	#Opposites TBD
+	opposites = {
+		"trait_intelligent"
+		"trait_natural_physicists"
+		"trait_natural_engineers"
+		"trait_natural_sociologists"
+	}
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+
+	modifier = {
+		pop_resettlement_cost_mult = -0.75
+		planet_jobs_unity_produces_mult = 0.10 
+		planet_researchers_produces_mult = 0.10
+		
+	}
+}
+
+
 
 #################
 # RACHNI TRAITS #

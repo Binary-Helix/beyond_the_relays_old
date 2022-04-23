@@ -109,3 +109,25 @@ btr_leader_trait_twice_bright = {
 		weight = 100
 	}
 }
+
+
+### Parnack Regime
+
+# Yahg Leader Trait
+
+btr_leader_trait_hype_perecpt = {
+
+	cost = 3
+	modification = no
+
+	leader_trait = { admiral general scientist governor ruler }
+	leader_class = { admiral general scientist governor ruler }
+
+	modifier = {
+		leader_skill_levels = +2
+		species_leader_exp_gain = 0.33
+		
+		
+	}
+
+}
