@@ -2043,7 +2043,7 @@ action_open_borders = {
 	auto_accepted = yes
 	requires_actor_independence = no
 	requires_recipient_independence = no
-	should_show_auto_accept_message_recipient = yes
+	should_show_auto_accept_message_recipient = no
 	#should_notify_all_communications = yes
 	action_type = positive
 
@@ -2109,7 +2109,7 @@ action_close_borders = {
 	auto_accepted = yes
 	requires_actor_independence = no
 	requires_recipient_independence = no
-	should_show_auto_accept_message_recipient = yes
+	should_show_auto_accept_message_recipient = no
 	#should_notify_all_communications = yes
 	action_type = negative
 
