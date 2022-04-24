@@ -522,6 +522,8 @@ btr_geth_trait_core = {
 	modification = no
 	allowed_archetypes = { MACHINE }
 
+	icon = "gfx/interface/icons/traits/trait_geth_core.dds"
+
 	triggered_pop_modifier = { 
 		potential = {
 			owner = { has_valid_civic = btr_civic_getcon_remnant_code }
@@ -534,6 +536,9 @@ btr_geth_trait_core = {
 
 btr_geth_trait_linked_consci = {
 	cost = 0
+
+	icon = "gfx/interface/icons/traits/trait_linked_consciousness.dds"
+
 	opposites = {
 		"trait_robot_learning_algorithms"
 		"trait_robot_propaganda_machines"
@@ -553,6 +558,9 @@ btr_geth_trait_linked_consci = {
 btr_geth_trait_purpose_built_models = {
 	cost = 0
 	
+	icon = "gfx/interface/icons/traits/trait_purpose_built.dds"
+
+	
 	allowed_archetypes = { MACHINE }
 	initial = yes
 	randomized = no
@@ -567,6 +575,8 @@ btr_geth_trait_purpose_built_models = {
 
 btr_geth_trait_deontological_primacy = {
 	cost = 0
+
+	icon = "gfx/interface/icons/traits/trait_deontological_primacy.dds"
 	
 	allowed_archetypes = { MACHINE }
 	initial = yes
