@@ -34,8 +34,6 @@ btr_building_asrep_comm_center = {
 		}
 	}
 
-	# convert_to = {}
-
 	planet_modifier = {
 		planet_amenities_mult = 0.05
 		pop_cat_worker_political_power = 0.1
@@ -43,11 +41,28 @@ btr_building_asrep_comm_center = {
 		job_culture_worker_add = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 	resources = {
 		category = planet_buildings
 		produces = {
 			trigger = { exists = owner }
 			unity = 4
+		}
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
 		}
 		cost = {
 			minerals = @b1_minerals
@@ -96,13 +111,22 @@ btr_building_asrep_sports_center = {
 		}
 	}
 
-	# convert_to = {}
-
 	planet_modifier = {
 		planet_amenities_mult = 0.06
 		job_culture_worker_add = 1
 		job_entertainer_add = 4
 		job_duelist_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	country_modifier = {
@@ -115,6 +139,12 @@ btr_building_asrep_sports_center = {
 			trigger = { exists = owner }
 			unity = 2
 			energy = 20
+		}
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
 		}
 		cost = {
 			minerals = 800
