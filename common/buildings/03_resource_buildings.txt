@@ -47,6 +47,17 @@ building_hydroponics_farm = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
@@ -89,6 +100,12 @@ building_hydroponics_farm = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -169,6 +186,17 @@ building_food_processing_facility = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
@@ -201,6 +229,12 @@ building_food_processing_facility = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -301,6 +335,17 @@ building_food_processing_center = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
@@ -333,6 +378,12 @@ building_food_processing_center = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -441,6 +492,17 @@ building_mineral_purification_plant = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			NOT = { is_planet_class = pc_shattered_ring_habitable }
 			exists = owner
 			owner = {
@@ -518,6 +580,12 @@ building_mineral_purification_plant = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 200
 		}
@@ -643,6 +711,16 @@ building_mineral_purification_hub = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -741,6 +819,12 @@ building_mineral_purification_hub = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -867,6 +951,17 @@ building_energy_grid = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
@@ -917,6 +1012,12 @@ building_energy_grid = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -1018,6 +1119,17 @@ building_energy_nexus = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
@@ -1068,6 +1180,12 @@ building_energy_nexus = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -1181,6 +1299,17 @@ building_resource_silo = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1199,6 +1328,12 @@ building_resource_silo = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 200
 		}
@@ -1249,6 +1384,12 @@ building_bio_reactor = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 200
 		}
@@ -1262,6 +1403,17 @@ building_bio_reactor = {
 		upkeep = {
 			food = 25
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	prerequisites = {
