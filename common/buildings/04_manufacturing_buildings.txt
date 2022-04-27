@@ -21,6 +21,17 @@ building_foundry_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_hive_empire = yes
 				is_catalytic_empire = no
@@ -85,6 +96,12 @@ building_foundry_1 = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -216,6 +233,12 @@ building_foundry_2 = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -234,6 +257,17 @@ building_foundry_2 = {
 
 	planet_modifier = {
 		planet_metallurgists_alloys_produces_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	triggered_planet_modifier = {
@@ -431,6 +465,12 @@ building_foundry_3 = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -445,6 +485,17 @@ building_foundry_3 = {
 
 	planet_modifier = {
 		planet_metallurgists_alloys_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	triggered_planet_modifier = {
@@ -650,6 +701,17 @@ building_factory_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_crafter_empire = no
@@ -685,6 +747,12 @@ building_factory_1 = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -810,6 +878,17 @@ building_factory_2 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_crafter_empire = no
@@ -845,6 +924,12 @@ building_factory_2 = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -973,6 +1058,17 @@ building_factory_3 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_regular_empire = yes
 				is_crafter_empire = no
@@ -1008,6 +1104,12 @@ building_factory_3 = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -1118,6 +1220,17 @@ building_refinery = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_gestalt = no }
 		}
 		modifier = {
@@ -1137,6 +1250,12 @@ building_refinery = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 500
 		}
@@ -1202,6 +1321,17 @@ building_chemical_plant = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_gestalt = no }
 		}
 		modifier = {
@@ -1221,6 +1351,12 @@ building_chemical_plant = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -1287,6 +1423,17 @@ building_crystal_plant = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_gestalt = no }
 		}
 		modifier = {
@@ -1306,6 +1453,12 @@ building_crystal_plant = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -1381,6 +1534,7 @@ building_nanite_transmuter = {
 
 	resources = {
 		category = planet_buildings
+		
 		cost = {
 			minerals = 1000
 		}
@@ -1396,6 +1550,13 @@ building_nanite_transmuter = {
 			volatile_motes = 2
 			exotic_gases = 2
 		}
+
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		upkeep = {
 			nanites = 1
 			energy = 5
@@ -1404,6 +1565,17 @@ building_nanite_transmuter = {
 
 	prerequisites = {
 		"tech_nanite_transmutation"
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	ai_resource_production = {
@@ -1451,8 +1623,25 @@ building_ministry_production = {
 		planet_artisans_produces_mult = 0.15
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -1547,8 +1736,25 @@ building_production_center = {
 		planet_artisans_produces_mult = 0.15
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
