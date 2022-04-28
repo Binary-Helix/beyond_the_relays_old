@@ -57,6 +57,17 @@ building_nightside_mining = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -89,6 +100,12 @@ building_nightside_mining = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -185,6 +202,17 @@ building_supercon_lab = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -217,6 +245,12 @@ building_supercon_lab = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -387,6 +421,17 @@ building_geothermal_slurry_site = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -419,6 +464,12 @@ building_geothermal_slurry_site = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -485,6 +536,17 @@ building_frozen_gas_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -517,6 +579,12 @@ building_frozen_gas_mine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -582,6 +650,17 @@ building_sulfur_lab = { #TODO
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -614,6 +693,12 @@ building_sulfur_lab = { #TODO
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -679,6 +764,17 @@ building_ammonia_electrodeposition = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -711,6 +807,12 @@ building_ammonia_electrodeposition = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -837,6 +939,17 @@ building_karst_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -871,6 +984,16 @@ building_karst_mine = {
 	
 	resources = {
 		category = planet_buildings
+		triggered_planet_modifier = {
+			potential = {
+				exists = owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
+			}
+			modifier = {
+				planet_amenities_add = 1
+			}
+	
+		}
 		cost = {
 			minerals = 400
 		}
@@ -939,6 +1062,17 @@ building_reef_lab = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -971,6 +1105,12 @@ building_reef_lab = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1042,6 +1182,17 @@ building_lava_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1074,6 +1225,12 @@ building_lava_mine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1142,6 +1299,17 @@ building_salt_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1174,6 +1342,12 @@ building_salt_mine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1241,6 +1415,17 @@ building_aquifer_lab = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1273,6 +1458,12 @@ building_aquifer_lab = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1341,6 +1532,17 @@ building_coral_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1373,6 +1575,12 @@ building_coral_mine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1445,6 +1653,17 @@ building_megaflora_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1478,6 +1697,12 @@ building_megaflora_mine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1548,6 +1773,17 @@ building_undersea_gasmine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1589,6 +1825,12 @@ building_undersea_gasmine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1660,6 +1902,17 @@ building_storm_lab = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1698,6 +1951,12 @@ building_storm_lab = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1766,6 +2025,17 @@ building_eyeball_lab = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1798,6 +2068,12 @@ building_eyeball_lab = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1862,6 +2138,17 @@ building_glacio_forge = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1894,6 +2181,12 @@ building_glacio_forge = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -1962,6 +2255,17 @@ building_lanthanide_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}		
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -1994,6 +2298,12 @@ building_lanthanide_mine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -2058,6 +2368,17 @@ building_rogue_mine = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}		
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -2090,6 +2411,12 @@ building_rogue_mine = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -2151,6 +2478,18 @@ building_lichen_farm = {
 	#	planet_jobs_physics_research_produces_mult = 0.10
 	#}
 
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}	
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -2186,6 +2525,12 @@ building_lichen_farm = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -2220,6 +2565,17 @@ building_sugarbush = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -2239,6 +2595,12 @@ building_sugarbush = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -2298,6 +2660,17 @@ building_acid_lab = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}		
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
@@ -2319,6 +2692,12 @@ building_acid_lab = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 400
 		}
@@ -2344,6 +2723,18 @@ building_acid_maker = {
 	}
 
 	allow = {
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	triggered_planet_modifier = {
@@ -2374,6 +2765,12 @@ building_acid_maker = {
 	
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = 500
 		}
