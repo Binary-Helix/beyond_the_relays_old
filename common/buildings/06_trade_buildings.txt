@@ -27,8 +27,9 @@ building_commercial_zone = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
+			trigger = {
+				exists= owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
 		}
 			unity = 0.2
 		}
@@ -141,8 +142,9 @@ building_commercial_megaplex = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
+			trigger = {
+				exists= owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
 		}
 			unity = 0.2
 		}
@@ -264,8 +266,9 @@ building_galactic_stock_exchange = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
+			trigger = {
+				exists= owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
 		}
 			unity = 0.2
 		}

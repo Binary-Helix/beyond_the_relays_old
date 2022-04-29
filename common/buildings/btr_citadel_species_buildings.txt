@@ -59,8 +59,9 @@ btr_building_asrep_comm_center = {
 			unity = 4
 		}
 		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
+			trigger = {
+				exists= owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
 		}
 			unity = 0.2
 		}
@@ -141,8 +142,9 @@ btr_building_asrep_sports_center = {
 			energy = 20
 		}
 		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
+			trigger = {
+				exists= owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
 		}
 			unity = 0.2
 		}

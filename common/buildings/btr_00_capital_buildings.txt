@@ -43,8 +43,9 @@ building_hab_capital = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
+			trigger = {
+				exists= owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
 		}
 			unity = 0.2
 		}
@@ -262,8 +263,9 @@ building_hab_major_capital = {
 	resources = {
 		category = planet_buildings
 		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
+			trigger = {
+				exists= owner
+				owner = { has_technology = btr_tech_asrep_asari_arch}
 		}
 			unity = 0.2
 		}
