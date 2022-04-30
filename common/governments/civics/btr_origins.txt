@@ -124,18 +124,13 @@ origin_vol_protectorate = {
 	} 
 }
 
-btr_origin_courts_o_dek = { 
+origin_courts_of_dekuuna = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
 	random_weight = { 
 		base = 0 
 	} 
-	modifier = {
-		edicts_cost_mult = -0.15
-		empire_size_mult = -0.33
-		planet_crime_mult = -0.20
-	}
 }
 
 origin_omega = { 

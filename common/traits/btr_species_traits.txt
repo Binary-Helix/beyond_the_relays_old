@@ -257,7 +257,7 @@ btr_turian_trait_martial_nat = {
 # ELCOR  TRAITS #
 #################
 
-btr_elcor_homebound = {
+btr_elcor_conservative_nature = {
 	cost = 0
 	opposites = {
 		"trait_decadent"
@@ -271,20 +271,22 @@ btr_elcor_homebound = {
 		BIOLOGICAL
 	}
 	modifier = {
-        pop_habitability = -0.5
-		pop_growth_from_immigration = -0.15
+		planet_migration_all_mult = -0.2
+		pop_growth_from_immigration = -0.2
+		pop_resettlement_cost_mult = 0.25
+		#pop_housing_usage_mult = -0.1
 	}
 }
 
-btr_elcor_high_gravity_adapted = {
+btr_elcor_physique = {
 	cost = 0
 	opposites = {
 		"trait_resilient"
 		"trait_strong"
 		"trait_very_strong"
 	}
-	leader_age_min = 200
-	leader_age_max = 800
+	leader_age_min = 100
+	leader_age_max = 500
 	initial = yes
 	randomized = no
 	modification = no
@@ -296,45 +298,7 @@ btr_elcor_high_gravity_adapted = {
 		army_attack_health_mult = 0.25
 		army_defense_health_mult = 0.25
 		army_damage_mult = 0.15
-		leader_age = 600
-	}
-}
-
-btr_elcor_gesture_based_speech = {
-	cost = 0
-	opposites = {
-		"trait_charismatic"
-	}
-	initial = yes
-	randomized = no	
-	modification = no
-	
-	allowed_archetypes = {
-		BIOLOGICAL
-	}
-	modifier = {
-        country_unity_produces_mult = 0.10
-		diplo_weight_mult = -0.5
-	}
-}
-
-btr_elcor_ecologists = {
-	cost = 0
-	opposites = {
-		"trait_industrious"
-	}
-	initial = yes
-	randomized = no
-	modification = no
-
-	allowed_archetypes = {
-		BIOLOGICAL
-	}
-	modifier = {
-		planet_jobs_food_produces_mult = 0.25
-		planet_pops_consumer_goods_upkeep_mult = -0.20
-		planet_clear_blocker_time_mult = -0.50
-		planet_jobs_minerals_produces_mult = -0.10
+		leader_age = 500
 	}
 }
 
