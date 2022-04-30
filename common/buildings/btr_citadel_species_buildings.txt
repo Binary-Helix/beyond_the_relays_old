@@ -270,6 +270,9 @@ btr_building_sysall_colonial_affairs = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			unity = 10
+		}
 		cost = {
 			minerals = 300
 		}
@@ -331,3 +334,108 @@ btr_building_sysall_interplanetary_combat = {
 		}
 	}
 }
+
+### Courts of Dekuuna Buildings
+btr_building_elders_assembly = {
+	base_buildtime = 120
+	base_cap_amount = 1
+	icon = building_noble_estates
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_courts_o_dek
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_courts_o_dek } }
+		}
+	}
+
+	planet_modifier = {
+		job_elder_add = 1
+		job_politician_add = 1
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+			unity = 10
+		}
+		cost = {
+			minerals = 700
+		}
+		upkeep = {
+			energy = 4
+		}
+	}
+}
+
+btr_building_croplands = {
+	base_buildtime = 120
+	base_cap_amount = 1
+	icon = building_nourishment_center
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			has_origin = btr_origin_courts_o_dek
+		}
+	}
+
+	allow = {
+		buildings_simple_allow = yes
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			### AI destruction logic
+			# AND = {
+			# 	free_building_slots = 0
+			#	free_jobs < 1
+			#	free_housing > 10
+			#	owner = {
+			#		is_ai = yes
+			#	}
+			# }
+			owner = { is_regular_empire = no }
+			owner = { NOT = { has_origin = btr_origin_courts_o_dek } }
+		}
+	}
+
+	planet_modifier = {
+		job_farmer_add = 2
+	}
+
+	resources = {
+		category = planet_buildings
+		produces = {
+
+		}
+		cost = {
+			minerals = 700
+		}
+		upkeep = {
+			energy = 8
+		}
+	}
+}
+
