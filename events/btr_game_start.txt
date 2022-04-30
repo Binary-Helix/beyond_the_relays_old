@@ -38,6 +38,10 @@ country_event = {
 				modifier = btr_asrep_empire_modifier
 				days = -1
 			}
+			add_modifier = {
+				modifier = btr_asrep_prosperity
+				days = -1
+			}
 			add_relic = btr_r_asrep_asha_lib
 			add_relic = btr_r_asrep_athane_temple
 			# home_planet = {
@@ -138,6 +142,19 @@ country_event = {
 			add_modifier = {
 				modifier = btr_batar_traverse_race
 				years = 50
+			}
+		}
+		else_if = {
+			limit = { has_origin = btr_origin_parnkreg }
+			give_technology = {
+				tech = btr_tech_parnkreg_reg_alpha
+			}
+			give_technology = {
+				tech = btr_tech_parnkreg_stand_arm
+			}
+			add_modifier = {
+				modifier = btr_parnkreg_empire_modifier
+				years = 15
 			}
 		}
 	}

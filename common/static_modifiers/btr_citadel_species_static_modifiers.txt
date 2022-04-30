@@ -17,6 +17,10 @@ btr_r_asrep_athame_temple_modifier = {
 	all_technology_research_speed = 0.05
 }
 
+btr_asrep_prosperity = {
+	planet_jobs_produces_mult = 0.5
+}
+
 ### Turian Hierarchy
 btr_turhie_empire_modifier = {
 	planet_jobs_consumer_goods_produces_mult = 0.05
@@ -38,6 +42,7 @@ btr_sysall_empire_modifier = {
 	country_border_friction_mult = 0.33
 	planet_immigration_pull_mult = 0.25
 	pop_growth_speed = 0.25
+	country_unity_produces_mult = 0.25
 }
 
 btr_sysall_shanxi_memory = {
@@ -45,11 +50,13 @@ btr_sysall_shanxi_memory = {
 	starbase_shipyard_build_cost_mult = -0.1
 	shipclass_colonizer_build_speed_mult = 0.15
 	science_ship_survey_speed = 0.1
+	country_alloys_produces_mult = 0.50
 }
 
 btr_sysall_traverse_race = {
 	starbase_outpost_influence_cost_mult = -0.2
 	country_influence_produces_mult = 2
+	country_energy_produces_mult = 0.70
 }
 
 ### Batarian Hegemony

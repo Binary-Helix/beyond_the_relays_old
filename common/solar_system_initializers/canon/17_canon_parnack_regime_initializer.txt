@@ -70,15 +70,15 @@ sys_chabtan_init = {
 					class = YAH
 					portrait = yahg
 					#homeworld = THIS 
-					traits = { 
-					  trait="btr_yahg_physique"
-					  trait="trait_deviants"
-					  trait="trait_quarrelsome"
-					  trait="btr_yahg_keen_mind"
-					  trait="trait_repugnant"
-					  # ideal_planet_class = "pc_badlands"
-					}
-				  }
+					traits = {
+						trait = "btr_yahg_trait_core"
+						trait = "btr_yahg_trait_apex_pred"
+						trait = "btr_yahg_trait_truthsay"
+						trait = "btr_yahg_trait_cont_obsess"
+						trait = "btr_yahg_trait_hype_perecpt"
+					  	# ideal_planet_class = "pc_badlands"
+						}
+				  	}
 				  last_created_species = { save_global_event_target_as = yahgSpecies }
 				create_country = {
 					name = "Parnack Regime"
@@ -124,7 +124,11 @@ sys_chabtan_init = {
 				add_building = building_primitive_capital
 			}
 			set_owner = event_target:parnack_regime
-			generate_start_deposits_and_blockers = yes
+			add_deposit = btr_d_parnkreg_darta_agglo
+			add_deposit = btr_d_parnkreg_mapofter_ind_park
+			add_deposit = btr_d_parnkreg_ipoc_bal_so_pl
+			add_deposit = btr_d_parnkreg_yock_nuc_comp
+			add_deposit = btr_d_parnkreg_darloc_rang
 			generate_yah_parnack_pops = yes
 			generate_yah_parnack_capitol_buildings = yes
 			set_name = "Parnack"

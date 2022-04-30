@@ -38,7 +38,7 @@ mec_asarirepublics_civ={
 	system_name = "Parnitha"
 	initializer= "sys_parnitha_init"
 	graphical_culture="mec_asari_01"
-	advisor_voice_type = "asari_republics"	
+	advisor_voice_type = "l_english"	
 
 	empire_flag = {
 		icon={
@@ -108,7 +108,7 @@ salarian_union={
 	system_name="Pranas"
 	initializer="sys_pranas_init"
 	graphical_culture="molluscoid_01"
-	advisor_voice_type = "salarian_union"
+	advisor_voice_type = "l_english"
 
 	empire_flag={
 		icon={
@@ -176,7 +176,7 @@ turian_hierarchy={
 	system_name="Trebia"
 	initializer="sys_trebia_init"
 	graphical_culture="tur_01"
-	advisor_voice_type = "turian_hierarchy"
+	advisor_voice_type = "l_english"
 	empire_flag={
 		icon={
 			category="beyondtherelays"
@@ -388,11 +388,11 @@ systems_alliance={
 
 	planet_name="Earth"
 	planet_class="pc_continental"
-	city_graphical_culture="mammalian_01"	
+	city_graphical_culture="humanoid_01"	
 	system_name="Sol"
 	initializer="sys_sol_init"
 	graphical_culture="sa_01"
-	advisor_voice_type = "systems_alliance"
+	advisor_voice_type = "l_english"
 	empire_flag={
 		icon={
 			category="masseffect"
@@ -665,11 +665,11 @@ cerberus={
 	ethic="ethic_xenophobe"
 	ethic="ethic_militarist"
 
-	trait="btr_human_flexible"
-	trait="btr_human_multicultural"
-	trait="trait_wasteful"
-	trait="trait_quick_learners"
-	trait = "trait_human_habitability_preference"
+	trait = trait_human_habitability_preference
+	trait = btr_human_core
+	trait = btr_human_biodiversity
+	trait = btr_human_frontier_spirit
+	trait = btr_human_rugged_ind
 	
 	origin="origin_cerberus"	
 
@@ -886,7 +886,7 @@ aralakh_kahmat={
 	system_name="Aralakh"
 	initializer="sys_aralakh_init"
 	graphical_culture="reptilian_01"
-	advisor_voice_type = "aralakh_kahmat"
+	advisor_voice_type = "l_english"
 	empire_flag={
 		icon={
 			category="masseffectsilver"
@@ -956,7 +956,7 @@ lystheni_order={
 	system_name="Taesin"
 	initializer="sys_taesin_init"
 	graphical_culture="molluscoid_01"
-	advisor_voice_type = "salarian_union"
+	advisor_voice_type = "l_english"
 
 	empire_flag={
 		icon={
@@ -1025,7 +1025,7 @@ migrant_fleet={
 	system_name="Raheel-Leyya"
 	initializer="sys_raheelleyya_init"
 	graphical_culture="quar_01"
-	advisor_voice_type="migrant_fleet"	
+	advisor_voice_type="l_english"	
 
 	empire_flag={
 		icon={
@@ -1288,23 +1288,23 @@ parnack_regime={
     species_adjective = "PRESCRIPTED_species_adjective_parnack_regime"
     #species_bio="PRESCRIPTED_species_bio_parnack_regime"	
 
-	authority="auth_dictatorial"
-	government="gov_military_dictatorship"
-	civics={ "civic_warrior_culture" "civic_barbaric_despoilers" }
+	authority = "auth_oligarchic"
+	government= "gov_military_junta"
+	civics={ "btr_civic_parnkreg_pack_ment" "btr_civic_parnkreg_enfor_iso" }
 
 	flags={ custom_start_screen parnack_regime btr_empire canon_map hybrid_map sandbox_map btr_minor parnack_regime_player }
 
-	ethic = "ethic_fanatic_xenophobe"
+	ethic = "ethic_xenophobe"
 	ethic = "ethic_militarist"
+	ethic = "ethic_authoritarian"
 
-	trait="btr_yahg_physique"
-	trait="trait_deviants"
-	trait="trait_quarrelsome"
-	trait="btr_yahg_keen_mind"
-	trait="trait_repugnant"
+	trait = "btr_yahg_trait_core"
+	trait = "btr_yahg_trait_apex_pred"
+	trait = "btr_yahg_trait_truthsay"
+	trait = "btr_yahg_trait_cont_obsess"
 	trait = "trait_yahg_habitability_preference"
-	
-	origin="origin_parnack_regime"	
+		
+	origin= "btr_origin_parnkreg"	
 
 	planet_name="Parnack"
 	planet_class="pc_badlands"
@@ -1660,7 +1660,7 @@ mec_asariillium_civ={
 	system_name = "Tasale"	
 	initializer = "sys_tasale_init"
 	graphical_culture="mec_asari_01"
-	advisor_voice_type = "asari_illium"	
+	advisor_voice_type = "l_english"	
 
 	empire_flag = {
 		icon = {

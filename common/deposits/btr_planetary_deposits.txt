@@ -8104,6 +8104,83 @@ d_bloodpack_vorcha = {
 	}	
 }
 
+### PARNACK
+btr_d_parnkreg_darta_agglo = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		planet_max_districts_add = 3
+		pop_happiness = -0.05
+		planet_jobs_consumer_goods_produces_mult = 0.10
+		planet_jobs_alloys_produces_mult = 0.10
+
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_mapofter_ind_park = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		planet_max_districts_add = 3
+		planet_jobs_food_produces_mult = -0.10
+
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_ipoc_bal_so_pl = {
+	is_for_colonizable = yes
+	icon = d_building_complex
+	
+	
+	planet_modifier = {
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_yock_nuc_comp = {
+	is_for_colonizable = yes
+	icon = d_betharian_deposit
+	
+	planet_modifier = { 
+		district_generator_max = 2
+		planet_jobs_energy_produces_mult = 0.15
+		job_technician_add = 2
+		army_defense_damage_mult = 0.25
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_darloc_rang = {
+	is_for_colonizable = yes
+	icon = d_mountain_range
+	
+	planet_modifier = { 
+		district_mining_max = 3
+		job_miner_add = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
 
 # Blockers
 d_asari_zalis_spill = {
