@@ -13,7 +13,8 @@ tech_repeatable_improved_tile_mineral_output = {
 	}
 
 	ai_weight = {
-		factor = @ai_mining_factor
+		weight = 10
+		factor = 125 #scaling factor
 	}
 
 	#When a tech is added to the list of tech alternatives it will register each entry in weight_groups to a list. such as economy, or repeatable, or whatever
@@ -295,6 +296,8 @@ tech_repeatable_weapon_type_kinetic_fire_rate = {
 			factor = @disfavored_weapon_ai_tech_factor
 			NOT = { is_preferred_weapons = weapon_type_kinetic }
 		}
+		weight = 1
+		factor = 125 #scaling factor0
 	}
 
 	weight_groups = {
@@ -334,6 +337,7 @@ tech_repeatable_weapon_type_strike_craft_fire_damage = {
 			factor = @disfavored_weapon_ai_tech_factor
 			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}
+		weight = 0
 	}
 
 	weight_groups = {
@@ -373,6 +377,7 @@ tech_repeatable_weapon_type_strike_craft_fire_rate = {
 			factor = @disfavored_weapon_ai_tech_factor
 			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}
+		weight = 0
 	}
 
 	weight_groups = {

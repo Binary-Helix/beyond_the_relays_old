@@ -201,6 +201,12 @@ weapon_component_template = {
 			alloys = @s_t3_upkeep_alloys
 		}
 	}
+	ai_weight = {
+		modifier = {
+			factor = 2
+			has_technology = tech_cruisers
+		}
+	}
 }
 
 weapon_component_template = {
@@ -228,6 +234,13 @@ weapon_component_template = {
 			alloys = @m_t3_upkeep_alloys
 		}
 	}
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 2
+			has_technology = tech_cruisers
+		}
+	}
 }
 
 weapon_component_template = {
@@ -253,6 +266,12 @@ weapon_component_template = {
 		upkeep = {
 			energy = @l_t3_upkeep_energy
 			alloys = @l_t3_upkeep_alloys
+		}
+	}
+	ai_weight = {
+		modifier = {
+			factor = 2
+			has_technology = tech_cruisers
 		}
 	}
 }
@@ -288,8 +307,16 @@ weapon_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -322,10 +349,18 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		factor = 10
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -360,8 +395,16 @@ weapon_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -396,8 +439,16 @@ weapon_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -429,10 +480,18 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		factor = 10
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -466,8 +525,16 @@ weapon_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -491,7 +558,6 @@ weapon_component_template = {
 	projectile_gfx = "kinetic_artillery"
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "KINETIC_ARTILLERY_2"
 	resources = {
 		category = ship_components
@@ -508,8 +574,21 @@ weapon_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 900
+			has_global_flag = extradimensional_invasion_happened
+			NOT = { has_global_flag = extradimensional_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -529,7 +608,6 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	resources = {
 		category = ship_components
 		cost = {
@@ -543,10 +621,23 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 1.2
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 2
+			has_technology = tech_cruisers
+		}
+		modifier = {
+			factor = 1200
+			has_global_flag = extradimensional_invasion_happened
+			NOT = { has_global_flag = extradimensional_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -582,6 +673,9 @@ weapon_component_template = {
 			alloys = @s_t3_upkeep_alloys
 		}
 	}
+	ai_weight = {
+		weight = 3
+	}
 }
 
 # ## Autocannons 2
@@ -613,10 +707,14 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 10
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }
@@ -649,10 +747,14 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 15
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = volatile_motes
+				value < 10
+			}
 		}
 	}
 }

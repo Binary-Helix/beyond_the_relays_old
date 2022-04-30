@@ -1138,6 +1138,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @corvette_cost_6
+			sr_dark_matter = 1
 		}
 		upkeep = {
 			energy = 0.37
@@ -1153,7 +1154,7 @@ utility_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -1168,6 +1169,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @destroyer_cost_6
+			sr_dark_matter = 2
 		}
 		upkeep = {
 			energy = 0.74
@@ -1183,7 +1185,7 @@ utility_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -1198,6 +1200,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @cruiser_cost_6
+			sr_dark_matter = 4
 		}
 		upkeep = {
 			energy = 1.48
@@ -1213,7 +1216,7 @@ utility_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -1228,6 +1231,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @battleship_cost_6
+			sr_dark_matter = 8
 		}
 		upkeep = {
 			energy = 2.98
@@ -1243,7 +1247,7 @@ utility_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -1258,6 +1262,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @titan_cost_6
+			sr_dark_matter = 16
 		}
 		upkeep = {
 			energy = 5.93
@@ -1273,7 +1278,7 @@ utility_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -1307,6 +1312,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @platform_cost_6
+			sr_dark_matter = 4
 		}
 		upkeep = {
 			energy = 0.74
@@ -1327,7 +1333,7 @@ utility_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
@@ -1342,6 +1348,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @cruiser_cost_6
+			sr_dark_matter = 8
 		}
 	}
 
@@ -1353,7 +1360,7 @@ utility_component_template = {
 		weight = 6
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
 		}
 	}
 }
