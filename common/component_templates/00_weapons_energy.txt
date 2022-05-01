@@ -264,6 +264,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t4_cost
+			rare_crystals = @s_t4_rare
 		}
 		upkeep = {
 			energy = @s_t4_upkeep_energy
@@ -272,10 +273,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = rare_crystals
+				value < 10
+			}
 		}
 	}
 }
@@ -299,6 +303,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t4_cost
+			rare_crystals = @m_t4_rare
 		}
 		upkeep = {
 			energy = @m_t4_upkeep_energy
@@ -307,10 +312,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = rare_crystals
+				value < 10
+			}
 		}
 	}
 }
@@ -334,6 +342,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t4_cost
+			rare_crystals = @l_t4_rare
 		}
 		upkeep = {
 			energy = @l_t4_upkeep_energy
@@ -342,10 +351,18 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			factor = 0
+			is_country_type = default
+			has_technology = tech_energy_torpedoes_1
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = rare_crystals
+				value < 10
+			}
 		}
 	}
 }
@@ -369,6 +386,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t5_cost
+			rare_crystals = @s_t5_rare
 		}
 		upkeep = {
 			energy = @s_t5_upkeep_energy
@@ -377,10 +395,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = rare_crystals
+				value < 10
+			}
 		}
 	}
 }
@@ -403,6 +424,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
+			rare_crystals = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -411,10 +433,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = rare_crystals
+				value < 10
+			}
 		}
 	}
 }
@@ -446,10 +471,15 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		modifier = {
+			factor = 0
+			is_country_type = default
+			has_technology = tech_energy_torpedoes_1
+		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			is_country_type = default
+			resource_stockpile_compare = { resource = rare_crystals value <= 100 }
 		}
 	}
 }
@@ -541,6 +571,15 @@ weapon_component_template = {
 			alloys = @l_t3_upkeep_alloys
 		}
 	}
+	ai_weight = {
+		weight = 1
+
+		modifier = {
+			factor = 0
+			is_country_type = default
+			has_technology = tech_energy_torpedoes_1
+		}
+	}
 }
 
 # ## Plasma 2
@@ -565,6 +604,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t4_cost
+			exotic_gases = @s_t4_rare
 		}
 		upkeep = {
 			energy = @s_t4_upkeep_energy
@@ -573,10 +613,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }
@@ -610,10 +653,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }
@@ -638,6 +684,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t4_cost
+			exotic_gases = @l_t4_rare
 		}
 		upkeep = {
 			energy = @l_t4_upkeep_energy
@@ -646,10 +693,18 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 0
+			is_country_type = default
+			has_technology = tech_energy_torpedoes_1
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }
@@ -674,7 +729,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t5_cost
-
+			exotic_gases = @s_t5_rare
 		}
 		upkeep = {
 			energy = @s_t5_upkeep_energy
@@ -683,10 +738,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }
@@ -710,6 +768,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
+			exotic_gases = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -718,10 +777,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }
@@ -745,6 +807,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t5_cost
+			exotic_gases = @l_t5_rare
 		}
 		upkeep = {
 			energy = @l_t5_upkeep_energy
@@ -753,10 +816,13 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }
@@ -780,7 +846,6 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_1_small"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
-	ai_tag_weight = 5
 	upgrades_to = "SMALL_DISRUPTOR_2"
 	resources = {
 		category = ship_components
@@ -791,6 +856,9 @@ weapon_component_template = {
 			energy = @s_t3_upkeep_energy
 			alloys = @s_t3_upkeep_alloys
 		}
+	}
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -808,7 +876,6 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_1_medium"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
-	ai_tag_weight = 5
 	upgrades_to = "MEDIUM_DISRUPTOR_2"
 	resources = {
 		category = ship_components
@@ -819,6 +886,9 @@ weapon_component_template = {
 			energy = @m_t3_upkeep_energy
 			alloys = @m_t3_upkeep_alloys
 		}
+	}
+	ai_weight = {
+		weight = 0
 	}
 }
 
@@ -837,12 +907,12 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_small"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
-	ai_tag_weight = 5
 	upgrades_to = "SMALL_DISRUPTOR_3"
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @s_t4_cost
+			rare_crystals = @s_t4_rare
 		}
 		upkeep = {
 			energy = @s_t4_upkeep_energy
@@ -851,11 +921,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
+		weight = 0
 	}
 }
 
@@ -873,12 +939,12 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_2_medium"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
-	ai_tag_weight = 5
 	upgrades_to = "MEDIUM_DISRUPTOR_3"
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @m_t4_cost
+			rare_crystals = @m_t4_rare
 		}
 		upkeep = {
 			energy = @m_t4_upkeep_energy
@@ -887,11 +953,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
+		weight = 0
 	}
 }
 
@@ -910,11 +972,11 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_3_small"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
-	ai_tag_weight = 5
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @s_t5_cost
+			rare_crystals = @s_t5_rare
 		}
 		upkeep = {
 			energy = @s_t5_upkeep_energy
@@ -923,11 +985,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
+		weight = 0
 	}
 }
 
@@ -945,11 +1003,11 @@ weapon_component_template = {
 	projectile_gfx = "disruptor_3_medium"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_anti_hull }
-	ai_tag_weight = 5
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
+			rare_crystals = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -958,11 +1016,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
-		}
+		weight = 0
 	}
 }
 
@@ -1021,12 +1075,12 @@ weapon_component_template = {
 	projectile_gfx = "proton_torpedoes"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "ENERGY_TORPEDO_2"
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @l_t5_cost
+			exotic_gases = @l_t5_rare
 		}
 		upkeep = {
 			energy = @l_t5_upkeep_energy
@@ -1035,10 +1089,28 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 300
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 600
+			has_global_flag = prethoryn_invasion_happened
+			not = { has_global_flag = prethoryn_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			has_global_flag = extradimensional_invasion_happened
+			or = {
+				not = { has_global_flag = prethoryn_invasion_happened }
+				has_global_flag = prethoryn_invasion_defeated
+			}
+			not = { has_global_flag = extradimensional_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }
@@ -1058,11 +1130,11 @@ weapon_component_template = {
 	projectile_gfx = "neutron_torpedoes"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @l_t6_cost
+			exotic_gases = @l_t6_rare
 		}
 		upkeep = {
 			energy = @l_t6_upkeep_energy
@@ -1071,10 +1143,28 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 300
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			factor = 600
+			has_global_flag = prethoryn_invasion_happened
+			not = { has_global_flag = prethoryn_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			has_global_flag = extradimensional_invasion_happened
+			or = {
+				not = { has_global_flag = prethoryn_invasion_happened }
+				has_global_flag = prethoryn_invasion_defeated
+			}
+			not = { has_global_flag = extradimensional_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = exotic_gases
+				value < 10
+			}
 		}
 	}
 }

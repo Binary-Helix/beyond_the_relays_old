@@ -48,7 +48,7 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 10
+		weight = 200
 		modifier = {
 			factor = 2
 			OR = {
@@ -80,14 +80,7 @@ utility_component_template = {
 	}
 
 	ai_weight = {
-		weight = 10
-		modifier = {
-			factor = 2
-			OR = {
-				is_preferred_weapons = weapon_type_explosive
-				is_preferred_weapons = weapon_type_strike_craft
-			}
-		}
+		weight = 150
 	}
 }
 
