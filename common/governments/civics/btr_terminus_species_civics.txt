@@ -1,0 +1,20 @@
+################################
+# Sed'riicae Collective Civics #
+################################
+
+btr_civic_sedcol_totalitarian_state = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_colonial.dds"
+	potential = {
+		origin = {
+			value = btr_origin_sysall
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	modifier = {
+		country_starbase_influence_cost_mult = -0.2
+		planet_colony_development_speed_mult = 0.1
+	}
+}
