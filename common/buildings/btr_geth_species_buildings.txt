@@ -3,13 +3,13 @@ btr_building_getcon_uplink_node = {
 	potential = {
 		exists = owner
 		owner = {
-			is_regular_empire = yes
+			is_machine_empire = yes
 			has_origin = btr_origin_getcon
 		}
 	}
 
 	allow = {
-		has_upgraded_capital = yes
+		buildings_simple_allow = yes
 	}
 
 	destroy_trigger = {
@@ -53,13 +53,13 @@ btr_building_getcon_prod_center = {
 	potential = {
 		exists = owner
 		owner = {
-			is_regular_empire = yes
+			is_machine_empire = yes
 			has_origin = btr_origin_getcon
 		}
 	}
 
 	allow = {
-		has_upgraded_capital = yes
+		buildings_simple_allow = yes
 	}
 
 	destroy_trigger = {
