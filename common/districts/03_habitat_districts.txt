@@ -1,4 +1,4 @@
-@hab_cost = 300
+@hab_cost = 250
 @hab_maintenance = 2
 
 district_hab_housing = {
@@ -12,6 +12,10 @@ district_hab_housing = {
 
 	potential = {
 		uses_district_set = habitat
+	}
+
+	allow = {
+		str_habitat_housing_allow = yes
 	}
 
 	resources = {
@@ -155,6 +159,13 @@ district_hab_energy = {
 		}
 		text = job_fe_acolyte_generator_effect_desc
 	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
 }
 
 district_hab_industrial = {
@@ -167,6 +178,10 @@ district_hab_industrial = {
 
 	potential = {
 		uses_district_set = habitat
+	}
+
+	allow = {
+		str_habitat_industry_allow = yes
 	}
 
 	resources = {
@@ -654,6 +669,10 @@ district_hab_commercial = {
 		owner = { is_gestalt = no }
 	}
 
+	allow = {
+		str_habitat_trade_allow = yes
+	}
+
 	conversion_ratio = 0.5
 	convert_to = {
 		district_hab_energy
@@ -725,6 +744,13 @@ district_hab_commercial = {
 			owner = {
 				has_active_tradition = tr_mercantile_commercial_enterprise
 			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 1
+		trigger = {
+			always = yes
 		}
 	}
 }
@@ -825,6 +851,13 @@ district_hab_mining = {
 		}
 		text = job_fe_acolyte_mine_effect_desc
 	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
 }
 
 district_hab_cultural = {
@@ -854,6 +887,10 @@ district_hab_cultural = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
+	}
+
+	allow = {
+		str_habitat_culture_allow = yes
 	}
 
 	conversion_ratio = 0.5
@@ -968,5 +1005,12 @@ district_hab_cultural = {
 			}
 		}
 		text = job_maintenance_drone_effect_desc
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = {
+			always = yes
+		}
 	}
 }

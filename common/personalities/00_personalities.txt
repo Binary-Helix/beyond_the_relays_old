@@ -13,9 +13,11 @@
 # propagator -> Will they only get aggressive once boxed in?
 # multispecies -> Will they give rights to aliens?
 # species_mod_priority = {}		define weights for how much the AI should try to modify a given species (root=country, this=species)
+# crisis_leader -> Will they fight the crisis and invite others to do so (Fallen Empires special behviour. Emperor/Custodian will behave the same way regardless of this flag.)
+# crisis_fighter -> Will they consider fighting the crisis? (If 'no' they will only care about themselves.)
 
 ##### Modifiers:
-# aggressiveness -> Chance of declaring wars
+# aggressiveness -> Affects chance of declaring wars, chance of sending insults, and how much % of fleet power is committed to offense (at 0, 50% is committed, at 1 it is more like 75%, at 2 it is 100%; higher values still count extra towards war dec and insult chance)
 # trade_willingness -> At 1.0 willingness they will accept a deal that is equally good for both sides
 # bravery -> Affects the chance that they will pick rivals & war targets of similar strength instead of picking on the weak
 # military_spending -> Affects mineral & energy budget that goes to navies and armies
@@ -46,25 +48,25 @@
 honorbound_warriors = {
 	aggressiveness = 1.75
 	trade_willingness = 0.7
-	bravery = 1.5
+	bravery = 1.0
 	combat_bravery = 2.0	# rarely ever retreat in battle
 
 	military_spending = 1.2
 	colony_spending = 0.9
 
-	federation_acceptance = 0 #-10
+	federation_acceptance = -10
 	nap_acceptance = -100
 	commercial_pact_acceptance = -20
 	research_agreement_acceptance = 0
 	defensive_pact_acceptance = 20
 	migration_pact_acceptance = 0
 
-	advanced_start_chance = 75
+	advanced_start_chance = 50
 
-	weapon_preferences = weapon_type_strike_craft
-	armor_ratio = 0.4
-	shields_ratio = 0.4
-	hull_ratio = 0.2
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.75
 	threat_others_modifier = 0.5
@@ -73,7 +75,7 @@ honorbound_warriors = {
 
 	behaviour = {
 		conqueror = yes
-		subjugator = yes
+		subjugator = no
 		liberator = no
 		opportunist = no
 		slaver = no
@@ -81,12 +83,13 @@ honorbound_warriors = {
 		purger = no
 		displacer = no
 		infiltrator = no
-		dominator = no
+		dominator = yes
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -98,7 +101,7 @@ honorbound_warriors = {
 					has_ethic = "ethic_spiritualist"
 					has_ethic = "ethic_egalitarian"
 					has_ethic = "ethic_xenophile"
-				}			
+				}
 			}
 			AND = {
 				has_ethic = "ethic_fanatic_xenophile"
@@ -114,16 +117,16 @@ honorbound_warriors = {
 }
 
 evangelising_zealots = {
-	aggressiveness = 1.25
+	aggressiveness = 1.55
 	trade_willingness = 0.75
-	bravery = 1.0
+	bravery = 1
 	combat_bravery = 1.0
 
 	military_spending = 1.1
 	colony_spending = 1.1
 
-	federation_acceptance = 0 #-20
-	nap_acceptance = 0
+	federation_acceptance = -20
+	nap_acceptance = -20
 	commercial_pact_acceptance = -20
 	research_agreement_acceptance = -20
 	defensive_pact_acceptance = 0
@@ -131,10 +134,10 @@ evangelising_zealots = {
 
 	advanced_start_chance = 50
 
-	weapon_preferences = weapon_type_kinetic
-	hull_ratio = 0.1
-	armor_ratio = 0.5
-	shields_ratio = 0.4
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.9
 	threat_others_modifier = 0.66
@@ -151,12 +154,13 @@ evangelising_zealots = {
 		purger = no
 		displacer = no
 		infiltrator = no
-		dominator = no
+		dominator = yes
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = no
 		multispecies = no
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -182,32 +186,32 @@ evangelising_zealots = {
 	weight_modifier = {
 		weight = 10
 		modifier = {
-			factor = 2
+			add = 2
 			has_ethic = "ethic_fanatic_spiritualist"
 		}
 		modifier = {
-			factor = 2
+			add = 2
 			has_ethic = "ethic_fanatic_authoritarian"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_conformists"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_charismatic"
 		}
 		modifier = {
-			factor = -1
+			add = -1
 			has_trait = "trait_repugnant"
 		}
 	}
 }
 
 erudite_explorers = {
-	aggressiveness = 0.75
+	aggressiveness = 1.15
 	trade_willingness = 0.9
-	bravery = 0.75
+	bravery = 0.7
 	combat_bravery = 1.0
 
 	military_spending = 0.9
@@ -220,12 +224,12 @@ erudite_explorers = {
 	defensive_pact_acceptance = 5
 	migration_pact_acceptance = 0
 
-	advanced_start_chance = 25
+	advanced_start_chance = 80
 
 	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.3
-	shields_ratio = 0.7
-	hull_ratio = 0.0
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.2
 	threat_others_modifier = 0.8
@@ -234,20 +238,21 @@ erudite_explorers = {
 
 	behaviour = {
 		conqueror = yes
-		subjugator = yes
+		subjugator = no
 		liberator = no
 		opportunist = yes
 		slaver = no
-		uplifter = no
+		uplifter = yes
 		purger = no
 		displacer = no
-		infiltrator = yes
-		dominator = no
+		infiltrator = no
+		dominator = yes
 		robot_exploiter = no
 		robot_liberator = yes
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -257,8 +262,8 @@ erudite_explorers = {
 			has_ethic = "ethic_fanatic_xenophobe"
 			has_ethic = "ethic_pacifist"
 			has_ethic = "ethic_fanatic_pacifist"
-			has_ethic =  "ethic_militarist"
-			has_ethic =  "ethic_fanatic_militarist"
+			has_ethic = "ethic_militarist"
+			has_ethic = "ethic_fanatic_militarist"
 		}
 		OR = {
 			has_ethic = "ethic_materialist"
@@ -269,61 +274,61 @@ erudite_explorers = {
 	weight_modifier = {
 		weight = 10
 		modifier = {
-			factor = 2
+			add = 2
 			has_ethic = "ethic_fanatic_materialist"
 		}
 		modifier = {
-			factor = 2
+			add = 2
 			has_trait = "trait_intelligent"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_natural_engineers"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_natural_physicists"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_industrious"
 		}
 		modifier = {
-			factor = 2
+			add = 2
 			OR = {
 				has_government = gov_science_directorate
 				has_government = gov_illuminated_autocracy
 			}
 		}
 		modifier = {
-			factor = -2
+			add = -2
 			has_election_type = none
 		}
 	}
 }
 
 spiritual_seekers = {
-	aggressiveness = 0.25
+	aggressiveness = 0.4
 	trade_willingness = 0.9
-	bravery = 0.75
+	bravery = 1
 	combat_bravery = 1.0
 
 	military_spending = 0.8
 	colony_spending = 1.0
 
-	federation_acceptance = 0 #10
+	federation_acceptance = 10
 	nap_acceptance = 20
 	commercial_pact_acceptance = 10
 	research_agreement_acceptance = 10
 	defensive_pact_acceptance = 10
 	migration_pact_acceptance = 20
 
-	advanced_start_chance = 10
+	advanced_start_chance = 50
 
 	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.4
-	shields_ratio = 0.4
-	hull_ratio = 0.2
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.1
 	threat_others_modifier = 1.0
@@ -331,21 +336,22 @@ spiritual_seekers = {
 	claims_modifier = 1.0
 
 	behaviour = {
-		conqueror = no
+		conqueror = yes
 		subjugator = no
 		liberator = yes
 		opportunist = no
 		slaver = no
-		uplifter = no
+		uplifter = yes
 		purger = no
 		displacer = no
-		infiltrator = yes
-		dominator = no
+		infiltrator = no
+		dominator = yes
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -373,54 +379,54 @@ spiritual_seekers = {
 	weight_modifier = {
 		weight = 10
 		modifier = {
-			factor = 2
+			add = 2
 			has_ethic = "ethic_fanatic_pacifist"
 		}
 		modifier = {
-			factor = 2
+			add = 2
 			has_ethic = "ethic_fanatic_xenophile"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_adaptive"
 		}
 		modifier = {
-			factor = -1
+			add = -1
 			has_trait = "trait_nonadaptive"
 		}
 		modifier = {
-			factor = 2
+			add = 2
 			has_trait = "trait_extremely_adaptive"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_election_type = democratic
 		}
 	}
 }
 
 ruthless_capitalists = {
-	aggressiveness = 1.0
+	aggressiveness = 1.3
 	trade_willingness = 1.0
-	bravery = 0.5
+	bravery = 1
 	combat_bravery = 1.0
 
 	military_spending = 1.0
 	colony_spending = 1.1
 
-	federation_acceptance = 0 #-10
+	federation_acceptance = -10
 	nap_acceptance = -10
 	commercial_pact_acceptance = 20
 	research_agreement_acceptance = 10
 	defensive_pact_acceptance = 0
 	migration_pact_acceptance = 0
 
-	advanced_start_chance = 25
+	advanced_start_chance = 20
 
-	weapon_preferences = weapon_type_kinetic
-	armor_ratio = 0.4
-	shields_ratio = 0.5
-	hull_ratio = 0.1
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.0
 	threat_others_modifier = 0.75
@@ -429,15 +435,15 @@ ruthless_capitalists = {
 
 	behaviour = {
 		conqueror = yes
-		subjugator = yes
+		subjugator = no
 		liberator = no
 		opportunist = yes
 		slaver = yes
 		uplifter = no
 		purger = no
 		displacer = no
-		infiltrator = yes
-		dominator = no
+		infiltrator = no
+		dominator = yes
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
@@ -457,8 +463,8 @@ ruthless_capitalists = {
 			has_ethic = "ethic_fanatic_militarist"
 			NOR = {
 				has_ethic = "ethic_xenophile"
-				has_ethic = "ethic_fanatic_xenophile"					
-			}		
+				has_ethic = "ethic_fanatic_xenophile"
+			}
 		}
 		OR = {
 			has_authority = auth_corporate
@@ -472,27 +478,27 @@ ruthless_capitalists = {
 }
 
 peaceful_traders = {
-	aggressiveness = 0.5
+	aggressiveness = 0.4
 	trade_willingness = 1.0
-	bravery = 0.5
+	bravery = 0.9
 	combat_bravery = 1.0
 
 	military_spending = 0.9
 	colony_spending = 1.1
 
-	federation_acceptance = 0 #10
+	federation_acceptance = 10
 	nap_acceptance = 20
 	commercial_pact_acceptance = 20
 	research_agreement_acceptance = 10
 	defensive_pact_acceptance = 0
 	migration_pact_acceptance = 20
 
-	advanced_start_chance = 10
+	advanced_start_chance = 20
 
-	weapon_preferences = weapon_type_strike_craft
-	armor_ratio = 0.4
-	shields_ratio = 0.5
-	hull_ratio = 0.1
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.3
 	threat_others_modifier = 1.0
@@ -500,16 +506,16 @@ peaceful_traders = {
 	claims_modifier = 1.0
 
 	behaviour = {
-		conqueror = no
+		conqueror = yes
 		subjugator = no
 		liberator = yes
 		opportunist = yes
 		slaver = no
-		uplifter = no
+		uplifter = yes
 		purger = no
 		displacer = no
-		infiltrator = yes
-		dominator = no
+		infiltrator = no
+		dominator = yes
 		robot_exploiter = no
 		robot_liberator = yes
 		propagator = no
@@ -530,10 +536,10 @@ peaceful_traders = {
 				}
 				OR = {
 					has_ethic = "ethic_xenophile"
-					has_ethic = "ethic_fanatic_xenophile"				
-				}				
+					has_ethic = "ethic_fanatic_xenophile"
+				}
 			}
-		}		
+		}
 		OR = {
 			has_authority = auth_corporate
 			has_valid_civic = civic_corporate_dominion
@@ -548,25 +554,25 @@ peaceful_traders = {
 hegemonic_imperialists = {
 	aggressiveness = 1.5
 	trade_willingness = 0.8
-	bravery = 1.0
+	bravery = 1
 	combat_bravery = 1.0
 
 	military_spending = 1.1
 	colony_spending = 1.0
 
-	federation_acceptance = 0 #-20
+	federation_acceptance = -20
 	nap_acceptance = -10
 	commercial_pact_acceptance = -10
 	research_agreement_acceptance = -10
 	defensive_pact_acceptance = 10
 	migration_pact_acceptance = -50
 
-	advanced_start_chance = 50
+	advanced_start_chance = 200
 
 	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.5
-	shields_ratio = 0.5
-	hull_ratio = 0.0
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.0
 	threat_others_modifier = 0.66
@@ -582,13 +588,14 @@ hegemonic_imperialists = {
 		uplifter = no
 		purger = no
 		displacer = no
-		dominator = no
+		dominator = yes
 		infiltrator = no
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
 		multispecies = no
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 
@@ -620,25 +627,25 @@ hegemonic_imperialists = {
 slaving_despots = {
 	aggressiveness = 1.5
 	trade_willingness = 0.8
-	bravery = 0.5
+	bravery = 1
 	combat_bravery = 1.0
 
 	military_spending = 1.1
 	colony_spending = 0.9
 
-	federation_acceptance = 0 #-10
+	federation_acceptance = -10
 	nap_acceptance = -20
 	commercial_pact_acceptance = 0
 	research_agreement_acceptance = 0
 	defensive_pact_acceptance = 0
 	migration_pact_acceptance = -100
 
-	advanced_start_chance = 50
+	advanced_start_chance = 200
 
-	weapon_preferences = weapon_type_explosive
-	armor_ratio = 0.3
-	shields_ratio = 0.4
-	hull_ratio = 0.3
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.0
 	threat_others_modifier = 0.5
@@ -654,54 +661,63 @@ slaving_despots = {
 		uplifter = no
 		purger = no
 		displacer = no
-		dominator = no
+		dominator = yes
 		infiltrator = no
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = no
 		multispecies = no
 		crisis_fighter = yes
+		wants_tribute = yes
+		attack_neutrals = yes
 	}
 
 
 	allow = {
 		is_country_type = default
-		has_valid_civic = civic_slaver_guilds
+		or = {
+			has_valid_civic = civic_slaver_guilds
+			has_origin = origin_necrophage
+		}
 		NOR = {
 			has_ethic = "ethic_pacifist"
 			has_ethic = "ethic_fanatic_pacifist"
 			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"			
-		}	
+			has_ethic = "ethic_fanatic_xenophile"
+		}
 	}
 
 	weight_modifier = {
 		weight = 200
+		modifier = {
+			weight = 10000
+			has_origin = origin_necrophage
+		}
 	}
 }
 
 decadent_hierarchy = {
-	aggressiveness = 0.5
+	aggressiveness = 0.7
 	trade_willingness = 0.9
-	bravery = 0.5
+	bravery = 1.1
 	combat_bravery = 1.0
 
 	military_spending = 1.1
 	colony_spending = 0.9
 
-	federation_acceptance = 0 #-30
+	federation_acceptance = -30
 	nap_acceptance = 20
 	commercial_pact_acceptance = 0
 	research_agreement_acceptance = 0
 	defensive_pact_acceptance = -10
 	migration_pact_acceptance = -100
 
-	advanced_start_chance = 10
+	advanced_start_chance = 20
 
-	weapon_preferences = weapon_type_kinetic
-	armor_ratio = 0.3
-	shields_ratio = 0.5
-	hull_ratio = 0.2
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.1
 	threat_others_modifier = 0.75
@@ -709,7 +725,7 @@ decadent_hierarchy = {
 	claims_modifier = 1.5
 
 	behaviour = {
-		conqueror = no
+		conqueror = yes
 		subjugator = no
 		liberator = no
 		opportunist = yes
@@ -717,13 +733,14 @@ decadent_hierarchy = {
 		uplifter = no
 		purger = no
 		displacer = no
-		dominator = no
+		dominator = yes
 		infiltrator = no
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
 		multispecies = no
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 
@@ -734,8 +751,8 @@ decadent_hierarchy = {
 			has_ethic = "ethic_pacifist"
 			has_ethic = "ethic_fanatic_pacifist"
 			has_ethic = "ethic_xenophile"
-			has_ethic = "ethic_fanatic_xenophile"				
-		}		
+			has_ethic = "ethic_fanatic_xenophile"
+		}
 	}
 
 	weight_modifier = {
@@ -744,27 +761,27 @@ decadent_hierarchy = {
 }
 
 democratic_crusaders = {
-	aggressiveness = 1.0
+	aggressiveness = 1.5
 	trade_willingness = 0.9
-	bravery = 1.25
+	bravery = 1.1
 	combat_bravery = 1.0
 
 	military_spending = 1.2
 	colony_spending = 1.0
 
-	federation_acceptance = 0 #10
+	federation_acceptance = 10
 	nap_acceptance = 0
 	commercial_pact_acceptance = 0
 	research_agreement_acceptance = 0
 	defensive_pact_acceptance = 20
 	migration_pact_acceptance = 0
 
-	advanced_start_chance = 50
+	advanced_start_chance = 300
 
-	weapon_preferences = weapon_type_kinetic
-	armor_ratio = 0.5
-	shields_ratio = 0.4
-	hull_ratio = 0.1
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.1
 	friction_modifier = 0.75
@@ -779,13 +796,14 @@ democratic_crusaders = {
 		uplifter = no
 		purger = no
 		displacer = no
-		dominator = no
-		infiltrator = yes
+		dominator = yes
+		infiltrator = no
 		robot_exploiter = no
 		robot_liberator = yes
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 
@@ -812,9 +830,9 @@ democratic_crusaders = {
 }
 
 harmonious_hierarchy = {
-	aggressiveness = 0.5
+	aggressiveness = 1.2
 	trade_willingness = 0.9
-	bravery = 0.75
+	bravery = 1.25
 	combat_bravery = 1.0
 
 	military_spending = 0.8
@@ -827,12 +845,12 @@ harmonious_hierarchy = {
 	defensive_pact_acceptance = 0
 	migration_pact_acceptance = -10
 
-	advanced_start_chance = 10
+	advanced_start_chance = 30
 
-	weapon_preferences = weapon_type_explosive
-	armor_ratio = 0.6
-	shields_ratio = 0.4
-	hull_ratio = 0.0
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.75
 	threat_others_modifier = 0.9
@@ -840,21 +858,22 @@ harmonious_hierarchy = {
 	claims_modifier = 0.75
 
 	behaviour = {
-		conqueror = no
+		conqueror = yes
 		subjugator = no
 		liberator = no
 		opportunist = no
 		slaver = no
-		uplifter = no
+		uplifter = yes
 		purger = no
 		displacer = no
-		dominator = no
+		dominator = yes
 		infiltrator = no
 		robot_exploiter = yes
 		robot_liberator = no
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -863,7 +882,7 @@ harmonious_hierarchy = {
 			has_ethic = "ethic_xenophobe"
 			has_ethic = "ethic_fanatic_xenophobe"
 			has_ethic = "ethic_militarist"
-			has_ethic = "ethic_fanatic_militarist"	
+			has_ethic = "ethic_fanatic_militarist"
 		}
 		OR = {
 			has_ethic = "ethic_pacifist"
@@ -880,38 +899,38 @@ harmonious_hierarchy = {
 	weight_modifier = {
 		weight = 10
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_conformists"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_election_type = none
 		}
 	}
 }
 
 federation_builders = {
-	aggressiveness = 0.75
+	aggressiveness = 1.00
 	trade_willingness = 0.95
-	bravery = 1.25
+	bravery = 0.9
 	combat_bravery = 1.0
 
 	military_spending = 1.0
 	colony_spending = 1.0
 
-	federation_acceptance = 0 #20
+	federation_acceptance = 20
 	nap_acceptance = 25
 	commercial_pact_acceptance = 15
 	research_agreement_acceptance = 15
 	defensive_pact_acceptance = 25
 	migration_pact_acceptance = 10
 
-	advanced_start_chance = 25
+	advanced_start_chance = 30
 
 	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.3
-	shields_ratio = 0.6
-	hull_ratio = 0.1
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.2
 	threat_others_modifier = 0.9
@@ -919,21 +938,22 @@ federation_builders = {
 	claims_modifier = 0.75
 
 	behaviour = {
-		conqueror = no
+		conqueror = yes
 		subjugator = no
 		liberator = yes
 		opportunist = yes
 		slaver = no
-		uplifter = no
+		uplifter = yes
 		purger = no
 		displacer = no
-		dominator = no
+		dominator = yes
 		infiltrator = no
 		robot_exploiter = no
 		robot_liberator = yes
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -968,7 +988,7 @@ federation_builders = {
 					has_ethic = "ethic_materialist"
 					has_ethic = "ethic_fanatic_materialist"
 				}
-			}		
+			}
 			AND = {
 				OR = {
 					has_ethic = "ethic_pacifist"
@@ -988,7 +1008,7 @@ federation_builders = {
 					has_ethic = "ethic_egalitarian"
 					has_ethic = "ethic_fanatic_egalitarian"
 				}
-			}			
+			}
 		}
 	}
 
@@ -998,15 +1018,15 @@ federation_builders = {
 }
 
 xenophobic_isolationists = {
-	aggressiveness = 0.5
+	aggressiveness = 0.02
 	trade_willingness = 0.5
-	bravery = 0.75
+	bravery = 0.6
 	combat_bravery = 1.0
 
 	military_spending = 1.2
 	colony_spending = 1.0
 
-	federation_acceptance = 0 #-50
+	federation_acceptance = -50
 	nap_acceptance = 20
 	commercial_pact_acceptance = -20
 	research_agreement_acceptance = -20
@@ -1016,9 +1036,9 @@ xenophobic_isolationists = {
 	advanced_start_chance = 10
 
 	weapon_preferences = weapon_type_explosive
-	armor_ratio = 0.3
-	shields_ratio = 0.6
-	hull_ratio = 0.1
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.75
 	threat_others_modifier = 0.75
@@ -1026,7 +1046,7 @@ xenophobic_isolationists = {
 	claims_modifier = 5.0
 
 	behaviour = {
-		conqueror = no
+		conqueror = yes
 		subjugator = no
 		liberator = no
 		opportunist = yes
@@ -1034,7 +1054,7 @@ xenophobic_isolationists = {
 		uplifter = no
 		purger = no
 		displacer = yes
-		dominator = no
+		dominator = yes
 		infiltrator = no
 		robot_exploiter = yes
 		robot_liberator = no
@@ -1042,7 +1062,7 @@ xenophobic_isolationists = {
 		multispecies = no
 		isolationist = yes
 		crisis_fighter = yes
-		wants_tribute = yes
+		wants_tribute = no
 	}
 
 	allow = {
@@ -1060,37 +1080,37 @@ xenophobic_isolationists = {
 	weight_modifier = {
 		weight = 10
 		modifier = {
-			factor = -2
+			add = -2
 			NOT = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_pacifist"
 			}
 		}
 		modifier = {
-			factor = 2
+			add = 2
 			OR = {
 				has_ethic = "ethic_pacifist"
 				has_ethic = "ethic_fanatic_pacifist"
 			}
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_repugnant"
 		}
 		modifier = {
-			factor = 1
+			add = 1
 			has_trait = "trait_sedentary"
 		}
 		modifier = {
-			factor = -1
+			add = -1
 			has_trait = "trait_nomadic"
 		}
 		modifier = {
-			factor = -1
+			add = -1
 			has_trait = "trait_charismatic"
 		}
 		modifier = {
-			factor = 1000
+			add = 1000
 			has_valid_civic = civic_inwards_perfection
 		}
 	}
@@ -1099,7 +1119,7 @@ xenophobic_isolationists = {
 fanatic_purifiers = {
 	aggressiveness = 2.0
 	trade_willingness = 0.5
-	bravery = 1.0
+	bravery = 1.5
 	combat_bravery = 1.25
 
 	military_spending = 1.2
@@ -1108,12 +1128,12 @@ fanatic_purifiers = {
 	federation_acceptance = -1000
 	migration_pact_acceptance = -1000
 
-	advanced_start_chance = 100
+	advanced_start_chance = 400
 
-	weapon_preferences = weapon_type_kinetic
-	armor_ratio = 0.4
-	shields_ratio = 0.5
-	hull_ratio = 0.1
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0
 	threat_others_modifier = 0
@@ -1143,9 +1163,9 @@ fanatic_purifiers = {
 		is_country_type = default
 		OR = {
 			AND = {
-				NOT = { host_has_dlc = "Utopia" }  
+				NOT = { host_has_dlc = "Utopia" }
 				has_ethic = "ethic_militarist"
-				has_ethic = "ethic_fanatic_xenophobe"				
+				has_ethic = "ethic_fanatic_xenophobe"
 			}
 			AND = {
 				host_has_dlc = "Utopia"
@@ -1162,25 +1182,25 @@ fanatic_purifiers = {
 hive_mind = {
 	aggressiveness = 2.0	# only attack if they can't expand peacefully
 	trade_willingness = 0.7
-	bravery = 1.0
+	bravery = 1.4
 	combat_bravery = 1.0
 
 	military_spending = 1.0
 	colony_spending = 1.2
 
-	federation_acceptance = 0 #-50
+	federation_acceptance = -50
 	nap_acceptance = -10
 	commercial_pact_acceptance = 0
 	research_agreement_acceptance = 0
 	defensive_pact_acceptance = -10
 	migration_pact_acceptance = -100
 
-	advanced_start_chance = 75
+	advanced_start_chance = 30
 
-	weapon_preferences = weapon_type_kinetic
-	armor_ratio = 0.2
-	shields_ratio = 0.4
-	hull_ratio = 0.4
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.75
 	threat_others_modifier = 0.5
@@ -1219,7 +1239,7 @@ hive_mind = {
 devouring_swarm = {
 	aggressiveness = 3.0
 	trade_willingness = 0.0
-	bravery = 1.1
+	bravery = 1.4
 	combat_bravery = 1.25
 
 	military_spending = 1.2
@@ -1232,12 +1252,12 @@ devouring_swarm = {
 	defensive_pact_acceptance = -1000
 	migration_pact_acceptance = -1000
 
-	advanced_start_chance = 100
+	advanced_start_chance = 400
 
 	weapon_preferences = weapon_type_strike_craft
-	armor_ratio = 0.2
-	shields_ratio = 0.4
-	hull_ratio = 0.4
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0
 	threat_others_modifier = 0
@@ -1275,7 +1295,7 @@ devouring_swarm = {
 }
 
 migrating_flock = {
-	aggressiveness = 0.25
+	aggressiveness = 0.15
 	trade_willingness = 1.1
 	bravery = 0.5
 	combat_bravery = 1.0
@@ -1283,7 +1303,7 @@ migrating_flock = {
 	military_spending = 0.8
 	colony_spending = 1.2
 
-	federation_acceptance = 0 #20
+	federation_acceptance = 20
 
 	advanced_start_chance = 10
 	nap_acceptance = 20
@@ -1293,9 +1313,9 @@ migrating_flock = {
 	migration_pact_acceptance = 100
 
 	weapon_preferences = weapon_type_strike_craft
-	armor_ratio = 0.4
-	shields_ratio = 0.4
-	hull_ratio = 0.2
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 1.1
 	threat_others_modifier = 1.1
@@ -1303,7 +1323,7 @@ migrating_flock = {
 	claims_modifier = 0.5
 
 	behaviour = {
-		conqueror = no
+		conqueror = yes
 		subjugator = no
 		liberator = no
 		opportunist = no
@@ -1311,8 +1331,8 @@ migrating_flock = {
 		uplifter = no
 		purger = no
 		displacer = no
-		dominator = no
-		infiltrator = yes
+		dominator = yes
+		infiltrator = no
 		robot_exploiter = no
 		robot_liberator = yes
 		propagator = no
@@ -1358,13 +1378,13 @@ metalhead = {
 	defensive_pact_acceptance = -1000
 	migration_pact_acceptance = -1000
 
-	advanced_start_chance = 100
+	advanced_start_chance = 20
 
 	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.5
-	shields_ratio = 0.0
-	hull_ratio = 0.5
-	
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
+
 	threat_modifier = 0
 	threat_others_modifier = 0
 	friction_modifier = 0
@@ -1405,26 +1425,26 @@ metalhead = {
 
 
 machine_intelligence = {
-	aggressiveness = 1.0
+	aggressiveness = 1.5
 	trade_willingness = 0.8
-	bravery = 1.0
+	bravery = 1.5
 	combat_bravery = 1.0
 
 	military_spending = 1.0
 	colony_spending = 1.2
 
-	federation_acceptance = 0 #-30
+	federation_acceptance = -30
 	nap_acceptance = 0
 	commercial_pact_acceptance = 0
 	research_agreement_acceptance = 0
 	defensive_pact_acceptance = 0
 
-	advanced_start_chance = 50
+	advanced_start_chance = 20
 
 	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.4
-	shields_ratio = 0.4
-	hull_ratio = 0.2
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.75
 	threat_others_modifier = 0.5
@@ -1440,13 +1460,14 @@ machine_intelligence = {
 		uplifter = no
 		purger = no
 		displacer = yes
-		dominator = no
+		dominator = yes
 		infiltrator = no
 		robot_exploiter = no
 		robot_liberator = yes
 		propagator = no
 		multispecies = no
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -1467,20 +1488,20 @@ machine_intelligence = {
 assimilators = {
 	aggressiveness = 2.0	# only attack if they can't expand peacefully
 	trade_willingness = 0.5
-	bravery = 0.8
+	bravery = 1.4
 	combat_bravery = 1.0
 
 	military_spending = 1.2
 	colony_spending = 1.2
 
-	federation_acceptance = 0 #-50
+	federation_acceptance = -50
 
-	advanced_start_chance = 100
+	advanced_start_chance = 400
 
-	weapon_preferences = weapon_type_kinetic
-	armor_ratio = 0.5
-	shields_ratio = 0.3
-	hull_ratio = 0.2
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.75
 	threat_others_modifier = 0.5
@@ -1490,7 +1511,7 @@ assimilators = {
 	behaviour = {
 		conqueror = yes
 		subjugator = no
-		liberator = no 
+		liberator = no
 		opportunist = yes
 		slaver = no
 		uplifter = no
@@ -1518,21 +1539,83 @@ assimilators = {
 	}
 }
 
+ferocious_rusher = {
+	aggressiveness = 20.0
+	trade_willingness = 0.5
+	bravery = 0.8
+	combat_bravery = 1.0
+
+	military_spending = 1.2
+	colony_spending = 1.2
+
+	federation_acceptance = -50
+
+	advanced_start_chance = 0
+
+	weapon_preferences = weapon_type_explosive
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
+
+	threat_modifier = 0.75
+	threat_others_modifier = 0.5
+	friction_modifier = 4
+	claims_modifier = 2.0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = no
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = no
+		purger = no
+		displacer = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = yes
+		propagator = yes
+		multispecies = no
+		crisis_fighter = yes
+	}
+
+	allow = {
+		has_country_flag = ferocious_rusher
+		any_neighbor_country = {
+			is_subject = no
+			not = { has_truce = prev }
+			root = {
+				or = {
+				has_claim = prev.capital_scope.solar_system
+				resource_stockpile_compare = {
+					resource = influence
+					value > 200
+				}
+			}
+		}
+		}
+	}
+
+	weight_modifier = {
+		weight = 10000
+	}
+}
 exterminators = {
 	aggressiveness = 2.0
 	trade_willingness = 1.0	# But only with fellow machines
-	bravery = 1.0
+	bravery = 1.5
 	combat_bravery = 1.5
 
 	military_spending = 1.2
 	colony_spending = 1.2
 
-	advanced_start_chance = 100
+	advanced_start_chance = 40
 
 	weapon_preferences = weapon_type_explosive
-	armor_ratio = 0.4
-	shields_ratio = 0.5
-	hull_ratio = 0.1
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0
 	threat_others_modifier = 0
@@ -1586,7 +1669,7 @@ servitors = {
 	research_agreement_acceptance = 0
 	defensive_pact_acceptance = 0
 
-	advanced_start_chance = 25
+	advanced_start_chance = 30
 
 	weapon_preferences = weapon_type_energy
 	armor_ratio = 0.4
@@ -1604,16 +1687,17 @@ servitors = {
 		liberator = no
 		opportunist = yes
 		slaver = no
-		uplifter = no
+		uplifter = yes
 		purger = no
 		displacer = no
-		dominator = no
+		dominator = yes
 		infiltrator = yes
 		robot_exploiter = no
 		robot_liberator = yes
 		propagator = no
 		multispecies = no
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -1638,19 +1722,19 @@ fanatic_befrienders = {
 	military_spending = 1.2
 	colony_spending = 1.0
 
-	federation_acceptance = 0 #50
+	federation_acceptance = 50
 	nap_acceptance = 50
 	commercial_pact_acceptance = 50
 	research_agreement_acceptance = 50
 	defensive_pact_acceptance = 50
 	migration_pact_acceptance = 50
 
-	advanced_start_chance = 25
+	advanced_start_chance = 30
 
 	weapon_preferences = weapon_type_energy
-	armor_ratio = 0.4
-	shields_ratio = 0.5
-	hull_ratio = 0.1
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
 
 	threat_modifier = 0.5
 	threat_others_modifier = 0.75
@@ -1659,20 +1743,21 @@ fanatic_befrienders = {
 
 	behaviour = {
 		conqueror = yes
-		subjugator = yes
+		subjugator = no
 		liberator = no
 		opportunist = yes
 		slaver = no
-		uplifter = no
+		uplifter = yes
 		purger = no
 		displacer = no
-		dominator = no
-		infiltrator = yes
+		dominator = yes
+		infiltrator = no
 		robot_exploiter = no
 		robot_liberator = no
 		propagator = no
 		multispecies = yes
 		crisis_fighter = yes
+		wants_tribute = yes
 	}
 
 	allow = {
@@ -1686,6 +1771,92 @@ fanatic_befrienders = {
 
 	weight_modifier = {
 		weight = 100
+	}
+}
+
+became_the_crisis = {
+	aggressiveness = 2.0
+	trade_willingness = 0.5
+	bravery = 1.0
+	combat_bravery = 2.0
+
+	military_spending = 2.0
+	colony_spending = 0.5
+
+	advanced_start_chance = 100
+
+	weapon_preferences = weapon_type_energy
+	armor_ratio = 0.1
+	shields_ratio = 0.2
+	hull_ratio = 0.7
+
+	threat_modifier = 0
+	threat_others_modifier = 0
+	friction_modifier = 0
+	claims_modifier = 0
+
+	behaviour = {
+		conqueror = yes
+		subjugator = yes
+		liberator = no
+		opportunist = yes
+		slaver = no
+		uplifter = no
+		purger = yes
+		displacer = no
+		dominator = yes
+		infiltrator = no
+		robot_exploiter = yes
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = no
+		attack_neutrals = yes
+	}
+
+	allow = {
+		has_nemesis = yes
+		is_country_type = default
+		has_ascension_perk = "ap_become_the_crisis"
+	}
+
+	weight_modifier = {
+		weight = 10000
+	}
+
+	ai_module_overrides = {
+		player_crisis_foreign_minister_module
+		player_crisis_military_minister_module
+	}
+}
+
+galactic_defense_force = {
+	behaviour = {
+		conqueror = no
+		subjugator = no
+		liberator = no
+		opportunist = no
+		slaver = no
+		uplifter = no
+		purger = no
+		displacer = no
+		dominator = no
+		infiltrator = no
+		robot_exploiter = no
+		robot_liberator = no
+		propagator = no
+		multispecies = no
+		crisis_fighter = yes
+		crisis_leader = yes
+		attack_neutrals = no
+	}
+
+	allow = {
+		is_country_type = gdf
+	}
+
+	weight_modifier = {
+		weight = 10000
 	}
 }
 

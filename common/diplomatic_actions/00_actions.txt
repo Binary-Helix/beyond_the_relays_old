@@ -223,6 +223,29 @@ action_declare_war = {
 	should_open_auto_accept_message_recipient = yes
 	should_notify_all_communications = yes
 	action_type = aggressive
+
+	potential = {
+		hidden_trigger = {
+			or = {
+				is_ai = no
+				and = {
+					years_passed > @str_ai_will_not_declare_war_until
+					or = {
+						rusher3 = yes
+						years_passed > @str_ai_will_not_declare_war_until_aggressive
+					}
+					or = {
+						turtler = no
+						years_passed > @str_ai_will_not_declare_war_until_normal
+					}
+					or = {
+						turtler2 = no
+						years_passed > @str_ai_will_not_declare_war_until_turtles
+					}
+				}
+			}
+		}
+	}
 }
 
 # Make peace, usable by regular, fallen & awakened empires - accessed from war view
@@ -1676,11 +1699,11 @@ action_invite_to_federation = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_actor_not_devouring_swarm"
-			NOT = { has_valid_civic = civic_hive_devouring_swarm	}
-		}
+				NOT = { has_valid_civic = civic_hive_devouring_swarm }
+			}
 		custom_tooltip = {
 			fail_text = "requires_recipient_not_devouring_swarm"
-			from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
+				from = { NOT = { has_valid_civic = civic_hive_devouring_swarm } }
 		}
 
 		# When actor is terminator, requires target machine empire/synth
@@ -1891,7 +1914,7 @@ action_ask_to_join_federation = {
 			fail_text = "requires_actor_not_devouring_swarm"
 			OR = {
 				from = { has_valid_civic = civic_hive_devouring_swarm }
-				NOT = { has_valid_civic = civic_hive_devouring_swarm	}
+				NOT = { has_valid_civic = civic_hive_devouring_swarm }
 			}
 		}
 		custom_tooltip = {
@@ -2029,7 +2052,7 @@ action_open_borders = {
 	auto_accepted = yes
 	requires_actor_independence = no
 	requires_recipient_independence = no
-	should_show_auto_accept_message_recipient = yes
+	should_show_auto_accept_message_recipient = no
 	#should_notify_all_communications = yes
 	action_type = positive
 
@@ -2095,7 +2118,7 @@ action_close_borders = {
 	auto_accepted = yes
 	requires_actor_independence = no
 	requires_recipient_independence = no
-	should_show_auto_accept_message_recipient = yes
+	should_show_auto_accept_message_recipient = no
 	#should_notify_all_communications = yes
 	action_type = negative
 
@@ -2141,6 +2164,11 @@ action_demand_vassalization = {
 
 	potential = {
 		NOT = { has_authority = auth_corporate }
+		years_passed > @str_ai_will_not_declare_war_until
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {
@@ -2259,6 +2287,10 @@ action_demand_protectorate = {
 
 	potential = {
 		NOT = { has_authority = auth_corporate }
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {
@@ -2369,6 +2401,10 @@ action_demand_tributary = {
 
 	potential = {
 		NOT = { has_authority = auth_corporate }
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {
@@ -2590,6 +2626,10 @@ action_demand_subsidiary = {
 
 	potential = {
 		has_authority = auth_corporate
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {
@@ -2649,6 +2689,10 @@ action_ask_to_become_vassalized = {
 
 	potential = {
 		NOT = { from = { has_authority = auth_corporate } }
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {
@@ -2789,6 +2833,10 @@ action_ask_to_become_protectorate = {
 
 	potential = {
 		NOT = { from = { has_authority = auth_corporate } }
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {
@@ -2935,6 +2983,10 @@ action_ask_to_become_tributary = {
 
 	potential = {
 		NOT = { from = { has_authority = auth_corporate } }
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {
@@ -3060,6 +3112,10 @@ action_ask_to_become_subsidiary = {
 
 	potential = {
 		from = { has_authority = auth_corporate }
+		or = {
+			is_ai = no
+			years_passed > @str_years_of_twilight
+		}
 	}
 
 	possible = {

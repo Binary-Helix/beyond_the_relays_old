@@ -56,6 +56,11 @@ tech_space_trading = {
 	}
 
 	ai_weight = {
+		factor = 2
+		modifier = {
+			factor = 1000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -103,6 +108,8 @@ tech_interstellar_economics = {
 	}
 
 	ai_weight = {
+		weight = 2
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -170,6 +177,8 @@ tech_galactic_markets = {
 	}
 
 	ai_weight = {
+		weight = 40
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -271,6 +280,11 @@ tech_eco_simulation = {
 	}
 
 	ai_weight = {
+		weight = 1500 #farms are good
+		modifier = {
+			factor = 1000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_pacifist
@@ -347,7 +361,12 @@ tech_gene_crops = {
 	}
 
 	ai_weight = {
-		factor = @farming_ai_weight_factor
+		weight = 15
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_pacifist
@@ -424,7 +443,8 @@ tech_nano_vitality_crops = {
 	}
 
 	ai_weight = {
-		factor = @farming_ai_weight_factor
+		weight = 15
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_pacifist
@@ -523,7 +543,8 @@ tech_nutrient_replication = {
 	}
 
 	ai_weight = {
-		factor = @farming_ai_weight_factor
+		weight = 40
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_pacifist
@@ -590,6 +611,7 @@ tech_hydroponics = {
 	}
 
 	ai_weight = {
+		weight = 50000
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -647,18 +669,17 @@ tech_food_processing_1 = {
 	}
 
 	ai_weight = {
-		factor = @farming_building_ai_weight_factor # leads to food processing building
+		weight = 1000
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
-		}
-
-		modifier = {
-			factor = 0
-			country_uses_food = no
 		}
 	}
 }
@@ -717,18 +738,14 @@ tech_food_processing_2 = {
 	}
 
 	ai_weight = {
-		factor = @farming_building_ai_weight_factor # food processing
+		weight = 300
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
-		}
-
-		modifier = {
-			factor = 0
-			country_uses_food = no
 		}
 	}
 }
@@ -780,7 +797,11 @@ tech_society_1 = {
 	}
 
 	ai_weight = {
-		factor = @society_research_ai_factor
+		weight = 20000
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -831,7 +852,12 @@ tech_society_2 = {
 	}
 
 	ai_weight = {
-		factor = @society_research_ai_factor
+		weight = 15000
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -882,7 +908,8 @@ tech_society_3 = {
 	}
 
 	ai_weight = {
-		factor = @society_research_ai_factor
+		weight = 10000
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -932,7 +959,10 @@ tech_alien_life_studies = {
 	}
 
 	ai_weight = {
-		factor = @society_research_ai_factor
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_xenophile
@@ -993,6 +1023,7 @@ tech_arcane_deciphering = {
 	}
 
 	ai_weight = {
+		factor = 500 #important resource
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1024,13 +1055,7 @@ tech_colonization_1 = {
 	}
 
 	ai_weight = {
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_new_worlds"
-			}
-		}
+		weight = 10000
 	}
 }
 
@@ -1073,6 +1098,12 @@ tech_colonization_2 = {
 	}
 
 	ai_weight = {
+		factor = 200000
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1122,6 +1153,8 @@ tech_colonization_3 = {
 	}
 
 	ai_weight = {
+		weight = 15000
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1171,6 +1204,8 @@ tech_colonization_4 = {
 	}
 
 	ai_weight = {
+		factor = 15000
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1220,6 +1255,8 @@ tech_colonization_5 = {
 	}
 
 	ai_weight = {
+		factor = 15000
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1288,6 +1325,8 @@ tech_tomb_world_adaption = {
 	}
 
 	ai_weight = {
+		factor = 1000
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1413,7 +1452,11 @@ tech_mountain_range = {
 
 	ai_weight = {
 		modifier = {
-			factor = 3
+			factor = 10
+		}
+		modifier = {
+			factor = 500
+			reroll_society = yes
 		}
 		modifier = {
 			factor = 0
@@ -1487,6 +1530,17 @@ tech_volcano = {
 
 	ai_weight = {
 		modifier = {
+			factor = 10
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				any_owned_planet = {
@@ -1559,6 +1613,17 @@ tech_dangerous_wildlife = {
 
 	ai_weight = {
 		modifier = {
+			factor = 50
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				any_owned_planet = {
@@ -1629,6 +1694,17 @@ tech_dense_jungle = {
 	}
 
 	ai_weight = {
+		modifier = {
+			factor = 50
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1701,6 +1777,17 @@ tech_quicksand_basin = {
 
 	ai_weight = {
 		modifier = {
+			factor = 50
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				any_owned_planet = {
@@ -1771,6 +1858,17 @@ tech_noxious_swamp = {
 	}
 
 	ai_weight = {
+		modifier = {
+			factor = 50
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1843,6 +1941,17 @@ tech_massive_glacier = {
 
 	ai_weight = {
 		modifier = {
+			factor = 50
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				any_owned_planet = {
@@ -1913,6 +2022,17 @@ tech_toxic_kelp = {
 	}
 
 	ai_weight = {
+		modifier = {
+			factor = 50
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 0
 			NOT = {
@@ -1985,6 +2105,17 @@ tech_deep_sinkhole = {
 
 	ai_weight = {
 		modifier = {
+			factor = 50
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 0
 			NOT = {
 				any_owned_planet = {
@@ -2052,7 +2183,11 @@ tech_terrestrial_sculpting = {
 	}
 
 	ai_weight = {
-		factor = @terraforming_tech_ai_factor
+		factor = 10000 #important tech
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2063,14 +2198,6 @@ tech_terrestrial_sculpting = {
 		modifier = {
 			factor = 2
 			is_xenophobe = yes
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				has_origin = origin_shattered_ring
-				has_origin = origin_void_dwellers
-			}
-			is_ai = yes
 		}
 		modifier = {
 			factor = 5
@@ -2127,7 +2254,8 @@ tech_ecological_adaptation = {
 	}
 
 	ai_weight = {
-		factor = @terraforming_tech_ai_factor
+		factor = 10000 #important tech
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2199,7 +2327,8 @@ tech_climate_restoration = {
 	}
 
 	ai_weight = {
-		factor = @terraforming_tech_ai_factor
+		factor = 10000 #important tech
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2268,7 +2397,15 @@ tech_genome_mapping = {
 	}
 
 	ai_weight = {
-		factor = @pop_growth_tech_ai_factor
+		factor = 150
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2319,6 +2456,10 @@ tech_vitality_boosters = {
 	}
 
 	ai_weight = {
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2394,6 +2535,10 @@ tech_epigenetic_triggers = {
 
 	ai_weight = {
 		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 0.5
 			has_ethic = ethic_fanatic_xenophobe
 		}
@@ -2459,8 +2604,15 @@ tech_cloning = {
 	}
 
 	ai_weight = {
-		factor = @pop_growth_tech_ai_factor
-
+		factor = 40
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2540,6 +2692,11 @@ tech_gene_banks = {
 	}
 
 	ai_weight = {
+		factor = 15 #rare tech
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2633,6 +2790,8 @@ tech_gene_seed_purification = {
 	}
 
 	ai_weight = {
+		weight = 3 #rare tech
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2742,6 +2901,8 @@ tech_morphogenetic_field_mastery = {
 	}
 
 	ai_weight = {
+		weight = 14 #rare tech
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			has_ethic = ethic_militarist
@@ -2763,9 +2924,9 @@ tech_morphogenetic_field_mastery = {
 #Gene Tailoring
 @tech_gene_tailoring_POINTS = 1
 tech_gene_tailoring = {
-	cost = @tier5cost3
+	cost = @tier3cost1
 	area = society
-	tier = 5
+	tier = 3
 	category = { biology }
 	prerequisites = { "tech_genome_mapping" }
 	weight = @tier3weight1
@@ -2818,6 +2979,8 @@ tech_gene_tailoring = {
 	}
 
 	ai_weight = {
+		weight = 6
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2875,6 +3038,7 @@ tech_glandular_acclimation = {
 	}
 
 	ai_weight = {
+		weight = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2906,6 +3070,7 @@ tech_genetic_resequencing = {
 	}
 
 	ai_weight = {
+		weight = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2987,6 +3152,8 @@ tech_gene_expressions = {
 	}
 
 	ai_weight = {
+		weight = 3 #rare tech
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -3066,8 +3233,10 @@ tech_selected_lineages = {
 	}
 
 	ai_weight = {
+		weight = 3 #rare tech
+		factor = 25 #scaling factor
 		modifier = {
-			factor = 0
+			factor = 1.50
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		modifier = {
@@ -3116,7 +3285,7 @@ tech_capacity_boosters = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			is_egalitarian = yes
 		}
 		modifier = {
@@ -3145,6 +3314,8 @@ tech_capacity_boosters = {
 	}
 
 	ai_weight = {
+		weight = 3 #rare tech
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -3202,6 +3373,12 @@ tech_doctrine_fleet_size_1 = {
 	}
 
 	ai_weight = {
+		weight = 20
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3245,6 +3422,12 @@ tech_doctrine_fleet_size_2 = {
 	}
 
 	ai_weight = {
+		weight = 21
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3288,6 +3471,8 @@ tech_doctrine_fleet_size_3 = {
 	}
 
 	ai_weight = {
+		weight = 20
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3331,6 +3516,8 @@ tech_doctrine_fleet_size_4 = {
 	}
 
 	ai_weight = {
+		weight = 20
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3374,6 +3561,8 @@ tech_doctrine_fleet_size_5 = {
 	}
 
 	ai_weight = {
+		weight = 20
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3413,6 +3602,12 @@ tech_interstellar_fleet_traditions = {
 	}
 
 	ai_weight = {
+		weight = 300
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3456,6 +3651,12 @@ tech_refit_standards = {
 	}
 
 	ai_weight = {
+		weight = 30
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3500,6 +3701,12 @@ tech_command_matrix = {
 	}
 
 	ai_weight = {
+		weight = 40
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3543,6 +3750,16 @@ tech_doctrine_navy_size_1 = {
 	}
 
 	ai_weight = {
+		weight = 50
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3586,6 +3803,12 @@ tech_doctrine_navy_size_2 = {
 	}
 
 	ai_weight = {
+		weight = 50
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3629,6 +3852,12 @@ tech_doctrine_navy_size_3 = {
 	}
 
 	ai_weight = {
+		weight = 50
+		factor = 125 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3672,6 +3901,12 @@ tech_doctrine_navy_size_4 = {
 	}
 
 	ai_weight = {
+		weight = 50
+		factor = 125 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3719,6 +3954,10 @@ tech_centralized_command = {
 
 	ai_weight = {
 		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 2
 			is_militarist = yes
 		}
@@ -3761,6 +4000,7 @@ tech_combat_training = {
 	}
 
 	ai_weight = {
+		weight = 25 #scaling factor
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -3808,6 +4048,11 @@ tech_ground_defense_planning = {
 
 	ai_weight = {
 		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		factor = 2
+		modifier = {
 			factor = 2
 			is_militarist = yes
 		}
@@ -3852,9 +4097,19 @@ tech_global_defense_grid = {
 	}
 
 	ai_weight = {
+		weight = 20
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
+		}
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_3
 		}
 		modifier = {
 			factor = 1.25
@@ -3972,8 +4227,14 @@ tech_psionic_theory = {
 	}
 
 	ai_weight = {
+		weight = 50 #very rare tech
+		factor = 25 #scaling factor
 		modifier = {
-			factor = 5
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 1.5
 			OR = {
 				has_ethic = ethic_spiritualist
 				has_ethic = ethic_fanatic_spiritualist
@@ -3987,7 +4248,7 @@ tech_psionic_theory = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 500
 			is_ai = no #auto-research
 		}
 	}
@@ -4077,8 +4338,10 @@ tech_telepathy = {
 	}
 
 	ai_weight = {
+		weight = 50 #very rare tech
+		factor = 25 #scaling factor
 		modifier = {
-			factor = 5
+			factor = 1.5
 			is_spiritualist = yes
 		}
 		modifier = {
@@ -4167,6 +4430,12 @@ tech_precognition_interface = {
 	}
 
 	ai_weight = {
+		weight = 70 #very rare tech
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -4251,6 +4520,8 @@ tech_thought_enforcement = {
 	}
 
 	ai_weight = {
+		factor = 5 #very rare tech
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 2
 			is_authoritarian = yes
@@ -4374,6 +4645,16 @@ tech_galactic_ambitions = {
 	}
 
 	ai_weight = {
+		weight = 30
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -4428,6 +4709,12 @@ tech_manifest_destiny = {
 	}
 
 	ai_weight = {
+		weight = 30
+		factor = 125 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.5
 			has_ethic = ethic_militarist
@@ -4494,6 +4781,16 @@ tech_interstellar_campaigns = {
 	}
 
 	ai_weight = {
+		weight = 20
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 2
 			is_militarist = yes
@@ -4556,6 +4853,12 @@ tech_galactic_campaigns = {
 	}
 
 	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.5
 			has_ethic = ethic_militarist
@@ -4625,7 +4928,15 @@ tech_planetary_unification = {
 	}
 
 	ai_weight = {
-		factor = @capital_tech_ai_factor
+		weight = 17
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 0.75
 			NOT = {
@@ -4679,7 +4990,12 @@ tech_colonial_centralization = {
 	}
 
 	ai_weight = {
-		factor = @capital_tech_ai_factor
+		weight = 10000
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -4717,7 +5033,8 @@ tech_galactic_administration = {
 	}
 
 	ai_weight = {
-		factor = @capital_tech_ai_factor
+		weight = 1000
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -4755,7 +5072,8 @@ tech_planetary_infrastructure_1 = {
 	}
 
 	ai_weight = {
-		factor = @building_slots_ai_tech_factor
+		factor = 500 # Important tech
+		factor = 5 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -4791,7 +5109,8 @@ tech_planetary_infrastructure_2 = {
 	}
 
 	ai_weight = {
-		factor = @building_slots_ai_tech_factor
+		factor = 500 # Important tech
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -4853,6 +5172,11 @@ tech_subdermal_stimulation = {
 	}
 
 	ai_weight = {
+		weight = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 3
 			NOR = {
@@ -4924,6 +5248,7 @@ tech_tracking_implants = {
 	}
 
 	ai_weight = {
+		weight = 9999
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -4964,6 +5289,13 @@ tech_global_production_strategy = {
 	}
 
 	ai_weight = {
+		weight = 40
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		factor = 1.5
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5017,6 +5349,10 @@ tech_adaptive_bureaucracy = {
 
 	ai_weight = {
 		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
@@ -5065,6 +5401,10 @@ tech_effective_bureaucracy = {
 	}
 
 	ai_weight = {
+		modifier = {
+			factor = 1500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5117,6 +5457,12 @@ tech_colonial_bureaucracy = {
 	}
 
 	ai_weight = {
+		weight = 500
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5167,6 +5513,12 @@ tech_galactic_bureaucracy = {
 	}
 
 	ai_weight = {
+		weight = 1000
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5228,6 +5580,16 @@ tech_living_state = {
 	}
 
 	ai_weight = {
+		weight = 3000 # Influence is good
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5290,6 +5652,8 @@ tech_collective_self = {
 	}
 
 	ai_weight = {
+		weight = 4
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5345,6 +5709,16 @@ tech_autonomous_agents = {
 	}
 
 	ai_weight = {
+		weight = 3000 # Influence is good
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5401,6 +5775,7 @@ tech_embodied_dynamism = {
 	}
 
 	ai_weight = {
+		weight = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5471,6 +5846,10 @@ tech_neural_implants = {
 
 	ai_weight = {
 		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		modifier = {
 			factor = 1.25
 			OR = {
 				has_ethic = ethic_authoritarian
@@ -5520,6 +5899,15 @@ tech_artificial_moral_codes = {
 	}
 
 	ai_weight = {
+		weight = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5559,6 +5947,8 @@ tech_synthetic_thought_patterns = {
 	}
 
 	ai_weight = {
+		weight = 3000
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5598,6 +5988,11 @@ tech_unity_of_purpose = {
 	}
 
 	ai_weight = {
+		weight = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5636,6 +6031,12 @@ tech_collective_production_methods = {
 	}
 
 	ai_weight = {
+		weight = 2000
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5674,6 +6075,12 @@ tech_resource_processing_algorithms = {
 	}
 
 	ai_weight = {
+		weight = 2000
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5733,6 +6140,14 @@ tech_hyper_entertainment_forum = {
 
 	ai_weight = {
 		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
+		modifier = {
+			factor = 500
+			has_technology = tech_energy_torpedoes_2
+		}
+		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
@@ -5776,16 +6191,13 @@ tech_paradise_dome = {
 	}
 
 	ai_weight = {
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
-		}
-		modifier = {
-			factor = @housing_ai_tech_factor
-			num_pops >= 100
 		}
 	}
 }
@@ -5859,6 +6271,11 @@ tech_heritage_site = {
 	}
 
 	ai_weight = {
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 3000
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5890,6 +6307,7 @@ tech_hypercomms_forum = {
 	}
 
 	ai_weight = {
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5927,6 +6345,7 @@ tech_autocurating_vault = {
 	}
 
 	ai_weight = {
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -5971,6 +6390,11 @@ tech_holographic_rituals = {
 	}
 
 	ai_weight = {
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6007,6 +6431,7 @@ tech_consecration_fields = {
 	}
 
 	ai_weight = {
+		factor = 15 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6043,6 +6468,7 @@ tech_transcendent_faith = {
 	}
 
 	ai_weight = {
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6105,6 +6531,11 @@ tech_hive_cluster = {
 	}
 
 	ai_weight = {
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			reroll_society = yes
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6134,6 +6565,7 @@ tech_hive_confluence = {
 	}
 
 	ai_weight = {
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6202,14 +6634,7 @@ tech_ascension_theory = {
 	}
 
 	ai_weight = {
-		factor = 5 #more ascension perks are good
-		modifier = {
-			factor = 1.25
-			research_leader = {
-				area = society
-				has_trait = "leader_trait_expertise_statecraft"
-			}
-		}
+		weight = 999999
 	}
 }
 
@@ -6312,6 +6737,7 @@ tech_penal_colonies = {
 	}
 
 	ai_weight = {
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6377,6 +6803,7 @@ tech_resort_colonies = {
 	}
 
 	ai_weight = {
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6474,16 +6901,14 @@ tech_housing_agrarian_idyll = {
 	}
 
 	ai_weight = {
+		weight = 25 #scaling factor
+		factor = 2
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = society
 				has_trait = "leader_trait_expertise_statecraft"
 			}
-		}
-		modifier = {
-			factor = @housing_ai_tech_factor
-			num_pops >= 100
 		}
 	}
 }
@@ -6534,6 +6959,7 @@ tech_xeno_diplomacy = {
 	}
 
 	ai_weight = {
+		factor = 2
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6602,6 +7028,7 @@ tech_xeno_relations = {
 	}
 
 	ai_weight = {
+		factor = 2
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -6655,6 +7082,8 @@ tech_capital_productivity_1 = {
 	}
 
 	ai_weight = {
+		factor = 200
+		factor = 5 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
