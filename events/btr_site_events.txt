@@ -1,6 +1,17 @@
 namespace = btr_site
 
-# Prothean digsite events - btr_site.100
+## Prothean digsite events - 5 stages for each council race
+
+## Asari = 101,102,103,104,105
+## Turians = 106,107,108,109,110
+## Elcor = 111,112,113,114,115
+## Hanar = 116,117,118,119,120
+## Human = 121,122,123,124,125
+## Baterians = 126,127,128,129,130
+## Volus = 131,132,133,134,135
+## Salarians = 136,137,138,139,140
+
+
 fleet_event = {
 	id = btr_site.101
 	title = "btr_site.101.name"
@@ -135,6 +146,986 @@ fleet_event = {
 	
 	option = {
 		name = btr_site.105.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.106
+	title = "btr_site.106.name"
+	desc = "btr_site.106.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.106.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.107
+	title = "btr_site.107.name"
+	desc = "btr_site.107.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.107.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.108
+	title = "btr_site.108.name"
+	desc = "btr_site.108.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.108.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.109
+	title = "btr_site.109.name"
+	desc = "btr_site.109.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.109.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.110
+	title = "btr_site.110.name"
+	desc = "btr_site.110.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.110.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.111
+	title = "btr_site.111.name"
+	desc = "btr_site.111.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.111.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.112
+	title = "btr_site.112.name"
+	desc = "btr_site.112.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.112.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.113
+	title = "btr_site.113.name"
+	desc = "btr_site.113.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.113.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.114
+	title = "btr_site.114.name"
+	desc = "btr_site.114.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.114.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.115
+	title = "btr_site.115.name"
+	desc = "btr_site.115.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.115.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.116
+	title = "btr_site.116.name"
+	desc = "btr_site.116.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.116.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.117
+	title = "btr_site.117.name"
+	desc = "btr_site.117.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.117.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.118
+	title = "btr_site.118.name"
+	desc = "btr_site.118.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.118.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.119
+	title = "btr_site.119.name"
+	desc = "btr_site.119.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.119.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.120
+	title = "btr_site.120.name"
+	desc = "btr_site.120.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.120.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.121
+	title = "btr_site.121.name"
+	desc = "btr_site.121.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.121.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.122
+	title = "btr_site.122.name"
+	desc = "btr_site.122.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.122.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.123
+	title = "btr_site.123.name"
+	desc = "btr_site.123.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.123.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.124
+	title = "btr_site.124.name"
+	desc = "btr_site.124.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.124.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.125
+	title = "btr_site.125.name"
+	desc = "btr_site.125.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.125.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.126
+	title = "btr_site.126.name"
+	desc = "btr_site.126.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.126.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.127
+	title = "btr_site.127.name"
+	desc = "btr_site.127.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.127.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.128
+	title = "btr_site.128.name"
+	desc = "btr_site.128.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.128.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.129
+	title = "btr_site.129.name"
+	desc = "btr_site.129.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.129.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.130
+	title = "btr_site.130.name"
+	desc = "btr_site.130.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.130.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.131
+	title = "btr_site.131.name"
+	desc = "btr_site.131.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.131.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.132
+	title = "btr_site.132.name"
+	desc = "btr_site.132.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.132.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.133
+	title = "btr_site.133.name"
+	desc = "btr_site.133.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.133.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.134
+	title = "btr_site.134.name"
+	desc = "btr_site.134.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.134.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.135
+	title = "btr_site.135.name"
+	desc = "btr_site.135.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.135.a
+		owner = {
+			add_relic = btr_r_prothean_archive
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.136
+	title = "btr_site.136.name"
+	desc = "btr_site.136.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	location = from
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.136.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.137
+	title = "btr_site.137.name"
+	desc = "btr_site.137.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.137.a
+		owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.138
+	title = "btr_site.138.name"
+	desc = "btr_site.138.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.138.a
+		small_artifact_reward = yes
+	}
+}
+
+fleet_event = {
+	id = btr_site.139
+	title = "btr_site.139.name"
+	desc = "btr_site.139.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.139.a
+	owner = {
+			add_resource = {
+				physics_research = 400
+				society_research = 400
+				engineering_research = 400
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.140
+	title = "btr_site.140.name"
+	desc = "btr_site.140.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+	
+	archaeology = yes
+
+	is_triggered_only = yes
+	
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = { 
+		from = { set_site_progress_locked = no } 
+	}
+	
+	option = {
+		name = btr_site.140.a
 		owner = {
 			add_relic = btr_r_prothean_archive
 		}
