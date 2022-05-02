@@ -48,9 +48,26 @@ building_commercial_zone = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -156,8 +173,25 @@ building_commercial_megaplex = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -257,8 +291,25 @@ building_galactic_stock_exchange = {
 		trade_value_mult = 0.20
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 		}
