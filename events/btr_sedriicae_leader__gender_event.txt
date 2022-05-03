@@ -1,0 +1,21 @@
+### Sedriicae female leader only event
+country_event = {
+	id = btr_sedcol_matriarchy
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		from = {
+			OR = {
+				origin = btr_origin_sedriicae
+			}
+			gender = male
+		}
+	}
+
+	immediate = {
+		from = {
+			set_is_female = yes
+		}
+	}
+}

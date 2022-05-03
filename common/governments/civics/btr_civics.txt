@@ -639,52 +639,66 @@ civic_btr_omega_capital ={
 ##################
 # FORAYAN CIVICS #
 ##################
-civic_btr_forayans_totalitarian_state ={
+btr_civic_sedcol_totalitarian_state ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		pop_happiness = 0.15
-		intel_encryption_add = 2
-		intel_decryption_add = -2
+		pop_happiness = 0.05
+		planet_stability_add = 20
+		pop_ethic_categories_attraction_mult = 0.75
+		edicts_cost_mult = -0.5
+		country_edict_fund_add = 200
 	}
 }
 
-civic_btr_forayans_to_serve_the_people ={
+btr_civic_sedcol_status_intel ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		country_unity_produces_mult = 0.2
 		envoys_add = -2
+		diplo_weight_mult = -0.2
+		intel_encryption_add = 2
+		intel_decryption_add = -4
 	}
 }
+
+btr_civic_sedcol_desperate_measures = {
+	modification = yes
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian_or_xenophobe
+				value = ethic_fanatic_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+			NOR = {
+				text = civic_tooltip_not_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+			}
+		}
+		origin = {
+			NOT = {
+				value = origin_common_ground
+			}
+		}
+	}
+}
+
+
+	civic_tooltip_barbaric_despoilers_effects:7 "Cannot form §YMigration Treaties§!\nCannot form (but can join) §YFederations§! other than §YMartial Alliances§! or §YHegemonies§!\nHas the '§Y$casus_belli_cb_despoliation$§!' casus belli on all other empires\n$allow_raiding$\nDecreased §YOpinion§! for most other empires"
+
 
 ##################
 # PARNACK CIVICS #
