@@ -204,22 +204,10 @@ btr_building_turhie_kasr = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
+			owner 
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		produces = {
 			trigger = { exists = owner }
 			unity = 1
@@ -270,25 +258,8 @@ btr_building_turhie_castra_auxilia = {
 		pop_defense_armies_add = 3
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 1000
 		}
@@ -336,25 +307,8 @@ btr_building_sysall_colonial_affairs = {
 		pop_growth_speed = 0.05
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 300
 		}
@@ -364,7 +318,6 @@ btr_building_sysall_colonial_affairs = {
 	}
 }
 
-### Systems Alliance Buildings
 btr_building_sysall_interplanetary_combat = {
 	base_buildtime = 720
 	base_cap_amount = 1
@@ -406,25 +359,8 @@ btr_building_sysall_interplanetary_combat = {
 		job_soldier_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 1500
 		}
