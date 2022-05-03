@@ -55,7 +55,7 @@ building_planetary_shield_generator = {
 	}
 	
 	ai_weight = {
-		weight = 0
+		weight = 100
 	}
 }
 
@@ -265,7 +265,7 @@ building_btr_planetary_shield_generator_heavy = {
 			factor = 0
 			owner = { 
 				has_monthly_income = {
-					resource = rare_crystals
+					resource = element_zero
 					value < 3
 				}
 			}
