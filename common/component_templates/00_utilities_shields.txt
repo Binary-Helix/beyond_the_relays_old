@@ -261,7 +261,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t4_cost
-			exotic_gases = 0.25
 		}
 		upkeep = {
 			energy = @shield_s_t4_upkeep_energy
@@ -281,7 +280,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -296,7 +295,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t4_cost
-			exotic_gases = 0.50
 		}
 		upkeep = {
 			energy = @shield_m_t4_upkeep_energy
@@ -316,7 +314,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -331,7 +329,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t4_cost
-			exotic_gases = 1
 		}
 		upkeep = {
 			energy = @shield_l_t4_upkeep_energy
@@ -358,7 +355,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -374,7 +371,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t5_cost
-			exotic_gases = 0.333
 		}
 		upkeep = {
 			energy = @shield_s_t5_upkeep_energy
@@ -394,7 +390,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -409,7 +405,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t5_cost
-			exotic_gases = 0.666
 		}
 		upkeep = {
 			energy = @shield_m_t5_upkeep_energy
@@ -429,7 +424,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -444,7 +439,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t5_cost
-			exotic_gases = 1.333
 		}
 		upkeep = {
 			energy = @shield_l_t5_upkeep_energy
@@ -471,7 +465,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = exotic_gases value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
