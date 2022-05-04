@@ -289,335 +289,335 @@ war_drone_campaign = {
 # Rare resource edicts
 ##########################################################################
 
-terraforming_gas = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = rare_edicts
-		upkeep = {
-			exotic_gases = 0.5
-			multiplier = value:edict_size_effect
-		}
-	}
+# terraforming_gas = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = rare_edicts
+# 		upkeep = {
+# 			exotic_gases = 0.5
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	modifier = {
-		terraform_speed_mult = 0.50
-	}
+# 	modifier = {
+# 		terraform_speed_mult = 0.50
+# 	}
 
-	prerequisites = {
-		"tech_terrestrial_sculpting"
-	}
+# 	prerequisites = {
+# 		"tech_terrestrial_sculpting"
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictHighPrio
-			any_planet_within_border = {
-				is_terraforming = yes
-			}
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = @EdictHighPrio
+# 			any_planet_within_border = {
+# 				is_terraforming = yes
+# 			}
+# 		}
+# 	}
+# }
 
-fuel_gases = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = ship_edicts
-		upkeep = {
-			exotic_gases = 1
-			multiplier = value:edict_size_effect
-		}
-	}
+# fuel_gases = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = ship_edicts
+# 		upkeep = {
+# 			exotic_gases = 1
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = exotic_gases amount > 0 }
-			has_edict = fuel_gases
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = exotic_gases amount > 0 }
+# 			has_edict = fuel_gases
+# 		}
+# 	}
 
-	modifier = {
-		ship_speed_mult = 0.15
-	}
+# 	modifier = {
+# 		ship_speed_mult = 0.15
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictMedPrio
-			is_at_war = yes
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = @EdictMedPrio
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
 
-shield_gases = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = ship_edicts
-		upkeep = {
-			exotic_gases = 1
-			multiplier = value:edict_size_effect
-		}
-	}
+# shield_gases = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = ship_edicts
+# 		upkeep = {
+# 			exotic_gases = 1
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = exotic_gases amount > 0 }
-			has_edict = shield_gases
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = exotic_gases amount > 0 }
+# 			has_edict = shield_gases
+# 		}
+# 	}
 
-	modifier = {
-		ship_shield_mult = 0.25
-	}
+# 	modifier = {
+# 		ship_shield_mult = 0.25
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictMedPrio
-			is_at_war = yes
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = @EdictMedPrio
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
 
-clearing_motes = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = rare_edicts
-		upkeep = {
-			volatile_motes = 0.5
-			multiplier = value:edict_size_effect
-		}
-	}
+# clearing_motes = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = rare_edicts
+# 		upkeep = {
+# 			volatile_motes = 0.5
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
-			has_edict = clearing_motes
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = volatile_motes amount > 0 }
+# 			has_edict = clearing_motes
+# 		}
+# 	}
 
-	modifier = {
-		deposit_blockers_cost_mult = -0.25
-		planet_clear_blocker_speed_mult = 0.25
-	}
+# 	modifier = {
+# 		deposit_blockers_cost_mult = -0.25
+# 		planet_clear_blocker_speed_mult = 0.25
+# 	}
 
-	ai_weight = {
-		weight = 0
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
 
-motes_kinetic = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = ship_edicts
-		upkeep = {
-			volatile_motes = 1
-			multiplier = value:edict_size_effect
-		}
-	}
+# motes_kinetic = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = ship_edicts
+# 		upkeep = {
+# 			volatile_motes = 1
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
-			has_edict = motes_kinetic
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = volatile_motes amount > 0 }
+# 			has_edict = motes_kinetic
+# 		}
+# 	}
 
-	modifier = {
-		weapon_type_kinetic_weapon_damage_mult = 0.25
-	}
+# 	modifier = {
+# 		weapon_type_kinetic_weapon_damage_mult = 0.25
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictHighPrio
-			is_at_war = yes
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = @EdictHighPrio
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
 
-motes_explosives = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = ship_edicts
-		upkeep = {
-			volatile_motes = 1
-			multiplier = value:edict_size_effect
-		}
-	}
+# motes_explosives = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = ship_edicts
+# 		upkeep = {
+# 			volatile_motes = 1
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
-			has_edict = motes_explosives
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = volatile_motes amount > 0 }
+# 			has_edict = motes_explosives
+# 		}
+# 	}
 
-	modifier = {
-		weapon_type_explosive_weapon_damage_mult = 0.25
-	}
+# 	modifier = {
+# 		weapon_type_explosive_weapon_damage_mult = 0.25
+# 	}
 
-	ai_weight = {
-		weight = 0
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
 
-motes_armor = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = ship_edicts
-		upkeep = {
-			volatile_motes = 1
-			multiplier = value:edict_size_effect
-		}
-	}
+# motes_armor = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = ship_edicts
+# 		upkeep = {
+# 			volatile_motes = 1
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
-			has_edict = motes_armor
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = volatile_motes amount > 0 }
+# 			has_edict = motes_armor
+# 		}
+# 	}
 
-	modifier = {
-		ship_armor_mult = 0.25
-	}
+# 	modifier = {
+# 		ship_armor_mult = 0.25
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictMedPrio
-			is_at_war = yes
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = @EdictMedPrio
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
 
-crystalline_sensors = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = rare_edicts
-		upkeep = {
-			rare_crystals = 0.5
-			multiplier = value:edict_size_effect
-		}
-	}
+# crystalline_sensors = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = rare_edicts
+# 		upkeep = {
+# 			rare_crystals = 0.5
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = rare_crystals amount > 0 }
-			has_edict = crystalline_sensors
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = rare_crystals amount > 0 }
+# 			has_edict = crystalline_sensors
+# 		}
+# 	}
 
-	modifier = {
-		ship_sensor_range_add = 1
-	}
+# 	modifier = {
+# 		ship_sensor_range_add = 1
+# 	}
 
-	ai_weight = {
-		weight = 0
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+# }
 
 
-crystal_focus = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = ship_edicts
-		upkeep = {
-			rare_crystals = 1
-			multiplier = value:edict_size_effect
-		}
-	}
+# crystal_focus = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = ship_edicts
+# 		upkeep = {
+# 			rare_crystals = 1
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = rare_crystals amount > 0 }
-			has_edict = crystal_focus
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = rare_crystals amount > 0 }
+# 			has_edict = crystal_focus
+# 		}
+# 	}
 
-	modifier = {
-		weapon_type_energy_weapon_damage_mult = 0.25
-	}
+# 	modifier = {
+# 		weapon_type_energy_weapon_damage_mult = 0.25
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictLowPrio
-			is_at_war = yes
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = @EdictLowPrio
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
 
-living_metal_construction = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = rare_edicts
-		upkeep = {
-			sr_living_metal = 0.5
-			multiplier = value:edict_size_effect
-		}
-	}
+# living_metal_construction = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = rare_edicts
+# 		upkeep = {
+# 			sr_living_metal = 0.5
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	modifier = {
-		megastructure_build_speed_mult = 0.50
-	}
+# 	modifier = {
+# 		megastructure_build_speed_mult = 0.50
+# 	}
 
-	prerequisites = {
-		"tech_mine_living_metal"
-	}
+# 	prerequisites = {
+# 		"tech_mine_living_metal"
+# 	}
 
-	ai_weight = {
-		weight = 0
-		modifier = {
-			weight = @EdictHighPrio
-			count_owned_megastructure = {
-				count >= 1
-				limit = { is_upgrading = yes }
-			}
-		}
-		modifier = {
-			weight = @EdictHighPrio
-			has_origin = origin_void_dwellers
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = @EdictHighPrio
+# 			count_owned_megastructure = {
+# 				count >= 1
+# 				limit = { is_upgrading = yes }
+# 			}
+# 		}
+# 		modifier = {
+# 			weight = @EdictHighPrio
+# 			has_origin = origin_void_dwellers
+# 		}
+# 	}
+# }
 
-nanite_actuators = {
-	length = @EdictDuration
-	icon = "GFX_edict_type_time"
-	resources = {
-		category = rare_edicts
-		upkeep = {
-			nanites = 0.5
-			multiplier = value:edict_size_effect
-		}
-	}
+# nanite_actuators = {
+# 	length = @EdictDuration
+# 	icon = "GFX_edict_type_time"
+# 	resources = {
+# 		category = rare_edicts
+# 		upkeep = {
+# 			nanites = 0.5
+# 			multiplier = value:edict_size_effect
+# 		}
+# 	}
 
-	potential = {
-		OR = {
-			has_resource = { type = nanites amount > 0 }
-			has_edict = nanite_actuators
-		}
-	}
+# 	potential = {
+# 		OR = {
+# 			has_resource = { type = nanites amount > 0 }
+# 			has_edict = nanite_actuators
+# 		}
+# 	}
 
-	modifier = {
-		all_technology_research_speed = 0.10
-	}
+# 	modifier = {
+# 		all_technology_research_speed = 0.10
+# 	}
 
-	ai_weight = {
-		weight = @EdictHighPrio
-	}
-}
+# 	ai_weight = {
+# 		weight = @EdictHighPrio
+# 	}
+# }
 
 ##########################################################################
 # Event edicts
