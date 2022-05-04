@@ -124,7 +124,6 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t4_cost
-			volatile_motes = @m_t4_rare
 		}
 		upkeep = {
 			energy = @m_t4_upkeep_energy
@@ -138,7 +137,7 @@ weapon_component_template = {
 			factor = 0
 			is_country_type = default
 			resource_stockpile_compare = {
-				resource = volatile_motes
+				resource = alloys
 				value < 10
 			}
 		}
@@ -164,7 +163,6 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
-			volatile_motes = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -178,7 +176,7 @@ weapon_component_template = {
 			factor = 0
 			is_country_type = default
 			resource_stockpile_compare = {
-				resource = volatile_motes
+				resource = alloys
 				value < 10
 			}
 		}
@@ -239,7 +237,6 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
-			volatile_motes = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -304,7 +301,6 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t4_cost
-			volatile_motes = @m_t4_rare
 		}
 		upkeep = {
 			energy = @m_t4_upkeep_energy
@@ -317,7 +313,7 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = volatile_motes value <= 100 }
+			resource_stockpile_compare = { resource = alloys value <= 100 }
 		}
 	}
 }
@@ -341,7 +337,6 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
-			volatile_motes = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -354,7 +349,7 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = volatile_motes value <= 100 }
+			resource_stockpile_compare = { resource = alloys value <= 100 }
 		}
 	}
 }
