@@ -248,7 +248,6 @@ minerals_expenditure_colonies_lithoid_expand = {
 
 	potential = {
 		is_machine_empire = no
-		is_lithoid_empire = yes
 		ai_colonize_plans > 0
 		has_resource = { type = minerals amount > 400 }
 		has_monthly_income = {
@@ -549,7 +548,6 @@ minerals_expenditure_campaigns = {
 
 	potential = {
 		is_hive_empire = yes
-		is_lithoid_empire = yes
 		resource_stockpile_compare = {
 			resource = minerals
 			value > 3000
