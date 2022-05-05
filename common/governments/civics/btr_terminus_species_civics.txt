@@ -4,10 +4,10 @@
 
 btr_civic_sedcol_totalitarian_state = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_colonial.dds"
+	#icon = "gfx/interface/icons/governments/civics/civic_colonial.dds"
 	potential = {
 		origin = {
-			value = btr_origin_sysall
+			value = btr_origin_sedcol
 		}
 	}
 	random_weight = {
@@ -17,4 +17,18 @@ btr_civic_sedcol_totalitarian_state = {
 		country_starbase_influence_cost_mult = -0.2
 		planet_colony_development_speed_mult = 0.1
 	}
+}
+
+btr_civic_sedcol_desperate_measures = {
+	modification = no
+	#icon = 
+	potential = {
+		origin = {
+			value = btr_origin_sedcol
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	
 }
