@@ -1080,6 +1080,17 @@ soldier = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_parnkreg_reg_alpha }
+		}
+		modifier = {
+			planet_amenities_add = 3
+		}
+
+	}
+
 	pop_modifier = {
 		pop_defense_armies_add = 3
 	}
