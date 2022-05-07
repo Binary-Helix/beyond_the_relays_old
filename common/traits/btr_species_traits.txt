@@ -799,35 +799,73 @@ btr_quarian_adept_engineers = {
 ####################
 # FORAYANS  TRAITS #
 ####################
-btr_forayans_collective_will = {
+btr_forayan_trait_core = {
 	cost = 0
+	potential_crossbreeding_chance = 0
+
+	#icon = 
+
 	initial = yes
-	allowed_archetypes = {
-		 BIOLOGICAL
-	}
-
-	modification = no
 	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
 
+	sorting_priority = 20
+	
+	leader_age_min = 20
+	leader_age_max = 80
+
+	ai_weight = {
+		weight = 0
+	}
 	modifier = {
-		pop_government_ethic_attraction = 0.3
-		planet_jobs_worker_produces_mult = 0.035
+		leader_age = 40
 	}
 }
 
-btr_forayans_caste_system = {
+btr_forayan_trait_happiness = {
 	cost = 0
-	initial = yes
-	allowed_archetypes = {
-		 BIOLOGICAL
-	}
 
-	modification = no
+	initial = yes
 	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = -0.1
-		pop_housing_usage_mult = -0.1
+		planet_administrators_unity_produces_add = 1
+		planet_jobs_unity_produces_mult = .5
+		empire_size_pops_mult = -0.1
+		pop_resettlement_cost_mult = -0.75
+		planet_researchers_produces_mult = -0.1
+	}
+}
+
+btr_forayan_trait_insectoids = {
+	cost = 0
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_growth_speed = 0.3
+		pop_housing_usage_mult = -0.2
+	}
+}
+
+btr_forayan_trait_gender_castes = {
+	cost = 0
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.15
+		pop_amenities_usage_mult = -0.2
+		trade_value_mult = -0.1
 	}
 }
 

@@ -47,8 +47,11 @@ sys_nosikae_init = {
 					portrait = art3
 					#homeworld = THIS 
 					traits = { 
-					  trait="btr_forayans_collective_will"
-					  trait="btr_forayans_caste_system"
+						trait = "btr_forayan_trait_core"
+						trait = "btr_forayan_trait_happiness"
+						trait = "btr_forayan_trait_insectoids"
+						trait = "btr_forayan_trait_gender_castes"
+						trait = "trait_forayan_habitability_preference"
 					  # ideal_planet_class = "pc_dextro_arid"
 					}
 				  }
@@ -57,10 +60,10 @@ sys_nosikae_init = {
 					name = "Sed'riicae Collective"
 					ship_prefix = "PRESCRIPTED_ship_prefix_sedriicae_collective"
 					type = default
-					origin = "origin_sedriicae_collective"
+					origin = "btr_origin_sedcol"
 					ignore_initial_colony_error = yes
-					civics = { civic = "civic_btr_forayans_totalitarian_state" civic = "civic_btr_forayans_to_serve_the_people" }
-					authority = auth_dictatorial
+					civics = { civic = "btr_civic_sedcol_totalitarian_state" civic = "btr_civic_sedcol_status_intel" }
+					authority = "auth_imperial"
 					name_list = "ART3"
 					ethos = { ethic = "ethic_pacifist" ethic = "ethic_fanatic_authoritarian" }
 					species = event_target:forayanSpecies
@@ -100,7 +103,11 @@ sys_nosikae_init = {
 			generate_btr_start_deposits_and_blockers = yes			
 			generate_for_regdika_capitol_buildings = yes
 			generate_for_regdika_pops = yes
-
+			add_deposit = btr_d_sedcol_mukiilak
+			add_deposit = btr_d_sedcol_mines
+			add_deposit = btr_d_sedcol_industry_hub
+			add_deposit = btr_d_sedcol_underground
+			add_deposit = btr_d_sedcol_collector_arrays
 			set_name = "Sed'riicae"
 		}			
 	}
