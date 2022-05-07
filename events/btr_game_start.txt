@@ -159,17 +159,10 @@ country_event = {
 		}
 		else_if = {
 			limit = { has_origin = btr_origin_sedcol }
-			give_technology = {
-				tech = btr_tech_sedcol_econ_policy
-			}
-			give_technology = {
-				tech = btr_tech_sedcol_modern_industry
-			}
 			add_modifier = {
 				modifier = btr_sedcol_stagnation
 				years = 20
 			}
-		}
 		}
 	}
 }
