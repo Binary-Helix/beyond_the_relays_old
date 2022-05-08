@@ -7278,7 +7278,8 @@ d_consumption_chambers = {
 	category = deposit_cat_rare
 	resources = {
 		produces = {
-			food = 200
+			energy = 100
+			unity = 100
 		}
 	}
 	drop_weight = {
@@ -7292,7 +7293,8 @@ d_deconstruction_bays = {
 	category = deposit_cat_rare
 	resources = {
 		produces = {
-			minerals = 500
+			minerals = 200
+			alloys = 200
 		}
 	}
 	drop_weight = {
@@ -8102,6 +8104,84 @@ d_bloodpack_vorcha = {
 	}	
 }
 
+### PARNACK
+btr_d_parnkreg_darta_agglo = {
+	is_for_colonizable = yes
+	icon = btr_d_darta_agglo
+	
+	planet_modifier = { 
+		planet_max_districts_add = 3
+		pop_happiness = -0.05
+		planet_jobs_consumer_goods_produces_mult = 0.20
+		planet_jobs_alloys_produces_mult = 0.20
+		planet_jobs_unity_produces_mult = 0.20
+
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_mapofter_ind_park = {
+	is_for_colonizable = yes
+	icon = btr_d_ind_park
+	
+	planet_modifier = { 
+		planet_max_districts_add = 6
+		planet_jobs_food_produces_mult = -0.05
+
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_ipoc_bal_so_pl = {
+	is_for_colonizable = yes
+	icon = btr_d_plains
+	
+	
+	planet_modifier = {
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_yock_nuc_comp = {
+	is_for_colonizable = yes
+	icon = btr_d_yock
+	
+	planet_modifier = { 
+		district_generator_max = 2
+		planet_jobs_energy_produces_mult = 0.15
+		job_technician_add = 2
+		army_defense_damage_mult = 0.25
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_parnkreg_darloc_rang = {
+	is_for_colonizable = yes
+	icon = btr_d_darloc
+	
+	planet_modifier = { 
+		district_mining_max = 3
+		job_miner_add = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
 
 # Blockers
 d_asari_zalis_spill = {
@@ -8190,51 +8270,14 @@ d_asari_yisrin_restored = {
 	}
 }
 
+d_btr_collector_stasis_pods = {
+	is_for_colonizable = yes
+	icon = d_collector_stasis_pods
+	category = deposit_cat_rare
 
+	potential = { always = no }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	planet_modifier = {
+		planet_pop_assembly_mult = 4.0
+	}
+}

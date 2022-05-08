@@ -135,7 +135,8 @@ sys_tartarusdebrisfield_init = {
 				trait="trait_robot_high_bandwidth"
 				  # ideal_planet_class = "pc_arid"
 				}
-			  }
+				extra_trait_points = 3
+				}
 			  last_created_species = { save_global_event_target_as = collectorSpecies }
 				create_country = {
 					name = "The Collectors"
@@ -181,18 +182,14 @@ sys_tartarusdebrisfield_init = {
 				save_global_event_target_as = collectors_empire
 				species = { save_global_event_target_as = collectorSpecies }
 			}
-			give_technology = {
-				tech = tech_gene_tailoring
-				tech = tech_regenerative_hull_tissue
-				tech = tech_unity_of_purpose
-				message = no
-			}
 			set_owner = event_target:collectors_empire
 			generate_btr_start_deposits_and_blockers = yes
 			generate_btr_collectors_capitol_buildings = yes	
 			generate_collector_base_pops = yes
 			add_deposit = d_consumption_chambers
 			add_deposit = d_deconstruction_bays
+			add_deposit = d_btr_collector_stasis_pods
+			add_deposit = d_dark_matter_deposit_10
 			set_name = "Collector Base"
 		}
 	}	

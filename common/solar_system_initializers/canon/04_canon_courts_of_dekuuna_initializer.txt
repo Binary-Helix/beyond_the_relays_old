@@ -42,6 +42,9 @@ sys_phontes_init = {
         has_ring = no
 		size = 25
 		flags = { lenuamund_planet pd_ignore }
+		init_effect = {
+			create_archaeological_site = btr_site_prothean_beacon_elcor
+		}
     }
 
     planet = {

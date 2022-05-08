@@ -17,3 +17,148 @@ event = {
 		}
 	}
 }
+
+### Origins -> tech, empire, deposits modifier initializer event
+country_event = {
+	id = btr_game_start.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = { has_origin = btr_origin_asrep }
+			give_technology = {
+				tech = btr_tech_asrep_asari_arch
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_asrep_ship_design
+				message = no
+			}
+			add_modifier = {
+				modifier = btr_asrep_empire_modifier
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_asrep_prosperity
+				days = -1
+			}
+			add_relic = btr_r_asrep_asha_lib
+			add_relic = btr_r_asrep_athane_temple
+			# home_planet = {
+			# 	add_deposit = btr_d_asrep_armali
+			# 	add_deposit = btr_d_asrep_nosdesera
+			# 	add_deposit = btr_d_asrep_serrice_univ
+			# 	add_deposit = btr_d_asrep_cresyl_plateau
+			# 	add_deposit = btr_d_asrep_askasian_mountains
+			# 	add_deposit = btr_d_asrep_pulian_delta
+			# 	add_deposit = btr_d_asrep_senecan_lakes
+			# 	add_deposit = btr_d_asrep_irssal_tea
+			# 	add_deposit = btr_d_asrep_eezo_deposits
+			# 	add_deposit = btr_d_asrep_thessia_net
+			# 	add_blocker = {
+			# 		type = btr_d_asrep_yisrin
+			# 	}
+			# 	add_blocker = {
+			# 		type = btr_d_asrep_zalis_spill
+			# 	}
+			# }
+			break = yes
+		}
+		else_if = {
+			limit = { has_origin = btr_origin_turhie }
+			give_technology = {
+				tech = btr_tech_turhie_elkoss
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_turhie_fleet_in_being
+				message = no
+			}
+			give_technology = {
+				tech = tech_planetary_unification
+			}
+			add_modifier = {
+				modifier = btr_turhie_empire_modifier
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_turhie_relay_314
+				days = 2000
+			}
+			capital_scope = {
+				add_modifier = { modifier = prosp_uni_mod days = 7200 }
+				generate_turianPop = yes
+				generate_turianPop = yes
+				generate_turianPop = yes
+				generate_turianPop = yes
+			}
+			add_relic = btr_r_turhie_banner
+			# home_planet = {
+				# add_deposit = btr_d_turhie_temple_palaven
+				# add_deposit = btr_d_turhie_cipritine
+				# add_deposit = btr_d_turhie_urcaveix
+				# add_deposit = btr_d_turhie_bountiful_oceans
+				# add_deposit = btr_d_turhie_hot_spots
+			# }
+			break = yes
+		}
+		else_if = {
+			limit = { has_origin = btr_origin_getcon }
+			add_modifier = {
+				modifier = btr_getcon_empire_modifier
+				days = -1
+			}
+			add_relic = btr_r_getcon_creator_archives
+		}
+		else_if = {
+			limit = { has_origin = btr_origin_sysall }
+			add_modifier = {
+				modifier = btr_sysall_shanxi_memory
+				days = -1
+			}
+			add_modifier = {
+				modifier = btr_sysall_empire_modifier
+				years = 30
+			}
+			add_modifier = {
+				modifier = btr_sysall_traverse_race
+				years = 50
+			}
+			give_technology = {
+				tech = btr_tech_sysall_exogeni
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_sysall_eldfell
+				message = no
+			}
+			give_technology = {
+				tech = btr_tech_sysall_hahne
+				message = no
+			}
+		}
+		else_if = {
+			limit = { has_origin = origin_batarian_hegemony }
+			add_modifier = {
+				modifier = btr_batar_traverse_race
+				years = 50
+			}
+		}
+		else_if = {
+			limit = { has_origin = btr_origin_parnkreg }
+			give_technology = {
+				tech = btr_tech_parnkreg_reg_alpha
+			}
+			give_technology = {
+				tech = btr_tech_parnkreg_stand_arm
+			}
+			add_modifier = {
+				modifier = btr_parnkreg_empire_modifier
+				years = 15
+			}
+			add_modifier = {
+				modifier = btr_parnkreg_highly_adaptable
+			}
+		}
+	}
+}

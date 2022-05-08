@@ -17,6 +17,7 @@ generate_asariPop = {
 				trait = btr_asari_trait_smooth_talk
 				trait = mec_asari_trait_sophisticated
 				trait = trait_asari_habitability_preference
+				trait = trait_psionic
 				# ideal_planet_class = "pc_continental"
 			}
 		}
@@ -75,11 +76,11 @@ generate_turianPop = {
 			portrait = turian
 			#homeworld = THIS 
 			traits = {
-				trait = "btr_turian_patriotic"
-				trait = "btr_turian_militaristic"
-				trait = "trait_conformists"
-				trait = "trait_nonadaptive"
-				trait = "trait_talented"
+				trait = btr_turian_trait_core
+				trait = btr_turian_trait_team_player
+				trait = btr_turian_trait_martial_nat
+				trait = btr_turian_trait_op_discipline
+				trait = trait_turian_habitability_preference
 				# ideal_planet_class = "pc_dextro_arid"
 			}
 		}
@@ -171,10 +172,11 @@ generate_humanPop = {
 			portrait = human
 			#homeworld = THIS 
 			traits = {
-				trait = "btr_human_flexible"
-				trait = "btr_human_multicultural"
-				trait = "trait_wasteful"
-				trait = "trait_quick_learners"
+				trait = trait_human_habitability_preference
+				trait = btr_human_core
+				trait = btr_human_biodiversity
+				trait = btr_human_frontier_spirit
+				trait = btr_human_rugged_ind
 				# ideal_planet_class = "pc_continental"
 			}
 		}
@@ -266,12 +268,11 @@ generate_gethPop = {
 			portrait = geth
 			#homeworld = THIS 
 			traits = {
-				trait = "trait_machine_unit"
-				trait = "btr_geth_neural_network"
-				trait = "btr_geth_mobile_platforms"
-				trait = "trait_robot_uncanny"
-				trait = "trait_robot_high_bandwidth"
-				trait = "trait_robot_durable"
+				trait="trait_machine_unit"
+				trait = btr_geth_trait_core
+				trait = btr_geth_trait_purpose_built_models
+				trait = btr_geth_trait_deontological_primacy
+				trait = btr_geth_trait_linked_consci
 				# ideal_planet_class = "pc_arid"
 			}
 		}
@@ -451,11 +452,11 @@ generate_yahgPop = {
 			portrait = yahg
 			#homeworld = THIS 
 			traits = {
-				trait = "btr_yahg_physique"
-        trait = "btr_yahg_keen_mind"
-				trait = "trait_deviants"
-				trait = "trait_quarrelsome"
-				trait = "trait_repugnant"
+				trait = "btr_yahg_trait_core"
+        		trait = "btr_yahg_trait_apex_pred"
+				trait = "btr_yahg_trait_truthsay"
+				trait = "btr_yahg_trait_cont_obsess"
+				trait = "trait_yahg_habitability_preference"
 				# ideal_planet_class = "pc_badlands"
 			}
 		}

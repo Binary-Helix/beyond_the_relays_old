@@ -27,81 +27,6 @@
 #	ai_playable = {}							# Similar to "playable", for AI
 #}
 
-####################
-# ASARI REP CIVICS #
-####################
-civic_btr_asari_rep_thes_dip_corp ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		envoys_add = 3
-		diplo_weight_mult = 0.33
-		diplo_weight_naval_mult = -0.1
-	}
-}
-
-civic_btr_asari_rep_democracy = {
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_war_exhaustion_mult = 0.1
-		empire_size_colonies_mult = -0.5
-	}
-}
-
-civic_btr_asari_universities = {
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		diplo_weight_technology_mult = 0.1
-		planet_researchers_unity_produces_add = 1
-		all_technology_research_speed = 0.05
-		empire_size_colonies_mult = -0.5
-	}
-}
-
 ###################
 # SALARIAN CIVICS #
 ###################
@@ -893,71 +818,54 @@ civic_btr_forayans_to_serve_the_people ={
 ##################
 # PARNACK CIVICS #
 ##################
-civic_btr_asarirep_1 ={
+btr_civic_parnkreg_pack_ment ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
-		}
-	}
+	icon = "gfx/interface/icons/governments/civics/civic_yahg_pack.dds"
 	random_weight = {
 		base = 0
 	}
 	modifier = {
+		planet_stability_add = 15
+		pop_government_ethic_attraction = 0.50
+		#can't join federations in diplo actions 
+		pop_happiness = 0.10
 		
 	}
 }
 
-civic_btr_asarirep_1 ={
+btr_civic_parnkreg_enfor_iso ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
+	icon = "gfx/interface/icons/governments/civics/civic_yahg_forced_isolation.dds"
+	random_weight = {
+		base = 0
 	}
-	possible = {
-		ethics = {
-			#OR = {
-				
-			#}
-		}
-		civics = {
-			#NOT = {
-				
-			#}
+	modifier = {
+		country_trust_growth = -0.33
+		diplo_weight_naval_mult = 0.50
+		country_war_exhaustion_mult = -0.25
+		country_claim_influence_cost_mult = -0.10
+		country_trust_cap_add = -33
+
+	}
+}
+
+btr_civic_parnkreg_gal_hege ={
+	modification = yes
+	icon = "gfx/interface/icons/governments/civics/civic_yahg_hegemon.dds"
+	potential = {
+		origin = {
+			value = btr_origin_parnkreg
 		}
 	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		
+		country_influence_produces_add = 1
+		diplo_weight_mult = 0.20
+		starbase_outpost_cost_mult = -0.33
+		#subjugation wargoal is awlays available
+
 	}
 }
 

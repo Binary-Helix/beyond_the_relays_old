@@ -1,0 +1,384 @@
+### THESSIA (Asari Republics)
+btr_d_asrep_armali = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 3
+		trade_value_mult = 0.1
+		planet_max_districts_add = 2
+		job_merchant_add = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_nosdesera = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 3
+		trade_value_mult = 0.05
+		planet_max_districts_add = 2
+		job_entertainer_add = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_serrice_univ = {
+	is_for_colonizable = yes
+	icon = d_building_complex
+	
+	planet_modifier = {
+		district_generator_max = 2
+		planet_researchers_physics_research_produces_mult = 0.05
+		planet_researchers_society_research_produces_mult = 0.05
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_cresyl_plateau = {
+	is_for_colonizable = yes
+	icon = d_betharian_deposit
+	
+	planet_modifier = { 
+		district_mining_max = 3
+		job_miner_add = 1
+		job_artisan_add = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_askasian_mountains = {
+	is_for_colonizable = yes
+	icon = d_mountain_range
+	
+	planet_modifier = { 
+		district_mining_max = 2
+		job_miner_add = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_senecan_lakes = {
+	is_for_colonizable = yes
+	icon = d_crystal_reef
+	
+	planet_modifier = { 
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_pulian_delta = {
+	is_for_colonizable = yes
+	icon = d_great_river
+	
+	planet_modifier = { 
+		district_farming_max = 3
+		job_farmer_add = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_irssal_tea = {
+	is_for_colonizable = yes
+	icon = d_black_soil
+	
+	planet_modifier = { 
+		district_farming_max = 1
+		pop_happiness = 0.02
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_eezo_deposits = {
+	is_for_colonizable = yes
+	icon = d_infestation
+
+	planet_modifier = {
+		trade_value_mult = 0.15
+	}
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			element_zero = 3
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_thessia_net = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		planet_amenities_mult = 0.20
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_zalis_spill = {
+	time = 360
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	icon = d_monument
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		btr_d_asrep_zalis_sea
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 10000
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_zalis_sea = {
+	is_for_colonizable = yes
+	icon = d_monument
+	
+	planet_modifier = {
+		district_farming_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_yisrin = {
+	time = 480
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+	icon = d_monument
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+	}
+
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		btr_d_asrep_tidal_barrage
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 15000
+			minerals = 5000
+			alloys = 1200
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_asrep_tidal_barrage = {
+	is_for_colonizable = yes
+	icon = d_monument
+	
+	planet_modifier = {
+		district_generator_max  = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+### PALAVEN (Turian Hierarchy)
+btr_d_turhie_temple_palaven = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		planet_jobs_society_research_produces_mult = 0.1
+	}
+	resources = {
+		produces = {
+			unity = 3
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+btr_d_turhie_cipritine = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		pop_government_ethic_attraction = 0.1
+		planet_max_districts_add = 6
+	}
+	resources = {
+		produces = {
+			unity = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_turhie_urcaveix = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		planet_max_districts_add = -3
+		army_starting_experience_add = 200
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_turhie_bountiful_oceans = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		district_farming_max = 3
+		planet_jobs_food_produces_mult = 0.15
+		pop_habitability = 0.1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+
+btr_d_turhie_hot_spots = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		district_generator_max = 4
+		job_technician_add = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+### EARTH (Systems Alliance)
+
+btr_d_sysall_east_africa = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		planet_max_districts_add = 5
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_sysall_deep_minerals = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		district_mining_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_sysall_norsefire = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_sysall_land_grants = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		district_farming_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+btr_d_sysall_vila_militar = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

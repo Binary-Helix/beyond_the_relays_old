@@ -89,8 +89,8 @@ btr_asari_trait_smooth_talk = {
 	# Embassy effect in diplomaticy_economy
 	modifier = {
 		planet_amenities_mult = 0.1
-		army_damage_mult = 0.15
 	}
+	custom_tooltip_with_modifiers = btr_asari_trait_smooth_talk_EMBASSY
 }
 
 mec_asari_trait_sophisticated = {
@@ -105,7 +105,6 @@ mec_asari_trait_sophisticated = {
 	modifier = {
 		pop_amenities_usage_mult = 0.1
 	}
-	#custom_tooltip = mec_asari_trait_SOPHISTICATED_EFFECT
 	
 	#slave_cost = {
 	#	energy = 150
@@ -170,43 +169,38 @@ btr_salarian_shortlived = {
 #################
 # TURIAN TRAITS #
 #################
-
-btr_turian_militaristic = {
-	cost = 0 
-	opposites = {
-		"trait_nomadic"
-		"trait_deviants"
-		"trait_unruly"
-		"trait_weak"
-		"trait_strong"
-		"trait_very_strong"
-	}
-
-	initial = yes
-	randomized = no
-	modification = no
-	allowed_archetypes = { BIOLOGICAL }
-
-	modifier = {
-		army_damage_mult = 0.25
-		army_morale = 0.25
-		army_health = 0.35
-		
-		#ship_fire_rate_mult = 0.25  - to add to civic
-		#ship_armor_mult = 0.3 - to add to civic
-	}
-}
-
-btr_turian_patriotic = {
+btr_turian_trait_core = {
 	cost = 0
-	opposites = {
-		"trait_traditional"
-		"trait_quarrelsome"
-		"trait_decadent"
-		"trait_deviants"
-		"trait_unruly"
+	potential_crossbreeding_chance = 0.0
+	#opposites = { "trait_enduring" "trait_venerable" "trait_fleeting" "trait_slow_breeders" "trait_rapid_breeders" }
 
+	sorting_priority = 20
+	
+	randomized = no
+	modification = no
+	forced_happiness = no
+	immortal_leaders = no
+	
+	leader_age_min = 30
+	leader_age_max = 160
+
+	allowed_archetypes = { BIOLOGICAL }
+	ai_weight = {
+		weight = 0
 	}
+	modifier = {
+		leader_age = 50
+	}
+	# opposites = {
+	#	
+	#}
+
+	icon = "gfx/interface/icons/traits/btr_trait_turian_core.dds"
+
+}
+
+btr_turian_trait_team_player = {
+	cost = 0 
 
 	initial = yes
 	randomized = no
@@ -214,10 +208,50 @@ btr_turian_patriotic = {
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		pop_happiness = 0.2
-		pop_resettlement_cost_mult = 0.3
+		pop_demotion_time_mult = -0.25
+		country_command_limit_add = 10
+		planet_amenities_mult = -0.10
+		country_consumer_goods_produces_mult = -0.1
+		# Trade Value from Jobs missing
+		country_energy_produces_mult = -0.10
 	}
+
+	icon = "gfx/interface/icons/traits/Natural_Team_Player.dds"
 }
+
+btr_turian_trait_op_discipline = {
+	cost = 0
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		ship_fire_rate_mult = 0.1
+		ship_disengage_chance_mult = -0.05
+		ship_speed_mult = -0.05
+	}
+
+	icon = "gfx/interface/icons/traits/Operation_Discipline.dds"
+}
+
+
+btr_turian_trait_martial_nat = {
+	cost = 0
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		army_morale = 0.35
+	}
+
+	icon = "gfx/interface/icons/traits/Martial_Nature.dds"
+}
+
 
 #################
 # ELCOR  TRAITS #
@@ -315,14 +349,35 @@ btr_hanar_bureaucratic = {
 #################
 # HUMAN  TRAITS #
 #################
+btr_human_core = {
+	cost = 0 
+	potential_crossbreeding_chance = 0
 
-btr_human_multicultural = {
+	icon = "gfx/interface/icons/traits/trait_human_core.dds"
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
+
+	sorting_priority = 20
+	
+	leader_age_min = 24
+	leader_age_max = 40
+
+	ai_weight = {
+		weight = 0
+	}
+	modifier = {
+		leader_age = 40
+	}
+}
+
+btr_human_biodiversity = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = {
-		"trait_traditional"
-		"trait_docile"
-	}
+
+	icon = "gfx/interface/icons/traits/trait_biodiversity.dds"
 
 	initial = yes 
 	randomized = no
@@ -330,49 +385,44 @@ btr_human_multicultural = {
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		pop_happiness = 0.1
-		planet_jobs_unity_produces_mult = -0.1
-		pop_government_ethic_attraction = -0.15
-		
-
-	}
-	slave_cost = {
-		energy = 200
-	}
-
-}
-
-btr_human_flexible = {
-	cost = 0 
-	opposites = { 
-		"trait_very_strong"
-		"trait_adaptive"
-	}
-
-	initial = yes 
-	randomized = no
-	modification = no
-	allowed_archetypes = { BIOLOGICAL }
-
-	modifier = {
-		pop_environment_tolerance = 0.2
-		pop_growth_from_immigration = 0.15
-		army_damage_mult = 0.20
-		army_disengage_chance_mult = 0.25
-	}
-    
-	slave_cost = {
-		energy = 100
+		pop_environment_tolerance = 0.1
+		country_society_tech_research_speed = 0.1
+		planet_jobs_unity_produces_mult = -0.05
 	}
 }
 
-# Not added yet, still in the works.
-btr_human_scientists = {
+btr_human_frontier_spirit = {
 	cost = 0
+	potential_crossbreeding_chance = 0
+
+	icon = "gfx/interface/icons/traits/trait_spirit.dds"
+
+	initial = yes 
+	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		species_leader_exp_gain = 0.5
-		leader_skill_levels = 2 }
+		planet_colony_development_speed_mult = 0.25
+		pop_growth_speed = 0.05
+	}
+}
+
+btr_human_rugged_ind = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+
+	icon = "gfx/interface/icons/traits/trait_individualist.dds"
+
+	initial = yes 
+	randomized = no
+	modification = no
+	allowed_archetypes = { BIOLOGICAL }
+
+	modifier = {
+		pop_government_ethic_attraction = -0.1
+		pop_amenities_usage_mult = 0.1
+	}
 }
 
 #################
@@ -465,48 +515,71 @@ btr_batarian_superiority = {
 ###############
 # GETH TRAITS #
 ###############
-
-btr_geth_neural_network = {
+btr_geth_trait_core = {
 	cost = 0
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = { MACHINE }
+
+	icon = "gfx/interface/icons/traits/trait_geth_core.dds"
+}
+
+btr_geth_trait_linked_consci = {
+	cost = 0
+
+	icon = "gfx/interface/icons/traits/trait_linked_consciousness.dds"
+
 	opposites = {
 		"trait_robot_learning_algorithms"
 		"trait_robot_propaganda_machines"
 	}
 
-	allowed_archetypes = {
-		MACHINE
-	}
+	allowed_archetypes = { MACHINE }
 	initial = yes
 	randomized = no
 	modification = no
 
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.20
-		species_leader_exp_gain = 0.25
+		pop_resettlement_cost_mult = 0.5
+		planet_colony_development_speed_mult = -0.6
 	}
 }
 
-btr_geth_mobile_platforms = {
+btr_geth_trait_purpose_built_models = {
 	cost = 0
-	opposites = {
-		"trait_robot_double_jointed"
-		"trait_robot_bulky"
-		"trait_robot_mass_produced"
-	}
+	
+	icon = "gfx/interface/icons/traits/trait_purpose_built.dds"
 
+	
+	allowed_archetypes = { MACHINE }
 	initial = yes
 	randomized = no
 	modification = no
 
-	allowed_archetypes = {
-		MACHINE
-	}
 	modifier = {
-		army_damage_mult = 0.2
-		pop_housing_usage_mult = -0.2
-		pop_assembly_speed = 0.2
+		planet_jobs_produces_mult = 0.05
+		armies_cost_mult = 0.25
+		pop_assembly_speed = 0.05
 	}
+	
+}
 
+btr_geth_trait_deontological_primacy = {
+	cost = 0
+
+	icon = "gfx/interface/icons/traits/trait_deontological_primacy.dds"
+	
+	allowed_archetypes = { MACHINE }
+	initial = yes
+	randomized = no
+	modification = no
+
+	modifier = {
+		army_collateral_damage_mult = 1
+		country_unity_produces_mult = 0.05
+
+	}
 }
 
 #################################
@@ -718,8 +791,11 @@ btr_forayans_caste_system = {
 # YAHG  TRAITS #
 ################
 
-btr_yahg_physique = {
+btr_yahg_trait_core = {
 	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_core.dds"
+
+	#Opposites TBD
 	opposites = {
 		"trait_resilient"
 		"trait_strong"
@@ -729,19 +805,26 @@ btr_yahg_physique = {
 	initial = yes
 	randomized = no
 	modification = no
+
+	immortal_leaders = no
+	
+	leader_age_min = 30
+	leader_age_max = 100
+
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
 
 	modifier = {
-		army_damage_mult = 0.2
-		army_attack_health_mult = 0.15
-		army_defense_health_mult = 0.15
+		leader_age = 50
 	}
 }
 
-btr_yahg_keen_mind = {
+btr_yahg_trait_apex_pred = {
 	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_apex.dds"
+
+	#Opposites TBD
 	opposites = {
 		"trait_intelligent"
 		"trait_natural_physicists"
@@ -757,14 +840,69 @@ btr_yahg_keen_mind = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.25
-		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		intel_decryption_mult = 0.2
-		intel_encryption_mult = 0.2
+		pop_growth_speed = -0.15
+		planet_pops_organics_food_upkeep_mult = 0.15
+		pop_housing_usage_mult = 0.25
+		army_damage_mult = 0.66
+		army_morale = 0.66
 	}
 }
+
+
+btr_yahg_trait_truthsay = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_truth.dds"
+
+	#Opposites TBD
+	opposites = {
+		"trait_intelligent"
+		"trait_natural_physicists"
+		"trait_natural_engineers"
+		"trait_natural_sociologists"
+	}
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+
+	modifier = {
+		planet_jobs_society_research_produces_mult = 0.15 
+		empire_size_pops_mult= -0.20 
+		
+	}
+}
+
+btr_yahg_trait_cont_obsess = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_control.dds"
+
+	#Opposites TBD
+	opposites = {
+		"trait_intelligent"
+		"trait_natural_physicists"
+		"trait_natural_engineers"
+		"trait_natural_sociologists"
+	}
+
+	initial = yes
+	randomized = no
+	modification = no
+	allowed_archetypes = {
+		BIOLOGICAL
+	}
+
+	modifier = {
+		pop_resettlement_cost_mult = -0.75
+		planet_jobs_unity_produces_mult = 0.10 
+		planet_researchers_produces_mult = 0.10
+		
+	}
+}
+
+
 
 #################
 # RACHNI TRAITS #

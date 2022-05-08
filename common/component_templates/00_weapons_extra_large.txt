@@ -20,7 +20,6 @@ weapon_component_template = {
 	projectile_gfx = "particle_lance"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "ENERGY_LANCE_2"
 	resources = {
 		category = ship_components
@@ -34,7 +33,20 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 3
+		modifier = {
+			factor = 900
+			has_global_flag = prethoryn_invasion_happened
+			not = { has_global_flag = prethoryn_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
+		}
 	}
 }
 
@@ -69,7 +81,20 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 3
+		modifier = {
+			factor = 900
+			has_global_flag = prethoryn_invasion_happened
+			not = { has_global_flag = prethoryn_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
+		}
 	}
 }
 
@@ -95,7 +120,6 @@ weapon_component_template = {
 	projectile_gfx = "arc_emitter"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "ARC_EMITTER_2"
 	resources = {
 		category = ship_components
@@ -110,6 +134,14 @@ weapon_component_template = {
 
 	ai_weight = {
 		weight = 1
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
+		}
 	}
 }
 
@@ -131,7 +163,6 @@ weapon_component_template = {
 	projectile_gfx = "focused_arc_emitter"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	resources = {
 		category = ship_components
 		cost = {
@@ -144,7 +175,15 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 2
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
+		}
 	}
 }
 
@@ -171,13 +210,11 @@ weapon_component_template = {
 	projectile_gfx = "kinetic_artillery"
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "MASS_ACCELERATOR_2"
 	resources = {
 		category = ship_components
 		cost = {
 			alloys = @xl_t5_cost
-			volatile_motes = @xl_t5_rare
 		}
 		upkeep = {
 			energy = @xl_t5_upkeep_energy
@@ -186,7 +223,29 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 500
+		modifier = {
+			factor = 30
+			has_global_flag = extradimensional_invasion_happened
+			not = { has_global_flag = extradimensional_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			has_global_flag = prethoryn_invasion_happened
+			or = {
+				not = { has_global_flag = extradimensional_invasion_happened }
+				has_global_flag = extradimensional_invasion_defeated
+			}
+			not = { has_global_flag = prethoryn_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
+		}
 	}
 }
 
@@ -209,7 +268,6 @@ weapon_component_template = {
 	projectile_gfx = "adv_kinetic_artillery"
 	tags = { weapon_type_kinetic }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	resources = {
 		category = ship_components
 		cost = {
@@ -222,7 +280,29 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 550
+		modifier = {
+			factor = 30
+			has_global_flag = extradimensional_invasion_happened
+			not = { has_global_flag = extradimensional_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			or = {
+				not = { has_global_flag = extradimensional_invasion_happened }
+				has_global_flag = extradimensional_invasion_defeated
+			}
+			has_global_flag = prethoryn_invasion_happened
+			not = { has_global_flag = prethoryn_invasion_defeated }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
+		}
 	}
 }
 
@@ -263,6 +343,19 @@ weapon_component_template = {
 
 	ai_weight = {
 		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = alloys value <= 0 }
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
+		}
 	}
 }
 
@@ -290,7 +383,6 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @titanic_t6_cost
-			rare_crystals = @titanic_t6_rare
 		}
 		upkeep = {
 			energy = @titanic_t6_upkeep_energy
@@ -300,6 +392,11 @@ weapon_component_template = {
 
 	ai_weight = {
 		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			has_monthly_income = { resource = alloys value <= 0 }
+		}
 	}
 }
 
@@ -336,5 +433,10 @@ weapon_component_template = {
 
 	ai_weight = {
 		weight = 1
+		modifier = {
+			factor = 0.0
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 100 }
+		}
 	}
 }

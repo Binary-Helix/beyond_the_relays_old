@@ -1,0 +1,177 @@
+# ###################################
+# ### BTR - GETH CONSENSUS EVENT- ###
+# ###################################
+
+namespace = btr_getcon
+
+# Geth civic change event
+country_event = {
+	id = btr_getcon.01
+	title = btr_getcon.01.name
+	desc = btr_getcon.01.desc
+
+	fire_only_once = yes
+
+	trigger = {
+		has_origin = btr_origin_getcon
+		years_passed > 40
+	}
+
+	immediate = {  
+		force_remove_civic = btr_civic_getcon_nebulous
+		force_add_civic = btr_civic_getcon_nebulous_late
+	}
+
+	option = {
+		name = btr_getcon.01.a
+	}
+}
+
+planet_event = {
+	id = btr_getcon.02
+	title = btr_getcon.02.name
+	desc = btr_getcon.02.desc
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = btr_civic_getcon_remnant_code
+		}
+		planet_devastation >= 10
+		planet_devastation < 25
+		NOT = { has_modifier = btr_getcon_deviancy_1 }
+		NOT = { has_modifier = btr_getcon_deviancy_2 }
+		NOT = { has_modifier = btr_getcon_deviancy_3 }
+		NOT = { has_modifier = btr_getcon_deviancy_4 }
+	}
+	
+	immediate = {
+		add_modifier = { modifier = btr_getcon_deviancy_1 }
+	}
+	option = {
+		name = btr_getcon.02.a
+	}
+}
+
+planet_event = {
+	id = btr_getcon.03
+	title = btr_getcon.03.name
+	desc = btr_getcon.03.desc
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = btr_civic_getcon_remnant_code
+		}
+		NOT = { has_modifier = btr_getcon_deviancy_2 }
+		NOT = { has_modifier = btr_getcon_deviancy_3 }
+		NOT = { has_modifier = btr_getcon_deviancy_4 }
+		planet_devastation >= 25
+		planet_devastation < 50
+	}
+	
+	immediate = {
+		remove_modifier = btr_getcon_deviancy_1
+		add_modifier = { modifier = btr_getcon_deviancy_2 }
+	}
+	option = {
+		name = btr_getcon.03.a
+	}
+}
+
+planet_event = {
+	id = btr_getcon.04
+	title = btr_getcon.04.name
+	desc = btr_getcon.04.desc
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = btr_civic_getcon_remnant_code
+		}
+		NOT = { has_modifier = btr_getcon_deviancy_3 }
+		NOT = { has_modifier = btr_getcon_deviancy_4 }
+		planet_devastation >= 50
+		planet_devastation < 75
+	}
+	
+	immediate = {
+		remove_modifier = btr_getcon_deviancy_1
+		remove_modifier = btr_getcon_deviancy_2
+		add_modifier = { modifier = btr_getcon_deviancy_3 }
+	}
+	option = {
+		name = btr_getcon.04.a
+	}
+}
+
+planet_event = {
+	id = btr_getcon.05
+	title = btr_getcon.05.name
+	desc = btr_getcon.05.desc
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = btr_civic_getcon_remnant_code
+		}
+		NOT = { has_modifier = btr_getcon_deviancy_4 }
+		planet_devastation >= 75
+		planet_devastation <= 100
+	}
+	
+	immediate = {
+		remove_modifier = btr_getcon_deviancy_1
+		remove_modifier = btr_getcon_deviancy_2
+		remove_modifier = btr_getcon_deviancy_3
+		add_modifier = { modifier = btr_getcon_deviancy_4 }
+	}
+	option = {
+		name = btr_getcon.05.a
+	}
+}
+
+planet_event = {
+	id = btr_getcon.06
+	title = btr_getcon.06.name
+	desc = btr_getcon.06.desc
+	mean_time_to_happen = {
+		years = 1
+	}
+
+	trigger = {
+		exists = owner
+		owner = {
+			has_valid_civic = btr_civic_getcon_remnant_code
+		}
+		OR = {
+			has_modifier = btr_getcon_deviancy_1
+			has_modifier = btr_getcon_deviancy_2
+			has_modifier = btr_getcon_deviancy_3
+			has_modifier = btr_getcon_deviancy_4
+		}
+		planet_devastation < 10
+	}
+	
+	immediate = {
+		remove_modifier = btr_getcon_deviancy_1
+		remove_modifier = btr_getcon_deviancy_2
+		remove_modifier = btr_getcon_deviancy_3
+		remove_modifier = btr_getcon_deviancy_4
+	}
+	option = {
+		name = btr_getcon.06.a
+	}
+}

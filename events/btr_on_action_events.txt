@@ -26,9 +26,75 @@ country_event = {
 	}
 }
 
-# Asari Leaders get the asari leader trait
+# Species leaders get the respective leader trait
 country_event = {
 	id = btr_asrep.03
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		always = yes
+	}
+
+	immediate = {
+		if = {
+			limit = { from = { species = { has_trait = mec_asari_trait_core } } }
+			from = {
+				add_trait = btr_leader_trait_asari
+				add_skill = 2
+			}
+		}
+		else_if = {
+			limit = { 
+				from = { 
+					species = { has_trait = btr_turian_trait_core }
+					OR = {
+						leader_class = general
+						leader_class = admiral
+					}
+				} 
+			}
+			from = {
+				add_trait = btr_leader_trait_extensive_training
+			}
+		}
+		else_if = {
+			limit = { 
+				from = { 
+					species = { has_trait = btr_geth_trait_core }
+				} 
+			}
+			from = {
+				add_trait = btr_leader_trait_internal_consensus
+			}
+		}
+		else_if = {
+			limit = { 
+				from = {
+					species = { has_trait = btr_human_core }
+				}
+			}
+			from = {
+				add_trait = btr_leader_trait_twice_bright
+			} 
+		}
+		else_if = {
+			limit = { 
+				from = {
+					species = { has_trait = btr_yahg_trait_core }
+				}
+			}
+			from = {
+				add_trait = btr_leader_trait_hype_perecpt
+			} 
+		}
+
+	}
+}
+
+# Asari Generals get the Commando trait
+country_event = {
+	id = btr_asrep.04
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -40,8 +106,10 @@ country_event = {
 
 	immediate = {
 		from = {
-			add_trait = btr_leader_trait_asari
-			add_skill = 2
+			if = {
+				limit = { leader_class = general }
+				add_trait = btr_leader_trait_commando
+			}
 		}
 	}
 }

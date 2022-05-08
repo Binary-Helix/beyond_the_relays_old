@@ -19,7 +19,11 @@ utility_component_template = {
 	upgrades_to = "REACTOR_BOOSTER_2"
 
 	ai_weight = {
-		weight = 1
+		weight = 3
+		modifier = {
+			factor = 100
+			not = { has_technology = tech_fusion_power }
+		}
 	}
 }
 
@@ -41,7 +45,7 @@ utility_component_template = {
 	upgrades_to = "REACTOR_BOOSTER_3"
 
 	ai_weight = {
-		weight = 3
+		weight = 5
 	}
 }
 
@@ -62,7 +66,7 @@ utility_component_template = {
 	component_set = "REACTOR_BOOSTER_3"
 
 	ai_weight = {
-		weight = 5
+		weight = 15
 	}
 }
 
@@ -96,12 +100,12 @@ utility_component_template = {
 			factor = 2.0
 			is_preferred_weapons = weapon_type_energy
 			is_country_type = default
-			has_monthly_income = { resource = exotic_gases value > 0 }
+			has_monthly_income = { resource = helium_3 value > 0 }
 		}
 
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			no_resource_for_component = { RESOURCE = helium_3 }
 		}
 	}
 }
@@ -165,11 +169,7 @@ utility_component_template = {
 	component_set = "FIRE_CONTROL_1"
 
 	ai_weight = {
-		weight = 10
-		modifier = {
-			factor = 3.0
-			is_preferred_weapons = weapon_type_kinetic
-		}
+		weight = 100
 	}
 }
 

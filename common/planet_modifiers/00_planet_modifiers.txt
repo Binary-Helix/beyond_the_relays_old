@@ -4,17 +4,17 @@ pm_null = {
 	is_null = yes
 	
 	spawn_chance = {
-		value = 275
+		base = 0
 		modifier = {
-			factor = 3
+			factor = 0 #3
 			num_modifiers > 2
 		}		
 		modifier = {
-			factor = 3
+			factor = 0 #3
 			num_modifiers > 1
 		}
 		modifier = {
-			factor = 3
+			factor = 0 #3
 			num_modifiers > 0
 		}
 	}
@@ -23,31 +23,31 @@ pm_null = {
 pm_hazardous_weather = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}			
 		modifier = {
-			add = 0		# Gaia Worlds are Paradise Planets, hence no Hazardous Weather conditions.
+			add =  0 #0		# Gaia Worlds are Paradise Planets, hence no Hazardous Weather conditions.
 			is_planet_class = "pc_gaia"
 		}		
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = pc_relic
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_hazardous_weather"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -58,44 +58,44 @@ pm_hazardous_weather = {
 pm_dangerous_wildlife = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_lush"
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_dangerous_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_docile_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_burrowing_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_titanic_life"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -106,40 +106,40 @@ pm_dangerous_wildlife = {
 pm_weak_magnetic_field = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}			
 		modifier = {
-			add = 0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
+			add =  0 #0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
 			is_planet_class = "pc_gaia"
 		}		
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = pc_relic
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_low_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_weak_magnetic_field"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_strong_magnetic_field"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -150,40 +150,40 @@ pm_weak_magnetic_field = {
 pm_strong_magnetic_field = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}			
 		modifier = {
-			add = 0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
+			add =  0 #0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
 			is_planet_class = "pc_gaia"
 		}		
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = pc_relic
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_strong_magnetic_field"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_weak_magnetic_field"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -194,32 +194,32 @@ pm_strong_magnetic_field = {
 pm_unstable_tectonics = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 1
+			add =  0 #1
 			is_planet_class = pc_relic
 		}				
 		modifier = {
-			factor = 4
+			factor = 0 #4
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_unstable_tectonics"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -230,7 +230,7 @@ pm_unstable_tectonics = {
 pm_tidal_locked = {
 	spawn_chance = {
 		modifier = {
-			add = 0
+			add =  0 #0
 		}
 	}
 	
@@ -240,19 +240,19 @@ pm_tidal_locked = {
 pm_chthonian_planet = {
 	spawn_chance = {
 		modifier = {
-			add = 30
+			add =  0 #30
 			is_planet_class = "pc_molten"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_chthonian_planet"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_poor"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -263,32 +263,32 @@ pm_chthonian_planet = {
 pm_asteroid_impacts = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}			
 		modifier = {
-			add = 0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
+			add =  0 #0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
 			is_planet_class = "pc_gaia"
 		}				
 		modifier = {
-			add = 1
+			add =  0 #1
 			is_planet_class = pc_relic
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_asteroid_impacts"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -299,27 +299,27 @@ pm_asteroid_impacts = {
 pm_extensive_moon_system = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_gas_giant"
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			num_moons > 1
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			num_moons > 2
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_extensive_moon_system"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_moon = no
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -330,7 +330,7 @@ pm_extensive_moon_system = {
 pm_carbon_world = {
 	spawn_chance = {
 		modifier = {
-			factor = 4
+			factor = 0 #4
 			has_planet_modifier = "pm_high_gravity"
 			OR = {
 				is_planet_class = pc_barren
@@ -338,23 +338,23 @@ pm_carbon_world = {
 			}
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_barren"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_barren_cold"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_carbon_world"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_poor"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -365,32 +365,32 @@ pm_carbon_world = {
 pm_wild_storms = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}			
 		modifier = {
-			add = 0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
+			add =  0 #0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
 			is_planet_class = "pc_gaia"
 		}					
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = pc_relic
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_wild_storms"
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -401,27 +401,27 @@ pm_wild_storms = {
 pm_low_gravity = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}			
 		modifier = {
-			add = 0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
+			add =  0 #0 	# Gaia Worlds are Paradise Planets, hence there should be no negative modifiers.
 			is_planet_class = "pc_gaia"
 		}			
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = pc_relic
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			planet_size < 14
 			OR = {
 				is_wet = yes
@@ -431,7 +431,7 @@ pm_low_gravity = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			planet_size < 12
 			OR = {
 				is_wet = yes
@@ -441,7 +441,7 @@ pm_low_gravity = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			planet_size < 7
 			OR = {
 				is_wet = yes
@@ -451,7 +451,7 @@ pm_low_gravity = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0 #0.5
 			planet_size > 19
 			OR = {
 				is_wet = yes
@@ -461,15 +461,15 @@ pm_low_gravity = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_low_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			OR = {
 				is_planet_class = pc_highgrav_arid
 				is_planet_class = pc_highgrav_barren
@@ -483,7 +483,7 @@ pm_low_gravity = {
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -575,48 +575,48 @@ pm_low_gravity = {
 pm_mineral_rich = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_gaia"
 		}				
 		modifier = {
-			add = 5
+			add =  0 #5
 			is_planet_class = "pc_relic"
 		}
 		modifier = {
-			add = 1
+			add =  0 #1
 			is_planet_class = "pc_nuked"
 		}
 		modifier = {
-			factor = 4
+			factor = 0 #4
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_rich"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_poor"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_ultra_rich"
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -627,48 +627,48 @@ pm_mineral_rich = {
 pm_ultra_rich = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 1
+			add =  0 #1
 			is_planet_class = "pc_gaia"
 		}				
 		modifier = {
-			add = 1
+			add =  0 #1
 			is_planet_class = "pc_relic"
 		}
 		modifier = {
-			add = 1
+			add =  0 #1
 			is_planet_class = "pc_nuked"
 		}
 		modifier = {
-			factor = 8
+			factor = 0 #8
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_rich"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_poor"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_ultra_rich"
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -679,72 +679,72 @@ pm_ultra_rich = {
 pm_mineral_poor = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_molten"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_barren"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_barren_cold"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_toxic"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_frozen"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_relic"
 		}
 		modifier = {
-			factor = 4
+			factor = 0 #4
 			has_planet_modifier = "pm_low_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_rich"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_mineral_poor"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_ultra_rich"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_carbon_world"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_chthonian_planet"
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -755,56 +755,56 @@ pm_mineral_poor = {
 pm_titanic_life = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_relic"
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_lush"
 		}
 		modifier = {
-			factor = 8
+			factor = 0 #8
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0 #0.5
 			has_planet_modifier = "pm_low_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_titanic_life"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_dangerous_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_docile_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_burrowing_wildlife"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -815,64 +815,64 @@ pm_titanic_life = {
 pm_asteroid_belt = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_molten"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_barren"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_barren_cold"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_toxic"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_frozen"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_relic"
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_low_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_asteroid_belt"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_moon = yes
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			is_moon = yes
 		}
 
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -883,31 +883,31 @@ pm_asteroid_belt = {
 pm_natural_beauty = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_relic"
 		}				
 		modifier = {
-			add = 30
+			add =  0 #30
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_natural_beauty"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -918,28 +918,28 @@ pm_natural_beauty = {
 pm_atmospheric_aphrodisiac = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_atmospheric_aphrodisiac"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -950,28 +950,28 @@ pm_atmospheric_aphrodisiac = {
 pm_atmospheric_hallucinogen = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_atmospheric_hallucinogen"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -982,15 +982,15 @@ pm_atmospheric_hallucinogen = {
 pm_lush = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 30
+			add =  0 #30
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_low_gravity"
 			OR = {
 				is_planet_class = pc_tropical
@@ -1000,15 +1000,15 @@ pm_lush = {
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_bleak"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_lush"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -1019,32 +1019,32 @@ pm_lush = {
 pm_bleak = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_planet_class = "pc_relic"
 		}				
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_bleak"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_lush"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -1055,12 +1055,12 @@ pm_bleak = {
 pm_irradiated = {
 	spawn_chance = {
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_irradiated"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -1111,44 +1111,44 @@ pm_ancient_weapon = {
 pm_docile_wildlife = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_wet = yes
 		}
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_cold = yes
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_lush"
 		}
 		modifier = {
-			factor = 2
+			factor = 0 #2
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_dangerous_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_docile_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_burrowing_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_titanic_life"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}
@@ -1159,44 +1159,44 @@ pm_docile_wildlife = {
 pm_burrowing_wildlife = {
 	spawn_chance = {
 		modifier = {
-			add = 10
+			add =  0 #10
 			is_dry = yes
 		}
 		modifier = {
-			add = 5
+			add =  0 #5
 			is_wet = yes
 		}
 		modifier = {
-			add = 15
+			add =  0 #15
 			is_cold = yes
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_lush"
 		}
 		modifier = {
-			factor = 1
+			factor = 0 #1
 			has_planet_modifier = "pm_high_gravity"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_dangerous_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_dangerous_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_burrowing_wildlife"
 		}
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			has_planet_modifier = "pm_titanic_life"
 		}
 		
 		modifier = {
-			factor = 0
+			factor = 0 #0
 			num_modifiers > 1
 		}
 	}

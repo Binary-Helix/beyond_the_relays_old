@@ -1,6 +1,7 @@
+### ASARI REPUBLICS
 # Non-asari Thessian graduate
 btr_leader_trait_thessian_grad = {
-	cost = 2
+	cost = 3
 	modification = no
 	icon = "gfx/interface/icons/mec_asari/mec_asari_civic_thessia.dds"
 	modifier = {
@@ -31,4 +32,103 @@ btr_leader_trait_asari = {
 	ai_weight = {
 		weight = 100
 	}
+}
+
+# Asari commando trait
+btr_leader_trait_commando = {
+	cost = 3
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_military_theory.dds"
+	modifier = {
+		army_disengage_chance_mult = 1
+	}
+	
+	leader_trait = { general }
+	leader_class = { general }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+### TURIAN HIERARCHY
+# Turian sticy leader trait (General/Admiral)
+btr_leader_trait_extensive_training = {
+	cost = 3
+	modification = no
+	icon = "gfx/interface/icons/traits/leader_traits/Extensive_Training.dds"
+	modifier = {
+		leader_skill_levels = 2
+		species_leader_exp_gain = 0.15
+	}
+
+	leader_trait = { admiral general }
+	leader_class = { admiral general }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+### GETH CONSENSUS
+# Geth consensus sticky leader trait (All)
+btr_leader_trait_internal_consensus = {
+	cost = 3
+	modification = no
+
+	icon = "gfx/interface/icons/traits/geth_trait.dds"
+	modifier = {
+		species_leader_exp_gain = -0.25
+		leader_skill_levels = 3
+		leader_cost_empire_size_mult = -0.5
+	}
+
+	leader_trait = { admiral general scientist governor ruler }
+	leader_class = { admiral general scientist governor ruler }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+### SYSTEM ALLIANCE
+# System alliance sticky leader trait (All)
+btr_leader_trait_twice_bright = {
+	cost = 3
+	modification = no
+
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_military_theory.dds"
+	modifier = {
+		species_leader_exp_gain = 0.15
+		leader_skill_levels = 1
+	}
+
+	leader_trait = { admiral general scientist governor ruler }
+	leader_class = { admiral general scientist governor ruler }
+
+	ai_weight = {
+		weight = 100
+	}
+}
+
+
+### Parnack Regime
+
+# Yahg Leader Trait
+
+btr_leader_trait_hype_perecpt = {
+	cost = 3
+	modification = no
+	icon = "gfx/interface/icons/traits/trait_yahg_hypersense.dds"
+
+	leader_trait = { admiral general scientist governor ruler }
+	leader_class = { admiral general scientist governor ruler }
+
+	modifier = {
+		leader_skill_levels = +2
+		species_leader_exp_gain = 0.33
+		
+		
+	}
+
 }

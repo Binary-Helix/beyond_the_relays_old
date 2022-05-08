@@ -84,6 +84,7 @@ sys_parnitha_init = {
 				  		trait = btr_asari_trait_smooth_talk
 				  		trait = mec_asari_trait_sophisticated
 					  	trait = trait_asari_habitability_preference
+						trait = trait_psionic
 						  #ideal_planet_class = "pc_continental"
 					}
 				  }
@@ -92,9 +93,9 @@ sys_parnitha_init = {
 					name = "Asari Republics"
 					ship_prefix = "PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"
 					type = default
-					origin = "mec_asari_origin_thessia"
+					origin = btr_origin_asrep
 					ignore_initial_colony_error = yes
-					civics = { civic = "mec_asari_civic_thessia" civic = "civic_diplomatic_corps" }
+					civics = { civic = btr_civic_asrep_democracy civic = btr_civic_asrep_thes_dip_corp }
 					authority = auth_democratic
 					name_list = "mec_asari_names"
 					ethos = { ethic = "ethic_fanatic_xenophile" ethic = "ethic_egalitarian" }
@@ -142,6 +143,7 @@ sys_parnitha_init = {
 			generate_asr_thessia_capitol_buildings = yes
 			generate_asr_thessia_pops = yes
 			generate_asr_thessia_deposits = yes
+			create_archaeological_site = btr_site_prothean_beacon_asari
 			set_name = "Thessia"
 		}
 	}
@@ -1058,7 +1060,7 @@ sys_nahuala_init = {
         orbit_angle = 49
         size = 15
         has_ring = no
-		flags = { agessia_planet pd_ignore }
+		flags = { agessia_planet pd_mining_hab }
 		init_effect = {
 			add_deposit = d_palladium_5
 			add_deposit = d_minerals_5

@@ -1,0 +1,191 @@
+####################
+# ASARI REP CIVICS #
+####################
+btr_civic_asrep_thes_dip_corp ={
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_asrep_diplo_corps.dds"
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		envoys_add = 3
+		diplo_weight_mult = 0.33
+		diplo_weight_naval_mult = -0.1
+	}
+}
+
+btr_civic_asrep_democracy = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_asrep_democracy.dds"
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_war_exhaustion_mult = 0.1
+		empire_size_colonies_mult = -0.5
+	}
+}
+
+btr_civic_asrep_universities = {
+	icon = "gfx/interface/icons/governments/civics/civic_asrep_universities.dds"
+	potential = {
+		origin = {
+			value = btr_origin_asrep
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		diplo_weight_technology_mult = 0.1
+		# Unity from researchers
+		all_technology_research_speed = 0.05
+		empire_size_colonies_mult = -0.5
+	}
+}
+
+######################
+# TURIAN HIER CIVICS #
+######################
+btr_civic_turhie_honor ={
+	modification = no
+
+	icon = "gfx/interface/icons/traits/Turian_Honor.dds"
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.25
+		pop_government_ethic_attraction = 0.10
+	}
+}
+
+btr_civic_turhie_service ={
+	modification = no
+	icon = "gfx/interface/icons/traits/Universal_Service_small.dds"
+	potential = {
+		ethics = {
+			NOT = {
+				value = ethic_gestalt_consciousness
+			}
+		}
+		authority = {
+			NOT = {
+				value = auth_corporate
+			}
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_naval_cap_mult = 0.25
+		diplo_weight_naval_mult = 0.33
+	}
+}
+
+btr_civic_turhie_elkoss ={
+	potential = {
+		origin = {
+			value = btr_origin_turhie
+		}	
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_alloys_produces_mult = 0.15
+		starbase_shipyard_build_speed_mult = 0.33
+	}
+}
+
+##########################
+# SYSTEM ALLIANCE CIVICS #
+##########################
+
+btr_civic_sysall_colonial_government = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_colonial.dds"
+	potential = {
+		origin = {
+			value = btr_origin_sysall
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	modifier = {
+		country_starbase_influence_cost_mult = -0.2
+		planet_colony_development_speed_mult = 0.1
+	}
+}
+
+btr_civic_sysall_unfettered_ai = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/civic_ai.dds"
+	potential = {
+		origin = {
+			value = btr_origin_sysall
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	modifier = {
+		ship_evasion_mult = 0.10
+		ship_tracking_mult = 0.10
+		ship_fire_rate_mult = 0.10
+	}
+}
+
+btr_civic_sysall_hum_rising = {
+	icon = "gfx/interface/icons/governments/civics/civic_human_rising.dds"
+	potential = {
+		origin = {
+			value = btr_origin_sysall
+		}
+	}
+	random_weight = {
+		weight = 0
+	}
+	modifier = {
+		pop_ethic_xenophile_attraction_mult = 0.2
+		# Unity per embassy in diplomatic economy
+	}
+}
