@@ -1,7 +1,5 @@
-namespace = btr_game_start
-
 ### Faction initializer event
-country_event = {
+event = {
 	id = btr_game_start.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -10,7 +8,9 @@ country_event = {
 		### Asari Republics Faction Setup
 		if = {
 			limit = {
-				has_origin = btr_origin_asrep
+				from = {
+					has_government = gov_mec_asr
+				}
 			}
 			enable_faction_of_type = xenoist
 			break = yes
