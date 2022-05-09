@@ -1,5 +1,7 @@
+namespace = btr_game_start
+
 ### Faction initializer event
-event = {
+country_event = {
 	id = btr_game_start.1
 	hide_window = yes
 	is_triggered_only = yes
@@ -9,7 +11,7 @@ event = {
 		if = {
 			limit = {
 				from = {
-					has_government = gov_mec_asr
+					has_origin = btr_origin_asrep
 				}
 			}
 			enable_faction_of_type = xenoist
