@@ -148,9 +148,11 @@ country_event = {
 			limit = { has_origin = btr_origin_parnkreg }
 			give_technology = {
 				tech = btr_tech_parnkreg_reg_alpha
+				message = no
 			}
 			give_technology = {
 				tech = btr_tech_parnkreg_stand_arm
+				message = no
 			}
 			add_modifier = {
 				modifier = btr_parnkreg_empire_modifier
@@ -158,6 +160,7 @@ country_event = {
 			}
 			add_modifier = {
 				modifier = btr_parnkreg_highly_adaptable
+				days = -1
 			}
 		}
 		else_if = {
