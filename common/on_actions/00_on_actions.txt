@@ -2204,10 +2204,13 @@ on_leader_spawned = {
 		syndaw.1050 # Machine Intelligence ruler gets trait
 		distar.173 # New Leaders Get Brainslug Trait
 		clones.24 # New Leaders gain Clone Army Admiral traits
+		btr_asrep.03 # New Leaders gain Asari Trait
+		btr_asrep.04 # New Asari generals gain Commando trait
 	}
 	random_events = {
-		80 = 0
+		70 = 0
 		20 = utopia.2601
+		10 = btr_asrep.02 # New non-Asari leaders may gain university trait
 	}
 }
 
