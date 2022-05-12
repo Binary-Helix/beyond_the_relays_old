@@ -379,10 +379,11 @@ mec_asari_site_thessia_beacon = {
 
 
 #################################
-##### BTR Prothean Dig Site #####
+##### BTR Prothean Dig Sites #####
 #################################
-btr_site_prothean_beacon = {
-	desc = "btr_asari_site_prothean_beacon_intro"
+
+btr_site_prothean_beacon_asari = {
+	desc = "btr_asari_site_prothean_beacon_intro_asari_desc"
 	stages = 5
 	max_instances = 10
 	weight = {
@@ -419,6 +420,373 @@ btr_site_prothean_beacon = {
 		difficulty = 8
 		icon = GFX_archaeology_runes_prothean
 		event = btr_site.105
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_prothean_beacon_turian = {
+	desc = "btr_asari_site_prothean_beacon_intro_turian_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.106
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.107
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.108
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.109
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.110
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_prothean_beacon_elcor = {
+	desc = "btr_asari_site_prothean_beacon_intro_elcor_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.111
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.112
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.113
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.114
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.115
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_prothean_beacon_hanar = {
+	desc = "btr_asari_site_prothean_beacon_intro_hanar_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.116
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.117
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.118
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.119
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.120
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_prothean_beacon_human = {
+	desc = "btr_asari_site_prothean_beacon_intro_human_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.121
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.122
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.123
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.124
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.125
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_prothean_beacon_bats = {
+	desc = "btr_asari_site_prothean_beacon_intro_bats_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.126
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.127
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.128
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.129
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.130
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_prothean_beacon_vol = {
+	desc = "btr_asari_site_prothean_beacon_intro_vol_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.131
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.132
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.133
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.134
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.135
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_prothean_beacon_sal = {
+	desc = "btr_asari_site_prothean_beacon_intro_sal_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.136
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.137
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.138
+	}
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.139
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.140
+	}
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = all_random_events }
+		}
+	}
+}
+
+btr_site_collective_archeology = {
+	desc = "btr_collective_archeology_site_intro_desc"
+	stages = 5
+	max_instances = 10
+	weight = {
+		base = 0
+	}
+	visible = {
+		default_site_visible_trigger = yes
+	}
+	allow = {
+		is_ship_class = shipclass_science_ship
+		exists = leader
+	}
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.150
+	}
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.151
+	}
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.152
+	}
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.153
+	}
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_prothean
+		event = btr_site.154
 	}
 	on_roll_failed = {
 		from = {

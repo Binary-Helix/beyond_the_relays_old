@@ -27,7 +27,6 @@ weapon_component_template = {
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "MISSILE_2"
 	resources = {
 		category = ship_components
@@ -38,6 +37,9 @@ weapon_component_template = {
 			energy = @m_t1_upkeep_energy
 			alloys = @m_t1_upkeep_alloys
 		}
+	}
+	ai_weight = {
+		weight = 1.4
 	}
 }
 
@@ -57,7 +59,6 @@ weapon_component_template = {
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "MISSILE_3"
 	resources = {
 		category = ship_components
@@ -68,6 +69,9 @@ weapon_component_template = {
 			energy = @m_t2_upkeep_energy
 			alloys = @m_t2_upkeep_alloys
 		}
+	}
+	ai_weight = {
+		weight = 3
 	}
 }
 
@@ -85,7 +89,6 @@ weapon_component_template = {
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "MISSILE_4"
 	resources = {
 		category = ship_components
@@ -96,6 +99,9 @@ weapon_component_template = {
 			energy = @m_t3_upkeep_energy
 			alloys = @m_t3_upkeep_alloys
 		}
+	}
+	ai_weight = {
+		weight = 7
 	}
 }
 
@@ -113,7 +119,6 @@ weapon_component_template = {
 	projectile_gfx = "small_missile"
 	tags = { weapon_type_explosive }
 	ai_tags = { weapon_role_artillery }
-	ai_tag_weight = 0
 	upgrades_to = "MISSILE_5"
 	resources = {
 		category = ship_components
@@ -127,10 +132,14 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 12
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
 		}
 	}
 }
@@ -162,10 +171,14 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
+		weight = 15
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = {
+				resource = alloys
+				value < 10
+			}
 		}
 	}
 }
@@ -200,6 +213,9 @@ weapon_component_template = {
 			alloys = @m_t3_upkeep_alloys
 		}
 	}
+	ai_weight = {
+		weight = 0
+	}
 }
 
 ### Advanced Swarmer Missile Launcher
@@ -229,11 +245,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
-		weight = 1
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
-		}
+		weight = 0
 	}
 }
 
@@ -300,7 +312,8 @@ weapon_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 100 }
 		}
 	}
 }
@@ -335,7 +348,8 @@ weapon_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = volatile_motes }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 100 }
 		}
 	}
 }

@@ -559,15 +559,6 @@ btr_geth_trait_core = {
 	allowed_archetypes = { MACHINE }
 
 	icon = "gfx/interface/icons/traits/trait_geth_core.dds"
-
-	triggered_pop_modifier = { 
-		potential = {
-			owner = { has_valid_civic = btr_civic_getcon_remnant_code }
-			exists = planet
-			planet = { is_artificial = yes }
-		}
-		pop_assembly_speed = 0.05
-	}
 }
 
 btr_geth_trait_linked_consci = {
@@ -604,9 +595,10 @@ btr_geth_trait_purpose_built_models = {
 
 	modifier = {
 		planet_jobs_produces_mult = 0.05
-		army_damage_mult = 0.4
 		armies_cost_mult = 0.25
+		pop_assembly_speed = 0.05
 	}
+	
 }
 
 btr_geth_trait_deontological_primacy = {
@@ -837,6 +829,7 @@ btr_forayans_caste_system = {
 
 btr_yahg_trait_core = {
 	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_core.dds"
 
 	#Opposites TBD
 	opposites = {
@@ -865,6 +858,7 @@ btr_yahg_trait_core = {
 
 btr_yahg_trait_apex_pred = {
 	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_apex.dds"
 
 	#Opposites TBD
 	opposites = {
@@ -893,6 +887,7 @@ btr_yahg_trait_apex_pred = {
 
 btr_yahg_trait_truthsay = {
 	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_truth.dds"
 
 	#Opposites TBD
 	opposites = {
@@ -918,6 +913,7 @@ btr_yahg_trait_truthsay = {
 
 btr_yahg_trait_cont_obsess = {
 	cost = 0
+	icon = "gfx/interface/icons/traits/trait_yahg_control.dds"
 
 	#Opposites TBD
 	opposites = {

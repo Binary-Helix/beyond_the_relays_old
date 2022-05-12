@@ -36,6 +36,12 @@ building_imperial_palace = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		upkeep = {
 			energy = @b4_upkeep
 		}
@@ -64,6 +70,17 @@ building_imperial_palace = {
 		modifier = {
 			planet_housing_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	#Regular, Non-Warrior Culture
@@ -339,8 +356,25 @@ building_senate_building = {
 	prerequisites = {
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		upkeep = {
 			energy = @b4_upkeep
 		}
@@ -369,6 +403,17 @@ building_senate_building = {
 		modifier = {
 			planet_housing_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	#Regular
@@ -595,8 +640,31 @@ building_grand_boardroom = {
 	prerequisites = {
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
+
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		upkeep = {
 			energy = @b4_upkeep
 		}
@@ -625,6 +693,17 @@ building_grand_boardroom = {
 		modifier = {
 			planet_housing_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	#Megacorp
@@ -744,6 +823,12 @@ building_grand_processing_nexus = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		upkeep = {
 			energy = @b4_upkeep
 		}
@@ -772,6 +857,26 @@ building_grand_processing_nexus = {
 		modifier = {
 			planet_housing_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	#Machine
@@ -833,6 +938,12 @@ building_prime_synaptic_warren = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		upkeep = {
 			energy = @b4_upkeep
 		}
@@ -861,6 +972,17 @@ building_prime_synaptic_warren = {
 		modifier = {
 			planet_housing_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	#Machine
@@ -921,6 +1043,12 @@ building_megaflora_synaptic_warren = {
 	}
 
 	resources = {
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		category = planet_buildings
 		upkeep = {
 			energy = @b4_upkeep
@@ -950,6 +1078,17 @@ building_megaflora_synaptic_warren = {
 		modifier = {
 			planet_housing_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	#Machine
@@ -1016,6 +1155,12 @@ building_inquisition_hall = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -1030,6 +1175,17 @@ building_inquisition_hall = {
 
 	triggered_desc = {
 		text = job_inquisitor_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	show_tech_unlock_if = {
@@ -1075,6 +1231,12 @@ building_inquisition_fortress = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			minerals = @b2_minerals
 			#volatile_motes = @b2_rare_cost
@@ -1096,6 +1258,17 @@ building_inquisition_fortress = {
 	triggered_desc = {
 		text = job_inquisitor_effect_desc
 	} 
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
+	}
 }
 
 
@@ -1169,6 +1342,12 @@ building_rad_bloom_terraformer = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			energy = 2000
 			#sr_rad_bloom = 500
@@ -1186,6 +1365,17 @@ building_rad_bloom_terraformer = {
 		}
 		pop_environment_tolerance = 0.25
 		pop_growth_speed = 0.05
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 	
 	triggered_planet_modifier = {
@@ -1216,6 +1406,12 @@ building_rad_bloom_terraformer_2 = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			energy = 2000
 			#sr_rad_bloom = 500
@@ -1224,6 +1420,17 @@ building_rad_bloom_terraformer_2 = {
 
 	triggered_desc = {
 		text = building_rad_bloom_terraformer_2_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 }
 
@@ -1256,6 +1463,12 @@ building_rad_bloom_terraformer_nuked = {
 
 	resources = {
 		category = planet_buildings
+		produces = {
+			trigger = { exists = owner 
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+			unity = 0.2
+		}
 		cost = {
 			energy = 2000
 			#sr_rad_bloom = 500
@@ -1264,6 +1477,17 @@ building_rad_bloom_terraformer_nuked = {
 
 	triggered_desc = {
 		text = building_rad_bloom_terraformer_2_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_technology = btr_tech_asrep_asari_arch}
+		}
+		modifier = {
+			planet_amenities_add = 1
+		}
+
 	}
 
 	on_built = {

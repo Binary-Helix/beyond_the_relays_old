@@ -154,6 +154,15 @@ utility_component_template = {
 	prerequisites = { "tech_shields_2" }
 	component_set = "SHIELD_2"
 	upgrades_to = "LARGE_SHIELD_3"
+	ai_weight = {
+		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+	}
 }
 
 # Shields
@@ -230,6 +239,15 @@ utility_component_template = {
 	prerequisites = { "tech_shields_3" }
 	component_set = "SHIELD_3"
 	upgrades_to = "LARGE_SHIELD_4"
+	ai_weight = {
+		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+	}
 }
 
 # Advanced Shields
@@ -261,7 +279,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -294,7 +313,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -326,8 +346,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -361,7 +389,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -394,7 +423,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -426,8 +456,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = exotic_gases }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -464,7 +502,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -495,8 +534,9 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -527,8 +567,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
+			factor = 0
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -564,7 +612,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -596,7 +645,8 @@ utility_component_template = {
 		weight = 1
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -627,8 +677,16 @@ utility_component_template = {
 	ai_weight = {
 		weight = 1
 		modifier = {
+			factor = 10000
+			or = {
+				has_technology = tech_crystal_armor_1
+				has_technology = tech_crystal_armor_2
+			}
+		}
+		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_zro }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }

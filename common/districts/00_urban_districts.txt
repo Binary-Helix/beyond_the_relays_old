@@ -1,5 +1,5 @@
 @base_cost = 150
-@city_cost = 300
+@city_cost = 150
 
 district_city = {
 	base_buildtime = 480
@@ -31,6 +31,7 @@ district_city = {
 	allow = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
+		str_city_district_allow = yes
 	}
 
 	conversion_ratio = 1
@@ -71,9 +72,7 @@ district_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_regular_empire = yes
-			}
+			str_enable_clerks = yes
 		}
 		modifier = {
 			job_clerk_add = 1
@@ -118,7 +117,22 @@ district_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			str_force_city_district = yes
+		}
+		modifier = {
+			job_starnet_spice_melange_farmer_add = 1
+			job_starnet_spice_melange_antifarmer_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_active_tradition = tr_prosperity_interstellar_franchising }
+			str_enable_clerks = yes 
 		}
 		modifier = {
 			job_clerk_add = 1
@@ -132,6 +146,124 @@ district_city = {
 		}
 		text = job_clerk_effect_desc
 	}
+	ai_resource_production = {
+		alloys = 10
+		trigger = {
+			free_housing < 25
+			num_pops > 15
+			free_building_slots = 0
+			nor = {
+				str_is_col_factory = yes #replaced because city is in tons of district sets
+				str_is_col_foundry = yes
+				str_is_col_industrial = yes
+			}
+			or = {
+				owner = {
+					used_naval_capacity_percent > 0.9
+					resource_stockpile_compare = {
+						resource = alloys
+						value > 1000
+					}
+					resource_income_compare = {
+						resource = alloys
+						value > 30
+					}
+				}
+				and = { is_capital = yes free_housing < 15 }
+			}
+		}
+	}
+	ai_resource_production = {
+		alloys = 30
+		trigger = {
+			str_force_city_district = yes
+		}
+	}
+
+	ai_resource_production = {
+		society_research = 50
+		trigger = {
+			str_force_city_district = yes
+		}
+	}
+
+
+	ai_resource_production = {
+		energy = 30
+		trigger = {
+			str_force_city_district = yes
+		}
+	}
+
+	ai_resource_production = {
+		alloys = 10
+		energy = 10
+		trigger = {
+			num_pops > 15
+			years_passed > 40
+			free_housing < 20
+			free_building_slots = 0
+			or = {
+				str_is_col_factory = yes
+				str_is_col_foundry = yes
+				str_is_col_industrial = yes
+			}
+			free_jobs > 0
+			owner = {
+				used_naval_capacity_percent > 0.9
+				resource_stockpile_compare = {
+					resource = alloys
+					value > 1000
+				}
+				resource_income_compare = {
+					resource = alloys
+					value > 30
+				}
+			}
+		}
+	}
+
+
+	#let's fake resource production to ensure construction
+#	ai_resource_production = {
+		#alloys = 1
+		#trigger = {
+			#free_building_slots = 0
+			#free_housing < 20
+			#free_jobs > 1
+			#num_pops > 15
+			#or = { has_planet_flag = str_good_habitability has_planet_flag = str_acceptable_habitability }
+			#owner = {
+				#has_country_flag = str_has_room_to_grow
+			#}
+		#}
+	#}
+	#ai_resource_production = {
+		#energy = 1
+		#trigger = {
+			#free_building_slots = 0
+			#free_housing < 10
+			#free_jobs > 1
+			#num_pops > 15
+			#or = { has_planet_flag = str_good_habitability has_planet_flag = str_acceptable_habitability }
+			#owner = {
+				#has_country_flag = str_has_room_to_grow
+			#}
+		#}
+	#}
+#	ai_resource_production = {
+		#minerals = 1
+		#trigger = {
+			#free_building_slots = 0
+			#free_housing < 20
+			#free_jobs > 1
+			#num_pops > 15
+			#or = { has_planet_flag = str_good_habitability has_planet_flag = str_acceptable_habitability }
+			#owner = {
+				#has_country_flag = str_has_room_to_grow
+			#}
+		#}
+	#}
 }
 
 district_hive = {
@@ -162,6 +294,7 @@ district_hive = {
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
+		str_city_district_allow = yes
 	}
 
 	conversion_ratio = 1
@@ -179,6 +312,20 @@ district_hive = {
 		}
 		upkeep = {
 			energy = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			str_force_city_district = yes
+		}
+		modifier = {
+			job_starnet_spice_melange_farmer_add = 1
+			job_starnet_spice_melange_antifarmer_add = -1
 		}
 	}
 
@@ -228,6 +375,61 @@ district_hive = {
 			planet_housing_add = 1
 		}
 	}
+
+	ai_resource_production = {
+		alloys = 10
+			trigger = {
+				 str_force_city_district = yes
+			}
+	}
+
+	ai_resource_production = {
+		energy = 10
+			trigger = {
+				str_force_city_district = yes
+			}
+	}
+
+	#let's fake resource production to ensure construction
+#	ai_resource_production = {
+		#alloys = 2
+		#trigger = {
+			#free_building_slots = 0
+			#free_housing < 20
+			#free_jobs > 1
+			#num_pops > 15
+			#or = { has_planet_flag = str_good_habitability has_planet_flag = str_acceptable_habitability }
+			#owner = {
+				#has_country_flag = str_has_room_to_grow
+			#}
+		#}
+	#}
+	#ai_resource_production = {
+		#energy = 2
+		#trigger = {
+			#free_building_slots = 0
+			#free_housing < 20
+			#free_jobs > 1
+			#num_pops > 15
+			#or = { has_planet_flag = str_good_habitability has_planet_flag = str_acceptable_habitability }
+			#owner = {
+				#has_country_flag = str_has_room_to_grow
+			#}
+		#}
+	#}
+	#ai_resource_production = {
+		#minerals = 2
+		#trigger = {
+			#free_building_slots = 0
+			#free_housing < 20
+			#free_jobs > 1
+			#num_pops > 15
+			#or = { has_planet_flag = str_good_habitability has_planet_flag = str_acceptable_habitability }
+			#owner = {
+				#has_country_flag = str_has_room_to_grow
+			#}
+		#}
+	#}
 }
 
 district_nexus = {
@@ -258,6 +460,7 @@ district_nexus = {
 
 	allow = {
 		NOT = { has_modifier = resort_colony }
+		str_nexus_district_allow = yes
 	}
 
 	conversion_ratio = 1
@@ -337,6 +540,7 @@ district_industrial = {
 	allow = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
+		str_industrial_district_allow = yes
 	}
 
 	conversion_ratio = 1
@@ -378,6 +582,21 @@ district_industrial = {
 			planet_max_buildings_add = 0.34
 		}
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_ai = yes
+			}
+			str_force_district_industrial = yes
+		}
+		modifier = {
+			job_starnet_spice_melange_farmer_add = 1
+			job_starnet_spice_melange_antifarmer_add = -1
+		}
+	}
+
 
 	triggered_planet_modifier = {
 		potential = {
@@ -729,6 +948,39 @@ district_industrial = {
 		}
 		text = job_maintenance_drone_effect_desc
 	}
+
+	ai_resource_production = {
+		alloys = 3
+		trigger = {
+			planet = { str_is_col_factory = no } #replaced because industrial is in tons of district sets
+		}
+	}
+	ai_resource_production = {
+		alloys = 5
+		trigger = {
+			planet = { str_is_col_foundry = yes }
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 3
+		trigger = {
+			planet = { str_is_col_foundry = no }
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+	}
+
+	ai_resource_production = {
+		consumer_goods = 5
+		trigger = {
+			planet = { str_is_col_factory = yes }
+			owner = {
+				country_uses_consumer_goods = yes
+			}
+		}
+	}
 }
 
 district_srw_commercial = {
@@ -832,7 +1084,7 @@ district_srw_commercial = {
 	triggered_desc = {
 		text = job_clerk_effect_desc
 	}
-	
+
 	triggered_desc = {
 		text = job_merchant_effect_desc
 		trigger = {
@@ -863,5 +1115,12 @@ district_srw_commercial = {
 			}
 		}
 		text = job_artificer_effect_desc
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
 	}
 }

@@ -80,6 +80,7 @@ btr_leader_trait_internal_consensus = {
 	modifier = {
 		species_leader_exp_gain = -0.25
 		leader_skill_levels = 3
+		leader_cost_empire_size_mult = -0.5
 	}
 
 	leader_trait = { admiral general scientist governor ruler }
@@ -115,9 +116,9 @@ btr_leader_trait_twice_bright = {
 # Yahg Leader Trait
 
 btr_leader_trait_hype_perecpt = {
-
 	cost = 3
 	modification = no
+	icon = "gfx/interface/icons/traits/trait_yahg_hypersense.dds"
 
 	leader_trait = { admiral general scientist governor ruler }
 	leader_class = { admiral general scientist governor ruler }

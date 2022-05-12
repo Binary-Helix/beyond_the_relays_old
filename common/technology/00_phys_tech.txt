@@ -43,7 +43,11 @@ tech_basic_science_lab_2 = {
 	}
 
 	ai_weight = {
-		factor = @ai_research_lab_factor
+		weight = 15
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -76,7 +80,21 @@ tech_basic_science_lab_3 = {
 	}
 
 	ai_weight = {
-		factor = @ai_research_lab_factor
+		weight = 3
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+			NOT ={
+				has_technology = tech_lasers_4
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -120,6 +138,8 @@ tech_global_research_initiative = {
 	}
 
 	ai_weight = {
+		factor = 125
+		factor = 50
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -185,6 +205,26 @@ tech_curator_lab = {
 			desc = "TECH_UNLOCK_CURATOR_LAB_1_DESC"
 		}
 	}
+	ai_weight ={
+		weight = 1
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+			NOT ={
+				has_technology = tech_lasers_4
+			}
+		}
+		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
+	}
 }
 
 tech_archeology_lab_ancrel = {
@@ -247,6 +287,26 @@ tech_archeology_lab_ancrel = {
 	potential = {
 		has_ancrel = yes
 	}
+	ai_weight ={
+		weight = 1
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+			NOT ={
+				has_technology = tech_lasers_4
+			}
+		}
+		modifier ={
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
+	}
 }
 
 tech_archeology_lab = {
@@ -297,6 +357,9 @@ tech_archeology_lab = {
 	potential = {
 		has_ancrel = no
 	}
+	ai_weight = {
+		weight = 100
+	}
 }
 
 
@@ -323,6 +386,13 @@ tech_space_science_1 = {
 	}
 
 	ai_weight = {
+		modifier = {
+			factor = 1000
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -356,6 +426,14 @@ tech_space_science_2 = {
 	}
 
 	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -389,6 +467,24 @@ tech_space_science_3 = {
 	}
 
 	ai_weight = {
+		weight = 1
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+			NOT ={
+				has_technology = tech_lasers_4
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -422,6 +518,23 @@ tech_space_science_4 = {
 	}
 
 	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+			NOT ={
+				has_technology = tech_lasers_4
+			}
+		}
+		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -455,6 +568,17 @@ tech_space_science_5 = {
 	}
 
 	ai_weight = {
+		weight = 1
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_energy_torpedoes_2
+			}
+			NOT ={
+				has_technology = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -513,7 +637,27 @@ tech_physics_1 = {
 	}
 
 	ai_weight = {
-		factor = @physics_research_ai_factor
+		weight = 5000
+		modifier = {
+			factor = 200
+			has_technology = tech_lasers_4
+		}
+		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+			NOT ={
+				has_technology = tech_lasers_4
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -565,7 +709,25 @@ tech_physics_2 = {
 	}
 
 	ai_weight = {
-		factor = @physics_research_ai_factor
+		weight = 6000
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
+		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -617,7 +779,14 @@ tech_physics_3 = {
 	}
 
 	ai_weight = {
-		factor = @physics_research_ai_factor
+		weight = 3000
+		factor = 125 #scaling factor
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -651,6 +820,11 @@ tech_administrative_ai = {
 	}
 
 	ai_weight = {
+		weight = 50000
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -685,6 +859,14 @@ tech_cryostasis_1 = {
 	}
 
 	ai_weight = {
+		weight = 2
+		modifier = {
+			factor = 1000
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -719,6 +901,17 @@ tech_cryostasis_2 = {
 	}
 
 	ai_weight = {
+		weight = 10
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_energy_torpedoes_2
+			}
+			NOT ={
+				has_technology = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -752,6 +945,12 @@ tech_self_aware_logic = {
 	}
 
 	ai_weight = {
+		weight = 300
+		factor = 5
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		} #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -837,6 +1036,14 @@ tech_automated_exploration = {
 	}
 
 	ai_weight = {
+		weight = 4
+		modifier = {
+			factor = 1000
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -878,6 +1085,8 @@ tech_sapient_ai = {
 	}
 
 	ai_weight = {
+		weight = 300
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -919,6 +1128,8 @@ tech_positronic_implants = {
 	}
 
 	ai_weight = {
+		weight = 500
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -971,6 +1182,15 @@ tech_combat_computers_1 = {
 	}
 
 	ai_weight = {
+		weight = 60
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_3
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1011,6 +1231,8 @@ tech_combat_computers_2 = {
 	}
 
 	ai_weight = {
+		weight = 900
+		factor = 25 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1093,6 +1315,8 @@ tech_combat_computers_3 = {
 	}
 
 	ai_weight = {
+		weight = 500
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1169,6 +1393,8 @@ tech_combat_computers_autonomous = {
 	}
 
 	ai_weight = {
+		weight = 60
+		factor = 125 #scaling factor0
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1208,6 +1434,11 @@ tech_auxiliary_fire_control = {
 	}
 
 	ai_weight = {
+		weight = 30
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1317,6 +1548,8 @@ tech_consumer_good_refinement_1 = {
 	}
 
 	ai_weight = {
+		factor = 5
+		factor = 100
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1358,6 +1591,8 @@ tech_consumer_good_refinement_2 = {
 	}
 
 	ai_weight = {
+		factor = 25
+		factor = 100
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1402,6 +1637,7 @@ tech_encryption_1 = {
 	}
 
 	ai_weight = {
+		weight = 3
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1444,6 +1680,7 @@ tech_encryption_2 = {
 	}
 
 	ai_weight = {
+		weight = 10
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1468,7 +1705,7 @@ tech_encryption_3 = {
 
 	weight_modifier = {
 		modifier = {
-			factor = value:tech_weight_likelihood
+			factor = 1.25
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_computing"
@@ -1484,6 +1721,7 @@ tech_encryption_3 = {
 	}
 
 	ai_weight = {
+		weight = 50
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1526,6 +1764,7 @@ tech_decryption_1 = {
 	}
 
 	ai_weight = {
+		weight = 3
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1568,6 +1807,7 @@ tech_decryption_2 = {
 	}
 
 	ai_weight = {
+		weight = 3
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1608,6 +1848,7 @@ tech_decryption_3 = {
 	}
 
 	ai_weight = {
+		weight = 50
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1674,6 +1915,15 @@ tech_fusion_power = {
 	}
 
 	ai_weight = {
+		weight = 5000
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_3
+		}
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1719,6 +1969,16 @@ tech_cold_fusion_power = {
 	}
 
 	ai_weight = {
+		weight = 50
+		factor = 5 #scaling factor0
+		modifier = {
+			factor = 200
+			has_technology = tech_lasers_4
+		}
+		modifier = {
+			factor = 200
+			has_technology = tech_energy_torpedoes_1
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1764,6 +2024,12 @@ tech_antimatter_power = {
 	}
 
 	ai_weight = {
+		weight = 60
+		factor = 25 #scaling factor0
+		modifier = {
+			factor = 20
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1809,6 +2075,12 @@ tech_zero_point_power = {
 	}
 
 	ai_weight = {
+		weight = 60
+		factor = 125 #scaling factor0
+		modifier = {
+			factor = 100
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1851,6 +2123,13 @@ tech_reactor_boosters_2 = {
 
 	ai_weight = {
 		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
+		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = physics
@@ -1881,6 +2160,13 @@ tech_reactor_boosters_3 = {
 	}
 
 	ai_weight = {
+		modifier = {
+			weight = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1927,6 +2213,15 @@ tech_shields_2 = {
 	}
 
 	ai_weight = {
+		factor = 0.01
+		modifier = {
+			factor = 100
+			has_technology= tech_cruisers
+		}
+		modifier = {
+			factor = 1000
+			has_technology= tech_battleships
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1958,6 +2253,15 @@ tech_shields_3 = {
 	}
 
 	ai_weight = {
+		factor = 0.1
+		modifier = {
+			factor = 100
+			has_technology= tech_cruisers
+		}
+		modifier = {
+			factor = 1000
+			has_technology= tech_battleships
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -1990,6 +2294,14 @@ tech_shields_4 = {
 
 	ai_weight = {
 		modifier = {
+			factor = 100
+			has_technology= tech_cruisers
+		}
+		modifier = {
+			factor = 100
+			has_technology= tech_battleships
+		}
+		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = physics
@@ -2021,6 +2333,14 @@ tech_shields_5 = {
 
 	ai_weight = {
 		modifier = {
+			factor = 100
+			has_technology= tech_cruisers
+		}
+		modifier = {
+			factor = 100
+			has_technology= tech_battleships
+		}
+		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = physics
@@ -2050,6 +2370,15 @@ tech_shield_rechargers_1 = {
 	}
 
 	ai_weight = {
+		factor = 0.1
+		modifier = {
+			factor = 1000
+			has_technology= tech_cruisers
+		}
+		modifier = {
+			factor = 1000
+			has_technology= tech_battleships
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2109,6 +2438,13 @@ tech_planetary_shield_generator = {
 			}
 		}
 	}
+	ai_weight = {
+		factor = 25 #scaling factor
+		modifier ={
+			factor =1000
+			has_technology = tech_energy_torpedoes_2
+		}
+	}
 
 	# unlocks building: planetary shield generator
 }
@@ -2140,6 +2476,12 @@ tech_sensors_2 = {
 	}
 
 	ai_weight = {
+		weight = 400
+		factor = 5 #scaling factor
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2181,6 +2523,12 @@ tech_sensors_3 = {
 	}
 
 	ai_weight = {
+		weight = 12
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
+		factor = 25 #scaling factor5
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2222,6 +2570,8 @@ tech_sensors_4 = {
 	}
 
 	ai_weight = {
+		weight = 125
+		factor = 125 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2282,7 +2632,14 @@ tech_power_plant_2 = {
 	}
 
 	ai_weight = {
-		factor = @technician_ai_factor
+		weight = 40
+		modifier = {
+			factor = 500
+			OR = {
+				has_tech_option = tech_energy_torpedoes_1
+				has_tech_option = tech_energy_torpedoes_2
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2322,7 +2679,12 @@ tech_power_plant_3 = {
 	}
 
 	ai_weight = {
-		factor = @technician_ai_factor
+		weight = 9
+		factor = 5 #scaling factor0
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2362,7 +2724,12 @@ tech_power_plant_4 = {
 	}
 
 	ai_weight = {
-		factor = @technician_ai_factor
+		weight = 9
+		factor = 25 #scaling factor0
+		modifier = {
+			factor = 100
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2398,7 +2765,11 @@ tech_power_hub_1 = {
 	}
 
 	ai_weight = {
-		factor = @energy_grid_ai_factor # Energy grid
+		factor = 10000
+		modifier = {
+			factor = 10
+			has_technology = tech_lasers_4
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2441,7 +2812,17 @@ tech_power_hub_2 = {
 	}
 
 	ai_weight = {
-		factor = @energy_grid_ai_factor # Energy grid level 2
+		weight = 100
+		factor = 25 #scaling factor
+		modifier = {
+			factor = 100
+			NOT = {
+				has_tech_option = tech_lasers_4
+			}
+			NOT ={
+				has_technology = tech_lasers_4
+			}
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2507,6 +2888,11 @@ tech_hyper_drive_2 = {
 	}
 
 	ai_weight = {
+		factor = 4
+		modifier = {
+			factor = 1000
+			has_technology = tech_energy_torpedoes_2
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2549,6 +2935,7 @@ tech_hyper_drive_3 = {
 	}
 
 	ai_weight = {
+		factor = 0.1
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2635,6 +3022,12 @@ tech_wormhole_stabilization = {
 	}
 
 	ai_weight = {
+		weight = 3
+		factor = 25 #scaling factor0
+		modifier = {
+			factor = 40
+			owns_any_bypass = wormhole
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
@@ -2703,6 +3096,7 @@ tech_jump_drive_1 = {
 	}
 
 	ai_weight = {
+		factor = 2000
 	}
 
 	prereqfor_desc = {
@@ -2745,6 +3139,8 @@ tech_ftl_inhibitor = {
 	}
 
 	ai_weight = {
+		factor = 45
+		factor = 5 #scaling factor
 		modifier = {
 			factor = 1.25
 			research_leader = {

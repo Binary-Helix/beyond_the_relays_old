@@ -9,19 +9,19 @@
 
 @tier2cost1 = 1500
 @tier2cost2 = 2000
-@tier2cost3 = 2000
+@tier2cost3 = 2500
 
-@tier3cost1 = 2000
-@tier3cost2 = 2500
-@tier3cost3 = 4000
+@tier3cost1 = 4000
+@tier3cost2 = 5000
+@tier3cost3 = 6000
 
-@tier4cost1 = 5000
-@tier4cost2 = 6000
-@tier4cost3 = 8000
+@tier4cost1 = 8000
+@tier4cost2 = 10000
+@tier4cost3 = 12000
 
-@tier5cost1 = 10000
-@tier5cost2 = 12000
-@tier5cost3 = 14500
+@tier5cost1 = 15000
+@tier5cost2 = 17500
+@tier5cost3 = 20000
 
 ####################
 ### TECH WEIGHTS ###
@@ -78,16 +78,18 @@ tech_colossus = {
 	## unlock colossi
 
 	ai_weight = {
+		weight = 40
+		factor = 125 #scaling factor
+		modifier = {
+			factor = 10
+			has_technology = tech_ascension_theory
+		}
 		modifier = {
 			factor = 1.25
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_voidcraft"
 			}
-		}
-		modifier = {
-			factor = 2
-			is_ai = no #auto-research
 		}
 	}
 }
@@ -150,7 +152,16 @@ tech_pk_cracker = {
 	}
 
 	ai_weight = {
-		factor = 0.5
+		weight = 10
+		factor = 125 #scaling factor0
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_fanatic_militarist
+		}
 	}
 }
 
@@ -209,13 +220,14 @@ tech_pk_shielder = {
 	}
 
 	ai_weight = {
-		factor = 0.5
+		weight = 100
+		factor = 125 #scaling factor
 		modifier = {
-			factor = 2
+			factor = 1.25
 			has_ethic = ethic_pacifist
 		}
 		modifier = {
-			factor = 5
+			factor = 1.5
 			has_ethic = ethic_fanatic_pacifist
 		}
 	}
@@ -290,13 +302,14 @@ tech_pk_neutron = {
 	}
 
 	ai_weight = {
-		factor = 0.5
+		weight = 40
+		factor = 125 #scaling factor
 		modifier = {
-			factor = 2
+			factor = 1.25
 			has_ethic = ethic_materialist
 		}
 		modifier = {
-			factor = 5
+			factor = 1.5
 			has_ethic = ethic_fanatic_materialist
 		}
 	}
@@ -364,13 +377,14 @@ tech_pk_godray = {
 	}
 
 	ai_weight = {
-		factor = 0.5
+		weight = 40
+		factor = 125 #scaling factor
 		modifier = {
-			factor = 2
+			factor = 1.25
 			has_ethic = ethic_spiritualist
 		}
 		modifier = {
-			factor = 5
+			factor = 1.5
 			has_ethic = ethic_fanatic_spiritualist
 		}
 	}
@@ -428,9 +442,10 @@ tech_pk_nanobots = {
 	}
 
 	ai_weight = {
-		factor = 0.5
+		weight = 40
+		factor = 125 #scaling factor
 		modifier = {
-			factor = 5
+			factor = 1.5
 			has_ethic = ethic_gestalt_consciousness
 			has_valid_civic = civic_machine_assimilator
 		}

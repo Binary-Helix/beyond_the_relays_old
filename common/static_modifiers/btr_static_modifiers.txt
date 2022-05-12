@@ -1,4 +1,40 @@
+# Ardat-Yakshi
 
+mec_asari_mod_pop_ardatyakshi = {
+	#pop_happiness = -0.10
+	planet_crime_add = 5
+}
+
+# Thessia Origin - Stagnation
+
+mec_asari_mod_origin_thessia_stagnation = {
+	pop_growth_speed = -0.10
+	pop_assembly_speed = -0.50
+	planet_colony_development_speed_mult = -0.50
+}
+
+# Thessia Origin - Galactic Good
+
+mec_asari_mod_prothean_archives_access = {
+	all_technology_research_speed = 0.1
+}
+
+# Planets
+
+mec_asari_mod_planet_niacal_atmosphere = {
+	pop_environment_tolerance = -0.10
+	planet_jobs_food_produces_mult = 0.25
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_lush.dds"
+	icon_frame = 1
+}
+
+mec_asari_mod_planet_epho_atmosphere = {
+	pop_environment_tolerance = -0.25
+	
+	icon = "gfx/interface/icons/planet_modifiers/pm_carbon_world.dds"
+	icon_frame = 1
+}
 
 unexplored_citadel = {
 
@@ -47,7 +83,7 @@ prothean_remnant = {
 }
 
 btr_minor_empire = {
-	science_ship_survey_speed = -0.50
+	science_ship_survey_speed = -0.25
 	starbase_outpost_cost_mult = 1.00
 	shipsize_starbase_outpost_build_speed_mult = -0.50
 	planet_colony_development_speed_mult = -0.50
@@ -116,4 +152,18 @@ btr_choras_den_closed = {
 btr_parnkreg_empire_modifier = {
 	envoys_add = -1
 	#-500 opinion for first 15 years in diplomatic status 
+}
+
+btr_parnkreg_highly_adaptable = {
+	all_technology_research_speed = 0.25
+	ship_weapon_damage = 0.2
+	empire_size_penalty_mult = -0.2
+	planet_jobs_unity_produces_mult = 0.2
+	pop_growth_speed = 0.2
+}
+
+btr_generator_powerup = {
+	weapon_type_energy_weapon_damage_mult = 0.05
+			planet_buildings_energy_upkeep_mult = -0.5
+			planet_districts_energy_upkeep_mult = -0.5
 }

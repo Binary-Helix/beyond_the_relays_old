@@ -743,7 +743,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @cost4
-			sr_dark_matter = 1
 		}
 	}
 	modifier = {
@@ -759,7 +758,8 @@ utility_component_template = {
 		weight = 5
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -774,7 +774,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @destroyer_cost4
-			sr_dark_matter = 2
 		}
 	}
 	modifier = {
@@ -790,7 +789,8 @@ utility_component_template = {
 		weight = 5
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -805,7 +805,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @cruiser_cost4
-			sr_dark_matter = 4
 		}
 	}
 	modifier = {
@@ -821,7 +820,8 @@ utility_component_template = {
 		weight = 5
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -836,7 +836,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @battleship_cost4
-			sr_dark_matter = 8
 		}
 	}
 	modifier = {
@@ -852,7 +851,8 @@ utility_component_template = {
 		weight = 5
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -867,7 +867,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @titan_cost4
-			sr_dark_matter = 16
 		}
 	}
 	modifier = {
@@ -883,7 +882,8 @@ utility_component_template = {
 		weight = 5
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -914,7 +914,8 @@ utility_component_template = {
 
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = sr_dark_matter }
+			is_country_type = default
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
