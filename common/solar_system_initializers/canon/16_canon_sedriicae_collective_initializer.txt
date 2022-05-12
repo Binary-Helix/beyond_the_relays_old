@@ -399,6 +399,15 @@ sys_tiikren_init = {
 		size = 10
 		has_ring = no
 		flags = { fumimi_planet pd_ignore}
+		init_effect = {
+			random_country = {
+				limit = { has_country_flag = sedriicae_collective }
+				save_global_event_target_as = sedriicae_collective
+				species = { save_global_event_target_as = forayanSpecies }
+				create_archaeological_site = btr_site_collective_archeology
+			}
+	
+		}
 	}
 
 	planet = {
