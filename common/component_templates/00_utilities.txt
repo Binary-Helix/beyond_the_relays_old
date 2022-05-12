@@ -539,7 +539,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			not = { no_resource_for_component = { RESOURCE = alloys } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -640,7 +640,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.25
+			alloys = 0.25
 		}
 	}
 
@@ -660,7 +660,7 @@ utility_component_template = {
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			no_resource_for_component = { RESOURCE = alloys }
 		}
 	}
 }
@@ -674,7 +674,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.50
+			alloys = 0.50
 		}
 	}
 
@@ -694,7 +694,7 @@ utility_component_template = {
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			no_resource_for_component = { RESOURCE = alloys }
 		}
 	}
 }
@@ -708,7 +708,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 1.00
+			alloys = 1.00
 		}
 	}
 
@@ -728,7 +728,7 @@ utility_component_template = {
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			no_resource_for_component = { RESOURCE = alloys }
 		}
 	}
 }
@@ -742,7 +742,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.33
+			alloys = 0.33
 		}
 	}
 
@@ -761,7 +761,7 @@ utility_component_template = {
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			no_resource_for_component = { RESOURCE = alloys }
 		}
 	}
 }
@@ -775,7 +775,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.65
+			alloys = 0.65
 		}
 	}
 
@@ -790,7 +790,7 @@ utility_component_template = {
 		weight = 10000
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			no_resource_for_component = { RESOURCE = alloys }
 		}
 	}
 }
@@ -804,7 +804,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 1.30
+			alloys = 1.30
 		}
 	}
 
@@ -823,7 +823,7 @@ utility_component_template = {
 		}
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = rare_crystals }
+			no_resource_for_component = { RESOURCE = alloys }
 		}
 	}
 }

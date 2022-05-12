@@ -485,7 +485,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t6_cost
-			sr_dark_matter = 0.25
 		}
 		upkeep = {
 			energy = @shield_s_t6_upkeep_energy
@@ -504,7 +503,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -519,7 +518,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t6_cost
-			sr_dark_matter = 0.5
 		}
 		upkeep = {
 			energy = @shield_m_t6_upkeep_energy
@@ -538,7 +536,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -553,7 +551,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t6_cost
-			sr_dark_matter = 1
 		}
 		upkeep = {
 			energy = @shield_l_t6_upkeep_energy
@@ -579,7 +576,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = { resource = sr_dark_matter value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -598,7 +595,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_s_t7_cost
-			sr_zro = 0.111
 		}
 		upkeep = {
 			energy = @shield_s_t7_upkeep_energy
@@ -617,7 +613,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = sr_zro value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -632,7 +628,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_m_t7_cost
-			sr_zro = 0.222
 		}
 		upkeep = {
 			energy = @shield_m_t7_upkeep_energy
@@ -651,7 +646,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = sr_zro value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
@@ -666,7 +661,6 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @shield_l_t7_cost
-			sr_zro = 0.333
 		}
 		upkeep = {
 			energy = @shield_l_t7_upkeep_energy
@@ -692,7 +686,7 @@ utility_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = sr_zro value <= 50 }
+			resource_stockpile_compare = { resource = alloys value <= 50 }
 		}
 	}
 }
