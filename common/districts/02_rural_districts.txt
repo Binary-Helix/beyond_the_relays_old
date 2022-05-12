@@ -405,6 +405,18 @@ district_farming = {
 		potential = {
 			exists = owner
 			owner = {
+				has_trait = btr_elcor_ecologists
+			}
+		}
+		modifier = {
+			planet_housing_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
 				has_valid_civic = civic_agrarian_idyll
 			}
 		}

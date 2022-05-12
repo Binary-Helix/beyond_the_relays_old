@@ -465,6 +465,60 @@ btr_r_prothean_archive = {
 	}
 }
 
+### Courts of Dekuuna Relic
+btr_r_ancients_code = {
+	portrait = "GFX_relic_prothean_sphere"
+	sound = event_prothean_sphere
+	activation_duration = 1095
+
+	resources = {
+		category = relics
+		# Activation cost
+		cost = {
+			influence = 100
+			unity = 5000
+		}
+	}
+
+	score = 0 # No score initial relic
+
+	possible = {
+		custom_tooltip = {
+			fail_text = requires_relic_no_cooldown
+			NOT = { has_modifier = relic_activation_cooldown }
+		}
+		# custom_tooltip = {
+		# 	fail_text = btr_requires_defensive_war
+		# 	owner = {
+		# 		has_modifier = defensive_war
+		# 	}
+		# }
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_unity_produces_add = 5
+		planet_crime_add = -5
+		planet_pops__upkeep_mult = -0.1
+	}
+
+	active_effect = {
+		hidden_effect = {
+			add_modifier = {
+				modifier = relic_activation_cooldown
+				days = 2000
+			}
+		}
+		add_modifier = {
+			modifier = btr_r_ancients_code_modifier
+			days = 2200
+		}
+	}
+}
+
+### Sedricae Site 1
 btr_r_ancient_generator = {
 	activation_duration = @triumph_duration
 	portrait = "GFX_relic_prothean_archive"
