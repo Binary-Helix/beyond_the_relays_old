@@ -189,3 +189,11 @@ on_planet_bombarded = {
 # 		btr_setup.3
 # 	}
 # }
+
+# a new leader is generated for an empire, to be available for recruitment
+# scope: country, from: leader
+on_leader_spawned = {
+	events = {
+		btr_sedcol_matriarchy
+	}
+}

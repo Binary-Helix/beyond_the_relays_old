@@ -236,10 +236,10 @@ courts_of_dekuuna={
 	ethic="ethic_xenophile"
 	ethic="ethic_fanatic_pacifist"
 
-	trait= "trait_btr_elcor_trait_core_high_gravity_adapted"
-	trait= "trait_btr_elcor_trait_homebound"
-	trait= "trait_btr_elcor_trait_gesture_based_speech"
-	trait= "trait_btr_elcor_trait_ecologists"
+	trait= "btr_elcor_trait_core_high_gravity_adapted"
+	trait= "btr_elcor_trait_homebound"
+	trait= "btr_elcor_trait_gesture_based_speech"
+	trait= "btr_elcor_trait_ecologists"
 	trait= "trait_elcor_habitability_preference"
 	
 	origin= btr_origin_courts_o_dek	
@@ -1214,20 +1214,23 @@ sedriicae_collective={
     species_adjective = "PRESCRIPTED_species_adjective_sedriicae_collective"
     #species_bio="PRESCRIPTED_species_bio_migrant_fleet"	
 
-	authority="auth_dictatorial"
-	government = "gov_theocratic_dictatorship"
-	civics={ "civic_btr_forayans_totalitarian_state" "civic_btr_forayans_to_serve_the_people" }
+	authority="auth_imperial"
+	government = "gov_irenic_monarchy"
+	civics={ "btr_civic_sedcol_totalitarian_state" "btr_civic_sedcol_status_intel" }
 
 	flags={ custom_start_screen sedriicae_collective btr_empire canon_map hybrid_map sandbox_map }
 
 	ethic="ethic_fanatic_authoritarian"
 	ethic="ethic_pacifist"
 
-	trait="trait_adaptive"
+	trait = "btr_forayan_trait_core"
+	trait = "btr_forayan_trait_happiness"
+	trait = "btr_forayan_trait_insectoids"
+	trait = "btr_forayan_trait_gender_castes"
 	trait = "trait_forayan_habitability_preference"
 
 	
-	origin="origin_sedriicae_collective"	
+	origin="btr_origin_sedcol"	
 
 	planet_name="Sed'riicae"
 	planet_class="pc_dextro_desert"
@@ -1254,14 +1257,14 @@ sedriicae_collective={
 		}
 	}
 	ruler={
-		gender=male
+		gender=female
 		name="PRESCRIPTED_ruler_name_sedriicae_collective"
 		portrait = "art3"
 		texture = 0
 		hair = 0
 		clothes = 0
-		ruler_title="First Admiral"
-		ruler_title_female="First Admiral"
+		ruler_title="Matriarch"
+		ruler_title_female="Matriarch"
 		leader_class = "ruler"
 	}
 	spawn_enabled=always
