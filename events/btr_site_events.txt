@@ -1131,3 +1131,156 @@ fleet_event = {
 		}
 	}
 }
+
+fleet_event = {
+	id = btr_site.150
+	title = "btr_site.150.name"
+	desc = "btr_site.150.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = btr_site.150.a
+		owner = {
+			add_resource = {
+				engineering_research = 300
+				physics_research = 300
+				society_research = 300
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.151
+	title = "btr_site.151.name"
+	desc = "btr_site.151.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = btr_site.151.a
+		owner = {
+			add_resource = {
+				engineering_research = 600
+				physics_research = 600
+				society_research = 600
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.152
+	title = "btr_site.152.name"
+	desc = "btr_site.152.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = btr_site.152.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.153
+	title = "btr_site.153.name"
+	desc = "btr_site.153.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = btr_site.153.a
+		owner = {
+			add_monthly_resource_mult = {
+				resource = engineering_research
+				value = @tier2researchreward
+				min = @tier2researchmin
+				max = @tier2researchmax
+			}
+		}
+	}
+}
+
+fleet_event = {
+	id = btr_site.154
+	title = "btr_site.154.name"
+	desc = "btr_site.154.desc"
+	picture = GFX_archaeology_runes_prothean
+	show_sound = event_mystic_reveal
+
+	archaeology = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		from = { set_site_progress_locked = yes }
+	}
+
+	after = {
+		from = { set_site_progress_locked = no }
+	}
+
+	option = {
+		name = btr_site.154.a
+		owner = {
+			add_relic = btr_r_ancient_generator
+		}
+	}
+}
