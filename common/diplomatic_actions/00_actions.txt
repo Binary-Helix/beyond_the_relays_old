@@ -1277,6 +1277,9 @@ action_form_migration_pact = {
 	action_type = positive
 	possible = {
 		custom_tooltip = {
+			fail_text = "requires_actor_not_sedriicae_collective"
+		}
+		custom_tooltip = {
 			fail_text = "requires_actor_not_fanatic_purifiers"
 			OR = {
 				is_same_species = from
@@ -1347,6 +1350,12 @@ action_form_migration_pact = {
 		custom_tooltip = {
 			fail_text = "requires_actor_not_barbaric_despoilers"
 			NOT = { has_valid_civic = civic_barbaric_despoilers }
+		}
+		custom_tooltip = {
+			fail_text = {
+				text = "requires_actor_not_status_intellectus"
+				NOT = { has_valid_civic = btr_civic_sedcol_status_intel }
+			}
 		}
 		custom_tooltip = {
 			fail_text = "federation_internal_migration"

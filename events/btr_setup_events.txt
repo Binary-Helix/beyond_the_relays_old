@@ -2108,9 +2108,16 @@ country_event = {
 		if = {
 			limit = {
 				galaxy_size = btr_hybrid_400
-				has_origin = origin_sedriicae_collective
+				has_origin = btr_origin_sedcol
 				any_system_within_border = {
 					has_star_flag = nosikae_system
+				}
+			}
+			limit = { 
+				has_origin = btr_origin_sedcol
+				add_modifier = {
+					modifier = btr_sedcol_stagnation
+					years = 20
 				}
 			}
 			random_owned_planet = {

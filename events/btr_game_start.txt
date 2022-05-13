@@ -163,5 +163,12 @@ country_event = {
 				days = -1
 			}
 		}
+		else_if = {
+			limit = { has_origin = btr_origin_sedcol }
+			add_modifier = {
+				modifier = btr_sedcol_stagnation
+				years = 20
+			}
+		}
 	}
 }

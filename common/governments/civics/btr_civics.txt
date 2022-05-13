@@ -73,85 +73,6 @@ civic_btr_salarian_matriarchy ={
 	}
 }
 
-#################
-# TURIAN CIVICS #
-#################
-civic_btr_turian_universal_service ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {	value = ethic_gestalt_consciousness}
-		}
-		authority = {
-			NOT = {	value = auth_corporate}
-		}
-	}
-	
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_naval_cap_mult = 0.25
-		#adding the unity soldier stuff wip
-	}
-}
-civic_btr_turian_honor ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {	value = ethic_gestalt_consciousness}
-		}
-		authority = {
-			NOT = {	value = auth_corporate}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_war_exhaustion_mult = -0.25
-		pop_government_ethic_attraction = 0.10
-	}
-}
-
-################
-# ELCOR CIVICS #
-################
-civic_btr_elcor_history_of_stability ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		pop_government_ethic_attraction = 0.20
-		planet_stability_add = 10
-	}
-}
-
-civic_btr_elcor_economic_planning ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		pop_demotion_time_mult = -0.5
-	}
-}
-
 ################
 # HANAR CIVICS #
 ################
@@ -190,56 +111,6 @@ civic_btr_hanar_part_of_the_family ={
 		intel_decryption_add = 2
 		spy_network_daily_value_mult = 0.1
 		army_damage_mult = 0.15
-	}
-}
-
-##########################
-# SYSTEM ALLIANCE CIVICS #
-##########################
-civic_btr_sysalliance_colonial_government ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		starbase_outpost_influence_cost_mult = -0.15
-		planet_colony_development_speed_mult = 0.1
-	}
-}
-
-civic_btr_sysalliance_unfettered_combat_vi ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		ship_evasion_mult = 0.1
-		ship_tracking_mult = 0.1
-		ship_fire_rate_mult = 0.05
 	}
 }
 
@@ -768,50 +639,60 @@ civic_btr_omega_capital ={
 ##################
 # FORAYAN CIVICS #
 ##################
-civic_btr_forayans_totalitarian_state ={
+btr_civic_sedcol_totalitarian_state ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		pop_happiness = 0.15
-		intel_encryption_add = 2
-		intel_decryption_add = -2
+		pop_happiness = 0.05
+		planet_stability_add = 20
+		pop_ethic_categories_attraction_mult = 0.75
+		edicts_cost_mult = -0.5
+		country_edict_fund_add = 200
 	}
 }
 
-civic_btr_forayans_to_serve_the_people ={
+btr_civic_sedcol_status_intel ={
 	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		country_unity_produces_mult = 0.2
 		envoys_add = -2
+		diplo_weight_mult = -0.2
+		intel_encryption_add = 2
+		intel_decryption_add = -4
+	}
+}
+
+btr_civic_sedcol_desperate_measures = {
+	modification = yes
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_authoritarian_or_xenophobe
+				value = ethic_fanatic_authoritarian
+				value = ethic_authoritarian
+				value = ethic_fanatic_xenophobe
+				value = ethic_xenophobe
+			}
+			NOR = {
+				text = civic_tooltip_not_xenophile
+				value = ethic_xenophile
+				value = ethic_fanatic_xenophile
+			}
+		}
+		civics = {
+			NOR = {
+				value = civic_fanatic_purifiers
+			}
+		}
+		origin = {
+			NOT = {
+				value = origin_common_ground
+			}
+		}
 	}
 }
 

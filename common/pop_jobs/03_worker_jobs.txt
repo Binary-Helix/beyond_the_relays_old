@@ -868,6 +868,16 @@ farmer = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_origin = btr_origin_courts_o_dek }
+		}
+		modifier = {
+			planet_farmers__food_produces_mult = 0.25
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_valid_civic = civic_agrarian_idyll }
 		}
 		modifier = {

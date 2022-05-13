@@ -111,7 +111,6 @@ btr_leader_trait_twice_bright = {
 	}
 }
 
-
 ### Parnack Regime
 
 # Yahg Leader Trait
@@ -126,9 +125,42 @@ btr_leader_trait_hype_perecpt = {
 
 	modifier = {
 		leader_skill_levels = +2
-		species_leader_exp_gain = 0.33
-		
-		
+		species_leader_exp_gain = 0.33	
+	}
+}
+  
+### ELCOR
+# Elcor sticky leader trait (All)
+btr_leader_trait_patience = {
+	cost = 3
+	modification = no
+	modifier = {
+		planet_buildings__cost_mult = -0.5
+		planet_buildings__upkeep_mult = -0.10
+		trade_value_mult = 0.5
 	}
 
+	leader_trait = { admiral general scientist governor ruler }
+	leader_class = { admiral general scientist governor ruler }
+
+	ai_weight = {
+		weight = 100
+	}
 }
+
+### Sed'riicae Collective
+# Forayan sticky leader trait
+btr_leader_trait_forayan_poor_soldiers = {
+	cost = 3
+	modification = no
+
+	modifier = {
+		species_leader_exp_gain = -0.25
+		ship_evasion_mult = -0.1
+		ship_speed_mult = -0.1
+		army_damage_mult = -0.2
+	}
+
+	leader_trait = { admiral general }
+	leader_class = { admiral general }
+ }
