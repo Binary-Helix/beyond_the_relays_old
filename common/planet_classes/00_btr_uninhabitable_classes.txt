@@ -45,7 +45,7 @@ pc_silicaceous_asteroid = {
 }
 
 pc_metallic_asteroid = {
-	entity = "asteroid"
+	entity = "asteroid_metallic"
 	entity_scale = @asteroid_standard_scale
 	icon = GFX_planet_type_asteroid
 
@@ -85,8 +85,7 @@ pc_ice_asteroid = {
 }
 
 pc_carbonaceous_asteroid = {
-	entity = "asteroid_crystal_large"
-	picture = pc_crystal_asteroid
+	entity = "asteroid"
 	entity_scale = @asteroid_standard_scale
 	icon = GFX_planet_type_asteroid
 
@@ -106,8 +105,8 @@ pc_carbonaceous_asteroid = {
 }
 
 pc_eezo_asteroid = {
-	entity = "asteroid_crystal_large"
-	picture = pc_crystal_asteroid
+	entity = "asteroid_eezo"
+	picture = pc_eezo_asteroid
 	entity_scale = @asteroid_standard_scale
 	icon = GFX_planet_type_asteroid
 
@@ -127,9 +126,9 @@ pc_eezo_asteroid = {
 }
 
 pc_comet = {
-	entity = "asteroid_ice_large"
+	entity = "comet"
 	entity_scale = @asteroid_standard_scale
-	icon = GFX_planet_type_asteroid
+	icon = GFX_planet_type_comet
 
 	asteroid = yes
 
@@ -171,6 +170,23 @@ pc_molten = {
 	moon_size = { min = 6 max = 12 }
 
 	colonizable = no
+}
+
+pc_volcanic = {
+	entity = "volcanic_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_molten
+	#appearance
+	picture = pc_volcanic
+	atmosphere_color 		= hsv { 0.55 0.3 0.75 }		
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
+	#planet defines
+	colonizable = no
+	#colonization_tech = { }		
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
 }
 
 pc_carbon = {
@@ -270,23 +286,6 @@ pc_barren_cold = {
 	moon_size = { min = 6 max = 10 }
 
 	colonizable = no
-}
-
-pc_volcanic = {
-	entity = "volcanic_planet"
-	entity_scale = @planet_standard_scale
-	icon = GFX_planet_type_molten
-	#appearance
-	picture = pc_volcanic
-	atmosphere_color 		= hsv { 0.55 0.3 0.75 }		
-	atmosphere_intensity 	= 1.0
-	atmosphere_width 		= 0.5
-	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
-	#planet defines
-	colonizable = no
-	#colonization_tech = { }		
-	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
-	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
 }
 
 pc_diamond = {
