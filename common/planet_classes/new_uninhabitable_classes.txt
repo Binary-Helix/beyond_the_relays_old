@@ -546,3 +546,86 @@ pc_shattered = {
 
 	colonizable = no
 }
+
+
+# ###########
+# Random Lists
+# ###########
+
+random_list = {
+	name = "rl_unhabitable_planets"
+	planets = {
+		"pc_molten"
+		"pc_carbon"
+		"pc_iron"
+		"pc_chthonian"
+		"pc_barren"
+		"pc_barren_cold"
+		"pc_volcanic"
+		"pc_diamond"
+		"pc_frozen"
+		"pc_toxic"
+		"pc_hothouse"
+		"pc_hydrocarbon"
+		"pc_ethane_ocean"
+		"pc_gas_giant"
+		"pc_cold_gas_giant"
+		"pc_hot_gas_giant"
+		"pc_cloudless_gas_giant"
+		"pc_volcanoid"
+		"pc_silicaceous_asteroid"
+		"pc_metallic_asteroid"
+		"pc_ice_asteroid"
+		"pc_carbonaceous_asteroid"
+		"pc_eezo_asteroid"
+		"pc_comet"
+	}
+}
+
+random_list = {
+	name = "rl_uninhabitable_smallbody"
+	planets = {
+		"pc_volcanoid"
+		"pc_silicaceous_asteroid"
+		"pc_metallic_asteroid"
+		"pc_ice_asteroid"
+		"pc_carbonaceous_asteroid"
+		"pc_eezo_asteroid"
+		"pc_comet"
+	}
+}
+
+random_list = {
+	name = "rl_uninhabitable_gas"
+	planets = {
+		"pc_gas_giant"
+		"pc_cold_gas_giant"
+		"pc_hot_gas_giant"
+		"pc_cloudless_gas_giant"		
+	}
+}
+
+random_list = {
+	name = "rl_uninhabitable_barren"
+	planets = {
+		"pc_molten"
+		"pc_carbon"
+		"pc_iron"
+		"pc_chthonian"
+		"pc_barren"
+		"pc_barren_cold"
+		"pc_volcanic"
+		"pc_diamond"
+		"pc_frozen"		
+	}
+}
+
+random_list = {
+	name = "rl_uninhabitable_toxic"
+	planets = {
+		"pc_toxic"
+		"pc_hothouse"
+		"pc_hydrocarbon"
+		"pc_ethane_ocean"	
+	}
+}
