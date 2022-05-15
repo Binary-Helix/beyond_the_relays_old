@@ -5,7 +5,7 @@
 
 ## Arid Worlds
 
-pc_dextro_arid = {
+pc_highgrav_arid = {
 	entity = "arid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arid
@@ -19,7 +19,7 @@ pc_dextro_arid = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	city_color_lut = "gfx/portraits/misc/colorcorrection_arid.dds"
 
@@ -38,7 +38,7 @@ pc_dextro_arid = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_desert = {
+pc_highgrav_desert = {
 	entity = "desert_planet"
 	icon = GFX_planet_type_desert
 
@@ -53,7 +53,7 @@ pc_dextro_desert = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	city_color_lut = "gfx/portraits/misc/colorcorrection_desert.dds"
 
@@ -74,12 +74,12 @@ pc_dextro_desert = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mesa = {
+pc_highgrav_mesa = {
 	entity = "mesa_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_mesa
 	#appearance
-	picture = pc_dextro_mesa
+	picture = pc_mesa
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -91,18 +91,18 @@ pc_dextro_mesa = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }	
 
-pc_dextro_sandsea = {
+pc_highgrav_sandsea = {
 	entity = "sandsea_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_dune
 	#appearance
-	picture = pc_dextro_sandsea	
+	picture = pc_sandsea	
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -114,18 +114,18 @@ pc_dextro_sandsea = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }	
 
-pc_dextro_outback = {
+pc_highgrav_outback = {
 	entity = "outback_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_outback
 	#appearance
-	picture = pc_dextro_outback
+	picture = pc_outback
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -137,18 +137,18 @@ pc_dextro_outback = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }	
 
-pc_dextro_semiarid = {
+pc_highgrav_semiarid = {
 	entity = "semiarid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_semiarid
 	#appearance
-	picture = pc_dextro_semiarid  
+	picture = pc_semiarid  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -160,18 +160,18 @@ pc_dextro_semiarid = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_oasis = {
+pc_highgrav_oasis = {
 	entity = "oasis_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_oasis
 	#appearance
-	picture = pc_dextro_oasis
+	picture = pc_oasis
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -183,17 +183,17 @@ pc_dextro_oasis = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_badlands = {
+pc_highgrav_badlands = {
 	entity = "badlands_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_badlands
 	#appearance
-	picture = pc_dextro_badlands
+	picture = pc_badlands
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -205,14 +205,14 @@ pc_dextro_badlands = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
 ## Temperate Worlds
-pc_dextro_savannah = {
+pc_highgrav_savannah = {
 	entity = "savannah_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_savannah
@@ -226,7 +226,7 @@ pc_dextro_savannah = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	city_color_lut = "gfx/portraits/misc/colorcorrection_savannah.dds"
 
@@ -245,12 +245,12 @@ pc_dextro_savannah = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_steppe = {
+pc_highgrav_steppe = {
 	entity = "steppe_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_steppe
 	#appearance
-	picture = pc_dextro_steppe  
+	picture = pc_steppe  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -262,18 +262,18 @@ pc_dextro_steppe = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_veld = {
+pc_highgrav_veld = {
 	entity = "veld_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_veld
 	#appearance
-	picture = pc_dextro_veld  
+	picture = pc_veld  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -285,14 +285,14 @@ pc_dextro_veld = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
 #Atoll
-pc_dextro_desertislands = {
+pc_highgrav_desertislands = {
 	entity = "desertislands_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_atoll
@@ -308,18 +308,18 @@ pc_dextro_desertislands = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_prairie = {
+pc_highgrav_prairie = {
 	entity = "prairie_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_prarie
 	#appearance
-	picture = pc_dextro_prairie
+	picture = pc_prairie
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -331,19 +331,19 @@ pc_dextro_prairie = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
 #Mediterranean
-pc_dextro_med = {
+pc_highgrav_med = {
 	entity = "med_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_med
 	#appearance
-	picture = pc_dextro_med
+	picture = pc_med
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -355,19 +355,19 @@ pc_dextro_med = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_supercon = {
+pc_highgrav_supercon = {
 	entity = "supercon_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_supercon
 	climate = "temperate"
 	#appearance
-	picture = pc_dextro_supercon
+	picture = pc_supercon
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -384,13 +384,13 @@ pc_dextro_supercon = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_megaflora = {
+pc_highgrav_megaflora = {
 	entity = "megaflora_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_megaflora
 	climate = "temperate"
 	#appearance
-	picture = pc_dextro_megaflora
+	picture = pc_megaflora
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -408,7 +408,7 @@ pc_dextro_megaflora = {
 
 
 ## Humid Worlds
-pc_dextro_tropical = {
+pc_highgrav_tropical = {
 	entity = "tropical_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tropical
@@ -424,7 +424,7 @@ pc_dextro_tropical = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -441,12 +441,12 @@ pc_dextro_tropical = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_coastal = {
+pc_highgrav_coastal = {
 	entity = "coastal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_coastal
 	#appearance
-	picture = pc_dextro_coastal
+	picture = pc_coastal
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -458,18 +458,18 @@ pc_dextro_coastal = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = no
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_cenote = {
+pc_highgrav_cenote = {
 	entity = "cenote_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_cenote
 	#appearance
-	picture = pc_dextro_cenote
+	picture = pc_cenote
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -481,18 +481,18 @@ pc_dextro_cenote = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = no
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mangrove = {
+pc_highgrav_mangrove = {
 	entity = "mangrove_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_mangrove
 	#appearance
-	picture = pc_dextro_mangrove	
+	picture = pc_mangrove	
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -504,19 +504,19 @@ pc_dextro_mangrove = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
 #Swamp
-pc_dextro_wetswamp = {
+pc_highgrav_wetswamp = {
 	entity = "wetswamp_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_wetswamp 
 	#appearance
-	picture = pc_dextro_wetswamp
+	picture = pc_wetswamp
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -528,19 +528,19 @@ pc_dextro_wetswamp = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = no
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
 #Tepui
-pc_dextro_hajungle = {
+pc_highgrav_hajungle = {
 	entity = "hajungle_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tepui
 	#appearance
-	picture = pc_dextro_hajungle
+	picture = pc_hajungle
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -552,19 +552,19 @@ pc_dextro_hajungle = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_aquifer = {
+pc_highgrav_aquifer = {
 	entity = "aquifer_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_aquifer
 	climate = "humid"
 	#appearance
-	picture = pc_dextro_aquifer
+	picture = pc_aquifer
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -580,7 +580,7 @@ pc_dextro_aquifer = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_biolumen = {
+pc_highgrav_biolumen = {
 	entity = "biolumen_planet"
 	icon = GFX_planet_type_biolumen
 	climate = "humid"
@@ -600,7 +600,7 @@ pc_dextro_biolumen = {
 
 
 ## Wet Worlds
-pc_dextro_continental = {
+pc_highgrav_continental = {
 	entity = "continental_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_continental
@@ -617,7 +617,7 @@ pc_dextro_continental = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -634,7 +634,7 @@ pc_dextro_continental = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_ocean = {
+pc_highgrav_ocean = {
 	entity = "ocean_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
@@ -650,7 +650,7 @@ pc_dextro_ocean = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -667,7 +667,7 @@ pc_dextro_ocean = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_aquatic = {
+pc_highgrav_aquatic = {
 	entity = "aquatic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
@@ -682,7 +682,7 @@ pc_dextro_aquatic = {
 	
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -704,12 +704,12 @@ pc_dextro_aquatic = {
 	}
 }
 
-pc_dextro_fog = {
+pc_highgrav_fog = {
 	entity = "fog_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_fog
 	#appearance
-	picture = pc_dextro_fog
+	picture = pc_fog
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -721,13 +721,13 @@ pc_dextro_fog = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = no
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_tepid = {
+pc_highgrav_tepid = {
 	entity = "tepid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tepid
@@ -741,7 +741,7 @@ pc_dextro_tepid = {
 	initial = yes		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	enable_tilt = no
@@ -749,7 +749,7 @@ pc_dextro_tepid = {
 }
 
 
-pc_dextro_retinal = {
+pc_highgrav_retinal = {
 	entity = "retinal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_retinal
@@ -763,12 +763,12 @@ pc_dextro_retinal = {
 	initial = yes		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_forest = {
+pc_highgrav_forest = {
 	entity = "forest_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_forest
@@ -782,13 +782,13 @@ pc_dextro_forest = {
 	initial = yes		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_lake = {
+pc_highgrav_lake = {
 	entity = "lake_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_lake
@@ -802,19 +802,19 @@ pc_dextro_lake = {
 	initial = yes		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_storm = {
+pc_highgrav_storm = {
 	entity = "storm_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_storm
 	climate = "wet"
 	#appearance
-	picture = pc_dextro_storm
+	picture = pc_storm
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -829,13 +829,13 @@ pc_dextro_storm = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_reef = {
+pc_highgrav_reef = {
 	entity = "reef_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_pdreef
 	climate = "wet"
 	#appearance
-	picture = pc_dextro_reef
+	picture = pc_reef
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -856,7 +856,7 @@ pc_dextro_reef = {
 
 ## Cold Worlds
 
-pc_dextro_alpine = {
+pc_highgrav_alpine = {
 	entity = "alpine_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_alpine
@@ -872,7 +872,7 @@ pc_dextro_alpine = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -889,7 +889,7 @@ pc_dextro_alpine = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_tundra = {
+pc_highgrav_tundra = {
 	entity = "tundra_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tundra
@@ -905,7 +905,7 @@ pc_dextro_tundra = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -922,12 +922,12 @@ pc_dextro_tundra = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_basalt = {
+pc_highgrav_basalt = {
 	entity = "basalt_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_basalt
 	#appearance
-	picture = pc_dextro_basalt
+	picture = pc_basalt
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -939,17 +939,17 @@ pc_dextro_basalt = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_duneforest = {
+pc_highgrav_duneforest = {
 	entity = "duneforest_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_duneforest
 	#appearance
-	picture = pc_dextro_duneforest  
+	picture = pc_duneforest  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -961,18 +961,18 @@ pc_dextro_duneforest = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_highland = {
+pc_highgrav_highland = {
 	entity = "highland_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_highland
 	#appearance
-	picture = pc_dextro_highland 
+	picture = pc_highland 
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -984,18 +984,18 @@ pc_dextro_highland = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_hadesert = {
+pc_highgrav_hadesert = {
 	entity = "hadesert_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_atacama
 	#appearance
-	picture = pc_dextro_hadesert  
+	picture = pc_hadesert  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1007,18 +1007,18 @@ pc_dextro_hadesert = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_boreal = {
+pc_highgrav_boreal = {
 	entity = "boreal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_boreal
 	#appearance
-	picture = pc_dextro_boreal 	
+	picture = pc_boreal 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1030,18 +1030,18 @@ pc_dextro_boreal = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_cascadian = {
+pc_highgrav_cascadian = {
 	entity = "cascadian_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_cascadian
 	#appearance
-	picture = pc_dextro_cascadian
+	picture = pc_cascadian
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1053,18 +1053,18 @@ pc_dextro_cascadian = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_swamp = {
+pc_highgrav_swamp = {
 	entity = "swamp_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_bog
 	#appearance
-	picture = pc_dextro_swamp
+	picture = pc_swamp
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1076,12 +1076,12 @@ pc_dextro_swamp = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mushroom = {
+pc_highgrav_mushroom = {
 	entity = "mushroom_planet"
 	icon = GFX_planet_type_mushroom
 	entity_scale = @planet_standard_scale
@@ -1094,18 +1094,18 @@ pc_dextro_mushroom = {
 	initial = yes
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_lichen = {
+pc_highgrav_lichen = {
 	entity = "lichen_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_lichen
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_lichen
+	picture = pc_lichen
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1121,12 +1121,12 @@ pc_dextro_lichen = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mud = {
+pc_highgrav_mud = {
 	entity = "mud_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_mud
 	#appearance
-	picture = pc_dextro_mud
+	picture = pc_mud
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1138,18 +1138,18 @@ pc_dextro_mud = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_lanthanide = {
+pc_highgrav_lanthanide = {
 	entity = "lanthanide_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_lanthanide
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_lanthanide
+	picture = pc_lanthanide
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1168,7 +1168,7 @@ pc_dextro_lanthanide = {
 }
 
 ## Frozen Worlds
-pc_dextro_arctic = {
+pc_highgrav_arctic = {
 	entity = "arctic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arctic
@@ -1184,7 +1184,7 @@ pc_dextro_arctic = {
 
 	min_distance_from_sun = @habitable_min_distance
 	max_distance_from_sun = @habitable_max_distance
-	spawn_odds = @habitable_spawn_odds
+	spawn_odds = 0 #@habitable_spawn_odds
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -1201,12 +1201,12 @@ pc_dextro_arctic = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_snowball = {
+pc_highgrav_snowball = {
 	entity = "snowball_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_snow
 	#appearance
-	picture = pc_dextro_antarctic
+	picture = pc_antarctic
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1218,18 +1218,18 @@ pc_dextro_snowball = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 	starting_planet = no
 }
 
-pc_dextro_aeolian = {
+pc_highgrav_aeolian = {
 	entity = "aeolian_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_aeolin
 	#appearance
-	picture = pc_dextro_aeolian  
+	picture = pc_aeolian  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1241,18 +1241,18 @@ pc_dextro_aeolian = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_snow = {
+pc_highgrav_snow = {
 	entity = "snow_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_snow
 	#appearance
-	picture = pc_dextro_snow  
+	picture = pc_snow  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1264,17 +1264,17 @@ pc_dextro_snow = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_glacial = {
+pc_highgrav_glacial = {
 	entity = "glacial_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_glacial
 	#appearance
-	picture = pc_dextro_glacial  
+	picture = pc_glacial  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1286,18 +1286,18 @@ pc_dextro_glacial = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_antarctic = {
+pc_highgrav_antarctic = {
 	entity = "antarctic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_antarctic
 	#appearance
-	picture = pc_dextro_antarctic  	
+	picture = pc_antarctic  	
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1309,18 +1309,18 @@ pc_dextro_antarctic = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	uses_alternative_skies_for_moons = yes
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_frozen_desert = {
+pc_highgrav_frozen_desert = {
 	entity = "frozen_desert_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_frigid
 	#appearance
-	picture = pc_dextro_frozen_desert  
+	picture = pc_frozen_desert  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1332,17 +1332,17 @@ pc_dextro_frozen_desert = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_subarctic = {
+pc_highgrav_subarctic = {
 	entity = "subarctic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_crag
 	#appearance
-	picture = pc_dextro_subarctic
+	picture = pc_subarctic
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1354,18 +1354,18 @@ pc_dextro_subarctic = {
 	#colonization_tech = { }		
 	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
 	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
-	spawn_odds = 0
+	spawn_odds = 0 #0
 	district_set = standard
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_glacio = {
+pc_highgrav_glacio = {
 	entity = "glacio_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_glacio
 	climate = "frozen"
 	#appearance
-	picture = pc_dextro_glacio
+	picture = pc_glacio
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1381,13 +1381,13 @@ pc_dextro_glacio = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_geothermal = {
+pc_highgrav_geothermal = {
 	entity = "geothermal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_geothermal
 	climate = "frozen"
 	#appearance
-	picture = pc_dextro_geothermal
+	picture = pc_geothermal
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1406,13 +1406,13 @@ pc_dextro_geothermal = {
 
 ## Tidally-Locked Worlds
 
-pc_dextro_eyeball = {
+pc_highgrav_eyeball = {
 	entity = "eyeball_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_eyeball
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_eyeball
+	picture = pc_eyeball
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1431,13 +1431,13 @@ pc_dextro_eyeball = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_tidallylocked = {
+pc_highgrav_tidallylocked = {
 	entity = "tidallylocked_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tidallocked
 	climate = "dry"
 	#appearance
-	picture = pc_dextro_tidallylocked  
+	picture = pc_tidallylocked  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1456,7 +1456,7 @@ pc_dextro_tidallylocked = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_meridiem = {
+pc_highgrav_meridiem = {
 	entity = "meridiem_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tidallylocked
@@ -1489,7 +1489,7 @@ pc_dextro_meridiem = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_scorched = {
+pc_highgrav_scorched = {
 	entity = "flaming_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tidallylocked
@@ -1524,13 +1524,51 @@ pc_dextro_scorched = {
 
 ## Exotic Worlds
 
-pc_dextro_rogue = {
+pc_highgrav_gaia = {
+	entity = "gaia_planet"
+	entity_scale = @planet_standard_scale
+	icon = GFX_planet_type_gaia
+
+	atmosphere_color 		= hsv { 0.58	0.3 0.7 }
+	atmosphere_intensity 	= 1.0
+	atmosphere_width 		= 0.5
+
+	city_color_lut = "gfx/portraits/misc/colorcorrection_tropical.dds"
+
+	modifier = {
+		planet_jobs_produces_mult = 0.10
+		biological_pop_happiness = 0.10
+		lithoid_pop_happiness = 0.10
+	}
+
+	min_distance_from_sun = 60
+	max_distance_from_sun = 95
+	spawn_odds = 0 #0.05
+
+	extra_orbit_size = 0
+	extra_planet_count = 0
+
+	chance_of_ring = 0.2
+
+	planet_size = { min = @habitable_planet_min_size max = @habitable_planet_max_size }
+	moon_size = { min = @habitable_moon_min_size max = @habitable_moon_max_size }
+
+	colonizable = yes
+	district_set = standard
+	ideal = yes
+	starting_planet = no
+	uses_alternative_skies_for_moons = yes
+
+	carry_cap_per_free_district = @carry_cap_high
+}
+
+pc_highgrav_rogue = {
 	entity = "rogue_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_rogue
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_rogue
+	picture = pc_rogue
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1548,13 +1586,13 @@ pc_dextro_rogue = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }
 
-pc_dextro_superhabitable = {
+pc_highgrav_superhabitable = {
 	entity = "superhabitable_planet"
 	entity_scale = @planet_standard_scale	
 	icon = GFX_planet_type_superhab
 	climate = "temperate"
 	#appearance
-	picture = pc_dextro_superhabitable
+	picture = pc_superhabitable
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1573,7 +1611,7 @@ pc_dextro_superhabitable = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }
 
-pc_dextro_relic = {
+pc_highgrav_relic = {
 	entity = "relic_world"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_nuked
@@ -1588,7 +1626,7 @@ pc_dextro_relic = {
 
 	min_distance_from_sun = 60
 	max_distance_from_sun = 110
-	spawn_odds = 0
+	spawn_odds = 0 #0
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -1612,13 +1650,13 @@ pc_dextro_relic = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_primal = {
+pc_highgrav_primal = {
 	entity = "primal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_primal
 	climate = "humid"
 	#appearance
-	picture = pc_dextro_primal
+	picture = pc_primal
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1637,12 +1675,12 @@ pc_dextro_primal = {
 
 ## Toxic Habitable
 
-pc_dextro_acid = {
+pc_highgrav_acid = {
 	entity = "acid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_acid
 	#appearance
-	picture = pc_dextro_acid
+	picture = pc_acid
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1660,12 +1698,12 @@ pc_dextro_acid = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }	
 
-pc_dextro_chlorine = {
+pc_highgrav_chlorine = {
 	entity = "ammonia_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ammonia
 	#appearance
-	picture = pc_dextro_ammonia
+	picture = pc_ammonia
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1682,12 +1720,12 @@ pc_dextro_chlorine = {
 	starting_planet = no
 }
 
-pc_dextro_methane = {
+pc_highgrav_methane = {
 	entity = "methane_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_methane
 	#appearance
-	picture = pc_dextro_methane
+	picture = pc_methane
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1705,12 +1743,12 @@ pc_dextro_methane = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }		
 
-pc_dextro_ammonia = {
+pc_highgrav_ammonia = {
 	entity = "ammonia_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ammonia
 	#appearance
-	picture = pc_dextro_ammonia
+	picture = pc_ammonia
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1728,12 +1766,12 @@ pc_dextro_ammonia = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }			
 
-pc_dextro_sulfur = {
+pc_highgrav_sulfur = {
 	entity = "sulfur_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_sulfur
 	#appearance
-	picture = pc_dextro_sulfur	
+	picture = pc_sulfur	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1751,12 +1789,12 @@ pc_dextro_sulfur = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }		
 
-pc_dextro_ash = {
+pc_highgrav_ash = {
 	entity = "ash_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ash
 	#appearance
-	picture = pc_dextro_ash
+	picture = pc_ash
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1774,13 +1812,13 @@ pc_dextro_ash = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }	
 
-pc_dextro_irradiated = {
+pc_highgrav_irradiated = {
 	entity = "irradiated_planet"
 	entity_scale = @planet_standard_scale	
 	icon = GFX_planet_type_radiotropic
 	climate = "exotic"
 	#appearance
-	picture = pc_dextro_irradiated
+	picture = pc_irradiated
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1797,12 +1835,12 @@ pc_dextro_irradiated = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }	
 
-pc_dextro_mephitic = {
+pc_highgrav_mephitic = {
 	entity = "toxic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_toxic
 	#appearance
-	picture = pc_dextro_toxic
+	picture = pc_toxic
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1819,7 +1857,7 @@ pc_dextro_mephitic = {
 	starting_planet = no
 }
 
-pc_dextro_nuked = {
+pc_highgrav_nuked = {
 	entity = "nuked_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_nuked
@@ -1832,7 +1870,7 @@ pc_dextro_nuked = {
 
 	min_distance_from_sun = 60
 	max_distance_from_sun = 110
-	spawn_odds = 0.15
+	spawn_odds = 0 #0.15
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -1858,163 +1896,176 @@ pc_dextro_nuked = {
 # ###########
 
 random_list = {
-	name = "rl_dextro_habitable_normal"
+	name = "rl_highgrav_habitable_normal"
 	planets = {
-		"pc_dextro_arid"
-		"pc_dextro_desert"
-		"pc_dextro_mesa"
-		"pc_dextro_sandsea"
-		"pc_dextro_outback"
-		"pc_dextro_semiarid"
-		"pc_dextro_oasis"
-		"pc_dextro_badlands"
-		"pc_dextro_tropical"
-		"pc_dextro_coastal"
-		"pc_dextro_cenote"
-		"pc_dextro_mangrove"
-		"pc_dextro_wetswamp"
-		"pc_dextro_hajungle"
-		"pc_dextro_aquifer"
-		"pc_dextro_biolumen"
-		"pc_dextro_savannah"
-		"pc_dextro_steppe"
-		"pc_dextro_megaflora"
-		"pc_dextro_veld"
-		"pc_dextro_desertislands"
-		"pc_dextro_med"
-		"pc_dextro_supercon"
-		"pc_dextro_prairie"
-		"pc_dextro_continental"
-		"pc_dextro_ocean"
-		"pc_dextro_alpine"
-		"pc_dextro_aquatic"
-		"pc_dextro_fog"
-		"pc_dextro_tepid"
-		"pc_dextro_retinal"
-		"pc_dextro_forest"
-		"pc_dextro_lake"
-		"pc_dextro_storm"
-		"pc_dextro_reef"
-		"pc_dextro_tundra"
-		"pc_dextro_basalt"
-		"pc_dextro_duneforest"
-		"pc_dextro_highland"
-		"pc_dextro_hadesert"
-		"pc_dextro_boreal"
-		"pc_dextro_cascadian"
-		"pc_dextro_swamp"
-		"pc_dextro_mushroom"
-		"pc_dextro_lichen"
-		"pc_dextro_lanthanide"
-		"pc_dextro_mud"
-		"pc_dextro_arctic"
-		"pc_dextro_snowball"
-		"pc_dextro_aeolian"
-		"pc_dextro_antarctic"
-		"pc_dextro_snow"
-		"pc_dextro_glacial"
-		"pc_dextro_frozen_desert"
-		"pc_dextro_subarctic"
-		"pc_dextro_glacio"
-		"pc_dextro_geothermal"
+		"pc_highgrav_arid"
+		"pc_highgrav_desert"
+		"pc_highgrav_mesa"
+		"pc_highgrav_sandsea"
+		"pc_highgrav_outback"
+		"pc_highgrav_semiarid"
+		"pc_highgrav_oasis"
+		"pc_highgrav_badlands"
+		"pc_highgrav_tropical"
+		"pc_highgrav_coastal"
+		"pc_highgrav_cenote"
+		"pc_highgrav_mangrove"
+		"pc_highgrav_wetswamp"
+		"pc_highgrav_hajungle"
+		"pc_highgrav_aquifer"
+		"pc_highgrav_biolumen"
+		"pc_highgrav_savannah"
+		"pc_highgrav_steppe"
+		"pc_highgrav_megaflora"
+		"pc_highgrav_veld"
+		"pc_highgrav_desertislands"
+		"pc_highgrav_med"
+		"pc_highgrav_supercon"
+		"pc_highgrav_prairie"
+		"pc_highgrav_continental"
+		"pc_highgrav_ocean"
+		"pc_highgrav_alpine"
+		"pc_highgrav_aquatic"
+		"pc_highgrav_fog"
+		"pc_highgrav_tepid"
+		"pc_highgrav_retinal"
+		"pc_highgrav_forest"
+		"pc_highgrav_lake"
+		"pc_highgrav_storm"
+		"pc_highgrav_reef"
+		"pc_highgrav_tundra"
+		"pc_highgrav_basalt"
+		"pc_highgrav_duneforest"
+		"pc_highgrav_highland"
+		"pc_highgrav_hadesert"
+		"pc_highgrav_boreal"
+		"pc_highgrav_cascadian"
+		"pc_highgrav_swamp"
+		"pc_highgrav_mushroom"
+		"pc_highgrav_lichen"
+		"pc_highgrav_lanthanide"
+		"pc_highgrav_mud"
+		"pc_highgrav_arctic"
+		"pc_highgrav_snowball"
+		"pc_highgrav_aeolian"
+		"pc_highgrav_antarctic"
+		"pc_highgrav_snow"
+		"pc_highgrav_glacial"
+		"pc_highgrav_frozen_desert"
+		"pc_highgrav_subarctic"
+		"pc_highgrav_glacio"
+		"pc_highgrav_geothermal"
 	}
 }
 
 random_list = {
-	name = "rl_dextro_habitable_special"
+	name = "rl_highgrav_habitable_special"
 	planets = {
-		"pc_dextro_nuked"
-		"pc_dextro_rogue"
-		"pc_dextro_superhabitable"
-		"pc_dextro_relic"
-		"pc_dextro_primal"
+		"pc_highgrav_gaia"
+		"pc_highgrav_nuked"
+		"pc_highgrav_rogue"
+		"pc_highgrav_superhabitable"
+		"pc_highgrav_relic"
+		"pc_highgrav_primal"
 	}
 }
 
 random_list = {
-	name = "rl_dextro_habitable_toxic"
+	name = "rl_highgrav_habitable_toxic"
 	planets = {
-		"pc_dextro_acid"
-		"pc_dextro_chlorine"
-		"pc_dextro_methane"
-		"pc_dextro_ammonia"
-		"pc_dextro_sulfur"
-		"pc_dextro_ash"
-		"pc_dextro_irradiated"
-		"pc_dextro_mephitic"
+		"pc_highgrav_acid"
+		"pc_highgrav_chlorine"
+		"pc_highgrav_methane"
+		"pc_highgrav_ammonia"
+		"pc_highgrav_sulfur"
+		"pc_highgrav_ash"
+		"pc_highgrav_irradiated"
+		"pc_highgrav_mephitic"
 	}
 }
 
 random_list = {
-	name = "rl_dextro_tidallylocked"
+	name = "rl_highgrav_tidallylocked"
 	planets = {
-		"pc_dextro_eyeball"
-		"pc_dextro_tidallylocked"
-		"pc_dextro_meridiem"
-		"pc_dextro_scorched"
+		"pc_highgrav_eyeball"
+		"pc_highgrav_tidallylocked"
+		"pc_highgrav_meridiem"
+		"pc_highgrav_scorched"
 	}
 }
 
 random_list = {
-	name = "rl_all_dextro_planets"
+	name = "rl_all_highgrav_planets"
 	planets = {
-		"pc_dextro_arid"
-		"pc_dextro_desert"
-		"pc_dextro_mesa"
-		"pc_dextro_sandsea"
-		"pc_dextro_outback"
-		"pc_dextro_semiarid"
-		"pc_dextro_oasis"
-		"pc_dextro_badlands"
-		"pc_dextro_tropical"
-		"pc_dextro_coastal"
-		"pc_dextro_cenote"
-		"pc_dextro_mangrove"
-		"pc_dextro_wetswamp"
-		"pc_dextro_hajungle"
-		"pc_dextro_aquifer"
-		"pc_dextro_biolumen"
-		"pc_dextro_savannah"
-		"pc_dextro_steppe"
-		"pc_dextro_megaflora"
-		"pc_dextro_veld"
-		"pc_dextro_desertislands"
-		"pc_dextro_med"
-		"pc_dextro_supercon"
-		"pc_dextro_prairie"
-		"pc_dextro_continental"
-		"pc_dextro_ocean"
-		"pc_dextro_alpine"
-		"pc_dextro_aquatic"
-		"pc_dextro_fog"
-		"pc_dextro_tepid"
-		"pc_dextro_retinal"
-		"pc_dextro_forest"
-		"pc_dextro_lake"
-		"pc_dextro_storm"
-		"pc_dextro_reef"
-		"pc_dextro_tundra"
-		"pc_dextro_basalt"
-		"pc_dextro_duneforest"
-		"pc_dextro_highland"
-		"pc_dextro_hadesert"
-		"pc_dextro_boreal"
-		"pc_dextro_cascadian"
-		"pc_dextro_swamp"
-		"pc_dextro_mushroom"
-		"pc_dextro_lichen"
-		"pc_dextro_lanthanide"
-		"pc_dextro_mud"
-		"pc_dextro_arctic"
-		"pc_dextro_snowball"
-		"pc_dextro_aeolian"
-		"pc_dextro_antarctic"
-		"pc_dextro_snow"
-		"pc_dextro_glacial"
-		"pc_dextro_frozen_desert"
-		"pc_dextro_subarctic"
-		"pc_dextro_glacio"
-		"pc_dextro_geothermal"
+		"pc_highgrav_arid"
+		"pc_highgrav_desert"
+		"pc_highgrav_mesa"
+		"pc_highgrav_sandsea"
+		"pc_highgrav_outback"
+		"pc_highgrav_semiarid"
+		"pc_highgrav_oasis"
+		"pc_highgrav_badlands"
+		"pc_highgrav_tropical"
+		"pc_highgrav_coastal"
+		"pc_highgrav_cenote"
+		"pc_highgrav_mangrove"
+		"pc_highgrav_wetswamp"
+		"pc_highgrav_hajungle"
+		"pc_highgrav_aquifer"
+		"pc_highgrav_biolumen"
+		"pc_highgrav_savannah"
+		"pc_highgrav_steppe"
+		"pc_highgrav_megaflora"
+		"pc_highgrav_veld"
+		"pc_highgrav_desertislands"
+		"pc_highgrav_med"
+		"pc_highgrav_supercon"
+		"pc_highgrav_prairie"
+		"pc_highgrav_continental"
+		"pc_highgrav_ocean"
+		"pc_highgrav_alpine"
+		"pc_highgrav_aquatic"
+		"pc_highgrav_fog"
+		"pc_highgrav_tepid"
+		"pc_highgrav_retinal"
+		"pc_highgrav_forest"
+		"pc_highgrav_lake"
+		"pc_highgrav_storm"
+		"pc_highgrav_reef"
+		"pc_highgrav_tundra"
+		"pc_highgrav_basalt"
+		"pc_highgrav_duneforest"
+		"pc_highgrav_highland"
+		"pc_highgrav_hadesert"
+		"pc_highgrav_boreal"
+		"pc_highgrav_cascadian"
+		"pc_highgrav_swamp"
+		"pc_highgrav_mushroom"
+		"pc_highgrav_lichen"
+		"pc_highgrav_lanthanide"
+		"pc_highgrav_mud"
+		"pc_highgrav_arctic"
+		"pc_highgrav_snowball"
+		"pc_highgrav_aeolian"
+		"pc_highgrav_antarctic"
+		"pc_highgrav_snow"
+		"pc_highgrav_glacial"
+		"pc_highgrav_frozen_desert"
+		"pc_highgrav_subarctic"
+		"pc_highgrav_glacio"
+		"pc_highgrav_geothermal"
+		"pc_highgrav_acid"
+		"pc_highgrav_chlorine"
+		"pc_highgrav_methane"
+		"pc_highgrav_ammonia"
+		"pc_highgrav_sulfur"
+		"pc_highgrav_ash"
+		"pc_highgrav_irradiated"
+		"pc_highgrav_mephitic"
+		"pc_highgrav_eyeball"
+		"pc_highgrav_tidallylocked"
+		"pc_highgrav_meridiem"
+		"pc_highgrav_scorched"
 	}
 }
 				

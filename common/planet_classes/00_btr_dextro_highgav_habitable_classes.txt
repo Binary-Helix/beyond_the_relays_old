@@ -5,7 +5,7 @@
 
 ## Arid Worlds
 
-pc_dextro_arid = {
+pc_dextro_highgrav_arid = {
 	entity = "arid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arid
@@ -38,7 +38,7 @@ pc_dextro_arid = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_desert = {
+pc_dextro_highgrav_desert = {
 	entity = "desert_planet"
 	icon = GFX_planet_type_desert
 
@@ -74,12 +74,12 @@ pc_dextro_desert = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mesa = {
+pc_dextro_highgrav_mesa = {
 	entity = "mesa_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_mesa
 	#appearance
-	picture = pc_dextro_mesa
+	picture = pc_dextro_highgrav_mesa
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -97,12 +97,12 @@ pc_dextro_mesa = {
 	carry_cap_per_free_district = @carry_cap_normal
 }	
 
-pc_dextro_sandsea = {
+pc_dextro_highgrav_sandsea = {
 	entity = "sandsea_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_dune
 	#appearance
-	picture = pc_dextro_sandsea	
+	picture = pc_dextro_highgrav_sandsea	
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -120,12 +120,12 @@ pc_dextro_sandsea = {
 	carry_cap_per_free_district = @carry_cap_normal
 }	
 
-pc_dextro_outback = {
+pc_dextro_highgrav_outback = {
 	entity = "outback_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_outback
 	#appearance
-	picture = pc_dextro_outback
+	picture = pc_dextro_highgrav_outback
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -143,12 +143,12 @@ pc_dextro_outback = {
 	carry_cap_per_free_district = @carry_cap_normal
 }	
 
-pc_dextro_semiarid = {
+pc_dextro_highgrav_semiarid = {
 	entity = "semiarid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_semiarid
 	#appearance
-	picture = pc_dextro_semiarid  
+	picture = pc_dextro_highgrav_semiarid  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -166,12 +166,12 @@ pc_dextro_semiarid = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_oasis = {
+pc_dextro_highgrav_oasis = {
 	entity = "oasis_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_oasis
 	#appearance
-	picture = pc_dextro_oasis
+	picture = pc_dextro_highgrav_oasis
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -188,12 +188,12 @@ pc_dextro_oasis = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_badlands = {
+pc_dextro_highgrav_badlands = {
 	entity = "badlands_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_badlands
 	#appearance
-	picture = pc_dextro_badlands
+	picture = pc_dextro_highgrav_badlands
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -212,7 +212,7 @@ pc_dextro_badlands = {
 }
 
 ## Temperate Worlds
-pc_dextro_savannah = {
+pc_dextro_highgrav_savannah = {
 	entity = "savannah_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_savannah
@@ -245,12 +245,12 @@ pc_dextro_savannah = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_steppe = {
+pc_dextro_highgrav_steppe = {
 	entity = "steppe_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_steppe
 	#appearance
-	picture = pc_dextro_steppe  
+	picture = pc_dextro_highgrav_steppe  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -268,12 +268,12 @@ pc_dextro_steppe = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_veld = {
+pc_dextro_highgrav_veld = {
 	entity = "veld_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_veld
 	#appearance
-	picture = pc_dextro_veld  
+	picture = pc_dextro_highgrav_veld  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -292,7 +292,7 @@ pc_dextro_veld = {
 }
 
 #Atoll
-pc_dextro_desertislands = {
+pc_dextro_highgrav_desertislands = {
 	entity = "desertislands_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_atoll
@@ -314,12 +314,12 @@ pc_dextro_desertislands = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_prairie = {
+pc_dextro_highgrav_prairie = {
 	entity = "prairie_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_prarie
 	#appearance
-	picture = pc_dextro_prairie
+	picture = pc_dextro_highgrav_prairie
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -338,12 +338,12 @@ pc_dextro_prairie = {
 }
 
 #Mediterranean
-pc_dextro_med = {
+pc_dextro_highgrav_med = {
 	entity = "med_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_med
 	#appearance
-	picture = pc_dextro_med
+	picture = pc_dextro_highgrav_med
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -361,13 +361,13 @@ pc_dextro_med = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_supercon = {
+pc_dextro_highgrav_supercon = {
 	entity = "supercon_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_supercon
 	climate = "temperate"
 	#appearance
-	picture = pc_dextro_supercon
+	picture = pc_dextro_highgrav_supercon
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -384,13 +384,13 @@ pc_dextro_supercon = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_megaflora = {
+pc_dextro_highgrav_megaflora = {
 	entity = "megaflora_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_megaflora
 	climate = "temperate"
 	#appearance
-	picture = pc_dextro_megaflora
+	picture = pc_dextro_highgrav_megaflora
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -408,7 +408,7 @@ pc_dextro_megaflora = {
 
 
 ## Humid Worlds
-pc_dextro_tropical = {
+pc_dextro_highgrav_tropical = {
 	entity = "tropical_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tropical
@@ -441,12 +441,12 @@ pc_dextro_tropical = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_coastal = {
+pc_dextro_highgrav_coastal = {
 	entity = "coastal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_coastal
 	#appearance
-	picture = pc_dextro_coastal
+	picture = pc_dextro_highgrav_coastal
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -464,12 +464,12 @@ pc_dextro_coastal = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_cenote = {
+pc_dextro_highgrav_cenote = {
 	entity = "cenote_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_cenote
 	#appearance
-	picture = pc_dextro_cenote
+	picture = pc_dextro_highgrav_cenote
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -487,12 +487,12 @@ pc_dextro_cenote = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mangrove = {
+pc_dextro_highgrav_mangrove = {
 	entity = "mangrove_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_mangrove
 	#appearance
-	picture = pc_dextro_mangrove	
+	picture = pc_dextro_highgrav_mangrove	
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -511,12 +511,12 @@ pc_dextro_mangrove = {
 }
 
 #Swamp
-pc_dextro_wetswamp = {
+pc_dextro_highgrav_wetswamp = {
 	entity = "wetswamp_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_wetswamp 
 	#appearance
-	picture = pc_dextro_wetswamp
+	picture = pc_dextro_highgrav_wetswamp
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -535,12 +535,12 @@ pc_dextro_wetswamp = {
 }
 
 #Tepui
-pc_dextro_hajungle = {
+pc_dextro_highgrav_hajungle = {
 	entity = "hajungle_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tepui
 	#appearance
-	picture = pc_dextro_hajungle
+	picture = pc_dextro_highgrav_hajungle
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -558,13 +558,13 @@ pc_dextro_hajungle = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_aquifer = {
+pc_dextro_highgrav_aquifer = {
 	entity = "aquifer_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_aquifer
 	climate = "humid"
 	#appearance
-	picture = pc_dextro_aquifer
+	picture = pc_dextro_highgrav_aquifer
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -580,7 +580,7 @@ pc_dextro_aquifer = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_biolumen = {
+pc_dextro_highgrav_biolumen = {
 	entity = "biolumen_planet"
 	icon = GFX_planet_type_biolumen
 	climate = "humid"
@@ -600,7 +600,7 @@ pc_dextro_biolumen = {
 
 
 ## Wet Worlds
-pc_dextro_continental = {
+pc_dextro_highgrav_continental = {
 	entity = "continental_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_continental
@@ -634,7 +634,7 @@ pc_dextro_continental = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_ocean = {
+pc_dextro_highgrav_ocean = {
 	entity = "ocean_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
@@ -667,7 +667,7 @@ pc_dextro_ocean = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_aquatic = {
+pc_dextro_highgrav_aquatic = {
 	entity = "aquatic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ocean
@@ -704,12 +704,12 @@ pc_dextro_aquatic = {
 	}
 }
 
-pc_dextro_fog = {
+pc_dextro_highgrav_fog = {
 	entity = "fog_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_fog
 	#appearance
-	picture = pc_dextro_fog
+	picture = pc_dextro_highgrav_fog
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -727,7 +727,7 @@ pc_dextro_fog = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_tepid = {
+pc_dextro_highgrav_tepid = {
 	entity = "tepid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tepid
@@ -749,7 +749,7 @@ pc_dextro_tepid = {
 }
 
 
-pc_dextro_retinal = {
+pc_dextro_highgrav_retinal = {
 	entity = "retinal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_retinal
@@ -768,7 +768,7 @@ pc_dextro_retinal = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_forest = {
+pc_dextro_highgrav_forest = {
 	entity = "forest_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_forest
@@ -788,7 +788,7 @@ pc_dextro_forest = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_lake = {
+pc_dextro_highgrav_lake = {
 	entity = "lake_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_lake
@@ -808,13 +808,13 @@ pc_dextro_lake = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_storm = {
+pc_dextro_highgrav_storm = {
 	entity = "storm_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_storm
 	climate = "wet"
 	#appearance
-	picture = pc_dextro_storm
+	picture = pc_dextro_highgrav_storm
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -829,13 +829,13 @@ pc_dextro_storm = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_reef = {
+pc_dextro_highgrav_reef = {
 	entity = "reef_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_pdreef
 	climate = "wet"
 	#appearance
-	picture = pc_dextro_reef
+	picture = pc_dextro_highgrav_reef
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -856,7 +856,7 @@ pc_dextro_reef = {
 
 ## Cold Worlds
 
-pc_dextro_alpine = {
+pc_dextro_highgrav_alpine = {
 	entity = "alpine_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_alpine
@@ -889,7 +889,7 @@ pc_dextro_alpine = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_tundra = {
+pc_dextro_highgrav_tundra = {
 	entity = "tundra_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tundra
@@ -922,12 +922,12 @@ pc_dextro_tundra = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_basalt = {
+pc_dextro_highgrav_basalt = {
 	entity = "basalt_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_basalt
 	#appearance
-	picture = pc_dextro_basalt
+	picture = pc_dextro_highgrav_basalt
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -944,12 +944,12 @@ pc_dextro_basalt = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_duneforest = {
+pc_dextro_highgrav_duneforest = {
 	entity = "duneforest_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_duneforest
 	#appearance
-	picture = pc_dextro_duneforest  
+	picture = pc_dextro_highgrav_duneforest  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -967,12 +967,12 @@ pc_dextro_duneforest = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_highland = {
+pc_dextro_highgrav_highland = {
 	entity = "highland_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_highland
 	#appearance
-	picture = pc_dextro_highland 
+	picture = pc_dextro_highgrav_highland 
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -990,12 +990,12 @@ pc_dextro_highland = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_hadesert = {
+pc_dextro_highgrav_hadesert = {
 	entity = "hadesert_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_atacama
 	#appearance
-	picture = pc_dextro_hadesert  
+	picture = pc_dextro_highgrav_hadesert  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1013,12 +1013,12 @@ pc_dextro_hadesert = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_boreal = {
+pc_dextro_highgrav_boreal = {
 	entity = "boreal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_boreal
 	#appearance
-	picture = pc_dextro_boreal 	
+	picture = pc_dextro_highgrav_boreal 	
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1036,12 +1036,12 @@ pc_dextro_boreal = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_cascadian = {
+pc_dextro_highgrav_cascadian = {
 	entity = "cascadian_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_cascadian
 	#appearance
-	picture = pc_dextro_cascadian
+	picture = pc_dextro_highgrav_cascadian
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1059,12 +1059,12 @@ pc_dextro_cascadian = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_swamp = {
+pc_dextro_highgrav_swamp = {
 	entity = "swamp_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_bog
 	#appearance
-	picture = pc_dextro_swamp
+	picture = pc_dextro_highgrav_swamp
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1081,7 +1081,7 @@ pc_dextro_swamp = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mushroom = {
+pc_dextro_highgrav_mushroom = {
 	entity = "mushroom_planet"
 	icon = GFX_planet_type_mushroom
 	entity_scale = @planet_standard_scale
@@ -1099,13 +1099,13 @@ pc_dextro_mushroom = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_lichen = {
+pc_dextro_highgrav_lichen = {
 	entity = "lichen_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_lichen
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_lichen
+	picture = pc_dextro_highgrav_lichen
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1121,12 +1121,12 @@ pc_dextro_lichen = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_mud = {
+pc_dextro_highgrav_mud = {
 	entity = "mud_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_mud
 	#appearance
-	picture = pc_dextro_mud
+	picture = pc_dextro_highgrav_mud
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1143,13 +1143,13 @@ pc_dextro_mud = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_lanthanide = {
+pc_dextro_highgrav_lanthanide = {
 	entity = "lanthanide_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_lanthanide
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_lanthanide
+	picture = pc_dextro_highgrav_lanthanide
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1168,7 +1168,7 @@ pc_dextro_lanthanide = {
 }
 
 ## Frozen Worlds
-pc_dextro_arctic = {
+pc_dextro_highgrav_arctic = {
 	entity = "arctic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arctic
@@ -1201,12 +1201,12 @@ pc_dextro_arctic = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_snowball = {
+pc_dextro_highgrav_snowball = {
 	entity = "snowball_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_snow
 	#appearance
-	picture = pc_dextro_antarctic
+	picture = pc_dextro_highgrav_antarctic
 	atmosphere_color 		= hsv { 0.58 0.3 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1224,12 +1224,12 @@ pc_dextro_snowball = {
 	starting_planet = no
 }
 
-pc_dextro_aeolian = {
+pc_dextro_highgrav_aeolian = {
 	entity = "aeolian_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_aeolin
 	#appearance
-	picture = pc_dextro_aeolian  
+	picture = pc_dextro_highgrav_aeolian  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1247,12 +1247,12 @@ pc_dextro_aeolian = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_snow = {
+pc_dextro_highgrav_snow = {
 	entity = "snow_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_snow
 	#appearance
-	picture = pc_dextro_snow  
+	picture = pc_dextro_highgrav_snow  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1269,12 +1269,12 @@ pc_dextro_snow = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_glacial = {
+pc_dextro_highgrav_glacial = {
 	entity = "glacial_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_glacial
 	#appearance
-	picture = pc_dextro_glacial  
+	picture = pc_dextro_highgrav_glacial  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1292,12 +1292,12 @@ pc_dextro_glacial = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_antarctic = {
+pc_dextro_highgrav_antarctic = {
 	entity = "antarctic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_antarctic
 	#appearance
-	picture = pc_dextro_antarctic  	
+	picture = pc_dextro_highgrav_antarctic  	
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1315,12 +1315,12 @@ pc_dextro_antarctic = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_frozen_desert = {
+pc_dextro_highgrav_frozen_desert = {
 	entity = "frozen_desert_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_frigid
 	#appearance
-	picture = pc_dextro_frozen_desert  
+	picture = pc_dextro_highgrav_frozen_desert  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1337,12 +1337,12 @@ pc_dextro_frozen_desert = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_subarctic = {
+pc_dextro_highgrav_subarctic = {
 	entity = "subarctic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_crag
 	#appearance
-	picture = pc_dextro_subarctic
+	picture = pc_dextro_highgrav_subarctic
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1359,13 +1359,13 @@ pc_dextro_subarctic = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_glacio = {
+pc_dextro_highgrav_glacio = {
 	entity = "glacio_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_glacio
 	climate = "frozen"
 	#appearance
-	picture = pc_dextro_glacio
+	picture = pc_dextro_highgrav_glacio
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1381,13 +1381,13 @@ pc_dextro_glacio = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_geothermal = {
+pc_dextro_highgrav_geothermal = {
 	entity = "geothermal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_geothermal
 	climate = "frozen"
 	#appearance
-	picture = pc_dextro_geothermal
+	picture = pc_dextro_highgrav_geothermal
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1406,13 +1406,13 @@ pc_dextro_geothermal = {
 
 ## Tidally-Locked Worlds
 
-pc_dextro_eyeball = {
+pc_dextro_highgrav_eyeball = {
 	entity = "eyeball_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_eyeball
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_eyeball
+	picture = pc_dextro_highgrav_eyeball
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1431,13 +1431,13 @@ pc_dextro_eyeball = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_tidallylocked = {
+pc_dextro_highgrav_tidallylocked = {
 	entity = "tidallylocked_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tidallocked
 	climate = "dry"
 	#appearance
-	picture = pc_dextro_tidallylocked  
+	picture = pc_dextro_highgrav_tidallylocked  
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1456,7 +1456,7 @@ pc_dextro_tidallylocked = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_meridiem = {
+pc_dextro_highgrav_meridiem = {
 	entity = "meridiem_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tidallylocked
@@ -1489,7 +1489,7 @@ pc_dextro_meridiem = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_scorched = {
+pc_dextro_highgrav_scorched = {
 	entity = "flaming_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_tidallylocked
@@ -1524,13 +1524,13 @@ pc_dextro_scorched = {
 
 ## Exotic Worlds
 
-pc_dextro_rogue = {
+pc_dextro_highgrav_rogue = {
 	entity = "rogue_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_rogue
 	climate = "cold"
 	#appearance
-	picture = pc_dextro_rogue
+	picture = pc_dextro_highgrav_rogue
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1548,13 +1548,13 @@ pc_dextro_rogue = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }
 
-pc_dextro_superhabitable = {
+pc_dextro_highgrav_superhabitable = {
 	entity = "superhabitable_planet"
 	entity_scale = @planet_standard_scale	
 	icon = GFX_planet_type_superhab
 	climate = "temperate"
 	#appearance
-	picture = pc_dextro_superhabitable
+	picture = pc_dextro_highgrav_superhabitable
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1573,7 +1573,7 @@ pc_dextro_superhabitable = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }
 
-pc_dextro_relic = {
+pc_dextro_highgrav_relic = {
 	entity = "relic_world"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_nuked
@@ -1612,13 +1612,13 @@ pc_dextro_relic = {
 	carry_cap_per_free_district = @carry_cap_normal
 }
 
-pc_dextro_primal = {
+pc_dextro_highgrav_primal = {
 	entity = "primal_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_primal
 	climate = "humid"
 	#appearance
-	picture = pc_dextro_primal
+	picture = pc_dextro_highgrav_primal
 	atmosphere_color 		= hsv { 0.58 0.3 0.7 }			
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1637,12 +1637,12 @@ pc_dextro_primal = {
 
 ## Toxic Habitable
 
-pc_dextro_acid = {
+pc_dextro_highgrav_acid = {
 	entity = "acid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_acid
 	#appearance
-	picture = pc_dextro_acid
+	picture = pc_dextro_highgrav_acid
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1660,12 +1660,12 @@ pc_dextro_acid = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }	
 
-pc_dextro_chlorine = {
+pc_dextro_highgrav_chlorine = {
 	entity = "ammonia_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ammonia
 	#appearance
-	picture = pc_dextro_ammonia
+	picture = pc_dextro_highgrav_ammonia
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1682,12 +1682,12 @@ pc_dextro_chlorine = {
 	starting_planet = no
 }
 
-pc_dextro_methane = {
+pc_dextro_highgrav_methane = {
 	entity = "methane_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_methane
 	#appearance
-	picture = pc_dextro_methane
+	picture = pc_dextro_highgrav_methane
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1705,12 +1705,12 @@ pc_dextro_methane = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }		
 
-pc_dextro_ammonia = {
+pc_dextro_highgrav_ammonia = {
 	entity = "ammonia_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ammonia
 	#appearance
-	picture = pc_dextro_ammonia
+	picture = pc_dextro_highgrav_ammonia
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1728,12 +1728,12 @@ pc_dextro_ammonia = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }			
 
-pc_dextro_sulfur = {
+pc_dextro_highgrav_sulfur = {
 	entity = "sulfur_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_sulfur
 	#appearance
-	picture = pc_dextro_sulfur	
+	picture = pc_dextro_highgrav_sulfur	
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1751,12 +1751,12 @@ pc_dextro_sulfur = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }		
 
-pc_dextro_ash = {
+pc_dextro_highgrav_ash = {
 	entity = "ash_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_ash
 	#appearance
-	picture = pc_dextro_ash
+	picture = pc_dextro_highgrav_ash
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1774,13 +1774,13 @@ pc_dextro_ash = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }	
 
-pc_dextro_irradiated = {
+pc_dextro_highgrav_irradiated = {
 	entity = "irradiated_planet"
 	entity_scale = @planet_standard_scale	
 	icon = GFX_planet_type_radiotropic
 	climate = "exotic"
 	#appearance
-	picture = pc_dextro_irradiated
+	picture = pc_dextro_highgrav_irradiated
 	atmosphere_color 		= hsv { 0.48 0.15 0.8 }		
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1797,12 +1797,12 @@ pc_dextro_irradiated = {
 	modifier = { planet_jobs_produces_mult = 0.05 biological_pop_happiness = 0.05 lithoid_pop_happiness = 0.05 }
 }	
 
-pc_dextro_mephitic = {
+pc_dextro_highgrav_mephitic = {
 	entity = "toxic_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_toxic
 	#appearance
-	picture = pc_dextro_toxic
+	picture = pc_dextro_highgrav_toxic
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -1819,7 +1819,7 @@ pc_dextro_mephitic = {
 	starting_planet = no
 }
 
-pc_dextro_nuked = {
+pc_dextro_highgrav_nuked = {
 	entity = "nuked_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_nuked
@@ -1858,163 +1858,163 @@ pc_dextro_nuked = {
 # ###########
 
 random_list = {
-	name = "rl_dextro_habitable_normal"
+	name = "rl_dextro_highgrav_habitable_normal"
 	planets = {
-		"pc_dextro_arid"
-		"pc_dextro_desert"
-		"pc_dextro_mesa"
-		"pc_dextro_sandsea"
-		"pc_dextro_outback"
-		"pc_dextro_semiarid"
-		"pc_dextro_oasis"
-		"pc_dextro_badlands"
-		"pc_dextro_tropical"
-		"pc_dextro_coastal"
-		"pc_dextro_cenote"
-		"pc_dextro_mangrove"
-		"pc_dextro_wetswamp"
-		"pc_dextro_hajungle"
-		"pc_dextro_aquifer"
-		"pc_dextro_biolumen"
-		"pc_dextro_savannah"
-		"pc_dextro_steppe"
-		"pc_dextro_megaflora"
-		"pc_dextro_veld"
-		"pc_dextro_desertislands"
-		"pc_dextro_med"
-		"pc_dextro_supercon"
-		"pc_dextro_prairie"
-		"pc_dextro_continental"
-		"pc_dextro_ocean"
-		"pc_dextro_alpine"
-		"pc_dextro_aquatic"
-		"pc_dextro_fog"
-		"pc_dextro_tepid"
-		"pc_dextro_retinal"
-		"pc_dextro_forest"
-		"pc_dextro_lake"
-		"pc_dextro_storm"
-		"pc_dextro_reef"
-		"pc_dextro_tundra"
-		"pc_dextro_basalt"
-		"pc_dextro_duneforest"
-		"pc_dextro_highland"
-		"pc_dextro_hadesert"
-		"pc_dextro_boreal"
-		"pc_dextro_cascadian"
-		"pc_dextro_swamp"
-		"pc_dextro_mushroom"
-		"pc_dextro_lichen"
-		"pc_dextro_lanthanide"
-		"pc_dextro_mud"
-		"pc_dextro_arctic"
-		"pc_dextro_snowball"
-		"pc_dextro_aeolian"
-		"pc_dextro_antarctic"
-		"pc_dextro_snow"
-		"pc_dextro_glacial"
-		"pc_dextro_frozen_desert"
-		"pc_dextro_subarctic"
-		"pc_dextro_glacio"
-		"pc_dextro_geothermal"
+		"pc_dextro_highgrav_arid"
+		"pc_dextro_highgrav_desert"
+		"pc_dextro_highgrav_mesa"
+		"pc_dextro_highgrav_sandsea"
+		"pc_dextro_highgrav_outback"
+		"pc_dextro_highgrav_semiarid"
+		"pc_dextro_highgrav_oasis"
+		"pc_dextro_highgrav_badlands"
+		"pc_dextro_highgrav_tropical"
+		"pc_dextro_highgrav_coastal"
+		"pc_dextro_highgrav_cenote"
+		"pc_dextro_highgrav_mangrove"
+		"pc_dextro_highgrav_wetswamp"
+		"pc_dextro_highgrav_hajungle"
+		"pc_dextro_highgrav_aquifer"
+		"pc_dextro_highgrav_biolumen"
+		"pc_dextro_highgrav_savannah"
+		"pc_dextro_highgrav_steppe"
+		"pc_dextro_highgrav_megaflora"
+		"pc_dextro_highgrav_veld"
+		"pc_dextro_highgrav_desertislands"
+		"pc_dextro_highgrav_med"
+		"pc_dextro_highgrav_supercon"
+		"pc_dextro_highgrav_prairie"
+		"pc_dextro_highgrav_continental"
+		"pc_dextro_highgrav_ocean"
+		"pc_dextro_highgrav_alpine"
+		"pc_dextro_highgrav_aquatic"
+		"pc_dextro_highgrav_fog"
+		"pc_dextro_highgrav_tepid"
+		"pc_dextro_highgrav_retinal"
+		"pc_dextro_highgrav_forest"
+		"pc_dextro_highgrav_lake"
+		"pc_dextro_highgrav_storm"
+		"pc_dextro_highgrav_reef"
+		"pc_dextro_highgrav_tundra"
+		"pc_dextro_highgrav_basalt"
+		"pc_dextro_highgrav_duneforest"
+		"pc_dextro_highgrav_highland"
+		"pc_dextro_highgrav_hadesert"
+		"pc_dextro_highgrav_boreal"
+		"pc_dextro_highgrav_cascadian"
+		"pc_dextro_highgrav_swamp"
+		"pc_dextro_highgrav_mushroom"
+		"pc_dextro_highgrav_lichen"
+		"pc_dextro_highgrav_lanthanide"
+		"pc_dextro_highgrav_mud"
+		"pc_dextro_highgrav_arctic"
+		"pc_dextro_highgrav_snowball"
+		"pc_dextro_highgrav_aeolian"
+		"pc_dextro_highgrav_antarctic"
+		"pc_dextro_highgrav_snow"
+		"pc_dextro_highgrav_glacial"
+		"pc_dextro_highgrav_frozen_desert"
+		"pc_dextro_highgrav_subarctic"
+		"pc_dextro_highgrav_glacio"
+		"pc_dextro_highgrav_geothermal"
 	}
 }
 
 random_list = {
-	name = "rl_dextro_habitable_special"
+	name = "rl_dextro_highgrav_habitable_special"
 	planets = {
-		"pc_dextro_nuked"
-		"pc_dextro_rogue"
-		"pc_dextro_superhabitable"
-		"pc_dextro_relic"
-		"pc_dextro_primal"
+		"pc_dextro_highgrav_nuked"
+		"pc_dextro_highgrav_rogue"
+		"pc_dextro_highgrav_superhabitable"
+		"pc_dextro_highgrav_relic"
+		"pc_dextro_highgrav_primal"
 	}
 }
 
 random_list = {
-	name = "rl_dextro_habitable_toxic"
+	name = "rl_dextro_highgrav_habitable_toxic"
 	planets = {
-		"pc_dextro_acid"
-		"pc_dextro_chlorine"
-		"pc_dextro_methane"
-		"pc_dextro_ammonia"
-		"pc_dextro_sulfur"
-		"pc_dextro_ash"
-		"pc_dextro_irradiated"
-		"pc_dextro_mephitic"
+		"pc_dextro_highgrav_acid"
+		"pc_dextro_highgrav_chlorine"
+		"pc_dextro_highgrav_methane"
+		"pc_dextro_highgrav_ammonia"
+		"pc_dextro_highgrav_sulfur"
+		"pc_dextro_highgrav_ash"
+		"pc_dextro_highgrav_irradiated"
+		"pc_dextro_highgrav_mephitic"
 	}
 }
 
 random_list = {
-	name = "rl_dextro_tidallylocked"
+	name = "rl_dextro_highgrav_tidallylocked"
 	planets = {
-		"pc_dextro_eyeball"
-		"pc_dextro_tidallylocked"
-		"pc_dextro_meridiem"
-		"pc_dextro_scorched"
+		"pc_dextro_highgrav_eyeball"
+		"pc_dextro_highgrav_tidallylocked"
+		"pc_dextro_highgrav_meridiem"
+		"pc_dextro_highgrav_scorched"
 	}
 }
 
 random_list = {
-	name = "rl_all_dextro_planets"
+	name = "rl_all_dextro_highgrav_planets"
 	planets = {
-		"pc_dextro_arid"
-		"pc_dextro_desert"
-		"pc_dextro_mesa"
-		"pc_dextro_sandsea"
-		"pc_dextro_outback"
-		"pc_dextro_semiarid"
-		"pc_dextro_oasis"
-		"pc_dextro_badlands"
-		"pc_dextro_tropical"
-		"pc_dextro_coastal"
-		"pc_dextro_cenote"
-		"pc_dextro_mangrove"
-		"pc_dextro_wetswamp"
-		"pc_dextro_hajungle"
-		"pc_dextro_aquifer"
-		"pc_dextro_biolumen"
-		"pc_dextro_savannah"
-		"pc_dextro_steppe"
-		"pc_dextro_megaflora"
-		"pc_dextro_veld"
-		"pc_dextro_desertislands"
-		"pc_dextro_med"
-		"pc_dextro_supercon"
-		"pc_dextro_prairie"
-		"pc_dextro_continental"
-		"pc_dextro_ocean"
-		"pc_dextro_alpine"
-		"pc_dextro_aquatic"
-		"pc_dextro_fog"
-		"pc_dextro_tepid"
-		"pc_dextro_retinal"
-		"pc_dextro_forest"
-		"pc_dextro_lake"
-		"pc_dextro_storm"
-		"pc_dextro_reef"
-		"pc_dextro_tundra"
-		"pc_dextro_basalt"
-		"pc_dextro_duneforest"
-		"pc_dextro_highland"
-		"pc_dextro_hadesert"
-		"pc_dextro_boreal"
-		"pc_dextro_cascadian"
-		"pc_dextro_swamp"
-		"pc_dextro_mushroom"
-		"pc_dextro_lichen"
-		"pc_dextro_lanthanide"
-		"pc_dextro_mud"
-		"pc_dextro_arctic"
-		"pc_dextro_snowball"
-		"pc_dextro_aeolian"
-		"pc_dextro_antarctic"
-		"pc_dextro_snow"
-		"pc_dextro_glacial"
-		"pc_dextro_frozen_desert"
-		"pc_dextro_subarctic"
-		"pc_dextro_glacio"
-		"pc_dextro_geothermal"
+		"pc_dextro_highgrav_arid"
+		"pc_dextro_highgrav_desert"
+		"pc_dextro_highgrav_mesa"
+		"pc_dextro_highgrav_sandsea"
+		"pc_dextro_highgrav_outback"
+		"pc_dextro_highgrav_semiarid"
+		"pc_dextro_highgrav_oasis"
+		"pc_dextro_highgrav_badlands"
+		"pc_dextro_highgrav_tropical"
+		"pc_dextro_highgrav_coastal"
+		"pc_dextro_highgrav_cenote"
+		"pc_dextro_highgrav_mangrove"
+		"pc_dextro_highgrav_wetswamp"
+		"pc_dextro_highgrav_hajungle"
+		"pc_dextro_highgrav_aquifer"
+		"pc_dextro_highgrav_biolumen"
+		"pc_dextro_highgrav_savannah"
+		"pc_dextro_highgrav_steppe"
+		"pc_dextro_highgrav_megaflora"
+		"pc_dextro_highgrav_veld"
+		"pc_dextro_highgrav_desertislands"
+		"pc_dextro_highgrav_med"
+		"pc_dextro_highgrav_supercon"
+		"pc_dextro_highgrav_prairie"
+		"pc_dextro_highgrav_continental"
+		"pc_dextro_highgrav_ocean"
+		"pc_dextro_highgrav_alpine"
+		"pc_dextro_highgrav_aquatic"
+		"pc_dextro_highgrav_fog"
+		"pc_dextro_highgrav_tepid"
+		"pc_dextro_highgrav_retinal"
+		"pc_dextro_highgrav_forest"
+		"pc_dextro_highgrav_lake"
+		"pc_dextro_highgrav_storm"
+		"pc_dextro_highgrav_reef"
+		"pc_dextro_highgrav_tundra"
+		"pc_dextro_highgrav_basalt"
+		"pc_dextro_highgrav_duneforest"
+		"pc_dextro_highgrav_highland"
+		"pc_dextro_highgrav_hadesert"
+		"pc_dextro_highgrav_boreal"
+		"pc_dextro_highgrav_cascadian"
+		"pc_dextro_highgrav_swamp"
+		"pc_dextro_highgrav_mushroom"
+		"pc_dextro_highgrav_lichen"
+		"pc_dextro_highgrav_lanthanide"
+		"pc_dextro_highgrav_mud"
+		"pc_dextro_highgrav_arctic"
+		"pc_dextro_highgrav_snowball"
+		"pc_dextro_highgrav_aeolian"
+		"pc_dextro_highgrav_antarctic"
+		"pc_dextro_highgrav_snow"
+		"pc_dextro_highgrav_glacial"
+		"pc_dextro_highgrav_frozen_desert"
+		"pc_dextro_highgrav_subarctic"
+		"pc_dextro_highgrav_glacio"
+		"pc_dextro_highgrav_geothermal"
 	}
 }
 				
