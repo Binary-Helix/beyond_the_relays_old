@@ -1,0 +1,140 @@
+@level_2_xp_cost = 1200 # 10 years at 100 Loyalty.
+@level_3_xp_cost = 3600 # 30 years at 100 Loyalty.
+
+@specialist_base_conversion_time = 30
+
+# If you add any new types or change the keys of the existing ones, make sure to change the level-up message_types for them and their loc keys
+
+specialist_bulwark = {
+	icon = "GFX_diplomacy_specialist_subject_bulwark"
+	icon_large = "GFX_diplomacy_specialist_subject_bulwark_large"
+	preferred_ethic = ethic_militarist
+	base_conversion_time = @specialist_base_conversion_time
+
+	on_progress_complete = {
+	}
+
+	levels = {
+		# Level 1
+		{
+			experience_needed_for_next_level = @level_2_xp_cost
+			perks = {
+				bulwark_1_modifier
+				bulwark_1_penalties
+				bulwark_1_bulwark_insight
+				bulwark_1_overlord_modifier
+				bulwark_1_neighbor_bonuses
+				bulwark_1_bulwark_array
+			}
+		}
+		# Level 2
+		{
+			experience_needed_for_next_level = @level_3_xp_cost
+			perks = {
+				bulwark_2_modifier
+				bulwark_2_penalties
+				bulwark_2_bulwark_insight
+				bulwark_2_traits
+				bulwark_2_leaders
+			}
+		}
+		# Level 3
+		{
+			perks = {
+				bulwark_3_modifier
+				bulwark_3_penalties
+				bulwark_3_bulwark_insight
+				bulwark_3_battlewright
+				bulwark_3_disintegrator_field
+			}
+		}
+	}
+}
+
+specialist_scholarium = {
+	icon = "GFX_diplomacy_specialist_subject_scholarium"
+	icon_large = "GFX_diplomacy_specialist_subject_scholarium_large"
+	preferred_ethic = ethic_materialist
+	base_conversion_time = @specialist_base_conversion_time
+
+	on_progress_complete = {
+	}
+
+	levels = {
+		# Level 1
+		{
+			experience_needed_for_next_level = @level_2_xp_cost
+			perks = {
+				scholarium_1_modifier
+				scholarium_1_penalties
+				scholarium_1_discovery
+				scholarium_1_overlord_modifier
+				scholarium_1_neighbor_bonuses
+				scholarium_1_planetary_sensors
+			}
+		}
+		# Level 2
+		{
+			experience_needed_for_next_level = @level_3_xp_cost
+			perks = {
+				scholarium_2_modifier
+				scholarium_2_penalties
+				scholarium_2_discovery
+				scholarium_2_traits
+				scholarium_2_leaders
+			}
+		}
+		# Level 3
+		{
+			perks = {
+				scholarium_3_modifier
+				scholarium_3_penalties
+				scholarium_3_discovery
+				scholarium_3_arctrellis
+			}
+		}
+	}
+}
+
+specialist_prospectorium = {
+	icon = "GFX_diplomacy_specialist_subject_prospectorium"
+	icon_large = "GFX_diplomacy_specialist_subject_prospectorium_large"
+	preferred_ethic = ethic_pacifist
+	base_conversion_time = @specialist_base_conversion_time
+
+	levels = {
+		# Level 1
+		{
+			experience_needed_for_next_level = @level_2_xp_cost
+			perks = {
+				prospectorium_1_modifier
+				prospectorium_1_penalties
+				prospectorium_1_deposits
+				prospectorium_1_overlord_modifier
+				prospectorium_1_neighbor_bonuses
+			}
+		}
+		# Level 2
+		{
+			experience_needed_for_next_level = @level_3_xp_cost
+			perks = {
+				prospectorium_2_modifier
+				prospectorium_2_penalties
+				prospectorium_2_deposits
+				prospectorium_2_mining_tech
+				prospectorium_2_traits
+				prospectorium_2_leaders
+			}
+		}
+		# Level 3
+		{
+			perks = {
+				prospectorium_3_modifier
+				prospectorium_3_penalties
+				prospectorium_3_deposits
+				prospectorium_3_mining_tech
+				prospectorium_3_strip_mining
+			}
+		}
+	}
+}
