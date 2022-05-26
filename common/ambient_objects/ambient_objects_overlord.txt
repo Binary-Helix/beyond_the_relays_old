@@ -1,0 +1,53 @@
+#Shattered Frontier: stricken Colony Ship
+ambient_object = {
+	name = "shattered_frontier_ship"
+	entity = "abandoned_ship_destroyed_entity"
+	selectable = no
+	show_name = yes
+	tooltip = "shattered_frontier_ship_desc"
+	description = "shattered_frontier_ship_desc"
+}
+
+#Ruined enclave stations
+ ambient_object = {
+ 	name = "enclave_mercenary_starbase_ruined"
+ 	entity = "enclave_mercenary_station_destroyed_entity"
+ 	selectable = yes
+ 	show_name = no
+ 	tooltip = "enclave_mercenary_starbase_ruined_desc"
+ 	description = "enclave_mercenary_starbase_ruined_desc"
+ }
+ambient_object = {
+	name = "enclave_salvager_starbase_ruined"
+	entity = "salvager_station_01_destroyed_entity"
+	selectable = yes
+	show_name = no
+	tooltip = "enclave_salvager_starbase_ruined_desc"
+	description = "enclave_salvager_starbase_ruined_desc"
+}
+ambient_object = {
+	name = "enclave_shroudwalker_starbase_ruined"
+	entity = "shroudwalker_starbase_destroyed_entity"
+	selectable = yes
+	show_name = no
+	tooltip = "enclave_shroudwalker_starbase_ruined_desc"
+	description = "enclave_shroudwalker_starbase_ruined_desc"
+}
+
+# Central Crystal Ambient Object
+ambient_object = {
+	name = "central_crystal_gateway"
+	entity = "arthropoid_01_gateway_entity"
+	selectable = yes
+	show_name = no
+	tooltip = "central_crystal_gateway_desc"
+	description = "central_crystal_gateway_desc"
+}
+
+# Ruined Quantum Catapult
+ambient_object = {
+	name = "ruined_quantum_catapult_object"
+	entity = "quantum_catapult_01_destroyed_entity"
+	selectable = no
+	show_name = no
+}

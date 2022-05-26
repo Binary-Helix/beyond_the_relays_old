@@ -1,0 +1,118 @@
+# ----------------------------------------
+# Overlord Specialist Empire Leader Traits
+# ----------------------------------------
+
+leader_trait_bulwark_watcher = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bulwark_watcher.dds"
+	modifier = {
+		ship_friendly_territory_evasion_mult = 0.15
+		ship_friendly_territory_tracking_mult = 0.15
+		ship_sensor_range_add = 1
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
+
+leader_trait_bulwark_retaliator = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bulwark_retaliator.dds"
+	modifier = {
+		ship_friendly_territory_fire_rate_mult = 0.3
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
+
+leader_trait_bulwark_sentinel = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_bulwark_sentinel.dds"
+	modifier = {
+		ship_friendly_territory_shield_mult = 0.3
+	}
+	leader_trait = { admiral }
+	leader_class = { admiral }
+	initial = no
+	randomized = no
+}
+
+leader_trait_scholarium_investigator = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_scholarium_investigator.dds"
+	modifier = {
+		all_technology_research_speed = 0.1
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_scholarium_explorer = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_scholarium_explorer.dds"
+	modifier = {
+		science_ship_survey_speed = 0.2
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_scholarium_observer = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_scholarium_observer.dds"
+	modifier = {
+		ship_anomaly_research_speed_mult = 0.25
+		ship_anomaly_generation_chance_mult = 0.05
+	}
+	leader_trait = { scientist }
+	leader_class = { scientist }
+	initial = no
+	randomized = no
+}
+
+leader_trait_prospectorium_extractor = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_prospectorium_extractor.dds"
+	modifier = {
+		planet_jobs_energy_produces_mult = 0.2
+		planet_jobs_minerals_produces_mult = 0.2
+		planet_jobs_alloys_produces_mult = 0.2
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+leader_trait_prospectorium_optimizer = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_prospectorium_optimizer.dds"
+	modifier = {
+		planet_jobs_upkeep_mult = -0.15
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}
+
+leader_trait_prospectorium_refiner = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_prospectorium_refiner.dds"
+	modifier = {
+		planet_chemists_volatile_motes_produces_mult = 0.25
+		planet_refiners_exotic_gases_produces_mult = 0.25
+		planet_translucers_rare_crystals_produces_mult = 0.25
+	}
+	leader_trait = { governor }
+	leader_class = { governor }
+	initial = no
+	randomized = no
+}

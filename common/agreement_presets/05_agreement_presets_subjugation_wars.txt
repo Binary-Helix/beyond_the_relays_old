@@ -1,0 +1,445 @@
+preset_vassal_oppressive = {
+	parent = preset_vassal
+	icon = "GFX_diplomacy_status_is_vassal"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = -100
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_not_do_diplomacy
+			}
+			{
+				key = subject_expand
+				value = subject_cannot_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_all
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
+
+preset_vassal_oppressive_ai = {
+	parent = preset_vassal
+	icon = "GFX_diplomacy_status_is_vassal"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = -100
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = 0.15
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_not_do_diplomacy
+			}
+			{
+				key = subject_expand
+				value = subject_cannot_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_all
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
+
+preset_vassal_balanced = {
+	parent = preset_vassal
+	icon = "GFX_diplomacy_status_is_vassal"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = -50
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy_but_not_vote
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand_with_tithe
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_defensive
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
+
+preset_vassal_benevolent = {
+	parent = preset_vassal
+	icon = "GFX_diplomacy_status_is_vassal"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = 0
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_defensive
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
+
+preset_subsidiary_oppressive = {
+	parent = preset_subsidiary
+	icon = "GFX_diplomacy_status_is_subsidiary"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = -100
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = 0.3
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_not_do_diplomacy
+			}
+			{
+				key = subject_expand
+				value = subject_cannot_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_all
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
+
+preset_subsidiary_oppressive_ai = {
+	parent = preset_subsidiary
+	icon = "GFX_diplomacy_status_is_subsidiary"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = -100
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = 0.45
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_not_do_diplomacy
+			}
+			{
+				key = subject_expand
+				value = subject_cannot_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_all
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
+
+preset_subsidiary_balanced = {
+	parent = preset_subsidiary
+	icon = "GFX_diplomacy_status_is_subsidiary"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = -50
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = 0.3
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy_but_not_vote
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand_with_tithe
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_defensive
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
+
+preset_subsidiary_benevolent = {
+	parent = preset_subsidiary
+	icon = "GFX_diplomacy_status_is_subsidiary"
+	hidden = yes
+	term_data = {
+		has_cooldown_on_first_renegotiation = no
+		forced_initial_loyalty = 0
+		resource_terms = {
+			{
+				key = resource_subsidies_basic
+				value = 0.3
+			}
+		}
+		discrete_terms = {
+			{
+				key = specialist_type
+				value = specialist_none
+			}
+			{
+				key = subject_integration
+				value = subject_can_not_be_integrated
+			}
+			{
+				key = subject_diplomacy
+				value = subject_can_do_diplomacy
+			}
+			{
+				key = subject_expand
+				value = subject_can_expand
+			}
+			{
+				key = joins_overlord_wars
+				value = joins_overlord_wars_defensive
+			}
+			{
+				key = joins_subject_wars
+				value = joins_subject_wars_defensive
+			}
+			{
+				key = subject_holdings_limit
+				value = subject_holdings_limit_1
+			}
+			{
+				key = subject_loyalty
+				value = subject_loyalty_effects
+			}
+		}
+	}
+
+	overlord_weight = {
+		base = 0
+	}
+
+	subject_weight = {
+		base = 0
+	}
+}
