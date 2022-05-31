@@ -2108,16 +2108,8 @@ country_event = {
 		if = {
 			limit = {
 				galaxy_size = btr_hybrid_400
-				has_origin = btr_origin_sedcol
 				any_system_within_border = {
 					has_star_flag = nosikae_system
-				}
-			}
-			limit = { 
-				has_origin = btr_origin_sedcol
-				add_modifier = {
-					modifier = btr_sedcol_stagnation
-					years = 20
 				}
 			}
 			random_owned_planet = {
@@ -3799,22 +3791,22 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	immediate = {
-		if = {
-			limit = { galaxy_size = btr_hybrid_400 exists = event_target:vol_protectorate exists = event_target:turian_hierarchy }
-			event_target:vol_protectorate = {
-				establish_communications_no_message = event_target:turian_hierarchy
-				set_subject_of = { who = event_target:turian_hierarchy subject_type = special_protectorate }
-			}
-		}
-		if = {
-			limit = { galaxy_size = btr_hybrid_400 exists = event_target:asteria_agriculture exists = event_target:asari_republics }
-			event_target:asteria_agriculture = {
-				establish_communications_no_message = event_target:asari_republics
-				set_subject_of = { who = event_target:asari_republics subject_type = subsidiary }				
-			}
-		}
-	}
+	# immediate = {
+	# 	if = {
+	# 		limit = { galaxy_size = btr_hybrid_400 exists = event_target:vol_protectorate exists = event_target:turian_hierarchy }
+	# 		event_target:vol_protectorate = {
+	# 			establish_communications_no_message = event_target:turian_hierarchy
+	# 			set_subject_of = { who = event_target:turian_hierarchy subject_type = special_protectorate }
+	# 		}
+	# 	}
+	# 	if = {
+	# 		limit = { galaxy_size = btr_hybrid_400 exists = event_target:asteria_agriculture exists = event_target:asari_republics }
+	# 		event_target:asteria_agriculture = {
+	# 			establish_communications_no_message = event_target:asari_republics
+	# 			set_subject_of = { who = event_target:asari_republics subject_type = subsidiary }				
+	# 		}
+	# 	}
+	# }
 }
 
 # Set Minor Empires
@@ -4471,14 +4463,6 @@ country_event =  {
 			every_country = {
 				give_technology = {
 					tech = tech_production_increase
-				}
-				give_technology = {
-					tech = tech_mine_helium_3
-					message = no
-				}
-				give_technology = {
-					tech = tech_mine_eezo_extraction
-					message = no
 				}
 			}
 		}
