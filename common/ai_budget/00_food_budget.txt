@@ -25,6 +25,7 @@ food_expenditure_campaigns = {
 
 	potential = {
 		is_hive_empire = yes
+		is_lithoid_empire = no
 		resource_stockpile_compare = {
 			resource = food
 			value > 3000
@@ -163,6 +164,24 @@ food_expenditure_buildings = {
 	}
 }
 
+food_expenditure_buildings = {
+	resource = food
+	type = expenditure
+	category = planets
+
+	potential = {
+		country_uses_food = yes
+	}
+
+	fraction = {
+		weight = 0.2
+	}
+
+	static_max = {
+		base = 500
+	}
+}
+
 food_upkeep_ships = {
 	resource = food
 	type = upkeep
@@ -199,6 +218,7 @@ food_upkeep_campaigns = {
 
 	potential = {
 		is_hive_empire = yes
+		is_lithoid_empire = no
 	}
 
 	fraction = {
