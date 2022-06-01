@@ -16,6 +16,8 @@ minor_empire = {
 	can_use_invalid_technology = no
 	has_pulse_events = no
 	can_receive_envoys = yes
+	ownership_limits = default
+
 	ai = {
 		enabled = yes
 		declare_war = no
@@ -30,81 +32,6 @@ minor_empire = {
 			military_minister_module
 			foreign_minister_module
 			interior_minister_module
-		}
-		ship_data = {
-			constructor = { min = 0 max = 1 }
-			starbase_outpost = { min = 0 max = 0 }
-			science	= { min = 1 max = 1 }
-			colonizer = { min = 0 max = 0 }
-			colossus = {
-				min = 1
-				max = 1
-			}
-
-			titan = {
-				min = 1
-				max = 2
-			}
-
-			battleship = {
-				fraction = {
-					modifier = {
-						add = 25
-						has_technology = tech_battleships
-					}
-				}
-			}
-
-			cruiser = {
-				fraction = {
-					modifier = {
-						add = 35
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -10
-						has_technology = tech_battleships
-					}
-				}
-			}
-
-			destroyer = {
-				fraction = {
-					modifier = {
-						add = 50
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -15
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -10
-						has_technology = tech_battleships
-					}
-				}
-			}
-
-			corvette = {
-				fraction = {
-					base = 100
-					modifier = {
-						add = -25
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -45
-						has_technology = tech_cruisers
-					}
-					modifier = {
-						add = -5
-						has_technology = tech_battleships
-					}
-				}
-			}
-		}
-		army_data = {
-			defense_army = { fraction = { factor = 50 } }
 		}
 	}
 	trade_routes_available = {
@@ -186,6 +113,7 @@ independent_colony = {
 	can_use_invalid_technology = no
 	has_pulse_events = no
 	can_receive_envoys = yes
+	ownership_limits = default
 	ai = {
 		enabled = yes
 		declare_war = no
@@ -200,61 +128,6 @@ independent_colony = {
 			military_minister_module
 			foreign_minister_module
 			interior_minister_module
-		}
-		ship_data = {
-			constructor = { min = 0 max = 0 }
-			starbase_outpost = { min = 0 max = 0 }
-			science	= { min = 0 max = 0 }
-			colonizer = { min = 0 max = 0 }
-			colossus = {
-				min = 0
-				max = 0
-			}
-
-			titan = {
-				min = 0
-				max = 0
-			}
-
-			battleship = {
-				min = 0
-				max = 0
-			}
-
-			cruiser = {
-				min = 0
-				max = 0
-			}
-
-			destroyer = {
-				fraction = {
-					modifier = {
-						add = 50
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -15
-						has_technology = tech_cruisers
-					}
-				}
-			}
-
-			corvette = {
-				fraction = {
-					base = 100
-					modifier = {
-						add = -25
-						has_technology = tech_destroyers
-					}
-					modifier = {
-						add = -45
-						has_technology = tech_cruisers
-					}
-				}
-			}
-		}
-		army_data = {
-			defense_army = { fraction = { factor = 50 } }
 		}
 	}
 	trade_routes_available = {
