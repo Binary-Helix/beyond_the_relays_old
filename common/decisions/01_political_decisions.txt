@@ -15,6 +15,7 @@ decision_martial_law = {
 	potential = {
 		owner = { is_regular_empire = yes }
 		NOT = { has_modifier = martial_law }
+		NOT = { has_planet_flag = prison_station }
 	}
 
 	effect = {
@@ -440,8 +441,7 @@ decision_expel_population = {
 						is_robot_pop = no
 						NOR = {
 							has_trait = trait_hive_mind
-							has_trait = trait_nerve_stapled
-							has_trait = trait_zombie
+							can_think = no
 							is_pop_category = ruler
 						}
 					}
