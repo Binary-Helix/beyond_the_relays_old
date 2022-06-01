@@ -11,6 +11,7 @@ building_military_academy = {
 		buildings_simple_allow = yes
 		exists = owner
 		owner = { NOT = { has_valid_civic = civic_reanimated_armies } }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -115,6 +116,7 @@ building_dread_encampment = {
 		buildings_simple_allow = yes
 		exists = owner
 		owner = { has_valid_civic = civic_reanimated_armies }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -176,6 +178,7 @@ building_stronghold = {
 
 	potential = {
 		buildings_simple_allow = yes
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {

@@ -98,11 +98,23 @@ indiscriminate = {
 
 armageddon = {
 	trigger = {
-		owner = {
-			OR = {
-				has_policy_flag = orbital_bombardment_armageddon
-				is_crisis_faction = yes
-				has_menace_perk = menp_death_from_above		# Menace Perk: Death From Above
+		OR = {
+			owner = {
+				OR = {
+					has_policy_flag = orbital_bombardment_armageddon
+					is_crisis_faction = yes
+					has_menace_perk = menp_death_from_above		# Menace Perk: Death From Above
+				}
+			}
+			AND = {
+				owner = { is_country_type = enclave_mercenary }
+				controller = {
+					OR = {
+						has_policy_flag = orbital_bombardment_armageddon
+						is_crisis_faction = yes
+						has_menace_perk = menp_death_from_above		# Menace Perk: Death From Above
+					}
+				}
 			}
 		}
 	}
@@ -138,14 +150,27 @@ armageddon = {
 
 pox = {
 	trigger = {
-		owner = {
-			has_modifier = javorian_pox
-			OR = {
-				NOT = { is_country_type = default }
-				has_policy_flag = orbital_bombardment_indiscriminate
-				has_policy_flag = orbital_bombardment_armageddon
+		OR = {
+			owner = {
+				has_modifier = javorian_pox
+				OR = {
+					NOT = { is_country_type = default }
+					has_policy_flag = orbital_bombardment_indiscriminate
+					has_policy_flag = orbital_bombardment_armageddon
+				}
 			}
-		}
+			AND = {
+				owner = { is_country_type = enclave_mercenary }
+				controller = {
+					has_modifier = javorian_pox
+					OR = {
+						NOT = { is_country_type = default }
+						has_policy_flag = orbital_bombardment_indiscriminate
+						has_policy_flag = orbital_bombardment_armageddon
+					}
+				}
+			}
+		}	
 	}
 
 	default = no
@@ -188,6 +213,15 @@ raiding = {
 			owner = { has_ascension_perk = ap_nihilistic_acquisition }
 			owner = { has_valid_civic = civic_barbaric_despoilers }
 			owner = { has_valid_civic = btr_civic_sedcol_desperate_measures }
+			AND = {
+				owner = { is_country_type = enclave_mercenary }
+				controller = {
+					OR = {
+						has_ascension_perk = ap_nihilistic_acquisition
+						has_valid_civic = civic_barbaric_despoilers
+					}
+				}
+			}
 		}
 	}
 

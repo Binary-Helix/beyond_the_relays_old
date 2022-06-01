@@ -1,27 +1,23 @@
-
-######################################
-##### MEC:ASARI - Branch Offices #####
-######################################
+###########################
+# Branch Office Buildings #
+###########################
 
 ## N.B.: ai_weight is still used for branch offices!
+
 ## Illium à la Mode ##
 
 # These buildings represent entering a partnership with a local business, giving the host planet specialist jobs while increasing the diplo weight and value of all branch offices for the megacorp
 mec_asari_branch_illium_inv_entertainment = {
-	base_buildtime = 10 #@b1_time
+	base_buildtime = 0 #@b1_time
 	base_cap_amount = 1
 
-	branch_office_building = yes
+	owner_type = corporate
 
 	icon = mec_asari_branch_illium_building
 
 	potential = {
-		has_branch_office = yes
 		branch_office_owner = { has_valid_civic = mec_asari_civic_illium }
-		NOR = {
-			has_building = mec_asari_branch_illium_inv_consumer
-			has_building = mec_asari_branch_illium_inv_alloys
-		}
+		NOT = { has_planet_flag = mec_asari_has_partner }
 	}
 
 	allow = {
@@ -58,6 +54,34 @@ mec_asari_branch_illium_inv_entertainment = {
 		}
 	}
 
+	destroy_trigger = {
+		NOT = {
+			branch_office_owner = { has_valid_civic = mec_asari_civic_illium }
+		}
+		OR = {
+			has_holding = {
+				holding = mec_asari_branch_illium_inv_consumer
+				owner = branch_office_owner
+			}
+			has_holding = {
+				holding = mec_asari_branch_illium_inv_alloys
+				owner = branch_office_owner
+			}
+		}
+	}
+
+	on_built = {
+		planet = {
+			set_planet_flag = mec_asari_has_partner
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			remove_planet_flag = mec_asari_has_partner
+		}
+	}
+
 	ai_weight = {
 		weight = 50
 		modifier = {
@@ -80,20 +104,16 @@ mec_asari_branch_illium_inv_entertainment = {
 }
 
 mec_asari_branch_illium_inv_consumer = {
-	base_buildtime = 10 #@b1_time
+	base_buildtime = 0 #@b1_time
 	base_cap_amount = 1
 
-	branch_office_building = yes
+	owner_type = corporate
 
 	icon = mec_asari_branch_illium_building
 
 	potential = {
-		has_branch_office = yes
 		branch_office_owner = { has_valid_civic = mec_asari_civic_illium }
-		NOR = {
-			has_building = mec_asari_branch_illium_inv_entertainment
-			has_building = mec_asari_branch_illium_inv_alloys
-		}
+		NOT = { has_planet_flag = mec_asari_has_partner }
 	}
 
 	allow = {
@@ -130,6 +150,34 @@ mec_asari_branch_illium_inv_consumer = {
 		}
 	}
 
+	destroy_trigger = {
+		NOT = {
+			branch_office_owner = { has_valid_civic = mec_asari_civic_illium }
+		}
+		OR = {
+			has_holding = {
+				holding = mec_asari_branch_illium_inv_entertainment
+				owner = branch_office_owner
+			}
+			has_holding = {
+				holding = mec_asari_branch_illium_inv_alloys
+				owner = branch_office_owner
+			}
+		}
+	}
+
+	on_built = {
+		planet = {
+			set_planet_flag = mec_asari_has_partner
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			remove_planet_flag = mec_asari_has_partner
+		}
+	}
+
 	ai_weight = {
 		weight = 50
 		modifier = {
@@ -153,20 +201,16 @@ mec_asari_branch_illium_inv_consumer = {
 }
 
 mec_asari_branch_illium_inv_alloys = {
-	base_buildtime = 10 #@b1_time
+	base_buildtime = 0 #@b1_time
 	base_cap_amount = 1
 
-	branch_office_building = yes
+	owner_type = corporate
 
 	icon = mec_asari_branch_illium_building
 
 	potential = {
-		has_branch_office = yes
 		branch_office_owner = { has_valid_civic = mec_asari_civic_illium }
-		NOR = {
-			has_building = mec_asari_branch_illium_inv_consumer
-			has_building = mec_asari_branch_illium_inv_entertainment
-		}
+		NOT = { has_planet_flag = mec_asari_has_partner }
 	}
 
 	allow = {
@@ -200,6 +244,34 @@ mec_asari_branch_illium_inv_alloys = {
 		}
 		upkeep = {
 			influence = 1
+		}
+	}
+
+	destroy_trigger = {
+		NOT = {
+			branch_office_owner = { has_valid_civic = mec_asari_civic_illium }
+		}
+		OR = {
+			has_holding = {
+				holding = mec_asari_branch_illium_inv_consumer
+				owner = branch_office_owner
+			}
+			has_holding = {
+				holding = mec_asari_branch_illium_inv_entertainment
+				owner = branch_office_owner
+			}
+		}
+	}
+
+	on_built = {
+		planet = {
+			set_planet_flag = mec_asari_has_partner
+		}
+	}
+
+	on_destroy = {
+		planet = {
+			remove_planet_flag = mec_asari_has_partner
 		}
 	}
 

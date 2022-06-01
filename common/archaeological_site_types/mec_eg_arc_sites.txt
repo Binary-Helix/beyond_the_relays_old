@@ -1,0 +1,391 @@
+# site_type_name = {				# Key of the site, used for name lookup etc.
+#	picture = <sprite key>		# GFX_* sprite key for the sites image
+#	desc = <triggered event desc>	# Description generator for the site, with scope this=archaeological site.
+#	max_instances = <int>			# Max instances of this type a galaxy can have, only checked when using 'create_archaeological_site = random'
+#	weight = <scriptable value>		# Weight used for random weight, only used when using 'create_archaeological_site = random'. scriptable value type is defined either by '<int>' or '<mean time to happen>'.
+#	stages = <int>					# Should match number of defined stages below.
+#	potential = <trigger>			# Trigger checking if a scope with this=fleet ,from=archaeological site is potential to excavate (this will add/remove this option without giving the player a reason).
+#	allow = <trigger>				# Trigger checking if a scope with this=fleet ,from=archaeological site is allowed to excavate (this will toggle enable/disabled mode on buttons etc).
+#	visible = <trigger>				# Trigger that checks if a scope with this=country can see the from=archaeological site
+#	stage = {						# Stage definition, order dependent.
+#		difficulty = <interval int> 	# min max interval type. interval is defined either by '<int>' or '{ min = <int> max=<int> }' where the later will randomize a value between min and max.
+#		icon = <string>				# rune icon gfx type.
+#		event = <string>			# event to fire when finished the state.
+#	}
+#	stage = {...}					# Second stage, the total number of 'stage' entries should match value of 'stages'
+#	on_roll_failed = <effect>			# Effect to fire when a roll fails, with scope this=fleet ,from=archaeological site.
+#	on_create = <effect>			# Effect to fire upon site creation, with scope this=archaeological site.
+#	on_visible = <effect>			# Effect to fire upon site visible, with scope this=country, from=archaeological site.
+#}
+
+###################
+# Expanded Galaxy #
+###################
+
+### Artemis Tau
+## Knossos
+# Therum: Prothean Ruins 
+mec_eg_site_therum_ruins = {
+	desc = "mec_eg_site_therum_ruins_intro"
+	picture = GFX_evt_relic_world_street 
+	stages = 5
+	max_instances = 1
+	weight = 0
+	
+    allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+    }
+
+    on_visible = {
+		country_event = { id = story.5 days = 30 }
+    }
+
+	stage = {
+		difficulty = 3
+		icon = GFX_archaeology_runes_E3
+		event = mec_eg_site.20311
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C4
+		event = mec_eg_site.20312
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_C5
+		event = mec_eg_site.20313
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_E1
+		event = mec_eg_site.20314
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_C6
+		event = mec_eg_site.20315
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_eg_site_therum_mini_events }
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+### Attican Beta
+## Theseus
+# Feros (Prothean Megalopolis Ruins) 
+mec_eg_site_feros_ruins = {
+	desc = "mec_eg_site_feros_ruins_intro"
+	picture = GFX_mec_feros_01
+	stages = 5
+	max_instances = 1
+	weight = 0
+	
+    allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+    }
+
+    on_visible = {
+		country_event = { id = story.5 days = 30 }
+    }
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_C5
+		event = mec_eg_site.20411
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C3
+		event = mec_eg_site.20412
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_E2
+		event = mec_eg_site.20413
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_E5
+		event = mec_eg_site.20414
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_C1
+		event = mec_eg_site.20415
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_eg_site_feros_mini_events }
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+### Hades Nexus
+## Sheol
+# Gei Hinnom (Prothean Burial Ground) 
+mec_eg_site_geihinnom_graves = {
+	desc = "mec_eg_site_geihinnom_graves_intro"
+	picture = GFX_evt_barren_dig_site
+	stages = 5
+	max_instances = 1
+	weight = 0
+	
+    allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+    }
+
+    on_visible = {
+		country_event = { id = story.5 days = 30 }
+    }
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_E3
+		event = mec_eg_site.20911
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_C6
+		event = mec_eg_site.20912
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_C1
+		event = mec_eg_site.20913
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_C3
+		event = mec_eg_site.20914
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_E5
+		event = mec_eg_site.20915
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_eg_site_geihinnom_mini_events }
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+### Zhalos Nebula
+## Zhalos
+# Asteroid (Supernova)
+mec_eg_site_zhalos_nova = {
+	desc = "mec_eg_site_zhalos_nova_intro"
+	picture = GFX_evt_supernova
+	stages = 4
+	max_instances = 1
+	weight = 0
+	
+    allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+    }
+
+    on_visible = {
+		country_event = { id = story.5 days = 30 }
+    }
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_F2
+		event = mec_eg_site.23311
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_B4
+		event = mec_eg_site.23312
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_B2
+		event = mec_eg_site.23313
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_F6
+		event = mec_eg_site.23314
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_eg_site_zhalosnova_mini_events }
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+### RANDOM OCEAN WOLRD
+# A Lost City (Densorin Underwater City) 
+mec_eg_site_denwater_ruins = {
+	desc = "mec_eg_site_denwater_ruins_intro"
+	picture = GFX_evt_underwater_ruins
+	stages = 5
+	max_instances = 1
+	weight = 0
+	
+    allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+    }
+
+    on_visible = {
+		country_event = { id = story.5 days = 30 }
+    }
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_A6
+		event = mec_eg_site.30071
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_D3
+		event = mec_eg_site.30072
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_A5
+		event = mec_eg_site.30073
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_A4
+		event = mec_eg_site.30074
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_D5
+		event = mec_eg_site.30075
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_eg_site_denwater_mini_events }
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+### RANDOM TOMB WOLRD
+# Union of Horror (Cult of Synthesis) 
+mec_eg_site_union_horror = {
+	desc = "mec_eg_site_union_horror_intro"
+	picture = GFX_evt_nuclear_explosion
+	stages = 6
+	max_instances = 1
+	weight = 0
+	
+    allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+
+	visible = {
+		default_site_visible_trigger = yes
+    }
+
+    on_visible = {
+		country_event = { id = story.5 days = 30 }
+    }
+
+	stage = {
+		difficulty = 2
+		icon = GFX_archaeology_runes_F4
+		event = mec_eg_site.30091
+	}
+
+	stage = {
+		difficulty = 4
+		icon = GFX_archaeology_runes_B2
+		event = mec_eg_site.30092
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B6
+		event = mec_eg_site.30093
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_B1
+		event = mec_eg_site.30094
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_B4
+		event = mec_eg_site.30095
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_F6
+		event = mec_eg_site.30096
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_eg_site_union_horror_mini_events }
+		}
+	}
+}

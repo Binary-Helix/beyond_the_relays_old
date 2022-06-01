@@ -1,7 +1,6 @@
-###################################################
-##### PLANETARY DIVERSITY - Amenity Buildings #####
-###################################################
-
+#############
+# Amenities buildings
+#############
 building_luxury_residence = {
 	base_buildtime = @b1_time
 
@@ -12,13 +11,7 @@ building_luxury_residence = {
 			NOT = { 
 				OR = {
 					is_planet_class = pc_habitat
-					is_planet_class = pc_pd_barren_cold_hab
-					is_planet_class = pc_pd_barren_hab
-					is_planet_class = pc_pd_frozen_hab
-					is_planet_class = pc_pd_gas_giant_hab
-					is_planet_class = pc_pd_hothouse_hab
-					is_planet_class = pc_pd_toxic_hab
-					is_planet_class = pc_pd_molten_hab
+					is_pd_habitat = yes
 				}
 			}
 			has_planet_flag = advanced_habitat
@@ -29,10 +22,6 @@ building_luxury_residence = {
 			is_regular_empire = yes
 			NOT = { has_valid_civic = civic_shared_burden }
 		}
-	}
-
-	allow = {
-		buildings_simple_allow = yes
 	}
 
 	destroy_trigger = {
@@ -66,32 +55,17 @@ building_luxury_residence = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_imperious_architecture }
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
 		}
 		modifier = {
 			planet_housing_add = 1
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -117,13 +91,7 @@ building_paradise_dome = {
 			NOT = { 
 				OR = {
 					is_planet_class = pc_habitat
-					is_planet_class = pc_pd_barren_cold_hab
-					is_planet_class = pc_pd_barren_hab
-					is_planet_class = pc_pd_frozen_hab
-					is_planet_class = pc_pd_gas_giant_hab
-					is_planet_class = pc_pd_hothouse_hab
-					is_planet_class = pc_pd_toxic_hab
-					is_planet_class = pc_pd_molten_hab
+					is_pd_habitat = yes
 				}
 			}
 			AND = {
@@ -165,39 +133,24 @@ building_paradise_dome = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_imperious_architecture }
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
 		}
 		modifier = {
 			planet_housing_add = 1
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
-			#rare_crystals = @b2_rare_cost
+			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = 3
-			#rare_crystals = @b2_rare_upkeep
+			rare_crystals = @b2_rare_upkeep
 		}
 	}
 
@@ -224,13 +177,7 @@ building_communal_housing = {
 			NOT = { 
 				OR = {
 					is_planet_class = pc_habitat
-					is_planet_class = pc_pd_barren_cold_hab
-					is_planet_class = pc_pd_barren_hab
-					is_planet_class = pc_pd_frozen_hab
-					is_planet_class = pc_pd_gas_giant_hab
-					is_planet_class = pc_pd_hothouse_hab
-					is_planet_class = pc_pd_toxic_hab
-					is_planet_class = pc_pd_molten_hab
+					is_pd_habitat = yes
 				}
 			}
 			has_planet_flag = advanced_habitat
@@ -284,32 +231,17 @@ building_communal_housing = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_imperious_architecture }
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
 		}
 		modifier = {
 			planet_housing_add = 1
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -336,13 +268,7 @@ building_communal_housing_large = {
 				NOT = { 
 					OR = {
 						is_planet_class = pc_habitat
-						is_planet_class = pc_pd_barren_cold_hab
-						is_planet_class = pc_pd_barren_hab
-						is_planet_class = pc_pd_frozen_hab
-						is_planet_class = pc_pd_gas_giant_hab
-						is_planet_class = pc_pd_hothouse_hab
-						is_planet_class = pc_pd_toxic_hab
-						is_planet_class = pc_pd_molten_hab
+						is_pd_habitat = yes
 					}
 				}
 			AND = {
@@ -388,39 +314,24 @@ building_communal_housing_large = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_imperious_architecture }
+			owner = {
+				has_active_tradition = tr_domination_imperious_architecture
+			}
 		}
 		modifier = {
 			planet_housing_add = 1
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
-			#rare_crystals = @b2_rare_cost
+			rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = 3
-			#rare_crystals = @b2_rare_upkeep
+			rare_crystals = @b2_rare_upkeep
 		}
 	}
 

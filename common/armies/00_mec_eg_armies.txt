@@ -1,0 +1,80 @@
+#########################
+#		MEC Armies		#
+#########################
+
+#Biotic Armies
+biotic_army = {
+	damage = 1.5
+	health = 1.5
+	morale = 1.5
+	morale_damage = 1.25
+	collateral_damage = 0.5
+	war_exhaustion = 1.5
+	time = 150
+	icon = GFX_army_type_psionic
+
+	resources = {
+		category = armies
+		cost = {
+			minerals = 150
+		}
+
+		upkeep = {
+			energy = 1.5
+		}
+	}
+
+	potential = {
+		from = {
+			OR = {
+				OR = {
+					has_trait = mec_bio_trait_biotic
+				}
+			}
+			NOR = {
+				has_trait = "trait_mechanical"
+				has_trait = "trait_machine_unit"
+				is_sapient = no
+			}
+		}
+		owner = {
+			NOT = { has_authority = auth_machine_intelligence }
+		}
+	}
+}
+
+################################################################################################################################################################################################
+
+### EVENT ARMIES ###
+
+#Husk Armies
+husk_army = {
+	defensive = yes
+	damage = 1.5
+	health = 1.5
+	morale_damage = 5.0
+	collateral_damage = 3.0
+	has_morale = no
+	icon = GFX_army_type_undead
+	has_species = no
+
+	potential = {
+		always = no
+	}
+}
+
+#Thresher Maw
+thresher_army = {
+	defensive = yes
+	damage = 5.0
+	health = 4.0
+	morale_damage = 5.0
+	collateral_damage = 5.0
+	has_morale = no
+	icon = GFX_army_type_xenomorph
+	has_species = no
+
+	potential = {
+		always = no
+	}
+}

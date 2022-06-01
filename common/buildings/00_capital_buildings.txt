@@ -2276,7 +2276,7 @@ building_hab_capital = {
 	}
 
 	resources = {
-		category = planet_buildings
+		category = planet_buildings_hab_capital
 		produces = {
 			trigger = { exists = owner 
 			owner = { has_technology = btr_tech_asrep_asari_arch}
@@ -2300,6 +2300,11 @@ building_hab_capital = {
 	}
 
 	triggered_planet_modifier = {
+		modifier = { planet_stability_add = 1 }
+		mult = modifier:habitat_stability_add
+	}
+
+	triggered_planet_modifier = {		
 		potential = {
 			exists = owner
 			owner = {
@@ -2487,7 +2492,7 @@ building_hab_major_capital = {
 	}
 
 	resources = {
-		category = planet_buildings
+		category = planet_buildings_hab_capital
 		produces = {
 			trigger = { exists = owner 
 			owner = { has_technology = btr_tech_asrep_asari_arch}

@@ -17,6 +17,7 @@ building_hydroponics_farm = {
 		}
 		NOT = { is_planet_class = pc_machine }
 		NOT = { has_modifier = resort_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -204,6 +205,14 @@ building_food_processing_facility = {
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
 		}
+		NOT = { has_planet_flag = planetary_station }
+
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_farming_district_or_buildings = yes
+		}
 	}
 	destroy_trigger = {
 		exists = owner
@@ -215,6 +224,12 @@ building_food_processing_facility = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
+			AND = {
+				owner = {
+					is_ai = yes
+				}	
+				has_any_farming_district_or_buildings = no
+			}
 		}
 	}
 
@@ -561,7 +576,15 @@ building_mineral_purification_plant = {
 	category = resource
 
 	destroy_trigger = {
-		has_modifier = resort_colony
+		OR = {
+			has_modifier = resort_colony
+			AND = {
+				owner = {
+					is_ai = yes
+				}	
+				has_any_mining_district = no
+			}
+		}	
 	}
 
 	potential = {
@@ -574,6 +597,13 @@ building_mineral_purification_plant = {
 		OR = { # Habitats only have mines if they're built on an appropriate deposit
 			NOT = { is_planet_class = pc_habitat }
 			has_planet_flag = mining_habitat
+		}
+		NOT = { has_planet_flag = planetary_station }
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_mining_district = yes
 		}
 	}
 
@@ -805,8 +835,14 @@ building_mineral_purification_hub = {
 			has_modifier = resort_colony
 			buildings_no_motes = yes
 		}
-	}
 
+		AND = {
+			owner = {
+				is_ai = yes
+			}	
+			has_any_mining_district = no
+		}
+	}	
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1018,7 +1054,13 @@ building_energy_grid = {
 			has_modifier = resort_colony
 			str_energy_grid_destroy = yes
 		}
-	}
+		AND = {
+			owner = {
+				is_ai = yes
+			}	
+			has_any_generator_district_or_building = no
+		}
+	}	
 
 	potential = {
 		NOT = { has_modifier = resort_colony }
@@ -1029,6 +1071,13 @@ building_energy_grid = {
 				owner = { is_gestalt = yes }
 			}
 			has_planet_flag = energy_habitat
+		}
+		NOT = { has_planet_flag = planetary_station }
+		OR = {
+			owner = {
+				is_ai = no
+			}
+			has_any_generator_district_or_building = yes
 		}
 	}
 
@@ -1112,7 +1161,6 @@ building_energy_grid = {
 		modifier = {
 			planet_amenities_add = 1
 		}
-
 	}
 
 	resources = {
@@ -1205,8 +1253,16 @@ building_energy_nexus = {
 
 	destroy_trigger = {
 		OR = {
-			has_modifier = resort_colony
-			buildings_no_exotic_gases = yes
+			OR = {
+				has_modifier = resort_colony
+				buildings_no_exotic_gases = yes
+			}
+			AND = {
+				owner = {
+					is_ai = yes
+				}	
+				has_any_generator_district_or_building = no
+			}
 		}
 	}
 
@@ -1360,6 +1416,7 @@ building_resource_silo = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -1434,7 +1491,17 @@ building_resource_silo = {
 	}
 
 	country_modifier = {
-		country_resource_max_add = 2000
+		country_resource_max_add = 5000
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_global_production_strategy
+			}
+		}
+		country_resource_max_add = 5000
 	}
 
 	prerequisites = {
@@ -1475,21 +1542,24 @@ building_bio_reactor = {
 				owner = { country_uses_food = no }
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		owner = {
-			OR = {
-				is_ai = no
-				AND = {
-					is_ai = yes
-					NOT = {
-						has_deficit = food
-						has_country_flag = buildings_new_reactor_building
-					}
-					resource_stockpile_compare = {
-						resource = food
-						value = 5000
+		hidden_trigger = {
+			owner = {
+				OR = {
+					is_ai = no
+					AND = {
+						is_ai = yes
+						NOT = {
+							has_deficit = food
+							has_country_flag = buildings_new_reactor_building
+						}
+						resource_stockpile_compare = {
+							resource = food
+							value = 5000
+						}
 					}
 				}
 			}

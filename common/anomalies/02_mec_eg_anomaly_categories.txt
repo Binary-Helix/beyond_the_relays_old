@@ -1,0 +1,181 @@
+####################################
+# Anomalies - Random 
+####################################
+
+#Ancient Commercial Dispute
+MEC_EG_ANO_RANDOM_001_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_001_CAT_DESC"
+	picture = "GFX_evt_space_debris"
+	level = 2
+	
+	max_once = yes 
+
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_asteroid = yes
+		}
+	} 
+
+	on_success = mec_eg_anomaly.001
+}
+
+#################################################################################################################################################################################################
+
+#A Peek into the Past
+MEC_EG_ANO_RANDOM_002_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_002_CAT_DESC"
+	picture = "GFX_evt_gas_giant"
+	level = 3
+
+	max_once = yes 
+	
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_planet_class = pc_gas_giant
+		}
+	}
+
+	on_success = mec_eg_anomaly.002
+}
+
+#################################################################################################################################################################################################
+
+#A Monster Lurks
+MEC_EG_ANO_RANDOM_003_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_003_CAT_DESC"
+	picture = "GFX_evt_ship_in_orbit"
+	level = 4
+	
+	max_once = yes 
+
+	spawn_chance = {
+		modifier = {
+			add = 5
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+		}
+	}
+	
+	on_success = mec_eg_anomaly.003
+}
+
+#################################################################################################################################################################################################
+
+#A Child's Playground
+MEC_EG_ANO_RANDOM_004_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_004_CAT_DESC"
+	picture = "GFX_evt_ship_in_orbit"
+	level = 3
+	
+	max_once = yes 
+
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_planet_class = pc_gas_giant
+		}
+	}
+	
+	on_success = {
+		1 = {
+			modifier = {
+				factor = 0
+				owner = { has_authority = auth_machine_intelligence }
+			}
+			anomaly_event = mec_eg_anomaly.004
+		}
+		0 = {
+			modifier = {
+				add = 1
+				owner = { has_authority = auth_machine_intelligence }
+			}
+			anomaly_event = mec_eg_anomaly.005
+		}
+	}
+}
+
+#################################################################################################################################################################################################
+
+#Ancient Supercollider
+MEC_EG_ANO_RANDOM_006_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_006_CAT_DESC"
+	picture = "GFX_evt_archaeological_dig"
+	level = 4
+	
+	max_once = yes 
+
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_planet_class = pc_barren
+			is_planet_class = pc_barren_cold
+		}
+	}
+
+	on_success = mec_eg_anomaly.006
+}
+
+#################################################################################################################################################################################################
+
+#Anomaly for Digsite - A Lost City
+MEC_EG_ANO_RANDOM_3007_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_3007_CAT_DESC"
+	picture = "GFX_evt_ship_in_orbit_3"
+	level = 4
+	
+	max_once_global = yes 
+
+	spawn_chance = {
+		modifier = {
+			add = 2
+			is_planet_class = pc_ocean
+		}
+	}
+	
+	on_success = mec_eg_anomaly.3007
+}
+
+#################################################################################################################################################################################################
+
+#Void Cruise
+MEC_EG_ANO_RANDOM_008_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_008_CAT_DESC"
+	picture = "GFX_evt_ship_in_orbit"
+	level = 3
+	
+	max_once = yes 
+
+	spawn_chance = {
+		modifier = {
+			add = 3
+			is_asteroid = no
+			is_star = no
+			is_ringworld = no
+			habitable_planet = no
+		}
+	}
+	
+	on_success = mec_eg_anomaly.008
+}
+
+#################################################################################################################################################################################################
+
+#Anomaly for Digsite - Union of Horror
+MEC_EG_ANO_RANDOM_3009_CAT = {
+	desc = "MEC_EG_ANO_RANDOM_3009_CAT_DESC"
+	picture = "GFX_mec_toxic_01"
+	level = 4
+	
+	max_once_global = yes 
+
+	spawn_chance = {
+		modifier = {
+			add = 2
+			is_planet_class = pc_nuked
+		}
+	}
+	
+	on_success = mec_eg_anomaly.3009
+}

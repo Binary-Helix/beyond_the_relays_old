@@ -57,6 +57,7 @@ building_ancient_palace = {
 	potential = {
 		exists = owner
 		owner = { is_fallen_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -123,6 +124,7 @@ building_hab_fe_capital = {
 		is_planet_class = pc_habitat
 		exists = owner
 		owner = { is_fallen_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -199,6 +201,7 @@ building_affluence_center = {
 			}
 			fail_text = "ancrel.10004.failtext"
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	resources = {
@@ -248,6 +251,7 @@ building_nourishment_center = {
 			}
 			fail_text = "ancrel.10004.failtext"
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	planet_modifier = {
@@ -299,6 +303,7 @@ building_dimensional_fabricator = {
 			}
 			fail_text = "ancrel.10004.failtext"
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	planet_modifier = {
@@ -362,6 +367,7 @@ building_class_4_singularity = {
 			}
 			fail_text = "ancrel.10004.failtext"
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	planet_modifier = {
@@ -409,6 +415,7 @@ building_nano_forge = {
 			}
 			fail_text = "ancrel.10004.failtext"
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	planet_modifier = {
@@ -450,6 +457,7 @@ building_master_archive = {
 	can_demolish = yes
 
 	potential = {
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	triggered_planet_modifier = {
@@ -488,6 +496,7 @@ building_empyrean_shrine = {
 	potential = {
 		exists = owner
 		owner = { is_fallen_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -520,6 +529,7 @@ building_ancient_cryo_chamber = {
 	potential = {
 		exists = owner
 		owner = { is_fallen_machine_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	planet_modifier = {
@@ -552,6 +562,7 @@ building_fe_xeno_zoo = {
 			is_fallen_empire = yes
 			is_xenophile = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -597,6 +608,7 @@ building_fe_dome = {
 			}
 			fail_text = "ancrel.10004.failtext"
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	planet_modifier = {
@@ -635,6 +647,7 @@ building_fe_stronghold = {
 	potential = {
 		exists = owner
 		owner = { is_fallen_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {

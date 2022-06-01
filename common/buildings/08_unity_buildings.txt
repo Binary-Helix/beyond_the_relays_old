@@ -18,13 +18,16 @@ building_autochthon_monument = {
 				is_memorialist_empire = yes
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
-		}
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
+		}	
 	}
 
 	destroy_trigger = {
@@ -125,13 +128,17 @@ building_heritage_site = {
 				is_megacorp = yes
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
-		}
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
+		}	
 	}
 
 	destroy_trigger = {
@@ -221,13 +228,17 @@ building_hypercomms_forum = {
 				is_megacorp = yes
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
-		}
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
+		}	
 	}
 
 	destroy_trigger = {
@@ -313,14 +324,16 @@ building_bureaucratic_1 = {
 		owner = { is_regular_empire = yes }
 		owner = { is_spiritualist = no }
 		NOT = { has_modifier = slave_colony }
-
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
-		}
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
+		}	
 	}
 
 	destroy_trigger = {
@@ -435,13 +448,17 @@ building_bureaucratic_2 = {
 		owner = { is_regular_empire = yes }
 		owner = { is_spiritualist = no }
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {	
-			is_ai = no
-		}
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
+		}	
 	}
 
 	destroy_trigger = {
@@ -547,13 +564,17 @@ building_bureaucratic_3 = {
 		owner = { is_regular_empire = yes }
 		owner = { is_spiritualist = no }
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {	
-			is_ai = no
-		}
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
+		}	
 	}
 
 	destroy_trigger = {
@@ -658,12 +679,15 @@ building_temple = {
 			is_spiritualist = yes
 		}
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		exists = owner
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -782,12 +806,16 @@ building_holotemple = {
 			is_spiritualist = yes
 		}
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -897,12 +925,16 @@ building_sacred_nexus = {
 			is_spiritualist = yes
 		}
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1014,12 +1046,16 @@ building_uplink_node = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		exists = owner
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1116,12 +1152,16 @@ building_network_junction = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1211,12 +1251,16 @@ building_system_conflux = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1300,11 +1344,15 @@ building_hive_node = {
 	potential = {
 		exists = owner
 		owner = { is_hive_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1415,12 +1463,16 @@ building_hive_cluster = {
 	potential = {
 		exists = owner
 		owner = { is_hive_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1534,12 +1586,16 @@ building_hive_confluence = {
 		owner = {
 			is_hive_empire = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1651,6 +1707,7 @@ building_sacrificial_temple_1 = {
 			is_death_cult_empire = yes
 		}
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -1734,6 +1791,7 @@ building_sacrificial_temple_2 = {
 		owner = {
 			is_death_cult_empire = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -1743,8 +1801,11 @@ building_sacrificial_temple_2 = {
 			is_death_cult_empire = yes
 		}
 		NOT = { has_modifier = slave_colony }
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1859,12 +1920,16 @@ building_sacrificial_temple_3 = {
 			is_death_cult_empire = yes
 		}
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -1974,11 +2039,15 @@ building_galactic_memorial_1 = {
 		owner = {
 			is_memorialist_empire = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2118,13 +2187,16 @@ building_galactic_memorial_2 = {
 		owner = {
 			is_memorialist_empire = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		exists = owner
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2266,12 +2338,16 @@ building_galactic_memorial_3 = {
 		owner = {
 			is_memorialist_empire = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2397,11 +2473,15 @@ building_simulation_1 = {
 			is_machine_empire = yes
 			is_memorialist_empire = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2490,12 +2570,16 @@ building_simulation_2 = {
 			is_machine_empire = yes
 			is_memorialist_empire = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2567,12 +2651,16 @@ building_simulation_3 = {
 			is_machine_empire = yes
 			is_memorialist_empire = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2660,11 +2748,15 @@ building_corporate_monument = {
 			is_megacorp = yes
 			is_memorialist_empire = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2750,12 +2842,16 @@ building_corporate_site = {
 		owner = {
 			is_megacorp = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2839,12 +2935,16 @@ building_corporate_forum = {
 		owner = {
 			is_megacorp = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -2928,11 +3028,15 @@ building_sensorium_1 = {
 			is_hive_empire = yes
 			is_memorialist_empire = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -3021,12 +3125,16 @@ building_sensorium_2 = {
 			is_hive_empire = yes
 			is_memorialist_empire = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -3115,12 +3223,16 @@ building_sensorium_3 = {
 			is_hive_empire = yes
 			is_memorialist_empire = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -3208,12 +3320,16 @@ building_autocurating_vault = {
 			is_spiritualist = no
 			is_megacorp = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -3296,12 +3412,16 @@ building_citadel_of_faith = {
 		exists = owner
 		owner = { is_spiritualist = yes }
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -3376,12 +3496,16 @@ building_corporate_vault = {
 			is_megacorp = yes
 			is_spiritualist = no
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -3459,12 +3583,16 @@ building_alpha_hub = {
 	potential = {
 		exists = owner
 		owner = { is_machine_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -3539,6 +3667,7 @@ building_organic_sanctuary = {
 			owner = { is_ai = no }
 			has_upgraded_capital = yes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -3679,6 +3808,7 @@ building_organic_paradise = {
 	potential = {
 		exists = owner
 		owner = { has_valid_civic = civic_machine_servitor }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {

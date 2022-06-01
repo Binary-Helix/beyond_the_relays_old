@@ -182,10 +182,33 @@ ap_hydrocentric = {
 	potential = {
 		has_aquatics = yes
 		NOT = { has_ascension_perk = ap_hydrocentric }
-		has_trait = trait_pc_ocean_preference
+		OR = {
+			has_trait = trait_pc_ocean_preference
+			has_trait = trait_pc_aquatic_preference
+			has_trait = trait_pc_desertislands_preference
+			has_trait = trait_pc_subarctic_preference
+			has_trait = trait_pc_reef_preference
+			has_trait = trait_pc_storm_preference
+			AND = {
+				any_owned_pop = { has_trait = trait_aquatic }
+				OR = {
+					has_valid_civic = civic_machine_servitor
+					#has_valid_civic = civic_machine_assimilator
+				}
+			}
+		}
 	}
 	possible = {
-		has_trait = trait_aquatic
+		OR = {
+			has_trait = trait_aquatic
+			AND = {
+				any_owned_pop = { has_trait = trait_aquatic }
+				OR = {
+					has_valid_civic = civic_machine_servitor
+					#has_valid_civic = civic_machine_assimilator
+				}
+			}
+		}
 		has_technology = tech_terrestrial_sculpting
 	}
 
@@ -389,7 +412,6 @@ ap_colossus = {
 		modifier = {
 			factor = 0
 			has_crisis_level = crisis_level_5
-		}
 	}
 }
 
@@ -752,7 +774,6 @@ ap_transcendence = {
 				id = enclave.7000
 				days = 360
 				random = 720
-			}
 		}
 	}
 	modifier = {
@@ -1254,6 +1275,9 @@ ap_mastery_of_nature = {
 	on_enabled = {
 		custom_tooltip = "allow_decision_mastery_of_nature"
 		custom_tooltip = "describe_decision_mastery_of_nature"
+		add_research_option = tech_solar_reflectrion
+		add_research_option = tech_seismic_resonators
+		add_research_option = tech_nanite_soil
 	}
 	modifier = {
 		deposit_blockers_cost_mult = -0.33
@@ -1266,7 +1290,26 @@ ap_mastery_of_nature = {
 	}
 
 	ai_weight = {
-		factor = 0
+		factor = 10
+		modifier = {
+			factor = 0
+			OR = {
+				has_origin = btr_origin_getcon
+				has_origin = origin_disciples_of_nazara
+				has_origin = origin_migrant_fleet
+				has_origin = origin_cerberus
+			}
+		}
+		modifier = {
+			factor = 2
+			years_passed > 40
+			num_owned_planets < 5
+		}
+		modifier = {
+			factor = 2
+			years_passed > 80
+			num_owned_planets < 10
+		}
 	}
 }
 
@@ -1364,8 +1407,6 @@ ap_shared_destiny = {
 		hidden_effect = {
 			country_event = { id = action.446 }
 		}
-	}
-
 	modifier = {
 		envoys_add = 2
 	}
