@@ -18,6 +18,7 @@ building_commercial_zone = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -34,16 +35,18 @@ building_commercial_zone = {
 	}
 
 	allow = {
-		or = {
-			owner = { is_ai = no }
-			and = {
-				str_uses_comzones = yes
-				free_amenities < 2
-				or = {
-					str_is_col_research = no
-					str_is_col_bureau = no
-					free_amenities < -5
-				}
+		hidden_trigger = {
+			or = {
+				owner = { is_ai = no }
+				and = {
+					str_uses_comzones = yes
+					free_amenities < 2
+					or = {
+						str_is_col_research = no
+						str_is_col_bureau = no
+						free_amenities < -5
+					}
+				}	
 			}
 		}
 	}
@@ -152,11 +155,14 @@ building_commercial_megaplex = {
 		}
 		NOT = { has_modifier = slave_colony }
 		has_building = building_commercial_zone
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		owner = {
-			is_ai = no
+		hidden_trigger = {
+			owner = {
+				is_ai = no
+			}
 		}
 	}
 
@@ -263,14 +269,17 @@ building_galactic_stock_exchange = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_major_upgraded_capital = yes
-		owner = {
-			OR = {
-				is_ai = no
-				is_megacorp = yes		
+		hidden_trigger = {
+			owner = {
+				OR = {
+					is_ai = no
+					is_megacorp = yes
+				}
 			}
 		}
 	}

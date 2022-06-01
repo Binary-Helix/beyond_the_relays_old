@@ -1,0 +1,91 @@
+# site_type_name = {				# Key of the site, used for name lookup etc.
+#	picture = <sprite key>		# GFX_* sprite key for the sites image
+#	desc = <triggered event desc>	# Description generator for the site, with scope this=archaeological site.
+#	max_instances = <int>			# Max instances of this type a galaxy can have, only checked when using 'create_archaeological_site = random'
+#	weight = <scriptable value>		# Weight used for random weight, only used when using 'create_archaeological_site = random'. scriptable value type is defined either by '<int>' or '<mean time to happen>'.
+#	stages = <int>					# Should match number of defined stages below.
+#	potential = <trigger>			# Trigger checking if a scope with this=fleet ,from=archaeological site is potential to excavate (this will add/remove this option without giving the player a reason).
+#	allow = <trigger>				# Trigger checking if a scope with this=fleet ,from=archaeological site is allowed to excavate (this will toggle enable/disabled mode on buttons etc).
+#	visible = <trigger>				# Trigger that checks if a scope with this=country can see the from=archaeological site
+#	stage = {						# Stage definition, order dependent.
+#		difficulty = <interval int> 	# min max interval type. interval is defined either by '<int>' or '{ min = <int> max=<int> }' where the later will randomize a value between min and max.
+#		icon = <string>				# rune icon gfx type.
+#		event = <string>			# event to fire when finished the state.
+#	}
+#	stage = {...}					# Second stage, the total number of 'stage' entries should match value of 'stages'
+#	on_roll_failed = <effect>			# Effect to fire when a roll fails, with scope this=fleet ,from=archaeological site.
+#	on_create = <effect>			# Effect to fire upon site creation, with scope this=archaeological site.
+#	on_visible = <effect>			# Effect to fire upon site visible, with scope this=country, from=archaeological site.
+#}
+
+#########################
+# Asari Republics Space #
+#########################
+
+# Thessia: Prothean Beacon
+mec_asari_site_thessia_beacon = {
+	desc = "mec_asari_site_thessia_beacon_intro"
+	picture = GFX_mec_event_thessia_01
+	stages = 7
+	weight = {
+		base = 0
+	}
+	allow = {
+		exists = leader
+		leader = { leader_class = scientist }
+	}
+	visible = {
+		has_origin = mec_asari_origin_thessia
+	}
+
+	on_visible = {
+	}
+
+	stage = {
+		difficulty = 5
+		icon = GFX_archaeology_runes_B1
+		event = mec_asari_site.101
+	}
+
+	stage = {
+		difficulty = 6
+		icon = GFX_archaeology_runes_B2
+		event = mec_asari_site.102
+	}
+
+	stage = {
+		difficulty = 7
+		icon = GFX_archaeology_runes_B3
+		event = mec_asari_site.103
+	}
+
+	stage = {
+		difficulty = 8
+		icon = GFX_archaeology_runes_B4
+		event = mec_asari_site.104
+	}
+
+	stage = {
+		difficulty = 9
+		icon = GFX_archaeology_runes_B5
+		event = mec_asari_site.105
+	}
+
+	stage = {
+		difficulty = 10
+		icon = GFX_archaeology_runes_B6
+		event = mec_asari_site.106
+	}
+
+	stage = {
+		difficulty = 12
+		icon = GFX_archaeology_runes_E6
+		event = mec_asari_site.107
+	}
+
+	on_roll_failed = {
+		from = {
+			standard_archaeological_site_on_roll_failed = { RANDOM_EVENTS = mec_asari_site_thessia_mini_events }
+		}
+	}
+}

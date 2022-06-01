@@ -43,6 +43,7 @@ building_robot_assembly_plant = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -177,6 +178,7 @@ building_machine_assembly_plant = {
 	potential = {
 		exists = owner
 		owner = { is_machine_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -277,6 +279,7 @@ building_machine_assembly_complex = {
 	potential = {
 		exists = owner
 		owner = { is_machine_empire = yes }
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -403,7 +406,9 @@ building_necrophage_elevation_chamber = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_hive_devouring_swarm
 			}
+			
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -613,6 +618,7 @@ building_necrophage_house_of_apotheosis = {
 			}
 			is_ai = no #the AI will just kill all its necrophytes
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -767,6 +773,7 @@ building_clone_army_clone_vat = {
 				has_country_flag = clone_army_fertility_unlocked
 			}
 		}
+		NOT = { has_planet_flag = planetary_station }
 		if = {
 			limit = {
 				owner = { is_ai = yes }
