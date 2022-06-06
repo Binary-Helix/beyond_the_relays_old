@@ -1,0 +1,14 @@
+
+origin_pd_ammonia_breathers = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origin_pd_ammonia_breathers.dds"
+	picture = GFX_origin_pd_ammonia_breathers
+	description = "origin_origin_pd_ammonia_breathers_effects"
+	starting_colony = pc_ammonia
+	habitability_preference = pc_ammonia
+	max_once_global = yes
+	random_weight = { base = 1 }
+	possible = { authority = { NOT = { value = auth_machine_intelligence } } }
+	#flags = { custom_start_screen }
+	#advanced_start = yes
+}
