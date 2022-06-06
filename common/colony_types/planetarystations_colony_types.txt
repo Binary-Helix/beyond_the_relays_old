@@ -203,7 +203,7 @@ col_planetary_station_admin = {
 
 	planet_modifier = {
 		custom_tooltip = col_bureaucracy_custom
-		planet_bureaucrats_upkeep_mult = -0.10
+		#planet_bureaucrats_upkeep_mult = -0.10
 		pop_ethics_shift_speed_mult = -0.20
 	}
 
@@ -841,5 +841,29 @@ col_planetary_station_cracking = {
 	}
 	weight_modifier = {
 		base = 500
+	}
+}
+
+# Hive Nest
+col_planetary_station_nest = {
+	icon = GFX_colony_type_station_nest
+
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+		has_planet_flag = planetary_station
+	}
+	planet_modifier = {
+		job_spawning_drone_add = 1
+		pop_growth_speed = 0.25
+	}
+	weight_modifier = {
+		base = 300
+		modifier = {
+			factor = 2
+			num_districts = { type = district_hive_sector value >= 3 }
+		}
 	}
 }

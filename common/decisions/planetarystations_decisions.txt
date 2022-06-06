@@ -54,6 +54,13 @@ decision_deep_exploration = {
 				}
 				15 = {
 					#Regolith
+					modifier = {
+						factor = 0
+						NOR = { 
+							is_barren_cold_station = yes
+							is_planet_class = pc_asteroid_station
+						}
+					}
 					random_list = {
 						#Regolith 1
 						70 = {
@@ -66,6 +73,30 @@ decision_deep_exploration = {
 						#Regolith 3
 						5 = {
 							planet_event =  { id = planetarystations_decision_event.7 days = 1 }
+						}
+					}
+				}
+				15 = {
+					#Energy
+					modifier = {
+						factor = 0
+						NOR = { 
+							is_planet_class = pc_molten_station
+							is_planet_class = pc_methane_station
+						}
+					}
+					random_list = {
+						#Energy 1
+						70 = {
+							planet_event =  { id = planetarystations_decision_event.15 days = 1 }
+						}
+						#Energy 2
+						25 = {
+							planet_event =  { id = planetarystations_decision_event.16 days = 1 }
+						}
+						#Energy 3
+						5 = {
+							planet_event =  { id = planetarystations_decision_event.17 days = 1 }
 						}
 					}
 				}
@@ -1293,5 +1324,135 @@ decision_detention_operation = {
 	
 	ai_weight = {
 		weight = 20
+	}
+}
+
+decision_launch_staff_recruitment = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_federation_fleet
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 1000
+			unity = 500
+		}
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+
+	effect = {
+		add_modifier = { modifier = "staff_recruitment" days = -1 }
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			factor = 0
+			num_pops > 30
+		}
+		modifier = {
+			factor = 0.5
+			num_pops > 15
+		}
+	}
+}
+
+decision_end_staff_recruitment = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_federation_fleet
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		has_modifier = staff_recruitment
+	}
+
+	effect = {
+		remove_modifier = staff_recruitment
+	}
+
+	ai_weight = {
+		weight = 5
+		modifier = {
+			weight = 1000
+			num_pops > 30
+		}
+	}
+}
+
+decision_launch_station_close = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_station_close
+
+	resources = {
+		category = decisions
+		cost = {
+			energy = 500
+			unity = 500
+		}
+	}
+
+	potential = {
+		has_planet_flag = planetary_station
+	}
+
+	effect = {
+		custom_tooltip = decision_station_close_effect_desc
+		hidden_effect = {
+			if = {
+				limit = { owner = { is_gestalt = yes } }
+				add_modifier = { modifier = "station_close_gestalt" days = -1 }
+			}
+			else = {
+				add_modifier = { modifier = "station_close" days = -1 }
+			}
+			planet_event =  { id = planetarystations_decision_event.18 days = 1 }
+		}
+	}
+
+	ai_weight = {
+		weight = 0
+	}
+}
+
+decision_end_station_close = {
+	owned_planets_only = yes
+	sound = event_administrative_work
+	icon = decision_station_close
+
+	resources = {
+		category = decisions
+	}
+
+	potential = {
+		OR = {
+			has_modifier = station_close
+			has_modifier = station_close_gestalt
+		}
+	}
+
+	effect = {
+		if = {
+			limit = { has_modifier = station_close }
+			remove_modifier = station_close
+		}
+		if = {
+			limit = { has_modifier = station_close_gestalt }
+			remove_modifier = station_close_gestalt
+		}
+	}
+
+	ai_weight = {
+		weight = 0
 	}
 }
