@@ -1,0 +1,55 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+#Reference: Earth
+#7 mining
+#8 farming
+#8 energy
+#3 blocked
+
+####
+# EPHO DEPOSITS
+####
+
+d_mec_asari_epho_arthenn_traces = {
+	icon = d_metal_boneyard
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.30
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_epho_zapote_caves = {
+	icon = d_ore_rich_caverns
+	
+	category = deposit_cat_minerals
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

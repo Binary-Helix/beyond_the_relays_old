@@ -1,0 +1,101 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+#Reference: Earth
+#7 mining
+#8 farming
+#8 energy
+#3 blocked
+
+####
+# SANVES DEPOSITS
+####
+
+d_mec_asari_sanves_tesanda_caldera = {
+	icon = d_active_volcano
+	time = 360
+	
+	category = deposit_cat_blockers
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_sanves_tesanda_quarry
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	potential = { always = no }
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sanves_tesanda_quarry = {
+	icon = d_mining_tunnels
+	
+	category = deposit_cat_minerals
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sanves_etheai_arcologies = {
+	icon = d_central_spire
+	
+	category = deposit_cat_energy
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_generator_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sanves_ulemas_forests = {
+	icon = d_dense_jungle
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

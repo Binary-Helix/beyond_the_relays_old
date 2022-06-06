@@ -1,0 +1,228 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+
+d_mec_asari_republic_egalitarian = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_entertainer_add = 1
+			job_entertainer_per_pop = 0.025 # 1 per 40
+			pop_ethic_egalitarian_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_authoritarian = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_bureaucrat_add = 1
+			job_bureaucrat_per_pop = 0.025 # 1 per 40
+			pop_ethic_authoritarian_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_xenophile = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_healthcare_add = 1
+			job_healthcare_per_pop = 0.025 # 1 per 40
+			pop_ethic_xenophile_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_xenophobe = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_enforcer_add = 1
+			job_enforcer_per_pop = 0.025 # 1 per 40
+			pop_ethic_xenophobe_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_pacifist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_artisan_add = 1
+			job_artisan_per_pop = 0.025 # 1 per 40
+			pop_ethic_pacifist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_militarist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_foundry_add = 1
+			job_foundry_per_pop = 0.025 # 1 per 40
+			pop_ethic_militarist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_materialist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+		}
+		modifier = {
+			job_researcher_add = 1
+			job_researcher_per_pop = 0.025 # 1 per 40
+			pop_ethic_materialist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_republic_spiritualist = {
+	icon = d_mec_asari_republic
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+			owner = { is_spiritualist = no }
+		}
+		modifier = {
+			job_culture_worker_add = 1
+			job_culture_worker_per_pop = 0.025 # 1 per 40
+			pop_ethic_spiritualist_attraction_mult = 0.2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = mec_asari_civic_thessia }
+			owner = { is_spiritualist = yes }
+		}
+		modifier = {
+			job_priest_add = 1
+			job_priest_per_pop = 0.025 # 1 per 40
+			pop_ethic_spiritualist_attraction_mult = 0.2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

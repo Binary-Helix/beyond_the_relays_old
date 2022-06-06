@@ -1,0 +1,81 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+#Reference: Earth
+#7 mining
+#8 farming
+#8 energy
+#3 blocked
+
+####
+# NIACAL DEPOSITS
+####
+
+d_mec_asari_niacal_jungles = {
+	icon = d_lush_jungle
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 6
+		planet_districts_cost_mult = 0.30
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_niacal_tumilasal_delta = {
+	icon = d_great_river
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_niacal_aurolis = {
+	icon = d_mec_asari_rural
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_jobs_society_research_produces_mult = 0.20
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}

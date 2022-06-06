@@ -1,0 +1,727 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+#Reference: Earth
+#7 mining
+#8 farming
+#8 energy
+#3 blocked
+
+####
+# ILLIUM DEPOSITS
+####
+
+d_mec_asari_nosastra_metropolis = {
+	icon = d_city
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		#trade_value_mult = 0.15
+		trade_value_add = 25
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_entertainer_add = 1
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_manjoros_plaza = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_generator_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_bureaucrat_add = 1
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sulsara_oasis = {
+	is_for_colonizable = yes
+	icon = d_solar_array
+	
+	planet_modifier = { 
+		district_generator_max = 4
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_saefos_valley = {
+	is_for_colonizable = yes
+	icon = d_mec_asari_rural
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_nosedana_vertical = {
+	is_for_colonizable = yes
+	icon = d_city
+
+	resources = {
+		produces = {
+			food = 20
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_kyatari_thanoris = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sedera_canyon = {
+	is_for_colonizable = yes
+	icon = d_arid_highlands
+	
+	planet_modifier = { 
+		district_mining_max = 2
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_azarbilhos_industrial = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = { 
+		planet_housing_add = 5
+	}
+
+	resources = {
+		produces = {
+			consumer_goods = 10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+# Blockers
+
+d_mec_asari_arcology_unfinished = {
+	icon = d_metal_boneyard
+	time = 240
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+	
+	on_cleared = {
+		create_pop = {
+			species = event_target:mec_asari_illium_owner_of_@prev
+		}
+		event_target:mec_asari_illium_owner_of_@prev = {
+			country_event = { id = mec_asari_asi.202 }
+			add_research_option = tech_mec_illium_architect_01
+			add_research_option = tech_mec_illium_architect_02
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 750
+			minerals = 750
+		}
+	}
+}
+
+d_mec_asari_nosparnalo_quarantine = {
+	icon = d_city_ruins
+	time = 360
+	
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	#can_be_cleared = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	on_cleared = {
+		add_deposit = d_mec_asari_nosparnalo_research
+		event_target:mec_asari_illium_owner_of_@prev = {
+			country_event = { id = mec_asari_asi.203 }
+			add_research_option = tech_mec_illium_architect_03
+		}
+	}
+
+	#blocker_swap_types = {
+		#d_mec_asari_nosparnalo_research
+	#}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+			minerals = 500
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mec_illium_architect_01" }
+}
+
+d_mec_asari_nosparnalo_research = {
+	icon = d_quarantine_zone
+	
+	is_for_colonizable = yes
+	
+	#planet_modifier = { 
+	#	district_generator_max = 1
+	#}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			pop_environment_tolerance = 0.05
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_researcher_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_brain_drone_add = 2
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {	
+			job_calculator_add = 2
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_makeara_slums = {
+	icon = d_forgiving_tundra
+	time = 360
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			planet_crime_add = 10
+		}
+	}
+
+	on_cleared = {
+		add_deposit = d_mec_asari_makeara_bay
+		create_pop = {
+			species = event_target:mec_asari_illium_owner_of_@prev
+		}
+		event_target:mec_asari_illium_owner_of_@prev = {
+			country_event = { id = mec_asari_asi.204 }
+		}
+		if = { limit = { NOT = { has_deposit = d_mec_asari_esiyo_jungle } }
+			event_target:mec_asari_illium_owner_of_@prev = {
+				add_research_option = tech_mec_illium_architect_04
+			}
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mec_illium_architect_02" }
+}
+
+d_mec_asari_makeara_bay = {
+	is_for_colonizable = yes
+	icon = d_forgiving_tundra
+	
+	planet_modifier = { 
+		district_farming_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_esiyo_jungle = {
+	icon = d_dense_jungle
+	time = 360
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+		district_farming_max = 1
+	}
+
+	on_cleared = {
+		add_deposit = d_mec_asari_esiyo_urban
+		event_target:mec_asari_illium_owner_of_@prev = {
+			country_event = { id = mec_asari_asi.205 }
+		}
+		if = { limit = { NOT = { has_deposit = d_mec_asari_makeara_slums } }
+			event_target:mec_asari_illium_owner_of_@prev = {
+				add_research_option = tech_mec_illium_architect_04
+			}
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 750
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mec_illium_architect_03" }
+}
+
+d_mec_asari_esiyo_urban = {
+	icon = d_organic_landfill
+	time = 720
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	on_cleared = {
+		add_deposit = d_mec_asari_eos_metropolis
+		create_pop = {
+			species = event_target:mec_asari_illium_owner_of_@prev
+		}
+		event_target:mec_asari_illium_owner_of_@prev = {
+			country_event = { id = mec_asari_asi.207 }
+			add_research_option = tech_mec_illium_architect_05
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 750
+			minerals = 1500
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mec_illium_architect_04" }
+}
+
+d_mec_asari_eos_metropolis = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = {
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			pop_environment_tolerance = 0.10
+			planet_immigration_pull_mult = 0.10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_sub_equatorial_land = {
+	icon = d_mountain_range
+	time = 720
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -2
+		district_mining_max = 2
+	}
+
+	on_cleared = {
+		owner = {
+			add_resource = {
+				minerals = 5000
+			}
+		}
+		event_target:mec_asari_illium_owner_of_@prev = {
+			country_event = { id = mec_asari_asi.208 }
+			add_research_option = tech_mec_illium_architect_06
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1500
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mec_illium_architect_05" }
+}
+
+d_mec_asari_tartaos_fissures = {
+	icon = d_massive_crevice
+	time = 1080
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers	
+	
+	potential = { always = no }
+	
+	planet_modifier = { 
+		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			planet_districts_cost_mult = 0.10
+		}
+	}
+
+	on_cleared = {
+		add_deposit = d_mec_asari_euridia_conglomerate
+		event_target:mec_asari_illium_owner_of_@prev = {
+			country_event = { id = mec_asari_asi.209 }
+		}
+		create_pop = {
+			species = event_target:mec_asari_illium_owner_of_@prev
+		}
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1500
+			minerals = 2000
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+
+	prerequisites = { "tech_mec_illium_architect_06" }
+}
+
+d_mec_asari_euridia_conglomerate = {
+	is_for_colonizable = yes
+	icon = d_city
+	
+	planet_modifier = {
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			pop_environment_tolerance = 0.10
+			planet_jobs_produces_mult = 0.10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_equatorial_hostile = {
+	icon = d_tempestous_mountain
+	
+	is_for_colonizable = yes
+	category = deposit_cat_rare_blocker	
+	
+	potential = { always = no }
+	can_be_cleared = { always = no }
+	
+	planet_modifier = {
+		planet_max_districts_add = -2
+		district_mining_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+		}
+		modifier = {
+			planet_districts_cost_mult = 0.20
+		}
+	}
+}
+
+####
+# NEO-ILLIUM DEPOSITS
+####
+
+d_mec_asari_neo_nosastra = {
+	icon = d_city
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			trade_value_mult = 0.20
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_neo_manjoros = {
+	icon = d_city
+
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_bureaucrat_per_pop = 0.025
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_neo_saefos = {
+	icon = d_mec_asari_gardens
+
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			planet_amenities_mult = 0.10
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_neo_nosparnalo = {
+	icon = d_city
+
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		modifier = {
+			job_soldier_per_pop = 0.05
+		}
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_neo_sulsara = {
+	icon = d_city
+
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = {
+		planet_max_districts_add = 1
+	}
+
+	resources = {
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { is_regular_empire = yes }
+			}
+			rare_crystals = 2
+			exotic_gases = 2
+			volatile_motes = 2
+		}
+	}
+
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		exists = owner
+	#		owner = { is_regular_empire = yes }
+	#	}
+	#	modifier = {
+	#	}
+	#}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
