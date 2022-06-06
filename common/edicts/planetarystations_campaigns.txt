@@ -1,0 +1,49 @@
+#################
+# Campaigns
+# shorter duration, cost energy
+#################
+
+@Edict1Cost = 100
+@Edict2Cost = 200
+@Edict3Cost = 300
+
+@EdictDuration = 3600
+
+# Sets the cost for all campaigns with this variable
+@campaignCost = 1000
+@campaignDuration = 3600
+
+##########################################################################
+# Rare resource edicts
+##########################################################################
+
+helium_fusion = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			helium = 300
+		}
+	}
+	
+	potential = {
+		OR = {
+			has_resource = { type = helium amount > 0 }
+			has_edict = helium_fusion
+		}
+	}
+
+	modifier = {
+		planet_technician_produces_mult = 0.25
+		ship_speed_mult = 0.25
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			is_at_war = yes
+		}
+	}
+}

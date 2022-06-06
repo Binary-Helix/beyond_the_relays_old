@@ -36,6 +36,7 @@ d_arid_highlands = {
 		d_hot_springs
 		d_buzzing_plains # gaia
 		d_strong_currents
+		d_sulfur_arid_highlands
 	}
 	
 	category = deposit_cat_energy
@@ -72,6 +73,7 @@ d_strong_currents = {
 		d_hot_springs
 		d_buzzing_plains # gaia
 		d_arid_highlands
+		d_sulfur_arid_highlands
 	}
 	
 	category = deposit_cat_energy
@@ -81,14 +83,20 @@ d_strong_currents = {
 	}
 	
 	potential = {
-		is_planet_class = pc_aquatic	
+		OR = {
+			is_planet_class = pc_aquatic	
+			is_planet_class = pc_tidallyaquatic
+		}
 	}
 	
 	drop_weight = {
 		weight = @high	
 		modifier = {
 			factor = @planet_type_bonus
-			is_planet_class = pc_aquatic
+			OR = {
+				is_planet_class = pc_aquatic	
+				is_planet_class = pc_tidallyaquatic
+			}
 		}
 	}
 }
@@ -105,6 +113,7 @@ d_hot_springs = {
 		d_arid_highlands
 		d_buzzing_plains # gaia
 		d_strong_currents
+		d_sulfur_arid_highlands
 	}	
 	
 	planet_modifier = { 
@@ -156,6 +165,7 @@ d_underwater_jets = {
 		d_frozen_gas_lake
 		d_powerful_geyser
 		d_rushing_waterfalls
+		d_sulfur_arid_highlands
 	}
 	
 	category = deposit_cat_energy
@@ -165,14 +175,20 @@ d_underwater_jets = {
 	}
 	
 	potential = {
-		is_planet_class = pc_aquatic	
+		OR = {
+			is_planet_class = pc_aquatic	
+			is_planet_class = pc_tidallyaquatic
+		}	
 	}
 	
 	drop_weight = {
 		weight = @high	
 		modifier = {
 			factor = @planet_type_bonus
-			is_planet_class = pc_aquatic
+			OR = {
+				is_planet_class = pc_aquatic	
+				is_planet_class = pc_tidallyaquatic
+			}
 		}
 	}
 }
@@ -188,6 +204,7 @@ d_rushing_waterfalls = {
 		d_frozen_gas_lake
 		d_powerful_geyser
 		d_underwater_jets
+		d_sulfur_arid_highlands
 	}
 	
 	category = deposit_cat_energy
@@ -230,6 +247,7 @@ d_searing_desert = {
 		d_rushing_waterfalls
 		d_powerful_geyser
 		d_underwater_jets
+		d_sulfur_searing_desert
 	}
 	
 	planet_modifier = { 
@@ -275,6 +293,7 @@ d_frozen_gas_lake = {
 		d_rushing_waterfalls
 		d_powerful_geyser
 		d_underwater_jets
+		d_sulfur_searing_desert
 	}	
 	
 	planet_modifier = { 
@@ -325,6 +344,7 @@ d_powerful_geyser = {
 		d_rushing_waterfalls
 		d_frozen_gas_lake
 		d_underwater_jets
+		d_sulfur_searing_desert
 	}	
 	
 	planet_modifier = { 
@@ -358,6 +378,7 @@ d_geothermal_vent = {
 	terraforming_swap_types = {
 		d_tempestous_mountain
 		d_underwater_vent
+		d_sulfur_geothermal_vent
 	}
 	
 	planet_modifier = { 
@@ -423,6 +444,7 @@ d_underwater_vent = {
 	terraforming_swap_types = {
 		d_geothermal_vent
 		d_tempestous_mountain
+		d_sulfur_geothermal_vent
 	}
 	
 	planet_modifier = { 
@@ -472,6 +494,7 @@ d_tempestous_mountain = {
 	terraforming_swap_types = {
 		d_geothermal_vent
 		d_underwater_vent
+		d_sulfur_geothermal_vent
 	}
 	
 	planet_modifier = { 
@@ -550,6 +573,7 @@ d_coral_deposit = {
 		d_mineral_fields
 		d_mineral_striations # gaia
 		d_veiny_cliffs
+		d_sulfur_mineral_fields
 	}
 	
 	planet_modifier = { 
@@ -557,14 +581,20 @@ d_coral_deposit = {
 	}
 	
 	potential = {
-			is_planet_class = pc_aquatic
+		OR = {
+			is_planet_class = pc_aquatic	
+			is_planet_class = pc_tidallyaquatic
+		}
 	}
 	
 	drop_weight = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_planet_class = pc_aquatic
+			OR = {
+				is_planet_class = pc_aquatic	
+				is_planet_class = pc_tidallyaquatic
+			}
 		}		
 	}
 }
@@ -581,6 +611,7 @@ d_veiny_cliffs = {
 		d_mineral_fields
 		d_mineral_striations # gaia
 		d_coral_deposit
+		d_sulfur_mineral_fields
 	}
 	
 	planet_modifier = { 
@@ -651,6 +682,7 @@ d_mineral_fields = {
 		d_veiny_cliffs
 		d_mineral_striations # gaia
 		d_coral_deposit
+		d_sulfur_mineral_fields
 	}
 	
 	planet_modifier = { 
@@ -725,6 +757,7 @@ d_submerged_caves = {
 	terraforming_swap_types = {
 		d_ore_rich_caverns
 		d_prosperous_mesa
+		d_sulfur_ore_rich_caverns
 	}
 	
 	planet_modifier = { 
@@ -732,14 +765,20 @@ d_submerged_caves = {
 	}	
 	
 	potential = {
-		is_planet_class = pc_aquatic
+		OR = {
+			is_planet_class = pc_aquatic	
+			is_planet_class = pc_tidallyaquatic
+		}
 	}
 	
 	drop_weight = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_planet_class = pc_aquatic
+			OR = {
+				is_planet_class = pc_aquatic	
+				is_planet_class = pc_tidallyaquatic
+			}
 		}
 	}
 }
@@ -755,6 +794,7 @@ d_prosperous_mesa = {
 	terraforming_swap_types = {
 		d_ore_rich_caverns
 		d_submerged_caves
+		d_sulfur_ore_rich_caverns
 	}
 	
 	planet_modifier = { 
@@ -823,6 +863,7 @@ d_ore_rich_caverns = {
 	terraforming_swap_types = {
 		d_prosperous_mesa
 		d_submerged_caves
+		d_sulfur_ore_rich_caverns
 	}
 	
 	planet_modifier = { 
@@ -906,6 +947,7 @@ d_rich_mountain = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_submerged_ore_veins
+		d_sulfur_rich_mountain
 	}
 	
 	planet_modifier = { 
@@ -999,6 +1041,7 @@ d_submerged_ore_veins = {
 	should_swap_deposit_on_terraforming = yes
 	terraforming_swap_types = {
 		d_rich_mountain
+		d_sulfur_rich_mountain
 	}	
 	
 	planet_modifier = { 
@@ -1069,6 +1112,7 @@ d_sea_grass = {
 		d_nutritious_mudland
 		d_natural_farmland # gaia
 		d_lichen_fields
+		d_sulfur_nutritious_mudland
 	}	
 	
 	planet_modifier = { 
@@ -1076,14 +1120,20 @@ d_sea_grass = {
 	}
 	
 	potential = {
-		is_planet_class = pc_aquatic
+		OR = {
+			is_planet_class = pc_aquatic	
+			is_planet_class = pc_tidallyaquatic
+		}
 	}
 	
 	drop_weight = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_planet_class = pc_aquatic
+			OR = {
+				is_planet_class = pc_aquatic	
+				is_planet_class = pc_tidallyaquatic
+			}
 		}		
 	}
 }
@@ -1105,6 +1155,7 @@ d_lichen_fields = {
 		d_nutritious_mudland
 		d_natural_farmland # gaia
 		d_sea_grass
+		d_sulfur_nutritious_mudland
 	}	
 	
 	planet_modifier = { 
@@ -1156,6 +1207,7 @@ d_bountiful_plains = {
 		d_nutritious_mudland
 		d_natural_farmland # gaia
 		d_sea_grass
+		d_sulfur_nutritious_mudland
 	}
 	
 	planet_modifier = {
@@ -1204,6 +1256,7 @@ d_rugged_woods = {
 		d_boggy_fens
 		d_nutritious_mudland
 		d_sea_grass
+		d_sulfur_nutritious_mudland
 	}
 
 	planet_modifier = { 
@@ -1257,6 +1310,7 @@ d_green_hills = {
 		d_nutritious_mudland
 		d_natural_farmland # gaia
 		d_sea_grass
+		d_sulfur_nutritious_mudland
 	}	
 	
 	planet_modifier = { 
@@ -1303,6 +1357,7 @@ d_forgiving_tundra = {
 		d_nutritious_mudland
 		d_natural_farmland # gaia
 		d_sea_grass
+		d_sulfur_nutritious_mudland
 	}	
 	
 	planet_modifier = { 
@@ -1350,6 +1405,7 @@ d_boggy_fens = {
 		d_nutritious_mudland
 		d_natural_farmland # gaia
 		d_sea_grass
+		d_sulfur_nutritious_mudland
 	}	
 	
 	planet_modifier = { 
@@ -1396,6 +1452,7 @@ d_nutritious_mudland = {
 		d_boggy_fens
 		d_natural_farmland # gaia
 		d_sea_grass
+		d_sulfur_nutritious_mudland
 	}	
 	
 	planet_modifier = { 
@@ -1445,6 +1502,7 @@ d_kelp_forests = {
 		d_fertile_lands
 		d_great_river
 		d_fungal_caves
+		d_sulfur_fertile_lands
 	}	
 	
 	planet_modifier = { 
@@ -1452,14 +1510,20 @@ d_kelp_forests = {
 	}
 	
 	potential = {
-		is_planet_class = pc_aquatic
+		OR = {
+			is_planet_class = pc_aquatic	
+			is_planet_class = pc_tidallyaquatic
+		}
 	}
 	
 	drop_weight = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_planet_class = pc_aquatic
+			OR = {
+				is_planet_class = pc_aquatic	
+				is_planet_class = pc_tidallyaquatic
+			}
 		}		
 	}
 }
@@ -1477,6 +1541,7 @@ d_fungal_caves = {
 		d_fertile_lands
 		d_great_river
 		d_kelp_forests
+		d_sulfur_fertile_lands
 	}	
 	
 	planet_modifier = { 
@@ -1523,6 +1588,7 @@ d_lush_jungle = {
 		d_fertile_lands
 		d_great_river
 		d_kelp_forests
+		d_sulfur_fertile_lands
 	}	
 	
 	planet_modifier = { 
@@ -1575,6 +1641,7 @@ d_fertile_lands = {
 		d_lush_jungle
 		d_great_river
 		d_kelp_forests
+		d_sulfur_fertile_lands
 	}	
 	
 	planet_modifier = { 
@@ -1640,6 +1707,7 @@ d_great_river = {
 		d_lush_jungle
 		d_fertile_lands
 		d_kelp_forests
+		d_sulfur_fertile_lands
 	}	
 	
 	planet_modifier = { 
@@ -1690,6 +1758,7 @@ d_black_soil = {
 		d_fungal_forest
 		d_hydrocarbon_lakes
 		d_ammonia_seas
+		d_sulfur_black_soil
 	}	
 	
 	planet_modifier = { 
@@ -1754,6 +1823,7 @@ d_hydrocarbon_lakes = {
 		d_fungal_forest
 		d_black_soil
 		d_ammonia_seas
+		d_sulfur_black_soil
 	}	
 	
 	planet_modifier = { 
@@ -1788,6 +1858,7 @@ d_ammonia_seas = {
 		d_fungal_forest
 		d_black_soil
 		d_hydrocarbon_lakes
+		d_sulfur_black_soil
 	}	
 	
 	planet_modifier = { 
@@ -1822,6 +1893,7 @@ d_teeming_reef = {
 		d_fungal_forest
 		d_hydrocarbon_lakes
 		d_ammonia_seas
+		d_sulfur_black_soil
 	}	
 	
 	planet_modifier = { 
@@ -1867,6 +1939,7 @@ d_marvelous_oasis = {
 		d_fungal_forest
 		d_hydrocarbon_lakes
 		d_ammonia_seas
+		d_sulfur_black_soil
 	}	
 	
 	planet_modifier = { 
@@ -1915,6 +1988,7 @@ d_tropical_island = {
 		d_fungal_forest
 		d_hydrocarbon_lakes
 		d_ammonia_seas
+		d_sulfur_black_soil
 	}	
 	
 	planet_modifier = { 
@@ -1960,6 +2034,7 @@ d_fungal_forest = {
 		d_tropical_island
 		d_hydrocarbon_lakes
 		d_ammonia_seas
+		d_sulfur_black_soil
 	}	
 	
 	category = deposit_cat_food

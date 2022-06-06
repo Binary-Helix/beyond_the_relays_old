@@ -1,0 +1,46 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# blocked_modifier - applied to planet
+# constant_modifier - applied to planet always
+# station = station class in orbit to gather
+
+d_mec_asari_zylium_eezo = {
+	station = shipclass_mining_station
+	is_for_colonizable = no
+		
+	planet_modifier = {
+		trade_value_add = 5
+	}
+	
+	potential = { always = no }
+	drop_weight = { weight = 0 }
+}
+
+d_mec_asari_doriae_bacteria = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			society_research = 3
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}
+
+d_mec_asari_tritogenith_collision = {
+	resources = {
+		category = orbital_research_deposits
+		produces = {
+			physics_research = 4
+		}
+	}
+	station = shipclass_research_station 
+	is_for_colonizable = no
+	
+	potential = { always = no }
+	drop_weight = {	weight = 0 }
+}

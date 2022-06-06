@@ -1,0 +1,135 @@
+## Possible Deposit Variables ##
+# resources, resource and amount
+# potential trigger (planet scope)
+# planet_modifier - applied to planet only when deposit blocker has been cleared
+# constant_modifier - applied to planet always
+# blocker = <key/any/none> - default any
+# station = station class in orbit to gather
+
+@high = 16
+@med = 8
+@low = 4
+
+@high_rare = 2
+@med_rare = 1
+@low_rare = 0.5
+
+#Reference: Earth
+#7 mining
+#8 farming
+#8 energy
+#3 blocked
+
+####
+# TARITH DEPOSITS
+####
+
+d_mec_asari_tarith_toxic_platinum = {
+	icon = d_noxious_swamp
+	time = 360
+	
+	category = deposit_cat_blockers
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		planet_max_districts_add = -3
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_tarith_platinum
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	potential = { always = no }
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_platinum = {
+	icon = d_crater
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_mining_max = 5
+		planet_jobs_minerals_produces_mult = 0.25
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_toxic_klixos = {
+	icon = d_noxious_swamp
+	time = 360
+	
+	category = deposit_cat_blockers
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		planet_max_districts_add = -3
+	}
+	
+	use_weights_for_blocker_swap_types = no
+
+	blocker_swap_types = {
+		d_mec_asari_tarith_klixos
+	}
+	
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 500
+		}
+	}
+	
+	potential = { always = no }
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_klixos = {
+	icon = d_boggy_fens
+	
+	category = deposit_cat_food
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		district_farming_max = 3
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_mec_asari_tarith_flora = {
+	icon = d_huge_tree
+	
+	category = deposit_cat_rare
+	is_for_colonizable = yes
+	
+	planet_modifier = { 
+		pop_environment_tolerance = -0.10
+		planet_jobs_food_produces_mult = -0.20
+		planet_jobs_society_research_produces_mult = 0.20
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
