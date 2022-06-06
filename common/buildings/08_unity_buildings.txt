@@ -3871,4 +3871,55 @@ building_organic_paradise = {
 	show_tech_unlock_if = {
 		owner = { has_valid_civic = civic_machine_servitor }
 	}
+
+	
+	# Here we try to adress the second issue that the AI cant evaluate the pop job output of the bio trophy given the happiness trigger that was put inplace to guard against players exploiting bio trophies
+
+	#science
+	ai_resource_production = {
+		unity = 20
+		physics_research = 20
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = physics_research
+				value >= 100
+				type = produces
+			}
+		}
+	}
+
+	#alloys
+	ai_resource_production = {
+		unity = 20
+		alloys = 20
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = alloys
+				value >= 100
+				type = produces
+			}
+		}
+	}
+
+	#cgs
+	ai_resource_production = {
+		unity = 20
+		consumer_goods = 20
+
+		trigger = {
+			has_unemployed_pop_of_category = bio_trophy
+
+			planet_resource_compare = {
+				resource = consumer_goods
+				value >= 100
+				type = produces
+			}
+		}
+	}
 }

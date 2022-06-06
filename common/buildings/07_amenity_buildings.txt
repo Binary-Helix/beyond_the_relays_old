@@ -1447,6 +1447,7 @@ building_spawning_pool = {
 			num_buildings = { type = any value < 15 }
 			owner = { is_ai = no }
 		}
+		NOT = { has_planet_flag = planetary_station }
 	}
 	triggered_planet_modifier = {
 		potential = {
