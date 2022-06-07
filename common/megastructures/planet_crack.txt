@@ -1,0 +1,206 @@
+
+planet_crack_0 = {
+	entity = ""
+	construction_entity = ""
+	portrait = "GFX_megastructure_construction_background"
+	place_entity_on_planet_plane = yes
+	build_time = 800
+	
+	resources = {
+		category = planetary_station
+		cost = {
+			alloys = 600
+			influence = 100
+		}
+	}
+	construction_blocks_others = no
+	construction_blocked_by_others = no
+
+	potential = {
+		has_technology = tech_extreme_mining_methods
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+	}
+
+	placement_rules = {
+		planet_possible = {
+			custom_tooltip = {
+				fail_text = "requires_surveyed_planet"
+				is_surveyed = {			# prevent leaking habitability information
+					who = prev.from
+					status = yes
+				}
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_anomaly"
+				NOT = { has_anomaly = yes }
+			}
+			custom_tooltip = {
+				fail_text = "requires_no_existing_megastructure"
+				#can_build_megastructure_on_planet = yes
+				NOR = {
+					has_planet_flag = megastructure
+					has_planet_flag = has_megastructure
+					solar_system = {
+						has_star_flag = ring_world_built
+					}
+					is_planet_class = pc_ringworld_habitable
+					is_planet_class = pc_ringworld_habitable_damaged
+					is_planet_class = pc_ringworld_tech
+					is_planet_class = pc_ringworld_tech_damaged
+					is_planet_class = pc_ringworld_seam
+					is_planet_class = pc_ringworld_seam_damaged
+					is_planet_class = pc_habitat
+				}
+			}
+
+ 			custom_tooltip = {
+				fail_text = "requires_barren_world"
+				OR = {
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+				}
+			}
+		}
+	}
+	
+	ai_weight = {
+		factor = 1
+		modifier = {
+			factor = 0
+			solar_system = {
+				exists = owner
+				is_same_value = owner.capital_scope.solar_system
+			}
+		}
+		modifier = {
+			factor = 0
+			any_system_planet = {
+				has_planet_flag = planetary_station
+				is_colony = no
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				any_owned_planet = {
+					has_planet_flag = planetary_station
+					NOR = {
+						has_planet_flag = energy_station
+						has_planet_flag = mining_station
+						has_planet_flag = research_station
+						has_planet_flag = civil_station
+						has_planet_flag = industrial_station
+						has_planet_flag = military_station
+						has_planet_flag = cultural_station
+						has_planet_flag = prison_station
+						has_planet_flag = cracking_station
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			owner = {
+				any_owned_planet = {
+					has_planet_flag = planetary_station
+					count_owned_pop = {
+						count < 15
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			owner = {
+				any_owned_planet = {
+					has_planet_flag = planetary_station
+					count_owned_pop = {
+						count < 30
+					}
+				}
+			}
+		}
+	}
+	
+	on_build_start = {}
+	on_build_cancel = {}
+	
+	on_build_complete = {
+
+		fromfrom.planet = {
+			#set_owner = root.owner
+			set_planet_flag = planetary_station
+			save_event_target_as = cracked_planet
+			set_deposit_flags = yes
+			clear_deposits = yes
+			
+			if = {
+				limit = { has_modifier = station_wreckage }
+				remove_modifier = station_wreckage
+			}
+			
+			change_pc = pc_cracking_station
+			
+			set_planet_flag = cracking_station
+			
+			if = {
+				limit = { planet_size > 5 }
+				add_deposit = d_broken_blocker
+			}
+			
+			if = {
+				limit = { has_orbital_station = yes }
+				orbital_station = {
+					dismantle = yes
+				}
+			}
+			
+			set_station_deposits = yes
+		}
+		
+		owner = {
+			create_message = {
+				type = PLANETARY_STATION_BUILT
+				localization = PLANETARY_STATION_BUILT_DESC
+				days = 30
+				target = prev.fromfrom.planet
+				variable = {
+					type = name
+					localization = PLANET
+					scope = prev.fromfrom.planet
+				}
+				variable = {
+					type = name
+					localization = SYSTEM
+					scope = this.solar_system
+				}
+			}
+		}
+		
+		#owner = {
+		#	random_owned_pop = {
+		#		weights = {
+		#			base = 1
+		#			modifier = { 
+		#				add = 100
+		#				is_unemployed = yes
+		#			}
+		#		}
+		#		resettle_pop = {
+		#			pop = this
+		#			planet = prev.fromfrom.planet
+		#		}
+		#	}
+		#}
+		
+		remove_megastructure = fromfrom
+		from = { country_event =  { id = planetarystations_action.6 } }
+	}
+}
