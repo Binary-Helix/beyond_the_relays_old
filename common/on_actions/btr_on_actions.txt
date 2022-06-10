@@ -195,5 +195,9 @@ on_planet_bombarded = {
 on_leader_spawned = {
 	events = {
 		btr_sedcol_matriarchy
+		btr_asrep.03 # New Leaders gain Asari Trait
+		btr_asrep.04 # New Asari generals gain Commando trait
 	}
+		random_events = {
+		10 = btr_asrep.02 # New non-Asari leaders may gain university trait
 }

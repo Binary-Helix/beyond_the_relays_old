@@ -9,6 +9,7 @@ pre_sapient = {
 	is_capped_by_modifier = no
 	is_pre_sapient = yes
 	clothes_texture_index = 2
+	contributes_to_diplo_weight = no
 
 	possible_pre_triggers = {
 		is_sapient = no
@@ -44,8 +45,12 @@ hunter_gatherer = {
 		}
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
 		planet_amenities_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	resources = {
@@ -65,7 +70,7 @@ hunter_gatherer = {
 	}
 
 	weight = {
-		weight = @worker_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
 }
 
@@ -121,6 +126,7 @@ primitive_warrior = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -161,6 +167,7 @@ primitive_noble = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -183,12 +190,17 @@ primitive_noble = {
 		}
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
 		planet_amenities_add = 3
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
 		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
 }
 
@@ -200,6 +212,7 @@ primitive_researcher = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -245,6 +258,7 @@ primitive_priest = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -267,12 +281,17 @@ primitive_priest = {
 		}
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
 		planet_amenities_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
-		weight = 2
+		weight = @specialist_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 6
 			is_spiritualist = yes
@@ -292,6 +311,7 @@ primitive_laborer = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -336,6 +356,7 @@ primitive_miner = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -375,6 +396,7 @@ primitive_technician = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -413,6 +435,7 @@ primitive_farmer = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -451,6 +474,7 @@ primitive_researcher_2 = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -498,6 +522,7 @@ primitive_priest_2 = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -522,12 +547,17 @@ primitive_priest_2 = {
 		}
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
 		planet_amenities_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
-		weight = 2
+		weight = @specialist_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 6
 			is_spiritualist = yes
@@ -547,6 +577,7 @@ primitive_warrior_2 = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -590,6 +621,7 @@ primitive_bureaucrat = {
 
 	possible_pre_triggers = {
 		has_owner = yes
+		is_sapient = yes
 	}
 
 	possible = {
@@ -614,11 +646,16 @@ primitive_bureaucrat = {
 		}
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
 		planet_amenities_add = 3
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
 		weight = @ruler_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
 }
