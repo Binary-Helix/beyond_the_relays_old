@@ -1,14 +1,14 @@
-species_modification_prefix = { 
-	Neo- 
-	Post- 
-	Super- 
-	Ultra- 
-	Meta- 
-	Trans- 
-	High_ 
+species_modification_prefix = {
+	Neo-
+	Post-
+	Super-
+	Ultra-
+	Meta-
+	Trans-
+	High_
 }
 
-species_modification_postfix = { 
+species_modification_postfix = {
 	Superior
 	Variatus
 	Mutatis
@@ -60,7 +60,6 @@ black_hole_names = {
 	"X-941_Singularity"
 	"BX-799_Singularity"
 	"P94-L_Singularity"
-	"Heavens_Gate"
 	"Dubious_Abyss"
 	"Screeching_Abyss"
 	"Blorgs_Bane"
@@ -73,6 +72,18 @@ black_hole_names = {
 	"Abaddons_Demesne"
 	"Eye_of_Hawking"
 	"Eye_of_Bal"
+	"Harmonious_Repose"
+	"Hopes_End"
+	"Enigmas_End"
+	"Entropys_Maw"
+	"Larkins_Singularity"
+	"Temporal_Decay"
+	"Succubus_Bawl"
+	"Waledan_Black_Hole"
+	"Proteemas_Black_Hole"
+	"Masinissas_Demise"
+	"Iskanders_Pride"
+	"Maw_of_the_Truthsayer"
 }
 
 asteroid_prefix = {
@@ -349,6 +360,201 @@ asteroid_postfix = {
 }
 
 star_names = {
+	### REAL ###
+	"Epsilon_Eridani"
+	"Epsilon_Indi"
+	"Tau_Ceti"
+	Altair
+	Canopus
+	Arcturus
+	Vega
+	Rigel
+	Betelgeuse
+	Achernar
+	Capella
+	Aldebaran
+	Spica
+	Antares
+	Pell
+	Cyteen
+	Pollux
+	Fomalhaut
+	Regulus
+	Alphard
+	Rasalhague
+	Mizar
+	Enif
+	Alcor
+	"Zeta_Reticuli"
+	"Sigma_Draconis"
+	"Tau_Cygni"
+	"Alpha_Hydri"
+	"Beta_Aquilae"
+	"Beta_Caeli"
+	"Beta_Corvi"
+	"Beta_Hydri"
+	"Chi_Draconis"
+	"Delta_Pavonis"
+	"Gamma_Draconis"
+	"Lambda_Serpentis"
+	"Omicron_Persei"
+	Acamar
+	Achernar
+	Acrux
+	Acubens
+	Alamak
+	Aldib
+	Algol
+	Algorab
+	Alioth
+	Alkaid
+	Almach
+	Alphecca
+	Aludra
+	Angetenar
+	Arich
+	Arrakis
+	Ascella
+	Asterion
+	Asterope
+	Atlas
+	Avior
+	Azaleh
+	Azha
+	Baham
+	Beid
+	Bellatrix
+	Benetnasch
+	Betria
+	Biham
+	Botein
+	Brachium
+	Bunda
+	Caph
+	Castor
+	Cebelrai
+	Celaeno
+	Chara
+	Cheleb
+	Chertan
+	Chort
+	Cursa
+	Dabih
+	Diadem
+	Diphda
+	Duhr
+	Edasich
+	Electra
+	Elnath
+	Errai
+	Furud
+	Gatria
+	Gemma
+	Gianfar
+	Giedi
+	Girtab
+	Gomeisa
+	Grumium
+	Hadar
+	Haedus
+	Haldus
+	Hasseleh
+	Heka
+	Heze
+	Hoedus
+	Homam
+	Hyadum
+	Hydrobius
+	Izar
+	Jabbah
+	Jih
+	Kajam
+	Kastra
+	Keid
+	Kleeia
+	Kochab
+	Kornephoros
+	Kraz
+	Ksora
+	Kuma
+	Lesath
+	Maasym
+	Maia
+	Marfark
+	Markab
+	Matar
+	Media
+	Meissa
+	Menchib
+	Menkar
+	Merga
+	Merope
+	Mesarthim
+	Minchir
+	Mintaka
+	Mira
+	Mirach
+	Mirzam
+	Muphrid
+	Muscida
+	Naos
+	Nashira
+	Navi
+	Nekkar
+	Nembus
+	Neshmet
+	Nihal
+	Nunki
+	Nusakan
+	Okul
+	Phact
+	Pherkad
+	Pleione
+	Porrima
+	Propus
+	Rana
+	Rasalas
+	Rasalgethi
+	Rastaban
+	Regor
+	Rotanev
+	Ruchba
+	Rukbat
+	Sabik
+	Sadalbari
+	Sadatoni
+	Saiph
+	Sargas
+	Sasin
+	Sceptrum
+	Scheat
+	Scheddi
+	Seginus
+	Shaula
+	Sheliak
+	Sheratan
+	Sinistra
+	Situla
+	Skat
+	Sterope
+	Subra
+	Syrma
+	Tarazed
+	Terebellum
+	Thabit
+	Theemin
+	Thuban
+	Tureis
+	Tyl
+	Unuk
+	Ushakaron
+	Wasat
+	Wezen
+	Yildun
+	Zaniah
+	Zaurak
+	Zosma
+	Zuben
 	### FICTIONAL ###
 	Rantor
 	Nuranka
@@ -369,7 +575,6 @@ star_names = {
 	Serpess
 	Talandra
 	Bivham
-	Covfefe
 	Kerbol
 	Intham
 	Nordak
@@ -1606,16 +1811,227 @@ star_names = {
 	Toluc-Ei
 	Regis
 	Lem
-	
-	#Starlord Patrons
-	Bluehawk
-	Mattern
-	Rahman
-	Garud
-	Bynum
-	Stevens
-	Aries
-	"Da Gwim Weaper"
+	Lin-Tigr
+
+	#New: mix of real and fictional
+	Ain
+	Lyrae
+	Amadioha
+	Aniara
+	Delta_Cephei
+	Beta_Ursae_Majoris
+	Alpha_Canis
+	Epsilon_Cygni
+	Alpha_Lyncis
+	Theta_Scorpii
+	Kaus_Borealis
+	Gamma_Delphini
+	Gamma_Velorum
+	Beta_Stefani
+	Mu_Ophiuchi
+	Berehynia
+	Cervantes
+	Felis
+	Haftorang
+	Fulu
+	Gloas
+	Hassaleh
+	Jishui
+	Alderamin
+	Emasdouhi
+	Hraztan
+	Soukias
+	Vartivar
+	Maaz
+	Minelauva
+	Orpheas
+	Eurydice
+	Perseus
+	Menkalinan
+	Meleph
+	Valdoitarah
+	Gorionis
+	Tatoian
+	Monzun
+	Janlohikassa
+	Rogoul
+	Ansoulom
+	Chigris
+	Elinmi-i
+	Golovia
+	Haegga
+	Lennic
+	Kiezel
+	Tozied
+	Amory
+	Forrstro
+	Nosaxa
+	Nyamien
+	Ogma
+	Pincoya
+	Poerava
+	Anastasia
+	Secunda_Hyadum
+	Stribor
+	Taiyangshou
+	Taiyi
+	Titawin
+	Tonatiuh
+	Vindemiatrix
+	Dnoces
+	Tierg
+	Anahita
+	Sassan
+	Mehregaaran
+	Laleya
+	Ednit
+	Ekavira
+	Phiroza
+	Pakshalika
+	Tathagat
+	Thamayan
+	Paraga
+	Amandi
+	Damsath
+	Dulshi
+	Lendula
+	Nendi
+	Nethupa
+	Trivelle
+	Phamnu
+	Sherakanda
+	Vinh
+	Lynsar
+	Yirellon
+	Iccni
+	Balaesa
+	Rituvecca
+	Balorix
+	Vrittaka
+	Trenacca
+	Agisilla
+	Olluna
+	Litugena
+	Celandine
+	Dianthe
+	Elissa
+	Ophelos
+	Phaidros
+	Thoth
+	Nowitoff
+	Hepamiston
+	Bellevarle
+	Urlaimon
+	Talemes_Mar
+	Barillion
+	Spoo'a
+	Gor'kaner
+	Pala'orolin
+	Talaarim
+	Phemisto
+	Wallamooriah
+	Annawan
+	Bidiza
+	Eskaminza
+	Kachada
+	Vohkinne
+	Zaltana
+	Acahuabene
+	Thespia
+	Cadmael
+	Jorelwar
+	Roxelana
+	Nikalor
+	Andrussa
+	Parnassos
+	Ilithum
+	Pherae
+	Aphidna
+	Imoleto
+	Stenbork
+	Wieser
+	Ay'arolee
+	Lorrgran
+	Hagers
+	Julfte
+	Vantandemion
+	Maistadol
+	Halda'na
+	Laloria
+	Sharku
+	Nyvann
+	Sumoneta
+	Atropatan
+	Berenn
+	Luthiea
+	Lisswyn
+	Olfete
+	Nimirroth
+	Rothbelek
+	Forodren_Graw
+	Brannamath
+	Awarth
+	Uireb_Dar
+	Alassia
+	Amanyea
+	Wanya
+	Calima'el
+	Iversene
+	Tobeva
+	Walde
+	Tavander
+	Breslin
+	Franfred
+	Scottica
+	Bingwen
+	Lihua
+	Hualinga
+	Cajamere
+	Vindomere
+	Sassara
+	Melitane
+	Zariadnus
+	Jalora
+	Halamar
+	Qel-Zain
+	Siab'ora
+	Allard
+	Vernier
+	Abovast
+	Soteria
+	Aislinor
+	Diarmu
+	Tiernar
+	Daithlon
+	Saoira
+	Wagha
+	Jelenn
+	Kajimar
+	Torphrys_Star
+	Tas_Zebudor
+	Rebulon
+	Mota
+	Krennis
+	Emara
+	Birkenmar
+	Thoravia
+	Obethalon
+	Sjookr
+	Barcalo
+	Kir-sek
+	Zavarys
+	Cederka
+	Larstahl
+	Woradon
+	Namron
+	Noos
+	Jomel
+	Sifuhr
+	Windseth
+	Carmenekke
+	Muugi
+	Fre_ake
+	Nyxras
 }
 
 nebula_names = {
@@ -1662,4 +2078,14 @@ nebula_names = {
 	"Hirantes_Dust_Clouds"
 	"Kiiran_Dust_Clouds"
 	"Wimar_Drift"
+	"Dark_Horse_Nebula"
+	"Lost_Dreams_Nebula"
+	"Snake_Nebula"
+	"Little_Ghost_Nebula"
+	"Broken_Skull_Miasma"
+	"Phantom_Streak_Miasma"
+	"Double_Helix_Expanse"
+	"Bok_Globule_Badlands"
+	"Firecloud_Nebula"
+	"Rossorim_Depths"
 }
