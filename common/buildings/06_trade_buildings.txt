@@ -18,7 +18,6 @@ building_commercial_zone = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -46,31 +45,14 @@ building_commercial_zone = {
 						str_is_col_bureau = no
 						free_amenities < -5
 					}
-				}	
+				}
 			}
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
 	}
 
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -155,7 +137,6 @@ building_commercial_megaplex = {
 		}
 		NOT = { has_modifier = slave_colony }
 		has_building = building_commercial_zone
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -179,25 +160,8 @@ building_commercial_megaplex = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -252,7 +216,7 @@ building_commercial_megaplex = {
 			OR = {
 				num_unemployed >= 10
 				num_assigned_jobs = {
-				job = servant
+					job = servant
 					value >= 10
 				}
 			}
@@ -269,7 +233,6 @@ building_galactic_stock_exchange = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -300,25 +263,8 @@ building_galactic_stock_exchange = {
 		trade_value_mult = 0.20
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}

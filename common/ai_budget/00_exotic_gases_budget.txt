@@ -4,163 +4,163 @@
 #################
 ## Expenditure ##
 #################
-exotic_gases_expenditure_ships = {
-	resource = exotic_gases
-	type = expenditure
-	category = ships
+# exotic_gases_expenditure_ships = {
+# 	resource = exotic_gases
+# 	type = expenditure
+# 	category = ships
 
-	potential = {
-		always = yes
-	}
+# 	potential = {
+# 		always = yes
+# 	}
 
-	fraction = {
-		weight = 1
-	}
-	static_min = {
-		base = 50
-	}
-}
+# 	fraction = {
+# 		weight = 1
+# 	}
+# 	static_min = {
+# 		base = 50
+# 	}
+# }
 
-exotic_gases_expenditure_trade = {
-	resource = exotic_gases
-	type = expenditure
-	category = trade
+# exotic_gases_expenditure_trade = {
+# 	resource = exotic_gases
+# 	type = expenditure
+# 	category = trade
 
-	potential = {
-		always = yes
-	}
+# 	potential = {
+# 		always = yes
+# 	}
 
-	fraction = {
-		weight = 0.2
-	}
-}
+# 	fraction = {
+# 		weight = 0.2
+# 	}
+# }
 
-exotic_gases_expenditure_planets = {
-	resource = exotic_gases
-	type = expenditure
-	category = planets
+# exotic_gases_expenditure_planets = {
+# 	resource = exotic_gases
+# 	type = expenditure
+# 	category = planets
 
-	potential = {
-		always = yes
-	}
+# 	potential = {
+# 		always = yes
+# 	}
 
-	fraction = {
-		weight = 0.5
-	}
-	static_min = {
-		base = 500
-	}
-}
+# 	fraction = {
+# 		weight = 0.5
+# 	}
+# 	static_min = {
+# 		base = 500
+# 	}
+# }
 
-exotic_gases_upkeep_planets = {
-	resource = exotic_gases
-	type = upkeep
-	category = planets
+# exotic_gases_upkeep_planets = {
+# 	resource = exotic_gases
+# 	type = upkeep
+# 	category = planets
 
-	potential = {
-		always = yes
-	}
+# 	potential = {
+# 		always = yes
+# 	}
 
-	fraction = {
-		weight = 1
-	}
-}
+# 	fraction = {
+# 		weight = 1
+# 	}
+# }
 
-exotic_gases_upgrade_ships = {
-	resource = exotic_gases
-	type = expenditure
-	category = ship_upgrades
+# exotic_gases_upgrade_ships = {
+# 	resource = exotic_gases
+# 	type = expenditure
+# 	category = ship_upgrades
 
-	potential = {
-		always = yes
-	}
+# 	potential = {
+# 		always = yes
+# 	}
 
-	fraction = {
-		weight = 1
-	}
-}
+# 	fraction = {
+# 		weight = 1
+# 	}
+# }
 
-exotic_gases_expenditure_edicts = {
-	resource = exotic_gases
-	type = expenditure
-	category = edicts
+# exotic_gases_expenditure_edicts = {
+# 	resource = exotic_gases
+# 	type = expenditure
+# 	category = edicts
 
-	potential = {
-		resource_stockpile_compare = {
-			resource = exotic_gases
-			value > 100
-		}
-	}
+# 	potential = {
+# 		resource_stockpile_compare = {
+# 			resource = exotic_gases
+# 			value > 100
+# 		}
+# 	}
 
-	fraction = {
-		weight = 1
-	}
-}
-exotic_gases_expenditure_shipedicts = {
-	resource = exotic_gases
-	type = expenditure
-	category = ship_edicts
+# 	fraction = {
+# 		weight = 1
+# 	}
+# }
+# exotic_gases_expenditure_shipedicts = {
+# 	resource = exotic_gases
+# 	type = expenditure
+# 	category = ship_edicts
 
-	potential = {
-		resource_stockpile_compare = {
-			resource = exotic_gases
-			value > 100
-		}
-	}
+# 	potential = {
+# 		resource_stockpile_compare = {
+# 			resource = exotic_gases
+# 			value > 100
+# 		}
+# 	}
 
-	fraction = {
-		weight = 1
-	}
-	static_min = {
-		base = 0
-		modifier = {
-			add = 1000
-			is_at_war = yes
-		}
-	}
-}
+# 	fraction = {
+# 		weight = 1
+# 	}
+# 	static_min = {
+# 		base = 0
+# 		modifier = {
+# 			add = 1000
+# 			is_at_war = yes
+# 		}
+# 	}
+# }
 
-exotic_gases_expenditure_rareedicts = {
-	resource = exotic_gases
-	type = expenditure
-	category = rare_edicts
+# exotic_gases_expenditure_rareedicts = {
+# 	resource = exotic_gases
+# 	type = expenditure
+# 	category = rare_edicts
 
-	potential = {
-		resource_stockpile_compare = {
-			resource = exotic_gases
-			value > 100
-		}
-	}
+# 	potential = {
+# 		resource_stockpile_compare = {
+# 			resource = exotic_gases
+# 			value > 100
+# 		}
+# 	}
 
-	fraction = {
-		weight = 1
-	}
-}
+# 	fraction = {
+# 		weight = 1
+# 	}
+# }
 
-exotic_gases_upkeep_edicts = {
-	resource = exotic_gases
-	type = upkeep
-	category = edicts
+# exotic_gases_upkeep_edicts = {
+# 	resource = exotic_gases
+# 	type = upkeep
+# 	category = edicts
 
-	potential = {
-		always = yes
-	}
+# 	potential = {
+# 		always = yes
+# 	}
 
-	fraction = {
-		base = 0.25
-	}
-}
+# 	fraction = {
+# 		base = 0.25
+# 	}
+# }
 
-exotic_gases_upkeep_hyper_relays = {
-	resource = exotic_gases
-	type = upkeep
-	category = megastructures_hyper_relay
+# exotic_gases_upkeep_hyper_relays = {
+# 	resource = exotic_gases
+# 	type = upkeep
+# 	category = megastructures_hyper_relay
 
-	potential = {
-		has_technology = tech_hyper_relays
-	}
+# 	potential = {
+# 		has_technology = tech_hyper_relays
+# 	}
 
-	fraction = {
-		weight = 0.1
-	}
-}
+# 	fraction = {
+# 		weight = 0.1
+# 	}
+# }

@@ -13791,164 +13791,164 @@ resolution_galactic_focus_crisis_greatkhan = {
 	}
 }
 
-resolution_galactic_focus_crisis_nanites = {
-	icon = "GFX_resolution_emergency_measure"
+# resolution_galactic_focus_crisis_nanites = {
+# 	icon = "GFX_resolution_emergency_measure"
 
-	resources = {
-		category = resolutions
-		cost = {
-			influence = @resolution_cost_t1
-		}
-	}
-	target = no
+# 	resources = {
+# 		category = resolutions
+# 		cost = {
+# 			influence = @resolution_cost_t1
+# 		}
+# 	}
+# 	target = no
 
-	effect = {
-		custom_tooltip = resolution_galactic_focus_crisis_nanites_effect_success
+# 	effect = {
+# 		custom_tooltip = resolution_galactic_focus_crisis_nanites_effect_success
 
-		hidden_effect = {
-			repeal_all_galactic_focus_resolutions = yes
-			set_global_flag = galactic_focus_crisis_nanites
-			set_global_flag = galactic_community_crisis_fighting
+# 		hidden_effect = {
+# 			repeal_all_galactic_focus_resolutions = yes
+# 			set_global_flag = galactic_focus_crisis_nanites
+# 			set_global_flag = galactic_community_crisis_fighting
 
-			set_global_flag = galactic_community_resolution_passed
+# 			set_global_flag = galactic_community_resolution_passed
 
-			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
-			add_modifier = {
-				modifier = resolution_passed_diplomatic_weight
-				days = 2200
-			}
-		}
-	}
+# 			set_timed_country_flag = { flag = galactic_community_resolution_passed_general days = @resolution_flag_timer }
+# 			add_modifier = {
+# 				modifier = resolution_passed_diplomatic_weight
+# 				days = 2200
+# 			}
+# 		}
+# 	}
 
-	fail_effects = {
-		hidden_effect = {
-			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
-			add_modifier = {
-				modifier = resolution_failed_diplomatic_weight
-				days = 2200
-			}
-		}
-	}
+# 	fail_effects = {
+# 		hidden_effect = {
+# 			set_timed_country_flag = { flag = galactic_community_resolution_failed_general days = @resolution_flag_timer }
+# 			add_modifier = {
+# 				modifier = resolution_failed_diplomatic_weight
+# 				days = 2200
+# 			}
+# 		}
+# 	}
 
-	potential = {
-		has_global_flag = gray_goo_crisis_active
-		NOT = { has_global_flag = galactic_focus_crisis_nanites }
-	}
+# 	potential = {
+# 		has_global_flag = gray_goo_crisis_active
+# 		NOT = { has_global_flag = galactic_focus_crisis_nanites }
+# 	}
 
-	active = { # Resolution only in effect while this trigger is met
-		has_global_flag = gray_goo_crisis_active
-	}
+# 	active = { # Resolution only in effect while this trigger is met
+# 		has_global_flag = gray_goo_crisis_active
+# 	}
 
-	ai_weight = {
-		base = @resolution_weight_normal
+# 	ai_weight = {
+# 		base = @resolution_weight_normal
 
-		modifier = {
-			factor = 2
+# 		modifier = {
+# 			factor = 2
 
-			any_neighbor_country = {
-				is_country_type = gray_goo
-			}
-			desc = gal_com_neighboring_gray_goo
-		}
+# 			any_neighbor_country = {
+# 				is_country_type = gray_goo
+# 			}
+# 			desc = gal_com_neighboring_gray_goo
+# 		}
 
-		modifier = {
-			factor = 0.75
+# 		modifier = {
+# 			factor = 0.75
 
-			NOT = {
-				any_country = {
-					is_country_type = gray_goo
-					galaxy_percentage > 0.10
-				}
-			}
-			desc = gal_com_gray_goo_size_smallest
-		}
+# 			NOT = {
+# 				any_country = {
+# 					is_country_type = gray_goo
+# 					galaxy_percentage > 0.10
+# 				}
+# 			}
+# 			desc = gal_com_gray_goo_size_smallest
+# 		}
 
-		modifier = {
-			factor = 1.1
+# 		modifier = {
+# 			factor = 1.1
 
-			any_country = {
-				is_country_type = gray_goo
-				galaxy_percentage > 0.10
-				galaxy_percentage <= 0.20
-			}
-			desc = gal_com_gray_goo_size_small
-		}
+# 			any_country = {
+# 				is_country_type = gray_goo
+# 				galaxy_percentage > 0.10
+# 				galaxy_percentage <= 0.20
+# 			}
+# 			desc = gal_com_gray_goo_size_small
+# 		}
 
-		modifier = {
-			factor = 1.5
+# 		modifier = {
+# 			factor = 1.5
 
-			any_country = {
-				is_country_type = gray_goo
-				galaxy_percentage > 0.20
-				galaxy_percentage <= 0.30
-			}
-			desc = gal_com_gray_goo_size_medium
-		}
+# 			any_country = {
+# 				is_country_type = gray_goo
+# 				galaxy_percentage > 0.20
+# 				galaxy_percentage <= 0.30
+# 			}
+# 			desc = gal_com_gray_goo_size_medium
+# 		}
 
-		modifier = {
-			factor = 2
+# 		modifier = {
+# 			factor = 2
 
-			any_country = {
-				is_country_type = gray_goo
-				galaxy_percentage > 0.30
-				galaxy_percentage <= 0.40
-			}
-			desc = gal_com_gray_goo_size_large
-		}
+# 			any_country = {
+# 				is_country_type = gray_goo
+# 				galaxy_percentage > 0.30
+# 				galaxy_percentage <= 0.40
+# 			}
+# 			desc = gal_com_gray_goo_size_large
+# 		}
 
-		modifier = {
-			factor = 3
+# 		modifier = {
+# 			factor = 3
 
-			any_country = {
-				is_country_type = gray_goo
-				galaxy_percentage > 0.40
-				galaxy_percentage <= 0.50
-			}
-			desc = gal_com_gray_goo_size_very_large
-		}
+# 			any_country = {
+# 				is_country_type = gray_goo
+# 				galaxy_percentage > 0.40
+# 				galaxy_percentage <= 0.50
+# 			}
+# 			desc = gal_com_gray_goo_size_very_large
+# 		}
 
-		modifier = {
-			factor = 10
+# 		modifier = {
+# 			factor = 10
 
-			any_country = {
-				is_country_type = gray_goo
-				galaxy_percentage > 0.50
-			}
-			desc = gal_com_gray_goo_size_huge
-		}
+# 			any_country = {
+# 				is_country_type = gray_goo
+# 				galaxy_percentage > 0.50
+# 			}
+# 			desc = gal_com_gray_goo_size_huge
+# 		}
 
-		modifier = {
-			factor = 10
+# 		modifier = {
+# 			factor = 10
 
-			has_ascension_perk = ap_defender_of_the_galaxy
-			desc = ap_defender_of_the_galaxy
-		}
+# 			has_ascension_perk = ap_defender_of_the_galaxy
+# 			desc = ap_defender_of_the_galaxy
+# 		}
 
-		modifier = {
-			factor = 1.2
-			is_militarist = yes
-			desc = ethic_militarist
-		}
+# 		modifier = {
+# 			factor = 1.2
+# 			is_militarist = yes
+# 			desc = ethic_militarist
+# 		}
 
-		modifier = {
-			factor = 1.2
-			is_materialist = yes
-			desc = ethic_materialist
-		}
+# 		modifier = {
+# 			factor = 1.2
+# 			is_materialist = yes
+# 			desc = ethic_materialist
+# 		}
 
-		modifier = {
-			factor = 0.5
-			is_xenophobe = yes
+# 		modifier = {
+# 			factor = 0.5
+# 			is_xenophobe = yes
 
-			NOT = {
-				any_neighbor_country = {
-					is_country_type = gray_goo
-				}
-			}
-			desc = ethic_xenophobe
-		}
-	}
-}
+# 			NOT = {
+# 				any_neighbor_country = {
+# 					is_country_type = gray_goo
+# 				}
+# 			}
+# 			desc = ethic_xenophobe
+# 		}
+# 	}
+# }
 
 resolution_galactic_focus_war_in_heaven_support_side_1 = {
 	icon = "GFX_resolution_emergency_measure"

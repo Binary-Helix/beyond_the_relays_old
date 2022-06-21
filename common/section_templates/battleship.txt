@@ -198,17 +198,17 @@ ship_section_template = {
 			NOR = {
 				and = {
 					has_technology = tech_mass_accelerator_1
-					resource_stockpile_compare = {
-						resource = volatile_motes
-						value > 50
-					}
+					# resource_stockpile_compare = {
+					# 	resource = volatile_motes
+					# 	value > 50
+					# }
 				}
 				and = {
 					has_technology = tech_energy_lance_1
-					resource_stockpile_compare = {
-						resource = rare_crystals
-						value > 50
-					}
+					# resource_stockpile_compare = {
+					# 	resource = rare_crystals
+					# 	value > 50
+					# }
 				}
 			}
 		}

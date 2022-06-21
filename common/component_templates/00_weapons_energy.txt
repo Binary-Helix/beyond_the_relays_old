@@ -264,21 +264,23 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t4_cost
+			# rare_crystals = @s_t4_rare
 		}
 		upkeep = {
 			energy = @s_t4_upkeep_energy
-			alloys = @s_t4_upkeep_alloys
+			# alloys = @s_t4_upkeep_alloys
 		}
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = rare_crystals
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -302,6 +304,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t4_cost
+			# rare_crystals = @m_t4_rare
 		}
 		upkeep = {
 			energy = @m_t4_upkeep_energy
@@ -310,13 +313,14 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = rare_crystals
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -340,6 +344,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t4_cost
+			# rare_crystals = @l_t4_rare
 		}
 		upkeep = {
 			energy = @l_t4_upkeep_energy
@@ -348,6 +353,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
@@ -356,10 +362,10 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = rare_crystals
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -383,6 +389,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t5_cost
+			# rare_crystals = @s_t5_rare
 		}
 		upkeep = {
 			energy = @s_t5_upkeep_energy
@@ -391,13 +398,14 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = rare_crystals
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -420,6 +428,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
+			# rare_crystals = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -428,13 +437,14 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = rare_crystals
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -457,6 +467,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @l_t5_cost
+			# rare_crystals = @l_t5_rare
 		}
 		upkeep = {
 			energy = @l_t5_upkeep_energy
@@ -465,16 +476,17 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
 			has_technology = tech_energy_torpedoes_1
 		}
-		modifier = {
-			factor = 0.0
-			is_country_type = default
-			resource_stockpile_compare = { resource = alloys value <= 100 }
-		}
+		# modifier = {
+		# 	factor = 0.0
+		# 	is_country_type = default
+		# 	resource_stockpile_compare = { resource = rare_crystals value <= 100 }
+		# }
 	}
 }
 
@@ -606,13 +618,10 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }
@@ -645,13 +654,10 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }
@@ -684,6 +690,7 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
@@ -692,10 +699,6 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }
@@ -728,13 +731,10 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }
@@ -766,13 +766,10 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }
@@ -804,13 +801,10 @@ weapon_component_template = {
 	}
 
 	ai_weight = {
+		weight = 1
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }
@@ -900,6 +894,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t4_cost
+			# rare_crystals = @s_t4_rare
 		}
 		upkeep = {
 			energy = @s_t4_upkeep_energy
@@ -931,6 +926,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t4_cost
+			# rare_crystals = @m_t4_rare
 		}
 		upkeep = {
 			energy = @m_t4_upkeep_energy
@@ -962,6 +958,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @s_t5_cost
+			# rare_crystals = @s_t5_rare
 		}
 		upkeep = {
 			energy = @s_t5_upkeep_energy
@@ -992,6 +989,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @m_t5_cost
+			# rare_crystals = @m_t5_rare
 		}
 		upkeep = {
 			energy = @m_t5_upkeep_energy
@@ -1090,10 +1088,6 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }
@@ -1143,10 +1137,6 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
 		}
 	}
 }

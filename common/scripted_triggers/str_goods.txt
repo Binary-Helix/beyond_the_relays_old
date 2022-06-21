@@ -1,114 +1,114 @@
 
-excess_gases = {
-	or = {
-		AND = {
-			has_monthly_income = {
-				resource = volatile_motes
-				value < 1
-			}
-			has_monthly_income = {
-				resource = exotic_gases
-				value > 1
-			}
-			has_monthly_income = {
-				resource = rare_crystals
-				value < 1
-			}
-		}
-		AND = {
-			has_monthly_income = {
-				resource = volatile_motes
-				value < 2
-			}
-			has_monthly_income = {
-				resource = exotic_gases
-				value > 2
-			}
-			has_monthly_income = {
-				resource = rare_crystals
-				value < 2
-			}
-		}
-		has_monthly_income = {
-			resource = exotic_gases
-			value > 3
-		}
-	}
-}
+# excess_gases = {
+# 	or = {
+# 		AND = {
+# 			has_monthly_income = {
+# 				resource = volatile_motes
+# 				value < 1
+# 			}
+# 			has_monthly_income = {
+# 				resource = exotic_gases
+# 				value > 1
+# 			}
+# 			has_monthly_income = {
+# 				resource = rare_crystals
+# 				value < 1
+# 			}
+# 		}
+# 		AND = {
+# 			has_monthly_income = {
+# 				resource = volatile_motes
+# 				value < 2
+# 			}
+# 			has_monthly_income = {
+# 				resource = exotic_gases
+# 				value > 2
+# 			}
+# 			has_monthly_income = {
+# 				resource = rare_crystals
+# 				value < 2
+# 			}
+# 		}
+# 		has_monthly_income = {
+# 			resource = exotic_gases
+# 			value > 3
+# 		}
+# 	}
+# }
 
-excess_crystals = {
-	OR = {
-		AND = {
-			has_monthly_income = {
-				resource = volatile_motes
-				value < 1
-			}
-			has_monthly_income = {
-				resource = exotic_gases
-				value < 1
-			}
-			has_monthly_income = {
-				resource = rare_crystals
-				value > 1
-			}
-		}
-		AND = {
-			has_monthly_income = {
-				resource = volatile_motes
-				value < 2
-			}
-			has_monthly_income = {
-				resource = exotic_gases
-				value < 2
-			}
-			has_monthly_income = {
-				resource = rare_crystals
-				value > 2
-			}
-		}
-		has_monthly_income = {
-			resource = rare_crystals
-			value > 3
-		}
-	}
-}
+# excess_crystals = {
+# 	OR = {
+# 		AND = {
+# 			has_monthly_income = {
+# 				resource = volatile_motes
+# 				value < 1
+# 			}
+# 			has_monthly_income = {
+# 				resource = exotic_gases
+# 				value < 1
+# 			}
+# 			has_monthly_income = {
+# 				resource = rare_crystals
+# 				value > 1
+# 			}
+# 		}
+# 		AND = {
+# 			has_monthly_income = {
+# 				resource = volatile_motes
+# 				value < 2
+# 			}
+# 			has_monthly_income = {
+# 				resource = exotic_gases
+# 				value < 2
+# 			}
+# 			has_monthly_income = {
+# 				resource = rare_crystals
+# 				value > 2
+# 			}
+# 		}
+# 		has_monthly_income = {
+# 			resource = rare_crystals
+# 			value > 3
+# 		}
+# 	}
+# }
 
-excess_motes = {
-	OR = {
-		AND = {
-			has_monthly_income = {
-				resource = volatile_motes
-				value > 1
-			}
-			has_monthly_income = {
-				resource = exotic_gases
-				value < 1
-			}
-			has_monthly_income = {
-				resource = rare_crystals
-				value < 1
-			}
-		}
-		AND = {
-			has_monthly_income = {
-				resource = volatile_motes
-				value > 2
-			}
-			has_monthly_income = {
-				resource = exotic_gases
-				value < 2
-			}
-			has_monthly_income = {
-				resource = rare_crystals
-				value < 2
-			}
-		}
-		has_monthly_income = {
-			resource = volatile_motes
-			value > 3
-		}
-	}
-}
+# excess_motes = {
+# 	OR = {
+# 		AND = {
+# 			has_monthly_income = {
+# 				resource = volatile_motes
+# 				value > 1
+# 			}
+# 			has_monthly_income = {
+# 				resource = exotic_gases
+# 				value < 1
+# 			}
+# 			has_monthly_income = {
+# 				resource = rare_crystals
+# 				value < 1
+# 			}
+# 		}
+# 		AND = {
+# 			has_monthly_income = {
+# 				resource = volatile_motes
+# 				value > 2
+# 			}
+# 			has_monthly_income = {
+# 				resource = exotic_gases
+# 				value < 2
+# 			}
+# 			has_monthly_income = {
+# 				resource = rare_crystals
+# 				value < 2
+# 			}
+# 		}
+# 		has_monthly_income = {
+# 			resource = volatile_motes
+# 			value > 3
+# 		}
+# 	}
+# }
 
 needs_goods = {
 	is_regular_empire = yes

@@ -184,25 +184,8 @@ building_colony_shelter = {
 		job_colonist_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		upkeep = {
 			energy = 1
 		}
@@ -527,28 +510,11 @@ building_capital = {
 		job_starnet_spice_melange_antifarmer_add = 2
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 
  
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -914,25 +880,8 @@ building_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -1317,25 +1266,8 @@ building_system_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b4_minerals
 		}
@@ -1469,25 +1401,8 @@ building_deployment_post = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		upkeep = {
 			energy = 1
 		}
@@ -1596,25 +1511,8 @@ building_machine_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -1724,25 +1622,8 @@ building_machine_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -1879,25 +1760,8 @@ building_machine_system_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b4_minerals
 		}
@@ -1985,6 +1849,15 @@ building_hive_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = { is_ai = yes }
 			num_districts = {
@@ -2037,25 +1910,8 @@ building_hive_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 1000
 		}
@@ -2134,6 +1990,15 @@ building_hive_major_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = { is_ai = yes }
 			num_districts = {
@@ -2208,25 +2073,8 @@ building_hive_major_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -2277,12 +2125,6 @@ building_hab_capital = {
 
 	resources = {
 		category = planet_buildings_hab_capital
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		upkeep = {
 			energy = 3
 			alloys = 5
@@ -2304,7 +2146,7 @@ building_hab_capital = {
 		mult = modifier:habitat_stability_add
 	}
 
-	triggered_planet_modifier = {		
+	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -2319,21 +2161,10 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { has_active_tradition = tr_prosperity_void_works }
 		}
 		modifier = {
-			 planet_max_buildings_add = 1
+			planet_max_buildings_add = 1
 		}
 	}
 
@@ -2349,7 +2180,10 @@ building_hab_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				NOR = {
+					has_authority = auth_corporate
+					has_origin = origin_void_dwellers
+				}
 				is_regular_empire = yes
 			}
 		}
@@ -2359,7 +2193,10 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = {
+				has_authority = auth_corporate
+				NOT = { has_origin = origin_void_dwellers }
+			}
 		}
 		modifier = {
 			job_executive_add = 1
@@ -2369,10 +2206,23 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = {
+				has_origin = origin_void_dwellers
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_colonist_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_ascension_perk = ap_voidborn }
 		}
 		modifier = {
-			 planet_max_buildings_add = 2
+			planet_max_buildings_add = 2
 		}
 	}
 
@@ -2493,12 +2343,6 @@ building_hab_major_capital = {
 
 	resources = {
 		category = planet_buildings_hab_capital
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -2520,14 +2364,8 @@ building_hab_major_capital = {
 	}
 
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
+		modifier = { planet_stability_add = 1 }
+		mult = modifier:habitat_stability_add
 	}
 
 	triggered_planet_modifier = {
@@ -2816,12 +2654,6 @@ building_resort_capital = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		upkeep = {
 			energy = 2
 		}
@@ -2833,17 +2665,6 @@ building_resort_capital = {
 		job_entertainer_add = 1
 		planet_max_buildings_add = 5
 		planet_max_branch_office_buildings_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
 	}
 
 	triggered_planet_modifier = {
@@ -2952,12 +2773,6 @@ building_resort_major_capital = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -2972,17 +2787,6 @@ building_resort_major_capital = {
 		job_entertainer_add = 2
 		planet_max_buildings_add = 11
 		planet_max_branch_office_buildings_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
 	}
 
 	triggered_planet_modifier = {
@@ -3093,12 +2897,6 @@ building_slave_capital = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		upkeep = {
 			energy = 2
 		}
@@ -3111,17 +2909,6 @@ building_slave_capital = {
 		planet_stability_add = 5
 		planet_max_buildings_add = 5
 		planet_max_branch_office_buildings_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
 	}
 
 	triggered_planet_modifier = {
@@ -3205,12 +2992,6 @@ building_slave_major_capital = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 500
 		}
@@ -3226,17 +3007,6 @@ building_slave_major_capital = {
 		planet_stability_add = 10
 		planet_max_buildings_add = 11
 		planet_max_branch_office_buildings_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
 	}
 
 	triggered_planet_modifier = {
@@ -3470,29 +3240,12 @@ building_imperial_capital = {
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b4_minerals
 		}
 		upkeep = {
 			energy = @b4_upkeep
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
 	}
 
 	triggered_desc = {
@@ -3673,25 +3426,8 @@ building_imperial_machine_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b4_minerals
 		}
@@ -3765,6 +3501,15 @@ building_imperial_hive_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
@@ -3796,25 +3541,8 @@ building_imperial_hive_capital = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b4_minerals
 		}

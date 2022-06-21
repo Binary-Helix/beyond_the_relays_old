@@ -100,12 +100,10 @@ utility_component_template = {
 			factor = 2.0
 			is_preferred_weapons = weapon_type_energy
 			is_country_type = default
-			has_monthly_income = { resource = helium_3 value > 0 }
 		}
 
 		modifier = {
 			factor = 0.0
-			no_resource_for_component = { RESOURCE = helium_3 }
 		}
 	}
 }
@@ -128,8 +126,8 @@ utility_component_template = {
 	}
 
 	modifier = {
-		ship_hull_regen_add_static = 1
-		ship_armor_regen_add_static = 2
+		ship_hull_regen_add_perc = 0.5
+		ship_armor_regen_add_perc = 1
 	}
 
 	prerequisites = { tech_regenerative_hull_tissue }

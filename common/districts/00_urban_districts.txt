@@ -1,5 +1,5 @@
-@base_cost = 150
-@city_cost = 150
+@base_cost = 300
+@city_cost = 500
 
 district_city = {
 	base_buildtime = 480
@@ -759,7 +759,6 @@ district_industrial = {
 		}
 		modifier = {
 			job_artisan_add = 1
-			job_foundry_add = 1
 		}
 	}
 
@@ -1089,7 +1088,7 @@ district_srw_commercial = {
 	triggered_desc = {
 		text = job_clerk_effect_desc
 	}
-
+	
 	triggered_desc = {
 		text = job_merchant_effect_desc
 		trigger = {

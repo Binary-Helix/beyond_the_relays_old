@@ -43,7 +43,6 @@ building_robot_assembly_plant = {
 			}
 		}
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -93,7 +92,7 @@ building_robot_assembly_plant = {
 				OR = {
 					num_buildings = {
 						type = any
-						value = 16
+						value >= 12
 					}
 					is_planet_class = pc_habitat
 				}
@@ -114,25 +113,8 @@ building_robot_assembly_plant = {
 		job_roboticist_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -178,7 +160,6 @@ building_machine_assembly_plant = {
 	potential = {
 		exists = owner
 		owner = { is_machine_empire = yes }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -226,29 +207,12 @@ building_machine_assembly_plant = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	planet_modifier = {
 		job_replicator_add = 1
 	}
 
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -279,7 +243,6 @@ building_machine_assembly_complex = {
 	potential = {
 		exists = owner
 		owner = { is_machine_empire = yes }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	convert_to = {
@@ -304,7 +267,7 @@ building_machine_assembly_complex = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					num_buildings = { type = any value <= 14 }
+					num_buildings = { type = any value <= 10 }
 					NOT = { is_planet_class = pc_habitat }
 				}
 			}
@@ -332,25 +295,8 @@ building_machine_assembly_complex = {
 		job_replicator_add = 3
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -406,9 +352,7 @@ building_necrophage_elevation_chamber = {
 				has_valid_civic = civic_fanatic_purifiers
 				has_valid_civic = civic_hive_devouring_swarm
 			}
-			
 		}
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -483,25 +427,8 @@ building_necrophage_elevation_chamber = {
 		job_necro_apprentice_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -618,7 +545,6 @@ building_necrophage_house_of_apotheosis = {
 			}
 			is_ai = no #the AI will just kill all its necrophytes
 		}
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -646,7 +572,6 @@ building_necrophage_house_of_apotheosis = {
 			AND = {
 				owner = { is_ai = yes }
 				OR = {
-					buildings_no_exotic_gases = yes
 					NOT = {
 						any_owned_species = {
 							species_can_be_necrophaged = yes
@@ -670,25 +595,8 @@ building_necrophage_house_of_apotheosis = {
 		job_necro_apprentice_add = 4
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -773,7 +681,6 @@ building_clone_army_clone_vat = {
 				has_country_flag = clone_army_fertility_unlocked
 			}
 		}
-		NOT = { has_planet_flag = planetary_station }
 		if = {
 			limit = {
 				owner = { is_ai = yes }
@@ -848,25 +755,8 @@ building_clone_army_clone_vat = {
 		modifier = { planet_pop_assembly_organic_add = 5 }
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -961,25 +851,8 @@ building_posthumous_employment_center = {
 		job_reassigner_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}

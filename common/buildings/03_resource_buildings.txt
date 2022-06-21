@@ -17,7 +17,6 @@ building_hydroponics_farm = {
 		}
 		NOT = { is_planet_class = pc_machine }
 		NOT = { has_modifier = resort_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -112,25 +111,8 @@ building_hydroponics_farm = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -205,15 +187,8 @@ building_food_processing_facility = {
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
 		}
-		NOT = { has_planet_flag = planetary_station }
-
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_farming_district_or_buildings = yes
-		}
 	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -224,12 +199,6 @@ building_food_processing_facility = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			AND = {
-				owner = {
-					is_ai = yes
-				}	
-				has_any_farming_district_or_buildings = no
-			}
 		}
 	}
 
@@ -296,25 +265,8 @@ building_food_processing_facility = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -472,30 +424,15 @@ building_food_processing_center = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
+			# volatile_motes = @b2_rare_cost
 		}
 		upkeep = {
 			energy = 2
+			# volatile_motes = @b2_rare_upkeep
 		}
 	}
 
@@ -576,15 +513,7 @@ building_mineral_purification_plant = {
 	category = resource
 
 	destroy_trigger = {
-		OR = {
-			has_modifier = resort_colony
-			AND = {
-				owner = {
-					is_ai = yes
-				}	
-				has_any_mining_district = no
-			}
-		}	
+		has_modifier = resort_colony
 	}
 
 	potential = {
@@ -597,13 +526,6 @@ building_mineral_purification_plant = {
 		OR = { # Habitats only have mines if they're built on an appropriate deposit
 			NOT = { is_planet_class = pc_habitat }
 			has_planet_flag = mining_habitat
-		}
-		NOT = { has_planet_flag = planetary_station }
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_mining_district = yes
 		}
 	}
 
@@ -706,25 +628,8 @@ building_mineral_purification_plant = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 200
 		}
@@ -835,14 +740,8 @@ building_mineral_purification_hub = {
 			has_modifier = resort_colony
 			buildings_no_motes = yes
 		}
+	}
 
-		AND = {
-			owner = {
-				is_ai = yes
-			}	
-			has_any_mining_district = no
-		}
-	}	
 
 	triggered_planet_modifier = {
 		potential = {
@@ -939,27 +838,11 @@ building_mineral_purification_hub = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
+			# volatile_motes = @b2_rare_cost
 		}
 		cost = {
 			trigger = {
@@ -972,6 +855,7 @@ building_mineral_purification_hub = {
 		}
 		upkeep = {
 			energy = 2
+			# volatile_motes = @b2_rare_upkeep
 		}
 	}
 
@@ -1054,13 +938,7 @@ building_energy_grid = {
 			has_modifier = resort_colony
 			str_energy_grid_destroy = yes
 		}
-		AND = {
-			owner = {
-				is_ai = yes
-			}	
-			has_any_generator_district_or_building = no
-		}
-	}	
+	}
 
 	potential = {
 		NOT = { has_modifier = resort_colony }
@@ -1072,18 +950,12 @@ building_energy_grid = {
 			}
 			has_planet_flag = energy_habitat
 		}
-		NOT = { has_planet_flag = planetary_station }
-		OR = {
-			owner = {
-				is_ai = no
-			}
-			has_any_generator_district_or_building = yes
-		}
 	}
 
 	allow = {
 		str_energy_grid_allow = yes
 	}
+
 	planet_modifier = {
 		planet_technician_energy_produces_add = 1
 	}
@@ -1153,24 +1025,8 @@ building_energy_grid = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -1248,21 +1104,11 @@ building_energy_nexus = {
 
 	allow = {
 		has_upgraded_capital = yes
-		buildings_has_exotic_gases = yes
 	}
 
 	destroy_trigger = {
 		OR = {
-			OR = {
-				has_modifier = resort_colony
-				buildings_no_exotic_gases = yes
-			}
-			AND = {
-				owner = {
-					is_ai = yes
-				}	
-				has_any_generator_district_or_building = no
-			}
+			has_modifier = resort_colony
 		}
 	}
 
@@ -1321,25 +1167,8 @@ building_energy_nexus = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -1416,31 +1245,12 @@ building_resource_silo = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 		}
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		exists = owner
-		owner = { is_ai = no }
 		hidden_trigger = {
-			OR = {
-				owner = { is_ai = no }
-				AND = {
-					NOT = { has_building = building_resource_silo }
-					OR = {
-						owner = {
-							is_machine_empire = yes
-							has_active_tradition = tr_domination_modular_depot
-						}
-						is_active_resolution = "resolution_greatergood_balance_in_the_middle"
-						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-						owner = {
-							has_ascension_perk = ap_arcology_project
-							NOT = { has_technology = tech_mega_engineering }
-						}
-					}
-				}
-			}
+			exists = owner
+			owner = { is_ai = no }
 		}
 	}
 
@@ -1463,25 +1273,8 @@ building_resource_silo = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 200
 		}
@@ -1542,7 +1335,6 @@ building_bio_reactor = {
 				owner = { country_uses_food = no }
 			}
 		}
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -1573,25 +1365,8 @@ building_bio_reactor = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 200
 		}

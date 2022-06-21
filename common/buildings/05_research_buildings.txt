@@ -11,7 +11,6 @@ building_research_lab_1 = {
 	potential = {
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -23,7 +22,6 @@ building_research_lab_1 = {
 	}
 
 	allow = {
-		has_upgraded_capital = yes
 		str_research_allow = yes
 	}
 
@@ -57,25 +55,8 @@ building_research_lab_1 = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -132,7 +113,6 @@ building_research_lab_2 = {
 
 	allow = {
 		has_upgraded_capital = yes
-		buildings_has_exotic_gases = yes
 		hidden_trigger = {
 			or = {
 				owner = {
@@ -159,7 +139,6 @@ building_research_lab_2 = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
 			and = {
-				buildings_no_exotic_gases = yes
 				has_planet_flag = str_supervisor
 			}
 			str_research_destroy = yes
@@ -196,25 +175,8 @@ building_research_lab_2 = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -264,7 +226,6 @@ building_research_lab_3 = {
 
 	allow = {
 		has_major_upgraded_capital = yes
-		buildings_has_exotic_gases = yes
 		hidden_trigger = {
 			or = {
 				owner = {
@@ -291,7 +252,6 @@ building_research_lab_3 = {
 			has_modifier = slave_colony
 			has_modifier = resort_colony
 			and = {
-				buildings_no_exotic_gases = yes
 				has_planet_flag = str_supervisor
 			}
 			str_research_destroy = yes
@@ -358,25 +318,8 @@ building_research_lab_3 = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -393,7 +336,7 @@ building_research_lab_3 = {
 					has_modifier = pm_extradimensional_experimentation
 				}
 			}
-			sr_zro = 1
+			# sr_zro = 1
 		}
 	}
 
@@ -441,7 +384,6 @@ building_institute = {
 			owner = { lategame = no }
 			owner = { is_ai = no }
 		}
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -450,7 +392,6 @@ building_institute = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 			owner = { is_regular_empire = no }
-			buildings_no_exotic_gases = yes
 			str_research_destroy = yes
 		}
 	}
@@ -463,7 +404,6 @@ building_institute = {
 		has_major_upgraded_capital = yes
 		hidden_trigger = {
 			exists = owner
-						 
 			or = {
 				owner = { is_ai = no }
 				or = {
@@ -480,30 +420,13 @@ building_institute = {
 						value > 1
 					}
 				}
-			str_is_col_research = yes
+				str_is_col_research = yes
 			}
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -549,7 +472,7 @@ building_institute = {
 				num_buildings = {
 					type = building_research_lab_3
 					value > 1
-					}
+				}
 			}
 		}
 		physics_research = 3
@@ -570,7 +493,7 @@ building_institute = {
 				num_buildings = {
 					type = building_research_lab_3
 					value > 1
-					}
+				}
 			}
 		}
 		physics_research = 3
@@ -593,7 +516,6 @@ building_supercomputer = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 		}
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -616,7 +538,7 @@ building_supercomputer = {
 					}
 				}
 				str_is_col_research = yes
-			}	
+			}
 		}
 	}
 
@@ -634,25 +556,8 @@ building_supercomputer = {
 		building_institute
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -729,7 +634,7 @@ building_supercomputer = {
 				num_buildings = {
 					type = building_research_lab_3
 					value > 1
-					}
+				}
 			}
 		}
 		physics_research = 3
@@ -750,7 +655,7 @@ building_supercomputer = {
 				num_buildings = {
 					type = building_research_lab_3
 					value > 1
-					}
+				}
 			}
 		}
 		physics_research = 3

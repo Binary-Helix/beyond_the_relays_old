@@ -18,12 +18,10 @@ building_noble_estates = {
 		}
 		owner = { has_valid_civic = civic_aristocratic_elite }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
 		has_upgraded_capital = yes
-		buildings_simple_allow = yes
 		hidden_trigger = {
 			exists = owner
 			or = {
@@ -62,25 +60,8 @@ building_noble_estates = {
 		planet_housing_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -110,7 +91,6 @@ building_slave_processing = {
 		owner = { is_regular_empire = yes }
 		owner = { has_policy_flag = slavery_allowed }
 		NOT = { has_modifier = resort_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -132,25 +112,8 @@ building_slave_processing = {
 		planet_resettlement_unemployed_mult = -0.50
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -180,7 +143,6 @@ building_precinct_house = {
 	potential = {
 		owner = { is_regular_empire = yes }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -218,25 +180,8 @@ building_precinct_house = {
 		job_enforcer_add = 2
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -271,7 +216,6 @@ building_hall_judgment = {
 	potential = {
 		owner = { is_regular_empire = yes }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -286,30 +230,15 @@ building_hall_judgment = {
 		job_enforcer_add = 5
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
+			# volatile_motes = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b1_upkeep
+			# volatile_motes = @b2_rare_upkeep
 		}
 	}
 
@@ -335,7 +264,6 @@ building_sentinel_posts = {
 	potential = {
 		exists = owner
 		owner = { is_gestalt = yes }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -362,25 +290,8 @@ building_sentinel_posts = {
 		job_patrol_drone_add = 2
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b1_minerals
 		}
@@ -415,10 +326,15 @@ building_psi_corps = {
 	base_cap_amount = 1
 
 	potential = {
-		owner = { has_ascension_perk = ap_mind_over_matter }
+		host_has_dlc = "Utopia"
+		owner = {
+			OR = {
+				has_ascension_perk = ap_mind_over_matter
+				has_origin = origin_shroudwalker_apprentice
+			}
+		}
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -429,7 +345,12 @@ building_psi_corps = {
 	destroy_trigger = {
 		exists = owner
 		NOT = {
-			owner = { has_ascension_perk = ap_mind_over_matter }
+			owner = {
+				OR = {
+					has_ascension_perk = ap_mind_over_matter
+					has_origin = origin_shroudwalker_apprentice
+				}
+			}
 		}
 	}
 
@@ -438,25 +359,8 @@ building_psi_corps = {
 		planet_stability_add = 5
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = 500
 		}
@@ -493,6 +397,9 @@ building_clone_vats = {
 			owner = { is_ai = no }
 			NOT = { exists = assembling_species }
 			assembling_species = { is_organic_species = yes }
+		}
+		OR = {
+			owner = { is_ai = no }
 			NAND = {
 				free_district_slots = 0
 				free_building_slots <= 1
@@ -500,7 +407,6 @@ building_clone_vats = {
 				free_jobs <= 0
 			}
 		}
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	destroy_trigger = {
@@ -597,7 +503,6 @@ building_embassy = {
 		planet = { is_capital = yes }
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	upgrades = {
@@ -624,25 +529,8 @@ building_embassy = {
 		envoys_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b2_minerals
 		}
@@ -673,7 +561,6 @@ building_grand_embassy = {
 		planet = { is_capital = yes }
 		NOT = { has_modifier = resort_colony }
 		NOT = { has_modifier = slave_colony }
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
@@ -695,25 +582,8 @@ building_grand_embassy = {
 		envoys_add = 2
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			minerals = @b3_minerals
 		}
@@ -752,16 +622,12 @@ building_gaiaseeders_1 = {
 			is_planet_class = pc_city
 			is_planet_class = pc_hive
 			is_planet_class = pc_machine
+			is_planet_class = pc_relic
 		}
 		is_artificial = no
-		NOT = { has_planet_flag = planetary_station }
 	}
 
 	allow = {
-		is_ideal_planet_class = {
-			who = owner
-			status = yes
-		}
 		has_upgraded_capital = yes
 	}
 
@@ -771,6 +637,7 @@ building_gaiaseeders_1 = {
 			is_planet_class = pc_city
 			is_planet_class = pc_hive
 			is_planet_class = pc_machine
+			is_planet_class = pc_relic
 			NOT = { exists = owner }
 			owner = {
 				NOR = {
@@ -781,30 +648,14 @@ building_gaiaseeders_1 = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			energy = 1500
 		}
 		upkeep = {
 			energy = 20
+			multiplier = value:gaiaseeder_upkeep
 		}
 	}
 
@@ -820,30 +671,14 @@ building_gaiaseeders_2 = {
 	can_be_disabled = no
 	upgrades = { "building_gaiaseeders_3" }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			energy = 1500
 		}
 		upkeep = {
 			energy = 20
+			multiplier = value:gaiaseeder_upkeep
 		}
 	}
 
@@ -864,10 +699,7 @@ building_gaiaseeders_2 = {
 	}
 
 	allow = {
-		is_ideal_planet_class = {
-			who = owner
-			status = yes
-		}
+		can_build_gaiaseeder = yes
 	}
 
 	planet_modifier = {
@@ -883,30 +715,14 @@ building_gaiaseeders_3 = {
 	can_be_disabled = no
 	upgrades = { "building_gaiaseeders_4" }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-
-	}
-
 	resources = {
 		category = planet_buildings
-		produces = {
-			trigger = { exists = owner 
-			owner = { has_technology = btr_tech_asrep_asari_arch}
-		}
-			unity = 0.2
-		}
 		cost = {
 			energy = 1500
 		}
 		upkeep = {
 			energy = 20
+			multiplier = value:gaiaseeder_upkeep
 		}
 	}
 
@@ -927,10 +743,7 @@ building_gaiaseeders_3 = {
 	}
 
 	allow = {
-		is_ideal_planet_class = {
-			who = owner
-			status = yes
-		}
+		can_build_gaiaseeder = yes
 	}
 
 	planet_modifier = {
@@ -963,15 +776,11 @@ building_gaiaseeders_4 = {
 		category = planet_buildings
 		cost = {
 			energy = 1500
-			exotic_gases = @b4_rare_cost
 		}
 	}
 
 	allow = {
-		is_ideal_planet_class = {
-			who = owner
-			status = yes
-		}
+		can_build_gaiaseeder = yes
 	}
 
 	triggered_desc = {

@@ -31,7 +31,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -67,7 +67,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -103,7 +103,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			is_ai = yes
 			or = {
 				has_technology = tech_crystal_armor_1
@@ -140,7 +140,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -176,7 +176,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -212,7 +212,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -249,7 +249,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -285,7 +285,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -321,7 +321,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -358,7 +358,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -394,7 +394,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -430,7 +430,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -467,7 +467,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -503,7 +503,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = rare_crystals } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -539,7 +539,7 @@ utility_component_template = {
 	ai_weight = {
 		modifier = {
 			factor = 0.0
-			not = { no_resource_for_component = { RESOURCE = alloys } }
+			# not = { no_resource_for_component = { RESOURCE = rare_crystals } }
 			or = {
 				has_technology = tech_crystal_armor_1
 				has_technology = tech_crystal_armor_2
@@ -631,202 +631,202 @@ utility_component_template = {
 # Crystal Plating #
 ####################
 
-utility_component_template = {
-	key = "SMALL_CRYSTAL_ARMOR_1"
-	size = small
-	icon = "GFX_ship_part_crystal_armor_1"
-	icon_frame = 1
-	power = 0
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 0.25
-		}
-	}
+# utility_component_template = {
+# 	key = "SMALL_CRYSTAL_ARMOR_1"
+# 	size = small
+# 	icon = "GFX_ship_part_crystal_armor_1"
+# 	icon_frame = 1
+# 	power = 0
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			# rare_crystals = 0.25
+# 		}
+# 	}
 
-	prerequisites = { "tech_crystal_armor_1" }
-	component_set = "CRYSTAL_ARMOR_1"
-	upgrades_to = "SMALL_CRYSTAL_ARMOR_2"
+# 	prerequisites = { "tech_crystal_armor_1" }
+# 	component_set = "CRYSTAL_ARMOR_1"
+# 	upgrades_to = "SMALL_CRYSTAL_ARMOR_2"
 
-	modifier = {
-		ship_hull_add = @armor_4S
-	}
+# 	modifier = {
+# 		ship_hull_add = @armor_4S
+# 	}
 
-	ai_weight = {
-		weight = 5000
-		modifier = {
-			factor = 0
-			is_ai = no
-		}
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = alloys }
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 5000
+# 		modifier = {
+# 			factor = 0
+# 			is_ai = no
+# 		}
+# 		modifier = {
+# 			factor = 0.0
+# 			no_resource_for_component = { RESOURCE = rare_crystals }
+# 		}
+# 	}
+# }
 
-utility_component_template = {
-	key = "MEDIUM_CRYSTAL_ARMOR_1"
-	size = medium
-	icon = "GFX_ship_part_crystal_armor_1"
-	icon_frame = 1
-	power = 0
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 0.50
-		}
-	}
+# utility_component_template = {
+# 	key = "MEDIUM_CRYSTAL_ARMOR_1"
+# 	size = medium
+# 	icon = "GFX_ship_part_crystal_armor_1"
+# 	icon_frame = 1
+# 	power = 0
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			rare_crystals = 0.50
+# 		}
+# 	}
 
-	prerequisites = { "tech_crystal_armor_1" }
-	component_set = "CRYSTAL_ARMOR_1"
-	upgrades_to = "MEDIUM_CRYSTAL_ARMOR_2"
+# 	prerequisites = { "tech_crystal_armor_1" }
+# 	component_set = "CRYSTAL_ARMOR_1"
+# 	upgrades_to = "MEDIUM_CRYSTAL_ARMOR_2"
 
-	modifier = {
-		ship_hull_add = @armor_4M
-	}
+# 	modifier = {
+# 		ship_hull_add = @armor_4M
+# 	}
 
-	ai_weight = {
-		weight = 5000
-		modifier = {
-			factor = 0
-			is_ai = no
-		}
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = alloys }
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 5000
+# 		modifier = {
+# 			factor = 0
+# 			is_ai = no
+# 		}
+# 		modifier = {
+# 			factor = 0.0
+# 			no_resource_for_component = { RESOURCE = rare_crystals }
+# 		}
+# 	}
+# }
 
-utility_component_template = {
-	key = "LARGE_CRYSTAL_ARMOR_1"
-	size = large
-	icon = "GFX_ship_part_crystal_armor_1"
-	icon_frame = 1
-	power = 0
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 1.00
-		}
-	}
+# utility_component_template = {
+# 	key = "LARGE_CRYSTAL_ARMOR_1"
+# 	size = large
+# 	icon = "GFX_ship_part_crystal_armor_1"
+# 	icon_frame = 1
+# 	power = 0
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			rare_crystals = 1.00
+# 		}
+# 	}
 
-	prerequisites = { "tech_crystal_armor_1" }
-	component_set = "CRYSTAL_ARMOR_1"
-	upgrades_to = "LARGE_CRYSTAL_ARMOR_2"
+# 	prerequisites = { "tech_crystal_armor_1" }
+# 	component_set = "CRYSTAL_ARMOR_1"
+# 	upgrades_to = "LARGE_CRYSTAL_ARMOR_2"
 
-	modifier = {
-		ship_hull_add = @armor_4L
-	}
+# 	modifier = {
+# 		ship_hull_add = @armor_4L
+# 	}
 
-	ai_weight = {
-		weight = 5000
-		modifier = {
-			factor = 0
-			is_ai = no
-		}
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = alloys }
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 5000
+# 		modifier = {
+# 			factor = 0
+# 			is_ai = no
+# 		}
+# 		modifier = {
+# 			factor = 0.0
+# 			no_resource_for_component = { RESOURCE = rare_crystals }
+# 		}
+# 	}
+# }
 
-utility_component_template = {
-	key = "SMALL_CRYSTAL_ARMOR_2"
-	size = small
-	icon = "GFX_ship_part_crystal_armor_2"
-	icon_frame = 1
-	power = 0
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 0.33
-		}
-	}
+# utility_component_template = {
+# 	key = "SMALL_CRYSTAL_ARMOR_2"
+# 	size = small
+# 	icon = "GFX_ship_part_crystal_armor_2"
+# 	icon_frame = 1
+# 	power = 0
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			rare_crystals = 0.33
+# 		}
+# 	}
 
-	prerequisites = { "tech_crystal_armor_2" }
-	component_set = "CRYSTAL_ARMOR_2"
+# 	prerequisites = { "tech_crystal_armor_2" }
+# 	component_set = "CRYSTAL_ARMOR_2"
 
-	modifier = {
-		ship_hull_add = @armor_6S
-	}
+# 	modifier = {
+# 		ship_hull_add = @armor_6S
+# 	}
 
-	ai_weight = {
-		weight = 10000
-		modifier = {
-			factor = 0
-			is_ai = no
-		}
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = alloys }
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 10000
+# 		modifier = {
+# 			factor = 0
+# 			is_ai = no
+# 		}
+# 		modifier = {
+# 			factor = 0.0
+# 			no_resource_for_component = { RESOURCE = rare_crystals }
+# 		}
+# 	}
+# }
 
-utility_component_template = {
-	key = "MEDIUM_CRYSTAL_ARMOR_2"
-	size = medium
-	icon = "GFX_ship_part_crystal_armor_2"
-	icon_frame = 1
-	power = 0
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 0.65
-		}
-	}
+# utility_component_template = {
+# 	key = "MEDIUM_CRYSTAL_ARMOR_2"
+# 	size = medium
+# 	icon = "GFX_ship_part_crystal_armor_2"
+# 	icon_frame = 1
+# 	power = 0
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			rare_crystals = 0.65
+# 		}
+# 	}
 
-	prerequisites = { "tech_crystal_armor_2" }
-	component_set = "CRYSTAL_ARMOR_2"
+# 	prerequisites = { "tech_crystal_armor_2" }
+# 	component_set = "CRYSTAL_ARMOR_2"
 
-	modifier = {
-		ship_hull_add = @armor_6M
-	}
+# 	modifier = {
+# 		ship_hull_add = @armor_6M
+# 	}
 
-	ai_weight = {
-		weight = 10000
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = alloys }
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 10000
+# 		modifier = {
+# 			factor = 0.0
+# 			no_resource_for_component = { RESOURCE = rare_crystals }
+# 		}
+# 	}
+# }
 
-utility_component_template = {
-	key = "LARGE_CRYSTAL_ARMOR_2"
-	size = large
-	icon = "GFX_ship_part_crystal_armor_2"
-	icon_frame = 1
-	power = 0
-	resources = {
-		category = ship_components
-		cost = {
-			alloys = 1.30
-		}
-	}
+# utility_component_template = {
+# 	key = "LARGE_CRYSTAL_ARMOR_2"
+# 	size = large
+# 	icon = "GFX_ship_part_crystal_armor_2"
+# 	icon_frame = 1
+# 	power = 0
+# 	resources = {
+# 		category = ship_components
+# 		cost = {
+# 			rare_crystals = 1.30
+# 		}
+# 	}
 
-	prerequisites = { "tech_crystal_armor_2" }
-	component_set = "CRYSTAL_ARMOR_2"
+# 	prerequisites = { "tech_crystal_armor_2" }
+# 	component_set = "CRYSTAL_ARMOR_2"
 
-	modifier = {
-		ship_hull_add = @armor_6L
-	}
+# 	modifier = {
+# 		ship_hull_add = @armor_6L
+# 	}
 
-	ai_weight = {
-		weight = 10000
-		modifier = {
-			factor = 0
-			is_ai = no
-		}
-		modifier = {
-			factor = 0.0
-			no_resource_for_component = { RESOURCE = alloys }
-		}
-	}
-}
+# 	ai_weight = {
+# 		weight = 10000
+# 		modifier = {
+# 			factor = 0
+# 			is_ai = no
+# 		}
+# 		modifier = {
+# 			factor = 0.0
+# 			no_resource_for_component = { RESOURCE = rare_crystals }
+# 		}
+# 	}
+# }
 
 ########################
 # Tiyanki Armor
@@ -905,5 +905,21 @@ utility_component_template = {
 			energy = @l_t6_upkeep_energy
 			alloys = @l_t6_upkeep_alloys
 		}
+	}
+}
+
+utility_component_template = {
+	key = "bulwark_3_battlewright"
+	size = medium
+	icon = "GFX_ship_part_crystal_armor_1"
+	power = 0
+	hidden = yes
+
+	size_restriction = { constructor }
+	component_set = "CRYSTAL_ARMOR_1"
+
+	ship_modifier = {
+		ship_hull_mult = 0.5
+		ship_armor_mult = 0.5
 	}
 }

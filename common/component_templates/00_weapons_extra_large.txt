@@ -25,6 +25,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @xl_t5_cost
+			# rare_crystals = @xl_t5_rare
 		}
 		upkeep = {
 			energy = @xl_t5_upkeep_energy
@@ -42,10 +43,10 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = rare_crystals
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -73,6 +74,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @xl_t6_cost
+			# rare_crystals = @xl_t6_rare
 		}
 		upkeep = {
 			energy = @xl_t6_upkeep_energy
@@ -90,10 +92,10 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = rare_crystals
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -125,6 +127,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @xl_t5_cost
+			rare_crystals = @xl_t5_rare
 		}
 		upkeep = {
 			energy = @xl_t5_upkeep_energy
@@ -138,7 +141,7 @@ weapon_component_template = {
 			factor = 0
 			is_country_type = default
 			resource_stockpile_compare = {
-				resource = alloys
+				resource = rare_crystals
 				value < 10
 			}
 		}
@@ -167,6 +170,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @xl_t6_cost
+			rare_crystals = @xl_t6_rare
 		}
 		upkeep = {
 			energy = @xl_t6_upkeep_energy
@@ -180,7 +184,7 @@ weapon_component_template = {
 			factor = 0
 			is_country_type = default
 			resource_stockpile_compare = {
-				resource = alloys
+				resource = rare_crystals
 				value < 10
 			}
 		}
@@ -215,6 +219,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @xl_t5_cost
+			# volatile_motes = @xl_t5_rare
 		}
 		upkeep = {
 			energy = @xl_t5_upkeep_energy
@@ -241,10 +246,10 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = volatile_motes
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -272,6 +277,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @xl_t6_cost
+			# volatile_motes = @xl_t6_rare
 		}
 		upkeep = {
 			energy = @xl_t6_upkeep_energy
@@ -298,10 +304,10 @@ weapon_component_template = {
 		modifier = {
 			factor = 0
 			is_country_type = default
-			resource_stockpile_compare = {
-				resource = alloys
-				value < 10
-			}
+			# resource_stockpile_compare = {
+			# 	resource = volatile_motes
+			# 	value < 10
+			# }
 		}
 	}
 }
@@ -334,6 +340,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @titanic_t6_cost
+			rare_crystals = @titanic_t6_rare
 		}
 		upkeep = {
 			energy = @titanic_t6_upkeep_energy
@@ -346,13 +353,13 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			has_monthly_income = { resource = alloys value <= 0 }
+			has_monthly_income = { resource = rare_crystals value <= 0 }
 		}
 		modifier = {
 			factor = 0
 			is_country_type = default
 			resource_stockpile_compare = {
-				resource = alloys
+				resource = rare_crystals
 				value < 10
 			}
 		}
@@ -383,6 +390,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @titanic_t6_cost
+			rare_crystals = @titanic_t6_rare
 		}
 		upkeep = {
 			energy = @titanic_t6_upkeep_energy
@@ -395,7 +403,7 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			has_monthly_income = { resource = alloys value <= 0 }
+			has_monthly_income = { resource = rare_crystals value <= 0 }
 		}
 	}
 }
@@ -424,6 +432,7 @@ weapon_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @titanic_t6_cost
+			rare_crystals = @titanic_t6_rare
 		}
 		upkeep = {
 			energy = @titanic_t6_upkeep_energy
@@ -436,7 +445,7 @@ weapon_component_template = {
 		modifier = {
 			factor = 0.0
 			is_country_type = default
-			resource_stockpile_compare = { resource = alloys value <= 100 }
+			resource_stockpile_compare = { resource = rare_crystals value <= 100 }
 		}
 	}
 }
