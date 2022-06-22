@@ -871,7 +871,6 @@ magnetic_disruption = {
 	planet_jobs_physics_research_produces_mult = -0.1
 	planet_jobs_society_research_produces_mult = -0.1
 	planet_jobs_engineering_research_produces_mult = -0.1
-
 	icon = "gfx/interface/icons/planet_modifiers/pm_strong_magnetic_field.dds"
 	icon_frame = 3
 }
@@ -953,6 +952,11 @@ planet_crime = {
 }
 
 planet_crime_no_happiness = {
+}
+
+# Applies x planetary ascension tier
+planetary_ascension = {
+	planet_resettlement_unemployed_destination_mult = 0.25
 }
 
 
@@ -1043,9 +1047,9 @@ yuht_energy = {
 
 first_league_homeworld = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_factory.dds"
-	country_society_research_produces_add = 10
-	country_physics_research_produces_add = 10
-	country_engineering_research_produces_add = 10
+	country_first_league_homeworld_society_research_produces_add = 10
+	country_first_league_homeworld_physics_research_produces_add = 10
+	country_first_league_homeworld_engineering_research_produces_add = 10
 }
 
 first_league_minerals = {
@@ -1575,4 +1579,12 @@ flooded_habitat = {
 	pop_environment_tolerance = -0.2
 	icon = "gfx/interface/icons/planet_modifiers/pm_arctic_planet.dds"
 	icon_frame = 1
+}
+
+instability_join_revolt = {
+	custom_tooltip = instability_join_revolt_tooltip
+	show_only_custom_tooltip = no
+	planet_stability_add = -15
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+	icon_frame = 3
 }

@@ -60,14 +60,6 @@ tech_lasers_2 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -117,14 +109,6 @@ tech_lasers_3 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
-		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -176,14 +160,6 @@ tech_lasers_4 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -234,14 +210,6 @@ tech_lasers_5 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -289,14 +257,6 @@ tech_energy_lance_1 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -343,14 +303,6 @@ tech_energy_lance_2 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
-		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -426,14 +378,6 @@ tech_plasma_1 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -495,14 +439,6 @@ tech_plasma_2 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -550,14 +486,6 @@ tech_plasma_3 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -580,7 +508,7 @@ tech_arc_emitter_1 = {
 			has_ethic = ethic_fanatic_militarist
 		}
 		modifier = {
-			factor = 1.25
+			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -604,14 +532,6 @@ tech_arc_emitter_1 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
-		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -659,14 +579,6 @@ tech_arc_emitter_2 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
-		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -726,14 +638,6 @@ tech_disruptors_1 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -781,14 +685,6 @@ tech_disruptors_2 = {
 				has_trait = "leader_trait_expertise_particles"
 			}
 		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
 	}
 }
 
@@ -835,14 +731,6 @@ tech_disruptors_3 = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
 			}
-		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
 		}
 	}
 }
@@ -964,14 +852,6 @@ tech_pd_tracking_2 = {
 				area = physics
 				has_trait = "leader_trait_expertise_computing"
 			}
-		}
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_strike_craft
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_strike_craft }
 		}
 	}
 }
