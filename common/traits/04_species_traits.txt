@@ -985,3 +985,34 @@ trait_harvested_radiotrophic = {
 		energy = 150
 	}
 }
+
+trait_zombie = {
+	cost = 0
+	potential_crossbreeding_chance = 0
+	opposites = { "trait_nerve_stapled" }
+	initial = no
+	randomized = no
+	advanced_trait = no
+	forced_happiness = yes
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		always = no
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	infertile = yes
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		planet_jobs_produces_mult = -0.25
+		planet_pops_upkeep_mult = -1
+	}
+	icon = "gfx/interface/icons/traits/trait_zombie.dds"
+	custom_tooltip = TRAIT_ZOMBIE_EFFECT
+	slave_cost = {
+		energy = 500
+	}
+}
