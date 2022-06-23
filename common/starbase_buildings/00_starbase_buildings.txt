@@ -179,13 +179,13 @@ nebula_refinery = {
 			minerals = 10
 		}
 
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_technology = tech_mine_exotic_gases }
-			}
-			exotic_gases = 1
-		}
+		# produces = {
+		# 	trigger = {
+		# 		exists = owner
+		# 		owner = { has_technology = tech_mine_exotic_gases }
+		# 	}
+		# 	exotic_gases = 1
+		# }
 
 		upkeep = {
 			energy = 2
@@ -1108,7 +1108,7 @@ shroud_beacon = {
 		category = starbase_buildings
 		cost = {
 			alloys = 500
-			rare_crystals = 25
+			# rare_crystals = 25
 		}
 		upkeep = {
 			energy = 3
