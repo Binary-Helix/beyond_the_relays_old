@@ -171,14 +171,6 @@ tech_repeatable_weapon_type_explosive_damage = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_explosive
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_explosive }
-		}
 	}
 
 	weight_groups = {
@@ -210,14 +202,6 @@ tech_repeatable_weapon_type_explosive_fire_rate = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_explosive
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_explosive }
-		}
 	}
 
 	weight_groups = {
@@ -249,14 +233,6 @@ tech_repeatable_weapon_type_kinetic_damage = {
 
 	ai_weight = {
 		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_kinetic
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_kinetic }
-		}
 	}
 
 	weight_groups = {
@@ -287,15 +263,6 @@ tech_repeatable_weapon_type_kinetic_fire_rate = {
 	}
 
 	ai_weight = {
-		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_kinetic
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_kinetic }
-		}
 		weight = 1
 		factor = 125 #scaling factor0
 	}
@@ -328,15 +295,6 @@ tech_repeatable_weapon_type_strike_craft_fire_damage = {
 	}
 
 	ai_weight = {
-		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_strike_craft
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_strike_craft }
-		}
 		weight = 0
 	}
 
@@ -368,15 +326,6 @@ tech_repeatable_weapon_type_strike_craft_fire_rate = {
 	}
 
 	ai_weight = {
-		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_strike_craft
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_strike_craft }
-		}
 		weight = 0
 	}
 

@@ -75,15 +75,7 @@ tech_repeatable_weapon_type_energy_damage = {
 	}
 
 	ai_weight = {
-		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
+		factor = 125
 	}
 
 	weight_groups = {
@@ -114,15 +106,7 @@ tech_repeatable_weapon_type_energy_fire_rate = {
 	}
 
 	ai_weight = {
-		factor = 1.0
-		modifier = {
-			factor = @favored_weapon_ai_tech_factor
-			is_preferred_weapons = weapon_type_energy
-		}
-		modifier = {
-			factor = @disfavored_weapon_ai_tech_factor
-			NOT = { is_preferred_weapons = weapon_type_energy }
-		}
+		factor = 125
 	}
 
 	weight_groups = {
