@@ -6,12 +6,12 @@ str_early_default_plan = {
 
 	income = {
 		energy = 50
-		minerals = 200
-		alloys = 40
+		minerals = 150
+		alloys = 45
 
-		physics_research = 150
-		society_research = 150
-		engineering_research = 150
+		physics_research = 200
+		society_research = 200
+		engineering_research = 200
 
 	}
 
@@ -189,19 +189,17 @@ str_early_default_plan = {
 		income = { physics_research = 150 society_research = 150 engineering_research = 150 }
 		focus = { physics_research = 100 society_research = 100 engineering_research = 100 }
 	}
-
-subplan = {
-	potential = { years_passed > 15  str_raw_ecocrisis_level_0 = yes safespace = yes }
-	income = { physics_research = 450 society_research = 450 engineering_research = 450  }
-	focus = { physics_research = 200 society_research = 200 engineering_research = 200 }
-}
-
-subplan = {
-	potential = { years_passed > 15  str_raw_ecocrisis_level_0 = yes stalemate = yes }
-	income = { physics_research = 450 society_research = 450 engineering_research = 450  }
-	focus = { physics_research = 200 society_research = 200 engineering_research = 200 }
-}
-
+	
+	subplan = {
+		potential = {
+			years_passed > @str_ai_prioritise_energy_for_fleet_after
+			years_passed < @str_years_of_twilight
+			used_naval_capacity_percent < 0.9
+		}
+		income = { energy = 350 }
+		focus = { energy = 250 }
+	}
+	
 	subplan = {
 		potential = {
 			str_raw_ecocrisis_level_0 = no
@@ -972,7 +970,7 @@ subplan = {
 	}
 
 	pops = 800
-	empire_size = 1
+	# empire_size = 1
 
 	ai_weight = {
 		weight = 5000
@@ -1293,7 +1291,8 @@ str_early_boom_plan = {
 		no_emergency = yes
 	}
 
-	scaling_subplan = {
+	subplan = {
+		scaling = yes
 		set_name = "general scaling"
 		potential = {
 			has_monthly_income = { resource = energy value > 100 }			
@@ -1311,7 +1310,7 @@ str_early_boom_plan = {
 	}
 
 	pops = 8000
-	empire_size = 1
+	# empire_size = 1
 
 	ai_weight = {
 		weight = 1000
