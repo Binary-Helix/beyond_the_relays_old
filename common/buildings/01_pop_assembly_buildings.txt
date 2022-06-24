@@ -22,7 +22,7 @@ building_robot_assembly_plant = {
 						assembling_species = { is_robotic_species = yes }
 					}
 				}
-				#	owner = { num_pops < 1000 }
+				owner = { is_ai = yes num_pops < 1000 }
 				or = {
 					AND = {
 						str_is_col_factory = no
@@ -102,10 +102,10 @@ building_robot_assembly_plant = {
 				has_ascension_perk = ap_engineered_evolution
 				is_materialist = no
 			}
-			#	owner = {
-			#		is_ai = yes
-			#		num_pops > 1500
-			#	}
+			owner = {
+				is_ai = yes
+				num_pops > 1500
+			}
 		}
 	}
 
@@ -299,9 +299,11 @@ building_machine_assembly_complex = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
+			rare_crystals = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
+			rare_crystals = @b3_rare_upkeep
 		}
 	}
 
@@ -572,6 +574,7 @@ building_necrophage_house_of_apotheosis = {
 			AND = {
 				owner = { is_ai = yes }
 				OR = {
+					buildings_no_exotic_gases = yes
 					NOT = {
 						any_owned_species = {
 							species_can_be_necrophaged = yes
@@ -599,9 +602,11 @@ building_necrophage_house_of_apotheosis = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
 		}
 	}
 
