@@ -532,275 +532,275 @@ regolith_miner_drone = {
 	}
 }
 
-zro_harvester = {
-	category = worker
-	condition_string = WORKER_JOB_TRIGGER
-	building_icon = building_mote_harvesting_traps
-	clothes_texture_index = 2
+# zro_harvester = {
+# 	category = worker
+# 	condition_string = WORKER_JOB_TRIGGER
+# 	building_icon = building_mote_harvesting_traps
+# 	clothes_texture_index = 2
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_worker_job
+# 	possible_precalc = can_fill_worker_job
 
-	resources = {
-		category = planet_miners
-		produces = {
-			sr_zro = 1
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = {
-					has_edict = mining_subsidies
-				}
-			}
-			energy = 0.5
-		}
-	}
+# 	resources = {
+# 		category = planet_miners
+# 		produces = {
+# 			sr_zro = 1
+# 		}
+# 		upkeep = {
+# 			trigger = {
+# 				exists = owner
+# 				owner = {
+# 					has_edict = mining_subsidies
+# 				}
+# 			}
+# 			energy = 0.5
+# 		}
+# 	}
 
-	weight = {
-		weight = @specialist_job_weight # Important job
-		modifier = {
-			factor = 10
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { has_technology = tech_droid_workers }
-		}
-		modifier = {
-			factor = 200
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { NOT = { has_technology = tech_droid_workers } }
-		}
-		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 5
-			has_trait = trait_syncretic_proles
-		}
-		modifier = {
-			factor = 2
-			species = {
-				has_species_flag = racket_species_flag
-			}
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_very_strong
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 0.1
-			has_trait = trait_weak
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_zombie
-		}
-		modifier = {
-			factor = 3
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_nerve_stapled
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_necrophage
-		}
-	}
-}
+# 	weight = {
+# 		weight = @specialist_job_weight # Important job
+# 		modifier = {
+# 			factor = 10
+# 			is_enslaved = yes
+# 			can_take_servant_job = no
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				is_non_sapient_robot = yes
+# 				is_shackled_robot = yes
+# 			}
+# 			can_take_servant_job = no
+# 			owner = { has_technology = tech_droid_workers }
+# 		}
+# 		modifier = {
+# 			factor = 200
+# 			OR = {
+# 				is_non_sapient_robot = yes
+# 				is_shackled_robot = yes
+# 			}
+# 			can_take_servant_job = no
+# 			owner = { NOT = { has_technology = tech_droid_workers } }
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			can_take_servant_job = yes
+# 		}
+# 		modifier = {
+# 			factor = 5
+# 			has_trait = trait_syncretic_proles
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			species = {
+# 				has_species_flag = racket_species_flag
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			has_trait = trait_very_strong
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			has_trait = trait_strong
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			has_trait = trait_weak
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			has_trait = trait_zombie
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			OR = {
+# 				has_trait = trait_robust
+# 				has_trait = trait_robot_efficient_processors
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 3
+# 			has_trait = trait_nerve_stapled
+# 		}
+# 		modifier = {
+# 			factor = 0.75
+# 			has_trait = trait_necrophage
+# 		}
+# 	}
+# }
 
-zro_harvesting_drone = {
-	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_mote_harvesting_traps
+# zro_harvesting_drone = {
+# 	category = complex_drone
+# 	condition_string = DRONE_JOB_TRIGGER
+# 	building_icon = building_mote_harvesting_traps
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_enslaved = no
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_drone_job
+# 	possible_precalc = can_fill_drone_job
 
-	possible = { NOT = { has_trait = trait_nerve_stapled } }
+# 	possible = { NOT = { has_trait = trait_nerve_stapled } }
 
-	resources = {
-		category = planet_miners
-		produces = {
-			sr_zro = 1
-		}
-		upkeep = {
-			energy = 1
-		}
-	}
+# 	resources = {
+# 		category = planet_miners
+# 		produces = {
+# 			sr_zro = 1
+# 		}
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
 
-	weight = {
-		weight = @complex_drone_job_weight
-		modifier = {
-			factor = 1.1
-			exists = owner
-			years_passed < 1
-			owner = { has_valid_civic = civic_machine_assimilator }
-			has_trait = trait_cybernetic
-		}
-		modifier = {
-			factor = 5
-			has_job = mote_harvesting_drone
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-	}
-}
+# 	weight = {
+# 		weight = @complex_drone_job_weight
+# 		modifier = {
+# 			factor = 1.1
+# 			exists = owner
+# 			years_passed < 1
+# 			owner = { has_valid_civic = civic_machine_assimilator }
+# 			has_trait = trait_cybernetic
+# 		}
+# 		modifier = {
+# 			factor = 5
+# 			has_job = mote_harvesting_drone
+# 			OR = {
+# 				has_trait = trait_robust
+# 				has_trait = trait_robot_efficient_processors
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			has_trait = trait_necrophage
+# 		}
+# 	}
+# }
 
-dark_matter_collector = {
-	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_crystal_plant
-	clothes_texture_index = 3
+# dark_matter_collector = {
+# 	category = specialist
+# 	condition_string = SPECIALIST_JOB_TRIGGER
+# 	building_icon = building_crystal_plant
+# 	clothes_texture_index = 3
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_specialist_job
+# 	possible_precalc = can_fill_specialist_job
 
-	resources = {
-		category = planet_miners
-		produces = {
-			sr_dark_matter = 1
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
+# 	resources = {
+# 		category = planet_miners
+# 		produces = {
+# 			sr_dark_matter = 1
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
 
-	weight = {
-		weight = @specialist_job_weight
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 0.5
-			has_trait = trait_zombie
-		}
-		modifier = {
-			factor = 7
-			has_job = dark_matter_collector
-		}
-		modifier = {
-			factor = 15
-			has_job = dark_matter_collector
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.2
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-	}
-}
+# 	weight = {
+# 		weight = @specialist_job_weight
+# 		modifier = {
+# 			factor = 0.2
+# 			has_citizenship_rights = no
+# 			NOT = { has_trait = trait_mechanical }
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			can_take_servant_job = yes
+# 		}
+# 		modifier = {
+# 			factor = 0.5
+# 			has_trait = trait_zombie
+# 		}
+# 		modifier = {
+# 			factor = 7
+# 			has_job = dark_matter_collector
+# 		}
+# 		modifier = {
+# 			factor = 15
+# 			has_job = dark_matter_collector
+# 			OR = {
+# 				has_trait = trait_robust
+# 				has_trait = trait_robot_efficient_processors
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.2
+# 			is_enslaved = yes
+# 			has_slavery_type = { type = slavery_indentured }
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			has_trait = trait_necrophage
+# 		}
+# 	}
+# }
 
-dark_matter_collector_drone = {
-	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_crystal_plant
+# dark_matter_collector_drone = {
+# 	category = complex_drone
+# 	condition_string = DRONE_JOB_TRIGGER
+# 	building_icon = building_crystal_plant
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_enslaved = no
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_drone_job
+# 	possible_precalc = can_fill_drone_job
 
-	possible = { NOT = { has_trait = trait_nerve_stapled } }
+# 	possible = { NOT = { has_trait = trait_nerve_stapled } }
 
-	resources = {
-		category = planet_miners
-		produces = {
-			sr_dark_matter = 1
-		}
-		upkeep = {
-			energy = 2
-		}
-	}
+# 	resources = {
+# 		category = planet_miners
+# 		produces = {
+# 			sr_dark_matter = 1
+# 		}
+# 		upkeep = {
+# 			energy = 2
+# 		}
+# 	}
 
-	weight = {
-		weight = @complex_drone_job_weight
-		modifier = {
-			factor = 0.9
-			exists = owner
-			years_passed < 1
-			owner = { has_valid_civic = civic_machine_assimilator }
-			has_trait = trait_cybernetic
-		}
-		modifier = {
-			factor = 5
-			has_job = dark_matter_collector_drone
-			OR = {
-				has_trait = trait_robust
-				has_trait = trait_robot_efficient_processors
-			}
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_necrophage
-		}
-	}
-}
+# 	weight = {
+# 		weight = @complex_drone_job_weight
+# 		modifier = {
+# 			factor = 0.9
+# 			exists = owner
+# 			years_passed < 1
+# 			owner = { has_valid_civic = civic_machine_assimilator }
+# 			has_trait = trait_cybernetic
+# 		}
+# 		modifier = {
+# 			factor = 5
+# 			has_job = dark_matter_collector_drone
+# 			OR = {
+# 				has_trait = trait_robust
+# 				has_trait = trait_robot_efficient_processors
+# 			}
+# 		}
+# 		modifier = {
+# 			factor = 1.5
+# 			has_trait = trait_necrophage
+# 		}
+# 	}
+# }
 
 # living_metal_caster = {
 # 	category = specialist
