@@ -200,7 +200,7 @@ d_subsurface_assembly = {
 	resources = {
 		category = planet_deposits
 		produces = {
-			sr_living_metal = 1
+			# sr_living_metal = 1
 		}
 	}
 
@@ -2122,12 +2122,12 @@ d_pdcrystalpatch = {
 	use_weights_for_terraforming_swap_types = no
 	should_swap_deposit_on_terraforming = no
 
-	resources = {
-		category = planet_deposits
-		produces = {
-			rare_crystals = 0.5
-		}
-	}
+	# resources = {
+	# 	category = planet_deposits
+	# 	produces = {
+	# 		rare_crystals = 0.5
+	# 	}
+	# }
 
 	planet_modifier = {
 		district_mining_max = 2

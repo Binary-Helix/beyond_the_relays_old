@@ -894,7 +894,7 @@ building_energy_capacitor = {
 	destroy_trigger = {
 		OR = {
 			NOT = { has_planet_flag = energy_station }
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -939,11 +939,11 @@ building_energy_capacitor = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			rare_crystals = 50
+			# rare_crystals = 50
 		}
 		upkeep = {
 			energy = 3
-			rare_crystals = 1
+			# rare_crystals = 1
 		}
 	}
 
@@ -1016,7 +1016,7 @@ building_borehole_mine = {
 	destroy_trigger = {
 		OR = {
 			NOT = { has_planet_flag = mining_station }
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 		}
 	}
 
@@ -1061,11 +1061,11 @@ building_borehole_mine = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			volatile_motes = 50
+			# volatile_motes = 50
 		}
 		upkeep = {
 			energy = 3
-			volatile_motes = 1
+			# volatile_motes = 1
 		}
 	}
 
@@ -1257,7 +1257,7 @@ building_mega_forge = {
 	destroy_trigger = {
 		OR = {
 			NOT = { has_planet_flag = industrial_station }
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 		}
 	}
 	
@@ -1334,11 +1334,11 @@ building_mega_forge = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			volatile_motes = 50
+			# volatile_motes = 50
 		}
 		upkeep = {
 			energy = 3
-			volatile_motes = 1
+			# volatile_motes = 1
 		}
 	}
 
@@ -1449,7 +1449,7 @@ building_fabricator = {
 					country_uses_consumer_goods = no
 				}
 			}
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -1507,11 +1507,11 @@ building_fabricator = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			rare_crystals = 50
+			# rare_crystals = 50
 		}
 		upkeep = {
 			energy = 3
-			rare_crystals = 1
+			# rare_crystals = 1
 		}
 	}
 
@@ -1887,11 +1887,11 @@ building_transit_network = {
 		category = planet_buildings
 		cost = {
 			alloys = 500
-			volatile_motes = 50
+			# volatile_motes = 50
 		}
 		upkeep = {
 			energy = 5
-			volatile_motes = 1
+			# volatile_motes = 1
 		}
 	}
 }
@@ -1982,7 +1982,7 @@ building_ftl_inhibitor = {
 	destroy_trigger = {
 		OR = {
 			NOT = { has_planet_flag = military_station }
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 		}
 	}
 
@@ -1993,7 +1993,7 @@ building_ftl_inhibitor = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			volatile_motes = 25
+			# volatile_motes = 25
 		}
 		upkeep = {
 			energy = 3
@@ -2025,7 +2025,7 @@ building_training_area = {
 	destroy_trigger = {
 		OR = {
 			NOT = { has_planet_flag = military_station }
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 		}
 	}
 
@@ -2060,11 +2060,11 @@ building_training_area = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			volatile_motes = 50
+			# volatile_motes = 50
 		}
 		upkeep = {
 			energy = 3
-			volatile_motes = 1
+			# volatile_motes = 1
 		}
 	}
 
@@ -2108,7 +2108,7 @@ building_dread_site = {
 	destroy_trigger = {
 		OR = {
 			NOT = { has_planet_flag = military_station }
-			buildings_no_exotic_gases = yes
+			# buildings_no_exotic_gases = yes
 		}
 	}
 
@@ -2132,11 +2132,11 @@ building_dread_site = {
 		category = planet_buildings
 		cost = {
 			alloys = 200
-			exotic_gases = 50
+			# exotic_gases = 50
 		}
 		upkeep = {
 			energy = 3
-			exotic_gases = 1
+			# exotic_gases = 1
 		}
 	}
 

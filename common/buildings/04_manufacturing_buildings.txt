@@ -232,7 +232,7 @@ building_foundry_2 = {
 	allow = {
 		has_upgraded_capital = yes
 		buildings_upgrade_allow = yes
-		buildings_has_motes = yes
+		# buildings_has_motes = yes
 	}
 
 	destroy_trigger = {
@@ -241,7 +241,7 @@ building_foundry_2 = {
 			has_modifier = slave_colony
 			AND = {
 				exists = owner
-				buildings_no_motes = yes
+				# buildings_no_motes = yes
 			}
 			AND = {
 				owner = {
@@ -462,7 +462,7 @@ building_foundry_3 = {
 	allow = {
 		has_major_upgraded_capital = yes
 		buildings_upgrade_allow = yes
-		buildings_has_motes = yes
+		# buildings_has_motes = yes
 	}
 
 	destroy_trigger = {
@@ -471,7 +471,7 @@ building_foundry_3 = {
 			has_modifier = slave_colony
 			AND = {
 				exists = owner
-				buildings_no_motes = yes
+				# buildings_no_motes = yes
 			}
 			AND = {
 				exists = owner
@@ -865,7 +865,7 @@ building_factory_2 = {
 	allow = {
 		has_upgraded_capital = yes
 		buildings_upgrade_allow = yes
-		buildings_has_crystals = yes
+		# buildings_has_crystals = yes
 	}
 
 	potential = {
@@ -888,7 +888,7 @@ building_factory_2 = {
 					country_uses_consumer_goods = no
 				}
 			}
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -1034,7 +1034,7 @@ building_factory_3 = {
 	allow = {
 		has_major_upgraded_capital = yes
 		buildings_upgrade_allow = yes
-		buildings_has_crystals = yes
+		# buildings_has_crystals = yes
 	}
 
 	potential = {
@@ -1058,7 +1058,7 @@ building_factory_3 = {
 					country_uses_consumer_goods = no
 				}
 			}
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -1214,7 +1214,7 @@ building_ministry_production = {
 			owner = { is_regular_empire = no }
 			has_modifier = resort_colony
 			has_modifier = slave_colony
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 			AND = {
 				owner = {
 					is_ai = yes
@@ -1335,7 +1335,7 @@ building_production_center = {
 		exists = owner
 		OR = {
 			owner = { is_gestalt = no }
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 		}
 	}
 

@@ -477,9 +477,9 @@ prospectorium_1_modifier = {
 		country_energy_produces_mult = 0.1
 		country_minerals_produces_mult = 0.1
 		country_alloys_produces_mult = 0.1
-		country_exotic_gases_produces_mult = 0.1
-		country_rare_crystals_produces_mult = 0.1
-		country_volatile_motes_produces_mult = 0.1
+		# country_exotic_gases_produces_mult = 0.1
+		# country_rare_crystals_produces_mult = 0.1
+		# country_volatile_motes_produces_mult = 0.1
 		description = prospectorium_1_modifier_desc
 	}
 
@@ -544,9 +544,9 @@ prospectorium_2_modifier = {
 		country_energy_produces_mult = 0.2
 		country_minerals_produces_mult = 0.2
 		country_alloys_produces_mult = 0.2
-		country_exotic_gases_produces_mult = 0.2
-		country_rare_crystals_produces_mult = 0.2
-		country_volatile_motes_produces_mult = 0.2
+		# country_exotic_gases_produces_mult = 0.2
+		# country_rare_crystals_produces_mult = 0.2
+		# country_volatile_motes_produces_mult = 0.2
 		description = prospectorium_2_modifier_desc
 	}
 }
@@ -600,11 +600,11 @@ prospectorium_2_traits = {
 prospectorium_2_mining_tech = {
 	icon = "GFX_specialist_perk_prospectorium_2_mining_tech"
 	activate_effect = {
-		target = {
-			append_technology = { TECH = mine_rare_crystals }
-			append_technology = { TECH = mine_volatile_motes }
-			append_technology = { TECH = mine_exotic_gases }
-		}
+		# target = {
+		# 	append_technology = { TECH = mine_rare_crystals }
+		# 	append_technology = { TECH = mine_volatile_motes }
+		# 	append_technology = { TECH = mine_exotic_gases }
+		# }
 	}
 
 	desc = {
@@ -625,9 +625,9 @@ prospectorium_3_modifier = {
 		country_energy_produces_mult = 0.3
 		country_minerals_produces_mult = 0.3
 		country_alloys_produces_mult = 0.3
-		country_exotic_gases_produces_mult = 0.3
-		country_rare_crystals_produces_mult = 0.3
-		country_volatile_motes_produces_mult = 0.3
+		# country_exotic_gases_produces_mult = 0.3
+		# country_rare_crystals_produces_mult = 0.3
+		# country_volatile_motes_produces_mult = 0.3
 		description = prospectorium_3_modifier_desc
 	}
 }
@@ -646,9 +646,9 @@ prospectorium_3_mining_tech = {
 	icon = "GFX_specialist_perk_prospectorium_3_mining_tech"
 	activate_effect = {
 		target = {
-			append_technology = { TECH = mine_zro }
-			append_technology = { TECH = mine_dark_matter }
-			append_technology = { TECH = mine_living_metal }
+			# append_technology = { TECH = mine_zro }
+			# append_technology = { TECH = mine_dark_matter }
+			# append_technology = { TECH = mine_living_metal }
 		}
 	}
 

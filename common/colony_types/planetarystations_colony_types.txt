@@ -801,10 +801,10 @@ col_planetary_station_penal = {
 			OR = {
 				num_districts = { type = district_mining_complex value = 2 }
 				num_districts = { type = district_helium_extractor value = 2 }
-				num_districts = { type = district_mote_mine value = 2 }
-				num_districts = { type = district_gas_refinery value = 2 }
-				num_districts = { type = district_crystal_mining value = 2 }
-				num_districts = { type = district_zro_harvesting value = 2 }
+				# num_districts = { type = district_mote_mine value = 2 }
+				# num_districts = { type = district_gas_refinery value = 2 }
+				# num_districts = { type = district_crystal_mining value = 2 }
+				# num_districts = { type = district_zro_harvesting value = 2 }
 			}
 		}
 		modifier = {
@@ -812,20 +812,20 @@ col_planetary_station_penal = {
 			OR = {
 				num_districts = { type = district_mining_complex value >= 3 }
 				num_districts = { type = district_helium_extractor value >= 3 }
-				num_districts = { type = district_mote_mine value >= 3 }
-				num_districts = { type = district_gas_refinery value >= 3 }
-				num_districts = { type = district_crystal_mining value >= 3 }
-				num_districts = { type = district_zro_harvesting value >= 3 }
+				# num_districts = { type = district_mote_mine value >= 3 }
+				# num_districts = { type = district_gas_refinery value >= 3 }
+				# num_districts = { type = district_crystal_mining value >= 3 }
+				# num_districts = { type = district_zro_harvesting value >= 3 }
 			}
 		}
 		modifier = {
 			factor = 0
 			num_districts = { type = district_mining_complex value = 0 }
 			num_districts = { type = district_helium_extractor value = 0 }
-			num_districts = { type = district_mote_mine value = 0 }
-			num_districts = { type = district_gas_refinery value = 0 }
-			num_districts = { type = district_crystal_mining value = 0 }
-			num_districts = { type = district_zro_harvesting value = 0 }
+			# num_districts = { type = district_mote_mine value = 0 }
+			# num_districts = { type = district_gas_refinery value = 0 }
+			# num_districts = { type = district_crystal_mining value = 0 }
+			# num_districts = { type = district_zro_harvesting value = 0 }
 		}
 	}
 }

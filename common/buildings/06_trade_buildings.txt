@@ -152,7 +152,7 @@ building_commercial_megaplex = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			and = {
 				owner = { is_ai = yes }
 				years_passed > 2
@@ -253,7 +253,7 @@ building_galactic_stock_exchange = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 

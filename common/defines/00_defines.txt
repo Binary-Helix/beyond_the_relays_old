@@ -2104,7 +2104,7 @@
 		AI_MIN_CURRENCY_TO_SELL = 1300.0		#BTR Edit - StarTech Integration - If the AI has less currency (energy) than this it will consider selling resources
 		AI_MIN_CURRENCY_INCOME_TO_SELL = 5.0	#BTR Edit - StarTech Integration - If the AI has less currency (energy) gain last month than this it will consider selling resources
 		AI_MAIN_CONSTRUCTION_CURRENCY = "minerals"			# Tells the AI which is the most important construction resource
-		AI_RARE_RESOURCES = { "exotic_gases" "rare_crystals" "volatile_motes" "element_zero" } #Tells AI which the "strategic" resources are used for their economy planing
+		# AI_RARE_RESOURCES = { "exotic_gases" "rare_crystals" "volatile_motes" "element_zero" } #Tells AI which the "strategic" resources are used for their economy planing
 		AI_MAIN_CONSTRUCTION_CURRENCY_MINIMUM_TARGET = 25	# AI will forbid jobs consuming the main construction currency to reach this level of monthly income to recover from death spiral
 		AI_MAIN_CONSTRUCTION_CURRENCY_EMPIRE_SIZE_MULT = 0.005 # Scaling for the minimum income target so larger empires can recover faster
 

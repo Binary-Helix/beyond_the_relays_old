@@ -2025,7 +2025,7 @@ building_inquisition_fortress = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 			NOT = {	owner = { has_civic = civic_pdinquisition }	}
 		}
 	}
@@ -2042,11 +2042,11 @@ building_inquisition_fortress = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			volatile_motes = @b2_rare_cost
+			# volatile_motes = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b1_upkeep
-			volatile_motes = @b2_rare_upkeep
+			# volatile_motes = @b2_rare_upkeep
 		}
 	}
 

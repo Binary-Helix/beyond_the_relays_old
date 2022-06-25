@@ -346,7 +346,7 @@ building_food_processing_center = {
 
 	allow = {
 		exists = owner
-		buildings_has_motes = yes
+		# buildings_has_motes = yes
 		has_upgraded_capital = yes
 	}
 
@@ -361,7 +361,7 @@ building_food_processing_center = {
 			}
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 		}
 	}
 
@@ -731,14 +731,14 @@ building_mineral_purification_hub = {
 
 	allow = {
 		has_upgraded_capital = yes
-		buildings_has_motes = yes
+		# buildings_has_motes = yes
 		NOT = { has_modifier = resort_colony }
 	}
 
 	destroy_trigger = {
 		OR = {
 			has_modifier = resort_colony
-			buildings_no_motes = yes
+			# buildings_no_motes = yes
 		}
 	}
 

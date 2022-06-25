@@ -2064,425 +2064,425 @@ d_fungal_forest = {
 #####   MOTES  #####
 ####################
 
-d_dust_caverns = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_dust_caverns = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 	}
 	
-	planet_modifier = { 
-		building_mote_harvesters_max = 1
-	}
+# 	planet_modifier = { 
+# 		building_mote_harvesters_max = 1
+# 	}
 	
-	drop_weight = {
-		weight = @high_rare
-		modifier = {
-			factor = @planet_type_bonus
-			is_dry = yes
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_karst
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_gaia
-		}			
-		modifier = {
-			factor = 2
-			#is_planet_class = pc_pdshroud
-		}			
-		# modifier = {
-		# 	factor = 2
-		# 	is_planet_class = pc_graveyard
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_crystal
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_technoorganic
-		# }
-		modifier = {
-			factor = 2
-			is_planet_class = pc_primal
-		}
-		modifier = {
-			factor = 0
-			solar_system = {
-				OR = {
-					has_star_flag = empire_home_system
-					has_star_flag = sol_system
-					has_star_flag = deneb_system
-				}
-			}
-		}
-	}
-}
+# 	drop_weight = {
+# 		weight = @high_rare
+# 		modifier = {
+# 			factor = @planet_type_bonus
+# 			is_dry = yes
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_karst
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_gaia
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			#is_planet_class = pc_pdshroud
+# 		}			
+# 		# modifier = {
+# 		# 	factor = 2
+# 		# 	is_planet_class = pc_graveyard
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_crystal
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_technoorganic
+# 		# }
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_primal
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			solar_system = {
+# 				OR = {
+# 					has_star_flag = empire_home_system
+# 					has_star_flag = sol_system
+# 					has_star_flag = deneb_system
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
-d_dust_desert = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_dust_desert = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 	}
 	
-	planet_modifier = { 
-		building_mote_harvesters_max = 2
-	}
+# 	planet_modifier = { 
+# 		building_mote_harvesters_max = 2
+# 	}
 	
-	drop_weight = {
-		weight = @high_rare
-		modifier = {
-			factor = @planet_type_bonus
-			is_dry = yes
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_gaia
-		}			
-		modifier = {
-			factor = 2
-			#is_planet_class = pc_pdshroud
-		}				
-		# modifier = {
-		# 	factor = 2
-		# 	is_planet_class = pc_graveyard
-		# }			
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_crystal
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_technoorganic
-		# }
-		modifier = {
-			factor = 0
-			solar_system = {
-				OR = {
-					has_star_flag = empire_home_system
-					has_star_flag = sol_system
-					has_star_flag = deneb_system
-				}
-			}
-		}
-	}
-}
+# 	drop_weight = {
+# 		weight = @high_rare
+# 		modifier = {
+# 			factor = @planet_type_bonus
+# 			is_dry = yes
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_gaia
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			#is_planet_class = pc_pdshroud
+# 		}				
+# 		# modifier = {
+# 		# 	factor = 2
+# 		# 	is_planet_class = pc_graveyard
+# 		# }			
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_crystal
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_technoorganic
+# 		# }
+# 		modifier = {
+# 			factor = 0
+# 			solar_system = {
+# 				OR = {
+# 					has_star_flag = empire_home_system
+# 					has_star_flag = sol_system
+# 					has_star_flag = deneb_system
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 
 ####################
 #####   GASES  #####
 ####################
 
-d_bubbling_swamp = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_bubbling_swamp = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 
-	potential = {
-		can_have_habitable_deposits = yes
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 	}
 
-	planet_modifier = { 
-		building_gas_extractors_max = 1
-	}
+# 	planet_modifier = { 
+# 		building_gas_extractors_max = 1
+# 	}
 	
-	drop_weight = {
-		weight = @high_rare
-		modifier = {
-			factor = @planet_type_bonus
-			is_wet = yes
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_gaia
-		}		
-		modifier = {
-			factor = 2
-			#is_planet_class = pc_pdshroud
-		}					
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_graveyard
-		# }		
-		# modifier = {
-		# 	factor = 2
-		# 	is_planet_class = pc_crystal
-		# }		
-		# modifier = {
-		# 	factor = 2
-		# 	is_planet_class = pc_technoorganic
-		# }	
-		modifier = {
-			factor = 0
-			solar_system = {
-				OR = {
-					has_star_flag = empire_home_system
-					has_star_flag = sol_system
-					has_star_flag = deneb_system
-				}
-			}
-		}
-	}
-}
+# 	drop_weight = {
+# 		weight = @high_rare
+# 		modifier = {
+# 			factor = @planet_type_bonus
+# 			is_wet = yes
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_gaia
+# 		}		
+# 		modifier = {
+# 			factor = 2
+# 			#is_planet_class = pc_pdshroud
+# 		}					
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_graveyard
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 2
+# 		# 	is_planet_class = pc_crystal
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 2
+# 		# 	is_planet_class = pc_technoorganic
+# 		# }	
+# 		modifier = {
+# 			factor = 0
+# 			solar_system = {
+# 				OR = {
+# 					has_star_flag = empire_home_system
+# 					has_star_flag = sol_system
+# 					has_star_flag = deneb_system
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
-d_fuming_bog = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_fuming_bog = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 	}
 
-	planet_modifier = { 
-		building_gas_extractors_max = 2
-	}
+# 	planet_modifier = { 
+# 		building_gas_extractors_max = 2
+# 	}
 	
-	drop_weight = {
-		weight = @low_rare	
-		modifier = {
-			factor = @planet_type_bonus
-			is_wet = yes
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_gaia
-		}				
-		modifier = {
-			factor = 2
-			#is_planet_class = pc_pdshroud
-		}			
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_graveyard
-		# }			
-		# modifier = {
-		# 	factor = 2
-		# 	is_planet_class = pc_crystal
-		# }		
-		# modifier = {
-		# 	factor = 2
-		# 	is_planet_class = pc_technoorganic
-		# }
-		modifier = {
-			factor = 0
-			solar_system = {
-				OR = {
-					has_star_flag = empire_home_system
-					has_star_flag = sol_system
-					has_star_flag = deneb_system
-				}
-			}
-		}
-	}
-}
+# 	drop_weight = {
+# 		weight = @low_rare	
+# 		modifier = {
+# 			factor = @planet_type_bonus
+# 			is_wet = yes
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_gaia
+# 		}				
+# 		modifier = {
+# 			factor = 2
+# 			#is_planet_class = pc_pdshroud
+# 		}			
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_graveyard
+# 		# }			
+# 		# modifier = {
+# 		# 	factor = 2
+# 		# 	is_planet_class = pc_crystal
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 2
+# 		# 	is_planet_class = pc_technoorganic
+# 		# }
+# 		modifier = {
+# 			factor = 0
+# 			solar_system = {
+# 				OR = {
+# 					has_star_flag = empire_home_system
+# 					has_star_flag = sol_system
+# 					has_star_flag = deneb_system
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 ####################
 ##### CRYSTALS #####
 ####################
 
-d_crystalline_caverns = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_crystalline_caverns = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 	}
 
-	planet_modifier = { 
-		building_crystal_mines_max = 1
-	}
+# 	planet_modifier = { 
+# 		building_crystal_mines_max = 1
+# 	}
 	
-	drop_weight = {
-		weight = @high_rare
-		modifier = {
-			factor = @planet_type_bonus
-			is_cold = yes
-			is_planet_class = pc_karst
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_gaia
-		}			
-		modifier = {
-			factor = 2
-			#is_planet_class = pc_pdshroud
-		}				
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_graveyard
-		# }			
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_crystal
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_technoorganic
-		# }
-		modifier = {
-			factor = 2
-			is_planet_class = pc_hothouse
-		}
-		modifier = {
-			factor = 0
-			solar_system = {
-				OR = {
-					has_star_flag = empire_home_system
-					has_star_flag = sol_system
-					has_star_flag = deneb_system
-				}
-			}
-		}		
-	}
-}
+# 	drop_weight = {
+# 		weight = @high_rare
+# 		modifier = {
+# 			factor = @planet_type_bonus
+# 			is_cold = yes
+# 			is_planet_class = pc_karst
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_gaia
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			#is_planet_class = pc_pdshroud
+# 		}				
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_graveyard
+# 		# }			
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_crystal
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_technoorganic
+# 		# }
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_hothouse
+# 		}
+# 		modifier = {
+# 			factor = 0
+# 			solar_system = {
+# 				OR = {
+# 					has_star_flag = empire_home_system
+# 					has_star_flag = sol_system
+# 					has_star_flag = deneb_system
+# 				}
+# 			}
+# 		}		
+# 	}
+# }
 
-d_crystal_forest = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_crystal_forest = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	use_weights_for_terraforming_swap_types = yes
-	should_swap_deposit_on_terraforming = yes
-	terraforming_swap_types = {
-		d_crystal_reef
-	}	
+# 	use_weights_for_terraforming_swap_types = yes
+# 	should_swap_deposit_on_terraforming = yes
+# 	terraforming_swap_types = {
+# 		d_crystal_reef
+# 	}	
 	
-	planet_modifier = { 
-		building_crystal_mines_max = 2
-	}
+# 	planet_modifier = { 
+# 		building_crystal_mines_max = 2
+# 	}
 
-	potential = {
-		can_have_habitable_deposits = yes
-		NOR = { 
-			is_planet_class = pc_ocean
-			is_planet_class = pc_reef
-			is_planet_class = pc_nuked
-			is_planet_class = pc_irradiated
-			is_planet_class = pc_gaia
-			#is_planet_class = pc_pdshroud
-		}
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		NOR = { 
+# 			is_planet_class = pc_ocean
+# 			is_planet_class = pc_reef
+# 			is_planet_class = pc_nuked
+# 			is_planet_class = pc_irradiated
+# 			is_planet_class = pc_gaia
+# 			#is_planet_class = pc_pdshroud
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = @low_rare
-		modifier = {
-			factor = @planet_type_bonus
-			is_cold = yes
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_gaia
-		}		
-		modifier = {
-			factor = 2
-			#is_planet_class = pc_pdshroud
-		}					
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_graveyard
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_crystal
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_technoorganic
-		# }
-		modifier = {
-			factor = 0
-			solar_system = {
-				OR = {
-					has_star_flag = empire_home_system
-					has_star_flag = sol_system
-					has_star_flag = deneb_system
-				}
-			}
-		}	
-	}
-}
+# 	drop_weight = {
+# 		weight = @low_rare
+# 		modifier = {
+# 			factor = @planet_type_bonus
+# 			is_cold = yes
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_gaia
+# 		}		
+# 		modifier = {
+# 			factor = 2
+# 			#is_planet_class = pc_pdshroud
+# 		}					
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_graveyard
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_crystal
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_technoorganic
+# 		# }
+# 		modifier = {
+# 			factor = 0
+# 			solar_system = {
+# 				OR = {
+# 					has_star_flag = empire_home_system
+# 					has_star_flag = sol_system
+# 					has_star_flag = deneb_system
+# 				}
+# 			}
+# 		}	
+# 	}
+# }
 
-d_crystal_reef = {
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_crystal_reef = {
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	use_weights_for_terraforming_swap_types = yes
-	should_swap_deposit_on_terraforming = yes
-	terraforming_swap_types = {
-		d_crystal_reef
-	}		
+# 	use_weights_for_terraforming_swap_types = yes
+# 	should_swap_deposit_on_terraforming = yes
+# 	terraforming_swap_types = {
+# 		d_crystal_reef
+# 	}		
 	
-	planet_modifier = {
-		building_crystal_mines_max = 2
-	}
+# 	planet_modifier = {
+# 		building_crystal_mines_max = 2
+# 	}
 	
-	potential = {
-		OR = { 
-			is_planet_class = pc_ocean
-			is_planet_class = pc_reef
-			is_planet_class = pc_aquatic 
-			is_planet_class = pc_nuked
-			is_planet_class = pc_irradiated
-			is_planet_class = pc_gaia
-			#is_planet_class = pc_pdshroud
-			is_planet_class = pc_desertislands
-			is_planet_class = pc_subarctic
-			is_planet_class = pc_geothermal
-			is_planet_class = pc_superhabitable
-			is_planet_class = pc_tidallylocked
-			is_planet_class = pc_supercon
-			# is_planet_class = pc_crystal
-			# is_planet_class = pc_technoorganic
-			# is_planet_class = pc_graveyard
-		}
-	}
+# 	potential = {
+# 		OR = { 
+# 			is_planet_class = pc_ocean
+# 			is_planet_class = pc_reef
+# 			is_planet_class = pc_aquatic 
+# 			is_planet_class = pc_nuked
+# 			is_planet_class = pc_irradiated
+# 			is_planet_class = pc_gaia
+# 			#is_planet_class = pc_pdshroud
+# 			is_planet_class = pc_desertislands
+# 			is_planet_class = pc_subarctic
+# 			is_planet_class = pc_geothermal
+# 			is_planet_class = pc_superhabitable
+# 			is_planet_class = pc_tidallylocked
+# 			is_planet_class = pc_supercon
+# 			# is_planet_class = pc_crystal
+# 			# is_planet_class = pc_technoorganic
+# 			# is_planet_class = pc_graveyard
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = @low_rare
-		modifier = {
-			factor = @planet_type_bonus
-			is_cold = yes
-		}		
-		modifier = {
-			factor = 2
-			is_planet_class = pc_gaia
-		}		
-		modifier = {
-			factor = 2
-			#is_planet_class = pc_pdshroud
-		}			
-		modifier = {
-			factor = 2
-			is_planet_class = pc_aquatic
-		}				
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_graveyard
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_crystal
-		# }		
-		# modifier = {
-		# 	factor = 1
-		# 	is_planet_class = pc_technoorganic
-		# }
-		modifier = {
-			factor = 0
-			solar_system = {
-				OR = {
-					has_star_flag = empire_home_system
-					has_star_flag = sol_system
-					has_star_flag = deneb_system
-				}
-			}
-		}	
-	}
-}
+# 	drop_weight = {
+# 		weight = @low_rare
+# 		modifier = {
+# 			factor = @planet_type_bonus
+# 			is_cold = yes
+# 		}		
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_gaia
+# 		}		
+# 		modifier = {
+# 			factor = 2
+# 			#is_planet_class = pc_pdshroud
+# 		}			
+# 		modifier = {
+# 			factor = 2
+# 			is_planet_class = pc_aquatic
+# 		}				
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_graveyard
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_crystal
+# 		# }		
+# 		# modifier = {
+# 		# 	factor = 1
+# 		# 	is_planet_class = pc_technoorganic
+# 		# }
+# 		modifier = {
+# 			factor = 0
+# 			solar_system = {
+# 				OR = {
+# 					has_star_flag = empire_home_system
+# 					has_star_flag = sol_system
+# 					has_star_flag = deneb_system
+# 				}
+# 			}
+# 		}	
+# 	}
+# }
 
 ###################
 ##### SPECIAL #####
@@ -2721,472 +2721,472 @@ d_natural_farmland = {
 }
 
 # HABITAT SPECIAL DEPOSITS
-d_hab_gas_1 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_gas_1 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_gas_extractors_max = 1
-	}
+# 	planet_modifier = { 
+# 		building_gas_extractors_max = 1
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_gas_2 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_gas_2 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_gas_extractors_max = 2
-	}
+# 	planet_modifier = { 
+# 		building_gas_extractors_max = 2
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_gas_3 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_gas_3 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_gas_extractors_max = 3
-	}
+# 	planet_modifier = { 
+# 		building_gas_extractors_max = 3
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_gas_4 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_gas_4 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_gas_extractors_max = 4
-	}
+# 	planet_modifier = { 
+# 		building_gas_extractors_max = 4
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_gas_5 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_gas_5 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_gas_extractors_max = 5
-	}
+# 	planet_modifier = { 
+# 		building_gas_extractors_max = 5
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_crystal_1 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_crystal_1 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_crystal_mines_max = 1
-	}
+# 	planet_modifier = { 
+# 		building_crystal_mines_max = 1
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_crystal_2 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_crystal_2 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_crystal_mines_max = 2
-	}
+# 	planet_modifier = { 
+# 		building_crystal_mines_max = 2
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_crystal_3 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_crystal_3 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_crystal_mines_max = 3
-	}
+# 	planet_modifier = { 
+# 		building_crystal_mines_max = 3
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_crystal_4 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_crystal_4 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_crystal_mines_max = 4
-	}
+# 	planet_modifier = { 
+# 		building_crystal_mines_max = 4
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_crystal_5 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_crystal_5 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	planet_modifier = { 
-		building_crystal_mines_max = 5
-	}
+# 	planet_modifier = { 
+# 		building_crystal_mines_max = 5
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_mote_1 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_mote_1 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	planet_modifier = { 
-		building_mote_harvesters_max = 1
-	}
+# 	planet_modifier = { 
+# 		building_mote_harvesters_max = 1
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_mote_2 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_mote_2 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	planet_modifier = { 
-		building_mote_harvesters_max = 2
-	}
+# 	planet_modifier = { 
+# 		building_mote_harvesters_max = 2
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_mote_3 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_mote_3 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	planet_modifier = { 
-		building_mote_harvesters_max = 3
-	}
+# 	planet_modifier = { 
+# 		building_mote_harvesters_max = 3
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_mote_4 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_mote_4 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	planet_modifier = { 
-		building_mote_harvesters_max = 4
-	}
+# 	planet_modifier = { 
+# 		building_mote_harvesters_max = 4
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_mote_5 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_mote_5 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	planet_modifier = { 
-		building_mote_harvesters_max = 5
-	}
+# 	planet_modifier = { 
+# 		building_mote_harvesters_max = 5
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_zro_1 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_zro_1 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 
-	resources = {
-		category = orbital_mining_deposits
-		produces = {
-			trigger = { 
-				exists = owner
-				owner = { has_technology = tech_mine_zro } 
-			}
-			sr_zro = 1
-		}
-	}
+# 	resources = {
+# 		category = orbital_mining_deposits
+# 		produces = {
+# 			trigger = { 
+# 				exists = owner
+# 				owner = { has_technology = tech_mine_zro } 
+# 			}
+# 			sr_zro = 1
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_zro_2 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_zro_2 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	resources = {
-		category = orbital_mining_deposits
-		produces = {
-			trigger = { 
-				exists = owner
-				owner = { has_technology = tech_mine_zro } 
-			}
-			sr_zro = 2
-		}
-	}
+# 	resources = {
+# 		category = orbital_mining_deposits
+# 		produces = {
+# 			trigger = { 
+# 				exists = owner
+# 				owner = { has_technology = tech_mine_zro } 
+# 			}
+# 			sr_zro = 2
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_zro_3 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_zro_3 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	resources = {
-		category = orbital_mining_deposits
-		produces = {
-			trigger = { 
-				exists = owner
-				owner = { has_technology = tech_mine_zro } 
-			}
-			sr_zro = 3
-		}
-	}
+# 	resources = {
+# 		category = orbital_mining_deposits
+# 		produces = {
+# 			trigger = { 
+# 				exists = owner
+# 				owner = { has_technology = tech_mine_zro } 
+# 			}
+# 			sr_zro = 3
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_dark_matter_1 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_dark_matter_1 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	resources = {
-		category = orbital_mining_deposits
-		produces = {
-			trigger = { 
-				exists = owner
-				owner = { has_technology = tech_mine_dark_matter } 
-			}
-			sr_dark_matter = 1
-		}
-	}
+# 	resources = {
+# 		category = orbital_mining_deposits
+# 		produces = {
+# 			trigger = { 
+# 				exists = owner
+# 				owner = { has_technology = tech_mine_dark_matter } 
+# 			}
+# 			sr_dark_matter = 1
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_dark_matter_2 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_dark_matter_2 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	resources = {
-		category = orbital_mining_deposits
-		produces = {
-			trigger = { 
-				exists = owner
-				owner = { has_technology = tech_mine_dark_matter } 
-			}
-			sr_dark_matter = 2
-		}
-	}
+# 	resources = {
+# 		category = orbital_mining_deposits
+# 		produces = {
+# 			trigger = { 
+# 				exists = owner
+# 				owner = { has_technology = tech_mine_dark_matter } 
+# 			}
+# 			sr_dark_matter = 2
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_dark_matter_3 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_dark_matter_3 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	resources = {
-		category = orbital_mining_deposits
-		produces = {
-			trigger = { 
-				exists = owner
-				owner = { has_technology = tech_mine_dark_matter } 
-			}
-			sr_dark_matter = 3
-		}
-	}
+# 	resources = {
+# 		category = orbital_mining_deposits
+# 		produces = {
+# 			trigger = { 
+# 				exists = owner
+# 				owner = { has_technology = tech_mine_dark_matter } 
+# 			}
+# 			sr_dark_matter = 3
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
-d_hab_living_metal_1 = {
-	icon = "unused/d_space_walk"
-	is_for_colonizable = yes
-	category = deposit_cat_rare
+# d_hab_living_metal_1 = {
+# 	icon = "unused/d_space_walk"
+# 	is_for_colonizable = yes
+# 	category = deposit_cat_rare
 	
-	potential = {
-		can_have_habitable_deposits = yes
-		is_planet_class = pc_habitat
-	}
+# 	potential = {
+# 		can_have_habitable_deposits = yes
+# 		is_planet_class = pc_habitat
+# 	}
 	
-	resources = {
-		category = orbital_mining_deposits
-		produces = {
-			trigger = { 
-				exists = owner
-				owner = { has_technology = tech_mine_living_metal } 
-			}
-			sr_living_metal = 1
-		}
-	}
+# 	resources = {
+# 		category = orbital_mining_deposits
+# 		produces = {
+# 			trigger = { 
+# 				exists = owner
+# 				owner = { has_technology = tech_mine_living_metal } 
+# 			}
+# 			sr_living_metal = 1
+# 		}
+# 	}
 	
-	drop_weight = {
-		weight = 0
-	}
-}
+# 	drop_weight = {
+# 		weight = 0
+# 	}
+# }
 
 d_hab_alloy_1 = {
 	icon = "unused/d_space_walk"

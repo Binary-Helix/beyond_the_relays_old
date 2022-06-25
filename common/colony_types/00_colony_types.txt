@@ -1342,9 +1342,9 @@ col_refinery = {
 		planet_refiners_produces_mult = 0.1
 		planet_translucers_produces_mult = 0.1
 		planet_chemists_produces_mult = 0.1
-		planet_building_refinery_build_speed_mult = 0.25
-		planet_building_chemical_plant_build_speed_mult = 0.25
-		planet_building_crystal_plant_build_speed_mult = 0.25
+		# planet_building_refinery_build_speed_mult = 0.25
+		# planet_building_chemical_plant_build_speed_mult = 0.25
+		# planet_building_crystal_plant_build_speed_mult = 0.25
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -2160,9 +2160,9 @@ col_habitat_refinery = {
 		uses_district_set = habitat
 	}
 	planet_modifier = {
-		planet_building_refinery_build_speed_mult = 0.25
-		planet_building_chemical_plant_build_speed_mult = 0.25
-		planet_building_crystal_plant_build_speed_mult = 0.25
+		# planet_building_refinery_build_speed_mult = 0.25
+		# planet_building_chemical_plant_build_speed_mult = 0.25
+		# planet_building_crystal_plant_build_speed_mult = 0.25
 		planet_refiners_produces_mult = 0.1
 		planet_translucers_produces_mult = 0.1
 		planet_chemists_produces_mult = 0.1
@@ -2188,30 +2188,30 @@ col_habitat_refinery = {
 
 	weight_modifier = {
 		base = 0
-		modifier = {
-			add = 4
-			num_buildings = { type = building_chemical_plant value >= 2}
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_crystal_plant value >= 2}
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_refinery value >= 2}
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_chemical_plant value >= 4}
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_crystal_plant value >= 4}
-		}
-		modifier = {
-			add = 4
-			num_buildings = { type = building_refinery value >= 4}
-		}
+		# modifier = {
+		# 	add = 4
+		# 	num_buildings = { type = building_chemical_plant value >= 2}
+		# }
+		# modifier = {
+		# 	add = 4
+		# 	num_buildings = { type = building_crystal_plant value >= 2}
+		# }
+		# modifier = {
+		# 	add = 4
+		# 	num_buildings = { type = building_refinery value >= 2}
+		# }
+		# modifier = {
+		# 	add = 4
+		# 	num_buildings = { type = building_chemical_plant value >= 4}
+		# }
+		# modifier = {
+		# 	add = 4
+		# 	num_buildings = { type = building_crystal_plant value >= 4}
+		# }
+		# modifier = {
+		# 	add = 4
+		# 	num_buildings = { type = building_refinery value >= 4}
+		# }
 		modifier = { 		#Count 1 Mineral as 1.5 energy
 			factor = 1.5
 			always = yes

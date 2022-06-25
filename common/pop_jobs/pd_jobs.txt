@@ -283,148 +283,148 @@ jungle_ranger = {
 	}
 }
 
-crystal_carver = {
-	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_crystal_carver
-	clothes_texture_index = 3
+# crystal_carver = {
+# 	category = specialist
+# 	condition_string = SPECIALIST_JOB_TRIGGER
+# 	building_icon = building_crystal_carver
+# 	clothes_texture_index = 3
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_specialist_job
-	possible = {
-		hidden_trigger = { exists = owner }
-		owner = { is_gestalt = no }
-	}
+# 	possible_precalc = can_fill_specialist_job
+# 	possible = {
+# 		hidden_trigger = { exists = owner }
+# 		owner = { is_gestalt = no }
+# 	}
 
 	
-	resources = {
-		category = planet_artisans
-		produces = {
-			sr_acean = 1
-		}
-	}	
+# 	resources = {
+# 		category = planet_artisans
+# 		produces = {
+# 			sr_acean = 1
+# 		}
+# 	}	
 
-	weight = {
-		weight = @specialist_job_weight # Important job
-		mult = value:job_weights_modifier|JOB|crystal_miner|RESOURCE|rare_crystals|
-		modifier = {
-			factor = 10
-			is_enslaved = yes
-			can_take_servant_job = no
-			NOT = { has_slavery_type = { type = slavery_indentured } }
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { has_technology = tech_droid_workers }
-		}
-		modifier = {
-			factor = 200
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-			can_take_servant_job = no
-			owner = { NOT = { has_technology = tech_droid_workers } }
-		}
-		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-	}
-}
+# 	weight = {
+# 		weight = @specialist_job_weight # Important job
+# 		mult = value:job_weights_modifier|JOB|crystal_miner|RESOURCE|rare_crystals|
+# 		modifier = {
+# 			factor = 10
+# 			is_enslaved = yes
+# 			can_take_servant_job = no
+# 			NOT = { has_slavery_type = { type = slavery_indentured } }
+# 		}
+# 		modifier = {
+# 			factor = 2
+# 			OR = {
+# 				is_non_sapient_robot = yes
+# 				is_shackled_robot = yes
+# 			}
+# 			can_take_servant_job = no
+# 			owner = { has_technology = tech_droid_workers }
+# 		}
+# 		modifier = {
+# 			factor = 200
+# 			OR = {
+# 				is_non_sapient_robot = yes
+# 				is_shackled_robot = yes
+# 			}
+# 			can_take_servant_job = no
+# 			owner = { NOT = { has_technology = tech_droid_workers } }
+# 		}
+# 		modifier = {
+# 			factor = 0.1
+# 			can_take_servant_job = yes
+# 		}
+# 	}
+# }
 
-crystal_hive = {
-	category = complex_drone
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_crystal_carver
-	clothes_texture_index = 3
+# crystal_hive = {
+# 	category = complex_drone
+# 	condition_string = SPECIALIST_JOB_TRIGGER
+# 	building_icon = building_crystal_carver
+# 	clothes_texture_index = 3
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_enslaved = no
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_specialist_job
+# 	possible_precalc = can_fill_specialist_job
 
-	possible = { can_think = yes }
+# 	possible = { can_think = yes }
 	
-	resources = {
-		category = planet_artisans
-		produces = {
-			sr_acean = 1
-		}
-		upkeep = {
-			energy = 1
-		}
-	}
+# 	resources = {
+# 		category = planet_artisans
+# 		produces = {
+# 			sr_acean = 1
+# 		}
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
 
-	weight = {
-		weight = @complex_drone_job_weight
-		mult = value:job_weights_modifier|JOB|crystal_mining_drone|RESOURCE|rare_crystals|
-		modifier = {
-			factor = 1.1
-			exists = owner
-			years_passed < 1
-			owner = { has_valid_civic = civic_machine_assimilator }
-			has_trait = trait_cybernetic
-		}
-	}
-}
+# 	weight = {
+# 		weight = @complex_drone_job_weight
+# 		mult = value:job_weights_modifier|JOB|crystal_mining_drone|RESOURCE|rare_crystals|
+# 		modifier = {
+# 			factor = 1.1
+# 			exists = owner
+# 			years_passed < 1
+# 			owner = { has_valid_civic = civic_machine_assimilator }
+# 			has_trait = trait_cybernetic
+# 		}
+# 	}
+# }
 
-crystal_robot = {
-	category = complex_drone
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_crystal_carver
-	clothes_texture_index = 3
+# crystal_robot = {
+# 	category = complex_drone
+# 	condition_string = SPECIALIST_JOB_TRIGGER
+# 	building_icon = building_crystal_carver
+# 	clothes_texture_index = 3
 
-	possible_pre_triggers = {
-		has_owner = yes
-		is_enslaved = no
-		is_being_purged = no
-		is_being_assimilated = no
-		is_sapient = yes
-	}
+# 	possible_pre_triggers = {
+# 		has_owner = yes
+# 		is_enslaved = no
+# 		is_being_purged = no
+# 		is_being_assimilated = no
+# 		is_sapient = yes
+# 	}
 
-	possible_precalc = can_fill_specialist_job
+# 	possible_precalc = can_fill_specialist_job
 
-	possible = { can_think = yes }
+# 	possible = { can_think = yes }
 	
-	resources = {
-		category = planet_artisans
-		produces = {
-			sr_acean = 1
-		}
-		upkeep = {
-			energy = 1
-		}
-	}
+# 	resources = {
+# 		category = planet_artisans
+# 		produces = {
+# 			sr_acean = 1
+# 		}
+# 		upkeep = {
+# 			energy = 1
+# 		}
+# 	}
 
-	weight = {
-		weight = @complex_drone_job_weight
-		mult = value:job_weights_modifier|JOB|crystal_mining_drone|RESOURCE|rare_crystals|
-		modifier = {
-			factor = 1.1
-			exists = owner
-			years_passed < 1
-			owner = { has_valid_civic = civic_machine_assimilator }
-			has_trait = trait_cybernetic
-		}
-	}
-}
+# 	weight = {
+# 		weight = @complex_drone_job_weight
+# 		mult = value:job_weights_modifier|JOB|crystal_mining_drone|RESOURCE|rare_crystals|
+# 		modifier = {
+# 			factor = 1.1
+# 			exists = owner
+# 			years_passed < 1
+# 			owner = { has_valid_civic = civic_machine_assimilator }
+# 			has_trait = trait_cybernetic
+# 		}
+# 	}
+# }
 
 preserve_ranger = {	
 	category = specialist
@@ -2674,7 +2674,7 @@ techno_eng = {
 		category = planet_miners
 		produces = {
 			engineering_research = 6
-			sr_living_metal = 1
+			# sr_living_metal = 1
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -2731,7 +2731,7 @@ techno_drone = {
 		category = planet_researchers
 		produces = {
 			engineering_research = 6
-			sr_living_metal = 1
+			# sr_living_metal = 1
 		}
 		upkeep = {
 			energy = 2

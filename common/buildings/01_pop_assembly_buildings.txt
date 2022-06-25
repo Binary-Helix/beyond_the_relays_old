@@ -277,7 +277,7 @@ building_machine_assembly_complex = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			owner = {
 				is_robot_empire = no
 			}

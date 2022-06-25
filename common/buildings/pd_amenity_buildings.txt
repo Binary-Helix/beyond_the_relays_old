@@ -146,11 +146,11 @@ building_paradise_dome = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
+			# rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = 3
-			rare_crystals = @b2_rare_upkeep
+			# rare_crystals = @b2_rare_upkeep
 		}
 	}
 
@@ -289,7 +289,7 @@ building_communal_housing_large = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -327,11 +327,11 @@ building_communal_housing_large = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
+			# rare_crystals = @b2_rare_cost
 		}
 		upkeep = {
 			energy = 3
-			rare_crystals = @b2_rare_upkeep
+			# rare_crystals = @b2_rare_upkeep
 		}
 	}
 

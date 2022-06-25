@@ -665,12 +665,12 @@ country_event = { # per-country gatekeeper
 					OR = {
 						has_country_flag = triggered_syndaw_515
 						NOR = {
-							has_technology = tech_rare_crystals
-							has_technology = tech_exotic_gases
-							has_technology = tech_volatile_motes
-							has_technology = tech_mine_living_metal
-							has_technology = tech_mine_zro
-							has_technology = tech_mine_dark_matter
+							# has_technology = tech_rare_crystals
+							# has_technology = tech_exotic_gases
+							# has_technology = tech_volatile_motes
+							# has_technology = tech_mine_living_metal
+							# has_technology = tech_mine_zro
+							# has_technology = tech_mine_dark_matter
 							has_technology = tech_terrestrial_sculpting
 						}
 					}
@@ -1119,69 +1119,69 @@ country_event = {
 				}
 			}
 
-			root = {
-				random_list = {
-					50 = {
-						modifier = {
-							factor = 0
-							NOT = { has_technology = tech_exotic_gases }
-						}
-						event_target:target_planetoid = {
-							add_exotic_gases = yes
-						}
-					}
+			# root = {
+			# 	random_list = {
+			# 		50 = {
+			# 			modifier = {
+			# 				factor = 0
+			# 				NOT = { has_technology = tech_exotic_gases }
+			# 			}
+			# 			event_target:target_planetoid = {
+			# 				add_exotic_gases = yes
+			# 			}
+			# 		}
 
-					50 = {
-						modifier = {
-							factor = 0
-							NOT = { has_technology = tech_volatile_motes }
-						}
-						event_target:target_planetoid = {
-							add_volatile_motes = yes
-						}
-					}
+			# 		50 = {
+			# 			modifier = {
+			# 				factor = 0
+			# 				NOT = { has_technology = tech_volatile_motes }
+			# 			}
+			# 			event_target:target_planetoid = {
+			# 				add_volatile_motes = yes
+			# 			}
+			# 		}
 
-					50 = {
-						modifier = {
-							factor = 0
-							NOT = { has_technology = tech_rare_crystals }
-						}
-						event_target:target_planetoid = {
-							add_rare_crystals = yes
-						}
-					}
+			# 		50 = {
+			# 			modifier = {
+			# 				factor = 0
+			# 				NOT = { has_technology = tech_rare_crystals }
+			# 			}
+			# 			event_target:target_planetoid = {
+			# 				add_rare_crystals = yes
+			# 			}
+			# 		}
 
-					50 = {
-						modifier = {
-							factor = 0
-							NOT = { has_technology = tech_mine_living_metal }
-						}
-						event_target:target_planetoid = {
-							add_deposit = d_living_metal_deposit
-						}
-					}
+			# 		50 = {
+			# 			modifier = {
+			# 				factor = 0
+			# 				NOT = { has_technology = tech_mine_living_metal }
+			# 			}
+			# 			event_target:target_planetoid = {
+			# 				add_deposit = d_living_metal_deposit
+			# 			}
+			# 		}
 
-					50 = {
-						modifier = {
-							factor = 0
-							NOT = { has_technology = tech_mine_zro }
-						}
-						event_target:target_planetoid = {
-							add_zro = yes
-						}
-					}
+			# 		50 = {
+			# 			modifier = {
+			# 				factor = 0
+			# 				NOT = { has_technology = tech_mine_zro }
+			# 			}
+			# 			event_target:target_planetoid = {
+			# 				add_zro = yes
+			# 			}
+			# 		}
 
-					50 = {
-						modifier = {
-							factor = 0
-							NOT = { has_technology = tech_mine_dark_matter }
-						}
-						event_target:target_planetoid = {
-							add_dark_matter = yes
-						}
-					}
-				}
-			}
+			# 		50 = {
+			# 			modifier = {
+			# 				factor = 0
+			# 				NOT = { has_technology = tech_mine_dark_matter }
+			# 			}
+			# 			event_target:target_planetoid = {
+			# 				add_dark_matter = yes
+			# 			}
+			# 		}
+			# 	}
+			# }
 		}
 	}
 

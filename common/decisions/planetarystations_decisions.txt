@@ -104,30 +104,30 @@ decision_deep_exploration = {
 					#Trade Value
 					planet_event =  { id = planetarystations_decision_event.8 days = 1 }
 				}
-				3 = {
-					#Motes
-					planet_event =  { id = planetarystations_decision_event.9 days = 1 }
-				}
-				3 = {
-					#Crystals
-					planet_event =  { id = planetarystations_decision_event.10 days = 1 }
-				}
-				3 = {
-					#Gas
-					planet_event =  { id = planetarystations_decision_event.11 days = 1 }
-				}
-				1 = {
-					#Zro
-					planet_event =  { id = planetarystations_decision_event.12 days = 1 }
-				}
-				1 = {
-					#Dark Matter
-					planet_event =  { id = planetarystations_decision_event.13 days = 1 }
-				}
-				1 = {
-					#Living Metal
-					planet_event =  { id = planetarystations_decision_event.14 days = 1 }
-				}
+				# 3 = {
+				# 	#Motes
+				# 	planet_event =  { id = planetarystations_decision_event.9 days = 1 }
+				# }
+				# 3 = {
+				# 	#Crystals
+				# 	planet_event =  { id = planetarystations_decision_event.10 days = 1 }
+				# }
+				# 3 = {
+				# 	#Gas
+				# 	planet_event =  { id = planetarystations_decision_event.11 days = 1 }
+				# }
+				# 1 = {
+				# 	#Zro
+				# 	planet_event =  { id = planetarystations_decision_event.12 days = 1 }
+				# }
+				# 1 = {
+				# 	#Dark Matter
+				# 	planet_event =  { id = planetarystations_decision_event.13 days = 1 }
+				# }
+				# 1 = {
+				# 	#Living Metal
+				# 	planet_event =  { id = planetarystations_decision_event.14 days = 1 }
+				# }
 				
 			}
 		}
@@ -248,45 +248,45 @@ decision_mining_station = {
 		has_orbital_bombardment = no
 	}
 	
-	effect = {
-		custom_tooltip = district_mining_complex_add
-		hidden_effect = {
-			if = {
-				limit = { has_deposit = d_rich_regolith_formations }
-				custom_tooltip = district_helium_extractor_add
-			}
-			if = {
-				limit = { 
-					owner = { has_technology = tech_mine_volatile_motes }
-					has_deposit = d_dust_cavities
-				}
-				custom_tooltip = district_mote_mine_add
-			}
-			if = {
-				limit = { 
-					owner = { has_technology = tech_mine_exotic_gases }
-					has_deposit = d_exotic_gases_vent
-				}
-				custom_tooltip = district_gas_refinery_add
-			}
-			if = {
-				limit = { 
-					owner = { has_technology = tech_mine_rare_crystals }
-					has_deposit = d_crystal_cavities
-				}
-				custom_tooltip = district_crystal_mining_add
-			}
-			if = {
-				limit = { 
-					owner = { has_technology = tech_mine_zro }
-					has_deposit = d_zro_source
-				}
-				custom_tooltip = district_zro_harvesting_add
-			}
-			set_planet_flag = mining_station
-			validate_planet_buildings_and_districts = yes
-		}
-	}
+	# effect = {
+	# 	custom_tooltip = district_mining_complex_add
+	# 	hidden_effect = {
+	# 		if = {
+	# 			limit = { has_deposit = d_rich_regolith_formations }
+	# 			custom_tooltip = district_helium_extractor_add
+	# 		}
+	# 		if = {
+	# 			limit = { 
+	# 				owner = { has_technology = tech_mine_volatile_motes }
+	# 				has_deposit = d_dust_cavities
+	# 			}
+	# 			custom_tooltip = district_mote_mine_add
+	# 		}
+	# 		if = {
+	# 			limit = { 
+	# 				owner = { has_technology = tech_mine_exotic_gases }
+	# 				has_deposit = d_exotic_gases_vent
+	# 			}
+	# 			custom_tooltip = district_gas_refinery_add
+	# 		}
+	# 		if = {
+	# 			limit = { 
+	# 				owner = { has_technology = tech_mine_rare_crystals }
+	# 				has_deposit = d_crystal_cavities
+	# 			}
+	# 			custom_tooltip = district_crystal_mining_add
+	# 		}
+	# 		if = {
+	# 			limit = { 
+	# 				owner = { has_technology = tech_mine_zro }
+	# 				has_deposit = d_zro_source
+	# 			}
+	# 			custom_tooltip = district_zro_harvesting_add
+	# 		}
+	# 		set_planet_flag = mining_station
+	# 		validate_planet_buildings_and_districts = yes
+	# 	}
+	# }
 	
 	ai_weight = {
 		weight = 50
@@ -580,13 +580,13 @@ decision_industrial_station = {
 				}
 				custom_tooltip = district_assembly_factory_add
 			}
-			if = {
-				limit = { 
-					owner = { has_technology = tech_mine_living_metal }
-					has_deposit = d_living_metal_deposit
-				}
-				custom_tooltip = district_living_metal_processing_add
-			}
+			# if = {
+			# 	limit = { 
+			# 		owner = { has_technology = tech_mine_living_metal }
+			# 		has_deposit = d_living_metal_deposit
+			# 	}
+			# 	custom_tooltip = district_living_metal_processing_add
+			# }
 			set_planet_flag = industrial_station
 			validate_planet_buildings_and_districts = yes
 		}
@@ -596,7 +596,7 @@ decision_industrial_station = {
 		weight = 20
 		modifier = {
 			factor = 4
-			has_deposit = d_living_metal_deposit
+			# has_deposit = d_living_metal_deposit
 		}
 	}
 }

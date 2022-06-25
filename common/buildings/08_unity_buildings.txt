@@ -392,7 +392,7 @@ building_bureaucratic_2 = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			owner = { is_regular_empire = no }
 			owner = { is_spiritualist = yes }
 		}
@@ -490,7 +490,7 @@ building_bureaucratic_3 = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			owner = { is_regular_empire = no }
 			owner = { is_spiritualist = yes }
 		}
@@ -700,7 +700,7 @@ building_holotemple = {
 				is_spiritualist = no
 			}
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -801,7 +801,7 @@ building_sacred_nexus = {
 				is_spiritualist = no
 			}
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -987,7 +987,7 @@ building_network_junction = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_machine_empire = no
@@ -1068,7 +1068,7 @@ building_system_conflux = {
 	destroy_trigger = {
 		exists = owner
 		OR = {
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_machine_empire = no
@@ -2824,7 +2824,7 @@ building_autocurating_vault = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_machine_empire = yes
@@ -2899,7 +2899,7 @@ building_citadel_of_faith = {
 		OR = {
 			owner = { is_spiritualist = no }
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 
@@ -2964,7 +2964,7 @@ building_corporate_vault = {
 		exists = owner
 		OR = {
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 			owner = {
 				OR = {
 					is_megacorp = no
@@ -3033,7 +3033,7 @@ building_alpha_hub = {
 		exists = owner
 		OR = {
 			owner = { is_machine_empire = no }
-			buildings_no_crystals = yes
+			# buildings_no_crystals = yes
 		}
 	}
 

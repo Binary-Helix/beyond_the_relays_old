@@ -278,75 +278,75 @@ building_nuumismatic_shrine = {
 	}
 }
 
-building_crystal_plant_2 = {
-	base_buildtime = 800
-	can_build = no
+# building_crystal_plant_2 = {
+# 	base_buildtime = 800
+# 	can_build = no
 
-	category = manufacturing
+# 	category = manufacturing
 
-	potential = {
-		owner = { has_country_flag = lithoid_crystal_plant }
-		NOR = {
-			has_modifier = resort_colony
-			has_modifier = slave_colony
-		}
-	}
+# 	potential = {
+# 		owner = { has_country_flag = lithoid_crystal_plant }
+# 		NOR = {
+# 			has_modifier = resort_colony
+# 			has_modifier = slave_colony
+# 		}
+# 	}
 
-	allow = {
-		has_upgraded_capital = yes
-	}
+# 	allow = {
+# 		has_upgraded_capital = yes
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_translucer_add = 3
-		}
-	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = { is_gestalt = no }
+# 		}
+# 		modifier = {
+# 			job_translucer_add = 3
+# 		}
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_translucer_drone_add = 3
-		}
-	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			exists = owner
+# 			owner = { is_gestalt = yes }
+# 		}
+# 		modifier = {
+# 			job_translucer_drone_add = 3
+# 		}
+# 	}
 
-	resources = {
-		category = planet_buildings
-		cost = {
-			minerals = 1000
-		}
-		upkeep = {
-			energy = 3
-		}
-	}
+# 	resources = {
+# 		category = planet_buildings
+# 		cost = {
+# 			minerals = 1000
+# 		}
+# 		upkeep = {
+# 			energy = 3
+# 		}
+# 	}
 
-	# prerequisites = {
-	# 	"tech_rare_crystals"
-	# }
+# 	# prerequisites = {
+# 	# 	"tech_rare_crystals"
+# 	# }
 
-	show_tech_unlock_if = {
-		owner = { has_country_flag = lithoid_crystal_plant }
-	}
+# 	show_tech_unlock_if = {
+# 		owner = { has_country_flag = lithoid_crystal_plant }
+# 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_translucer_effect_desc
-	}
+# 	triggered_desc = {
+# 		trigger = {
+# 			exists = owner
+# 			owner = { is_gestalt = no }
+# 		}
+# 		text = job_translucer_effect_desc
+# 	}
 
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_translucer_drone_effect_desc
-	}
-}
+# 	triggered_desc = {
+# 		trigger = {
+# 			exists = owner
+# 			owner = { is_gestalt = yes }
+# 		}
+# 		text = job_translucer_drone_effect_desc
+# 	}
+# }
