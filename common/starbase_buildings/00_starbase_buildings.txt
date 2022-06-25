@@ -600,13 +600,13 @@ black_hole_observatory = {
 			}
 			physics_research = 15
 		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_technology = tech_mine_dark_matter }
-			}
-			sr_dark_matter = 1
-		}
+		# produces = {
+		# 	trigger = {
+		# 		exists = owner
+		# 		owner = { has_technology = tech_mine_dark_matter }
+		# 	}
+		# 	sr_dark_matter = 1
+		# }
 
 		upkeep = {
 			energy = 2
