@@ -47,8 +47,11 @@ sys_sandbox_nosikae_init = {
 					portrait = art3
 					#homeworld = THIS 
 					traits = { 
-					  trait="btr_forayans_collective_will"
-					  trait="btr_forayans_caste_system"
+						trait = btr_forayan_trait_core
+						trait = btr_forayan_trait_happiness
+						trait = btr_forayan_trait_insectoids
+						trait = btr_forayan_trait_gender_castes
+						trait = trait_forayan_habitability_preference
 					  # ideal_planet_class = "pc_dextro_arid"
 					}
 				  }
@@ -57,9 +60,9 @@ sys_sandbox_nosikae_init = {
 					name = "Sed'riicae Collective"
 					ship_prefix = ""
 					type = default
-					origin = "origin_sedriicae_collective"
+					origin = "btr_origin_sedcol"
 					ignore_initial_colony_error = yes
-					civics = { civic = "civic_btr_forayans_totalitarian_state" civic = "civic_btr_forayans_to_serve_the_people" }
+					civics = { civic = "btr_civic_sedcol_totalitarian_state" civic = "btr_civic_sedcol_status_intel" }
 					authority = auth_dictatorial
 					name_list = "ART3"
 					ethos = { ethic = "ethic_pacifist" ethic = "ethic_fanatic_authoritarian" }
