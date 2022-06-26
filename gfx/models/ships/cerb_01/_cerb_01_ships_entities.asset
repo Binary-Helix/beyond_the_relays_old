@@ -707,7 +707,9 @@ entity = {
 	name = "cerb_01_wormhole_station_construction_entity"
 	pdxmesh = "cerb_01_mass_relay_contruction_mesh"
 		default_state = "idle"
+		state = { name = "idle" animation = idle animation_speed = 0
 		event = { trigger_once = yes sound = { soundeffect = "place_construction" } }
+		}
 	scale = 1.0
 }
 entity = {
