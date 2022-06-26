@@ -1,0 +1,266 @@
+############################
+#
+# Decision Events
+#
+# Written by Annatar
+#
+############################
+
+namespace = planetarystations_decision_event
+
+# Nothing found
+planet_event = {
+	id = planetarystations_decision_event.1
+	title = "planetarystations_decision_event.1.name"
+	desc = "planetarystations_decision_event.1.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = UNFORTUNATE
+	}
+}
+
+# Found 1 mineral deposit
+planet_event = {
+	id = planetarystations_decision_event.2
+	title = "planetarystations_decision_event.2.name"
+	desc = "planetarystations_decision_event.2.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_mineral_lodes
+	}
+}
+
+# Found 2 mineral deposit
+planet_event = {
+	id = planetarystations_decision_event.3
+	title = "planetarystations_decision_event.3.name"
+	desc = "planetarystations_decision_event.3.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_mineral_lodes
+		add_deposit = d_mineral_lodes
+	}
+}
+
+# Found 3 mineral deposit
+planet_event = {
+	id = planetarystations_decision_event.4
+	title = "planetarystations_decision_event.4.name"
+	desc = "planetarystations_decision_event.4.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_mineral_lodes
+		add_deposit = d_mineral_lodes
+		add_deposit = d_mineral_lodes
+	}
+}
+
+# Found 1 regolith deposit
+planet_event = {
+	id = planetarystations_decision_event.5
+	title = "planetarystations_decision_event.5.name"
+	desc = "planetarystations_decision_event.5.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_rich_regolith_formations
+	}
+}
+
+# Found 2 regolith deposit
+planet_event = {
+	id = planetarystations_decision_event.6
+	title = "planetarystations_decision_event.6.name"
+	desc = "planetarystations_decision_event.6.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_rich_regolith_formations
+		add_deposit = d_rich_regolith_formations
+	}
+}
+
+# Found 3 regolith deposit
+planet_event = {
+	id = planetarystations_decision_event.7
+	title = "planetarystations_decision_event.7.name"
+	desc = "planetarystations_decision_event.7.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_rich_regolith_formations
+		add_deposit = d_rich_regolith_formations
+		add_deposit = d_rich_regolith_formations
+	}
+}
+
+# Found 1 trade value deposit
+planet_event = {
+	id = planetarystations_decision_event.8
+	title = "planetarystations_decision_event.8.name"
+	desc = "planetarystations_decision_event.8.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_gemstones
+	}
+}
+
+# Found 1 motes deposit
+planet_event = {
+	id = planetarystations_decision_event.9
+	title = "planetarystations_decision_event.9.name"
+	desc = "planetarystations_decision_event.9.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_dust_cavities
+	}
+}
+
+# Found 1 crystals deposit
+planet_event = {
+	id = planetarystations_decision_event.10
+	title = "planetarystations_decision_event.10.name"
+	desc = "planetarystations_decision_event.10.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_crystal_cavities
+	}
+}
+
+# Found 1 gas deposit
+planet_event = {
+	id = planetarystations_decision_event.11
+	title = "planetarystations_decision_event.11.name"
+	desc = "planetarystations_decision_event.11.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_exotic_gases_vent
+	}
+}
+
+# Found 1 zro deposit
+planet_event = {
+	id = planetarystations_decision_event.12
+	title = "planetarystations_decision_event.12.name"
+	desc = "planetarystations_decision_event.12.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_zro_source
+	}
+}
+
+# Found 1 dark matter deposit
+planet_event = {
+	id = planetarystations_decision_event.13
+	title = "planetarystations_decision_event.13.name"
+	desc = "planetarystations_decision_event.13.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_dark_matter_formation
+	}
+}
+
+# Found 1 living metal deposit
+planet_event = {
+	id = planetarystations_decision_event.14
+	title = "planetarystations_decision_event.14.name"
+	desc = "planetarystations_decision_event.14.desc"
+	picture = GFX_evt_crawler
+	location = ROOT
+	is_triggered_only = yes
+	show_sound = event_scanner
+	
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		add_deposit = d_living_metal_source
+	}
+}

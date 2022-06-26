@@ -1,0 +1,20 @@
+############################
+#
+# Game Start Events
+#
+# Written by Annatar
+#
+############################
+
+namespace = planetarystations
+
+### Sets global flag “has_planetary_stations_mod”
+event = {
+	id = planetarystations.1
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		set_global_flag = "has_planetary_stations_mod"
+	}
+}
