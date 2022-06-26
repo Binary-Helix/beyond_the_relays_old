@@ -6,7 +6,7 @@
 
 sys_widow_init = {
     name = "Widow"
-    class = "sc_b_super"
+    class = sc_b_super
 	max_instances = 1
 	flags = { outer_council_system serpent_nebula_system widow_system btr_system custom_system empire_home_system }
 	init_effect = { 
@@ -54,7 +54,7 @@ sys_widow_init = {
 					origin = origin_citadel_council
 					civics = { civic = "civic_diplomatic_corps" civic = "civic_idealistic_foundation" }
 					authority = auth_oligarchic
-					name_list = mec_asari_names
+					name_list = btr_asari
 					ethos = { ethic = "ethic_egalitarian" ethic = "ethic_xenophile" ethic = "ethic_pacifist" }
 					species = event_target:asariSpecies
 					flag = {
