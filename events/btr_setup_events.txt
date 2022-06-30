@@ -3845,7 +3845,7 @@ event = {
 		every_galaxy_species = {
 			switch = {
 				trigger = is_species_class
-				MECASA = {
+				ASA = {
 					set_homeworld = {
 						planet_flag = "thessia_planet"
 						planet_type = "normal"
@@ -3973,7 +3973,7 @@ country_event = {
 			every_owned_pop_species = {
 				limit = {
 					NOR = { 
-						is_species_class = MECASA 
+						is_species_class = ASA 
 					}
 				}
 				set_citizenship_type = { country = root type = citizenship_full cooldown = no }
@@ -3988,7 +3988,7 @@ country_event = {
 			every_owned_pop_species = {
 				limit = {
 					NOR = { 
-						is_species_class = MECASA 
+						is_species_class = ASA 
 					}
 				}
 				set_citizenship_type = { country = root type = citizenship_full cooldown = no }
@@ -4078,7 +4078,7 @@ country_event = {
 			every_owned_pop_species = {
 				limit = {
 					NOR = { 
-						is_species_class = MECASA 
+						is_species_class = ASA 
 					}
 				}
 				set_citizenship_type = { country = root type = citizenship_full cooldown = no }

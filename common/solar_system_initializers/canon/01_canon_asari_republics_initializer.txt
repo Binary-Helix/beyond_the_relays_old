@@ -75,14 +75,14 @@ sys_parnitha_init = {
 				limit = { NOT = { any_country = { has_country_flag = asari_republics } } }
 				create_species = { 
 					name = "Asari"
-					class = MECASA
+					class = ASA
 					portrait = mec_asari
 					#homeworld = THIS 
 					traits = { 
-				  		trait = mec_asari_trait_core
-				  		trait = mec_asari_trait_biotic
+				  		trait = btr_asari_trait_core
+				  		trait = btr_asari_trait_biotic
 				  		trait = btr_asari_trait_smooth_talk
-				  		trait = mec_asari_trait_sophisticated
+				  		trait = btr_asari_trait_sophisticated
 					  	trait = trait_asari_habitability_preference
 						trait = trait_psionic
 						  #ideal_planet_class = "pc_continental"
@@ -91,7 +91,7 @@ sys_parnitha_init = {
 				last_created_species = { save_global_event_target_as = asariSpecies }
 				create_country = {
 					name = "Asari Republics"
-					ship_prefix = "PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"
+					ship_prefix = "PRESCRIPTED_ship_prefix_asari_republics"
 					type = default
 					origin = btr_origin_asrep
 					ignore_initial_colony_error = yes

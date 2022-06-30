@@ -3,20 +3,20 @@
 #######################
 
 # Asari Republics
-mec_asarirepublics_civ={
+asari_republics={
     name="NAME_asari_republics"
     name_list= "btr_asari"
-	portrait="mec_asari"
-    adjective="PRESCRIPTED_adjective_mec_asarirepublics_civ"
-    ship_prefix="PRESCRIPTED_ship_prefix_mec_asarirepublics_civ"
-    species_name = "PRESCRIPTED_species_name_mec_asarirepublics_civ"
-    species_plural = "PRESCRIPTED_species_plural_mec_asarirepublics_civ"	
-	species_class = "MECASA"
-    species_adjective = "PRESCRIPTED_species_adjective_mec_asarirepublics_civ"
-    species_bio="PRESCRIPTED_species_bio_mec_asarirepublics_civ"	
+	portrait="btr_asari"
+    adjective="PRESCRIPTED_adjective_asari_republics"
+    ship_prefix="PRESCRIPTED_ship_prefix_asari_republics"
+    species_name = "PRESCRIPTED_species_name_asari_republics"
+    species_plural = "PRESCRIPTED_species_plural_asari_republics"	
+	species_class = "ASA"
+    species_adjective = "PRESCRIPTED_species_adjective_asari_republics"
+    species_bio="PRESCRIPTED_species_bio_asari_republics"	
 
 	authority = "auth_democratic"
-	government = "gov_mec_asr"
+	government = "gov_asari_government"
 	civics = { btr_civic_asrep_democracy btr_civic_asrep_thes_dip_corp }
 
 	flags={ custom_start_screen asari_republics btr_empire canon_map hybrid_map sandbox_map council_race }
@@ -24,10 +24,10 @@ mec_asarirepublics_civ={
 	ethic = "ethic_fanatic_xenophile"
 	ethic = "ethic_egalitarian"
 
-	trait = mec_asari_trait_core
-	trait = mec_asari_trait_biotic
+	trait = btr_asari_trait_core
+	trait = btr_asari_trait_biotic
 	trait = btr_asari_trait_smooth_talk
-	trait = mec_asari_trait_sophisticated
+	trait = btr_asari_trait_sophisticated
 	trait = trait_asari_habitability_preference
 
 	origin= btr_origin_asrep	
@@ -58,7 +58,7 @@ mec_asarirepublics_civ={
 	}
 	ruler={
 		gender=female
-		name="PRESCRIPTED_ruler_name_mec_asarirepublics_civ"
+		name="PRESCRIPTED_ruler_name_asari_republics"
 		portrait = "mec_asari_3"
 		texture = 7
 		hair = 0
@@ -229,7 +229,7 @@ courts_of_dekuuna={
 
 	authority="auth_oligarchic"
 	government="gov_irenic_bureaucracy"
-	civics={ "btr_civic_elcor_elders_of_dekuna" "btr_civic_elcor_history_of_stability" }
+	civics={ "btr_civic_elcor_elders_of_dekuuna" "btr_civic_elcor_history_of_stability" }
 
 	flags={ custom_start_screen courts_of_dekuuna btr_empire canon_map hybrid_map sandbox_map }
 
@@ -1069,7 +1069,7 @@ omega={
     ship_prefix="PRESCRIPTED_ship_prefix_omega"
     species_name = "PRESCRIPTED_species_name_omega"
     species_plural = "PRESCRIPTED_species_plural_omega"	
-	species_class = "MECASA"
+	species_class = "ASA"
     species_adjective = "PRESCRIPTED_species_adjective_omega"
     #Species_bio="PRESCRIPTED_species_bio_omega"	
 
@@ -1082,10 +1082,10 @@ omega={
 	ethic="ethic_authoritarian"
 	ethic="ethic_fanatic_materialist"
 
-	trait = "mec_asari_trait_core"
-	trait = "mec_asari_trait_biotic"
+	trait = "btr_asari_trait_core"
+	trait = "btr_asari_trait_biotic"
 	trait = "trait_charismatic"
-	trait = "mec_asari_trait_sophisticated"
+	trait = "btr_asari_trait_sophisticated"
 	trait = "trait_asari_habitability_preference"
 	
 	origin="origin_omega"	
@@ -1140,7 +1140,7 @@ omega_b={
     ship_prefix="PRESCRIPTED_ship_prefix_omega"
     species_name = "PRESCRIPTED_species_name_omega"
     species_plural = "PRESCRIPTED_species_plural_omega"	
-	species_class = "MECASA"
+	species_class = "ASA"
     species_adjective = "PRESCRIPTED_species_adjective_omega"
     #species_bio="PRESCRIPTED_species_bio_omega"	
 
@@ -1153,10 +1153,10 @@ omega_b={
 	ethic="ethic_authoritarian"
 	ethic="ethic_fanatic_materialist"
 
-	trait = "mec_asari_trait_core"
-	trait = "mec_asari_trait_biotic"
+	trait = "btr_asari_trait_core"
+	trait = "btr_asari_trait_biotic"
 	trait = "trait_charismatic"
-	trait = "mec_asari_trait_sophisticated"
+	trait = "btr_asari_trait_sophisticated"
 	trait = "trait_asari_habitability_preference"
 	
 	origin="origin_omega"	
@@ -1634,7 +1634,7 @@ mec_asariillium_civ={
     ship_prefix="PRESCRIPTED_ship_prefix_mec_asariillium_civ"
     species_name = "PRESCRIPTED_species_name_mec_asariillium_civ"
     species_plural = "PRESCRIPTED_species_plural_mec_asariillium_civ"	
-	species_class = "MECASA"
+	species_class = "ASA"
     species_adjective = "PRESCRIPTED_species_adjective_mec_asariillium_civ"
     species_bio="PRESCRIPTED_species_bio_mec_asariillium_civ"	
 
@@ -1648,10 +1648,10 @@ mec_asariillium_civ={
 	ethic = "ethic_xenophile"
 	ethic = "ethic_materialist"
 
-	trait = "mec_asari_trait_core"
-	trait = "mec_asari_trait_biotic"
+	trait = "btr_asari_trait_core"
+	trait = "btr_asari_trait_biotic"
 	trait = "trait_charismatic"
-	trait = "mec_asari_trait_sophisticated"
+	trait = "btr_asari_trait_sophisticated"
 	trait = "trait_asari_habitability_preference"
 	
 	origin="mec_asari_origin_illium"	
@@ -1728,17 +1728,17 @@ collectors={
 	trait = "trait_collector_habitability_preference"
 	
 secondary_species = { 
-        class = "MECASA"
+        class = "ASA"
         portrait = "mec_asari"
-        name = "PRESCRIPTED_species_mec_asarirepublics_civ"
-        plural = "PRESCRIPTED_species_plural_mec_asarirepublics_civ"
-        adjective = "PRESCRIPTED_adjective_mec_asarirepublics_civ"
+        name = "PRESCRIPTED_species_asari_republics"
+        plural = "PRESCRIPTED_species_plural_asari_republics"
+        adjective = "PRESCRIPTED_adjective_asari_republics"
         name_list = "btr_asari"
         trait="trait_cybernetic"
-		trait = "mec_asari_trait_core"
-		trait = "mec_asari_trait_biotic"
+		trait = "btr_asari_trait_core"
+		trait = "btr_asari_trait_biotic"
 		trait = "trait_charismatic"
-		trait = "mec_asari_trait_sophisticated"
+		trait = "btr_asari_trait_sophisticated"
 		trait = "trait_asari_habitability_preference"
     }
 

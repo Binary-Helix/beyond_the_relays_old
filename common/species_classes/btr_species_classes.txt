@@ -15,18 +15,18 @@
 
 ### MAIN ###
 
-MECASA = {
+ASA = {
 	archetype = BIOLOGICAL
 	
 	possible = { authority = { NOT = { value = auth_machine_intelligence text = SPECIES_CLASS_MUST_NOT_USE_MACHINE_INTELLIGENCE } } }
 	
 	portraits = {
-		"mec_asari"
+		"btr_asari"
 	}
 	
 	# These should not be used for randomly generated species
 	non_randomized_portraits = {
-		"mec_asari"
+		"btr_asari"
 	}
 	
 	graphical_culture = mec_asari_01
@@ -34,7 +34,7 @@ MECASA = {
 	
 	resources = {}
 	
-	trait = "mec_asari_trait_core"
+	trait = "btr_asari_trait_core"
 	gender = no
 }
 

@@ -18,8 +18,8 @@ country_event = {
 	trigger = {
 		from = {
 			OR = {
-				species = { is_species_class = MECASA }
-				species = { has_trait = mec_asari_trait_core }
+				species = { is_species_class = ASA }
+				species = { has_trait = btr_asari_trait_core }
 			}
 			gender = male
 		}
@@ -43,7 +43,7 @@ country_event = {
 	trigger = {
 		from = {
 			has_trait = leader_trait_resilient
-			species = { has_trait = mec_asari_trait_core }
+			species = { has_trait = btr_asari_trait_core }
 		}
 	}
 
@@ -89,13 +89,13 @@ country_event = {
 				if = { # surveying scientist
 					limit = {
 						any_owned_leader = {
-							species = { has_trait = mec_asari_trait_core }
+							species = { has_trait = btr_asari_trait_core }
 							has_trait = leader_trait_substance_abuser
 						}
 					}
 					random_owned_leader = {
 						limit = {
-							species = { has_trait = mec_asari_trait_core }
+							species = { has_trait = btr_asari_trait_core }
 							has_trait = leader_trait_substance_abuser
 						}
 						save_event_target_as = deceased_leader

@@ -8,7 +8,7 @@ country_event = {
 			AND = {
 				NOT = {
 					from = {
-						species = { has_trait = mec_asari_trait_core }
+						species = { has_trait = btr_asari_trait_core }
 					}
 				}
 				has_global_flag = btr_asari_rep_university_open_doors
@@ -19,7 +19,7 @@ country_event = {
 		from = {
 			if = {
 				limit = { leader_class = scientist }
-				add_trait = btr_leader_trait_thessian_grad
+				add_trait = btr_leader_trait_asari_thessian_grad
 				add_skill = 1
 			}
 		}
@@ -38,9 +38,9 @@ country_event = {
 
 	immediate = {
 		if = {
-			limit = { from = { species = { has_trait = mec_asari_trait_core } } }
+			limit = { from = { species = { has_trait = btr_asari_trait_core } } }
 			from = {
-				add_trait = btr_leader_trait_asari
+				add_trait = btr_leader_trait_asari_long_view
 				add_skill = 2
 			}
 		}
@@ -55,7 +55,7 @@ country_event = {
 				} 
 			}
 			from = {
-				add_trait = btr_leader_trait_extensive_training
+				add_trait = btr_leader_trait_turian_extensive_training
 			}
 		}
 		else_if = {
@@ -65,7 +65,7 @@ country_event = {
 				} 
 			}
 			from = {
-				add_trait = btr_leader_trait_internal_consensus
+				add_trait = btr_leader_trait_geth_internal_consensus
 			}
 		}
 		else_if = {
@@ -75,7 +75,7 @@ country_event = {
 				}
 			}
 			from = {
-				add_trait = btr_leader_trait_twice_bright
+				add_trait = btr_leader_trait_human_twice_bright
 			} 
 		}
 		else_if = {
@@ -85,7 +85,7 @@ country_event = {
 				}
 			}
 			from = {
-				add_trait = btr_leader_trait_hype_perecpt
+				add_trait = btr_leader_trait_yahg_hype_perecpt
 			} 
 		}
 
@@ -100,7 +100,7 @@ country_event = {
 
 	trigger = {
 			from = {
-				species = { has_trait = mec_asari_trait_core }
+				species = { has_trait = btr_asari_trait_core }
 			}
 	}
 
@@ -108,7 +108,7 @@ country_event = {
 		from = {
 			if = {
 				limit = { leader_class = general }
-				add_trait = btr_leader_trait_commando
+				add_trait = btr_leader_trait_asari_commando
 			}
 		}
 	}

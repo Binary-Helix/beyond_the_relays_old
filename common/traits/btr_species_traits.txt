@@ -4,7 +4,9 @@
 # potential_crossbreeding_chance = 0.0
 # initial = no
 # randomized = no
-# modification = no
+#     species_potential_add = {
+#       always = no
+#   }
 # forced_happiness = no
 # immortal_leaders = no
 # leader_age_min = 
@@ -29,7 +31,7 @@
 # ASARI  TRAITS #
 #################
 
-mec_asari_trait_core = {
+btr_asari_trait_core = {
 	cost = 0
 	potential_crossbreeding_chance = 0.0
 	opposites = { "trait_enduring" "trait_venerable" "trait_fleeting" "trait_slow_breeders" "trait_rapid_breeders" }
@@ -38,7 +40,9 @@ mec_asari_trait_core = {
 
 	initial = no
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	forced_happiness = no
 	immortal_leaders = no
 	
@@ -54,9 +58,9 @@ mec_asari_trait_core = {
 	#	
 	#}
 
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_core.dds"
+	icon = "gfx/interface/icons/traits/btr_asari_trait_core.dds"
 
-	custom_tooltip = mec_asari_trait_CORE_EFFECT
+	custom_tooltip = btr_asari_trait_core_EFFECT
 	modifier = {
 		leader_age = 900
 		leaders_cost_mult = 1.00
@@ -65,13 +69,15 @@ mec_asari_trait_core = {
 	}
 }
 
-mec_asari_trait_biotic = {
+btr_asari_trait_biotic = {
 	cost = 2
 	potential_crossbreeding_chance = 0.75
 	allowed_archetypes = { BIOLOGICAL }
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_biotic.dds"
+	icon = "gfx/interface/icons/traits/btr_asari_trait_biotic.dds"
 	
 	modifier = {
 		planet_jobs_energy_produces_mult = 0.05
@@ -83,7 +89,9 @@ btr_asari_trait_smooth_talk = {
 	cost = 0
 	potential_crossbreeding_chance = 0.75
 	allowed_archetypes = { BIOLOGICAL }
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 	
 	# Embassy effect in diplomaticy_economy
@@ -91,16 +99,21 @@ btr_asari_trait_smooth_talk = {
 		planet_amenities_mult = 0.1
 	}
 	custom_tooltip_with_modifiers = btr_asari_trait_smooth_talk_EMBASSY
+
+	icon = "gfx/interface/icons/traits/btr_asari_trait_smooth_talker.dds"
+
 }
 
-mec_asari_trait_sophisticated = {
+btr_asari_trait_sophisticated = {
 	cost = -2
 	potential_crossbreeding_chance = 0.75
 	opposites = { trait_hive_mind }
 	allowed_archetypes = { BIOLOGICAL }
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_sophisticated.dds"
+	icon = "gfx/interface/icons/traits/btr_asari_trait_sophisticated.dds"
 	
 	modifier = {
 		pop_amenities_usage_mult = 0.1
@@ -126,7 +139,9 @@ btr_salarian_genius = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
@@ -140,6 +155,8 @@ btr_salarian_genius = {
 	slave_cost = {
 		energy = 100
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_salarian_shortlived = {
@@ -155,7 +172,9 @@ btr_salarian_shortlived = {
 
 	initial = yes
 	randomized = no
-	modification = no 
+	    species_potential_add = {
+        always = no
+    } 
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -163,6 +182,8 @@ btr_salarian_shortlived = {
 		species_leader_exp_gain = 0.10
 
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 
@@ -177,7 +198,9 @@ btr_turian_trait_core = {
 	sorting_priority = 20
 	
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	forced_happiness = no
 	immortal_leaders = no
 	
@@ -204,7 +227,9 @@ btr_turian_trait_team_player = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -216,7 +241,7 @@ btr_turian_trait_team_player = {
 		country_energy_produces_mult = -0.10
 	}
 
-	icon = "gfx/interface/icons/traits/Natural_Team_Player.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_turian_natural_team_player.dds"
 }
 
 btr_turian_trait_op_discipline = {
@@ -224,7 +249,9 @@ btr_turian_trait_op_discipline = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -233,7 +260,7 @@ btr_turian_trait_op_discipline = {
 		ship_speed_mult = -0.05
 	}
 
-	icon = "gfx/interface/icons/traits/Operation_Discipline.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_turian_operation_discipline.dds"
 }
 
 
@@ -242,14 +269,16 @@ btr_turian_trait_martial_nat = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
 		army_morale = 0.35
 	}
 
-	icon = "gfx/interface/icons/traits/Martial_Nature.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_turian_martial_nature.dds"
 }
 
 
@@ -265,7 +294,9 @@ btr_elcor_trait_homebound = {
 
 	initial = yes
 	randomized = no	
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -274,6 +305,8 @@ btr_elcor_trait_homebound = {
         pop_habitability = -0.5
 		pop_growth_from_immigration = -0.15
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_elcor_trait_core_high_gravity_adapted = {
@@ -287,7 +320,9 @@ btr_elcor_trait_core_high_gravity_adapted = {
 	leader_age_max = 800
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -298,6 +333,8 @@ btr_elcor_trait_core_high_gravity_adapted = {
 		army_damage_mult = 0.15
 		leader_age = 600
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_elcor_trait_gesture_based_speech = {
@@ -307,7 +344,9 @@ btr_elcor_trait_gesture_based_speech = {
 	}
 	initial = yes
 	randomized = no	
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -317,6 +356,8 @@ btr_elcor_trait_gesture_based_speech = {
 		diplo_weight_mult = -0.5
 		planet_stability_add = 10
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_elcor_trait_ecologists = {
@@ -326,7 +367,9 @@ btr_elcor_trait_ecologists = {
 	}
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -337,6 +380,8 @@ btr_elcor_trait_ecologists = {
 		planet_clear_blocker_time_mult = -0.50
 		planet_jobs_minerals_produces_mult = -0.10
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ################
@@ -352,7 +397,9 @@ btr_hanar_spiritual = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -363,6 +410,8 @@ btr_hanar_spiritual = {
 	slave_cost = {
 		energy = 50
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_hanar_bureaucratic = {
@@ -374,13 +423,17 @@ btr_hanar_bureaucratic = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
 		species_empire_size_mult = 	-0.1
 		diplo_weight_mult = 0.2
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 #################
@@ -390,11 +443,13 @@ btr_human_core = {
 	cost = 0 
 	potential_crossbreeding_chance = 0
 
-	icon = "gfx/interface/icons/traits/trait_human_core.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_human_core.dds"
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	sorting_priority = 20
@@ -414,11 +469,13 @@ btr_human_biodiversity = {
 	cost = 0
 	potential_crossbreeding_chance = 0
 
-	icon = "gfx/interface/icons/traits/trait_biodiversity.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_human_biodiversity.dds"
 
 	initial = yes 
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -432,11 +489,13 @@ btr_human_frontier_spirit = {
 	cost = 0
 	potential_crossbreeding_chance = 0
 
-	icon = "gfx/interface/icons/traits/trait_spirit.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_human_frontier_spirit.dds"
 
 	initial = yes 
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -449,11 +508,13 @@ btr_human_rugged_ind = {
 	cost = 0
 	potential_crossbreeding_chance = 0
 
-	icon = "gfx/interface/icons/traits/trait_individualist.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_human_rugged_individualist.dds"
 
 	initial = yes 
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -473,7 +534,9 @@ btr_volus_trait_core = {
 
 	initial = yes 
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
@@ -488,6 +551,8 @@ btr_volus_trait_core = {
 	slave_cost = {
 		energy = 40
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_volus_tradesmen = {
@@ -499,7 +564,9 @@ btr_volus_tradesmen = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 	
 	modifier = {
@@ -509,6 +576,8 @@ btr_volus_tradesmen = {
 	slave_cost = {
 		energy = 20
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ###################
@@ -523,12 +592,16 @@ btr_batarian_shrewd_business = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
 		trade_value_mult = 0.15
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_batarian_superiority = {
@@ -539,7 +612,9 @@ btr_batarian_superiority = {
 	
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -547,6 +622,8 @@ btr_batarian_superiority = {
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.15
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ###############
@@ -556,16 +633,18 @@ btr_geth_trait_core = {
 	cost = 0
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { MACHINE }
 
-	icon = "gfx/interface/icons/traits/trait_geth_core.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_geth_core.dds"
 }
 
 btr_geth_trait_linked_consci = {
 	cost = 0
 
-	icon = "gfx/interface/icons/traits/trait_linked_consciousness.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_geth_linked_consciousness.dds"
 
 	opposites = {
 		"trait_robot_learning_algorithms"
@@ -575,7 +654,9 @@ btr_geth_trait_linked_consci = {
 	allowed_archetypes = { MACHINE }
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	modifier = {
 		pop_resettlement_cost_mult = 0.5
@@ -586,13 +667,15 @@ btr_geth_trait_linked_consci = {
 btr_geth_trait_purpose_built_models = {
 	cost = 0
 	
-	icon = "gfx/interface/icons/traits/trait_purpose_built.dds"
+	icon = "gfx/interface/icons/traits/btr_geth_trait_purpose_built.dds"
 
 	
 	allowed_archetypes = { MACHINE }
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	modifier = {
 		planet_jobs_produces_mult = 0.05
@@ -605,12 +688,14 @@ btr_geth_trait_purpose_built_models = {
 btr_geth_trait_deontological_primacy = {
 	cost = 0
 
-	icon = "gfx/interface/icons/traits/trait_deontological_primacy.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_geth_deontological_primacy.dds"
 	
 	allowed_archetypes = { MACHINE }
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	modifier = {
 		army_collateral_damage_mult = 1
@@ -619,9 +704,9 @@ btr_geth_trait_deontological_primacy = {
 	}
 }
 
-#################################
-# GOTHONES AKA GONORRHEA TRAITS #
-#################################
+############
+# GOTHONES #
+############
 
 btr_gothones_physical_enhancements = {
 	cost = 0
@@ -629,7 +714,9 @@ btr_gothones_physical_enhancements = {
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 
 	modifier = {
@@ -639,6 +726,8 @@ btr_gothones_physical_enhancements = {
 		pop_housing_usage_mult = 0.1
 		pop_government_ethic_attraction = -0.1
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_gothones_genetic_engineering = {
@@ -647,13 +736,17 @@ btr_gothones_genetic_engineering = {
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.25
 		pc_nuked_habitability = 0.8
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 #################
@@ -667,7 +760,9 @@ btr_krogan_trait_core = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	leader_age_min = 300
 	leader_age_max = 2000
@@ -685,6 +780,8 @@ btr_krogan_trait_core = {
 		army_health = 1.0
 		pc_nuked_habitability = 0.8
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_krogan_genophage = {
@@ -694,14 +791,19 @@ btr_krogan_genophage = {
 
 	initial = yes 
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 	
 	advanced_trait = yes	
 	custom_tooltip = btr_genophage_trait
 	prerequisites = {  }
 	modifier = {
-		pop_growth_speed = -0.75	}
+		pop_growth_speed = -0.75	
+	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ####################
@@ -714,13 +816,15 @@ btr_lystheni_biotic_inclination = {
 	#opposites = { }
 	allowed_archetypes = { BIOLOGICAL }
 	initial = yes
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_biotic.dds"
+	icon = "gfx/interface/icons/traits/btr_asari_trait_biotic.dds"
 	
 	modifier = {
 	}
-	custom_tooltip = mec_asari_trait_BIOTIC_EFFECT
+	custom_tooltip = btr_asari_trait_biotic_EFFECT
 	
 	slave_cost = {
 		energy = 500
@@ -735,13 +839,17 @@ btr_lystheni_united_vision = {
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 	initial = yes
 
 	modifier = {
 		planet_jobs_unity_produces_mult = 0.2
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ##################
@@ -758,7 +866,9 @@ btr_quarian_weak_immune_system = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -770,6 +880,7 @@ btr_quarian_weak_immune_system = {
 		energy = 30
 	}
 
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_quarian_adept_engineers = {
@@ -780,13 +891,17 @@ btr_quarian_adept_engineers = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
 		country_engineering_research_produces_mult = 0.15
 		ships_upkeep_mult = -0.33
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ####################
@@ -800,7 +915,9 @@ btr_forayan_trait_core = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	sorting_priority = 20
@@ -814,6 +931,8 @@ btr_forayan_trait_core = {
 	modifier = {
 		leader_age = 40
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_forayan_trait_happiness = {
@@ -821,16 +940,20 @@ btr_forayan_trait_happiness = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
 		planet_administrators_unity_produces_add = 1
-		planet_jobs_unity_produces_mult = .5
+		planet_jobs_unity_produces_mult = 0.5
 		empire_size_pops_mult = -0.1
 		pop_resettlement_cost_mult = -0.75
 		planet_researchers_produces_mult = -0.1
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_forayan_trait_insectoids = {
@@ -838,13 +961,17 @@ btr_forayan_trait_insectoids = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
 		pop_growth_speed = 0.3
 		pop_housing_usage_mult = -0.2
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_forayan_trait_gender_castes = {
@@ -852,7 +979,9 @@ btr_forayan_trait_gender_castes = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
@@ -860,6 +989,8 @@ btr_forayan_trait_gender_castes = {
 		pop_amenities_usage_mult = -0.2
 		trade_value_mult = -0.1
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ################
@@ -868,7 +999,7 @@ btr_forayan_trait_gender_castes = {
 
 btr_yahg_trait_core = {
 	cost = 0
-	icon = "gfx/interface/icons/traits/trait_yahg_core.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_yahg_core.dds"
 
 	#Opposites TBD
 	opposites = {
@@ -879,7 +1010,9 @@ btr_yahg_trait_core = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	immortal_leaders = no
 	
@@ -897,7 +1030,7 @@ btr_yahg_trait_core = {
 
 btr_yahg_trait_apex_pred = {
 	cost = 0
-	icon = "gfx/interface/icons/traits/trait_yahg_apex.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_yahg_apex.dds"
 
 	#Opposites TBD
 	opposites = {
@@ -909,7 +1042,9 @@ btr_yahg_trait_apex_pred = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -926,7 +1061,7 @@ btr_yahg_trait_apex_pred = {
 
 btr_yahg_trait_truthsay = {
 	cost = 0
-	icon = "gfx/interface/icons/traits/trait_yahg_truth.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_yahg_truth.dds"
 
 	#Opposites TBD
 	opposites = {
@@ -938,7 +1073,9 @@ btr_yahg_trait_truthsay = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -951,7 +1088,7 @@ btr_yahg_trait_truthsay = {
 
 btr_yahg_trait_cont_obsess = {
 	cost = 0
-	icon = "gfx/interface/icons/traits/trait_yahg_control.dds"
+	icon = "gfx/interface/icons/traits/btr_trait_yahg_control.dds"
 
 	#Opposites TBD
 	opposites = {
@@ -963,7 +1100,9 @@ btr_yahg_trait_cont_obsess = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -991,7 +1130,9 @@ btr_rachni_melodic = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -1000,6 +1141,8 @@ btr_rachni_melodic = {
 		planet_jobs_unity_produces_mult = 0.15
 		species_leader_exp_gain = 0.15
 	}
+	
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_rachni_harsh_enviroment_adaptability = {
@@ -1012,7 +1155,9 @@ btr_rachni_harsh_enviroment_adaptability = {
 
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -1024,19 +1169,21 @@ btr_rachni_harsh_enviroment_adaptability = {
 		pc_barren_habitability = 0.6
 		pc_volcanic_habitability = 0.6
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 #################
 # RALOI  TRAITS #
 #################
 
-btr_raloi_1 = {
+# btr_raloi_1 = {
 
-}
+# }
 
-btr_raloi_2 = {
+# btr_raloi_2 = {
 
-}
+# }
 
 #################
 # DRELL  TRAITS #
@@ -1045,7 +1192,9 @@ btr_raloi_2 = {
 btr_drell_eidetic_memory = {
 	cost = 0
 	initial = yes
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1054,12 +1203,16 @@ btr_drell_eidetic_memory = {
 	modifier = {
 		species_leader_exp_gain = 0.25
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_drell_kepral_syndrome = {
 	cost = 0
 	initial = yes
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 	allowed_archetypes = {
 		BIOLOGICAL
@@ -1068,6 +1221,8 @@ btr_drell_kepral_syndrome = {
 	modifier = {
 		#WIP	
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 #################
@@ -1089,7 +1244,9 @@ btr_vorcha_biology = {
 	leader_age_max = 20
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -1098,6 +1255,7 @@ btr_vorcha_biology = {
 		pop_growth_speed = 0.25
 	}
 
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_vorcha_warring_language = {
@@ -1114,7 +1272,9 @@ btr_vorcha_warring_language = {
 	}
 	initial = yes
 	randomized = no
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	allowed_archetypes = {
 		BIOLOGICAL
 	}
@@ -1123,6 +1283,8 @@ btr_vorcha_warring_language = {
 		planet_jobs_worker_produces_mult = 0.035
 		# Not final at all
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 
@@ -1130,13 +1292,13 @@ btr_vorcha_warring_language = {
 # COLLECTOR  TRAITS #
 #####################
 
-btr_collector_1 = {
+# btr_collector_1 = {
 
-}
+# }
 
-btr_collector_2 = {
+# btr_collector_2 = {
 	
-}
+# }
 
 #######################
 # REAPER (WIP) TRAITS #
@@ -1150,12 +1312,16 @@ btr_reapers_1 = {
 		MACHINE BIOLOGICAL
 	}
 
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 
 	modifier = {
 
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 btr_reapers_2 = {
@@ -1165,10 +1331,14 @@ btr_reapers_2 = {
 		MACHINE BIOLOGICAL
 	}
 
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	randomized = no
 
 	modifier = {
 		
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }

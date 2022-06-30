@@ -21,6 +21,40 @@
 #}
 
 # Government for Salarians this is a temp one before we make final decisions
+gov_asari_government = {
+	ruler_title = MEC_RT_ASR_M
+	ruler_title_female = MEC_RT_ASR_F
+
+	leader_class = governor # Initial ruler will become this if elected out of office
+
+	election_candidates = {
+		modifier = {
+			add = 100
+			leader_class = ruler
+		}
+		modifier = {
+			add = 10
+			OR = {
+				leader_class = governor
+				leader_class = scientist
+			}
+		}
+		modifier = {
+			factor = 5
+			gender = female
+		}
+	}
+
+	possible = {
+		has_authority = auth_democratic
+		has_civic = btr_civic_asrep_democracy
+	}
+
+	weight = {
+		base = 9999
+	}
+}
+
 gov_salarian_government = {
 	ruler_title  = RT_DALATRASS 
 	
@@ -72,3 +106,5 @@ gov_cerberus_government = {
 		base = 10000
 	}
 }
+
+

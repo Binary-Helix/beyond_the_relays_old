@@ -1,9 +1,11 @@
 ### ASARI REPUBLICS
 # Non-asari Thessian graduate
-btr_leader_trait_thessian_grad = {
+btr_leader_trait_asari_thessian_grad = {
 	cost = 3
-	modification = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_civic_thessia.dds"
+	    species_potential_add = {
+        always = no
+    }
+	icon = "gfx/interface/icons/traits/leader_traits/btr_trait_asari_thessian_grad.dds"
 	modifier = {
 		species_leader_exp_gain = 0.05
 	}
@@ -18,10 +20,12 @@ btr_leader_trait_thessian_grad = {
 }
 
 # Asari sticky leader trait
-btr_leader_trait_asari = {
+btr_leader_trait_asari_long_view = {
 	cost = 3
-	modification = no
-	icon = "gfx/interface/icons/mec_asari/mec_asari_trait_philosopher.dds"
+	    species_potential_add = {
+        always = no
+    }
+	icon = "gfx/interface/icons/traits/leader_traits/btr_trait_asari_long_view.dds"
 	modifier = {
 		leader_skill_levels = 2
 	}
@@ -35,10 +39,12 @@ btr_leader_trait_asari = {
 }
 
 # Asari commando trait
-btr_leader_trait_commando = {
+btr_leader_trait_asari_commando = {
 	cost = 3
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_military_theory.dds"
+	    species_potential_add = {
+        always = no
+    }
+	icon = "gfx/interface/icons/traits/leader_traits/btr_trait_asari_commando_PLACEHOLDER.dds"
 	modifier = {
 		army_disengage_chance_mult = 1
 	}
@@ -53,10 +59,12 @@ btr_leader_trait_commando = {
 
 ### TURIAN HIERARCHY
 # Turian sticy leader trait (General/Admiral)
-btr_leader_trait_extensive_training = {
+btr_leader_trait_turian_extensive_training = {
 	cost = 3
-	modification = no
-	icon = "gfx/interface/icons/traits/leader_traits/Extensive_Training.dds"
+	    species_potential_add = {
+        always = no
+    }
+	icon = "gfx/interface/icons/traits/leader_traits/btr_trait_turian_extensive_training.dds"
 	modifier = {
 		leader_skill_levels = 2
 		species_leader_exp_gain = 0.15
@@ -72,11 +80,13 @@ btr_leader_trait_extensive_training = {
 
 ### GETH CONSENSUS
 # Geth consensus sticky leader trait (All)
-btr_leader_trait_internal_consensus = {
+btr_leader_trait_geth_internal_consensus = {
 	cost = 3
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
-	icon = "gfx/interface/icons/traits/geth_trait.dds"
+	icon = "gfx/interface/icons/traits/leader_traits/btr_trait_geth_internal_consensus.dds"
 	modifier = {
 		species_leader_exp_gain = -0.25
 		leader_skill_levels = 3
@@ -93,11 +103,13 @@ btr_leader_trait_internal_consensus = {
 
 ### SYSTEM ALLIANCE
 # System alliance sticky leader trait (All)
-btr_leader_trait_twice_bright = {
+btr_leader_trait_human_twice_bright = {
 	cost = 3
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
-	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_expertise_military_theory.dds"
+	icon = "gfx/interface/icons/traits/leader_traits/btr_trait_human_twice_bright_PLACEHOLDER.dds"
 	modifier = {
 		species_leader_exp_gain = 0.15
 		leader_skill_levels = 1
@@ -115,10 +127,12 @@ btr_leader_trait_twice_bright = {
 
 # Yahg Leader Trait
 
-btr_leader_trait_hype_perecpt = {
+btr_leader_trait_yahg_hype_perecpt = {
 	cost = 3
-	modification = no
-	icon = "gfx/interface/icons/traits/trait_yahg_hypersense.dds"
+	    species_potential_add = {
+        always = no
+    }
+	icon = "gfx/interface/icons/traits/leader_traits/btr_trait_yahg_hyper_percept.dds"
 
 	leader_trait = { admiral general scientist governor ruler }
 	leader_class = { admiral general scientist governor ruler }
@@ -131,12 +145,14 @@ btr_leader_trait_hype_perecpt = {
   
 ### ELCOR
 # Elcor sticky leader trait (All)
-btr_leader_trait_patience = {
+btr_leader_trait_elcor_patience = {
 	cost = 3
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 	modifier = {
-		planet_buildings__cost_mult = -0.5
-		planet_buildings__upkeep_mult = -0.10
+		planet_buildings_cost_mult = -0.5
+		planet_buildings_upkeep_mult = -0.10
 		trade_value_mult = 0.5
 	}
 
@@ -146,13 +162,17 @@ btr_leader_trait_patience = {
 	ai_weight = {
 		weight = 100
 	}
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
 ### Sed'riicae Collective
 # Forayan sticky leader trait
 btr_leader_trait_forayan_poor_soldiers = {
 	cost = 3
-	modification = no
+	    species_potential_add = {
+        always = no
+    }
 
 	modifier = {
 		species_leader_exp_gain = -0.25
@@ -163,4 +183,6 @@ btr_leader_trait_forayan_poor_soldiers = {
 
 	leader_trait = { admiral general }
 	leader_class = { admiral general }
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
  }
