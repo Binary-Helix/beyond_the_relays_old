@@ -5,6 +5,7 @@ pc_highgrav_barren = {
 	entity = "barren_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_barren
+	picture = pc_barren
 
 	atmosphere_color 		= hsv { 0.1 0.4 0.7 }		#DONE
 	atmosphere_intensity 	= 1.0
@@ -28,6 +29,7 @@ pc_highgrav_barren = {
 pc_highgrav_desert = {
 	entity = "desert_planet"
 	icon = GFX_planet_type_desert
+	picture = pc_desert
 
 	climate = "dry"
 	initial = yes
@@ -65,6 +67,8 @@ pc_highgrav_cascadian = {
 	entity = "cascadian_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_cascadian
+	picture = pc_cascadian
+
 	#appearance
 	picture = pc_cascadian
 	atmosphere_color 		= hsv { 0.58 0.5 0.9 }			
@@ -88,6 +92,8 @@ pc_highgrav_forest = {
 	entity = "forest_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_forest
+	picture = pc_forest
+
 	atmosphere_color 		= hsv { 0.50 0.3 0.7 }	
 	atmosphere_intensity 	= 1.0
 	atmosphere_width 		= 0.5
@@ -108,6 +114,8 @@ pc_highgrav_veld = {
 	entity = "veld_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_veld
+	picture = pc_veld
+
 	#appearance
 	picture = pc_veld  
 	atmosphere_color 		= hsv { 0.50 0.2 0.8 }	
@@ -131,6 +139,7 @@ pc_highgrav_arid = {
 	entity = "arid_planet"
 	entity_scale = @planet_standard_scale
 	icon = GFX_planet_type_arid
+	picture = pc_arid
 
 	climate = "dry"
 	initial = yes

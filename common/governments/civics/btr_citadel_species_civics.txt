@@ -3,7 +3,7 @@
 ####################
 btr_civic_asrep_thes_dip_corp ={
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_asrep_diplo_corps.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_asrep_diplo_corps.dds"
 	potential = {
 		ethics = {
 			NOT = {
@@ -28,7 +28,7 @@ btr_civic_asrep_thes_dip_corp ={
 
 btr_civic_asrep_democracy = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_asrep_democracy.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_asrep_democracy.dds"
 	potential = {
 		ethics = {
 			NOT = {
@@ -51,7 +51,7 @@ btr_civic_asrep_democracy = {
 }
 
 btr_civic_asrep_universities = {
-	icon = "gfx/interface/icons/governments/civics/civic_asrep_universities.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_asrep_universities.dds"
 	potential = {
 		origin = {
 			value = btr_origin_asrep
@@ -74,7 +74,7 @@ btr_civic_asrep_universities = {
 btr_civic_turhie_honor ={
 	modification = no
 
-	icon = "gfx/interface/icons/traits/Turian_Honor.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_turhie_honor.dds"
 	potential = {
 		ethics = {
 			NOT = {
@@ -98,7 +98,7 @@ btr_civic_turhie_honor ={
 
 btr_civic_turhie_service ={
 	modification = no
-	icon = "gfx/interface/icons/traits/Universal_Service_small.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_turhie_universal_service.dds"
 	potential = {
 		ethics = {
 			NOT = {
@@ -133,6 +133,8 @@ btr_civic_turhie_elkoss ={
 		country_alloys_produces_mult = 0.15
 		starbase_shipyard_build_speed_mult = 0.33
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_turhie_elkoss_PLACEHOLDER.dds"
 }
 
 ##########################
@@ -141,7 +143,7 @@ btr_civic_turhie_elkoss ={
 
 btr_civic_sysall_colonial_government = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_colonial.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_sysall_colonial.dds"
 	potential = {
 		origin = {
 			value = btr_origin_sysall
@@ -158,7 +160,7 @@ btr_civic_sysall_colonial_government = {
 
 btr_civic_sysall_unfettered_ai = {
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_ai.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_sysall_unfettered_ai.dds"
 	potential = {
 		origin = {
 			value = btr_origin_sysall
@@ -175,7 +177,7 @@ btr_civic_sysall_unfettered_ai = {
 }
 
 btr_civic_sysall_hum_rising = {
-	icon = "gfx/interface/icons/governments/civics/civic_human_rising.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_sysall_human_rising.dds"
 	potential = {
 		origin = {
 			value = btr_origin_sysall
@@ -213,6 +215,8 @@ btr_civic_elcor_history_of_stability ={
 	    planet_administrators_upkeep_mult = -0.10
 		planet_researchers_produces_mult = -0.5
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_elcor_history_PLACEHOLDER.dds"
 }
 
 btr_civic_elcor_elders_of_dekuuna ={
@@ -231,6 +235,8 @@ btr_civic_elcor_elders_of_dekuuna ={
 		governor_skill_levels = 3
 		planet_crime_mult = -0.5
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_elcor_elders_PLACEHOLDER.dds"
 }
 
 btr_civic_elcor_breadbasket_of_the_council_space = {
@@ -249,4 +255,6 @@ btr_civic_elcor_breadbasket_of_the_council_space = {
 		monthly_trades_food_produces_add = 0.5
 		country_galactic_standard_food_produces_add = 0.20
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_elcor_breadbasket_PLACEHOLDER.dds"
 }

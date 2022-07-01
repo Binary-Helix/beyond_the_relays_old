@@ -1,0 +1,274 @@
+#Collector Base
+objectTypes = {
+    pdxmesh = {
+        name = "collector_base_core_menu_mesh"
+        file = "gfx/models/planets/stations/collector_base.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "hull_outer"
+            index = 0
+            texture_diffuse = "collector_base_hull_outer_diffuse.dds"
+            texture_normal = "collector_base_hull_outer_normal.dds"
+            texture_specular = "collector_base_hull_outer_specular.dds"
+            shader = "PdxMeshShip"
+        }
+
+        meshsettings = {
+            name = "hull_rock"
+            index = 0
+            texture_diffuse = "collector_base_hull_rock_diffuse.dds"
+            texture_normal = "collector_base_hull_rock_normal.dds"
+            texture_specular = "collector_base_hull_rock_specular.dds"
+            shader = "PdxMeshShip"
+        }
+    }
+	
+	pdxmesh = {
+        name = "collector_base_core_mesh"
+        file = "gfx/models/planets/stations/collector_base.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "hull_outer"
+            index = 0
+            texture_diffuse = "collector_base_hull_outer_diffuse.dds"
+            texture_normal = "collector_base_hull_outer_normal.dds"
+            texture_specular = "collector_base_hull_outer_specular.dds"
+            shader = "PdxMeshShip"
+        }
+
+        meshsettings = {
+            name = "hull_rock"
+            index = 0
+            texture_diffuse = "collector_base_hull_rock_diffuse.dds"
+            texture_normal = "collector_base_hull_rock_normal.dds"
+            texture_specular = "collector_base_hull_rock_specular.dds"
+            shader = "PdxMeshShip"
+        }
+    }
+
+# Cronos Station
+    pdxmesh = {
+        name = "cerberus_cronos_core_menu_mesh"
+        file = "gfx/models/planets/stations/cerberus_cronos.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "hull_1"
+            index = 0
+            texture_diffuse = "cronos_hull_1_diffuse.dds"
+            texture_normal = "cronos_hull_1_normal.dds"
+            texture_specular = "cronos_hull_1_specular.dds"
+            shader = "PdxMeshShip"
+        }
+
+        meshsettings = {
+            name = "hull_2"
+            index = 0
+            texture_diffuse = "cronos_hull_2_diffuse.dds"
+            texture_normal = "cronos_hull_2_normal.dds"
+            texture_specular = "cronos_hull_2_specular.dds"
+            shader = "PdxMeshShip"
+        }
+    }	
+	pdxmesh = {
+        name = "cerberus_cronos_core_mesh"
+        file = "gfx/models/planets/stations/cerberus_cronos.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "hull_1"
+            index = 0
+            texture_diffuse = "cronos_hull_1_diffuse.dds"
+            texture_normal = "cronos_hull_1_normal.dds"
+            texture_specular = "cronos_hull_1_specular.dds"
+            shader = "PdxMeshShip"
+        }
+
+        meshsettings = {
+            name = "hull_2"
+            index = 0
+            texture_diffuse = "cronos_hull_2_diffuse.dds"
+            texture_normal = "cronos_hull_2_normal.dds"
+            texture_specular = "cronos_hull_2_specular.dds"
+            shader = "PdxMeshShip"
+        }
+    }	
+	pdxmesh = {
+		name = "cerberus_cronos_frame_menu_mesh"
+		file = "gfx/models/planets/stations/cerberus_cronos_frame.mesh"
+		scale = 1.0
+			meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}	
+	pdxmesh = {
+		name = "cerberus_cronos_frame_mesh"
+		file = "gfx/models/planets/stations/cerberus_cronos_frame.mesh"
+		scale = 1.0
+			meshsettings = {
+			shader = "PdxMeshShip"
+		}
+	}
+
+    #Citadel
+	pdxmesh = {
+		name = "btr_citadel_mesh"
+		file = "gfx/models/planets/stations/btr_citadel.mesh"
+		scale = 0.8
+			
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "btr_citadel_diff.dds"
+			texture_normal = "btr_citadel_norm.dds"
+			texture_specular = "btr_citadel_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}	
+
+#Omega
+	pdxmesh = {
+		name = "btr_omega_mesh"
+		file = "gfx/models/planets/stations/btr_omega.mesh"
+		scale = 1.0
+			
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "btr_omega_diffuse.dds"
+			texture_normal = "btr_omega_norm.dds"
+			texture_specular = "btr_omega_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}	
+
+#Pinnacle Station
+	pdxmesh = {
+		name = "btr_pinnacle_station_mesh"
+		file = "gfx/models/planets/stations/btr_pinnacle_station.mesh"
+		scale = 0.35
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "btr_pinnacle_station_diff.dds"
+			texture_normal = "btr_pinnacle_station_norm.dds"
+			texture_specular = "btr_pinnacle_station_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}	
+
+#Jarrahe Station
+	pdxmesh = {
+		name = "btr_jarrahe_station_mesh"
+		file = "gfx/models/planets/stations/btr_jarrahe_station.mesh"
+		scale = 0.5
+		
+		meshsettings = {
+			name = "large_finished_MeshShape"
+			index = 0
+			texture_diffuse = "btr_jarrahe_station_diff.dds"
+			texture_normal = "btr_jarrahe_station_norm.dds"
+			texture_specular = "btr_jarrahe_station_spec.dds"
+			shader = "PdxMeshShip"
+		}
+	}
+
+#Lazarus Station
+    pdxmesh = {
+        name = "btr_lazarus_station_mesh"
+        file = "gfx/models/planets/stations/btr_cerb_lazarus.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "large_finished_MeshShape"
+            index = 0
+            texture_diffuse = "btr_cerb_lazarus_diff.dds"
+            texture_normal = "btr_cerb_lazarus_norm.dds"
+            texture_specular = "btr_cerb_lazarus_spec.dds"
+            shader = "PdxMeshPlanet"
+        }
+    }   
+
+#Minuteman Station
+    pdxmesh = {
+        name = "btr_minuteman_station_mesh"
+        file = "gfx/models/planets/stations/btr_minuteman_station.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "large_finished_MeshShape"
+            index = 0
+            texture_diffuse = "btr_minuteman_station_diff.dds"
+            texture_normal = "btr_minuteman_station_norm.dds"
+            texture_specular = "btr_minuteman_station_spec.dds"
+			shader = "PdxMeshPlanet"
+        }
+    } 
+
+#The Barn
+    pdxmesh = {
+        name = "btr_the_barn_station_mesh"
+        file = "gfx/models/planets/stations/btr_cerb_barn.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "large_finished_MeshShape"
+            index = 0
+            texture_diffuse = "btr_cerb_barn_diff.dds"
+            texture_normal = "btr_cerb_barn_norm.dds"
+            texture_specular = "btr_cerb_barn_spec.dds"
+            shader = "PdxMeshPlanet"
+        }
+    }     
+
+#Thermoples Station
+    pdxmesh = {
+        name = "btr_cerb_thermoples_mesh"
+        file = "gfx/models/planets/stations/btr_cerb_thermoples.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "large_finished_MeshShape"
+            index = 0
+            texture_diffuse = "btr_cerb_thermoples_diff.dds"
+            texture_normal = "btr_cerb_thermoples_norm.dds"
+            texture_specular = "btr_cerb_thermoples_spec.dds"
+            shader = "PdxMeshShip"
+        }
+    }
+
+#Vulcan Station
+    pdxmesh = {
+        name = "btr_cerb_vulcan_mesh"
+        file = "gfx/models/planets/stations/btr_cerb_vulcan.mesh"
+        scale = 1
+
+        meshsettings = {
+            name = "large_finished_MeshShape"
+            index = 0
+            texture_diffuse = "btr_cerb_vulcan_diff.dds"
+            texture_normal = "btr_cerb_vulcan_norm.dds"
+            texture_specular = "btr_cerb_vulcan_spec.dds"
+            shader = "PdxMeshPlanet"
+        }
+    }
+
+#Arcturus Station
+    pdxmesh = {
+        name = "btr_arcturus_station_mesh"
+        file = "gfx/models/planets/stations/btr_arcturus_station.mesh"
+        scale = 0.8
+            
+        meshsettings = {
+            name = "large_finished_MeshShape"
+            index = 0
+            texture_diffuse = "btr_arcturus_station_diff.dds"
+            texture_normal = "btr_arcturus_station_norm.dds"
+            texture_specular = "btr_arcturus_station_spec.dds"
+            shader = "PdxMeshShip"
+        }
+    }
+}

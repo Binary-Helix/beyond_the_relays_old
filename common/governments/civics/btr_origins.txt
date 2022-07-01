@@ -320,3 +320,23 @@ origin_bluesuns = {
 		base = 0 
 	} 
 }
+
+btr_asari_origin_illium = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/btr_asrep_origin.dds"
+	picture = GFX_mec_asari_origin_illium
+
+	initializers = { sys_tasale_init }
+	max_once_global = yes
+	preferred_planet_class_neighbor = no
+
+	description = "btr_origin_tooltip_mec_asari_illium_effects"
+	#Disable various first time events, they're not new to Illium
+	flags = { mec_asari_asi custom_start_screen first_contact_event first_alien_life first_colony Story5 }
+
+	advanced_start = yes
+
+	#random_weight = {
+	#	base = 0
+	#}
+}

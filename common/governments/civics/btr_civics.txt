@@ -53,6 +53,8 @@ civic_btr_salarian_special_task_group ={
 		envoys_add = 1
 		spy_network_daily_value_mult = 0.25 
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_salun_special_task_group_PLACEHOLDER.dds"
 }
 civic_btr_salarian_matriarchy ={
 	modification = no
@@ -71,6 +73,8 @@ civic_btr_salarian_matriarchy ={
 		edicts_cost_mult = -0.2
 		governor_skill_levels = 1
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_salun_matriarchy_PLACEHOLDER.dds"
 }
 
 ################
@@ -92,6 +96,8 @@ civic_btr_hanar_blessing_of_the_enkindlers = {
 		country_unity_produces_mult = 0.15
 		spiritualist_attraction = 0.20
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_illprim_blessing_PLACEHOLDER.dds"
 }
 
 civic_btr_hanar_part_of_the_family ={
@@ -112,6 +118,8 @@ civic_btr_hanar_part_of_the_family ={
 		spy_network_daily_value_mult = 0.1
 		army_damage_mult = 0.15
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_illprim_family_PLACEHOLDER.dds"
 }
 
 ################
@@ -132,6 +140,8 @@ civic_btr_volus_shrewd_business ={
 		trade_value_mult = 0.20
 		country_consumer_goods_produces_mult = 0.10
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_volpol_shrewd_PLACEHOLDER.dds"
 }
 
 civic_btr_volus_the_negotiators ={
@@ -150,6 +160,8 @@ civic_btr_volus_the_negotiators ={
 		envoys_add = 2
 		army_damage_mult = -0.20
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_volpol_negotiators_PLACEHOLDER.dds"
 }
 
 ###################
@@ -194,6 +206,8 @@ civic_btr_batarian_the_servile_castes = {
 		planet_jobs_slave_produces_mult = 0.2
 		country_pop_enslaved_mult = 0.3
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_batheg_servile_castes_PLACEHOLDER.dds"
 }
 
 civic_btr_batarian_constant_vigilance = {
@@ -233,46 +247,8 @@ civic_btr_batarian_constant_vigilance = {
 		intel_encryption_mult = 0.2
 		planet_jobs_unity_produces_mult = 0.15
 	}
-}
 
-###############
-# GETH CIVICS #
-###############
-civic_btr_geth_artifical_efficiency ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-		
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		country_energy_produces_mult = 0.10
-		planet_jobs_upkeep_mult = -0.1
-		country_admin_cap_mult = 0.1
-	}
-}
-
-civic_btr_geth_enigmatic_recluses ={
-	modification = no
-	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-	}
-	random_weight = {
-		base = 0
-	}
-	modifier = {
-		intel_encryption_add = 3
-	}
+	icon = "gfx/interface/icons/governments/civics/btr_civic_batheg_constant_vigilance_PLACEHOLDER.dds"
 }
 
 #################
@@ -300,6 +276,8 @@ civic_btr_krogan_blood_and_ash ={
 		country_claim_influence_cost_mult = -0.25
 		army_damage_mult = 0.2
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_krochi_blood_ash_PLACEHOLDER.dds"
 }
 
 civic_btr_krogan_clans_of_tuchanka ={
@@ -322,6 +300,8 @@ civic_btr_krogan_clans_of_tuchanka ={
 	modifier = {
 		pop_government_ethic_attraction = 0.2
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_krochi_tuchanka_PLACEHOLDER.dds"
 }
 
 
@@ -351,6 +331,8 @@ civic_btr_quarian_the_conclave ={
 		pop_government_ethic_attraction = 0.1
 
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_migfle_conclave_PLACEHOLDER.dds"
 }
 
 civic_btr_quarian_last_of_the_quarians ={
@@ -375,6 +357,8 @@ civic_btr_quarian_last_of_the_quarians ={
 		ship_disengage_chance_mult = -0.3
 		pop_defense_armies_add = 2
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_migfle_last_quarians_PLACEHOLDER.dds"
 }
 
 ################
@@ -398,6 +382,8 @@ civic_btr_omega_the_only_rule ={
 		planet_branch_offices_cost_mult = -0.1
 	}
 	description = civic_tooltip_criminal_heritage_effects
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_omega_only_rule_PLACEHOLDER.dds"
 }
 
 civic_btr_omega_capital ={
@@ -421,19 +407,16 @@ civic_btr_omega_capital ={
 		envoys_add = 1
 		trade_value_mult = 0.15
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_omega_capital_PLACEHOLDER.dds"
 }
-
-##################
-# FORAYAN CIVICS #
-##################
-
 
 ##################
 # PARNACK CIVICS #
 ##################
 btr_civic_parnkreg_pack_ment ={
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_yahg_pack.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_parnkreg_pack_mentality.dds"
 	random_weight = {
 		base = 0
 	}
@@ -448,7 +431,7 @@ btr_civic_parnkreg_pack_ment ={
 
 btr_civic_parnkreg_enfor_iso ={
 	modification = no
-	icon = "gfx/interface/icons/governments/civics/civic_yahg_forced_isolation.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_parnkreg_forced_isolation.dds"
 	random_weight = {
 		base = 0
 	}
@@ -464,7 +447,7 @@ btr_civic_parnkreg_enfor_iso ={
 
 btr_civic_parnkreg_gal_hege ={ #Unlockable Civic
 	modification = yes
-	icon = "gfx/interface/icons/governments/civics/civic_yahg_hegemon.dds"
+	icon = "gfx/interface/icons/governments/civics/btr_civic_parnkreg_hegemon.dds"
 	potential = {
 		origin = {
 			value = btr_origin_parnkreg
@@ -474,7 +457,7 @@ btr_civic_parnkreg_gal_hege ={ #Unlockable Civic
 		base = 0
 	}
 	modifier = {
-		country_influence_produces_add = 1
+		country_base_influence_produces_add = 1
 		diplo_weight_mult = 0.20
 		starbase_outpost_cost_mult = -0.33
 		#subjugation wargoal is awlays available
@@ -506,6 +489,8 @@ civic_btr_rachni_de_capo_al_fine ={
 		starbase_defensive_war_ship_build_speed_mult = 0.2
 		ships_upkeep_mult = -0.1
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_rachni_capo_PLACEHOLDER.dds"
 }
 
 civic_btr_rachni_crescendo ={
@@ -529,6 +514,8 @@ civic_btr_rachni_crescendo ={
 		country_engineering_tech_research_speed = 0.1
 		planet_jobs_simple_drone_engineering_research_produces_mult = 0.025
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_rachni_crescendo_PLACEHOLDER.dds"
 }
 
 ################
@@ -555,6 +542,8 @@ civic_btr_raloi_spreading_our_wings={
 		science_ship_survey_speed = 0.15
 		ship_speed_mult = 0.1
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_raloi_spreading_wings_PLACEHOLDER.dds"
 }
 
 civic_btr_raloi_birds_of_a_feather ={
@@ -579,6 +568,8 @@ civic_btr_raloi_birds_of_a_feather ={
 		pop_demotion_time_mult = -0.15
 		country_admin_cap_mult = 0.075
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_raloi_birds_feather_PLACEHOLDER.dds"
 }
 
 ################
@@ -606,6 +597,8 @@ civic_btr_drell_architects_of_destruction ={
 		planet_district_mining_build_speed_mult = 0.20
 		planet_jobs_specialist_produces_mult = -0.1
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_remrak_architects_destruction_PLACEHOLDER.dds"
 }
 
 civic_btr_drell_emergency_powers ={
@@ -630,4 +623,48 @@ civic_btr_drell_emergency_powers ={
 		planet_crime_mult = -0.15
 		planet_pops_consumer_goods_upkeep_mult = -0.15
 	}
+
+	icon = "gfx/interface/icons/governments/civics/btr_civic_remrak_emergency_powers_PLACEHOLDER.dds"
+}
+
+
+########
+# ILLIUM PLACEHOLDER
+########
+
+btr_asari_civic_illium = {
+	modification = no
+	icon = "gfx/interface/icons/governments/civics/btr_civic_illcorp_illium.dds"
+	potential = {
+		OR = {
+			authority = { value = auth_corporate }
+			civics = { value = civic_galactic_sovereign_megacorp }
+		}
+	}
+	possible = {
+		ethics = {
+			OR = {
+				text = civic_tooltip_materialist
+				value = ethic_fanatic_materialist
+				value = ethic_materialist
+			}
+			OR = {
+				text = civic_tooltip_xenophile
+				value = ethic_fanatic_xenophile
+				value = ethic_xenophile
+			}
+		}
+		origin = {
+			value = btr_asari_origin_illium
+		}
+	}
+	modifier = {
+		country_starbase_influence_cost_mult = 0.20
+		country_claim_influence_cost_mult = 0.20
+	}
+	random_weight = {
+		base = 0
+	}
+
+	description = btr_asari_civic_tooltip_illium_effects
 }
