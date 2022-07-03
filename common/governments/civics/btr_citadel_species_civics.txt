@@ -258,3 +258,61 @@ btr_civic_elcor_breadbasket_of_the_council_space = {
 
 	icon = "gfx/interface/icons/governments/civics/btr_civic_elcor_breadbasket_PLACEHOLDER.dds"
 }
+
+#######################
+# KROGAN CLANS CIVICS #
+#######################
+
+btr_civic_krogan_blood_ash ={
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_arlakh
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_war_exhaustion_mult = -0.3
+		country_claim_influence_cost_mult = -0.25
+	}
+
+	# icon = 
+}
+
+civic_btr_krogan_tuchanka_clans ={
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_arlakh
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		pop_government_ethic_attraction = 0.2
+		planet_researchers_produces_mult = -0.15
+	}
+
+	# icon = 
+}
+
+civic_btr_krogan_vengance ={
+	modification = yes
+	potential = {
+		origin = {
+			value = btr_origin_arlakh
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_unity_produces_mult = 0.1
+		
+	}
+
+	# icon = 
+}
