@@ -886,18 +886,12 @@ btr_civic_parnkreg_gal_hege ={ #Unlockable Civic
 #################
 # RACHNI SWARM CIVICS #
 #################
-civic_btr_rachni_de_capo_al_fine ={
+
+btr_civic_zerghive_capo = {
 	modification = no
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
+		origin = {
+			value = btr_origin_zerghive
 		}
 	}
 	random_weight = {
@@ -905,35 +899,47 @@ civic_btr_rachni_de_capo_al_fine ={
 	}
 	modifier = {
 		starbase_defensive_war_ship_build_speed_mult = 0.2
-		ships_upkeep_mult = -0.1
+		ships_upkeep_mult = -0.2
+		ship_speed_mult = 0.1
 	}
 
-	icon = "gfx/interface/icons/governments/civics/btr_civic_rachni_capo_PLACEHOLDER.dds"
+	# icon = 
 }
 
-civic_btr_rachni_crescendo ={
+btr_civic_zerghive_crescendo = {
 	modification = no
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_authoritarian
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
+		origin = {
+			value = btr_origin_zerghive
 		}
 	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		country_engineering_tech_research_speed = 0.1
-		planet_jobs_simple_drone_engineering_research_produces_mult = 0.025
+		planet_building_build_speed_mult = 0.2
+		drone_deviancy = -0.15
 	}
 
-	icon = "gfx/interface/icons/governments/civics/btr_civic_rachni_crescendo_PLACEHOLDER.dds"
+	# icon = 
+}
+
+btr_civic_zerghive_symphonic = {
+	modification = yes
+	potential = {
+		origin = {
+			value = btr_origin_zerghive
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_unity_produces_mult = 0.15
+		planet_building_build_speed_mult = 0.1
+	}
+
+	# icon = 
 }
 
 ################
