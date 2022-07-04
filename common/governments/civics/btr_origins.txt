@@ -53,9 +53,8 @@ btr_origin_illprim = {
 		base = 0 
 	} 
 	modifier = {
-		edicts_cost_mult = -0.15
-		empire_size_mult = -0.33
-		planet_crime_mult = -0.20
+		planet_crime_mult = -0.30
+		pop_ethic_spiritualist_attraction_mult = 1
 	}
 }
 
@@ -135,7 +134,12 @@ btr_origin_arlakh = {
 	picture = GFX_evt_metropolis 
 	random_weight = { 
 		base = 0 
-	} 
+	}
+	
+	modifier = {
+		diplo_weight_mult = -0.35
+		country_claim_influence_cost_mult = 0.35 #TBD NEEDS TO BE CONFIRMED IF THIS WORKS
+	}
 }
 
 origin_lystheni_order = { 
