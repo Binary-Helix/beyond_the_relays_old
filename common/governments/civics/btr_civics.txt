@@ -287,7 +287,7 @@ btr_civic_elcor_breadbasket_of_the_council_space = {
 # ILLUMINATED PRIMACY CIVICS #
 ##############################
 
-btr_civic_illprim_enkindlers ={
+btr_civic_illprim_enkindlers = {
 	modification = no
 	potential = {
 		origin = {
@@ -306,7 +306,7 @@ btr_civic_illprim_enkindlers ={
 	# icon = 
 }
 
-btr_civic_illprim_zealots ={
+btr_civic_illprim_zealots = {
 	modification = no
 	potential = {
 		origin = {
@@ -324,7 +324,7 @@ btr_civic_illprim_zealots ={
 	# icon = 
 }
 
-btr_civic_illprim_drell ={
+btr_civic_illprim_drell = {
 	modification = yes
 	potential = {
 		origin = {
@@ -343,6 +343,7 @@ btr_civic_illprim_drell ={
 
 	# icon = 
 }
+
 ##########################
 # SYSTEM ALLIANCE CIVICS #
 ##########################
@@ -440,91 +441,69 @@ civic_btr_volus_the_negotiators ={
 	icon = "gfx/interface/icons/governments/civics/btr_civic_volpol_negotiators_PLACEHOLDER.dds"
 }
 
-###################
+############################
 # BATARIAN HEGEMONY CIVICS #
-###################
+############################
 
-civic_btr_batarian_the_servile_castes = {
+btr_civic_foureyes_state = {
 	modification = no
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
+		origin = {
+			value = btr_origin_foureyes
 		}
 	}
-	
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_authoritorian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-			}
-		}
-		civics = {
-			NOT = {
-				value = civic_pleasure_seekers
-			}
-		}
-	}
-	
 	random_weight = {
 		base = 0
 	}
-
 	modifier = {
-		planet_jobs_slave_produces_mult = 0.2
-		country_pop_enslaved_mult = 0.3
+		ships_upkeep_mult = 0.2
+		planet_stability_add = 5
+		country_naval_cap_mult = 0.1
+		intel_encryption_add = 2
 	}
 
-	icon = "gfx/interface/icons/governments/civics/btr_civic_batheg_servile_castes_PLACEHOLDER.dds"
+	# icon = 
 }
 
-civic_btr_batarian_constant_vigilance = {
+btr_civic_foureyes_caste = {
 	modification = no
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
-	}
-	possible = {
-		ethics = {
-			OR = {
-				text = civic_tooltip_authoritorian
-				value = ethic_authoritarian
-				value = ethic_fanatic_authoritarian
-			}
-		}
-		civics = {
-			NOT = {
-				value = civic_pleasure_seekers
-			}
+		origin = {
+			value = btr_origin_foureyes
 		}
 	}
 	random_weight = {
 		base = 0
 	}
-
 	modifier = {
-		intel_encryption_add = 2
-		intel_encryption_mult = 0.2
-		planet_jobs_unity_produces_mult = 0.15
+		country_unity_produces_mult = 0.05
+		pop_ethics_shift_speed_mult = -0.5
+		planet_jobs_slave_produces_mult = 0.15
+		pop_amenities_usage_mult = -0.2
+		pop_resettlement_cost_mult = -1
+
 	}
 
-	icon = "gfx/interface/icons/governments/civics/btr_civic_batheg_constant_vigilance_PLACEHOLDER.dds"
+	# icon = 
+}
+
+btr_civic_foureyes_leviathan = {
+	modification = yes
+	potential = {
+		origin = {
+			value = btr_origin_foureyes
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		country_physics_research_produces_mult = 0.1
+		country_engineering_research_produces_mult = 0.1
+		species_leader_exp_gain = -0.1
+	}
+
+	# icon = 
 }
 
 ###################
