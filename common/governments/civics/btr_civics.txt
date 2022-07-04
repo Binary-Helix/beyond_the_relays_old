@@ -287,6 +287,62 @@ btr_civic_elcor_breadbasket_of_the_council_space = {
 # ILLUMINATED PRIMACY CIVICS #
 ##############################
 
+btr_civic_illprim_enkindlers ={
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_illprim
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		pop_government_ethic_attraction = 0.4
+		country_society_research_produces_mult = 0.2
+		country_unity_produces_mult = 0.1
+	}
+
+	# icon = 
+}
+
+btr_civic_illprim_zealots ={
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_illprim
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		ship_archaeological_site_excavation_speed_mult = -0.5
+		ship_archeaological_site_clues_add = -8
+	}
+
+	# icon = 
+}
+
+btr_civic_illprim_drell ={
+	modification = yes
+	potential = {
+		origin = {
+			value = btr_origin_illprim
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		intel_encryption_add = 5
+		intel_decryption_add = 5
+		planet_jobs_worker_produces_mult = 0.1
+		army_defense_damage_mult = 0.5
+	}
+
+	# icon = 
+}
 ##########################
 # SYSTEM ALLIANCE CIVICS #
 ##########################
