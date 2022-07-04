@@ -306,11 +306,10 @@ illuminated_primacy={
 	ethic="ethic_pacifist"
 	ethic="ethic_fanatic_spiritualist"
 
-	trait="trait_weak"
-	trait="trait_traditional"
-	trait="trait_communal"
-	trait="btr_hanar_bureaucratic"
-	trait="btr_hanar_spiritual"
+	trait="btr_hanar_trait_core"
+	trait="btr_hanar_trait_toxsec"
+	trait="btr_hanar_trait_nonbip"
+	trait="btr_hanar_trait_watbound"
 	trait = "trait_hanar_habitability_preference"
 	
 	origin= btr_origin_illprim
@@ -1003,7 +1002,7 @@ migrant_fleet={
 
 	authority = "auth_democratic"
 	government = "gov_rational_consensus"
-	civics={ civic_btr_quarian_last_of_the_quarians civic_btr_quarian_the_conclave }
+	civics={ btr_civic_quarsimp_memories btr_civic_quarsimp_efficiency }
 
 	flags={ custom_start_screen migrant_fleet btr_empire canon_map hybrid_map sandbox_map }
 
