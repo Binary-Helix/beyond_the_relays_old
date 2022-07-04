@@ -155,13 +155,18 @@ origin_lystheni_order = {
 	} 
 }
 
-origin_migrant_fleet = {
+btr_origin_quarsimp = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_default.dds"
 	picture = GFX_evt_metropolis
 	random_weight = {
 		base = 0
 	}
+	modifier = {
+		planet_stability_add = 10
+		#TBD second effect
+	}
+
 }
 
 origin_omega = { 
