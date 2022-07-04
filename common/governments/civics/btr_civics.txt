@@ -656,57 +656,60 @@ btr_civic_krogan_vengance ={
 ##################
 # MIGRANT FLEET CIVICS #
 ##################
-civic_btr_quarian_the_conclave ={
+
+btr_civic_quarsimp_memories ={
 	modification = no
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
+		origin = {
+			value = btr_origin_quarsimp
 		}
 	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		country_admin_cap_mult = 0.15
-		country_naval_cap_mult = 0.15
-		pop_government_ethic_attraction = 0.1
-
+		ship_fire_rate_mult = 0.1
+		ship_disengage_chance_mult = -0.1
 	}
 
-	icon = "gfx/interface/icons/governments/civics/btr_civic_migfle_conclave_PLACEHOLDER.dds"
+	# icon = 
 }
 
-civic_btr_quarian_last_of_the_quarians ={
+btr_civic_quarsimp_efficiency ={
 	modification = no
 	potential = {
-		ethics = {
-			NOT = {
-				value = ethic_gestalt_consciousness
-			}
-		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
+		origin = {
+			value = btr_origin_quarsimp
 		}
 	}
 	random_weight = {
 		base = 0
 	}
 	modifier = {
-		ship_home_territory_fire_rate_mult = 0.2
-		ship_disengage_chance_mult = -0.3
-		pop_defense_armies_add = 2
+		empire_size_mult = -0.15
+		country_naval_cap_mult = 0.15
+		planet_jobs_produces_mult = 0.05
 	}
 
-	icon = "gfx/interface/icons/governments/civics/btr_civic_migfle_last_quarians_PLACEHOLDER.dds"
+	# icon = 
+}
+
+btr_civic_quarsimp_ancestors ={
+	modification = no
+	potential = {
+		origin = {
+			value = btr_origin_quarsimp
+		}
+	}
+	random_weight = {
+		base = 0
+	}
+	modifier = {
+		planet_colony_development_speed_mult = 0.15
+		country_unity_produces_mult = 0.1
+	}
+
+	# icon = 
 }
 
 ################
