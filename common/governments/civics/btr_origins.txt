@@ -78,12 +78,16 @@ origin_vol_protectorate = {
 	} 
 }
 
-origin_batarian_hegemony = { 
+btr_origin_foureyes = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
 	random_weight = { 
 		base = 0 
+	}
+	modifier = {
+		diplo_weight_mult = -0.2
+		envoys_add = -1
 	} 
 }
 
