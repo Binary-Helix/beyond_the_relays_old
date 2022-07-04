@@ -1,20 +1,19 @@
+btr_origin_asrep = {
+    is_origin = yes
+    icon = "gfx/interface/icons/origins/origins_default.dds"
+    picture = GFX_evt_metropolis
 
-origin_systems_alliance = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-}
+    random_weight = {
+        base = 0
+    }
 
-origin_cerberus = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
+    modifier = {
+        diplo_weight_economy_mult = 0.33
+        country_trade_fee = -0.2
+        country_consumer_goods_produces_mult = 0.05
+        country_war_exhaustion_mult = 0.1
+        country_claim_influence_cost_mult = 1
+    }
 }
 
 origin_salarian_union = { 
@@ -26,32 +25,52 @@ origin_salarian_union = {
 	} 
 }
 
-origin_turian_hierarchy = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
+btr_origin_turhie = {
+    is_origin = yes
+    icon = "gfx/interface/icons/origins/origins_default.dds"
+    picture = GFX_evt_metropolis
 }
 
-origin_aralakh_kahmat = { 
+btr_origin_courts_o_dek = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
 	random_weight = { 
 		base = 0 
 	} 
-
-	starting_colony = pc_nuked
-
-	playable = {
-		host_has_dlc = "Apocalypse"
+	modifier = {
+		edicts_cost_mult = -0.15
+		empire_size_mult = -0.33
+		planet_crime_mult = -0.20
 	}
-
 }
 
-origin_illuminated_primacy = { 
+btr_origin_illprim = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+	modifier = {
+		edicts_cost_mult = -0.15
+		empire_size_mult = -0.33
+		planet_crime_mult = -0.20
+	}
+}
+
+
+btr_origin_sysall = {
+    is_origin = yes
+    icon = "gfx/interface/icons/origins/origins_default.dds"
+    picture = GFX_evt_metropolis
+    
+    modifier = {
+        shipclass_colonizer_build_cost_mult = -0.15
+    }
+}
+
+origin_vol_protectorate = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
@@ -69,7 +88,172 @@ origin_batarian_hegemony = {
 	} 
 }
 
-origin_geth_consensus = { 
+origin_cerberus = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+btr_origin_getcon = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+
+	random_weight = {
+		base = 0
+	}
+
+	modifier = {
+		ship_home_territory_fire_rate_mult = 0.3
+		country_engineering_research_produces_mult = 0.2
+		country_physics_research_produces_mult = 0.1
+		country_society_research_produces_mult = -0.2
+	}
+}
+
+origin_gothones_remnant = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+
+	starting_colony = pc_nuked
+
+	playable = {
+		host_has_dlc = "Apocalypse"
+	}
+}
+
+btr_origin_arlakh = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+origin_lystheni_order = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+origin_migrant_fleet = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+	random_weight = {
+		base = 0
+	}
+}
+
+origin_omega = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+btr_origin_sedcol = { 
+    is_origin = yes 
+    icon = "gfx/interface/icons/origins/origins_default.dds" 
+    picture = GFX_evt_metropolis 
+    random_weight = { 
+        base = 0 
+    }
+
+    modifier = {
+        empire_size_mult = -0.5
+        planet_districts_cost_mult = 0.15
+        planet_buildings_cost_mult = 0.15
+    }
+}
+
+btr_origin_parnkreg = { 
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+	random_weight = { 
+		base = 0 
+	}
+
+	modifier = {
+		envoys_add = -1
+		ship_fire_rate_mult = 0.15
+		#50% better vasalization 
+	}
+}
+
+origin_rachni_hive = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+origin_raloi_republic = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_default.dds"
+	picture = GFX_evt_metropolis
+	description = "origin_raloi_republic_tooltip"
+	random_weight = { 
+		base = 0 
+	}
+}
+
+origin_remnants_of_rakhana = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+	starting_colony = pc_polluted
+}
+
+origin_vorcha_clandom = { 
+	is_origin = yes 
+	icon = "gfx/interface/icons/origins/origins_default.dds" 
+	picture = GFX_evt_metropolis 
+	random_weight = { 
+		base = 0 
+	} 
+}
+
+btr_asari_origin_illium = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/btr_asrep_origin.dds"
+	picture = GFX_mec_asari_origin_illium
+
+	initializers = { sys_tasale_init }
+	max_once_global = yes
+	preferred_planet_class_neighbor = no
+
+	description = "btr_origin_tooltip_mec_asari_illium_effects"
+	#Disable various first time events, they're not new to Illium
+	flags = { mec_asari_asi custom_start_screen first_contact_event first_alien_life first_colony Story5 }
+
+	advanced_start = yes
+
+	#random_weight = {
+	#	base = 0
+	#}
+}
+
+origin_collectors = { 
 	is_origin = yes 
 	icon = "gfx/interface/icons/origins/origins_default.dds" 
 	picture = GFX_evt_metropolis 
@@ -88,117 +272,7 @@ origin_disciples_of_nazara = {
 	starting_colony = pc_heretic_station
 }
 
-origin_rachni_hive = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-}
 
-origin_collectors = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-}
-
-origin_vorcha_clandom = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-}
-
-origin_vol_protectorate = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-}
-
-btr_origin_courts_o_dek = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-	modifier = {
-		edicts_cost_mult = -0.15
-		empire_size_mult = -0.33
-		planet_crime_mult = -0.20
-	}
-}
-
-origin_omega = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-}
-
-btr_origin_parnkreg = { 
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_default.dds"
-	picture = GFX_evt_metropolis
-	random_weight = { 
-		base = 0 
-	}
-
-	modifier = {
-		envoys_add = -1
-		ship_fire_rate_mult = 0.15
-		#50% better vasalization 
-	}
-}
-
-origin_raloi_republic = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_default.dds"
-	picture = GFX_evt_metropolis
-	description = "origin_raloi_republic_tooltip"
-	random_weight = { 
-		base = 0 
-	}
-}
-
-origin_migrant_fleet = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_default.dds"
-	picture = GFX_evt_metropolis
-	random_weight = {
-		base = 0
-	}
-}
-
-origin_remnants_of_rakhana = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-	starting_colony = pc_polluted
-}
-
-origin_lystheni_order = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
-}
 
 origin_united_anhur_corporations = { 
 	is_origin = yes 
@@ -208,6 +282,10 @@ origin_united_anhur_corporations = {
 		base = 0 
 	} 
 }
+
+#######################
+# WIP ONE PLANET ORGINS #
+#######################
 
 origin_wrill_mining_consortium = { 
 	is_origin = yes 
@@ -246,21 +324,7 @@ origin_asteria_agriculture = {
 	} 
 }
 
-origin_gothones_remnant = { 
-	is_origin = yes 
-	icon = "gfx/interface/icons/origins/origins_default.dds" 
-	picture = GFX_evt_metropolis 
-	random_weight = { 
-		base = 0 
-	} 
 
-	starting_colony = pc_nuked
-
-	playable = {
-		host_has_dlc = "Apocalypse"
-	}
-
-}
 origin_prothean_remnant = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_default.dds"
@@ -321,39 +385,13 @@ origin_bluesuns = {
 	} 
 }
 
-btr_asari_origin_illium = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/btr_asrep_origin.dds"
-	picture = GFX_mec_asari_origin_illium
 
-	initializers = { sys_tasale_init }
-	max_once_global = yes
-	preferred_planet_class_neighbor = no
 
-	description = "btr_origin_tooltip_mec_asari_illium_effects"
-	#Disable various first time events, they're not new to Illium
-	flags = { mec_asari_asi custom_start_screen first_contact_event first_alien_life first_colony Story5 }
 
-	advanced_start = yes
 
-	#random_weight = {
-	#	base = 0
-	#}
-}
 
-btr_origin_getcon = {
-	is_origin = yes
-	icon = "gfx/interface/icons/origins/origins_default.dds"
-	picture = GFX_evt_metropolis
 
-	random_weight = {
-		base = 0
-	}
 
-	modifier = {
-		ship_home_territory_fire_rate_mult = 0.3
-		country_engineering_research_produces_mult = 0.2
-		country_physics_research_produces_mult = 0.1
-		country_society_research_produces_mult = -0.2
-	}
-}
+
+
+
