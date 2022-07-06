@@ -166,6 +166,28 @@ btr_leader_trait_elcor_patience = {
 	icon = "gfx/interface/icons/traits/trait_unknown.dds"
 }
 
+### Hanar Leader Trait
+
+btr_leader_trait_enkindled = {
+	cost = 3
+	    species_potential_add = {
+        always = no
+    }
+
+	modifier = {
+		species_leader_exp_gain = 0.2
+		leader_skill_levels = +2
+		pop_happiness = 0.05
+		pop_government_ethic_attraction = 0.05
+	}
+
+	leader_trait = { admiral general scientist ruler}
+	leader_class = { admiral general scientist ruler }
+
+	icon = "gfx/interface/icons/traits/trait_unknown.dds"
+ }
+
+
 ### Sed'riicae Collective
 # Forayan sticky leader trait
 btr_leader_trait_forayan_poor_soldiers = {
