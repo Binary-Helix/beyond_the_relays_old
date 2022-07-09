@@ -4,13 +4,13 @@
 	ship_names = {
 	
 		generic = {
-			Trum'Pakh Trum'Dolon Trum'Sarim Trum'Doloss Trum'Rokh Trum'Vakhna Trum'Kariss Trum'Poffon Trum'Hariss Trum'Soyob Trum'Dakhan
-			Trum'Voim Trum'Dukh Trum'Vassk Trum'Esam Trum'Cassthar Trum'Barkan Trum'Lampan Trum'Rokba Trum'Histan Trum'Oloman Trum'Okran
-			Trum'Fokin Trum'Farass Trum'Iomath Trum'Mothon Trum'Dialom Trum'Bodnok Trum'Bathnor Trum'Zoyom Trum'Abnar Trum'Reeken
-			Alam'Bissna Alam'Turom Alam'Taratha Alam'Tisska Alam'Purim Alam'Shuss Alam'Parathnak Alam'Gioshum Alam'Korob Alam'Hinthab
-			Alam'Kulom Alam'Avintok Alam'Tannek Alam'Sior Alam'Rossul Alam'Bebinna Alam'Fethon Alam'Polluner Alam'Rastram Alam'Treesk
-			Alam'Enerpul Alam'Buskat Pob'Tirin Pob'Kassh Pob'Onor Pob'Greefad Pob'Minisk Pob'Sumath Pob'Ereesim Pob'Kreedak Pob'Duthur
-			Pob'Hialash Pob'Vermeb Pob'Badram Pob'Buvdar Pob'Tharat Pob'Illith Pob'Vikham Pob'Thorok Pob'Rumber Pob'Ikath
+			KROGAN_SHIP_Trum'Pakh KROGAN_SHIP_Trum'Dolon KROGAN_SHIP_Trum'Sarim KROGAN_SHIP_Trum'Doloss KROGAN_SHIP_Trum'Rokh KROGAN_SHIP_Trum'Vakhna KROGAN_SHIP_Trum'Kariss KROGAN_SHIP_Trum'Poffon KROGAN_SHIP_Trum'Hariss KROGAN_SHIP_Trum'Soyob KROGAN_SHIP_Trum'Dakhan
+			KROGAN_SHIP_Trum'Voim KROGAN_SHIP_Trum'Dukh KROGAN_SHIP_Trum'Vassk KROGAN_SHIP_Trum'Esam KROGAN_SHIP_Trum'Cassthar KROGAN_SHIP_Trum'Barkan KROGAN_SHIP_Trum'Lampan KROGAN_SHIP_Trum'Rokba KROGAN_SHIP_Trum'Histan KROGAN_SHIP_Trum'Oloman KROGAN_SHIP_Trum'Okran
+			KROGAN_SHIP_Trum'Fokin KROGAN_SHIP_Trum'Farass KROGAN_SHIP_Trum'Iomath KROGAN_SHIP_Trum'Mothon KROGAN_SHIP_Trum'Dialom KROGAN_SHIP_Trum'Bodnok KROGAN_SHIP_Trum'Bathnor KROGAN_SHIP_Trum'Zoyom KROGAN_SHIP_Trum'Abnar KROGAN_SHIP_Trum'Reeken
+			KROGAN_SHIP_Alam'Bissna KROGAN_SHIP_Alam'Turom KROGAN_SHIP_Alam'Taratha KROGAN_SHIP_Alam'Tisska KROGAN_SHIP_Alam'Purim KROGAN_SHIP_Alam'Shuss KROGAN_SHIP_Alam'Parathnak KROGAN_SHIP_Alam'Gioshum KROGAN_SHIP_Alam'Korob KROGAN_SHIP_Alam'Hinthab
+			KROGAN_SHIP_Alam'Kulom KROGAN_SHIP_Alam'Avintok KROGAN_SHIP_Alam'Tannek KROGAN_SHIP_Alam'Sior KROGAN_SHIP_Alam'Rossul KROGAN_SHIP_Alam'Bebinna KROGAN_SHIP_Alam'Fethon KROGAN_SHIP_Alam'Polluner KROGAN_SHIP_Alam'Rastram KROGAN_SHIP_Alam'Treesk
+			KROGAN_SHIP_Alam'Enerpul KROGAN_SHIP_Alam'Buskat KROGAN_SHIP_Pob'Tirin KROGAN_SHIP_Pob'Kassh KROGAN_SHIP_Pob'Onor KROGAN_SHIP_Pob'Greefad KROGAN_SHIP_Pob'Minisk KROGAN_SHIP_Pob'Sumath KROGAN_SHIP_Pob'Ereesim KROGAN_SHIP_Pob'Kreedak KROGAN_SHIP_Pob'Duthur
+			KROGAN_SHIP_Pob'Hialash KROGAN_SHIP_Pob'Vermeb KROGAN_SHIP_Pob'Badram KROGAN_SHIP_Pob'Buvdar KROGAN_SHIP_Pob'Tharat KROGAN_SHIP_Pob'Illith KROGAN_SHIP_Pob'Vikham KROGAN_SHIP_Pob'Thorok KROGAN_SHIP_Pob'Rumber KROGAN_SHIP_Pob'Ikath
 		}
 		
 		mining_station = { }
@@ -25,43 +25,43 @@
 
 	fleet_names = {
 		random_names = {
-			"Urdnot Clan Fleet" "Quash Clan Fleet" "Ravanor Clan Fleet" "Thax Clan Fleet" "Khel Clan Fleet" "Raik Clan Fleet" "Drau Clan Fleet" "Jurdon Clan Fleet" "Nakmor Clan Fleet" "Weyrloc Clan Fleet"
+			KROGAN_FLEET_Urdnot_Clan_Fleet KROGAN_FLEET_Quash_Clan_Fleet KROGAN_FLEET_Ravanor_Clan_Fleet KROGAN_FLEET_Thax_Clan_Fleet KROGAN_FLEET_Khel_Clan_Fleet KROGAN_FLEET_Raik_Clan_Fleet KROGAN_FLEET_Drau_Clan_Fleet KROGAN_FLEET_Jurdon_Clan_Fleet KROGAN_FLEET_Nakmor_Clan_Fleet KROGAN_FLEET_Weyrloc_Clan_Fleet
 		}
-		sequential_name = "%O% Clan Fleet"
+		sequential_name = KROGAN_FLEET_Clan_Fleet
 	}
 	
 	army_names = {
 	
 		defense_army = {
-			sequential_name = "%O% Clan "
+			sequential_name = KROGAN_xxClan_ORD
 		}
 			
 		assault_army = {
-			sequential_name = "%O% Berserker"
+			sequential_name = KROGAN_xxBerserker_ORD
 		}
 		
 		slave_army = {
-			sequential_name = "%O% Bondservants"
+			sequential_name = KROGAN_xxBondservants_ORD
 		}
 		
 		clone_army = { 
-			sequential_name = "%O% Berserker"
+			sequential_name = KROGAN_xxBerserker_ORD
 		}
 		
 		robotic_army = {
-			sequential_name = "%O% Assault Nexus"
+			sequential_name = KROGAN_xxAssault_Nexus_ORD
 		}
 		
 		psionic_army = { 
-			sequential_name = "%O% Schaman Adepts"
+			sequential_name = KROGAN_xxShaman_Adepts_ORD
 		}
 		
 		xenomorph_army = {
-			sequential_name = "%O% War Cluster"
+			sequential_name = KROGAN_xxWar_Beasts_ORD
 		}
 		
 		gene_warrior_army = {
-			sequential_name = "%O% Battlemaster"
+			sequential_name = KROGAN_xxBattlemaster_ORD
 		}
 	}
 		
@@ -124,24 +124,24 @@
 			weight = 100
 
 
-			second_names = { Urdnot Weyrloc Thax Talyth Ravanor Raik Quash Nakmor Khel Jurdon Jorgal Hailot Gatatog Ganar Forsan Drau Bragus
+			second_names = { KROGAN_CHAR_Urdnot KROGAN_CHAR_Weyrloc KROGAN_CHAR_Thax KROGAN_CHAR_Talyth KROGAN_CHAR_Ravanor KROGAN_CHAR_Raik KROGAN_CHAR_Quash KROGAN_CHAR_Nakmor KROGAN_CHAR_Khel KROGAN_CHAR_Jurdon KROGAN_CHAR_Jorgal KROGAN_CHAR_Hailot KROGAN_CHAR_Gatatog KROGAN_CHAR_Ganar KROGAN_CHAR_Forsan KROGAN_CHAR_Drau KROGAN_CHAR_Bragus
 			}
 			
 			# Always combined with a first name
-			first_names_male = { Wrex Wreav Grunt Burrum Hurgott Wrang Sorze Thul Wrund Vorak Guld Gand Krulak Srutack Grand Rak Ralax Nax Magor Drand Waar
+			first_names_male = { KROGAN_CHAR_Wrex KROGAN_CHAR_Wreav KROGAN_CHAR_Grunt KROGAN_CHAR_Burrum KROGAN_CHAR_Hurgott KROGAN_CHAR_Wrang KROGAN_CHAR_Sorze KROGAN_CHAR_Thul KROGAN_CHAR_Wrund KROGAN_CHAR_Vorak KROGAN_CHAR_Guld KROGAN_CHAR_Gand KROGAN_CHAR_Krulak KROGAN_CHAR_Srutack KROGAN_CHAR_Grand KROGAN_CHAR_Rak KROGAN_CHAR_Ralax KROGAN_CHAR_Nax KROGAN_CHAR_Magor KROGAN_CHAR_Drand KROGAN_CHAR_Waar
 			}
-			first_names_female = { Wrexa Bakara Wreavi Burrumi Hurgotta Wrange Thuli Wrundi Voraka Gulda Gandu Krulaka Srutacka Granda Raki Ralaxe Naxu Magora Drandu Waare
+			first_names_female = { KROGAN_CHAR_Wrexa KROGAN_CHAR_Bakara KROGAN_CHAR_Wreavi KROGAN_CHAR_Burrumi KROGAN_CHAR_Hurgotta KROGAN_CHAR_Wrange KROGAN_CHAR_Thuli KROGAN_CHAR_Wrundi KROGAN_CHAR_Voraka KROGAN_CHAR_Gulda KROGAN_CHAR_Gandu KROGAN_CHAR_Krulaka KROGAN_CHAR_Srutacka KROGAN_CHAR_Granda KROGAN_CHAR_Raki KROGAN_CHAR_Ralaxe KROGAN_CHAR_Naxu KROGAN_CHAR_Magora KROGAN_CHAR_Drandu KROGAN_CHAR_Waare
 			}
 			
-			regnal_second_names = { Urdnot
+			regnal_second_names = { KROGAN_CHAR_Urdnot
 				
 			}
 			
-			regnal_first_names_female = { Wrexa Wreavi Wrange Wrunda Wrodu Wruxxi Wuraka Wurri Wrarre Waaara Bakara
+			regnal_first_names_female = { KROGAN_CHAR_Wrexa KROGAN_CHAR_Wreavi KROGAN_CHAR_Wrange KROGAN_CHAR_Wrunda KROGAN_CHAR_Wrodu KROGAN_CHAR_Wruxxi KROGAN_CHAR_Wuraka KROGAN_CHAR_Wurri KROGAN_CHAR_Wrarre KROGAN_CHAR_Waaara KROGAN_CHAR_Bakara
 				
 			}
 
-                        regnal_first_names_male = { Wrex Wreav Wrang Wrund Wrod Wruxx Wurak Wurr Wrarr Waar
+            regnal_first_names_male = { KROGAN_CHAR_Wrex KROGAN_CHAR_Wreav KROGAN_CHAR_Wrang KROGAN_CHAR_Wrund KROGAN_CHAR_Wrod KROGAN_CHAR_Wruxx KROGAN_CHAR_Wurak KROGAN_CHAR_Wurr KROGAN_CHAR_Wrarr KROGAN_CHAR_Waar
 				
 			}
 
