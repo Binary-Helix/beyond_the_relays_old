@@ -54,18 +54,18 @@ btr_quarian = {
 		}
 		
 		battleship = {
-			"Wermikar" "Durfaredr" "Larkirm" "Uroaldr" "Myrvort" "Qeemitera" "Drapart"
-			"Kaardral" "Cheiclart" "Pleert pleert" "Aerkatra" "Erishatla" "Norvatredt"
-			"Rewan" "Maaram" "Gimorn" "Xaadin" "Voma" "Weleya" "Nuwib" "Zaador" "Heehala" "Tatalir" "Raebra" 
-			"Xaezay" "Shurah" "Malarm" "Velarm" "Heereh" "Jigro" "Misost" "Jaewa" "Sisost" "Xemorn" "Toyya" 
+			QUARIAN_SHIP_Wermikar QUARIAN_SHIP_Durfaredr QUARIAN_SHIP_Larkirm QUARIAN_SHIP_Uroaldr QUARIAN_SHIP_Myrvort QUARIAN_SHIP_Qeemitera QUARIAN_SHIP_Drapart
+			QUARIAN_SHIP_Kaardral QUARIAN_SHIP_Cheiclart QUARIAN_SHIP_Pleert QUARIAN_SHIP_pleert QUARIAN_SHIP_Aerkatra QUARIAN_SHIP_Erishatla QUARIAN_SHIP_Norvatredt
+			QUARIAN_SHIP_Rewan QUARIAN_SHIP_Maaram QUARIAN_SHIP_Gimorn QUARIAN_SHIP_Xaadin QUARIAN_SHIP_Voma QUARIAN_SHIP_Weleya QUARIAN_SHIP_Nuwib QUARIAN_SHIP_Zaador QUARIAN_SHIP_Heehala QUARIAN_SHIP_Tatalir QUARIAN_SHIP_Raebra
+			QUARIAN_SHIP_Xaezay QUARIAN_SHIP_Shurah QUARIAN_SHIP_Malarm QUARIAN_SHIP_Velarm QUARIAN_SHIP_Heereh QUARIAN_SHIP_Jigro QUARIAN_SHIP_Misost QUARIAN_SHIP_Jaewa QUARIAN_SHIP_Sisost QUARIAN_SHIP_Xemorn QUARIAN_SHIP_Toyya 
 		}
 		
 		science = {
-			"Muuruturut" "Lycarmasia" "Drorkamat" "Lipyralia" "Elcama" "Yqusmin"
+			QUARIAN_SHIP_Muuruturut QUARIAN_SHIP_Lycarmasia QUARIAN_SHIP_Drorkamat QUARIAN_SHIP_Lipyralia QUARIAN_SHIP_Elcama QUARIAN_SHIP_Yqusmin
 		}
 		
 		colonizer = {
-			"Zeerkinot" "Keelimarth" "Murmiteen"
+			QUARIAN_SHIP_Zeerkinot QUARIAN_SHIP_Keelimarth QUARIAN_SHIP_Murmiteen
 		}
 		
 		constructor = {
@@ -76,20 +76,20 @@ btr_quarian = {
 	
 		military_station_small = {
 			random_names = {
-						"Wemaridt Outpost" "Mulporvon Outpost" "Urmific Outpost" "Rotlamapr Outpost" "Qurmachiat Outpost" "Xeformidr Outpost" "Lerpampt Outpost" "Zolcrapat Outpost"
+				QUARIAN_SHIP_Wemaridt_Outpost QUARIAN_SHIP_Mulporvon_Outpost QUARIAN_SHIP_Urmific_Outpost QUARIAN_SHIP_Rotlamapr_Outpost QUARIAN_SHIP_Qurmachiat_Outpost QUARIAN_SHIP_Xeformidr_Outpost QUARIAN_SHIP_Lerpampt_Outpost QUARIAN_SHIP_Zolcrapat_Outpost
 			}
 		}
 	
 		military_station_medium = {
 			random_names = {
-				"Wemaridt Outpost" "Mulporvon Outpost" "Urmific Outpost" "Rotlamapr Outpost" "Qurmachiat Outpost" "Xeformidr Outpost" "Lerpampt Outpost" "Zolcrapat Outpost"
+				QUARIAN_SHIP_Wemaridt_Outpost QUARIAN_SHIP_Mulporvon_Outpost QUARIAN_SHIP_Urmific_Outpost QUARIAN_SHIP_Rotlamapr_Outpost QUARIAN_SHIP_Qurmachiat_Outpost QUARIAN_SHIP_Xeformidr_Outpost QUARIAN_SHIP_Lerpampt_Outpost QUARIAN_SHIP_Zolcrapat_Outpost
 			}
 		}	
 
 	
 		military_station_large = {
 			random_names = {
-				"Wemaridt Outpost" "Mulporvon Outpost" "Urmific Outpost" "Rotlamapr Outpost" "Qurmachiat Outpost" "Xeformidr Outpost" "Lerpampt Outpost" "Zolcrapat Outpost"
+				QUARIAN_SHIP_Wemaridt_Outpost QUARIAN_SHIP_Mulporvon_Outpost QUARIAN_SHIP_Urmific_Outpost QUARIAN_SHIP_Rotlamapr_Outpost QUARIAN_SHIP_Qurmachiat_Outpost QUARIAN_SHIP_Xeformidr_Outpost QUARIAN_SHIP_Lerpampt_Outpost QUARIAN_SHIP_Zolcrapat_Outpost
 			}	
 		}
 	}	
@@ -97,50 +97,46 @@ btr_quarian = {
 	
 	fleet_names = {
 		random_names = {
-			"Claarith Flotilla" "Qormoric Flotilla" "Xirmictian Flotilla" 
-			"Paricnartian Flotilla" "Tyrvirmakin Flotilla" "Lurvimshit Flotilla" 
-			"Luyrmigratian Flotilla" "Werriladrian Flotilla" "Sekarentian Flotilla"
+			QUARIAN_FLEET_Claarith_Flotilla QUARIAN_FLEET_Qormoric_Flotilla QUARIAN_FLEET_Xirmictian_Flotilla
+			QUARIAN_FLEET_Paricnartian_Flotilla QUARIAN_FLEET_Tyrvirmakin_Flotilla QUARIAN_FLEET_Lurvimshit_Flotilla
+			QUARIAN_FLEET_Luyrmigratian_Flotilla QUARIAN_FLEET_Werriladrian_Flotilla QUARIAN_FLEET_Sekarentian_Flotilla
 		}
-		sequential_name = "%O% Flotilla"
+		sequential_name = QUARIAN_FLEETxxFlotilla_ORD
 	}
 
 	###ARMIES
 	army_names = {
 	
 		defense_army = {
-			sequential_name = "%O% Defensive Cast"
+			sequential_name = QUARIAN_ARMYxxDefensive_Cast_ORD
 		}
 			
 		assault_army = {
-			sequential_name = "%O% Offensive Cast"
+			sequential_name = QUARIAN_ARMYxxOffensive_Cast_ORD
 		}
 		
 		slave_army = {
-			sequential_name = "%O% Servitude Swarm"
+			sequential_name = QUARIAN_ARMYxxServitude_Swarm_ORD
 		}
 		
 		clone_army = {
-			sequential_name = "%O% Clone Swarm"
+			sequential_name = QUARIAN_ARMYxxClone_Swarm_ORD
 		}
 		
 		robotic_army = {
-			sequential_name = "%O% Robo-Ticks"
-		}
-		
-		android_army = {
-			sequential_name = "%O% Construct Cast"
+			sequential_name = QUARIAN_ARMYxxRobo_Ticks_ORD
 		}
 		
 		psionic_army = {
-			sequential_name = "%O% Sorcerers"
+			sequential_name = QUARIAN_ARMYxxSorcerers_ORD
 		}
 		
 		xenomorph_army = {
-			sequential_name = "%O% Xeno Cast"
+			sequential_name = QUARIAN_ARMYxxXeno_Cast_ORD
 		}
 		
 		gene_warrior_army = {
-			sequential_name = "%O% Brutes"
+			sequential_name = QUARIAN_ARMYxxBrutes_ORD
 		}
 	}
 	
