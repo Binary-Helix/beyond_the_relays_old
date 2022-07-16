@@ -38,78 +38,6 @@ ASA = {
 	gender = no
 }
 
-HUM = { 
-	archetype = BIOLOGICAL 
-	portraits = { "human" } 
-	graphical_culture = sa_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "HUM" 
-	uplifted_portraits = { "human" } 
-}
-
-VOL = { 
-	archetype = BIOLOGICAL 
-	portraits = { "volus" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "VOL" 
-	uplifted_portraits = { "volus" }
-}
-
-SAL = { 
-	archetype = BIOLOGICAL 
-	portraits = { "salarian" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "SAL" 
-	uplifted_portraits = { "salarian" } 
-}
-
-LYS = { 
-	archetype = BIOLOGICAL 
-	portraits = { "lystheni" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "LYS" 
-	uplifted_portraits = { "lystheni" } 
-}
-
-TUR = { 
-	archetype = BIOLOGICAL 
-	portraits = { "turian" } 
-	graphical_culture = tur_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "TUR" 
-	uplifted_portraits = { "turian" } 
-}
-
-KRO = { 
-	archetype = BIOLOGICAL 
-	portraits = { "krogan" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "KRO" 
-	uplifted_portraits = { "krogan" } 
-}
-
-HAN = { 
-	archetype = BIOLOGICAL 
-	portraits = { "hanar" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "HAN" 
-	uplifted_portraits = { "hanar" } 
-}
-
-DRE = { 
-	archetype = BIOLOGICAL 
-	portraits = { "drell" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "DRE" 
-	uplifted_portraits = { "drell" } 
-}
-
 BAT = { 
 	archetype = BIOLOGICAL 
 	portraits = { "batarian" } 
@@ -117,24 +45,6 @@ BAT = {
 	move_pop_sound_effect = "moving_pop_confirmation" 
 	uplifted_into = "BAT" 
 	uplifted_portraits = { "batarian" } 
-}
-QUA = { 
-	archetype = BIOLOGICAL 
-	portraits = { "quarian" } 
-	graphical_culture = quar_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "QUA" 
-	uplifted_portraits = { "quarian" } 
-}
-
-GTH = { 
-	archetype = MACHINE 
-	portraits = { "geth" } 
-	graphical_culture = geth_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "GTH" 
-	uplifted_portraits = { "geth" } 
-	gender = no
 }
 
 COL = { 
@@ -147,22 +57,13 @@ COL = {
 	gender = no
 }
 
-VOR = { 
+DRE = { 
 	archetype = BIOLOGICAL 
-	portraits = { "vorcha" } 
+	portraits = { "drell" } 
 	graphical_culture = mammalian_01 
 	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "VOR" 
-	uplifted_portraits = { "vorcha" } 
-}
-
-PRO = { 
-	archetype = BIOLOGICAL 
-	portraits = { "prothean" } 
-	graphical_culture = mammalian_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "PRO" 
-	uplifted_portraits = { "prothean" } 
+	uplifted_into = "DRE" 
+	uplifted_portraits = { "drell" } 
 }
 
 ELC = { 
@@ -174,33 +75,14 @@ ELC = {
 	uplifted_portraits = { "elcor" } 
 }
 
-YAH = { 
-	archetype = BIOLOGICAL 
-	portraits = { "yahg" } 
-	graphical_culture = mammalian_01 
+GTH = { 
+	archetype = MACHINE 
+	portraits = { "geth" } 
+	graphical_culture = geth_01 
 	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "YAH" 
-	uplifted_portraits = { "yahg" } 
-}
-
-# HSK = { 
-# 	archetype = SYNTHETIC 
-# 	playable = { always = no } 
-# 	portraits = { "husk" } 
-# 	graphical_culture = mammalian_01 
-# 	move_pop_sound_effect = "moving_pop_confirmation" 
-# 	uplifted_into = "HSK" 
-# 	uplifted_portraits = { "husk" } 
-# 	gender = no
-# }
-
-RAC = { 
-	archetype = BIOLOGICAL 
-	portraits = { "rachni" } 
-	graphical_culture = molluscoid_01 
-	move_pop_sound_effect = "moving_pop_confirmation" 
-	uplifted_into = "RAC" 
-	uplifted_portraits = { "rachni" } 
+	uplifted_into = "GTH" 
+	uplifted_portraits = { "geth" } 
+	gender = no
 }
 
 GOT = { 
@@ -212,6 +94,105 @@ GOT = {
 	uplifted_portraits = { "gothones" } 
 }
 
+HAN = { 
+	archetype = BIOLOGICAL 
+	portraits = { "hanar" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "HAN" 
+	uplifted_portraits = { "hanar" } 
+}
+
+KRO = { 
+	archetype = BIOLOGICAL 
+	portraits = { "krogan" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "KRO" 
+	uplifted_portraits = { "krogan" } 
+}
+
+LYS = { 
+	archetype = BIOLOGICAL 
+	portraits = { "lystheni" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "LYS" 
+	uplifted_portraits = { "lystheni" } 
+}
+
+QUA = { 
+	archetype = BIOLOGICAL 
+	portraits = { "quarian" } 
+	graphical_culture = quar_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "QUA" 
+	uplifted_portraits = { "quarian" } 
+}
+
+SAL = { 
+	archetype = BIOLOGICAL 
+	portraits = { "salarian" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "SAL" 
+	uplifted_portraits = { "salarian" } 
+}
+
+TUR = { 
+	archetype = BIOLOGICAL 
+	portraits = { "turian" } 
+	graphical_culture = tur_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "TUR" 
+	uplifted_portraits = { "turian" } 
+}
+
+VOL = { 
+	archetype = BIOLOGICAL 
+	portraits = { "volus" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "VOL" 
+	uplifted_portraits = { "volus" }
+}
+
+VOR = { 
+	archetype = BIOLOGICAL 
+	portraits = { "vorcha" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "VOR" 
+	uplifted_portraits = { "vorcha" } 
+}
+
+YAH = { 
+	archetype = BIOLOGICAL 
+	portraits = { "yahg" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "YAH" 
+	uplifted_portraits = { "yahg" } 
+}
+
+HUM = { 
+	archetype = BIOLOGICAL 
+	portraits = { "human" } 
+	graphical_culture = sa_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "HUM" 
+	uplifted_portraits = { "human" } 
+}
+
+RAC = { 
+	archetype = BIOLOGICAL 
+	portraits = { "rachni" } 
+	graphical_culture = molluscoid_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "RAC" 
+	uplifted_portraits = { "rachni" } 
+}
+
 SED = {
 	archetype = BIOLOGICAL
 	portraits = { "art3" }
@@ -220,4 +201,13 @@ SED = {
 	uplifted_into = "SED"
 	uplifted_portraits = { "art3" }
 	gender = no
+}
+
+PRO = { 
+	archetype = BIOLOGICAL 
+	portraits = { "prothean" } 
+	graphical_culture = mammalian_01 
+	move_pop_sound_effect = "moving_pop_confirmation" 
+	uplifted_into = "PRO" 
+	uplifted_portraits = { "prothean" } 
 }
