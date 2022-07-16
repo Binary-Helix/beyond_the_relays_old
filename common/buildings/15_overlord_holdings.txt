@@ -74,25 +74,7 @@ holding_orbital_assembly_complex = {
 		}
 		upkeep = {
 			energy = @b1_upkeep
-			minerals = 10
-		}
-		produces = {
-			trigger = {
-				overlord_has_num_constructors_in_orbit = { NUM = 1 }
-			}
-			alloys = 3
-		}
-		produces = {
-			trigger = {
-				overlord_has_num_constructors_in_orbit = { NUM = 2 }
-			}
-			alloys = 6
-		}
-		produces = {
-			trigger = {
-				overlord_has_more_than_num_constructors_in_orbit = { NUM = 2 }
-			}
-			alloys = 9
+			alloys = 5
 		}
 	}
 
@@ -100,35 +82,8 @@ holding_orbital_assembly_complex = {
 		planet_building_build_speed_mult = 0.10
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			overlord_has_num_constructors_in_orbit = { NUM = 1 }
-		}
-		modifier = {
-			planet_building_build_speed_mult = 0.10
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			overlord_has_num_constructors_in_orbit = { NUM = 2 }
-		}
-		modifier = {
-			planet_building_build_speed_mult = 0.20
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			overlord_has_more_than_num_constructors_in_orbit = { NUM = 2 }
-		}
-		modifier = {
-			planet_building_build_speed_mult = 0.30
-		}
-	}
-
 	triggered_desc = {
-		text = holding_orbital_assembly_complex_constructors_desc
+		text = holding_orbital_assembly_complex_effect
 	}
 }
 
@@ -832,7 +787,7 @@ holding_overlord_vigil_command = {
 	base_buildtime = @b2_time
 	owner_type = subject_holding
 	icon = holding_overlord_vigil_command
-	base_cap_amount = 1
+	empire_limit = 1
 
 	potential = {
 		has_overlord_dlc = yes
@@ -939,7 +894,7 @@ holding_parasitic_algorithms = {
 	base_buildtime = @b2_time
 	owner_type = subject_holding
 	icon = holding_parasitic_algorithms
-	base_cap_amount = 1
+	empire_limit = 1
 
 	potential = {
 		has_overlord_dlc = yes
@@ -980,52 +935,16 @@ holding_parasitic_algorithms = {
 		monthly_loyalty = -1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			overlord_has_num_science_ships_in_orbit = { NUM = 1 }
-		}
-		modifier = {
-			monthly_loyalty = -0.5
+	on_built = {
+		planet = {
+			set_planet_flag = has_science_ministry
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			overlord_has_num_science_ships_in_orbit = { NUM = 2 }
+	on_destroy = {
+		planet = {
+			remove_planet_flag = has_science_ministry
 		}
-		modifier = {
-			monthly_loyalty = -1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			overlord_has_more_than_num_science_ships_in_orbit = { NUM = 2 }
-		}
-		modifier = {
-			monthly_loyalty = -1.5
-		}
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			overlord_has_num_science_ships_in_orbit = { NUM = 1 }
-		}
-		all_technology_research_speed = 0.03
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			overlord_has_num_science_ships_in_orbit = { NUM = 2 }
-		}
-		all_technology_research_speed = 0.06
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			overlord_has_more_than_num_science_ships_in_orbit = { NUM = 2 }
-		}
-		all_technology_research_speed = 0.09
 	}
 
 	destroy_trigger = {
@@ -1221,114 +1140,114 @@ holding_communal_housing_outreach = {
 	}
 }
 
-# holding_idyllic_bloom = {
-# 	base_buildtime = @b1_time
-# 	owner_type = subject_holding
-# 	icon = building_gaiaseeders_4
-# 	base_cap_amount = 1
+holding_idyllic_bloom = {
+	base_buildtime = @b1_time
+	owner_type = subject_holding
+	icon = building_gaiaseeders_4
+	base_cap_amount = 1
 
-# 	resources = {
-# 		category = planet_holdings
-# 		cost = {
-# 			energy = 1500
-# 			# exotic_gases = @b4_rare_cost
-# 		}
-# 		upkeep = {
-# 			energy = 20
-# 			# exotic_gases = @b3_rare_upkeep
-# 			multiplier = value:overlord_gaiaseeder_upkeep
-# 		}
-# 	}
+	resources = {
+		category = planet_holdings
+		cost = {
+			energy = 1500
+			# exotic_gases = @b4_rare_cost
+		}
+		upkeep = {
+			energy = 20
+			# exotic_gases = @b3_rare_upkeep
+			multiplier = value:overlord_gaiaseeder_upkeep
+		}
+	}
 
-# 	potential = {
-# 		exists = owner
-# 		owner.overlord = {
-# 			is_country_type = default
-# 			OR = {
-# 				has_valid_civic = civic_idyllic_bloom
-# 				has_valid_civic = civic_hive_idyllic_bloom
-# 			}
-# 		}
-# 		NOR = {
-# 			is_planet_class = pc_gaia
-# 			is_planet_class = pc_city
-# 			is_planet_class = pc_hive
-# 			is_planet_class = pc_machine
-# 			is_planet_class = pc_relic
-# 		}
-# 		is_artificial = no
-# 	}
+	potential = {
+		exists = owner
+		owner.overlord = {
+			is_country_type = default
+			OR = {
+				has_valid_civic = civic_idyllic_bloom
+				has_valid_civic = civic_hive_idyllic_bloom
+			}
+		}
+		NOR = {
+			is_planet_class = pc_gaia
+			is_planet_class = pc_city
+			is_planet_class = pc_hive
+			is_planet_class = pc_machine
+			is_planet_class = pc_relic
+		}
+		is_artificial = no
+	}
 
-# 	planet_modifier = {
-# 		pop_environment_tolerance = 0.2
-# 	}
+	planet_modifier = {
+		pop_environment_tolerance = 0.2
+	}
 
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = planet.owner
-# 			planet.owner = {
-# 				has_ascension_perk = ap_hydrocentric
-# 			}
-# 		}
-# 		monthly_loyalty = -0.5
-# 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = {
+				has_ascension_perk = ap_hydrocentric
+			}
+		}
+		monthly_loyalty = -0.5
+	}
 
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = planet.owner
-# 			planet.owner = {
-# 				NOT = { has_ascension_perk = ap_hydrocentric }
-# 			}
-# 		}
-# 		monthly_loyalty = 1
-# 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+			planet.owner = {
+				NOT = { has_ascension_perk = ap_hydrocentric }
+			}
+		}
+		monthly_loyalty = 1
+	}
 
-# 	on_built = {
-# 		planet = {
-# 			set_timed_planet_flag = {
-# 				flag = anti_cheese_idyllic_bloom_flag
-# 			days = 3599
-# 			}
-# 			set_saved_date = {
-# 				key = idyllic_bloom_holding_timer
-# 				days_from_present = 3600
-# 				expires = 3600
-# 			}
-# 		}
-# 		owner.overlord = {
-# 			country_event = {
-# 				id = plant.105
-# 				days = 3600
-# 			}
-# 		}
-# 	}
-# 	on_destroy = {
-# 		planet = {
-# 			remove_planet_flag = anti_cheese_idyllic_bloom_flag
-# 		}
-# 	}
-# 	triggered_desc = {
-# 		trigger = {
-# 			planet = {
-# 				has_planet_flag = anti_cheese_idyllic_bloom_flag
-# 			}
-# 		}
-# 		text = holding_idyllic_bloom_effect_timer
-# 	}
-# 	triggered_desc = {
-# 		trigger = {
-# 			planet = {
-# 				NOT = {
-# 					has_planet_flag = anti_cheese_idyllic_bloom_flag
-# 				}
-# 			}
-# 		}
-# 		text = holding_idyllic_bloom_effect
-# 	}
-# 	allow = {
-# 		can_build_overlord_gaiaseeder = yes
-# 	}
-# }
+	on_built = {
+		planet = {
+			set_timed_planet_flag = {
+				flag = anti_cheese_idyllic_bloom_flag
+			days = 3599
+			}
+			set_saved_date = {
+				key = idyllic_bloom_holding_timer
+				days_from_present = 3600
+				expires = 3600
+			}
+		}
+		owner.overlord = {
+			country_event = {
+				id = plant.105
+				days = 3600
+			}
+		}
+	}
+	on_destroy = {
+		planet = {
+			remove_planet_flag = anti_cheese_idyllic_bloom_flag
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			planet = {
+				has_planet_flag = anti_cheese_idyllic_bloom_flag
+			}
+		}
+		text = holding_idyllic_bloom_effect_timer
+	}
+	triggered_desc = {
+		trigger = {
+			planet = {
+				NOT = {
+					has_planet_flag = anti_cheese_idyllic_bloom_flag
+				}
+			}
+		}
+		text = holding_idyllic_bloom_effect
+	}
+	allow = {
+		can_build_overlord_gaiaseeder = yes
+	}
+}
 
 holding_reemployment_center = {
 	base_buildtime = @b1_time
@@ -1380,6 +1299,13 @@ holding_reemployment_center = {
 	}
 	triggered_desc = {
 		text = job_overlord_reassigner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			has_planet_flag = reemployment_center_timer
+		}
+		text = holding_reemployment_center_effect
 	}
 }
 
