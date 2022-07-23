@@ -233,58 +233,58 @@ cb_despoliation = {
 	}
 }
 
-cb_colossus = {
-	show_in_diplomacy = no
-	show_notification = no
-	potential = {
-		is_country_type = default
-		has_technology = "tech_colossus"
-		has_policy_flag = unrestricted_wars
-		NOT = { is_in_federation_with = from }
-	}
-	is_valid = {
-		has_total_war_cb = no
-		NOT = { is_overlord_to = FROM }
-		OR = {
-			is_subject = no
-			overlord = { NOT = { is_same_value = from } }
-		}
-		any_owned_fleet = {
-			is_ship_class = shipclass_military_special
-			any_owned_ship = { is_ship_size = colossus }
-		}
-	}
-}
+# cb_colossus = {
+# 	show_in_diplomacy = no
+# 	show_notification = no
+# 	potential = {
+# 		is_country_type = default
+# 		has_technology = "tech_colossus"
+# 		has_policy_flag = unrestricted_wars
+# 		NOT = { is_in_federation_with = from }
+# 	}
+# 	is_valid = {
+# 		has_total_war_cb = no
+# 		NOT = { is_overlord_to = FROM }
+# 		OR = {
+# 			is_subject = no
+# 			overlord = { NOT = { is_same_value = from } }
+# 		}
+# 		any_owned_fleet = {
+# 			is_ship_class = shipclass_military_special
+# 			any_owned_ship = { is_ship_size = colossus }
+# 		}
+# 	}
+# }
 
-cb_stop_colossus = {
-	show_in_diplomacy = no
-	show_notification = no
-	potential = {
-		is_country_type = default
-		NOT = { is_in_federation_with = from }
-	}
-	is_valid = {
-		has_total_war_cb = no
-		from = { is_country_type = default }
-		NOT = { is_overlord_to = FROM }
-		OR = {
-			is_subject = no
-			overlord = { NOT = { is_same_value = from } }
-		}
-		from = {
-			any_owned_fleet = {
-				is_ship_class = shipclass_military_special
-				any_owned_ship = { is_ship_size = colossus }
-			}
-		}
-		NOT = {
-			any_owned_fleet = {
-				is_ship_class = shipclass_military_special
-				any_owned_ship = { is_ship_size = colossus }
-			}
-		}
-	}
-}
+# cb_stop_colossus = {
+# 	show_in_diplomacy = no
+# 	show_notification = no
+# 	potential = {
+# 		is_country_type = default
+# 		NOT = { is_in_federation_with = from }
+# 	}
+# 	is_valid = {
+# 		has_total_war_cb = no
+# 		from = { is_country_type = default }
+# 		NOT = { is_overlord_to = FROM }
+# 		OR = {
+# 			is_subject = no
+# 			overlord = { NOT = { is_same_value = from } }
+# 		}
+# 		from = {
+# 			any_owned_fleet = {
+# 				is_ship_class = shipclass_military_special
+# 				any_owned_ship = { is_ship_size = colossus }
+# 			}
+# 		}
+# 		NOT = {
+# 			any_owned_fleet = {
+# 				is_ship_class = shipclass_military_special
+# 				any_owned_ship = { is_ship_size = colossus }
+# 			}
+# 		}
+# 	}
+# }
 
 cb_containment = {
 	show_in_diplomacy = no
@@ -408,4 +408,45 @@ cb_end_threat_renegade_containment = {
 			overlord = { NOT = { is_same_value = from } }
 		}
 	}
+}
+
+# cb_revenge_for_eaten_star = {
+#     show_in_diplomacy = yes
+#     show_notification = yes
+#     potential = {
+#         is_country_type = default
+#         has_country_flag = knows_who_infested_star
+#         from = {
+#             has_country_flag = infested_star@root
+#         }
+#     }
+#     is_valid = {
+#         has_total_war_cb = yes
+#         NOT = { is_overlord_to = FROM }
+#         OR = {
+#             is_subject = no
+#             overlord = { NOT = { is_same_value = from } }
+#         }
+#     }
+# }
+
+# cb_end_threat_revenge_for_eaten_star = {
+#     show_in_diplomacy = no
+#     show_notification = no
+#     potential = {
+#         always = no
+#     }
+# }
+
+cb_allegiance = {
+    show_in_diplomacy = no
+    show_notification = no
+    potential = {
+        is_country_type = default
+    }
+    is_valid = {
+        has_secret_fealty_from_subject_of = from
+        is_subject = no
+        NOT = { is_in_federation_with = from }
+    }
 }
