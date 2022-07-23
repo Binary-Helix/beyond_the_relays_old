@@ -2128,10 +2128,10 @@ embassy_upkeep_affordable = {
 		resource = energy
 		value > @b2_upkeep
 	}
-	has_monthly_income = {
-		resource = rare_crystals
-		value >= @b2_rare_upkeep
-	}
+	# has_monthly_income = {
+	# 	resource = rare_crystals
+	# 	value >= @b2_rare_upkeep
+	# }
 }
 
 enigmatic_modifier_jobs = { # Only pops with jobs affecting resources without modifiers qualify for enigmatic uplifting negative production modifiers.
