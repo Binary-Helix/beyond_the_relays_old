@@ -1,0 +1,83 @@
+# Agreement terms are the different terms that can be negotiated in Agreements, such as Subject Agreements.
+# This file only defines which terms can be negotiated. The different options for the terms are defined in agreement_term_values scripts.
+
+# Example:
+#
+# name_of_term = {
+# 	# This defines how the term will show up in the UI. If it shows up as discrete/separate buttons or if it's a scale.
+# 	# Supported values: discrete, discrete_number, specialist_type
+# 	term_type = discrete 
+# 	# Whether the term should show up on the agreement negotiation screen (default: no)
+# 	hidden = yes/no
+# }
+
+specialist_type = {
+	term_type = specialist_type
+	hidden = yes
+}
+
+subject_integration = {
+	term_type = discrete
+}
+
+subject_diplomacy = {
+	term_type = discrete
+}
+
+subject_expand = {
+	term_type = discrete
+}
+
+resource_subsidies = {
+	term_type = resource
+}
+
+joins_overlord_wars = {
+	term_type = discrete
+}
+
+joins_subject_wars = {
+	term_type = discrete
+}
+
+subject_holdings_limit = {
+	term_type = discrete_number
+}
+
+subject_sensors = {
+	term_type = discrete
+}
+
+################
+# HIDDEN TERMS #
+################
+
+protectorate = {
+	term_type = discrete
+	hidden = yes
+}
+
+subject_loyalty = {
+	term_type = discrete
+	hidden = yes
+}
+
+has_access = {
+	term_type = discrete
+	hidden = yes
+}
+
+subject_xenophobe = {
+	term_type = discrete
+	hidden = yes
+}
+
+subject_pompous = {
+	term_type = discrete
+	hidden = yes
+}
+
+naval_capacity = {
+	term_type = discrete
+	hidden = yes
+}
