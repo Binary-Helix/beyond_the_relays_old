@@ -1,0 +1,470 @@
+#Enclaves, Pirates, Tiyanki, Amoebas and the like go in here
+
+
+# enclaves - start off event
+enclave_stage_1 = {
+	icon = GFX_firstcontact_icon_progress
+	picture = GFX_evt_star_chart
+
+	difficulty = 3
+
+	stage_event = {
+		summary = fcsum_enclave_1
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.1
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = early_fc_random_events }
+	}
+}
+
+#enclaves finish
+enclave_stage_2 = {
+	icon = GFX_firstcontact_icon_success
+	picture = GFX_evt_satellite_in_orbit
+
+	difficulty = 5
+
+	stage_event = {
+		summary = fcsum_comms_established
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.5
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = late_fc_random_events }
+	}
+}
+
+
+# # tiyanki - start off event
+# tiyanki_stage_1 = {
+# 	icon = GFX_firstcontact_icon_progress
+# 	picture = GFX_evt_star_chart
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_tiyanki_1
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.10
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+# #tiyanki finish
+# tiyanki_stage_2 = {
+# 	icon = GFX_firstcontact_icon_success
+# 	picture = GFX_evt_unidentified_monster
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_tiyanki_2
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.15
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+
+# # amoeba - start off event
+# amoeba_stage_1 = {
+# 	icon = GFX_firstcontact_icon_progress
+# 	picture = GFX_evt_star_chart
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_amoeba_1
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.20
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+# #amoeba finish
+# amoeba_stage_2 = {
+# 	icon = GFX_firstcontact_icon_success
+# 	picture = GFX_evt_unidentified_monster
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_amoeba_2
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.25
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+
+# # crystals - start off event
+# crystals_stage_1 = {
+# 	icon = GFX_firstcontact_icon_progress
+# 	picture = GFX_evt_star_chart
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_crystals_1
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.30
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+# #crystals finish
+# crystals_stage_2 = {
+# 	icon = GFX_firstcontact_icon_success
+# 	picture = GFX_evt_space_crystals
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_crystals_2
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.35
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+
+# drones - start off event
+drones_stage_1 = {
+	icon = GFX_firstcontact_icon_progress
+	picture = GFX_evt_star_chart
+
+	difficulty = 3
+
+	stage_event = {
+		summary = fcsum_drones_1
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.40
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+	}
+}
+
+#drones finish
+drones_stage_2 = {
+	icon = GFX_firstcontact_icon_success
+	picture = GFX_evt_ship_in_orbit
+
+	difficulty = 5
+
+	stage_event = {
+		summary = fcsum_drones_2
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.45
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+	}
+}
+
+
+# marauders - start off event
+marauders_stage_1 = {
+	icon = GFX_firstcontact_icon_progress
+	picture = GFX_evt_star_chart
+
+	difficulty = 3
+
+	stage_event = {
+		summary = fcsum_marauders_1
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.50
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = early_fc_random_events }
+	}
+}
+
+#marauders finish
+marauders_stage_2 = {
+	icon = GFX_firstcontact_icon_success
+	picture = GFX_evt_pirates_attacking_cargo
+
+	difficulty = 5
+
+	stage_event = {
+		summary = fcsum_comms_established
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.55
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = late_fc_random_events }
+	}
+}
+
+
+# pirates - start off event
+pirates_stage_1 = {
+	icon = GFX_firstcontact_icon_progress
+	picture = GFX_evt_star_chart
+
+	difficulty = 3
+
+	stage_event = {
+		summary = fcsum_pirates_1
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.60
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = early_fc_random_events }
+	}
+}
+
+#pirates finish
+pirates_stage_2 = {
+	icon = GFX_firstcontact_icon_success
+	picture = GFX_evt_pirates_attacking_cargo
+
+	difficulty = 5
+
+	stage_event = {
+		summary = fcsum_comms_established
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.65
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = late_fc_random_events }
+	}
+}
+
+
+# caravaneers - start off event
+caravaneers_stage_1 = {
+	icon = GFX_firstcontact_icon_progress
+	picture = GFX_evt_star_chart
+
+	difficulty = 3
+
+	stage_event = {
+		summary = fcsum_caravaneers_1
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.70
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = early_fc_random_events }
+	}
+}
+
+#caravaneers finish
+caravaneers_stage_2 = {
+	icon = GFX_firstcontact_icon_success
+	picture = GFX_evt_cargoship_caravan
+
+	difficulty = 5
+
+	stage_event = {
+		summary = fcsum_comms_established
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.75
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = late_fc_random_events }
+	}
+}
+
+
+# # void clouds - start off event
+# void_clouds_stage_1 = {
+# 	icon = GFX_firstcontact_icon_progress
+# 	picture = GFX_evt_star_chart
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_void_clouds_1
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.80
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+# #void clouds finish
+# void_clouds_stage_2 = {
+# 	icon = GFX_firstcontact_icon_success
+# 	picture = GFX_evt_binary_stars
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_void_clouds_2
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = first_contact_critters.85
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = space_fauna_fc_random_events }
+# 	}
+# }
+
+
+# nomads - start off event
+nomad_stage_1 = {
+	icon = GFX_firstcontact_icon_progress
+	picture = GFX_evt_star_chart
+
+	difficulty = 3
+
+	stage_event = {
+		summary = fcsum_nomads_1
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.90
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = early_fc_random_events }
+	}
+}
+
+#nomads finish
+nomad_stage_2 = {
+	icon = GFX_firstcontact_icon_success
+	picture = GFX_evt_cargoship_caravan
+
+	difficulty = 7
+
+	stage_event = {
+		summary = fcsum_comms_established
+		event_weight = {
+			weight = 1
+		}
+		event = first_contact_critters.95
+	}
+
+	on_roll_failed = {
+		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = late_fc_random_events }
+	}
+}
+
+
+# #Here Be Dragons
+# origin_dragon_stage_1 = {
+# 	icon = GFX_firstcontact_icon_progress
+# 	picture = GFX_evt_star_chart
+
+# 	difficulty = 3
+
+# 	stage_event = {
+# 		summary = fcsum_origin_dragon_1
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = aquatics.255
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = dragon_random_events }
+# 	}
+# }
+
+# origin_dragon_stage_2 = {
+# 	icon = GFX_firstcontact_icon_question
+# 	picture = GFX_evt_star_chart
+
+# 	difficulty = 8
+
+# 	stage_event = {
+# 		summary = fcsum_origin_dragon_2
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = aquatics.260
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = dragon_random_events }
+# 	}
+# }
+
+# origin_dragon_finish = {
+# 	icon = GFX_firstcontact_icon_success
+# 	picture = GFX_evt_star_chart
+
+# 	difficulty = 8
+
+# 	stage_event = {
+# 		summary = fcsum_origin_dragon_3
+# 		event_weight = {
+# 			weight = 1
+# 		}
+# 		event = aquatics.265
+# 	}
+
+# 	on_roll_failed = {
+# 		standard_first_contact_on_roll_failed = { RANDOM_EVENTS = dragon_random_events }
+# 	}
+# }
