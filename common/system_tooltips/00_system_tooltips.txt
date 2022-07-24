@@ -1,0 +1,32 @@
+#root = system
+#from = player
+ice_tooltip = {
+	custom_tooltip = {
+		success_text = has_ice_source
+
+		exists = from
+		from = {
+			has_ascension_perk = ap_hydrocentric
+		}
+
+		OR = {
+			has_planet_class = pc_ice_asteroid
+			has_planet_class = pc_frozen
+		}
+	}
+}
+
+terraforming_tooltip = {
+	custom_tooltip = {
+		success_text = has_terraforming_candidate
+
+		exists = from
+		from = {
+			has_technology = tech_climate_restoration
+		}
+		
+		any_system_planet = { 
+			has_modifier = terraforming_candidate 
+		}
+	}
+}
