@@ -721,10 +721,10 @@ terraforming_candidate_category = {
 			OR = {
 				is_planet_class = pc_barren
 				is_planet_class = pc_barren_cold
-				AND = {
-					is_planet_class = pc_frozen
-					from.owner = { has_ascension_perk = ap_hydrocentric }
-				}
+				# AND = {
+				# 	is_planet_class = pc_frozen
+				# 	from.owner = { has_ascension_perk = ap_hydrocentric }
+				# }
 			}
 			planet_size > 9
 			planet_size < 26

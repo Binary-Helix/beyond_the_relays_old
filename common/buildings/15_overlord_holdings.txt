@@ -1182,25 +1182,25 @@ holding_idyllic_bloom = {
 		pop_environment_tolerance = 0.2
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet.owner
-			planet.owner = {
-				has_ascension_perk = ap_hydrocentric
-			}
-		}
-		monthly_loyalty = -0.5
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = planet.owner
+	# 		planet.owner = {
+	# 			has_ascension_perk = ap_hydrocentric
+	# 		}
+	# 	}
+	# 	monthly_loyalty = -0.5
+	# }
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet.owner
-			planet.owner = {
-				NOT = { has_ascension_perk = ap_hydrocentric }
-			}
-		}
-		monthly_loyalty = 1
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = planet.owner
+	# 		planet.owner = {
+	# 			NOT = { has_ascension_perk = ap_hydrocentric }
+	# 		}
+	# 	}
+	# 	monthly_loyalty = 1
+	# }
 
 	on_built = {
 		planet = {
