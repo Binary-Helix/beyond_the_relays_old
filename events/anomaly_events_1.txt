@@ -63,11 +63,11 @@ ship_event = {
 				min = @tier1materialmin
 				max = @tier1materialmax
 			}
-			pop_lcluster_event = yes
-			if = {
-				limit = { has_ancrel = yes }
-				small_artifact_reward = yes
-			}
+			# pop_lcluster_event = yes
+			# if = {
+			# 	limit = { has_ancrel = yes }
+			# 	small_artifact_reward = yes
+			# }
 		}
 	}
 }
@@ -204,9 +204,9 @@ ship_event = {
 		FROM = {
 			set_deposit = d_minerals_3
 		}
-		owner = {
-			pop_lcluster_event = yes
-		}
+		# owner = {
+		# 	pop_lcluster_event = yes
+		# }
 	}
 }
 
