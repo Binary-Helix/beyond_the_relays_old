@@ -3372,57 +3372,57 @@ country_event = {
 
 # space shanty anomaly trigger
 
-ship_event = {
-	id = anomaly.7020
-	title = anomaly.7020.name
-	desc = anomaly.7020.desc
-	picture = GFX_evt_star_neutron
-	show_sound = event_ship_bridge
-	location = FROM
-	trackable = yes
+# ship_event = {
+# 	id = anomaly.7020
+# 	title = anomaly.7020.name
+# 	desc = anomaly.7020.desc
+# 	picture = GFX_evt_star_neutron
+# 	show_sound = event_ship_bridge
+# 	location = FROM
+# 	trackable = yes
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	immediate = {
-		from = { clear_deposits = yes }
-	}
+# 	immediate = {
+# 		from = { clear_deposits = yes }
+# 	}
 
-	option = {
-		name = anomaly.7020.a
-		if = {
-			limit = {
-				owner = { is_regular_empire = yes }
-			}
-			from = { create_archaeological_site = site_space_shanty_dig }
-		}
-	}
-}
+# 	option = {
+# 		name = anomaly.7020.a
+# 		if = {
+# 			limit = {
+# 				owner = { is_regular_empire = yes }
+# 			}
+# 			from = { create_archaeological_site = site_space_shanty_dig }
+# 		}
+# 	}
+# }
 
 # rage sage anomaly trigger
 
-ship_event = {
-	id = anomaly.7030
-	title = anomaly.7030.name
-	desc = anomaly.7030.desc
-	picture = GFX_evt_physics_cache
-	show_sound = event_ship_bridge
-	location = FROM
-	trackable = yes
+# ship_event = {
+# 	id = anomaly.7030
+# 	title = anomaly.7030.name
+# 	desc = anomaly.7030.desc
+# 	picture = GFX_evt_physics_cache
+# 	show_sound = event_ship_bridge
+# 	location = FROM
+# 	trackable = yes
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
     
 
-	immediate = {
-		from = { clear_deposits = yes }
-	}
+# 	immediate = {
+# 		from = { clear_deposits = yes }
+# 	}
 
-	option = {
-		name = anomaly.7030.desc.a
-		if = {
-			limit = {
-				owner = { is_regular_empire = yes }
-			}
-			from = { create_archaeological_site = site_rage_sage_dig }
-		}
-	}
-}
+# 	option = {
+# 		name = anomaly.7030.desc.a
+# 		if = {
+# 			limit = {
+# 				owner = { is_regular_empire = yes }
+# 			}
+# 			from = { create_archaeological_site = site_rage_sage_dig }
+# 		}
+# 	}
+# }
