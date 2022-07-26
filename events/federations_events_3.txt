@@ -443,55 +443,55 @@ planet_event = { #Wenkwort's enforcer fleet is about to arrive
 ### Relic Rails ###
 
 # Trigger Event
-planet_event = {
-	id = federations3.1000
-	hide_window = yes
-	is_triggered_only = yes
+# planet_event = {
+# 	id = federations3.1000
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		has_ancrel = yes
-		owner = { is_ai = no }
-		NOT = {
-			any_country = {
-				has_country_flag = triggered_relicrails_digsite
-			}
-		}
-		root = {
-			NOR = {
-				exists = archaeological_site
-				has_planet_flag = suppress_archaeological_sites
-				is_planet_class = pc_ringworld_habitable
-				is_planet_class = pc_cybrex
-				is_planet_class = pc_habitat
-				is_capital = yes
-			}
-			is_colony = yes
-			num_pops < 30
-			OR = {
-				last_building_changed = building_luxury_residence
-				last_building_changed = building_communal_housing
-				last_building_changed = building_drone_storage
-				last_building_changed = building_hive_warren
-				last_building_changed = building_slave_huts
-			}
-		}
-	}
+# 	trigger = {
+# 		has_ancrel = yes
+# 		owner = { is_ai = no }
+# 		NOT = {
+# 			any_country = {
+# 				has_country_flag = triggered_relicrails_digsite
+# 			}
+# 		}
+# 		root = {
+# 			NOR = {
+# 				exists = archaeological_site
+# 				has_planet_flag = suppress_archaeological_sites
+# 				is_planet_class = pc_ringworld_habitable
+# 				is_planet_class = pc_cybrex
+# 				is_planet_class = pc_habitat
+# 				is_capital = yes
+# 			}
+# 			is_colony = yes
+# 			num_pops < 30
+# 			OR = {
+# 				last_building_changed = building_luxury_residence
+# 				last_building_changed = building_communal_housing
+# 				last_building_changed = building_drone_storage
+# 				last_building_changed = building_hive_warren
+# 				last_building_changed = building_slave_huts
+# 			}
+# 		}
+# 	}
 
-	immediate = {
-		random_list = {
-			1 = {
-				planet_event = {
-					id = federations3.1005
-					days = 3
-				}
-				owner = {
-					set_country_flag = triggered_relicrails_digsite
-				}
-			}
-			25 = { }
-		}
-	}
-}
+# 	# immediate = {
+# 	# 	random_list = {
+# 	# 		1 = {
+# 	# 			planet_event = {
+# 	# 				id = federations3.1005
+# 	# 				days = 3
+# 	# 			}
+# 	# 			owner = {
+# 	# 				set_country_flag = triggered_relicrails_digsite
+# 	# 			}
+# 	# 		}
+# 	# 		25 = { }
+# 	# 	}
+# 	# }
+# }
 
 # Arc site exposed
 # planet_event = {
@@ -1399,41 +1399,41 @@ country_event = {
 }
 
 # Setup (every member, HIDDEN): Set up either the arc site chain or special projects
-country_event = {
-	id = federations3.2102
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = federations3.2102
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		exists = federation
-		has_federation = yes
-		is_at_war = no
-		federation = {
-			has_federation_flag = leylines_valid
-			has_federation_type = research_federation
-		}
-	}
+# 	trigger = {
+# 		exists = federation
+# 		has_federation = yes
+# 		is_at_war = no
+# 		federation = {
+# 			has_federation_flag = leylines_valid
+# 			has_federation_type = research_federation
+# 		}
+# 	}
 
-	immediate = {
-		if = {
-			limit = {
-				has_country_flag = leylines_arcsite_owner #If this empire has an arc site, turn its flag into an event target and start an arc site
-			}
-			random_system_within_border = {
-				limit = { has_star_flag = leylines_system }
-				random_system_planet = {
-					limit = { has_planet_flag = leylines_world }
-					save_event_target_as = leylines_world
-					planet_event = { id = federations3.2103 days = 10 } #Arc Site event chain
-				}
-			}
-		}
-		else = {
-			set_country_flag = leylines_project_triggered
-			country_event = { id = federations3.2104 days = 10 } #Special Project event chain
-		}
-	}
-}
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				has_country_flag = leylines_arcsite_owner #If this empire has an arc site, turn its flag into an event target and start an arc site
+# 			}
+# 			random_system_within_border = {
+# 				limit = { has_star_flag = leylines_system }
+# 				random_system_planet = {
+# 					limit = { has_planet_flag = leylines_world }
+# 					save_event_target_as = leylines_world
+# 					planet_event = { id = federations3.2103 days = 10 } #Arc Site event chain
+# 				}
+# 			}
+# 		}
+# 		else = {
+# 			set_country_flag = leylines_project_triggered
+# 			country_event = { id = federations3.2104 days = 10 } #Special Project event chain
+# 		}
+# 	}
+# }
 
 # Arc site revealed (every Federation member with a leylines site)
 # planet_event = {
