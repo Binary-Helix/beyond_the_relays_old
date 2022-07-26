@@ -5676,30 +5676,30 @@ country_event = {
 	}
 
 	# L-Cluster clue
-	option = {
-		name = distar.11500.a
-		custom_gui = "enclave_curator_option"
-		trigger = {
-			has_event_chain = l_cluster_chain
-			NOR = {
-				is_homicidal = yes
-				has_global_flag = l_cluster_opened
-				has_completed_event_chain_counter = {
-					event_chain = l_cluster_chain
-					counter = clues
-				}
-			}
-		}
-		allow = {
-			custom_tooltip = {
-				fail_text = distar.11500.a.tooltip.noclue
-				NOT = { has_country_flag = curator_clue_purchased }
-			}
-		}
-		hidden_effect = {
-			country_event = { id = distar.11501 }
-		}
-	}
+	# option = {
+	# 	name = distar.11500.a
+	# 	custom_gui = "enclave_curator_option"
+	# 	trigger = {
+	# 		has_event_chain = l_cluster_chain
+	# 		NOR = {
+	# 			is_homicidal = yes
+	# 			has_global_flag = l_cluster_opened
+	# 			has_completed_event_chain_counter = {
+	# 				event_chain = l_cluster_chain
+	# 				counter = clues
+	# 			}
+	# 		}
+	# 	}
+	# 	allow = {
+	# 		custom_tooltip = {
+	# 			fail_text = distar.11500.a.tooltip.noclue
+	# 			NOT = { has_country_flag = curator_clue_purchased }
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		country_event = { id = distar.11501 }
+	# 	}
+	# }
 
 	option = {
 		name = leviathans.500.e
@@ -5980,30 +5980,30 @@ country_event = {
 		}
 	}
 
-	option = {
-		name = distar.11500.a
-		custom_gui = "enclave_curator_option"
-		trigger = {
-			has_event_chain = l_cluster_chain
-			NOR = {
-				is_homicidal = yes
-				has_global_flag = l_cluster_opened
-				has_completed_event_chain_counter = {
-					event_chain = l_cluster_chain
-					counter = clues
-				}
-			}
-		}
-		allow = {
-			custom_tooltip = {
-				fail_text = distar.11500.a.tooltip.noclue
-				NOT = { has_country_flag = curator_clue_purchased }
-			}
-		}
-		hidden_effect = {
-			country_event = { id = distar.11501 }
-		}
-	}
+	# option = {
+	# 	name = distar.11500.a
+	# 	custom_gui = "enclave_curator_option"
+	# 	trigger = {
+	# 		has_event_chain = l_cluster_chain
+	# 		NOR = {
+	# 			is_homicidal = yes
+	# 			has_global_flag = l_cluster_opened
+	# 			has_completed_event_chain_counter = {
+	# 				event_chain = l_cluster_chain
+	# 				counter = clues
+	# 			}
+	# 		}
+	# 	}
+	# 	allow = {
+	# 		custom_tooltip = {
+	# 			fail_text = distar.11500.a.tooltip.noclue
+	# 			NOT = { has_country_flag = curator_clue_purchased }
+	# 		}
+	# 	}
+	# 	hidden_effect = {
+	# 		country_event = { id = distar.11501 }
+	# 	}
+	# }
 
 	option = {
 		name = leviathans.500.e
@@ -9771,34 +9771,34 @@ country_event = {
 	}
 }
 
-planet_event = {
-	id = leviathans.662
-	hide_window = yes
+# planet_event = {
+# 	id = leviathans.662
+# 	hide_window = yes
 
-	mean_time_to_happen = {
-		years = 50
-	}
+# 	mean_time_to_happen = {
+# 		years = 50
+# 	}
 
-	trigger = {
-		has_planet_flag = hoard_planet
-		#has_deposit = d_guardian_dragon_hoard
-		NOT = {
-			has_planet_flag = deegged
-		}
-		has_mining_station = yes
-		exists = controller
-		controller = {
-			is_country_type = default
-		}
-	}
+# 	trigger = {
+# 		has_planet_flag = hoard_planet
+# 		#has_deposit = d_guardian_dragon_hoard
+# 		NOT = {
+# 			has_planet_flag = deegged
+# 		}
+# 		has_mining_station = yes
+# 		exists = controller
+# 		controller = {
+# 			is_country_type = default
+# 		}
+# 	}
 
-	immediate = {
-		set_planet_flag = deegged
-		controller = {
-			country_event = { id = leviathans.663 }
-		}
-	}
-}
+# 	immediate = {
+# 		set_planet_flag = deegged
+# 		controller = {
+# 			country_event = { id = leviathans.663 }
+# 		}
+# 	}
+# }
 
 # Dragon Hoard event - Egg
 # country_event = {
