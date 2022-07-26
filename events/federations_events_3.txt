@@ -1369,34 +1369,34 @@ country_event = {
 }
 
 # Setup (co-ordinator, HIDDEN, delayed start): Check there are enough arc site worlds available; continue events if so
-country_event = {
-	id = federations3.21011
-	hide_window = yes
-	is_triggered_only = yes
+# country_event = {
+# 	id = federations3.21011
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		check_variable = {
-			which = leylines_setup
-			value > 1
-		}
-		exists = federation
-		has_federation = yes
-		is_at_war = no
-		federation = {
-			has_federation_type = research_federation
-		}
-	}
+# 	trigger = {
+# 		check_variable = {
+# 			which = leylines_setup
+# 			value > 1
+# 		}
+# 		exists = federation
+# 		has_federation = yes
+# 		is_at_war = no
+# 		federation = {
+# 			has_federation_type = research_federation
+# 		}
+# 	}
 
-	immediate = {
-		federation = {
-			set_timed_federation_flag = { flag = leylines_valid days = 50 }
-			every_member = {
-				set_country_flag = leylines_triggered
-				country_event = { id = federations3.2102 days = 0 }
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		federation = {
+# 			set_timed_federation_flag = { flag = leylines_valid days = 50 }
+# 			every_member = {
+# 				set_country_flag = leylines_triggered
+# 				country_event = { id = federations3.2102 days = 0 }
+# 			}
+# 		}
+# 	}
+# }
 
 # Setup (every member, HIDDEN): Set up either the arc site chain or special projects
 # country_event = {
