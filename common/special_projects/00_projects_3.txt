@@ -1119,24 +1119,24 @@ special_project = {
 	}
 }
 
-special_project = {
-	key = "STUDY_NANITE_SWARM"
-	days_to_research = 300
-	tech_department = physics_technology
-	timelimit = -1
-	picture = "GFX_evt_gray_goo"
-	icon ="gfx/interface/icons/situation_log/situation_log_ai.dds"
+# special_project = {
+# 	key = "STUDY_NANITE_SWARM"
+# 	days_to_research = 300
+# 	tech_department = physics_technology
+# 	timelimit = -1
+# 	picture = "GFX_evt_gray_goo"
+# 	icon ="gfx/interface/icons/situation_log/situation_log_ai.dds"
 
-	event_scope = ship_event
+# 	event_scope = ship_event
 
-	requirements = {
-		shipclass_science_ship = 1
-		leader = scientist
-	}
-	on_success = {
-		ship_event = { id = anomaly.6705 }
-	}
-}
+# 	requirements = {
+# 		shipclass_science_ship = 1
+# 		leader = scientist
+# 	}
+# 	on_success = {
+# 		ship_event = { id = anomaly.6705 }
+# 	}
+# }
 
 special_project = {
 	key = "DESTROY_SWARM"
