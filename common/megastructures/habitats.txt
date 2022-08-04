@@ -418,13 +418,13 @@ habitat_0 = {
 					set_planet_flag = mining_habitat
 				}
 
-				if = {
-					limit = {
-						fromfrom.planet = { has_deposit = d_nanites_deposit }
-					}
-					add_deposit = d_hab_nanites_1
-					set_planet_flag = research_habitat
-				}
+				# if = {
+				# 	limit = {
+				# 		fromfrom.planet = { has_deposit = d_nanites_deposit }
+				# 	}
+				# 	add_deposit = d_hab_nanites_1
+				# 	set_planet_flag = research_habitat
+				# }
 			}
 		}
 		fromfrom.planet = {
