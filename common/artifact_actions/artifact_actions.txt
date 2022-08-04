@@ -39,45 +39,45 @@ artifact_arcane_deciphering = {
 				modifier = "arcane_deciphering_cooldown"
 				days = 720
 			}
-			owner = {
-				country_event = { id = ancrel.10000 }
-			}
+			# owner = {
+			# 	country_event = { id = ancrel.10000 }
+			# }
 		}
 	}
 }
 
-artifact_lgate_clue = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
+# artifact_lgate_clue = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
 
-	potential = {
-		has_country_flag = encountered_first_lgate
-		NOT = { has_country_flag = completed_lcluster_chain }
-		NOT = { has_global_flag = l_cluster_opened }
-		has_distar = yes
-	}
+# 	potential = {
+# 		has_country_flag = encountered_first_lgate
+# 		NOT = { has_country_flag = completed_lcluster_chain }
+# 		NOT = { has_global_flag = l_cluster_opened }
+# 		has_distar = yes
+# 	}
 
-	allow = {
-		NOT = { has_modifier = artifact_lgate_insight_cooldown }
-	}
+# 	allow = {
+# 		NOT = { has_modifier = artifact_lgate_insight_cooldown }
+# 	}
 
-	effect = {
-		custom_tooltip = artifact_lgate_clue_effect
+# 	effect = {
+# 		custom_tooltip = artifact_lgate_clue_effect
 
-		hidden_effect = {
-			generate_lcluster_clue = yes
+# 		hidden_effect = {
+# 			generate_lcluster_clue = yes
 
-			add_modifier = {
-				modifier = "artifact_lgate_insight_cooldown"
-				days = 3600
-			}
-		}
-	}
-}
+# 			add_modifier = {
+# 				modifier = "artifact_lgate_insight_cooldown"
+# 				days = 3600
+# 			}
+# 		}
+# 	}
+# }
 
 artifact_proclaim_religious_finding = {
 	resources = {
@@ -366,9 +366,9 @@ artifact_find_military_applications = {
 				modifier = "artifact_find_applications_cooldown"
 				days = 900
 			}
-			owner = {
-				country_event = { id = ancrel.10010 }
-			}
+			# owner = {
+			# 	country_event = { id = ancrel.10010 }
+			# }
 		}
 	}
 }
@@ -421,9 +421,9 @@ artifact_find_peaceful_applications = {
 				modifier = "artifact_find_applications_cooldown"
 				days = 900
 			}
-			owner = {
-				country_event = { id = ancrel.10020 }
-			}
+			# owner = {
+			# 	country_event = { id = ancrel.10020 }
+			# }
 		}
 	}
 }
@@ -502,230 +502,230 @@ artifact_find_peaceful_applications_locked = {
 	}
 }
 
-artifact_irassian_research = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
+# artifact_irassian_research = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
 
-	ai_weight = {
-		weight = 0
-	}
+# 	ai_weight = {
+# 		weight = 0
+# 	}
 
-	potential = {
-		 has_country_flag = irassian_world_found
-		 NOT = { has_country_flag = irassian_research_started }
-	}
+# 	potential = {
+# 		 has_country_flag = irassian_world_found
+# 		 NOT = { has_country_flag = irassian_research_started }
+# 	}
 
-	effect = {
-		enable_special_project = {
-			name = "IRASSIAN_SECRETS"
-			location = capital_scope
-			owner = ROOT
-		}
+# 	effect = {
+# 		enable_special_project = {
+# 			name = "IRASSIAN_SECRETS"
+# 			location = capital_scope
+# 			owner = ROOT
+# 		}
 
-		hidden_effect = {
-			set_country_flag = irassian_research_started
-			country_event = { id = ancrel.10040 }
-		}
-	}
-}
-
-
-artifact_yuht_research = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-
-	potential = {
-		 has_country_flag = yuht_world_found
-		 NOT = { has_country_flag = yuht_research_started }
-	}
-
-	effect = {
-		enable_special_project = {
-			name = "YUHT_SECRETS"
-			location = capital_scope
-			owner = ROOT
-		}
-
-		hidden_effect = {
-			set_country_flag = yuht_research_started
-			country_event = { id = ancrel.10040 }
-		}
-	}
-}
-
-artifact_vultaum_research = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-
-	potential = {
-		 has_country_flag = vultaum_world_found
-		 NOT = { has_country_flag = vultaum_research_started }
-	}
-
-	effect = {
-		enable_special_project = {
-			name = "VULTAUM_SECRETS"
-			location = capital_scope
-			owner = ROOT
-		}
-
-		hidden_effect = {
-			set_country_flag = vultaum_research_started
-			country_event = { id = ancrel.10040 }
-		}
-	}
-}
-
-artifact_cybrex_research = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-
-	potential = {
-		 has_country_flag = cybrex_world_found
-		 NOT = { has_country_flag = cybrex_research_started }
-	}
-
-	effect = {
-		enable_special_project = {
-			name = "CYBREX_SECRETS"
-			location = capital_scope
-			owner = ROOT
-		}
-
-		hidden_effect = {
-			set_country_flag = cybrex_research_started
-			country_event = { id = ancrel.10040 }
-		}
-	}
-}
-
-artifact_league_research = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-
-	potential = {
-		OR = {
-			has_country_flag = league_world_found
-			any_owned_planet = {
-				has_modifier = first_league_homeworld
-			}
-		}
-
-		NOT = { has_country_flag = league_research_started }
-	}
-
-	effect = {
-		enable_special_project = {
-			name = "LEAGUE_SECRETS"
-			location = capital_scope
-			owner = ROOT
-		}
-
-		hidden_effect = {
-			set_country_flag = league_research_started
-			country_event = { id = ancrel.10040 }
-		}
-	}
-}
-
-artifact_baol_research = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
-
-	ai_weight = {
-		weight = 0
-	}
-
-	potential = {
-		 has_country_flag = last_baol_system
-		 NOT = { has_country_flag = baol_research_started }
-	}
-
-	effect = {
-		enable_special_project = {
-			name = "BAOL_SECRETS"
-			location = capital_scope
-			owner = ROOT
-		}
-
-		hidden_effect = {
-			set_country_flag = baol_research_started
-			country_event = { id = ancrel.10040 }
-		}
-	}
-}
+# 		hidden_effect = {
+# 			set_country_flag = irassian_research_started
+# 			country_event = { id = ancrel.10040 }
+# 		}
+# 	}
+# }
 
 
-artifact_zroni_research = {
-	resources = {
-		category = artifact_actions
-		cost = {
-			minor_artifacts = 50
-		}
-	}
+# artifact_yuht_research = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
 
-	ai_weight = {
-		weight = 0
-	}
+# 	ai_weight = {
+# 		weight = 0
+# 	}
 
-	potential = {
-		 has_country_flag = last_zroni_system
-		 NOT = { has_country_flag = zroni_research_started }
-	}
+# 	potential = {
+# 		 has_country_flag = yuht_world_found
+# 		 NOT = { has_country_flag = yuht_research_started }
+# 	}
 
-	effect = {
-		enable_special_project = {
-			name = "ZRONI_SECRETS"
-			location = capital_scope
-			owner = ROOT
-		}
+# 	effect = {
+# 		enable_special_project = {
+# 			name = "YUHT_SECRETS"
+# 			location = capital_scope
+# 			owner = ROOT
+# 		}
 
-		hidden_effect = {
-			set_country_flag = zroni_research_started
-			country_event = { id = ancrel.10040 }
-		}
-	}
-}
+# 		hidden_effect = {
+# 			set_country_flag = yuht_research_started
+# 			country_event = { id = ancrel.10040 }
+# 		}
+# 	}
+# }
+
+# artifact_vultaum_research = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+
+# 	potential = {
+# 		 has_country_flag = vultaum_world_found
+# 		 NOT = { has_country_flag = vultaum_research_started }
+# 	}
+
+# 	effect = {
+# 		enable_special_project = {
+# 			name = "VULTAUM_SECRETS"
+# 			location = capital_scope
+# 			owner = ROOT
+# 		}
+
+# 		hidden_effect = {
+# 			set_country_flag = vultaum_research_started
+# 			country_event = { id = ancrel.10040 }
+# 		}
+# 	}
+# }
+
+# artifact_cybrex_research = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+
+# 	potential = {
+# 		 has_country_flag = cybrex_world_found
+# 		 NOT = { has_country_flag = cybrex_research_started }
+# 	}
+
+# 	effect = {
+# 		enable_special_project = {
+# 			name = "CYBREX_SECRETS"
+# 			location = capital_scope
+# 			owner = ROOT
+# 		}
+
+# 		hidden_effect = {
+# 			set_country_flag = cybrex_research_started
+# 			country_event = { id = ancrel.10040 }
+# 		}
+# 	}
+# }
+
+# artifact_league_research = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+
+# 	potential = {
+# 		OR = {
+# 			has_country_flag = league_world_found
+# 			any_owned_planet = {
+# 				has_modifier = first_league_homeworld
+# 			}
+# 		}
+
+# 		NOT = { has_country_flag = league_research_started }
+# 	}
+
+# 	effect = {
+# 		enable_special_project = {
+# 			name = "LEAGUE_SECRETS"
+# 			location = capital_scope
+# 			owner = ROOT
+# 		}
+
+# 		hidden_effect = {
+# 			set_country_flag = league_research_started
+# 			country_event = { id = ancrel.10040 }
+# 		}
+# 	}
+# }
+
+# artifact_baol_research = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+
+# 	potential = {
+# 		 has_country_flag = last_baol_system
+# 		 NOT = { has_country_flag = baol_research_started }
+# 	}
+
+# 	effect = {
+# 		enable_special_project = {
+# 			name = "BAOL_SECRETS"
+# 			location = capital_scope
+# 			owner = ROOT
+# 		}
+
+# 		hidden_effect = {
+# 			set_country_flag = baol_research_started
+# 			country_event = { id = ancrel.10040 }
+# 		}
+# 	}
+# }
+
+
+# artifact_zroni_research = {
+# 	resources = {
+# 		category = artifact_actions
+# 		cost = {
+# 			minor_artifacts = 50
+# 		}
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 	}
+
+# 	potential = {
+# 		 has_country_flag = last_zroni_system
+# 		 NOT = { has_country_flag = zroni_research_started }
+# 	}
+
+# 	effect = {
+# 		enable_special_project = {
+# 			name = "ZRONI_SECRETS"
+# 			location = capital_scope
+# 			owner = ROOT
+# 		}
+
+# 		hidden_effect = {
+# 			set_country_flag = zroni_research_started
+# 			country_event = { id = ancrel.10040 }
+# 		}
+# 	}
+# }
 
 artifact_precursor_clue = {
 	resources = {
