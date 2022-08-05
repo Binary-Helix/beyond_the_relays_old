@@ -1209,42 +1209,42 @@ ship_event = {
 	}
 }
 
-ship_event = {
-	id = anomaly.6700
-	title = "anomaly.6700.name"
-	desc = "anomaly.6700.desc"
-	picture = GFX_evt_gray_goo
-	show_sound = event_air_raid_siren
-	location = from
-	is_triggered_only = yes
+# ship_event = {
+# 	id = anomaly.6700
+# 	title = "anomaly.6700.name"
+# 	desc = "anomaly.6700.desc"
+# 	picture = GFX_evt_gray_goo
+# 	show_sound = event_air_raid_siren
+# 	location = from
+# 	is_triggered_only = yes
 
-	immediate = {
-		from = {
-			add_modifier = {
-				modifier = nanite_swarm_modifier
-				days = -1
-			}
-			set_planet_flag = colony_event
-			save_global_event_target_as = nanite_swarm_planet
-		}
-	}
+# 	immediate = {
+# 		from = {
+# 			add_modifier = {
+# 				modifier = nanite_swarm_modifier
+# 				days = -1
+# 			}
+# 			set_planet_flag = colony_event
+# 			save_global_event_target_as = nanite_swarm_planet
+# 		}
+# 	}
 
-	option = {
-		name = anomaly.6700.a
-		tooltip = {
-			from = {
-				add_modifier = {
-					modifier = nanite_swarm_modifier
-				}
-			}
-		}
-		enable_special_project = {
-			name = "STUDY_NANITE_SWARM"
-			location = event_target:nanite_swarm_planet
-			owner = root
-		}
-	}
-}
+# 	option = {
+# 		name = anomaly.6700.a
+# 		tooltip = {
+# 			from = {
+# 				add_modifier = {
+# 					modifier = nanite_swarm_modifier
+# 				}
+# 			}
+# 		}
+# 		enable_special_project = {
+# 			name = "STUDY_NANITE_SWARM"
+# 			location = event_target:nanite_swarm_planet
+# 			owner = root
+# 		}
+# 	}
+# }
 
 # ship_event = {
 # 	id = anomaly.6705

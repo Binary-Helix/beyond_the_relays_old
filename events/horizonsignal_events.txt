@@ -3766,72 +3766,72 @@ planet_event = {
 }
 
 # on fleet destroyed perp
-country_event = {
-	id = akx.10030
-	title = akx.10021.name
-	desc = akx.10021.desc
-	picture = GFX_evt_crisis_defeated
-	show_sound = event_celebration
-	location = root
+# country_event = {
+# 	id = akx.10030
+# 	title = akx.10021.name
+# 	desc = akx.10021.desc
+# 	picture = GFX_evt_crisis_defeated
+# 	show_sound = event_celebration
+# 	location = root
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		has_country_flag = worm_events_available
-		exists = event_target:worm_enemy
-		from = {
-			is_same_value = event_target:worm_enemy
-		}
-	}
+# 	trigger = {
+# 		has_country_flag = worm_events_available
+# 		exists = event_target:worm_enemy
+# 		from = {
+# 			is_same_value = event_target:worm_enemy
+# 		}
+# 	}
 
-	immediate = {
-		event_target:worm_enemy = {
-			destroy_country = yes
-		}
-	}
+# 	immediate = {
+# 		event_target:worm_enemy = {
+# 			destroy_country = yes
+# 		}
+# 	}
 
-	after = {
-		hidden_effect = {
-			remove_country_flag = worm_events_available
-			set_country_flag = worm_awaited
-		}
-	}
+# 	after = {
+# 		hidden_effect = {
+# 			remove_country_flag = worm_events_available
+# 			set_country_flag = worm_awaited
+# 		}
+# 	}
 
-	option = {
-		name = akx.10021.a
-		end_event_chain = WORM_CHAIN_2
-		add_monthly_resource_mult = {
-			resource = energy
-			value = 24
-			min = 1500
-			max = 3000
-		}
-		add_monthly_resource_mult = {
-			resource = physics_research
-			value = 36
-			min = 1000
-			max = 8000
-		}
-		if = {
-			limit = { has_ancrel = yes }
-			add_relic = r_worm_scales
-		}
-	}
-	after = {
-		if = {
-			limit = {
-				NOT = { has_country_flag = horrific_celebration }
-			}
-			set_country_flag = horrific_celebration
-			generate_parade_city = yes
-			start_situation = {
-				# type = leviathan_celebration_opportunity
-				target = event_target:parade_city
-				effect = {
-					set_situation_flag = celebration_worm
-					set_situation_flag = standard_unity_reward
-				}
-			}
-		}
-	}
-}
+# 	option = {
+# 		name = akx.10021.a
+# 		end_event_chain = WORM_CHAIN_2
+# 		add_monthly_resource_mult = {
+# 			resource = energy
+# 			value = 24
+# 			min = 1500
+# 			max = 3000
+# 		}
+# 		add_monthly_resource_mult = {
+# 			resource = physics_research
+# 			value = 36
+# 			min = 1000
+# 			max = 8000
+# 		}
+# 		if = {
+# 			limit = { has_ancrel = yes }
+# 			add_relic = r_worm_scales
+# 		}
+# 	}
+# 	after = {
+# 		if = {
+# 			limit = {
+# 				NOT = { has_country_flag = horrific_celebration }
+# 			}
+# 			set_country_flag = horrific_celebration
+# 			generate_parade_city = yes
+# 			start_situation = {
+# 				# type = leviathan_celebration_opportunity
+# 				target = event_target:parade_city
+# 				effect = {
+# 					set_situation_flag = celebration_worm
+# 					set_situation_flag = standard_unity_reward
+# 				}
+# 			}
+# 		}
+# 	}
+# }
