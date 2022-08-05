@@ -45,14 +45,14 @@ set_first_contact_starting_stage = {
 						setup_first_contact_path = { TYPE = enclave }
 						country_event = { id = leviathans.97 days = 720 random = 360 } #they'll establish contact if you aren't quick enough
 					}
-					tiyanki = { setup_first_contact_path = { TYPE = tiyanki } }
-					tiyanki_garrison = { setup_first_contact_path = { TYPE = tiyanki } }
-					amoeba = { setup_first_contact_path = { TYPE = amoeba } }
-					amoeba_borderless = { setup_first_contact_path = { TYPE = amoeba } }
-					amoeba_garrison = { setup_first_contact_path = { TYPE = amoeba } }
-					amoeba_faction = { setup_first_contact_path = { TYPE = amoeba } }
-					crystal = { setup_first_contact_path = { TYPE = crystals } }
-					crystal_faction = { setup_first_contact_path = { TYPE = crystals } }
+					# tiyanki = { setup_first_contact_path = { TYPE = tiyanki } }
+					# tiyanki_garrison = { setup_first_contact_path = { TYPE = tiyanki } }
+					# amoeba = { setup_first_contact_path = { TYPE = amoeba } }
+					# amoeba_borderless = { setup_first_contact_path = { TYPE = amoeba } }
+					# amoeba_garrison = { setup_first_contact_path = { TYPE = amoeba } }
+					# amoeba_faction = { setup_first_contact_path = { TYPE = amoeba } }
+					# crystal = { setup_first_contact_path = { TYPE = crystals } }
+					# crystal_faction = { setup_first_contact_path = { TYPE = crystals } }
 					drone = { setup_first_contact_path = { TYPE = drones } }
 					drone_faction = { setup_first_contact_path = { TYPE = drones } }
 					dormant_marauders = { setup_first_contact_path = { TYPE = marauders } }
@@ -83,9 +83,9 @@ set_first_contact_starting_stage = {
 						}
 					}
 					caravaneer_home = { setup_first_contact_path = { TYPE = caravaneers } }
-					cloud = { setup_first_contact_path = { TYPE = void_clouds } }
+					# cloud = { setup_first_contact_path = { TYPE = void_clouds } }
 					nomad = { setup_first_contact_path = { TYPE = nomad } }
-					dragon_dummy = { setup_first_contact_path = { TYPE = origin_dragon } }
+					# dragon_dummy = { setup_first_contact_path = { TYPE = origin_dragon } }
 					default = {
 						root = { fire_on_action = { on_action = on_first_contact_stage_1_no_path } }
 					#	root = {
