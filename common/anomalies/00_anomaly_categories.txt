@@ -876,39 +876,39 @@ lost_soul_cat = {
 	on_success = anomaly.6786
 }
 
-on_solar_sails_cat = {
-	desc = "on_solar_sails_cat_desc"
-	picture = GFX_evt_star_neutron
-	level = 2
-	max_once_global = yes
-	spawn_chance = {
-		modifier = {
-			add = 0.1
-			from.leader = {
-				species = {
-					NOT = { has_trait = trait_aquatic }
-				}
-			}
-		}
-		modifier = {
-			add = 0.3
- 			from.leader = {
- 				species = { has_trait = trait_aquatic }
- 			}
- 		}
-	}
-	on_success = anomaly.7020
-}
+# on_solar_sails_cat = {
+# 	desc = "on_solar_sails_cat_desc"
+# 	picture = GFX_evt_star_neutron
+# 	level = 2
+# 	max_once_global = yes
+# 	spawn_chance = {
+# 		modifier = {
+# 			add = 0.1
+# 			from.leader = {
+# 				species = {
+# 					NOT = { has_trait = trait_aquatic }
+# 				}
+# 			}
+# 		}
+# 		modifier = {
+# 			add = 0.3
+#  			from.leader = {
+#  				species = { has_trait = trait_aquatic }
+#  			}
+#  		}
+# 	}
+# 	on_success = anomaly.7020
+# }
 
-on_crashed_ship_cat = {
-	desc = "on_crashed_ship_desc"
-	picture = GFX_evt_physics_cache
-	level = 2
-	spawn_chance = {
-		modifier = {
-			add = 3
-			is_asteroid = yes
-		}
-	}
-	on_success = anomaly.7030
+# on_crashed_ship_cat = {
+# 	desc = "on_crashed_ship_desc"
+# 	picture = GFX_evt_physics_cache
+# 	level = 2
+# 	spawn_chance = {
+# 		modifier = {
+# 			add = 3
+# 			is_asteroid = yes
+# 		}
+# 	}
+# 	on_success = anomaly.7030
 }
