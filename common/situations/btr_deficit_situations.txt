@@ -1,0 +1,1449 @@
+
+
+situation_iridium_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				iridium = @bailout_basic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.1
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.1
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.1
+					lithoid_pop_growth_speed_reduction = 0.2
+				}
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.4
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.15
+					lithoid_pop_growth_speed_reduction = 0.33
+				}
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.6
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.2
+					lithoid_pop_growth_speed_reduction = 0.5
+				}
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = deficit.125 }
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.8
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.75
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.25
+					lithoid_pop_growth_speed_reduction = 0.75
+				}
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = deficit.130 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|iridium|
+			desc = string_expenditures_greater_than_income_iridium
+			owner = { has_actual_deficit = { RESOURCE = iridium } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_iridium
+			owner = {
+				resource_income_compare = {
+					resource = iridium
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_iridium
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = iridium }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_cut_investment
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+		triggered_modifier = {
+			potential = {
+				owner = { is_hive_empire = yes }
+			}
+			modifier = {
+				planet_researchers_produces_mult = -0.25
+				planet_researchers_upkeep_mult = -0.5
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = { country_uses_consumer_goods = yes }
+			}
+			modifier = {
+				planet_artisans_produces_mult = -0.25
+				planet_artisans_upkeep_mult = -0.5
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = { is_catalytic_empire = no }
+			}
+			modifier = {
+				planet_metallurgists_produces_mult = -0.25
+				planet_metallurgists_upkeep_mult = -0.5
+			}
+		}
+		potential = {
+			owner = {
+				OR = {
+					is_hive_empire = yes
+					is_catalytic_empire = no
+					country_uses_consumer_goods = yes
+				}
+			}
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
+
+situation_palladium_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				palladium = @bailout_basic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.1
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.1
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.1
+					lithoid_pop_growth_speed_reduction = 0.2
+				}
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.4
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.15
+					lithoid_pop_growth_speed_reduction = 0.33
+				}
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.6
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.2
+					lithoid_pop_growth_speed_reduction = 0.5
+				}
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = deficit.125 }
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.8
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.75
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.25
+					lithoid_pop_growth_speed_reduction = 0.75
+				}
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = deficit.130 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|palladium|
+			desc = string_expenditures_greater_than_income_palladium
+			owner = { has_actual_deficit = { RESOURCE = palladium } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_palladium
+			owner = {
+				resource_income_compare = {
+					resource = palladium
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_palladium
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = palladium }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_cut_investment
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+		triggered_modifier = {
+			potential = {
+				owner = { is_hive_empire = yes }
+			}
+			modifier = {
+				planet_researchers_produces_mult = -0.25
+				planet_researchers_upkeep_mult = -0.5
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = { country_uses_consumer_goods = yes }
+			}
+			modifier = {
+				planet_artisans_produces_mult = -0.25
+				planet_artisans_upkeep_mult = -0.5
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = { is_catalytic_empire = no }
+			}
+			modifier = {
+				planet_metallurgists_produces_mult = -0.25
+				planet_metallurgists_upkeep_mult = -0.5
+			}
+		}
+		potential = {
+			owner = {
+				OR = {
+					is_hive_empire = yes
+					is_catalytic_empire = no
+					country_uses_consumer_goods = yes
+				}
+			}
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
+
+situation_platinum_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				platinum = @bailout_basic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.1
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.1
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.1
+					lithoid_pop_growth_speed_reduction = 0.2
+				}
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.4
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.2
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.15
+					lithoid_pop_growth_speed_reduction = 0.33
+				}
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.6
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.33
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.2
+					lithoid_pop_growth_speed_reduction = 0.5
+				}
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			on_first_enter = {
+				situation_event = { id = deficit.125 }
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_hive_empire = yes }
+				}
+				modifier = {
+					planet_researchers_produces_mult = -0.8
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { country_uses_consumer_goods = yes }
+				}
+				modifier = {
+					planet_artisans_produces_mult = -0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_catalytic_empire = no }
+				}
+				modifier = {
+					planet_metallurgists_produces_mult = -0.5
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = { is_lithoid_empire = yes }
+				}
+				modifier = {
+					planet_pop_assembly_organic_reduction = 0.75
+				}
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_species = {
+							is_archetype = LITHOID
+						}
+					}
+				}
+				modifier = {
+					lithoid_pop_happiness = -0.25
+					lithoid_pop_growth_speed_reduction = 0.75
+				}
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = deficit.130 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|platinum|
+			desc = string_expenditures_greater_than_income_platinum
+			owner = { has_actual_deficit = { RESOURCE = platinum } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_platinum
+			owner = {
+				resource_income_compare = {
+					resource = platinum
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_platinum
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = platinum }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_cut_investment
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_red
+		triggered_modifier = {
+			potential = {
+				owner = { is_hive_empire = yes }
+			}
+			modifier = {
+				planet_researchers_produces_mult = -0.25
+				planet_researchers_upkeep_mult = -0.5
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = { country_uses_consumer_goods = yes }
+			}
+			modifier = {
+				planet_artisans_produces_mult = -0.25
+				planet_artisans_upkeep_mult = -0.5
+			}
+		}
+		triggered_modifier = {
+			potential = {
+				owner = { is_catalytic_empire = no }
+			}
+			modifier = {
+				planet_metallurgists_produces_mult = -0.25
+				planet_metallurgists_upkeep_mult = -0.5
+			}
+		}
+		potential = {
+			owner = {
+				OR = {
+					is_hive_empire = yes
+					is_catalytic_empire = no
+					country_uses_consumer_goods = yes
+				}
+			}
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
+
+situation_helium_3_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				helium_3 = @bailout_strategic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			modifier = {
+				planet_jobs_produces_mult = -0.05
+				ship_speed_mult = -0.2
+				terraform_speed_mult = -0.2
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+				ship_speed_mult = -0.4
+				terraform_speed_mult = -0.4
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			modifier = {
+				planet_jobs_produces_mult = -0.15
+				ship_speed_mult = -0.6
+				terraform_speed_mult = -0.6
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			modifier = {
+				planet_jobs_produces_mult = -0.2
+				ship_speed_mult = -0.8
+				terraform_speed_mult = -0.8
+			}
+			on_first_enter = {
+				situation_event = { id = deficit.215 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = deficit.220 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|helium_3|
+			desc = string_expenditures_greater_than_income_helium_3
+			owner = { has_actual_deficit = { RESOURCE = helium_3 } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_helium_3
+			owner = {
+				resource_income_compare = {
+					resource = helium_3
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_helium_3
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = helium_3 }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_recycling
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		modifier = {
+			planet_structures_helium_3_upkeep_mult = -0.25
+			planet_building_refund_mult = 0.5
+			planet_structures_cost_mult = 0.5
+		}
+		ai_weight = {
+			base = 0
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_gas_producers
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		modifier = {
+			planet_refiners_helium_3_produces_mult = 0.25
+			planet_refiners_upkeep_mult = 0.25
+			planet_sr_miners_helium_3_produces_mult = 0.25
+			#No upkeep increase for gas extractors because it'd also target mote farmers etc too
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
+
+
+situation_hydrogen_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				hydrogen = @bailout_strategic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			modifier = {
+				planet_jobs_produces_mult = -0.05
+				ship_speed_mult = -0.2
+				terraform_speed_mult = -0.2
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+				ship_speed_mult = -0.4
+				terraform_speed_mult = -0.4
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			modifier = {
+				planet_jobs_produces_mult = -0.15
+				ship_speed_mult = -0.6
+				terraform_speed_mult = -0.6
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			modifier = {
+				planet_jobs_produces_mult = -0.2
+				ship_speed_mult = -0.8
+				terraform_speed_mult = -0.8
+			}
+			on_first_enter = {
+				situation_event = { id = deficit.215 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = deficit.220 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|hydrogen|
+			desc = string_expenditures_greater_than_income_hydrogen
+			owner = { has_actual_deficit = { RESOURCE = hydrogen } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_hydrogen
+			owner = {
+				resource_income_compare = {
+					resource = hydrogen
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_hydrogen
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = hydrogen }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_recycling
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		modifier = {
+			planet_structures_hydrogen_upkeep_mult = -0.25
+			planet_building_refund_mult = 0.5
+			planet_structures_cost_mult = 0.5
+		}
+		ai_weight = {
+			base = 0
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_gas_producers
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		modifier = {
+			planet_refiners_hydrogen_produces_mult = 0.25
+			planet_refiners_upkeep_mult = 0.25
+			planet_sr_miners_hydrogen_produces_mult = 0.25
+			#No upkeep increase for gas extractors because it'd also target mote farmers etc too
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
+
+
+situation_element_zero_deficit = {
+	picture = GFX_evt_galactic_market
+	category = negative
+	fail_icon = GFX_situation_outcome_meh
+	fail_icon_frame = GFX_situation_outcome_frame_green
+	complete_icon = GFX_situation_outcome_bankrupcy
+	complete_icon_frame = GFX_situation_outcome_frame_red
+
+	on_start = {
+		set_situation_flag = deficit_situation
+	}
+	on_abort = {
+		owner = {
+			add_resource = {
+				element_zero = @bailout_strategic_base_amount
+				mult = value:bailout_scaling_factor
+			}
+		}
+	}
+
+	start_value = 15
+	stages = {
+		deficit_first = {
+			icon = GFX_situation_stage_1
+			icon_background = GFX_situation_stage_frame_red
+			end = 25
+			modifier = {
+				planet_jobs_produces_mult = -0.05
+				weapon_type_energy_weapon_damage_mult = -0.3
+				ship_sensor_range_add = -1
+			}
+		}
+		deficit_second = {
+			icon = GFX_situation_stage_2
+			icon_background = GFX_situation_stage_frame_red
+			end = 50
+			modifier = {
+				planet_jobs_produces_mult = -0.1
+				weapon_type_energy_weapon_damage_mult = -0.5
+				ship_sensor_range_add = -1
+			}
+		}
+		deficit_third = {
+			icon = GFX_situation_stage_3
+			icon_background = GFX_situation_stage_frame_red
+			end = 75
+			modifier = {
+				planet_jobs_produces_mult = -0.15
+				weapon_type_energy_weapon_damage_mult = -0.7
+				ship_sensor_range_add = -2
+			}
+		}
+		deficit_fourth = {
+			icon = GFX_situation_stage_4
+			icon_background = GFX_situation_stage_frame_red
+			end = 100
+			modifier = {
+				planet_jobs_produces_mult = -0.2
+				weapon_type_energy_weapon_damage_mult = -0.9
+				ship_sensor_range_add = -3
+			}
+			on_first_enter = {
+				situation_event = { id = deficit.185 }
+			}
+		}
+	}
+
+	on_progress_complete = {
+		country_defaulted_in_situation_tooltip = yes
+		hidden_effect = {
+			situation_event = { id = deficit.190 }
+		}
+	}
+	on_fail = {
+		custom_tooltip = deficit_situation_finish_tooltip
+		hidden_effect = { destroy_situation = this }
+	}
+	monthly_progress = {
+		base = 0
+		modifier = {
+			add = value:deficit_situation_progress_value|RESOURCE|element_zero|
+			desc = string_expenditures_greater_than_income_element_zero
+			owner = { has_actual_deficit = { RESOURCE = element_zero } }
+		}
+		modifier = {
+			subtract = 5
+			desc = string_not_in_deficit_element_zero
+			owner = {
+				resource_income_compare = {
+					resource = element_zero
+					value >= 0
+				}
+			}
+		}
+		modifier = {
+			subtract = 1
+			desc = string_resource_reserves_element_zero
+			owner = {
+				has_negative_income_with_stockpile = { RESOURCE = element_zero }
+			}
+		}
+	}
+	approach = {
+		name = deficit_approach_do_nothing
+		icon = GFX_situation_approach_this_is_fine
+		icon_background = GFX_situation_approach_bg_yellow
+		default = yes
+		on_select = {
+			custom_tooltip = deficit_approach_do_nothing_tooltip
+		}
+		ai_weight = {
+			base = 1
+		}
+	}
+	approach = {
+		name = deficit_approach_recycling
+		icon = GFX_situation_approach_balance_sheet
+		icon_background = GFX_situation_approach_bg_yellow
+		modifier = {
+			planet_structures_element_zero_upkeep_mult = -0.25
+			planet_building_refund_mult = 0.5
+			planet_structures_cost_mult = 0.5
+		}
+		ai_weight = {
+			base = 0
+		}
+	}
+	approach = {
+		name = deficit_approach_invest_in_crystal_producers
+		icon = GFX_situation_approach_energy_credits
+		icon_background = GFX_situation_approach_bg_green
+		potential = {
+			owner = { country_uses_food = yes }
+		}
+		modifier = {
+			planet_translucers_element_zero_produces_mult = 0.25
+			planet_translucers_upkeep_mult = 0.25
+			planet_sr_miners_element_zero_produces_mult = 0.25
+			#No upkeep increase for crystal miners because it'd also target mote farmers etc too
+		}
+
+		ai_weight = {
+			base = 0
+			modifier = {
+				add = 2
+				current_stage = deficit_third
+			}
+			modifier = {
+				add = 2
+				current_stage = deficit_fourth
+			}
+		}
+	}
+}
