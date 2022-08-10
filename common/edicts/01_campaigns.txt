@@ -314,7 +314,7 @@ terraforming_gas = {
 	resources = {
 		category = rare_edicts
 		upkeep = {
-			exotic_gases = 0.5
+			#exotic_gases = 0.5
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -344,14 +344,14 @@ fuel_gases = {
 	resources = {
 		category = ship_edicts
 		upkeep = {
-			exotic_gases = 1
+			#exotic_gases = 1
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = exotic_gases amount > 0 }
+			#has_resource = { type = exotic_gases amount > 0 }
 			has_edict = fuel_gases
 		}
 	}
@@ -375,14 +375,14 @@ shield_gases = {
 	resources = {
 		category = ship_edicts
 		upkeep = {
-			exotic_gases = 1
+			#exotic_gases = 1
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = exotic_gases amount > 0 }
+			#has_resource = { type = exotic_gases amount > 0 }
 			has_edict = shield_gases
 		}
 	}
@@ -406,14 +406,14 @@ clearing_motes = {
 	resources = {
 		category = rare_edicts
 		upkeep = {
-			volatile_motes = 0.5
+			#volatile_motes = 0.5
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
+			#has_resource = { type = volatile_motes amount > 0 }
 			has_edict = clearing_motes
 		}
 	}
@@ -434,14 +434,14 @@ motes_kinetic = {
 	resources = {
 		category = ship_edicts
 		upkeep = {
-			volatile_motes = 1
+			#volatile_motes = 1
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
+			#has_resource = { type = volatile_motes amount > 0 }
 			has_edict = motes_kinetic
 		}
 	}
@@ -465,14 +465,14 @@ motes_explosives = {
 	resources = {
 		category = ship_edicts
 		upkeep = {
-			volatile_motes = 1
+			#volatile_motes = 1
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
+			#has_resource = { type = volatile_motes amount > 0 }
 			has_edict = motes_explosives
 		}
 	}
@@ -492,14 +492,14 @@ motes_armor = {
 	resources = {
 		category = ship_edicts
 		upkeep = {
-			volatile_motes = 1
+			#volatile_motes = 1
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = volatile_motes amount > 0 }
+			#has_resource = { type = volatile_motes amount > 0 }
 			has_edict = motes_armor
 		}
 	}
@@ -523,14 +523,14 @@ crystalline_sensors = {
 	resources = {
 		category = rare_edicts
 		upkeep = {
-			rare_crystals = 0.5
+			#rare_crystals = 0.5
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = rare_crystals amount > 0 }
+			#has_resource = { type = rare_crystals amount > 0 }
 			has_edict = crystalline_sensors
 		}
 	}
@@ -551,14 +551,14 @@ crystal_focus = {
 	resources = {
 		category = ship_edicts
 		upkeep = {
-			rare_crystals = 1
+			#rare_crystals = 1
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = rare_crystals amount > 0 }
+			#has_resource = { type = rare_crystals amount > 0 }
 			has_edict = crystal_focus
 		}
 	}
@@ -582,7 +582,7 @@ living_metal_construction = {
 	resources = {
 		category = rare_edicts
 		upkeep = {
-			sr_living_metal = 0.5
+			#sr_living_metal = 0.5
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -613,14 +613,14 @@ nanite_actuators = {
 	resources = {
 		category = rare_edicts
 		upkeep = {
-			nanites = 0.5
+			#nanites = 0.5
 			multiplier = value:edict_size_effect
 		}
 	}
 
 	potential = {
 		OR = {
-			has_resource = { type = nanites amount > 0 }
+			#has_resource = { type = nanites amount > 0 }
 			has_edict = nanite_actuators
 		}
 	}

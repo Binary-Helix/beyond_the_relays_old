@@ -1056,11 +1056,11 @@ relay_network_stability = {
 
 	potential = {
 		has_overlord_dlc = yes
-		has_technology = tech_hyper_relays
+		#has_technology = tech_hyper_relays
 	}
 
 	allow = {
-		NOT = { has_deficit = exotic_gases }
+		#NOT = { has_deficit = exotic_gases }
 		exists = capital_scope
 		capital_scope = {
 			solar_system = {
@@ -1074,7 +1074,7 @@ relay_network_stability = {
 	}
 
 	modifier = {
-		megastructures_hyper_relay_exotic_gases_upkeep_add = 0.1
+		#megastructures_hyper_relay_exotic_gases_upkeep_add = 0.1
 	}
 
 	relay_network_modifier = {
@@ -1085,7 +1085,7 @@ relay_network_stability = {
 		weight = 0
 		modifier = {
 			weight = @EdictHighPrio
-			has_monthly_income = { resource = exotic_gases value > 5 }
+			#has_monthly_income = { resource = exotic_gases value > 5 }
 		}
 	}
 }
@@ -1104,11 +1104,11 @@ relay_network_movement = {
 
 	potential = {
 		has_overlord_dlc = yes
-		has_technology = tech_hyper_relays
+		#has_technology = tech_hyper_relays
 	}
 
 	allow = {
-		NOT = { has_deficit = volatile_motes }
+		#NOT = { has_deficit = volatile_motes }
 		exists = capital_scope
 		capital_scope = {
 			solar_system = {
@@ -1123,7 +1123,7 @@ relay_network_movement = {
 	}
 
 	modifier = {
-		megastructures_hyper_relay_volatile_motes_upkeep_add = 0.1
+		#megastructures_hyper_relay_volatile_motes_upkeep_add = 0.1
 	}
 
 	relay_network_modifier = {
@@ -1134,7 +1134,7 @@ relay_network_movement = {
 		weight = 0
 		modifier = {
 			weight = @EdictMedPrio
-			has_monthly_income = { resource = volatile_motes value > 5 }
+			#has_monthly_income = { resource = volatile_motes value > 5 }
 		}
 	}
 }
@@ -1154,11 +1154,11 @@ relay_network_amenities = {
 	potential = {
 		has_overlord_dlc = yes
 		is_gestalt = no
-		has_technology = tech_hyper_relays
+		#has_technology = tech_hyper_relays
 	}
 
 	allow = {
-		NOT = { has_deficit = rare_crystals }
+		#NOT = { has_deficit = rare_crystals }
 		exists = capital_scope
 		capital_scope = {
 			solar_system = {
@@ -1176,7 +1176,7 @@ relay_network_amenities = {
 	}
 
 	modifier = {
-		megastructures_hyper_relay_rare_crystals_upkeep_add = 0.1
+		#megastructures_hyper_relay_rare_crystals_upkeep_add = 0.1
 	}
 
 	relay_network_modifier = {
@@ -1187,7 +1187,7 @@ relay_network_amenities = {
 		weight = 0
 		modifier = {
 			weight = @EdictMedPrio
-			has_monthly_income = { resource = rare_crystals value > 5 }
+			#has_monthly_income = { resource = rare_crystals value > 5 }
 		}
 	}
 }
@@ -1207,11 +1207,11 @@ relay_network_amenities_gestalt = {
 	potential = {
 		has_overlord_dlc = yes
 		is_gestalt = yes
-		has_technology = tech_hyper_relays
+		#has_technology = tech_hyper_relays
 	}
 
 	allow = {
-		NOT = { has_deficit = rare_crystals }
+		#NOT = { has_deficit = rare_crystals }
 		exists = capital_scope
 		capital_scope = {
 			solar_system = {
@@ -1229,7 +1229,7 @@ relay_network_amenities_gestalt = {
 	}
 
 	modifier = {
-		megastructures_hyper_relay_rare_crystals_upkeep_add = 0.1
+		#megastructures_hyper_relay_rare_crystals_upkeep_add = 0.1
 	}
 
 	relay_network_modifier = {
@@ -1240,7 +1240,7 @@ relay_network_amenities_gestalt = {
 		weight = 0
 		modifier = {
 			weight = @EdictMedPrio
-			has_monthly_income = { resource = rare_crystals value > 5 }
+			#has_monthly_income = { resource = rare_crystals value > 5 }
 		}
 	}
 }
