@@ -1,0 +1,87 @@
+#################################
+#  Expanded Galaxy Event Ships  #
+#################################
+
+#Nova Dreadnought/Battleship
+ship_design = {
+	name = "NAME_Nova"
+	ship_size = mec_prothean_ship
+	is_event_design = yes
+	is_special_buildable = yes
+	section = {
+		template = "PROTHEAN_EVT_MAIN"
+		slot = "mid"
+		
+		component = {
+			slot = "EXTRA_LARGE_01"
+			template = "ENERGY_LANCE_1"
+		}
+		component = {
+			slot = "LARGE_GUN_01"
+			template = "KINETIC_ARTILLERY_1"
+		}
+		component = {
+			slot = "LARGE_GUN_02"
+			template = "ENERGY_TORPEDO_1"
+		}
+		component = {
+			slot = "LARGE_GUN_03"
+			template = "ENERGY_TORPEDO_1"
+		}
+		component = {
+			slot = "TORPEDO_01"
+			template = "TORPEDO_3"
+		}
+		component = {
+			slot = "TORPEDO_02"
+			template = "TORPEDO_3"
+		}	
+		component = {
+			slot = "SMALL_GUN_01"
+			template = "SMALL_PLASMA_2"
+		}
+		component = {
+			slot = "SMALL_GUN_02"
+			template = "SMALL_PLASMA_2"
+		}
+		component = {
+			slot = "LARGE_UTILITY_1"
+			template = "LARGE_SHIELD_4"
+		}
+		component = {
+			slot = "LARGE_UTILITY_2"
+			template = "LARGE_SHIELD_4"
+		}	
+		component = {
+			slot = "LARGE_UTILITY_3"
+			template = "LARGE_ARMOR_4"
+		}
+		component = {
+			slot = "LARGE_UTILITY_4"
+			template = "LARGE_SHIELD_4"
+		}
+		component = {
+			slot = "LARGE_UTILITY_5"
+			template = "LARGE_SHIELD_4"
+		}		
+		component = {
+			slot = "LARGE_UTILITY_6"
+			template = "LARGE_ARMOR_4"
+		}
+		component = {
+			slot = "AUX_UTILITY_1"
+			template = "SHIELD_BOOSTER"
+		}
+		component = {
+			slot = "AUX_UTILITY_2"
+			template = "FIRE_CONTROL_1"
+		}
+	}
+	required_component="HYPER_DRIVE_3"
+	required_component="COMBAT_COMPUTER_ARTILLERY_ADVANCED"
+	required_component="BATTLESHIP_SHIP_THRUSTER_3"
+	required_component="SENSOR_3"
+	required_component="BATTLESHIP_ANTIMATTER_REACTOR"
+}
+
+#################################
