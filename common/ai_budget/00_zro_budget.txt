@@ -4,8 +4,24 @@
 # #################
 # ## Expenditure ##
 # #################
-# dark_matter_expenditure_ships = {
-# 	resource = sr_dark_matter
+
+
+# zro_expenditure_planets = {
+# 	resource = sr_zro
+# 	type = expenditure
+# 	category = planets
+
+# 	potential = {
+# 		always = yes
+# 	}
+
+# 	fraction = {
+# 		weight = 0.2
+# 	}
+# }
+
+# zro_expenditure_ships = {
+# 	resource = sr_zro
 # 	type = expenditure
 # 	category = ships
 
@@ -14,12 +30,26 @@
 # 	}
 
 # 	fraction = {
-# 		weight = 0.5
+# 		weight = 0.1
 # 	}
 # }
 
-# dark_matter_expenditure_trade = {
-# 	resource = sr_dark_matter
+# zro_expenditure_upgrade = {
+# 	resource = sr_zro
+# 	type = expenditure
+# 	category = ship_upgrades
+
+# 	potential = {
+# 		always = yes
+# 	}
+
+# 	fraction = {
+# 		base = 0.1
+# 	}
+# }
+
+# zro_expenditure_trade = {
+# 	resource = sr_zro
 # 	type = expenditure
 # 	category = trade
 
@@ -28,26 +58,14 @@
 # 	}
 
 # 	fraction = {
-# 		weight = 0.5
+# 		weight = 0.1
 # 	}
 # }
 
-# dark_matter_expenditure_planets = {
-# 	resource = sr_dark_matter
-# 	type = expenditure
-# 	category = planets
+# # Upkeep --------------------------------------------------------
 
-# 	potential = {
-# 		always = yes
-# 	}
-
-# 	fraction = {
-# 		weight = 0.3
-# 	}
-# }
-
-# dark_matter_upkeep_planets = {
-# 	resource = sr_dark_matter
+# zro_upkeep_planets = {
+# 	resource = sr_zro
 # 	type = upkeep
 # 	category = planets
 
@@ -56,12 +74,12 @@
 # 	}
 
 # 	fraction = {
-# 		weight = 0.5
+# 		weight = 0.9
 # 	}
 # }
 
-# dark_matter_upkeep_ships = {
-# 	resource = sr_dark_matter
+# zro_upkeep_ships = {
+# 	resource = sr_zro
 # 	type = upkeep
 # 	category = ships
 
@@ -70,12 +88,12 @@
 # 	}
 
 # 	fraction = {
-# 		weight = 1
+# 		weight = 0.1
 # 	}
 # }
 
-# dark_matter_upkeep_edicts = {
-# 	resource = sr_dark_matter
+# zro_upkeep_edicts = {
+# 	resource = sr_zro
 # 	type = upkeep
 # 	category = edicts
 
