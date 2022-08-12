@@ -67,7 +67,7 @@ bulwark_1_bulwark_array = {
 		target = {
 			every_owned_starbase = {
 				limit = { is_orbital_ring = no }
-				add_bulwark_array = yes
+				#add_bulwark_array = yes
 			}
 		}
 	}
@@ -75,7 +75,7 @@ bulwark_1_bulwark_array = {
 	deactivate_effect = {
 		target = {
 			every_owned_starbase = {
-				remove_bulwark_array = yes
+				#remove_bulwark_array = yes
 			}
 		}
 	}
@@ -253,7 +253,7 @@ bulwark_3_disintegrator_field = {
 			}
 			every_owned_starbase = {
 				limit = { is_orbital_ring = no }
-				add_disintegrator_field = yes
+				#add_disintegrator_field = yes
 			}
 		}
 	}
@@ -261,7 +261,7 @@ bulwark_3_disintegrator_field = {
 	deactivate_effect = {
 		target = {
 			every_owned_starbase = {
-				remove_disintegrator_field = yes
+				#remove_disintegrator_field = yes
 			}
 		}
 	}
