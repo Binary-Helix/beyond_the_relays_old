@@ -431,7 +431,7 @@ planet_event = {
 			remove_planet_flag = contraband_alloys
 			remove_planet_flag = contraband_consumer_goods
 			remove_planet_flag = contraband_volatile_motes
-			remove_planet_flag = contraband_exotic_gases
+			#remove_planet_flag = contraband_exotic_gases
 			remove_planet_flag = contraband_rare_crystals
 			remove_planet_flag = contraband_living_metal
 			remove_planet_flag = contraband_zro
@@ -1423,7 +1423,7 @@ planet_event = {
 		has_owner = yes
 		has_modifier = center_of_drug_trade
 		owner = {
-			has_country_resource = { type = exotic_gases amount > 10 }
+			has_country_resource = { type = helium_3 amount > 10 }
 		}
 	}
 
@@ -1431,7 +1431,7 @@ planet_event = {
 
 	immediate = {
 		owner = {
-			add_resource = { exotic_gases = -10 }
+			add_resource = { helium_3 = -10 }
 		}
 	}
 
@@ -1439,7 +1439,7 @@ planet_event = {
 		name = crime.204.a
 		tooltip = {
 			owner = {
-				add_resource = { exotic_gases = -10 }
+				add_resource = { helium_3 = -10 }
 			}
 		}
 	}
