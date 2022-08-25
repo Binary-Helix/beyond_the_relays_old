@@ -1622,34 +1622,34 @@ country_event = {
 	}
 }
 
-### Psionic Battle
+# ### Psionic Battle
 
-# Psionic Battle (HIDDEN)
-country_event = {
-	id = fedel.500
-	hide_window = yes
+# # Psionic Battle (HIDDEN)
+# country_event = {
+# 	id = fedel.500
+# 	hide_window = yes
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		federation = {
-			has_federation_law = challenge_type_psionic_battle
-			NOT = { has_federation_flag = psionic_battle_underway }
-		}
-	}
+# 	trigger = {
+# 		federation = {
+# 			has_federation_law = challenge_type_psionic_battle
+# 			NOT = { has_federation_flag = psionic_battle_underway }
+# 		}
+# 	}
 
-	immediate = {
-		save_event_target_as = fed_leader
-		federation = {
-			set_federation_flag = psionic_battle_underway
-			save_event_target_as = federation
-			every_member = {
-				country_event = { id = fedel.501 }
-			}
-		}
-		country_event = { id = fedel.505 days = 60 }
-	}
-}
+# 	immediate = {
+# 		save_event_target_as = fed_leader
+# 		federation = {
+# 			set_federation_flag = psionic_battle_underway
+# 			save_event_target_as = federation
+# 			every_member = {
+# 				country_event = { id = fedel.501 }
+# 			}
+# 		}
+# 		country_event = { id = fedel.505 days = 60 }
+# 	}
+# }
 
 # Psionic Battle
 # country_event = {
